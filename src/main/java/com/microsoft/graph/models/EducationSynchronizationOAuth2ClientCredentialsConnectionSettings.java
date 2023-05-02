@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends EducationSynchronizationConnectionSettings implements Parsable {
     /** The scope of the access request (see RFC6749). */
-    private String _scope;
+    private String scope;
     /** The URL to get access tokens for the data provider. */
-    private String _tokenUrl;
+    private String tokenUrl;
     /**
      * Instantiates a new EducationSynchronizationOAuth2ClientCredentialsConnectionSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationSynchronizationOAuth2ClientCredentialsConnectionSettings() {
         super();
         this.setOdataType("#microsoft.graph.educationSynchronizationOAuth2ClientCredentialsConnectionSettings");
@@ -32,15 +32,14 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationSynchronizationOAuth2ClientCredentialsConnectionSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
-            this.put("tokenUrl", (n) -> { currentObject.setTokenUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getStringValue()); });
+        deserializerMap.put("tokenUrl", (n) -> { this.setTokenUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the scope property value. The scope of the access request (see RFC6749).
@@ -48,7 +47,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      */
     @javax.annotation.Nullable
     public String getScope() {
-        return this._scope;
+        return this.scope;
     }
     /**
      * Gets the tokenUrl property value. The URL to get access tokens for the data provider.
@@ -56,13 +55,14 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      */
     @javax.annotation.Nullable
     public String getTokenUrl() {
-        return this._tokenUrl;
+        return this.tokenUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final String value) {
-        this._scope = value;
+        this.scope = value;
     }
     /**
      * Sets the tokenUrl property value. The URL to get access tokens for the data provider.
      * @param value Value to set for the tokenUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenUrl(@javax.annotation.Nullable final String value) {
-        this._tokenUrl = value;
+        this.tokenUrl = value;
     }
 }

@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PersonAnnotation extends ItemFacet implements Parsable {
     /** Contains the detail of the note itself. */
-    private ItemBody _detail;
+    private ItemBody detail;
     /** Contains a friendly name for the note. */
-    private String _displayName;
+    private String displayName;
     /** The thumbnailUrl property */
-    private String _thumbnailUrl;
+    private String thumbnailUrl;
     /**
      * Instantiates a new PersonAnnotation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PersonAnnotation() {
         super();
         this.setOdataType("#microsoft.graph.personAnnotation");
@@ -38,7 +38,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemBody getDetail() {
-        return this._detail;
+        return this.detail;
     }
     /**
      * Gets the displayName property value. Contains a friendly name for the note.
@@ -46,20 +46,19 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PersonAnnotation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("detail", (n) -> { currentObject.setDetail(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("detail", (n) -> { this.setDetail(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("thumbnailUrl", (n) -> { this.setThumbnailUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
@@ -67,13 +66,14 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getThumbnailUrl() {
-        return this._thumbnailUrl;
+        return this.thumbnailUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
      * @param value Value to set for the detail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetail(@javax.annotation.Nullable final ItemBody value) {
-        this._detail = value;
+        this.detail = value;
     }
     /**
      * Sets the displayName property value. Contains a friendly name for the note.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the thumbnailUrl property value. The thumbnailUrl property
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
-        this._thumbnailUrl = value;
+        this.thumbnailUrl = value;
     }
 }

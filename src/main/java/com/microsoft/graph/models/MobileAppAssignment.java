@@ -3,29 +3,30 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A class containing the properties used for Group Assignment of a Mobile App. */
+/**
+ * A class containing the properties used for Group Assignment of a Mobile App.
+ */
 public class MobileAppAssignment extends Entity implements Parsable {
     /** Possible values for the install intent chosen by the admin. */
-    private InstallIntent _intent;
+    private InstallIntent intent;
     /** The settings for target assignment defined by the admin. */
-    private MobileAppAssignmentSettings _settings;
+    private MobileAppAssignmentSettings settings;
     /** Represents source of assignment. */
-    private DeviceAndAppManagementAssignmentSource _source;
+    private DeviceAndAppManagementAssignmentSource source;
     /** The identifier of the source of the assignment. */
-    private String _sourceId;
+    private String sourceId;
     /** The target group assignment defined by the admin. */
-    private DeviceAndAppManagementAssignmentTarget _target;
+    private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new mobileAppAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.mobileAppAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,18 +40,17 @@ public class MobileAppAssignment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileAppAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("intent", (n) -> { currentObject.setIntent(n.getEnumValue(InstallIntent.class)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(MobileAppAssignmentSettings::createFromDiscriminatorValue)); });
-            this.put("source", (n) -> { currentObject.setSource(n.getEnumValue(DeviceAndAppManagementAssignmentSource.class)); });
-            this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("intent", (n) -> { this.setIntent(n.getEnumValue(InstallIntent.class)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(MobileAppAssignmentSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(DeviceAndAppManagementAssignmentSource.class)); });
+        deserializerMap.put("sourceId", (n) -> { this.setSourceId(n.getStringValue()); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the intent property value. Possible values for the install intent chosen by the admin.
@@ -58,7 +58,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public InstallIntent getIntent() {
-        return this._intent;
+        return this.intent;
     }
     /**
      * Gets the settings property value. The settings for target assignment defined by the admin.
@@ -66,7 +66,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public MobileAppAssignmentSettings getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Gets the source property value. Represents source of assignment.
@@ -74,7 +74,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceAndAppManagementAssignmentSource getSource() {
-        return this._source;
+        return this.source;
     }
     /**
      * Gets the sourceId property value. The identifier of the source of the assignment.
@@ -82,7 +82,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSourceId() {
-        return this._sourceId;
+        return this.sourceId;
     }
     /**
      * Gets the target property value. The target group assignment defined by the admin.
@@ -90,13 +90,14 @@ public class MobileAppAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this._target;
+        return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,39 +112,44 @@ public class MobileAppAssignment extends Entity implements Parsable {
      * @param value Value to set for the intent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntent(@javax.annotation.Nullable final InstallIntent value) {
-        this._intent = value;
+        this.intent = value;
     }
     /**
      * Sets the settings property value. The settings for target assignment defined by the admin.
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final MobileAppAssignmentSettings value) {
-        this._settings = value;
+        this.settings = value;
     }
     /**
      * Sets the source property value. Represents source of assignment.
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentSource value) {
-        this._source = value;
+        this.source = value;
     }
     /**
      * Sets the sourceId property value. The identifier of the source of the assignment.
      * @param value Value to set for the sourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceId(@javax.annotation.Nullable final String value) {
-        this._sourceId = value;
+        this.sourceId = value;
     }
     /**
      * Sets the target property value. The target group assignment defined by the admin.
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this._target = value;
+        this.target = value;
     }
 }

@@ -1,33 +1,27 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The AAD Group we are deploying firmware updates to */
-public class AndroidFotaDeploymentAssignmentTarget implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+public class AndroidFotaDeploymentAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {
     /** AAD Group Id. */
-    private String _groupId;
-    /** The OdataType property */
-    private String _odataType;
+    private String groupId;
     /**
-     * Instantiates a new androidFotaDeploymentAssignmentTarget and sets the default values.
+     * Instantiates a new AndroidFotaDeploymentAssignmentTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidFotaDeploymentAssignmentTarget() {
-        this.setAdditionalData(new HashMap<>());
+        super();
         this.setOdataType("#microsoft.graph.androidFotaDeploymentAssignmentTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidFotaDeploymentAssignmentTarget
+     * @return a AndroidFotaDeploymentAssignmentTarget
      */
     @javax.annotation.Nonnull
     public static AndroidFotaDeploymentAssignmentTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -35,24 +29,14 @@ public class AndroidFotaDeploymentAssignmentTarget implements AdditionalDataHold
         return new AndroidFotaDeploymentAssignmentTarget();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
-     */
-    @javax.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
-    }
-    /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidFotaDeploymentAssignmentTarget currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupId property value. AAD Group Id.
@@ -60,49 +44,26 @@ public class AndroidFotaDeploymentAssignmentTarget implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getGroupId() {
-        return this._groupId;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
+        return this.groupId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        super.serialize(writer);
         writer.writeStringValue("groupId", this.getGroupId());
-        writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeAdditionalData(this.getAdditionalData());
-    }
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     * @return a void
-     */
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
     }
     /**
      * Sets the groupId property value. AAD Group Id.
      * @param value Value to set for the groupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupId(@javax.annotation.Nullable final String value) {
-        this._groupId = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.groupId = value;
     }
 }

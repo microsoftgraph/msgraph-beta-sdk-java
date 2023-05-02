@@ -4,26 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Indicates whether it is mandatory to answer the custom question. */
-    private Boolean _isRequired;
+    private Boolean isRequired;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** If it is mandatory to answer the custom question. */
-    private String _questionId;
+    private String questionId;
     /**
      * Instantiates a new bookingQuestionAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingQuestionAssignment() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingQuestionAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,20 +40,19 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingQuestionAssignment currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("questionId", (n) -> { currentObject.setQuestionId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("isRequired", (n) -> { this.setIsRequired(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("questionId", (n) -> { this.setQuestionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
@@ -62,7 +60,7 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public Boolean getIsRequired() {
-        return this._isRequired;
+        return this.isRequired;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -70,7 +68,7 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the questionId property value. If it is mandatory to answer the custom question.
@@ -78,13 +76,14 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getQuestionId() {
-        return this._questionId;
+        return this.questionId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isRequired", this.getIsRequired());
@@ -97,31 +96,35 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
      * @param value Value to set for the isRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
-        this._isRequired = value;
+        this.isRequired = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the questionId property value. If it is mandatory to answer the custom question.
      * @param value Value to set for the questionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuestionId(@javax.annotation.Nullable final String value) {
-        this._questionId = value;
+        this.questionId = value;
     }
 }

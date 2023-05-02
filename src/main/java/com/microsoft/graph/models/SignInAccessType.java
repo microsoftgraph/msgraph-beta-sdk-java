@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum SignInAccessType implements ValuedEnum {
     None("none"),
     B2bCollaboration("b2bCollaboration"),

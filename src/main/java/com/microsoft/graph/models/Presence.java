@@ -3,29 +3,30 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Presence extends Entity implements Parsable {
     /** The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive,InAMeeting, Offline, OffWork,OutOfOffice, PresenceUnknown,Presenting, UrgentInterruptionsOnly. */
-    private String _activity;
+    private String activity;
     /** The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown */
-    private String _availability;
+    private String availability;
     /** The out of office settings for a user. */
-    private OutOfOfficeSettings _outOfOfficeSettings;
+    private OutOfOfficeSettings outOfOfficeSettings;
+    /** The presence status message of a user. */
+    private PresenceStatusMessage statusMessage;
     /**
-     * Instantiates a new Presence and sets the default values.
+     * Instantiates a new presence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Presence() {
         super();
-        this.setOdataType("#microsoft.graph.presence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Presence
+     * @return a presence
      */
     @javax.annotation.Nonnull
     public static Presence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +39,7 @@ public class Presence extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getActivity() {
-        return this._activity;
+        return this.activity;
     }
     /**
      * Gets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
@@ -46,20 +47,20 @@ public class Presence extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAvailability() {
-        return this._availability;
+        return this.availability;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Presence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
-            this.put("availability", (n) -> { currentObject.setAvailability(n.getStringValue()); });
-            this.put("outOfOfficeSettings", (n) -> { currentObject.setOutOfOfficeSettings(n.getObjectValue(OutOfOfficeSettings::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
+        deserializerMap.put("availability", (n) -> { this.setAvailability(n.getStringValue()); });
+        deserializerMap.put("outOfOfficeSettings", (n) -> { this.setOutOfOfficeSettings(n.getObjectValue(OutOfOfficeSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("statusMessage", (n) -> { this.setStatusMessage(n.getObjectValue(PresenceStatusMessage::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the outOfOfficeSettings property value. The out of office settings for a user.
@@ -67,42 +68,64 @@ public class Presence extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OutOfOfficeSettings getOutOfOfficeSettings() {
-        return this._outOfOfficeSettings;
+        return this.outOfOfficeSettings;
+    }
+    /**
+     * Gets the statusMessage property value. The presence status message of a user.
+     * @return a presenceStatusMessage
+     */
+    @javax.annotation.Nullable
+    public PresenceStatusMessage getStatusMessage() {
+        return this.statusMessage;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("activity", this.getActivity());
         writer.writeStringValue("availability", this.getAvailability());
         writer.writeObjectValue("outOfOfficeSettings", this.getOutOfOfficeSettings());
+        writer.writeObjectValue("statusMessage", this.getStatusMessage());
     }
     /**
      * Sets the activity property value. The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive,InAMeeting, Offline, OffWork,OutOfOffice, PresenceUnknown,Presenting, UrgentInterruptionsOnly.
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final String value) {
-        this._activity = value;
+        this.activity = value;
     }
     /**
      * Sets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
      * @param value Value to set for the availability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailability(@javax.annotation.Nullable final String value) {
-        this._availability = value;
+        this.availability = value;
     }
     /**
      * Sets the outOfOfficeSettings property value. The out of office settings for a user.
      * @param value Value to set for the outOfOfficeSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutOfOfficeSettings(@javax.annotation.Nullable final OutOfOfficeSettings value) {
-        this._outOfOfficeSettings = value;
+        this.outOfOfficeSettings = value;
+    }
+    /**
+     * Sets the statusMessage property value. The presence status message of a user.
+     * @param value Value to set for the statusMessage property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setStatusMessage(@javax.annotation.Nullable final PresenceStatusMessage value) {
+        this.statusMessage = value;
     }
 }

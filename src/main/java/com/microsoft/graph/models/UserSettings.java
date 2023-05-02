@@ -3,35 +3,34 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserSettings extends Entity implements Parsable {
     /** The user's settings for the visibility of merge suggestion for the duplicate contacts in the user's contact list. */
-    private ContactMergeSuggestions _contactMergeSuggestions;
+    private ContactMergeSuggestions contactMergeSuggestions;
     /** Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center. */
-    private Boolean _contributionToContentDiscoveryAsOrganizationDisabled;
+    private Boolean contributionToContentDiscoveryAsOrganizationDisabled;
     /** When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve. */
-    private Boolean _contributionToContentDiscoveryDisabled;
+    private Boolean contributionToContentDiscoveryDisabled;
     /** The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property. */
-    private UserInsightsSettings _itemInsights;
+    private UserInsightsSettings itemInsights;
     /** The user's preferences for languages, regional locale and date/time formatting. */
-    private RegionalAndLanguageSettings _regionalAndLanguageSettings;
+    private RegionalAndLanguageSettings regionalAndLanguageSettings;
     /** The shift preferences for the user. */
-    private ShiftPreferences _shiftPreferences;
+    private ShiftPreferences shiftPreferences;
     /**
-     * Instantiates a new UserSettings and sets the default values.
+     * Instantiates a new userSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserSettings() {
         super();
-        this.setOdataType("#microsoft.graph.userSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserSettings
+     * @return a userSettings
      */
     @javax.annotation.Nonnull
     public static UserSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +43,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ContactMergeSuggestions getContactMergeSuggestions() {
-        return this._contactMergeSuggestions;
+        return this.contactMergeSuggestions;
     }
     /**
      * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
@@ -52,7 +51,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getContributionToContentDiscoveryAsOrganizationDisabled() {
-        return this._contributionToContentDiscoveryAsOrganizationDisabled;
+        return this.contributionToContentDiscoveryAsOrganizationDisabled;
     }
     /**
      * Gets the contributionToContentDiscoveryDisabled property value. When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
@@ -60,23 +59,22 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getContributionToContentDiscoveryDisabled() {
-        return this._contributionToContentDiscoveryDisabled;
+        return this.contributionToContentDiscoveryDisabled;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contactMergeSuggestions", (n) -> { currentObject.setContactMergeSuggestions(n.getObjectValue(ContactMergeSuggestions::createFromDiscriminatorValue)); });
-            this.put("contributionToContentDiscoveryAsOrganizationDisabled", (n) -> { currentObject.setContributionToContentDiscoveryAsOrganizationDisabled(n.getBooleanValue()); });
-            this.put("contributionToContentDiscoveryDisabled", (n) -> { currentObject.setContributionToContentDiscoveryDisabled(n.getBooleanValue()); });
-            this.put("itemInsights", (n) -> { currentObject.setItemInsights(n.getObjectValue(UserInsightsSettings::createFromDiscriminatorValue)); });
-            this.put("regionalAndLanguageSettings", (n) -> { currentObject.setRegionalAndLanguageSettings(n.getObjectValue(RegionalAndLanguageSettings::createFromDiscriminatorValue)); });
-            this.put("shiftPreferences", (n) -> { currentObject.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contactMergeSuggestions", (n) -> { this.setContactMergeSuggestions(n.getObjectValue(ContactMergeSuggestions::createFromDiscriminatorValue)); });
+        deserializerMap.put("contributionToContentDiscoveryAsOrganizationDisabled", (n) -> { this.setContributionToContentDiscoveryAsOrganizationDisabled(n.getBooleanValue()); });
+        deserializerMap.put("contributionToContentDiscoveryDisabled", (n) -> { this.setContributionToContentDiscoveryDisabled(n.getBooleanValue()); });
+        deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(UserInsightsSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("regionalAndLanguageSettings", (n) -> { this.setRegionalAndLanguageSettings(n.getObjectValue(RegionalAndLanguageSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("shiftPreferences", (n) -> { this.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the itemInsights property value. The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
@@ -84,7 +82,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public UserInsightsSettings getItemInsights() {
-        return this._itemInsights;
+        return this.itemInsights;
     }
     /**
      * Gets the regionalAndLanguageSettings property value. The user's preferences for languages, regional locale and date/time formatting.
@@ -92,7 +90,7 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RegionalAndLanguageSettings getRegionalAndLanguageSettings() {
-        return this._regionalAndLanguageSettings;
+        return this.regionalAndLanguageSettings;
     }
     /**
      * Gets the shiftPreferences property value. The shift preferences for the user.
@@ -100,13 +98,14 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ShiftPreferences getShiftPreferences() {
-        return this._shiftPreferences;
+        return this.shiftPreferences;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,47 +121,53 @@ public class UserSettings extends Entity implements Parsable {
      * @param value Value to set for the contactMergeSuggestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactMergeSuggestions(@javax.annotation.Nullable final ContactMergeSuggestions value) {
-        this._contactMergeSuggestions = value;
+        this.contactMergeSuggestions = value;
     }
     /**
      * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
      * @param value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContributionToContentDiscoveryAsOrganizationDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._contributionToContentDiscoveryAsOrganizationDisabled = value;
+        this.contributionToContentDiscoveryAsOrganizationDisabled = value;
     }
     /**
      * Sets the contributionToContentDiscoveryDisabled property value. When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
      * @param value Value to set for the contributionToContentDiscoveryDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContributionToContentDiscoveryDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._contributionToContentDiscoveryDisabled = value;
+        this.contributionToContentDiscoveryDisabled = value;
     }
     /**
      * Sets the itemInsights property value. The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @param value Value to set for the itemInsights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemInsights(@javax.annotation.Nullable final UserInsightsSettings value) {
-        this._itemInsights = value;
+        this.itemInsights = value;
     }
     /**
      * Sets the regionalAndLanguageSettings property value. The user's preferences for languages, regional locale and date/time formatting.
      * @param value Value to set for the regionalAndLanguageSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegionalAndLanguageSettings(@javax.annotation.Nullable final RegionalAndLanguageSettings value) {
-        this._regionalAndLanguageSettings = value;
+        this.regionalAndLanguageSettings = value;
     }
     /**
      * Sets the shiftPreferences property value. The shift preferences for the user.
      * @param value Value to set for the shiftPreferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShiftPreferences(@javax.annotation.Nullable final ShiftPreferences value) {
-        this._shiftPreferences = value;
+        this.shiftPreferences = value;
     }
 }

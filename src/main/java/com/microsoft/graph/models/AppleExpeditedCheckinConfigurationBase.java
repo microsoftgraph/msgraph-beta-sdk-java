@@ -1,20 +1,19 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.IosExpeditedCheckinConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration implements Parsable {
     /** Gets or sets whether to enable expedited device check-ins. */
-    private Boolean _enableExpeditedCheckin;
+    private Boolean enableExpeditedCheckin;
     /**
      * Instantiates a new AppleExpeditedCheckinConfigurationBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppleExpeditedCheckinConfigurationBase() {
         super();
         this.setOdataType("#microsoft.graph.appleExpeditedCheckinConfigurationBase");
@@ -42,24 +41,24 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public Boolean getEnableExpeditedCheckin() {
-        return this._enableExpeditedCheckin;
+        return this.enableExpeditedCheckin;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AppleExpeditedCheckinConfigurationBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("enableExpeditedCheckin", (n) -> { currentObject.setEnableExpeditedCheckin(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("enableExpeditedCheckin", (n) -> { this.setEnableExpeditedCheckin(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,7 +69,8 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
      * @param value Value to set for the enableExpeditedCheckin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableExpeditedCheckin(@javax.annotation.Nullable final Boolean value) {
-        this._enableExpeditedCheckin = value;
+        this.enableExpeditedCheckin = value;
     }
 }

@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Represents the state of Zebra FOTA deployment. */
 public enum ZebraFotaDeploymentState implements ValuedEnum {
     /** Deployment is created but Zebra has not confirmed its creation. */
     PendingCreation("pendingCreation"),

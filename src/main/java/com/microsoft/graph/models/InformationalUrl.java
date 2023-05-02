@@ -4,32 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InformationalUrl implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** CDN URL to the application's logo, Read-only. */
-    private String _logoUrl;
+    private String logoUrl;
     /** Link to the application's marketing page. For example, https://www.contoso.com/app/marketing */
-    private String _marketingUrl;
+    private String marketingUrl;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy */
-    private String _privacyStatementUrl;
+    private String privacyStatementUrl;
     /** Link to the application's support page. For example, https://www.contoso.com/app/support */
-    private String _supportUrl;
+    private String supportUrl;
     /** Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice */
-    private String _termsOfServiceUrl;
+    private String termsOfServiceUrl;
     /**
      * Instantiates a new informationalUrl and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InformationalUrl() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.informationalUrl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,23 +46,22 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InformationalUrl currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("logoUrl", (n) -> { currentObject.setLogoUrl(n.getStringValue()); });
-            this.put("marketingUrl", (n) -> { currentObject.setMarketingUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("privacyStatementUrl", (n) -> { currentObject.setPrivacyStatementUrl(n.getStringValue()); });
-            this.put("supportUrl", (n) -> { currentObject.setSupportUrl(n.getStringValue()); });
-            this.put("termsOfServiceUrl", (n) -> { currentObject.setTermsOfServiceUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("logoUrl", (n) -> { this.setLogoUrl(n.getStringValue()); });
+        deserializerMap.put("marketingUrl", (n) -> { this.setMarketingUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("privacyStatementUrl", (n) -> { this.setPrivacyStatementUrl(n.getStringValue()); });
+        deserializerMap.put("supportUrl", (n) -> { this.setSupportUrl(n.getStringValue()); });
+        deserializerMap.put("termsOfServiceUrl", (n) -> { this.setTermsOfServiceUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the logoUrl property value. CDN URL to the application's logo, Read-only.
@@ -71,7 +69,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLogoUrl() {
-        return this._logoUrl;
+        return this.logoUrl;
     }
     /**
      * Gets the marketingUrl property value. Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
@@ -79,7 +77,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMarketingUrl() {
-        return this._marketingUrl;
+        return this.marketingUrl;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -87,7 +85,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
@@ -95,7 +93,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPrivacyStatementUrl() {
-        return this._privacyStatementUrl;
+        return this.privacyStatementUrl;
     }
     /**
      * Gets the supportUrl property value. Link to the application's support page. For example, https://www.contoso.com/app/support
@@ -103,7 +101,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSupportUrl() {
-        return this._supportUrl;
+        return this.supportUrl;
     }
     /**
      * Gets the termsOfServiceUrl property value. Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
@@ -111,13 +109,14 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTermsOfServiceUrl() {
-        return this._termsOfServiceUrl;
+        return this.termsOfServiceUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("logoUrl", this.getLogoUrl());
@@ -133,55 +132,62 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the logoUrl property value. CDN URL to the application's logo, Read-only.
      * @param value Value to set for the logoUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoUrl(@javax.annotation.Nullable final String value) {
-        this._logoUrl = value;
+        this.logoUrl = value;
     }
     /**
      * Sets the marketingUrl property value. Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
      * @param value Value to set for the marketingUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMarketingUrl(@javax.annotation.Nullable final String value) {
-        this._marketingUrl = value;
+        this.marketingUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
      * @param value Value to set for the privacyStatementUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyStatementUrl(@javax.annotation.Nullable final String value) {
-        this._privacyStatementUrl = value;
+        this.privacyStatementUrl = value;
     }
     /**
      * Sets the supportUrl property value. Link to the application's support page. For example, https://www.contoso.com/app/support
      * @param value Value to set for the supportUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportUrl(@javax.annotation.Nullable final String value) {
-        this._supportUrl = value;
+        this.supportUrl = value;
     }
     /**
      * Sets the termsOfServiceUrl property value. Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
      * @param value Value to set for the termsOfServiceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsOfServiceUrl(@javax.annotation.Nullable final String value) {
-        this._termsOfServiceUrl = value;
+        this.termsOfServiceUrl = value;
     }
 }

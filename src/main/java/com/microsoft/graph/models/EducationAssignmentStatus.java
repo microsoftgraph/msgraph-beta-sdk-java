@@ -3,12 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum EducationAssignmentStatus implements ValuedEnum {
     Draft("draft"),
     Published("published"),
     Assigned("assigned"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Inactive("inactive");
     public final String value;
     EducationAssignmentStatus(final String value) {
         this.value = value;
@@ -23,6 +23,7 @@ public enum EducationAssignmentStatus implements ValuedEnum {
             case "published": return Published;
             case "assigned": return Assigned;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "inactive": return Inactive;
             default: return null;
         }
     }

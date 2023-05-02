@@ -1,18 +1,21 @@
 package com.microsoft.graph.models.identitygovernance;
 
+import com.microsoft.graph.models.Application;
 import com.microsoft.graph.models.CustomExtensionCallbackConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCallbackConfiguration implements Parsable {
+    /** The authorizedApps property */
+    private java.util.List<Application> authorizedApps;
     /**
      * Instantiates a new CustomTaskExtensionCallbackConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomTaskExtensionCallbackConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.customTaskExtensionCallbackConfiguration");
@@ -28,22 +31,41 @@ public class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCal
         return new CustomTaskExtensionCallbackConfiguration();
     }
     /**
+     * Gets the authorizedApps property value. The authorizedApps property
+     * @return a application
+     */
+    @javax.annotation.Nullable
+    public java.util.List<Application> getAuthorizedApps() {
+        return this.authorizedApps;
+    }
+    /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CustomTaskExtensionCallbackConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authorizedApps", (n) -> { this.setAuthorizedApps(n.getCollectionOfObjectValues(Application::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("authorizedApps", this.getAuthorizedApps());
+    }
+    /**
+     * Sets the authorizedApps property value. The authorizedApps property
+     * @param value Value to set for the authorizedApps property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthorizedApps(@javax.annotation.Nullable final java.util.List<Application> value) {
+        this.authorizedApps = value;
     }
 }

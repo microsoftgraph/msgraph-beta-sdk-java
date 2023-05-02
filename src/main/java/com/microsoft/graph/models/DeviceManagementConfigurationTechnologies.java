@@ -3,27 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Describes which technology this setting can be deployed with */
 public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
-    /** Setting cannot be deployed through any channel */
+    /** Default. Setting cannot be deployed through any channel. */
     None("none"),
-    /** Setting can be deployed through the MDM channel */
+    /** Setting can be deployed through the MDM channel. */
     Mdm("mdm"),
     /** Setting can be deployed through the Windows10XManagement channel */
     Windows10XManagement("windows10XManagement"),
-    /** Setting can be deployed through the ConfigManager channel */
+    /** Setting can be deployed through the ConfigManager channel. */
     ConfigManager("configManager"),
-    /** Setting can be deployed through the AppleRemoteManagement channel */
+    /** Setting can be deployed through the AppleRemoteManagement channel. */
     AppleRemoteManagement("appleRemoteManagement"),
-    /** Setting can be deployed through the SENSE agent channel */
+    /** Setting can be deployed through the SENSE agent channel. */
     MicrosoftSense("microsoftSense"),
-    /** Setting can be deployed through the Exchange Online agent channel */
+    /** Setting can be deployed through the Exchange Online agent channel. */
     ExchangeOnline("exchangeOnline"),
-    /** Setting can be deployed through the Linux Mdm channel */
+    /** Setting can be deployed through the Linux Mdm channel. */
     LinuxMdm("linuxMdm"),
     /** Setting can be deployed through device enrollment. */
     Enrollment("enrollment"),
-    /** Sentinel member for cases where the client cannot handle the new enum values. */
+    /** Setting can be deployed using the Endpoint privilege management channel */
+    EndpointPrivilegeManagement("endpointPrivilegeManagement"),
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceManagementConfigurationTechnologies(final String value) {
@@ -44,6 +46,7 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
             case "exchangeOnline": return ExchangeOnline;
             case "linuxMdm": return LinuxMdm;
             case "enrollment": return Enrollment;
+            case "endpointPrivilegeManagement": return EndpointPrivilegeManagement;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

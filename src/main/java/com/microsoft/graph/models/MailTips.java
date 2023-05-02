@@ -4,46 +4,45 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MailTips implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Mail tips for automatic reply if it has been set up by the recipient. */
-    private AutomaticRepliesMailTips _automaticReplies;
+    private AutomaticRepliesMailTips automaticReplies;
     /** A custom mail tip that can be set on the recipient's mailbox. */
-    private String _customMailTip;
+    private String customMailTip;
     /** Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders. */
-    private Boolean _deliveryRestricted;
+    private Boolean deliveryRestricted;
     /** The email address of the recipient to get mailtips for. */
-    private EmailAddress _emailAddress;
+    private EmailAddress emailAddress;
     /** Errors that occur during the getMailTips action. */
-    private MailTipsError _error;
+    private MailTipsError error;
     /** The number of external members if the recipient is a distribution list. */
-    private Integer _externalMemberCount;
+    private Integer externalMemberCount;
     /** Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager. */
-    private Boolean _isModerated;
+    private Boolean isModerated;
     /** The mailbox full status of the recipient. */
-    private Boolean _mailboxFull;
+    private Boolean mailboxFull;
     /** The maximum message size that has been configured for the recipient's organization or mailbox. */
-    private Integer _maxMessageSize;
+    private Integer maxMessageSize;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content. */
-    private RecipientScopeType _recipientScope;
+    private RecipientScopeType recipientScope;
     /** Recipients suggested based on previous contexts where they appear in the same message. */
-    private java.util.List<Recipient> _recipientSuggestions;
+    private java.util.List<Recipient> recipientSuggestions;
     /** The number of members if the recipient is a distribution list. */
-    private Integer _totalMemberCount;
+    private Integer totalMemberCount;
     /**
      * Instantiates a new mailTips and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MailTips() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mailTips");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +60,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the automaticReplies property value. Mail tips for automatic reply if it has been set up by the recipient.
@@ -69,7 +68,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AutomaticRepliesMailTips getAutomaticReplies() {
-        return this._automaticReplies;
+        return this.automaticReplies;
     }
     /**
      * Gets the customMailTip property value. A custom mail tip that can be set on the recipient's mailbox.
@@ -77,7 +76,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomMailTip() {
-        return this._customMailTip;
+        return this.customMailTip;
     }
     /**
      * Gets the deliveryRestricted property value. Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
@@ -85,7 +84,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getDeliveryRestricted() {
-        return this._deliveryRestricted;
+        return this.deliveryRestricted;
     }
     /**
      * Gets the emailAddress property value. The email address of the recipient to get mailtips for.
@@ -93,7 +92,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public EmailAddress getEmailAddress() {
-        return this._emailAddress;
+        return this.emailAddress;
     }
     /**
      * Gets the error property value. Errors that occur during the getMailTips action.
@@ -101,7 +100,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public MailTipsError getError() {
-        return this._error;
+        return this.error;
     }
     /**
      * Gets the externalMemberCount property value. The number of external members if the recipient is a distribution list.
@@ -109,30 +108,29 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getExternalMemberCount() {
-        return this._externalMemberCount;
+        return this.externalMemberCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MailTips currentObject = this;
-        return new HashMap<>(13) {{
-            this.put("automaticReplies", (n) -> { currentObject.setAutomaticReplies(n.getObjectValue(AutomaticRepliesMailTips::createFromDiscriminatorValue)); });
-            this.put("customMailTip", (n) -> { currentObject.setCustomMailTip(n.getStringValue()); });
-            this.put("deliveryRestricted", (n) -> { currentObject.setDeliveryRestricted(n.getBooleanValue()); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(MailTipsError::createFromDiscriminatorValue)); });
-            this.put("externalMemberCount", (n) -> { currentObject.setExternalMemberCount(n.getIntegerValue()); });
-            this.put("isModerated", (n) -> { currentObject.setIsModerated(n.getBooleanValue()); });
-            this.put("mailboxFull", (n) -> { currentObject.setMailboxFull(n.getBooleanValue()); });
-            this.put("maxMessageSize", (n) -> { currentObject.setMaxMessageSize(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recipientScope", (n) -> { currentObject.setRecipientScope(n.getEnumValue(RecipientScopeType.class)); });
-            this.put("recipientSuggestions", (n) -> { currentObject.setRecipientSuggestions(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("totalMemberCount", (n) -> { currentObject.setTotalMemberCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
+        deserializerMap.put("automaticReplies", (n) -> { this.setAutomaticReplies(n.getObjectValue(AutomaticRepliesMailTips::createFromDiscriminatorValue)); });
+        deserializerMap.put("customMailTip", (n) -> { this.setCustomMailTip(n.getStringValue()); });
+        deserializerMap.put("deliveryRestricted", (n) -> { this.setDeliveryRestricted(n.getBooleanValue()); });
+        deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(MailTipsError::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalMemberCount", (n) -> { this.setExternalMemberCount(n.getIntegerValue()); });
+        deserializerMap.put("isModerated", (n) -> { this.setIsModerated(n.getBooleanValue()); });
+        deserializerMap.put("mailboxFull", (n) -> { this.setMailboxFull(n.getBooleanValue()); });
+        deserializerMap.put("maxMessageSize", (n) -> { this.setMaxMessageSize(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recipientScope", (n) -> { this.setRecipientScope(n.getEnumValue(RecipientScopeType.class)); });
+        deserializerMap.put("recipientSuggestions", (n) -> { this.setRecipientSuggestions(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("totalMemberCount", (n) -> { this.setTotalMemberCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isModerated property value. Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
@@ -140,7 +138,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsModerated() {
-        return this._isModerated;
+        return this.isModerated;
     }
     /**
      * Gets the mailboxFull property value. The mailbox full status of the recipient.
@@ -148,7 +146,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getMailboxFull() {
-        return this._mailboxFull;
+        return this.mailboxFull;
     }
     /**
      * Gets the maxMessageSize property value. The maximum message size that has been configured for the recipient's organization or mailbox.
@@ -156,7 +154,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMaxMessageSize() {
-        return this._maxMessageSize;
+        return this.maxMessageSize;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -164,7 +162,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
@@ -172,7 +170,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RecipientScopeType getRecipientScope() {
-        return this._recipientScope;
+        return this.recipientScope;
     }
     /**
      * Gets the recipientSuggestions property value. Recipients suggested based on previous contexts where they appear in the same message.
@@ -180,7 +178,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getRecipientSuggestions() {
-        return this._recipientSuggestions;
+        return this.recipientSuggestions;
     }
     /**
      * Gets the totalMemberCount property value. The number of members if the recipient is a distribution list.
@@ -188,13 +186,14 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTotalMemberCount() {
-        return this._totalMemberCount;
+        return this.totalMemberCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("automaticReplies", this.getAutomaticReplies());
@@ -217,111 +216,125 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the automaticReplies property value. Mail tips for automatic reply if it has been set up by the recipient.
      * @param value Value to set for the automaticReplies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutomaticReplies(@javax.annotation.Nullable final AutomaticRepliesMailTips value) {
-        this._automaticReplies = value;
+        this.automaticReplies = value;
     }
     /**
      * Sets the customMailTip property value. A custom mail tip that can be set on the recipient's mailbox.
      * @param value Value to set for the customMailTip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomMailTip(@javax.annotation.Nullable final String value) {
-        this._customMailTip = value;
+        this.customMailTip = value;
     }
     /**
      * Sets the deliveryRestricted property value. Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
      * @param value Value to set for the deliveryRestricted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeliveryRestricted(@javax.annotation.Nullable final Boolean value) {
-        this._deliveryRestricted = value;
+        this.deliveryRestricted = value;
     }
     /**
      * Sets the emailAddress property value. The email address of the recipient to get mailtips for.
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final EmailAddress value) {
-        this._emailAddress = value;
+        this.emailAddress = value;
     }
     /**
      * Sets the error property value. Errors that occur during the getMailTips action.
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final MailTipsError value) {
-        this._error = value;
+        this.error = value;
     }
     /**
      * Sets the externalMemberCount property value. The number of external members if the recipient is a distribution list.
      * @param value Value to set for the externalMemberCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalMemberCount(@javax.annotation.Nullable final Integer value) {
-        this._externalMemberCount = value;
+        this.externalMemberCount = value;
     }
     /**
      * Sets the isModerated property value. Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
      * @param value Value to set for the isModerated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsModerated(@javax.annotation.Nullable final Boolean value) {
-        this._isModerated = value;
+        this.isModerated = value;
     }
     /**
      * Sets the mailboxFull property value. The mailbox full status of the recipient.
      * @param value Value to set for the mailboxFull property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxFull(@javax.annotation.Nullable final Boolean value) {
-        this._mailboxFull = value;
+        this.mailboxFull = value;
     }
     /**
      * Sets the maxMessageSize property value. The maximum message size that has been configured for the recipient's organization or mailbox.
      * @param value Value to set for the maxMessageSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxMessageSize(@javax.annotation.Nullable final Integer value) {
-        this._maxMessageSize = value;
+        this.maxMessageSize = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      * @param value Value to set for the recipientScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientScope(@javax.annotation.Nullable final RecipientScopeType value) {
-        this._recipientScope = value;
+        this.recipientScope = value;
     }
     /**
      * Sets the recipientSuggestions property value. Recipients suggested based on previous contexts where they appear in the same message.
      * @param value Value to set for the recipientSuggestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientSuggestions(@javax.annotation.Nullable final java.util.List<Recipient> value) {
-        this._recipientSuggestions = value;
+        this.recipientSuggestions = value;
     }
     /**
      * Sets the totalMemberCount property value. The number of members if the recipient is a distribution list.
      * @param value Value to set for the totalMemberCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalMemberCount(@javax.annotation.Nullable final Integer value) {
-        this._totalMemberCount = value;
+        this.totalMemberCount = value;
     }
 }

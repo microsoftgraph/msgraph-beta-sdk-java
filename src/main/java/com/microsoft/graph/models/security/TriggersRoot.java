@@ -4,20 +4,19 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TriggersRoot extends Entity implements Parsable {
     /** The retentionEvents property */
-    private java.util.List<RetentionEvent> _retentionEvents;
+    private java.util.List<RetentionEvent> retentionEvents;
     /**
      * Instantiates a new triggersRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TriggersRoot() {
         super();
-        this.setOdataType("#microsoft.graph.security.triggersRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,14 +30,13 @@ public class TriggersRoot extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TriggersRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("retentionEvents", (n) -> { currentObject.setRetentionEvents(n.getCollectionOfObjectValues(RetentionEvent::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("retentionEvents", (n) -> { this.setRetentionEvents(n.getCollectionOfObjectValues(RetentionEvent::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the retentionEvents property value. The retentionEvents property
@@ -46,13 +44,14 @@ public class TriggersRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RetentionEvent> getRetentionEvents() {
-        return this._retentionEvents;
+        return this.retentionEvents;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,7 +62,8 @@ public class TriggersRoot extends Entity implements Parsable {
      * @param value Value to set for the retentionEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRetentionEvents(@javax.annotation.Nullable final java.util.List<RetentionEvent> value) {
-        this._retentionEvents = value;
+        this.retentionEvents = value;
     }
 }

@@ -6,24 +6,23 @@ import com.microsoft.graph.models.search.Qna;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchEntity extends Entity implements Parsable {
     /** Administrative answer in Microsoft Search results to define common acronyms in a organization. */
-    private java.util.List<Acronym> _acronyms;
+    private java.util.List<Acronym> acronyms;
     /** Administrative answer in Microsoft Search results for common search queries in an organization. */
-    private java.util.List<Bookmark> _bookmarks;
+    private java.util.List<Bookmark> bookmarks;
     /** Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization. */
-    private java.util.List<Qna> _qnas;
+    private java.util.List<Qna> qnas;
     /**
      * Instantiates a new SearchEntity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SearchEntity() {
         super();
-        this.setOdataType("#microsoft.graph.searchEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +40,7 @@ public class SearchEntity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Acronym> getAcronyms() {
-        return this._acronyms;
+        return this.acronyms;
     }
     /**
      * Gets the bookmarks property value. Administrative answer in Microsoft Search results for common search queries in an organization.
@@ -49,20 +48,19 @@ public class SearchEntity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Bookmark> getBookmarks() {
-        return this._bookmarks;
+        return this.bookmarks;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SearchEntity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("acronyms", (n) -> { currentObject.setAcronyms(n.getCollectionOfObjectValues(Acronym::createFromDiscriminatorValue)); });
-            this.put("bookmarks", (n) -> { currentObject.setBookmarks(n.getCollectionOfObjectValues(Bookmark::createFromDiscriminatorValue)); });
-            this.put("qnas", (n) -> { currentObject.setQnas(n.getCollectionOfObjectValues(Qna::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acronyms", (n) -> { this.setAcronyms(n.getCollectionOfObjectValues(Acronym::createFromDiscriminatorValue)); });
+        deserializerMap.put("bookmarks", (n) -> { this.setBookmarks(n.getCollectionOfObjectValues(Bookmark::createFromDiscriminatorValue)); });
+        deserializerMap.put("qnas", (n) -> { this.setQnas(n.getCollectionOfObjectValues(Qna::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the qnas property value. Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
@@ -70,13 +68,14 @@ public class SearchEntity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Qna> getQnas() {
-        return this._qnas;
+        return this.qnas;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,23 +88,26 @@ public class SearchEntity extends Entity implements Parsable {
      * @param value Value to set for the acronyms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcronyms(@javax.annotation.Nullable final java.util.List<Acronym> value) {
-        this._acronyms = value;
+        this.acronyms = value;
     }
     /**
      * Sets the bookmarks property value. Administrative answer in Microsoft Search results for common search queries in an organization.
      * @param value Value to set for the bookmarks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBookmarks(@javax.annotation.Nullable final java.util.List<Bookmark> value) {
-        this._bookmarks = value;
+        this.bookmarks = value;
     }
     /**
      * Sets the qnas property value. Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
      * @param value Value to set for the qnas property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQnas(@javax.annotation.Nullable final java.util.List<Qna> value) {
-        this._qnas = value;
+        this.qnas = value;
     }
 }

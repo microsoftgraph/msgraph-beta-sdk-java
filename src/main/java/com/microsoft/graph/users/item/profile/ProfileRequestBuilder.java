@@ -3,219 +3,136 @@ package com.microsoft.graph.users.item.profile;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Profile;
 import com.microsoft.graph.users.item.profile.account.AccountRequestBuilder;
-import com.microsoft.graph.users.item.profile.account.item.UserAccountInformationItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.addresses.AddressesRequestBuilder;
-import com.microsoft.graph.users.item.profile.addresses.item.ItemAddressItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.anniversaries.AnniversariesRequestBuilder;
-import com.microsoft.graph.users.item.profile.anniversaries.item.PersonAnnualEventItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.awards.AwardsRequestBuilder;
-import com.microsoft.graph.users.item.profile.awards.item.PersonAwardItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.certifications.CertificationsRequestBuilder;
-import com.microsoft.graph.users.item.profile.certifications.item.PersonCertificationItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.educationalactivities.EducationalActivitiesRequestBuilder;
-import com.microsoft.graph.users.item.profile.educationalactivities.item.EducationalActivityItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.emails.EmailsRequestBuilder;
-import com.microsoft.graph.users.item.profile.emails.item.ItemEmailItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.interests.InterestsRequestBuilder;
-import com.microsoft.graph.users.item.profile.interests.item.PersonInterestItemRequestBuilder;
-import com.microsoft.graph.users.item.profile.languages.item.LanguageProficiencyItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.languages.LanguagesRequestBuilder;
-import com.microsoft.graph.users.item.profile.names.item.PersonNameItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.names.NamesRequestBuilder;
-import com.microsoft.graph.users.item.profile.notes.item.PersonAnnotationItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.notes.NotesRequestBuilder;
-import com.microsoft.graph.users.item.profile.patents.item.ItemPatentItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.patents.PatentsRequestBuilder;
-import com.microsoft.graph.users.item.profile.phones.item.ItemPhoneItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.phones.PhonesRequestBuilder;
-import com.microsoft.graph.users.item.profile.positions.item.WorkPositionItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.positions.PositionsRequestBuilder;
-import com.microsoft.graph.users.item.profile.projects.item.ProjectParticipationItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.projects.ProjectsRequestBuilder;
-import com.microsoft.graph.users.item.profile.publications.item.ItemPublicationItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.publications.PublicationsRequestBuilder;
-import com.microsoft.graph.users.item.profile.skills.item.SkillProficiencyItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.skills.SkillsRequestBuilder;
-import com.microsoft.graph.users.item.profile.webaccounts.item.WebAccountItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.webaccounts.WebAccountsRequestBuilder;
-import com.microsoft.graph.users.item.profile.websites.item.PersonWebsiteItemRequestBuilder;
 import com.microsoft.graph.users.item.profile.websites.WebsitesRequestBuilder;
+import com.microsoft.kiota.BaseRequestBuilder;
+import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the profile property of the microsoft.graph.user entity. */
-public class ProfileRequestBuilder {
-    /** The account property */
+/**
+ * Provides operations to manage the profile property of the microsoft.graph.user entity.
+ */
+public class ProfileRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the account property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public AccountRequestBuilder account() {
         return new AccountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The addresses property */
+    /** Provides operations to manage the addresses property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public AddressesRequestBuilder addresses() {
         return new AddressesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The anniversaries property */
+    /** Provides operations to manage the anniversaries property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public AnniversariesRequestBuilder anniversaries() {
         return new AnniversariesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The awards property */
+    /** Provides operations to manage the awards property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public AwardsRequestBuilder awards() {
         return new AwardsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The certifications property */
+    /** Provides operations to manage the certifications property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public CertificationsRequestBuilder certifications() {
         return new CertificationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The educationalActivities property */
+    /** Provides operations to manage the educationalActivities property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public EducationalActivitiesRequestBuilder educationalActivities() {
         return new EducationalActivitiesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The emails property */
+    /** Provides operations to manage the emails property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public EmailsRequestBuilder emails() {
         return new EmailsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The interests property */
+    /** Provides operations to manage the interests property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public InterestsRequestBuilder interests() {
         return new InterestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The languages property */
+    /** Provides operations to manage the languages property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public LanguagesRequestBuilder languages() {
         return new LanguagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The names property */
+    /** Provides operations to manage the names property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public NamesRequestBuilder names() {
         return new NamesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The notes property */
+    /** Provides operations to manage the notes property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public NotesRequestBuilder notes() {
         return new NotesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The patents property */
+    /** Provides operations to manage the patents property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public PatentsRequestBuilder patents() {
         return new PatentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The phones property */
+    /** Provides operations to manage the phones property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public PhonesRequestBuilder phones() {
         return new PhonesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The positions property */
+    /** Provides operations to manage the positions property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public PositionsRequestBuilder positions() {
         return new PositionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The projects property */
+    /** Provides operations to manage the projects property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public ProjectsRequestBuilder projects() {
         return new ProjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The publications property */
+    /** Provides operations to manage the publications property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public PublicationsRequestBuilder publications() {
         return new PublicationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The skills property */
+    /** Provides operations to manage the skills property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public SkillsRequestBuilder skills() {
         return new SkillsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /** The webAccounts property */
+    /** Provides operations to manage the webAccounts property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public WebAccountsRequestBuilder webAccounts() {
         return new WebAccountsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The websites property */
+    /** Provides operations to manage the websites property of the microsoft.graph.profile entity. */
     @javax.annotation.Nonnull
     public WebsitesRequestBuilder websites() {
         return new WebsitesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.account.item collection
-     * @param id Unique identifier of the item
-     * @return a UserAccountInformationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public UserAccountInformationItemRequestBuilder account(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("userAccountInformation%2Did", id);
-        return new UserAccountInformationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.addresses.item collection
-     * @param id Unique identifier of the item
-     * @return a ItemAddressItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ItemAddressItemRequestBuilder addresses(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("itemAddress%2Did", id);
-        return new ItemAddressItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.anniversaries.item collection
-     * @param id Unique identifier of the item
-     * @return a PersonAnnualEventItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PersonAnnualEventItemRequestBuilder anniversaries(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("personAnnualEvent%2Did", id);
-        return new PersonAnnualEventItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.awards.item collection
-     * @param id Unique identifier of the item
-     * @return a PersonAwardItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PersonAwardItemRequestBuilder awards(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("personAward%2Did", id);
-        return new PersonAwardItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.certifications.item collection
-     * @param id Unique identifier of the item
-     * @return a PersonCertificationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PersonCertificationItemRequestBuilder certifications(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("personCertification%2Did", id);
-        return new PersonCertificationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ProfileRequestBuilder and sets the default values.
@@ -223,13 +140,9 @@ public class ProfileRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProfileRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        Objects.requireNonNull(pathParameters);
-        Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/users/{user%2Did}/profile{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new ProfileRequestBuilder and sets the default values.
@@ -237,117 +150,26 @@ public class ProfileRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProfileRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/users/{user%2Did}/profile{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
-        urlTplParams.put("request-raw-url", rawUrl);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
-    }
-    /**
-     * Delete navigation property profile for users
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation() throws URISyntaxException {
-        return createDeleteRequestInformation(null);
-    }
-    /**
-     * Delete navigation property profile for users
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<ProfileRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.DELETE;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final ProfileRequestBuilderDeleteRequestConfiguration requestConfig = new ProfileRequestBuilderDeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Represents properties that are descriptive of a user in a tenant.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * Represents properties that are descriptive of a user in a tenant.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<ProfileRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final ProfileRequestBuilderGetRequestConfiguration requestConfig = new ProfileRequestBuilderGetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Update the navigation property profile in users
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final Profile body) throws URISyntaxException {
-        return createPatchRequestInformation(body, null);
-    }
-    /**
-     * Update the navigation property profile in users
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final Profile body, @javax.annotation.Nullable final java.util.function.Consumer<ProfileRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.PATCH;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final ProfileRequestBuilderPatchRequestConfiguration requestConfig = new ProfileRequestBuilderPatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property profile for users
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final RequestInformation requestInfo = toDeleteRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -355,74 +177,36 @@ public class ProfileRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ProfileRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property profile for users
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ProfileRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.educationalActivities.item collection
-     * @param id Unique identifier of the item
-     * @return a EducationalActivityItemRequestBuilder
-     */
     @javax.annotation.Nonnull
-    public EducationalActivityItemRequestBuilder educationalActivities(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("educationalActivity%2Did", id);
-        return new EducationalActivityItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.emails.item collection
-     * @param id Unique identifier of the item
-     * @return a ItemEmailItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ItemEmailItemRequestBuilder emails(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("itemEmail%2Did", id);
-        return new ItemEmailItemRequestBuilder(urlTplParams, requestAdapter);
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        try {
+            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
     }
     /**
      * Represents properties that are descriptive of a user in a tenant.
      * @return a CompletableFuture of profile
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Profile> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Profile::createFromDiscriminatorValue, null, errorMapping);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, Profile::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<Profile> executionException = new java.util.concurrent.CompletableFuture<Profile>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -430,252 +214,157 @@ public class ProfileRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of profile
      */
-    public java.util.concurrent.CompletableFuture<Profile> get(@javax.annotation.Nullable final java.util.function.Consumer<ProfileRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Profile> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Profile::createFromDiscriminatorValue, null, errorMapping);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, Profile::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<Profile> executionException = new java.util.concurrent.CompletableFuture<Profile>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
-     * Represents properties that are descriptive of a user in a tenant.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
+     * Update the navigation property profile in users
+     * @param body The request body
      * @return a CompletableFuture of profile
      */
-    public java.util.concurrent.CompletableFuture<Profile> get(@javax.annotation.Nullable final java.util.function.Consumer<ProfileRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Profile> patch(@javax.annotation.Nonnull final Profile body) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Profile::createFromDiscriminatorValue, responseHandler, errorMapping);
+            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, Profile::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.interests.item collection
-     * @param id Unique identifier of the item
-     * @return a PersonInterestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PersonInterestItemRequestBuilder interests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("personInterest%2Did", id);
-        return new PersonInterestItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.languages.item collection
-     * @param id Unique identifier of the item
-     * @return a LanguageProficiencyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public LanguageProficiencyItemRequestBuilder languages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("languageProficiency%2Did", id);
-        return new LanguageProficiencyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.names.item collection
-     * @param id Unique identifier of the item
-     * @return a PersonNameItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PersonNameItemRequestBuilder names(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("personName%2Did", id);
-        return new PersonNameItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.notes.item collection
-     * @param id Unique identifier of the item
-     * @return a PersonAnnotationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PersonAnnotationItemRequestBuilder notes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("personAnnotation%2Did", id);
-        return new PersonAnnotationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Update the navigation property profile in users
-     * @param body 
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Profile body) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<Profile> executionException = new java.util.concurrent.CompletableFuture<Profile>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
      * Update the navigation property profile in users
-     * @param body 
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of profile
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Profile body, @javax.annotation.Nullable final java.util.function.Consumer<ProfileRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property profile in users
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Profile body, @javax.annotation.Nullable final java.util.function.Consumer<ProfileRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Profile> patch(@javax.annotation.Nonnull final Profile body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, Profile::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<Profile> executionException = new java.util.concurrent.CompletableFuture<Profile>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.patents.item collection
-     * @param id Unique identifier of the item
-     * @return a ItemPatentItemRequestBuilder
+     * Delete navigation property profile for users
+     * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public ItemPatentItemRequestBuilder patents(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("itemPatent%2Did", id);
-        return new ItemPatentItemRequestBuilder(urlTplParams, requestAdapter);
+    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+        return toDeleteRequestInformation(null);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.phones.item collection
-     * @param id Unique identifier of the item
-     * @return a ItemPhoneItemRequestBuilder
+     * Delete navigation property profile for users
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public ItemPhoneItemRequestBuilder phones(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("itemPhone%2Did", id);
-        return new ItemPhoneItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.positions.item collection
-     * @param id Unique identifier of the item
-     * @return a WorkPositionItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WorkPositionItemRequestBuilder positions(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("workPosition%2Did", id);
-        return new WorkPositionItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.projects.item collection
-     * @param id Unique identifier of the item
-     * @return a ProjectParticipationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ProjectParticipationItemRequestBuilder projects(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("projectParticipation%2Did", id);
-        return new ProjectParticipationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.publications.item collection
-     * @param id Unique identifier of the item
-     * @return a ItemPublicationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ItemPublicationItemRequestBuilder publications(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("itemPublication%2Did", id);
-        return new ItemPublicationItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.skills.item collection
-     * @param id Unique identifier of the item
-     * @return a SkillProficiencyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SkillProficiencyItemRequestBuilder skills(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("skillProficiency%2Did", id);
-        return new SkillProficiencyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.webAccounts.item collection
-     * @param id Unique identifier of the item
-     * @return a WebAccountItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public WebAccountItemRequestBuilder webAccounts(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("webAccount%2Did", id);
-        return new WebAccountItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.users.item.profile.websites.item collection
-     * @param id Unique identifier of the item
-     * @return a PersonWebsiteItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public PersonWebsiteItemRequestBuilder websites(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("personWebsite%2Did", id);
-        return new PersonWebsiteItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class ProfileRequestBuilderDeleteRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new profileRequestBuilderDeleteRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public ProfileRequestBuilderDeleteRequestConfiguration() {
+    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        if (requestConfiguration != null) {
+            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
         }
+        return requestInfo;
     }
-    /** Represents properties that are descriptive of a user in a tenant. */
-    public class ProfileRequestBuilderGetQueryParameters {
+    /**
+     * Represents properties that are descriptive of a user in a tenant.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Represents properties that are descriptive of a user in a tenant.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Update the navigation property profile in users
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Profile body) throws URISyntaxException {
+        return toPatchRequestInformation(body, null);
+    }
+    /**
+     * Update the navigation property profile in users
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Profile body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
+    }
+    /**
+     * Represents properties that are descriptive of a user in a tenant.
+     */
+    public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -685,37 +374,17 @@ public class ProfileRequestBuilder {
         @javax.annotation.Nullable
         public String[] select;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class ProfileRequestBuilderGetRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class GetRequestConfiguration extends BaseRequestConfiguration {
         /** Request query parameters */
         @javax.annotation.Nullable
-        public ProfileRequestBuilderGetQueryParameters queryParameters = new ProfileRequestBuilderGetQueryParameters();
-        /**
-         * Instantiates a new profileRequestBuilderGetRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public ProfileRequestBuilderGetRequestConfiguration() {
-        }
+        public GetQueryParameters queryParameters = new GetQueryParameters();
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class ProfileRequestBuilderPatchRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new profileRequestBuilderPatchRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public ProfileRequestBuilderPatchRequestConfiguration() {
-        }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

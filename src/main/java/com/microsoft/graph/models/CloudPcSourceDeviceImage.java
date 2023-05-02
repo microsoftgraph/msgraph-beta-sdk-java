@@ -4,30 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The display name for the source image. */
-    private String _displayName;
+    private String displayName;
     /** The ID of the source image. */
-    private String _id;
+    private String id;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The display name of subscription that hosts the source image. */
-    private String _subscriptionDisplayName;
+    private String subscriptionDisplayName;
     /** The ID of subscription that hosts the source image. */
-    private String _subscriptionId;
+    private String subscriptionId;
     /**
      * Instantiates a new cloudPcSourceDeviceImage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcSourceDeviceImage() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.cloudPcSourceDeviceImage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +44,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the displayName property value. The display name for the source image.
@@ -53,22 +52,21 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcSourceDeviceImage currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("subscriptionDisplayName", (n) -> { currentObject.setSubscriptionDisplayName(n.getStringValue()); });
-            this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("subscriptionDisplayName", (n) -> { this.setSubscriptionDisplayName(n.getStringValue()); });
+        deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The ID of the source image.
@@ -76,7 +74,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -84,7 +82,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the subscriptionDisplayName property value. The display name of subscription that hosts the source image.
@@ -92,7 +90,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getSubscriptionDisplayName() {
-        return this._subscriptionDisplayName;
+        return this.subscriptionDisplayName;
     }
     /**
      * Gets the subscriptionId property value. The ID of subscription that hosts the source image.
@@ -100,13 +98,14 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getSubscriptionId() {
-        return this._subscriptionId;
+        return this.subscriptionId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -121,47 +120,53 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the displayName property value. The display name for the source image.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the id property value. The ID of the source image.
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the subscriptionDisplayName property value. The display name of subscription that hosts the source image.
      * @param value Value to set for the subscriptionDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionDisplayName(@javax.annotation.Nullable final String value) {
-        this._subscriptionDisplayName = value;
+        this.subscriptionDisplayName = value;
     }
     /**
      * Sets the subscriptionId property value. The ID of subscription that hosts the source image.
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionId(@javax.annotation.Nullable final String value) {
-        this._subscriptionId = value;
+        this.subscriptionId = value;
     }
 }

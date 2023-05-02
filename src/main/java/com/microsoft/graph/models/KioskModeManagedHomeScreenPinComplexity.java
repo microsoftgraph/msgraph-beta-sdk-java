@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Complexity of PIN for Managed Home Screen sign-in session. */
 public enum KioskModeManagedHomeScreenPinComplexity implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

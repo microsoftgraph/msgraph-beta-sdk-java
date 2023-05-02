@@ -1,0 +1,24 @@
+package com.microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
+
+public enum PlannerUserRoleKind implements ValuedEnum {
+    Relationship("relationship"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    PlannerUserRoleKind(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PlannerUserRoleKind forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "relationship": return Relationship;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
+}
