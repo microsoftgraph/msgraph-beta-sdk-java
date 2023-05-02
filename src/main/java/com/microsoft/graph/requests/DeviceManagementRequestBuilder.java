@@ -746,6 +746,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("reusableSettings") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the DeviceManagementTemplateInsightsDefinition collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceManagementTemplateInsightsDefinitionCollectionRequestBuilder templateInsights() {
+        return new com.microsoft.graph.requests.DeviceManagementTemplateInsightsDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("templateInsights"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceManagementTemplateInsightsDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceManagementTemplateInsightsDefinitionRequestBuilder templateInsights(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementTemplateInsightsDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("templateInsights") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the DeviceManagementConfigurationSettingTemplate collection
      *
      * @return the collection request builder
@@ -1264,46 +1284,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public com.microsoft.graph.requests.MobileAppTroubleshootingEventRequestBuilder mobileAppTroubleshootingEvents(@Nonnull final String id) {
         return new com.microsoft.graph.requests.MobileAppTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppTroubleshootingEvents") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the OemWarrantyInformationOnboarding collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionRequestBuilder oemWarrantyInformationOnboarding() {
-        return new com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("oemWarrantyInformationOnboarding"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the OemWarrantyInformationOnboarding item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.OemWarrantyInformationOnboardingRequestBuilder oemWarrantyInformationOnboarding(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.OemWarrantyInformationOnboardingRequestBuilder(getRequestUrlWithAdditionalSegment("oemWarrantyInformationOnboarding") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the PrivilegeManagementElevation collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.PrivilegeManagementElevationCollectionRequestBuilder privilegeManagementElevations() {
-        return new com.microsoft.graph.requests.PrivilegeManagementElevationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("privilegeManagementElevations"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the PrivilegeManagementElevation item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.PrivilegeManagementElevationRequestBuilder privilegeManagementElevations(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.PrivilegeManagementElevationRequestBuilder(getRequestUrlWithAdditionalSegment("privilegeManagementElevations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the RemoteActionAudit collection

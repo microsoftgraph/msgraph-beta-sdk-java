@@ -394,6 +394,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
+     * Gets the collection of DeviceLocalCredentials objects
+     *
+     * @return the request builder for the collection of DeviceLocalCredentials objects
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceLocalCredentialInfoCollectionRequestBuilder deviceLocalCredentials() {
+        return new com.microsoft.graph.requests.DeviceLocalCredentialInfoCollectionRequestBuilder(getServiceRoot() + "/deviceLocalCredentials", this, null);
+    }
+
+    /**
+     * Gets a single DeviceLocalCredentials
+     *
+     * @param id the id of the DeviceLocalCredentials to retrieve
+     * @return the request builder for the DeviceLocalCredentials object
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceLocalCredentialInfoRequestBuilder deviceLocalCredentials(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceLocalCredentialInfoRequestBuilder(getServiceRoot() + "/deviceLocalCredentials/" + id, this, null);
+    }
+
+    /**
      * Gets the collection of AdministrativeUnits objects
      *
      * @return the request builder for the collection of AdministrativeUnits objects
@@ -2028,16 +2049,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public com.microsoft.graph.requests.DeviceAppManagementRequestBuilder deviceAppManagement() {
         return new com.microsoft.graph.requests.DeviceAppManagementRequestBuilder(getServiceRoot() + "/deviceAppManagement", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the OfficeConfiguration
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.OfficeConfigurationRequestBuilder officeConfiguration() {
-        return new com.microsoft.graph.requests.OfficeConfigurationRequestBuilder(getServiceRoot() + "/officeConfiguration", this, null);
     }
 
     /**

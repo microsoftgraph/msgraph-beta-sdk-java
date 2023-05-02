@@ -24,6 +24,10 @@ public enum DeviceManagementConfigurationSettingUsage
     */
     COMPLIANCE,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For DeviceManagementConfigurationSettingUsage values that were not expected from the service
     */
     UNEXPECTED_VALUE

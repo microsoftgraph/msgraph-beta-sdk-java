@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AssignmentFilterManagementType;
 import com.microsoft.graph.models.PayloadByFilter;
 import com.microsoft.graph.models.DevicePlatformType;
 import com.microsoft.graph.models.Entity;
@@ -27,6 +28,15 @@ import javax.annotation.Nonnull;
  */
 public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Assignment Filter Management Type.
+     * Indicates filter is applied to either 'devices' or 'apps' management type. Possible values are devices, apps. Default filter will be applied to 'devices'. Possible values are: devices, apps, unknownFutureValue.
+     */
+    @SerializedName(value = "assignmentFilterManagementType", alternate = {"AssignmentFilterManagementType"})
+    @Expose
+	@Nullable
+    public AssignmentFilterManagementType assignmentFilterManagementType;
 
     /**
      * The Created Date Time.

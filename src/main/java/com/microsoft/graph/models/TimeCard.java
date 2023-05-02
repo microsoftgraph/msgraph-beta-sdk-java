@@ -61,7 +61,7 @@ public class TimeCard extends ChangeTrackedEntity implements IJsonBackedObject {
 
     /**
      * The Confirmed By.
-     * Indicate if this timeCard entry is confirmed. Possible values are none, user, manager, unknownFutureValue.
+     * Indicates whether this timeCard entry is confirmed. Possible values are none, user, manager, unknownFutureValue.
      */
     @SerializedName(value = "confirmedBy", alternate = {"ConfirmedBy"})
     @Expose

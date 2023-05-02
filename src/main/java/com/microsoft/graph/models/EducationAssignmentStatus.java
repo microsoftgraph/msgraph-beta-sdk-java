@@ -28,6 +28,10 @@ public enum EducationAssignmentStatus
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * inactive
+    */
+    INACTIVE,
+    /**
     * For EducationAssignmentStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

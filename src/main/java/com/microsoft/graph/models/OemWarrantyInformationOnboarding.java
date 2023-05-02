@@ -25,33 +25,6 @@ import javax.annotation.Nonnull;
 public class OemWarrantyInformationOnboarding extends Entity implements IJsonBackedObject {
 
 
-    /**
-     * The Available.
-     * Specifies whether warranty API is available. This property is read-only.
-     */
-    @SerializedName(value = "available", alternate = {"Available"})
-    @Expose
-	@Nullable
-    public Boolean available;
-
-    /**
-     * The Enabled.
-     * Specifies whether warranty query is enabled for given OEM. This property is read-only.
-     */
-    @SerializedName(value = "enabled", alternate = {"Enabled"})
-    @Expose
-	@Nullable
-    public Boolean enabled;
-
-    /**
-     * The Oem Name.
-     * OEM name. This property is read-only.
-     */
-    @SerializedName(value = "oemName", alternate = {"OemName"})
-    @Expose
-	@Nullable
-    public String oemName;
-
 
     /**
      * Sets the raw JSON object

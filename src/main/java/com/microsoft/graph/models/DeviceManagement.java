@@ -70,6 +70,7 @@ import com.microsoft.graph.requests.DeviceManagementCompliancePolicyCollectionPa
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyTemplateCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingCollectionPage;
+import com.microsoft.graph.requests.DeviceManagementTemplateInsightsDefinitionCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionPage;
 import com.microsoft.graph.requests.ComplianceManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.DeviceCategoryCollectionPage;
@@ -91,8 +92,6 @@ import com.microsoft.graph.requests.DeviceHealthScriptCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementScriptCollectionPage;
 import com.microsoft.graph.requests.DeviceShellScriptCollectionPage;
 import com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage;
-import com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionPage;
-import com.microsoft.graph.requests.PrivilegeManagementElevationCollectionPage;
 import com.microsoft.graph.requests.RemoteActionAuditCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyDeviceCollectionPage;
@@ -700,6 +699,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage reusableSettings;
 
     /**
+     * The Template Insights.
+     * List of setting insights in a template
+     */
+    @SerializedName(value = "templateInsights", alternate = {"TemplateInsights"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.DeviceManagementTemplateInsightsDefinitionCollectionPage templateInsights;
+
+    /**
      * The Template Settings.
      * List of all TemplateSettings
      */
@@ -950,24 +958,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage mobileAppTroubleshootingEvents;
-
-    /**
-     * The Oem Warranty Information Onboarding.
-     * List of OEM Warranty Statuses
-     */
-    @SerializedName(value = "oemWarrantyInformationOnboarding", alternate = {"OemWarrantyInformationOnboarding"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionPage oemWarrantyInformationOnboarding;
-
-    /**
-     * The Privilege Management Elevations.
-     * The endpoint privilege management elevation event entity contains elevation details.
-     */
-    @SerializedName(value = "privilegeManagementElevations", alternate = {"PrivilegeManagementElevations"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.PrivilegeManagementElevationCollectionPage privilegeManagementElevations;
 
     /**
      * The Remote Action Audits.
@@ -1923,6 +1913,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             reusableSettings = serializer.deserializeObject(json.get("reusableSettings"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
         }
 
+        if (json.has("templateInsights")) {
+            templateInsights = serializer.deserializeObject(json.get("templateInsights"), com.microsoft.graph.requests.DeviceManagementTemplateInsightsDefinitionCollectionPage.class);
+        }
+
         if (json.has("templateSettings")) {
             templateSettings = serializer.deserializeObject(json.get("templateSettings"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionPage.class);
         }
@@ -2017,14 +2011,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("mobileAppTroubleshootingEvents")) {
             mobileAppTroubleshootingEvents = serializer.deserializeObject(json.get("mobileAppTroubleshootingEvents"), com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage.class);
-        }
-
-        if (json.has("oemWarrantyInformationOnboarding")) {
-            oemWarrantyInformationOnboarding = serializer.deserializeObject(json.get("oemWarrantyInformationOnboarding"), com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionPage.class);
-        }
-
-        if (json.has("privilegeManagementElevations")) {
-            privilegeManagementElevations = serializer.deserializeObject(json.get("privilegeManagementElevations"), com.microsoft.graph.requests.PrivilegeManagementElevationCollectionPage.class);
         }
 
         if (json.has("remoteActionAudits")) {

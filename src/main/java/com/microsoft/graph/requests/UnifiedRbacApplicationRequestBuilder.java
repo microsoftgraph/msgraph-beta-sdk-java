@@ -57,6 +57,26 @@ public class UnifiedRbacApplicationRequestBuilder extends BaseRequestBuilder<Uni
 
 
     /**
+     *  Gets a request builder for the CustomAppScope collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CustomAppScopeCollectionRequestBuilder customAppScopes() {
+        return new com.microsoft.graph.requests.CustomAppScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customAppScopes"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CustomAppScope item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CustomAppScopeRequestBuilder customAppScopes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CustomAppScopeRequestBuilder(getRequestUrlWithAdditionalSegment("customAppScopes") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the UnifiedRbacResourceNamespace collection
      *
      * @return the collection request builder

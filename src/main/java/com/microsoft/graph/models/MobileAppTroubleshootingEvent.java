@@ -38,6 +38,15 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     public String applicationId;
 
     /**
+     * The Device Id.
+     * Device identifier created or collected by Intune.
+     */
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
+    @Expose
+	@Nullable
+    public String deviceId;
+
+    /**
      * The History.
      * Intune Mobile Application Troubleshooting History Item
      */
