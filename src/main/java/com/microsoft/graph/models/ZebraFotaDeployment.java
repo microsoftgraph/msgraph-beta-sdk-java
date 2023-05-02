@@ -74,6 +74,15 @@ public class ZebraFotaDeployment extends Entity implements IJsonBackedObject {
 	@Nullable
     public String displayName;
 
+    /**
+     * The Role Scope Tag Ids.
+     * List of Scope Tags for this Entity instance
+     */
+    @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
+    @Expose
+	@Nullable
+    public java.util.List<String> roleScopeTagIds;
+
 
     /**
      * Sets the raw JSON object

@@ -141,6 +141,24 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder<Educat
      * @return the request builder
      */
     @Nonnull
+    public EducationAssignmentActivateRequestBuilder activate() {
+        return new EducationAssignmentActivateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.activate"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public EducationAssignmentDeactivateRequestBuilder deactivate() {
+        return new EducationAssignmentDeactivateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deactivate"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public EducationAssignmentSetUpFeedbackResourcesFolderRequestBuilder setUpFeedbackResourcesFolder() {
         return new EducationAssignmentSetUpFeedbackResourcesFolderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setUpFeedbackResourcesFolder"), getClient(), null);
     }

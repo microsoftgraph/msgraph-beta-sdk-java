@@ -170,15 +170,6 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     public Boolean registrationDisabled;
 
     /**
-     * The Request Requires Network Tether.
-     * Indicates if the device is network-tethered to run the command
-     */
-    @SerializedName(value = "requestRequiresNetworkTether", alternate = {"RequestRequiresNetworkTether"})
-    @Expose
-	@Nullable
-    public Boolean requestRequiresNetworkTether;
-
-    /**
      * The Set Primary Setup Account As Regular User.
      * Indicates whether Setup Assistant will set the account as a regular user
      */

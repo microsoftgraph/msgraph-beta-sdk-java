@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.AzureAdJoinPolicy;
 import com.microsoft.graph.models.AzureADRegistrationPolicy;
+import com.microsoft.graph.models.LocalAdminPasswordSettings;
 import com.microsoft.graph.models.MultiFactorAuthConfiguration;
 import com.microsoft.graph.models.Entity;
 
@@ -63,6 +64,15 @@ public class DeviceRegistrationPolicy extends Entity implements IJsonBackedObjec
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Local Admin Password.
+     * Specifies the setting for Local Admin Password Solution (LAPS) within your organization.
+     */
+    @SerializedName(value = "localAdminPassword", alternate = {"LocalAdminPassword"})
+    @Expose
+	@Nullable
+    public LocalAdminPasswordSettings localAdminPassword;
 
     /**
      * The Multi Factor Auth Configuration.

@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.AndroidFotaDeploymentAssignmentTarget;
 
 
@@ -37,6 +38,15 @@ public class AndroidFotaDeploymentAssignment implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Assignment Target.
+     * The Azure Active Directory (Azure AD) we are deploying firmware updates to (e.g.: d93c8f48-bd42-4514-ba40-bc6b84780930). NOTE: Use this property moving forward because the existing property, target, is deprecated.
+     */
+    @SerializedName(value = "assignmentTarget", alternate = {"AssignmentTarget"})
+    @Expose
+	@Nullable
+    public DeviceAndAppManagementAssignmentTarget assignmentTarget;
 
     /**
      * The Display Name.

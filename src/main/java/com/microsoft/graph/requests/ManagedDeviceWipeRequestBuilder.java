@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ManagedDeviceWipeRequest;
 import com.microsoft.graph.models.ManagedDevice;
-
+import com.microsoft.graph.models.ObliterationBehavior;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceWipeParameterSet;
 import com.microsoft.graph.core.IBaseClient;

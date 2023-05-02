@@ -5,7 +5,7 @@
 
 package com.microsoft.graph.models;
 
-
+import com.microsoft.graph.models.ObliterationBehavior;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
@@ -48,6 +48,15 @@ public class ManagedDeviceWipeParameterSet {
     public String macOsUnlockCode;
 
     /**
+     * The obliteration Behavior.
+     * 
+     */
+    @SerializedName(value = "obliterationBehavior", alternate = {"ObliterationBehavior"})
+    @Expose
+	@Nullable
+    public ObliterationBehavior obliterationBehavior;
+
+    /**
      * The persist Esim Data Plan.
      * 
      */
@@ -78,6 +87,7 @@ public class ManagedDeviceWipeParameterSet {
         this.keepEnrollmentData = builder.keepEnrollmentData;
         this.keepUserData = builder.keepUserData;
         this.macOsUnlockCode = builder.macOsUnlockCode;
+        this.obliterationBehavior = builder.obliterationBehavior;
         this.persistEsimDataPlan = builder.persistEsimDataPlan;
         this.useProtectedWipe = builder.useProtectedWipe;
     }
@@ -139,6 +149,21 @@ public class ManagedDeviceWipeParameterSet {
             return this;
         }
         /**
+         * The obliterationBehavior parameter value
+         */
+        @Nullable
+        protected ObliterationBehavior obliterationBehavior;
+        /**
+         * Sets the ObliterationBehavior
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ManagedDeviceWipeParameterSetBuilder withObliterationBehavior(@Nullable final ObliterationBehavior val) {
+            this.obliterationBehavior = val;
+            return this;
+        }
+        /**
          * The persistEsimDataPlan parameter value
          */
         @Nullable
@@ -197,6 +222,9 @@ public class ManagedDeviceWipeParameterSet {
         }
         if(this.macOsUnlockCode != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("macOsUnlockCode", macOsUnlockCode));
+        }
+        if(this.obliterationBehavior != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("obliterationBehavior", obliterationBehavior));
         }
         if(this.persistEsimDataPlan != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("persistEsimDataPlan", persistEsimDataPlan));

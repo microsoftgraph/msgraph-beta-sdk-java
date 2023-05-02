@@ -40,6 +40,10 @@ public enum DeviceManagementConfigurationControlType
     */
     CONTEXT_PANE,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For DeviceManagementConfigurationControlType values that were not expected from the service
     */
     UNEXPECTED_VALUE

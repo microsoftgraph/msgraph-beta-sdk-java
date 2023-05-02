@@ -43,6 +43,7 @@ import com.microsoft.graph.models.Presence;
 import com.microsoft.graph.models.Authentication;
 import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.models.Todo;
+import com.microsoft.graph.models.EmployeeExperienceUser;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.UsageRightCollectionPage;
 import com.microsoft.graph.requests.LicenseDetailsCollectionPage;
@@ -1366,6 +1367,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Todo todo;
+
+    /**
+     * The Employee Experience.
+     * 
+     */
+    @SerializedName(value = "employeeExperience", alternate = {"EmployeeExperience"})
+    @Expose
+	@Nullable
+    public EmployeeExperienceUser employeeExperience;
 
 
     /**

@@ -24,6 +24,10 @@ public enum DeviceManagementConfigurationSettingVisibility
     */
     TEMPLATE,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For DeviceManagementConfigurationSettingVisibility values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.HasPayloadLinkResultItem;
+import com.microsoft.graph.models.DeviceManagementConfigurationSetting;
 import com.microsoft.graph.models.ManagedMobileApp;
 import com.microsoft.graph.models.TargetedManagedAppGroupType;
 import java.util.Arrays;
@@ -19,6 +20,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.TargetedManagedAppConfigurationAssignParameterSet;
+import com.microsoft.graph.models.TargetedManagedAppConfigurationChangeSettingsParameterSet;
 import com.microsoft.graph.models.TargetedManagedAppConfigurationTargetAppsParameterSet;
 import com.microsoft.graph.models.ManagedAppPolicyTargetAppsParameterSet;
 
@@ -142,6 +144,16 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
     @Nonnull
     public TargetedManagedAppConfigurationAssignRequestBuilder assign(@Nonnull final TargetedManagedAppConfigurationAssignParameterSet parameters) {
         return new TargetedManagedAppConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public TargetedManagedAppConfigurationChangeSettingsRequestBuilder changeSettings(@Nonnull final TargetedManagedAppConfigurationChangeSettingsParameterSet parameters) {
+        return new TargetedManagedAppConfigurationChangeSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.changeSettings"), getClient(), null, parameters);
     }
 
     /**

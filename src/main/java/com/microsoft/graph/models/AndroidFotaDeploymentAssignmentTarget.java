@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.DeviceAndAppManagementAssignmentTarget;
 
 
 import com.google.gson.JsonObject;
@@ -21,21 +22,8 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Android Fota Deployment Assignment Target.
  */
-public class AndroidFotaDeploymentAssignmentTarget implements IJsonBackedObject {
+public class AndroidFotaDeploymentAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements IJsonBackedObject {
 
-    /** the OData type of the object as returned by the service */
-    @SerializedName("@odata.type")
-    @Expose
-    @Nullable
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    @Nonnull
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Group Id.
