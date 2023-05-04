@@ -11,7 +11,6 @@ import com.microsoft.kiota.authentication.AuthenticationProvider;
 import com.microsoft.kiota.authentication.AzureIdentityAuthenticationProvider;
 
 import okhttp3.OkHttpClient;
-import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -73,14 +72,14 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
      * @param requestAdapter the request adapter to use to execute the requests.
      */
     @Override
-    public void setRequestAdapter(@NotNull RequestAdapter requestAdapter) {
+    public void setRequestAdapter(@Nonnull RequestAdapter requestAdapter) {
         this.requestAdapter = requestAdapter;
     }
     /**
      * Gets the RequestAdapter for the GraphServiceClient.
      * @return the request adapter to use to execute the requests.
      */
-    @NotNull
+    @Nonnull
     @Override
     public RequestAdapter getRequestAdapter() {
         return this.requestAdapter;
