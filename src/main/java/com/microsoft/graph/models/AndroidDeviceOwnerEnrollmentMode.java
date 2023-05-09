@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** The enrollment mode for an enrollment profile. */
 public enum AndroidDeviceOwnerEnrollmentMode implements ValuedEnum {
     CorporateOwnedDedicatedDevice("corporateOwnedDedicatedDevice"),
     CorporateOwnedFullyManaged("corporateOwnedFullyManaged"),

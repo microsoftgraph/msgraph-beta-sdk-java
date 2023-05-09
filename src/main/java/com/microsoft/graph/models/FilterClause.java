@@ -4,28 +4,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FilterClause implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered. */
-    private String _operatorName;
+    private String operatorName;
     /** Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object. */
-    private String _sourceOperandName;
+    private String sourceOperandName;
     /** Values that the source operand will be tested against. */
-    private FilterOperand _targetOperand;
+    private FilterOperand targetOperand;
     /**
      * Instantiates a new filterClause and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FilterClause() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.filterClause");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,21 +42,20 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FilterClause currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operatorName", (n) -> { currentObject.setOperatorName(n.getStringValue()); });
-            this.put("sourceOperandName", (n) -> { currentObject.setSourceOperandName(n.getStringValue()); });
-            this.put("targetOperand", (n) -> { currentObject.setTargetOperand(n.getObjectValue(FilterOperand::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operatorName", (n) -> { this.setOperatorName(n.getStringValue()); });
+        deserializerMap.put("sourceOperandName", (n) -> { this.setSourceOperandName(n.getStringValue()); });
+        deserializerMap.put("targetOperand", (n) -> { this.setTargetOperand(n.getObjectValue(FilterOperand::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -65,7 +63,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the operatorName property value. Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
@@ -73,7 +71,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOperatorName() {
-        return this._operatorName;
+        return this.operatorName;
     }
     /**
      * Gets the sourceOperandName property value. Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
@@ -81,7 +79,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSourceOperandName() {
-        return this._sourceOperandName;
+        return this.sourceOperandName;
     }
     /**
      * Gets the targetOperand property value. Values that the source operand will be tested against.
@@ -89,13 +87,14 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public FilterOperand getTargetOperand() {
-        return this._targetOperand;
+        return this.targetOperand;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -109,39 +108,44 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the operatorName property value. Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
      * @param value Value to set for the operatorName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatorName(@javax.annotation.Nullable final String value) {
-        this._operatorName = value;
+        this.operatorName = value;
     }
     /**
      * Sets the sourceOperandName property value. Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
      * @param value Value to set for the sourceOperandName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceOperandName(@javax.annotation.Nullable final String value) {
-        this._sourceOperandName = value;
+        this.sourceOperandName = value;
     }
     /**
      * Sets the targetOperand property value. Values that the source operand will be tested against.
      * @param value Value to set for the targetOperand property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetOperand(@javax.annotation.Nullable final FilterOperand value) {
-        this._targetOperand = value;
+        this.targetOperand = value;
     }
 }

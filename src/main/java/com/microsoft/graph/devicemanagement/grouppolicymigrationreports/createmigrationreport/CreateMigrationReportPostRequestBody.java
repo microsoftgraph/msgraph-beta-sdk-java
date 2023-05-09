@@ -5,20 +5,19 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the createMigrationReport method. */
 public class CreateMigrationReportPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The groupPolicyObjectFile property */
-    private GroupPolicyObjectFile _groupPolicyObjectFile;
+    private GroupPolicyObjectFile groupPolicyObjectFile;
     /**
      * Instantiates a new createMigrationReportPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CreateMigrationReportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,18 +37,17 @@ public class CreateMigrationReportPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CreateMigrationReportPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("groupPolicyObjectFile", (n) -> { currentObject.setGroupPolicyObjectFile(n.getObjectValue(GroupPolicyObjectFile::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("groupPolicyObjectFile", (n) -> { this.setGroupPolicyObjectFile(n.getObjectValue(GroupPolicyObjectFile::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the groupPolicyObjectFile property value. The groupPolicyObjectFile property
@@ -57,13 +55,14 @@ public class CreateMigrationReportPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nullable
     public GroupPolicyObjectFile getGroupPolicyObjectFile() {
-        return this._groupPolicyObjectFile;
+        return this.groupPolicyObjectFile;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("groupPolicyObjectFile", this.getGroupPolicyObjectFile());
@@ -74,15 +73,17 @@ public class CreateMigrationReportPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the groupPolicyObjectFile property value. The groupPolicyObjectFile property
      * @param value Value to set for the groupPolicyObjectFile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyObjectFile(@javax.annotation.Nullable final GroupPolicyObjectFile value) {
-        this._groupPolicyObjectFile = value;
+        this.groupPolicyObjectFile = value;
     }
 }

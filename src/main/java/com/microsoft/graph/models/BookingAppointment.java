@@ -4,95 +4,97 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents a booked appointment of a service by a customer in a business.
+ */
 public class BookingAppointment extends Entity implements Parsable {
     /** Additional information that is sent to the customer when an appointment is confirmed. */
-    private String _additionalInformation;
-    /** Url of meeting to join anonymously. */
-    private String _anonymousJoinWebUrl;
+    private String additionalInformation;
+    /** The URL of the meeting to join anonymously. */
+    private String anonymousJoinWebUrl;
     /** The SMTP address of the bookingCustomer who is booking the appointment. */
-    private String _customerEmailAddress;
+    private String customerEmailAddress;
     /** The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable. */
-    private String _customerId;
+    private String customerId;
     /** Represents location information for the bookingCustomer who is booking the appointment. */
-    private Location _customerLocation;
+    private Location customerLocation;
     /** The customer's name. */
-    private String _customerName;
+    private String customerName;
     /** Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID.  You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by customerId. */
-    private String _customerNotes;
+    private String customerNotes;
     /** The customer's phone number. */
-    private String _customerPhone;
-    /** It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional. */
-    private java.util.List<BookingCustomerInformationBase> _customers;
+    private String customerPhone;
+    /** A collection of the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional. */
+    private java.util.List<BookingCustomerInformationBase> customers;
     /** The time zone of the customer. For a list of possible values, see dateTimeTimeZone. */
-    private String _customerTimeZone;
+    private String customerTimeZone;
     /** The length of the appointment, denoted in ISO8601 format. */
-    private Period _duration;
+    private Period duration;
     /** The end property */
-    private DateTimeTimeZone _end;
+    private DateTimeTimeZone end;
     /** The current number of customers in the appointment. */
-    private Integer _filledAttendeesCount;
+    private Integer filledAttendeesCount;
     /** The billed amount on the invoice. */
-    private Double _invoiceAmount;
+    private Double invoiceAmount;
     /** The date, time, and time zone of the invoice for this appointment. */
-    private DateTimeTimeZone _invoiceDate;
+    private DateTimeTimeZone invoiceDate;
     /** The ID of the invoice. */
-    private String _invoiceId;
+    private String invoiceId;
     /** The invoiceStatus property */
-    private BookingInvoiceStatus _invoiceStatus;
+    private BookingInvoiceStatus invoiceStatus;
     /** The URL of the invoice in Microsoft Bookings. */
-    private String _invoiceUrl;
+    private String invoiceUrl;
     /** True indicates that the appointment will be held online. Default value is false. */
-    private Boolean _isLocationOnline;
+    private Boolean isLocationOnline;
     /** The URL of the online meeting for the appointment. */
-    private String _joinWebUrl;
+    private String joinWebUrl;
     /** The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation. */
-    private Integer _maximumAttendeesCount;
+    private Integer maximumAttendeesCount;
     /** The onlineMeetingUrl property */
-    private String _onlineMeetingUrl;
+    private String onlineMeetingUrl;
     /** True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment. */
-    private Boolean _optOutOfCustomerEmail;
+    private Boolean optOutOfCustomerEmail;
     /** The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format. */
-    private Period _postBuffer;
+    private Period postBuffer;
     /** The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format. */
-    private Period _preBuffer;
+    private Period preBuffer;
     /** The regular price for an appointment for the specified bookingService. */
-    private Double _price;
+    private Double price;
     /** Represents the type of pricing of a booking service. */
-    private BookingPriceType _priceType;
+    private BookingPriceType priceType;
     /** The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID. */
-    private java.util.List<BookingReminder> _reminders;
+    private java.util.List<BookingReminder> reminders;
     /** An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. */
-    private String _selfServiceAppointmentId;
+    private String selfServiceAppointmentId;
     /** The ID of the bookingService associated with this appointment. */
-    private String _serviceId;
+    private String serviceId;
     /** The location where the service is delivered. */
-    private Location _serviceLocation;
+    private Location serviceLocation;
     /** The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the serviceId property. */
-    private String _serviceName;
+    private String serviceName;
     /** Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID. */
-    private String _serviceNotes;
+    private String serviceNotes;
     /** True indicates SMS notifications will be sent to the customers for the appointment. Default value is false. */
-    private Boolean _smsNotificationsEnabled;
+    private Boolean smsNotificationsEnabled;
     /** The ID of each bookingStaffMember who is scheduled in this appointment. */
-    private java.util.List<String> _staffMemberIds;
+    private java.util.List<String> staffMemberIds;
     /** The start property */
-    private DateTimeTimeZone _start;
+    private DateTimeTimeZone start;
     /**
-     * Instantiates a new BookingAppointment and sets the default values.
+     * Instantiates a new bookingAppointment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingAppointment() {
         super();
-        this.setOdataType("#microsoft.graph.bookingAppointment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BookingAppointment
+     * @return a bookingAppointment
      */
     @javax.annotation.Nonnull
     public static BookingAppointment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -105,15 +107,15 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAdditionalInformation() {
-        return this._additionalInformation;
+        return this.additionalInformation;
     }
     /**
-     * Gets the anonymousJoinWebUrl property value. Url of meeting to join anonymously.
+     * Gets the anonymousJoinWebUrl property value. The URL of the meeting to join anonymously.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getAnonymousJoinWebUrl() {
-        return this._anonymousJoinWebUrl;
+        return this.anonymousJoinWebUrl;
     }
     /**
      * Gets the customerEmailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.
@@ -121,7 +123,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomerEmailAddress() {
-        return this._customerEmailAddress;
+        return this.customerEmailAddress;
     }
     /**
      * Gets the customerId property value. The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable.
@@ -129,7 +131,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomerId() {
-        return this._customerId;
+        return this.customerId;
     }
     /**
      * Gets the customerLocation property value. Represents location information for the bookingCustomer who is booking the appointment.
@@ -137,7 +139,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Location getCustomerLocation() {
-        return this._customerLocation;
+        return this.customerLocation;
     }
     /**
      * Gets the customerName property value. The customer's name.
@@ -145,7 +147,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomerName() {
-        return this._customerName;
+        return this.customerName;
     }
     /**
      * Gets the customerNotes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID.  You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by customerId.
@@ -153,7 +155,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomerNotes() {
-        return this._customerNotes;
+        return this.customerNotes;
     }
     /**
      * Gets the customerPhone property value. The customer's phone number.
@@ -161,15 +163,15 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomerPhone() {
-        return this._customerPhone;
+        return this.customerPhone;
     }
     /**
-     * Gets the customers property value. It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+     * Gets the customers property value. A collection of the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      * @return a bookingCustomerInformationBase
      */
     @javax.annotation.Nullable
     public java.util.List<BookingCustomerInformationBase> getCustomers() {
-        return this._customers;
+        return this.customers;
     }
     /**
      * Gets the customerTimeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
@@ -177,7 +179,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomerTimeZone() {
-        return this._customerTimeZone;
+        return this.customerTimeZone;
     }
     /**
      * Gets the duration property value. The length of the appointment, denoted in ISO8601 format.
@@ -185,7 +187,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Period getDuration() {
-        return this._duration;
+        return this.duration;
     }
     /**
      * Gets the end property value. The end property
@@ -193,53 +195,52 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getEnd() {
-        return this._end;
+        return this.end;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingAppointment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
-            this.put("anonymousJoinWebUrl", (n) -> { currentObject.setAnonymousJoinWebUrl(n.getStringValue()); });
-            this.put("customerEmailAddress", (n) -> { currentObject.setCustomerEmailAddress(n.getStringValue()); });
-            this.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
-            this.put("customerLocation", (n) -> { currentObject.setCustomerLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-            this.put("customerName", (n) -> { currentObject.setCustomerName(n.getStringValue()); });
-            this.put("customerNotes", (n) -> { currentObject.setCustomerNotes(n.getStringValue()); });
-            this.put("customerPhone", (n) -> { currentObject.setCustomerPhone(n.getStringValue()); });
-            this.put("customers", (n) -> { currentObject.setCustomers(n.getCollectionOfObjectValues(BookingCustomerInformationBase::createFromDiscriminatorValue)); });
-            this.put("customerTimeZone", (n) -> { currentObject.setCustomerTimeZone(n.getStringValue()); });
-            this.put("duration", (n) -> { currentObject.setDuration(n.getPeriodValue()); });
-            this.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("filledAttendeesCount", (n) -> { currentObject.setFilledAttendeesCount(n.getIntegerValue()); });
-            this.put("invoiceAmount", (n) -> { currentObject.setInvoiceAmount(n.getDoubleValue()); });
-            this.put("invoiceDate", (n) -> { currentObject.setInvoiceDate(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("invoiceId", (n) -> { currentObject.setInvoiceId(n.getStringValue()); });
-            this.put("invoiceStatus", (n) -> { currentObject.setInvoiceStatus(n.getEnumValue(BookingInvoiceStatus.class)); });
-            this.put("invoiceUrl", (n) -> { currentObject.setInvoiceUrl(n.getStringValue()); });
-            this.put("isLocationOnline", (n) -> { currentObject.setIsLocationOnline(n.getBooleanValue()); });
-            this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
-            this.put("maximumAttendeesCount", (n) -> { currentObject.setMaximumAttendeesCount(n.getIntegerValue()); });
-            this.put("onlineMeetingUrl", (n) -> { currentObject.setOnlineMeetingUrl(n.getStringValue()); });
-            this.put("optOutOfCustomerEmail", (n) -> { currentObject.setOptOutOfCustomerEmail(n.getBooleanValue()); });
-            this.put("postBuffer", (n) -> { currentObject.setPostBuffer(n.getPeriodValue()); });
-            this.put("preBuffer", (n) -> { currentObject.setPreBuffer(n.getPeriodValue()); });
-            this.put("price", (n) -> { currentObject.setPrice(n.getDoubleValue()); });
-            this.put("priceType", (n) -> { currentObject.setPriceType(n.getEnumValue(BookingPriceType.class)); });
-            this.put("reminders", (n) -> { currentObject.setReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
-            this.put("selfServiceAppointmentId", (n) -> { currentObject.setSelfServiceAppointmentId(n.getStringValue()); });
-            this.put("serviceId", (n) -> { currentObject.setServiceId(n.getStringValue()); });
-            this.put("serviceLocation", (n) -> { currentObject.setServiceLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-            this.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });
-            this.put("serviceNotes", (n) -> { currentObject.setServiceNotes(n.getStringValue()); });
-            this.put("smsNotificationsEnabled", (n) -> { currentObject.setSmsNotificationsEnabled(n.getBooleanValue()); });
-            this.put("staffMemberIds", (n) -> { currentObject.setStaffMemberIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("start", (n) -> { currentObject.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("additionalInformation", (n) -> { this.setAdditionalInformation(n.getStringValue()); });
+        deserializerMap.put("anonymousJoinWebUrl", (n) -> { this.setAnonymousJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("customerEmailAddress", (n) -> { this.setCustomerEmailAddress(n.getStringValue()); });
+        deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getStringValue()); });
+        deserializerMap.put("customerLocation", (n) -> { this.setCustomerLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("customerName", (n) -> { this.setCustomerName(n.getStringValue()); });
+        deserializerMap.put("customerNotes", (n) -> { this.setCustomerNotes(n.getStringValue()); });
+        deserializerMap.put("customerPhone", (n) -> { this.setCustomerPhone(n.getStringValue()); });
+        deserializerMap.put("customers", (n) -> { this.setCustomers(n.getCollectionOfObjectValues(BookingCustomerInformationBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("customerTimeZone", (n) -> { this.setCustomerTimeZone(n.getStringValue()); });
+        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodValue()); });
+        deserializerMap.put("end", (n) -> { this.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("filledAttendeesCount", (n) -> { this.setFilledAttendeesCount(n.getIntegerValue()); });
+        deserializerMap.put("invoiceAmount", (n) -> { this.setInvoiceAmount(n.getDoubleValue()); });
+        deserializerMap.put("invoiceDate", (n) -> { this.setInvoiceDate(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("invoiceId", (n) -> { this.setInvoiceId(n.getStringValue()); });
+        deserializerMap.put("invoiceStatus", (n) -> { this.setInvoiceStatus(n.getEnumValue(BookingInvoiceStatus.class)); });
+        deserializerMap.put("invoiceUrl", (n) -> { this.setInvoiceUrl(n.getStringValue()); });
+        deserializerMap.put("isLocationOnline", (n) -> { this.setIsLocationOnline(n.getBooleanValue()); });
+        deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("maximumAttendeesCount", (n) -> { this.setMaximumAttendeesCount(n.getIntegerValue()); });
+        deserializerMap.put("onlineMeetingUrl", (n) -> { this.setOnlineMeetingUrl(n.getStringValue()); });
+        deserializerMap.put("optOutOfCustomerEmail", (n) -> { this.setOptOutOfCustomerEmail(n.getBooleanValue()); });
+        deserializerMap.put("postBuffer", (n) -> { this.setPostBuffer(n.getPeriodValue()); });
+        deserializerMap.put("preBuffer", (n) -> { this.setPreBuffer(n.getPeriodValue()); });
+        deserializerMap.put("price", (n) -> { this.setPrice(n.getDoubleValue()); });
+        deserializerMap.put("priceType", (n) -> { this.setPriceType(n.getEnumValue(BookingPriceType.class)); });
+        deserializerMap.put("reminders", (n) -> { this.setReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
+        deserializerMap.put("selfServiceAppointmentId", (n) -> { this.setSelfServiceAppointmentId(n.getStringValue()); });
+        deserializerMap.put("serviceId", (n) -> { this.setServiceId(n.getStringValue()); });
+        deserializerMap.put("serviceLocation", (n) -> { this.setServiceLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("serviceName", (n) -> { this.setServiceName(n.getStringValue()); });
+        deserializerMap.put("serviceNotes", (n) -> { this.setServiceNotes(n.getStringValue()); });
+        deserializerMap.put("smsNotificationsEnabled", (n) -> { this.setSmsNotificationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("staffMemberIds", (n) -> { this.setStaffMemberIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("start", (n) -> { this.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the filledAttendeesCount property value. The current number of customers in the appointment.
@@ -247,7 +248,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getFilledAttendeesCount() {
-        return this._filledAttendeesCount;
+        return this.filledAttendeesCount;
     }
     /**
      * Gets the invoiceAmount property value. The billed amount on the invoice.
@@ -255,7 +256,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getInvoiceAmount() {
-        return this._invoiceAmount;
+        return this.invoiceAmount;
     }
     /**
      * Gets the invoiceDate property value. The date, time, and time zone of the invoice for this appointment.
@@ -263,7 +264,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getInvoiceDate() {
-        return this._invoiceDate;
+        return this.invoiceDate;
     }
     /**
      * Gets the invoiceId property value. The ID of the invoice.
@@ -271,7 +272,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInvoiceId() {
-        return this._invoiceId;
+        return this.invoiceId;
     }
     /**
      * Gets the invoiceStatus property value. The invoiceStatus property
@@ -279,7 +280,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BookingInvoiceStatus getInvoiceStatus() {
-        return this._invoiceStatus;
+        return this.invoiceStatus;
     }
     /**
      * Gets the invoiceUrl property value. The URL of the invoice in Microsoft Bookings.
@@ -287,7 +288,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInvoiceUrl() {
-        return this._invoiceUrl;
+        return this.invoiceUrl;
     }
     /**
      * Gets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.
@@ -295,7 +296,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsLocationOnline() {
-        return this._isLocationOnline;
+        return this.isLocationOnline;
     }
     /**
      * Gets the joinWebUrl property value. The URL of the online meeting for the appointment.
@@ -303,7 +304,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getJoinWebUrl() {
-        return this._joinWebUrl;
+        return this.joinWebUrl;
     }
     /**
      * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
@@ -311,7 +312,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMaximumAttendeesCount() {
-        return this._maximumAttendeesCount;
+        return this.maximumAttendeesCount;
     }
     /**
      * Gets the onlineMeetingUrl property value. The onlineMeetingUrl property
@@ -319,7 +320,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOnlineMeetingUrl() {
-        return this._onlineMeetingUrl;
+        return this.onlineMeetingUrl;
     }
     /**
      * Gets the optOutOfCustomerEmail property value. True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
@@ -327,7 +328,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getOptOutOfCustomerEmail() {
-        return this._optOutOfCustomerEmail;
+        return this.optOutOfCustomerEmail;
     }
     /**
      * Gets the postBuffer property value. The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
@@ -335,7 +336,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Period getPostBuffer() {
-        return this._postBuffer;
+        return this.postBuffer;
     }
     /**
      * Gets the preBuffer property value. The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
@@ -343,7 +344,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Period getPreBuffer() {
-        return this._preBuffer;
+        return this.preBuffer;
     }
     /**
      * Gets the price property value. The regular price for an appointment for the specified bookingService.
@@ -351,7 +352,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getPrice() {
-        return this._price;
+        return this.price;
     }
     /**
      * Gets the priceType property value. Represents the type of pricing of a booking service.
@@ -359,7 +360,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BookingPriceType getPriceType() {
-        return this._priceType;
+        return this.priceType;
     }
     /**
      * Gets the reminders property value. The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID.
@@ -367,7 +368,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingReminder> getReminders() {
-        return this._reminders;
+        return this.reminders;
     }
     /**
      * Gets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
@@ -375,7 +376,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSelfServiceAppointmentId() {
-        return this._selfServiceAppointmentId;
+        return this.selfServiceAppointmentId;
     }
     /**
      * Gets the serviceId property value. The ID of the bookingService associated with this appointment.
@@ -383,7 +384,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getServiceId() {
-        return this._serviceId;
+        return this.serviceId;
     }
     /**
      * Gets the serviceLocation property value. The location where the service is delivered.
@@ -391,7 +392,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Location getServiceLocation() {
-        return this._serviceLocation;
+        return this.serviceLocation;
     }
     /**
      * Gets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the serviceId property.
@@ -399,7 +400,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getServiceName() {
-        return this._serviceName;
+        return this.serviceName;
     }
     /**
      * Gets the serviceNotes property value. Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.
@@ -407,7 +408,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getServiceNotes() {
-        return this._serviceNotes;
+        return this.serviceNotes;
     }
     /**
      * Gets the smsNotificationsEnabled property value. True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
@@ -415,7 +416,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSmsNotificationsEnabled() {
-        return this._smsNotificationsEnabled;
+        return this.smsNotificationsEnabled;
     }
     /**
      * Gets the staffMemberIds property value. The ID of each bookingStaffMember who is scheduled in this appointment.
@@ -423,7 +424,7 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getStaffMemberIds() {
-        return this._staffMemberIds;
+        return this.staffMemberIds;
     }
     /**
      * Gets the start property value. The start property
@@ -431,13 +432,14 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getStart() {
-        return this._start;
+        return this.start;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -451,9 +453,7 @@ public class BookingAppointment extends Entity implements Parsable {
         writer.writeStringValue("customerPhone", this.getCustomerPhone());
         writer.writeCollectionOfObjectValues("customers", this.getCustomers());
         writer.writeStringValue("customerTimeZone", this.getCustomerTimeZone());
-        writer.writePeriodValue("duration", this.getDuration());
         writer.writeObjectValue("end", this.getEnd());
-        writer.writeIntegerValue("filledAttendeesCount", this.getFilledAttendeesCount());
         writer.writeDoubleValue("invoiceAmount", this.getInvoiceAmount());
         writer.writeObjectValue("invoiceDate", this.getInvoiceDate());
         writer.writeStringValue("invoiceId", this.getInvoiceId());
@@ -483,287 +483,323 @@ public class BookingAppointment extends Entity implements Parsable {
      * @param value Value to set for the additionalInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalInformation(@javax.annotation.Nullable final String value) {
-        this._additionalInformation = value;
+        this.additionalInformation = value;
     }
     /**
-     * Sets the anonymousJoinWebUrl property value. Url of meeting to join anonymously.
+     * Sets the anonymousJoinWebUrl property value. The URL of the meeting to join anonymously.
      * @param value Value to set for the anonymousJoinWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnonymousJoinWebUrl(@javax.annotation.Nullable final String value) {
-        this._anonymousJoinWebUrl = value;
+        this.anonymousJoinWebUrl = value;
     }
     /**
      * Sets the customerEmailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.
      * @param value Value to set for the customerEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerEmailAddress(@javax.annotation.Nullable final String value) {
-        this._customerEmailAddress = value;
+        this.customerEmailAddress = value;
     }
     /**
      * Sets the customerId property value. The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable.
      * @param value Value to set for the customerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerId(@javax.annotation.Nullable final String value) {
-        this._customerId = value;
+        this.customerId = value;
     }
     /**
      * Sets the customerLocation property value. Represents location information for the bookingCustomer who is booking the appointment.
      * @param value Value to set for the customerLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerLocation(@javax.annotation.Nullable final Location value) {
-        this._customerLocation = value;
+        this.customerLocation = value;
     }
     /**
      * Sets the customerName property value. The customer's name.
      * @param value Value to set for the customerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerName(@javax.annotation.Nullable final String value) {
-        this._customerName = value;
+        this.customerName = value;
     }
     /**
      * Sets the customerNotes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID.  You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by customerId.
      * @param value Value to set for the customerNotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerNotes(@javax.annotation.Nullable final String value) {
-        this._customerNotes = value;
+        this.customerNotes = value;
     }
     /**
      * Sets the customerPhone property value. The customer's phone number.
      * @param value Value to set for the customerPhone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerPhone(@javax.annotation.Nullable final String value) {
-        this._customerPhone = value;
+        this.customerPhone = value;
     }
     /**
-     * Sets the customers property value. It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+     * Sets the customers property value. A collection of the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      * @param value Value to set for the customers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomers(@javax.annotation.Nullable final java.util.List<BookingCustomerInformationBase> value) {
-        this._customers = value;
+        this.customers = value;
     }
     /**
      * Sets the customerTimeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
      * @param value Value to set for the customerTimeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerTimeZone(@javax.annotation.Nullable final String value) {
-        this._customerTimeZone = value;
+        this.customerTimeZone = value;
     }
     /**
      * Sets the duration property value. The length of the appointment, denoted in ISO8601 format.
      * @param value Value to set for the duration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDuration(@javax.annotation.Nullable final Period value) {
-        this._duration = value;
+        this.duration = value;
     }
     /**
      * Sets the end property value. The end property
      * @param value Value to set for the end property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnd(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._end = value;
+        this.end = value;
     }
     /**
      * Sets the filledAttendeesCount property value. The current number of customers in the appointment.
      * @param value Value to set for the filledAttendeesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilledAttendeesCount(@javax.annotation.Nullable final Integer value) {
-        this._filledAttendeesCount = value;
+        this.filledAttendeesCount = value;
     }
     /**
      * Sets the invoiceAmount property value. The billed amount on the invoice.
      * @param value Value to set for the invoiceAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceAmount(@javax.annotation.Nullable final Double value) {
-        this._invoiceAmount = value;
+        this.invoiceAmount = value;
     }
     /**
      * Sets the invoiceDate property value. The date, time, and time zone of the invoice for this appointment.
      * @param value Value to set for the invoiceDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceDate(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._invoiceDate = value;
+        this.invoiceDate = value;
     }
     /**
      * Sets the invoiceId property value. The ID of the invoice.
      * @param value Value to set for the invoiceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceId(@javax.annotation.Nullable final String value) {
-        this._invoiceId = value;
+        this.invoiceId = value;
     }
     /**
      * Sets the invoiceStatus property value. The invoiceStatus property
      * @param value Value to set for the invoiceStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceStatus(@javax.annotation.Nullable final BookingInvoiceStatus value) {
-        this._invoiceStatus = value;
+        this.invoiceStatus = value;
     }
     /**
      * Sets the invoiceUrl property value. The URL of the invoice in Microsoft Bookings.
      * @param value Value to set for the invoiceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceUrl(@javax.annotation.Nullable final String value) {
-        this._invoiceUrl = value;
+        this.invoiceUrl = value;
     }
     /**
      * Sets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.
      * @param value Value to set for the isLocationOnline property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsLocationOnline(@javax.annotation.Nullable final Boolean value) {
-        this._isLocationOnline = value;
+        this.isLocationOnline = value;
     }
     /**
      * Sets the joinWebUrl property value. The URL of the online meeting for the appointment.
      * @param value Value to set for the joinWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinWebUrl(@javax.annotation.Nullable final String value) {
-        this._joinWebUrl = value;
+        this.joinWebUrl = value;
     }
     /**
      * Sets the maximumAttendeesCount property value. The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
      * @param value Value to set for the maximumAttendeesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumAttendeesCount(@javax.annotation.Nullable final Integer value) {
-        this._maximumAttendeesCount = value;
+        this.maximumAttendeesCount = value;
     }
     /**
      * Sets the onlineMeetingUrl property value. The onlineMeetingUrl property
      * @param value Value to set for the onlineMeetingUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineMeetingUrl(@javax.annotation.Nullable final String value) {
-        this._onlineMeetingUrl = value;
+        this.onlineMeetingUrl = value;
     }
     /**
      * Sets the optOutOfCustomerEmail property value. True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
      * @param value Value to set for the optOutOfCustomerEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOptOutOfCustomerEmail(@javax.annotation.Nullable final Boolean value) {
-        this._optOutOfCustomerEmail = value;
+        this.optOutOfCustomerEmail = value;
     }
     /**
      * Sets the postBuffer property value. The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
      * @param value Value to set for the postBuffer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostBuffer(@javax.annotation.Nullable final Period value) {
-        this._postBuffer = value;
+        this.postBuffer = value;
     }
     /**
      * Sets the preBuffer property value. The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
      * @param value Value to set for the preBuffer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreBuffer(@javax.annotation.Nullable final Period value) {
-        this._preBuffer = value;
+        this.preBuffer = value;
     }
     /**
      * Sets the price property value. The regular price for an appointment for the specified bookingService.
      * @param value Value to set for the price property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrice(@javax.annotation.Nullable final Double value) {
-        this._price = value;
+        this.price = value;
     }
     /**
      * Sets the priceType property value. Represents the type of pricing of a booking service.
      * @param value Value to set for the priceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriceType(@javax.annotation.Nullable final BookingPriceType value) {
-        this._priceType = value;
+        this.priceType = value;
     }
     /**
      * Sets the reminders property value. The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID.
      * @param value Value to set for the reminders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReminders(@javax.annotation.Nullable final java.util.List<BookingReminder> value) {
-        this._reminders = value;
+        this.reminders = value;
     }
     /**
      * Sets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
      * @param value Value to set for the selfServiceAppointmentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelfServiceAppointmentId(@javax.annotation.Nullable final String value) {
-        this._selfServiceAppointmentId = value;
+        this.selfServiceAppointmentId = value;
     }
     /**
      * Sets the serviceId property value. The ID of the bookingService associated with this appointment.
      * @param value Value to set for the serviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceId(@javax.annotation.Nullable final String value) {
-        this._serviceId = value;
+        this.serviceId = value;
     }
     /**
      * Sets the serviceLocation property value. The location where the service is delivered.
      * @param value Value to set for the serviceLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceLocation(@javax.annotation.Nullable final Location value) {
-        this._serviceLocation = value;
+        this.serviceLocation = value;
     }
     /**
      * Sets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the serviceId property.
      * @param value Value to set for the serviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceName(@javax.annotation.Nullable final String value) {
-        this._serviceName = value;
+        this.serviceName = value;
     }
     /**
      * Sets the serviceNotes property value. Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.
      * @param value Value to set for the serviceNotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceNotes(@javax.annotation.Nullable final String value) {
-        this._serviceNotes = value;
+        this.serviceNotes = value;
     }
     /**
      * Sets the smsNotificationsEnabled property value. True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
      * @param value Value to set for the smsNotificationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmsNotificationsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._smsNotificationsEnabled = value;
+        this.smsNotificationsEnabled = value;
     }
     /**
      * Sets the staffMemberIds property value. The ID of each bookingStaffMember who is scheduled in this appointment.
      * @param value Value to set for the staffMemberIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStaffMemberIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._staffMemberIds = value;
+        this.staffMemberIds = value;
     }
     /**
      * Sets the start property value. The start property
      * @param value Value to set for the start property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStart(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._start = value;
+        this.start = value;
     }
 }

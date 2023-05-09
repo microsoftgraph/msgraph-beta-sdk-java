@@ -3,31 +3,32 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Describes a single artifact for a specific device model. */
+/**
+ * Describes a single artifact for a specific device model.
+ */
 public class ZebraFotaArtifact extends Entity implements Parsable {
     /** The version of the Board Support Package (BSP. E.g.: 01.18.02.00) */
-    private String _boardSupportPackageVersion;
+    private String boardSupportPackageVersion;
     /** Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021) */
-    private String _description;
+    private String description;
     /** Applicable device model (e.g.: TC8300) */
-    private String _deviceModel;
+    private String deviceModel;
     /** Artifact OS version (e.g.: 8.1.0) */
-    private String _osVersion;
+    private String osVersion;
     /** Artifact patch version (e.g.: U00) */
-    private String _patchVersion;
+    private String patchVersion;
     /** Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>) */
-    private String _releaseNotesUrl;
+    private String releaseNotesUrl;
     /**
      * Instantiates a new zebraFotaArtifact and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ZebraFotaArtifact() {
         super();
-        this.setOdataType("#microsoft.graph.zebraFotaArtifact");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +46,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBoardSupportPackageVersion() {
-        return this._boardSupportPackageVersion;
+        return this.boardSupportPackageVersion;
     }
     /**
      * Gets the description property value. Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021)
@@ -53,7 +54,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the deviceModel property value. Applicable device model (e.g.: TC8300)
@@ -61,23 +62,22 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceModel() {
-        return this._deviceModel;
+        return this.deviceModel;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ZebraFotaArtifact currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("boardSupportPackageVersion", (n) -> { currentObject.setBoardSupportPackageVersion(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("patchVersion", (n) -> { currentObject.setPatchVersion(n.getStringValue()); });
-            this.put("releaseNotesUrl", (n) -> { currentObject.setReleaseNotesUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("boardSupportPackageVersion", (n) -> { this.setBoardSupportPackageVersion(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("patchVersion", (n) -> { this.setPatchVersion(n.getStringValue()); });
+        deserializerMap.put("releaseNotesUrl", (n) -> { this.setReleaseNotesUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the osVersion property value. Artifact OS version (e.g.: 8.1.0)
@@ -85,7 +85,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOsVersion() {
-        return this._osVersion;
+        return this.osVersion;
     }
     /**
      * Gets the patchVersion property value. Artifact patch version (e.g.: U00)
@@ -93,7 +93,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPatchVersion() {
-        return this._patchVersion;
+        return this.patchVersion;
     }
     /**
      * Gets the releaseNotesUrl property value. Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>)
@@ -101,13 +101,14 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getReleaseNotesUrl() {
-        return this._releaseNotesUrl;
+        return this.releaseNotesUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +124,53 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
      * @param value Value to set for the boardSupportPackageVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBoardSupportPackageVersion(@javax.annotation.Nullable final String value) {
-        this._boardSupportPackageVersion = value;
+        this.boardSupportPackageVersion = value;
     }
     /**
      * Sets the description property value. Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021)
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the deviceModel property value. Applicable device model (e.g.: TC8300)
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
-        this._deviceModel = value;
+        this.deviceModel = value;
     }
     /**
      * Sets the osVersion property value. Artifact OS version (e.g.: 8.1.0)
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
-        this._osVersion = value;
+        this.osVersion = value;
     }
     /**
      * Sets the patchVersion property value. Artifact patch version (e.g.: U00)
      * @param value Value to set for the patchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPatchVersion(@javax.annotation.Nullable final String value) {
-        this._patchVersion = value;
+        this.patchVersion = value;
     }
     /**
      * Sets the releaseNotesUrl property value. Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>)
      * @param value Value to set for the releaseNotesUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReleaseNotesUrl(@javax.annotation.Nullable final String value) {
-        this._releaseNotesUrl = value;
+        this.releaseNotesUrl = value;
     }
 }

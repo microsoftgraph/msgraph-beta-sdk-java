@@ -3,23 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension implements Parsable {
     /** Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements. */
-    private java.util.List<KeyTypedValuePair> _configurations;
+    private java.util.List<KeyTypedValuePair> configurations;
     /** Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs. */
-    private String _extensionIdentifier;
+    private String extensionIdentifier;
     /** Gets or sets the team ID of the app extension that performs SSO for the specified URLs. */
-    private String _teamIdentifier;
+    private String teamIdentifier;
     /** One or more URL prefixes of identity providers on whose behalf the app extension performs single sign-on. URLs must begin with http:// or https://. All URL prefixes must be unique for all profiles. */
-    private java.util.List<String> _urlPrefixes;
+    private java.util.List<String> urlPrefixes;
     /**
      * Instantiates a new IosRedirectSingleSignOnExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosRedirectSingleSignOnExtension() {
         super();
         this.setOdataType("#microsoft.graph.iosRedirectSingleSignOnExtension");
@@ -40,7 +40,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      */
     @javax.annotation.Nullable
     public java.util.List<KeyTypedValuePair> getConfigurations() {
-        return this._configurations;
+        return this.configurations;
     }
     /**
      * Gets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
@@ -48,21 +48,20 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      */
     @javax.annotation.Nullable
     public String getExtensionIdentifier() {
-        return this._extensionIdentifier;
+        return this.extensionIdentifier;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosRedirectSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("configurations", (n) -> { currentObject.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
-            this.put("extensionIdentifier", (n) -> { currentObject.setExtensionIdentifier(n.getStringValue()); });
-            this.put("teamIdentifier", (n) -> { currentObject.setTeamIdentifier(n.getStringValue()); });
-            this.put("urlPrefixes", (n) -> { currentObject.setUrlPrefixes(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configurations", (n) -> { this.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensionIdentifier", (n) -> { this.setExtensionIdentifier(n.getStringValue()); });
+        deserializerMap.put("teamIdentifier", (n) -> { this.setTeamIdentifier(n.getStringValue()); });
+        deserializerMap.put("urlPrefixes", (n) -> { this.setUrlPrefixes(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
@@ -70,7 +69,7 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      */
     @javax.annotation.Nullable
     public String getTeamIdentifier() {
-        return this._teamIdentifier;
+        return this.teamIdentifier;
     }
     /**
      * Gets the urlPrefixes property value. One or more URL prefixes of identity providers on whose behalf the app extension performs single sign-on. URLs must begin with http:// or https://. All URL prefixes must be unique for all profiles.
@@ -78,13 +77,14 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      */
     @javax.annotation.Nullable
     public java.util.List<String> getUrlPrefixes() {
-        return this._urlPrefixes;
+        return this.urlPrefixes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,31 +98,35 @@ public class IosRedirectSingleSignOnExtension extends IosSingleSignOnExtension i
      * @param value Value to set for the configurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurations(@javax.annotation.Nullable final java.util.List<KeyTypedValuePair> value) {
-        this._configurations = value;
+        this.configurations = value;
     }
     /**
      * Sets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
      * @param value Value to set for the extensionIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionIdentifier(@javax.annotation.Nullable final String value) {
-        this._extensionIdentifier = value;
+        this.extensionIdentifier = value;
     }
     /**
      * Sets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
      * @param value Value to set for the teamIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamIdentifier(@javax.annotation.Nullable final String value) {
-        this._teamIdentifier = value;
+        this.teamIdentifier = value;
     }
     /**
      * Sets the urlPrefixes property value. One or more URL prefixes of identity providers on whose behalf the app extension performs single sign-on. URLs must begin with http:// or https://. All URL prefixes must be unique for all profiles.
      * @param value Value to set for the urlPrefixes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrlPrefixes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._urlPrefixes = value;
+        this.urlPrefixes = value;
     }
 }

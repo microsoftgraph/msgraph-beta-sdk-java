@@ -3,45 +3,44 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
     /** Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only. */
-    private java.util.List<String> _appScopeIds;
+    private java.util.List<String> appScopeIds;
     /** Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only. */
-    private java.util.List<AppScope> _appScopes;
+    private java.util.List<AppScope> appScopes;
     /** The condition property */
-    private String _condition;
+    private String condition;
     /** Description of the role assignment. */
-    private String _description;
+    private String description;
     /** Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only. */
-    private java.util.List<String> _directoryScopeIds;
+    private java.util.List<String> directoryScopeIds;
     /** Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand. */
-    private java.util.List<DirectoryObject> _directoryScopes;
+    private java.util.List<DirectoryObject> directoryScopes;
     /** Name of the role assignment. Required. */
-    private String _displayName;
+    private String displayName;
     /** Identifiers of the principals to which the assignment is granted.  Supports $filter (any operator only). */
-    private java.util.List<String> _principalIds;
+    private java.util.List<String> principalIds;
     /** Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand. */
-    private java.util.List<DirectoryObject> _principals;
+    private java.util.List<DirectoryObject> principals;
     /** Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand. */
-    private UnifiedRoleDefinition _roleDefinition;
+    private UnifiedRoleDefinition roleDefinition;
     /** Identifier of the unifiedRoleDefinition the assignment is for. */
-    private String _roleDefinitionId;
+    private String roleDefinitionId;
     /**
-     * Instantiates a new UnifiedRoleAssignmentMultiple and sets the default values.
+     * Instantiates a new unifiedRoleAssignmentMultiple and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleAssignmentMultiple() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleAssignmentMultiple");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleAssignmentMultiple
+     * @return a unifiedRoleAssignmentMultiple
      */
     @javax.annotation.Nonnull
     public static UnifiedRoleAssignmentMultiple createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +53,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAppScopeIds() {
-        return this._appScopeIds;
+        return this.appScopeIds;
     }
     /**
      * Gets the appScopes property value. Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
@@ -62,7 +61,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppScope> getAppScopes() {
-        return this._appScopes;
+        return this.appScopes;
     }
     /**
      * Gets the condition property value. The condition property
@@ -70,7 +69,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCondition() {
-        return this._condition;
+        return this.condition;
     }
     /**
      * Gets the description property value. Description of the role assignment.
@@ -78,7 +77,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the directoryScopeIds property value. Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
@@ -86,7 +85,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDirectoryScopeIds() {
-        return this._directoryScopeIds;
+        return this.directoryScopeIds;
     }
     /**
      * Gets the directoryScopes property value. Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
@@ -94,7 +93,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getDirectoryScopes() {
-        return this._directoryScopes;
+        return this.directoryScopes;
     }
     /**
      * Gets the displayName property value. Name of the role assignment. Required.
@@ -102,28 +101,27 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnifiedRoleAssignmentMultiple currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appScopeIds", (n) -> { currentObject.setAppScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("appScopes", (n) -> { currentObject.setAppScopes(n.getCollectionOfObjectValues(AppScope::createFromDiscriminatorValue)); });
-            this.put("condition", (n) -> { currentObject.setCondition(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("directoryScopeIds", (n) -> { currentObject.setDirectoryScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("directoryScopes", (n) -> { currentObject.setDirectoryScopes(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("principalIds", (n) -> { currentObject.setPrincipalIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("principals", (n) -> { currentObject.setPrincipals(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("roleDefinition", (n) -> { currentObject.setRoleDefinition(n.getObjectValue(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
-            this.put("roleDefinitionId", (n) -> { currentObject.setRoleDefinitionId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appScopeIds", (n) -> { this.setAppScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("appScopes", (n) -> { this.setAppScopes(n.getCollectionOfObjectValues(AppScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("condition", (n) -> { this.setCondition(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("directoryScopeIds", (n) -> { this.setDirectoryScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("directoryScopes", (n) -> { this.setDirectoryScopes(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("principalIds", (n) -> { this.setPrincipalIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("principals", (n) -> { this.setPrincipals(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleDefinition", (n) -> { this.setRoleDefinition(n.getObjectValue(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleDefinitionId", (n) -> { this.setRoleDefinitionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the principalIds property value. Identifiers of the principals to which the assignment is granted.  Supports $filter (any operator only).
@@ -131,7 +129,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getPrincipalIds() {
-        return this._principalIds;
+        return this.principalIds;
     }
     /**
      * Gets the principals property value. Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
@@ -139,7 +137,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getPrincipals() {
-        return this._principals;
+        return this.principals;
     }
     /**
      * Gets the roleDefinition property value. Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
@@ -147,7 +145,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public UnifiedRoleDefinition getRoleDefinition() {
-        return this._roleDefinition;
+        return this.roleDefinition;
     }
     /**
      * Gets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition the assignment is for.
@@ -155,13 +153,14 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRoleDefinitionId() {
-        return this._roleDefinitionId;
+        return this.roleDefinitionId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,87 +181,98 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the appScopeIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppScopeIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._appScopeIds = value;
+        this.appScopeIds = value;
     }
     /**
      * Sets the appScopes property value. Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
      * @param value Value to set for the appScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppScopes(@javax.annotation.Nullable final java.util.List<AppScope> value) {
-        this._appScopes = value;
+        this.appScopes = value;
     }
     /**
      * Sets the condition property value. The condition property
      * @param value Value to set for the condition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCondition(@javax.annotation.Nullable final String value) {
-        this._condition = value;
+        this.condition = value;
     }
     /**
      * Sets the description property value. Description of the role assignment.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the directoryScopeIds property value. Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
      * @param value Value to set for the directoryScopeIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryScopeIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._directoryScopeIds = value;
+        this.directoryScopeIds = value;
     }
     /**
      * Sets the directoryScopes property value. Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      * @param value Value to set for the directoryScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryScopes(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._directoryScopes = value;
+        this.directoryScopes = value;
     }
     /**
      * Sets the displayName property value. Name of the role assignment. Required.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the principalIds property value. Identifiers of the principals to which the assignment is granted.  Supports $filter (any operator only).
      * @param value Value to set for the principalIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._principalIds = value;
+        this.principalIds = value;
     }
     /**
      * Sets the principals property value. Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      * @param value Value to set for the principals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipals(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._principals = value;
+        this.principals = value;
     }
     /**
      * Sets the roleDefinition property value. Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinition(@javax.annotation.Nullable final UnifiedRoleDefinition value) {
-        this._roleDefinition = value;
+        this.roleDefinition = value;
     }
     /**
      * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition the assignment is for.
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
-        this._roleDefinitionId = value;
+        this.roleDefinitionId = value;
     }
 }

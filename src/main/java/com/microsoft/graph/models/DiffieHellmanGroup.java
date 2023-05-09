@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Diffie Hellman Group values for Windows10 VPN policies with IKEv2 connection type. */
 public enum DiffieHellmanGroup implements ValuedEnum {
     /** Group1 */
     Group1("group1"),

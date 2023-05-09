@@ -5,20 +5,19 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the downloadAppDiagnostics method. */
 public class DownloadAppDiagnosticsPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The request property */
-    private PowerliftDownloadRequest _request;
+    private PowerliftDownloadRequest request;
     /**
      * Instantiates a new downloadAppDiagnosticsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DownloadAppDiagnosticsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,18 +37,17 @@ public class DownloadAppDiagnosticsPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DownloadAppDiagnosticsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("request", (n) -> { currentObject.setRequest(n.getObjectValue(PowerliftDownloadRequest::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("request", (n) -> { this.setRequest(n.getObjectValue(PowerliftDownloadRequest::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the request property value. The request property
@@ -57,13 +55,14 @@ public class DownloadAppDiagnosticsPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public PowerliftDownloadRequest getRequest() {
-        return this._request;
+        return this.request;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("request", this.getRequest());
@@ -74,15 +73,17 @@ public class DownloadAppDiagnosticsPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the request property value. The request property
      * @param value Value to set for the request property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequest(@javax.annotation.Nullable final PowerliftDownloadRequest value) {
-        this._request = value;
+        this.request = value;
     }
 }

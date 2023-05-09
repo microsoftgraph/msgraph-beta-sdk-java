@@ -3,41 +3,43 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The user experience analytics Device not windows autopilot ready.
+ */
 public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity implements Parsable {
     /** The intune device's autopilotProfileAssigned. */
-    private Boolean _autoPilotProfileAssigned;
+    private Boolean autoPilotProfileAssigned;
     /** The intune device's autopilotRegistered. */
-    private Boolean _autoPilotRegistered;
+    private Boolean autoPilotRegistered;
     /** The intune device's azure Ad joinType. */
-    private String _azureAdJoinType;
+    private String azureAdJoinType;
     /** The intune device's azureAdRegistered. */
-    private Boolean _azureAdRegistered;
+    private Boolean azureAdRegistered;
     /** The intune device's name. */
-    private String _deviceName;
+    private String deviceName;
     /** The intune device's managed by. */
-    private String _managedBy;
+    private String managedBy;
     /** The intune device's manufacturer. */
-    private String _manufacturer;
+    private String manufacturer;
     /** The intune device's model. */
-    private String _model;
+    private String model;
     /** The intune device's serial number. */
-    private String _serialNumber;
+    private String serialNumber;
     /**
-     * Instantiates a new UserExperienceAnalyticsNotAutopilotReadyDevice and sets the default values.
+     * Instantiates a new userExperienceAnalyticsNotAutopilotReadyDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsNotAutopilotReadyDevice() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsNotAutopilotReadyDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a userExperienceAnalyticsNotAutopilotReadyDevice
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsNotAutopilotReadyDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +52,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      */
     @javax.annotation.Nullable
     public Boolean getAutoPilotProfileAssigned() {
-        return this._autoPilotProfileAssigned;
+        return this.autoPilotProfileAssigned;
     }
     /**
      * Gets the autoPilotRegistered property value. The intune device's autopilotRegistered.
@@ -58,7 +60,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      */
     @javax.annotation.Nullable
     public Boolean getAutoPilotRegistered() {
-        return this._autoPilotRegistered;
+        return this.autoPilotRegistered;
     }
     /**
      * Gets the azureAdJoinType property value. The intune device's azure Ad joinType.
@@ -66,7 +68,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      */
     @javax.annotation.Nullable
     public String getAzureAdJoinType() {
-        return this._azureAdJoinType;
+        return this.azureAdJoinType;
     }
     /**
      * Gets the azureAdRegistered property value. The intune device's azureAdRegistered.
@@ -74,7 +76,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      */
     @javax.annotation.Nullable
     public Boolean getAzureAdRegistered() {
-        return this._azureAdRegistered;
+        return this.azureAdRegistered;
     }
     /**
      * Gets the deviceName property value. The intune device's name.
@@ -82,26 +84,25 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsNotAutopilotReadyDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("autoPilotProfileAssigned", (n) -> { currentObject.setAutoPilotProfileAssigned(n.getBooleanValue()); });
-            this.put("autoPilotRegistered", (n) -> { currentObject.setAutoPilotRegistered(n.getBooleanValue()); });
-            this.put("azureAdJoinType", (n) -> { currentObject.setAzureAdJoinType(n.getStringValue()); });
-            this.put("azureAdRegistered", (n) -> { currentObject.setAzureAdRegistered(n.getBooleanValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("managedBy", (n) -> { currentObject.setManagedBy(n.getStringValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("autoPilotProfileAssigned", (n) -> { this.setAutoPilotProfileAssigned(n.getBooleanValue()); });
+        deserializerMap.put("autoPilotRegistered", (n) -> { this.setAutoPilotRegistered(n.getBooleanValue()); });
+        deserializerMap.put("azureAdJoinType", (n) -> { this.setAzureAdJoinType(n.getStringValue()); });
+        deserializerMap.put("azureAdRegistered", (n) -> { this.setAzureAdRegistered(n.getBooleanValue()); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getStringValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("serialNumber", (n) -> { this.setSerialNumber(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedBy property value. The intune device's managed by.
@@ -109,7 +110,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      */
     @javax.annotation.Nullable
     public String getManagedBy() {
-        return this._managedBy;
+        return this.managedBy;
     }
     /**
      * Gets the manufacturer property value. The intune device's manufacturer.
@@ -117,7 +118,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the model property value. The intune device's model.
@@ -125,7 +126,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Gets the serialNumber property value. The intune device's serial number.
@@ -133,13 +134,14 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      */
     @javax.annotation.Nullable
     public String getSerialNumber() {
-        return this._serialNumber;
+        return this.serialNumber;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,71 +160,80 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      * @param value Value to set for the autoPilotProfileAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoPilotProfileAssigned(@javax.annotation.Nullable final Boolean value) {
-        this._autoPilotProfileAssigned = value;
+        this.autoPilotProfileAssigned = value;
     }
     /**
      * Sets the autoPilotRegistered property value. The intune device's autopilotRegistered.
      * @param value Value to set for the autoPilotRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoPilotRegistered(@javax.annotation.Nullable final Boolean value) {
-        this._autoPilotRegistered = value;
+        this.autoPilotRegistered = value;
     }
     /**
      * Sets the azureAdJoinType property value. The intune device's azure Ad joinType.
      * @param value Value to set for the azureAdJoinType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdJoinType(@javax.annotation.Nullable final String value) {
-        this._azureAdJoinType = value;
+        this.azureAdJoinType = value;
     }
     /**
      * Sets the azureAdRegistered property value. The intune device's azureAdRegistered.
      * @param value Value to set for the azureAdRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdRegistered(@javax.annotation.Nullable final Boolean value) {
-        this._azureAdRegistered = value;
+        this.azureAdRegistered = value;
     }
     /**
      * Sets the deviceName property value. The intune device's name.
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the managedBy property value. The intune device's managed by.
      * @param value Value to set for the managedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedBy(@javax.annotation.Nullable final String value) {
-        this._managedBy = value;
+        this.managedBy = value;
     }
     /**
      * Sets the manufacturer property value. The intune device's manufacturer.
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the model property value. The intune device's model.
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
      * Sets the serialNumber property value. The intune device's serial number.
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
-        this._serialNumber = value;
+        this.serialNumber = value;
     }
 }

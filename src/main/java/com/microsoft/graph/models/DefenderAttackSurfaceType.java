@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Possible values of Defender Attack Surface Reduction Rules */
 public enum DefenderAttackSurfaceType implements ValuedEnum {
     /** Default, which disables attack surface reduction rule. */
     UserDefined("userDefined"),

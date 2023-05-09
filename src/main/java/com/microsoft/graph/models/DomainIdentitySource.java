@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainIdentitySource extends IdentitySource implements Parsable {
     /** The name of the identity source, typically also the domain name. Read only. */
-    private String _displayName;
+    private String displayName;
     /** The domain name. Read only. */
-    private String _domainName;
+    private String domainName;
     /**
      * Instantiates a new DomainIdentitySource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DomainIdentitySource() {
         super();
         this.setOdataType("#microsoft.graph.domainIdentitySource");
@@ -36,7 +36,7 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the domainName property value. The domain name. Read only.
@@ -44,25 +44,25 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDomainName() {
-        return this._domainName;
+        return this.domainName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DomainIdentitySource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class DomainIdentitySource extends IdentitySource implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the domainName property value. The domain name. Read only.
      * @param value Value to set for the domainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainName(@javax.annotation.Nullable final String value) {
-        this._domainName = value;
+        this.domainName = value;
     }
 }
