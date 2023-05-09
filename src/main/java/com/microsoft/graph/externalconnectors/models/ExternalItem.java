@@ -59,7 +59,7 @@ public class ExternalItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Activities.
-     * Write-only property. Returns results.
+     * Returns a list of activities performed on the item. Write-only.
      */
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose

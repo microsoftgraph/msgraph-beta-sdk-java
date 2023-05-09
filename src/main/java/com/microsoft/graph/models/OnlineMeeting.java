@@ -89,6 +89,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public Boolean allowParticipantsToChangeName;
 
     /**
+     * The Allow Recording.
+     * 
+     */
+    @SerializedName(value = "allowRecording", alternate = {"AllowRecording"})
+    @Expose
+	@Nullable
+    public Boolean allowRecording;
+
+    /**
      * The Allow Teamwork Reactions.
      * Indicates if Teams reactions are enabled for the meeting.
      */
@@ -96,6 +105,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean allowTeamworkReactions;
+
+    /**
+     * The Allow Transcription.
+     * 
+     */
+    @SerializedName(value = "allowTranscription", alternate = {"AllowTranscription"})
+    @Expose
+	@Nullable
+    public Boolean allowTranscription;
 
     /**
      * The Anonymize Identity For Roles.

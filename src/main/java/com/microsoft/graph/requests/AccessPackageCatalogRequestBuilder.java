@@ -142,8 +142,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder accessPackages() {
-        return new com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageCollectionWithReferencesRequestBuilder accessPackages() {
+        return new com.microsoft.graph.requests.AccessPackageCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
     }
 
     /**
@@ -153,8 +153,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder accessPackages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CustomAccessPackageWorkflowExtension collection

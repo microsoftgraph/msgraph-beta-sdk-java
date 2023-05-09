@@ -8,7 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.EducationGradingCategoryCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -34,6 +36,15 @@ public class EducationAssignmentSettings extends Entity implements IJsonBackedOb
 	@Nullable
     public Boolean submissionAnimationDisabled;
 
+    /**
+     * The Grading Categories.
+     * 
+     */
+    @SerializedName(value = "gradingCategories", alternate = {"GradingCategories"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.EducationGradingCategoryCollectionPage gradingCategories;
+
 
     /**
      * Sets the raw JSON object
@@ -43,5 +54,9 @@ public class EducationAssignmentSettings extends Entity implements IJsonBackedOb
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("gradingCategories")) {
+            gradingCategories = serializer.deserializeObject(json.get("gradingCategories"), com.microsoft.graph.requests.EducationGradingCategoryCollectionPage.class);
+        }
     }
 }

@@ -76,6 +76,26 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagem
     public com.microsoft.graph.requests.RbacApplicationMultipleRequestBuilder cloudPC() {
         return new com.microsoft.graph.requests.RbacApplicationMultipleRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPC"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the RbacApplication collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.RbacApplicationCollectionRequestBuilder enterpriseApps() {
+        return new com.microsoft.graph.requests.RbacApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("enterpriseApps"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the RbacApplication item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.RbacApplicationRequestBuilder enterpriseApps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("enterpriseApps") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for UnifiedRbacApplication

@@ -101,6 +101,15 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
     public Boolean isSsprRegistered;
 
     /**
+     * The Last Updated Date Time.
+     * 
+     */
+    @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime lastUpdatedDateTime;
+
+    /**
      * The Methods Registered.
      * Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
      */

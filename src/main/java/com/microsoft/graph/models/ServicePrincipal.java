@@ -273,7 +273,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Preferred Token Signing Key End Date Time.
-     * Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint.
+     * Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint. Updating this attribute is not currentlysupported. For details, see ServicePrincipal property differences.
      */
     @SerializedName(value = "preferredTokenSigningKeyEndDateTime", alternate = {"PreferredTokenSigningKeyEndDateTime"})
     @Expose

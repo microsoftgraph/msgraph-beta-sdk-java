@@ -50,7 +50,7 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
 
     /**
      * The Exclude Guests Or External Users.
-     * Internal guests or external users excluded in the policy scope. Optionally populated.
+     * Internal guests or external users excluded from the policy scope. Optionally populated.
      */
     @SerializedName(value = "excludeGuestsOrExternalUsers", alternate = {"ExcludeGuestsOrExternalUsers"})
     @Expose

@@ -42,7 +42,7 @@ public class PropertyRule implements IJsonBackedObject {
 
     /**
      * The Operation.
-     * Specifies the operations to be performed during evaluation of a single propertyRule, where property and a string from the values collection are the respective operands. Possible values are: null, equals, notEquals, contains, notContains, lessThan, greaterThan, startsWith, unknownFutureValue. Required.
+     * Specifies the operations to be performed during evaluation of a single propertyRule, where property and a string from the values collection are the respective operands. Possible values are: null, equals, notEquals, contains, notContains, lessThan, greaterThan, startsWith. Required.
      */
     @SerializedName(value = "operation", alternate = {"Operation"})
     @Expose
