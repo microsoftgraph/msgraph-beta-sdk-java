@@ -13,23 +13,31 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, 1ES.Pool=1es-ubuntu-msgraph-beta-sdk-java-mem-latest]
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: 18
+        distribution: 'adopt'
+        cache: gradle
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
-      # Override language selection by uncommenting this and choosing your languages
       with:
         languages: java
-
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v2
+    - name: Detect Secrets
+      uses: RobertFischer/detect-secrets-action@v2.0.0
+    - name: Grant Execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      run: ./gradlew build
+
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
@@ -37,10 +45,6 @@ jobs:
     # ✏️ If the Autobuild fails above, remove it and uncomment the following three lines
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
-
-    #- run: |
-    #   make bootstrap
-    #   make release
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
