@@ -39,7 +39,7 @@ public class IdleSessionSignOut implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * 
+     * Indicates whether the idle session sign-out policy is enabled.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -48,7 +48,7 @@ public class IdleSessionSignOut implements IJsonBackedObject {
 
     /**
      * The Sign Out After In Seconds.
-     * 
+     * Number of seconds of inactivity after which a user is signed out.
      */
     @SerializedName(value = "signOutAfterInSeconds", alternate = {"SignOutAfterInSeconds"})
     @Expose
@@ -57,7 +57,7 @@ public class IdleSessionSignOut implements IJsonBackedObject {
 
     /**
      * The Warn After In Seconds.
-     * 
+     * Number of seconds of inactivity after which a user is notified that they'll be signed out.
      */
     @SerializedName(value = "warnAfterInSeconds", alternate = {"WarnAfterInSeconds"})
     @Expose

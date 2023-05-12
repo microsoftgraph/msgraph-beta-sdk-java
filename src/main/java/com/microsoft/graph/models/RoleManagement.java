@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.RbacApplication;
 import com.microsoft.graph.models.RbacApplicationMultiple;
 import com.microsoft.graph.models.UnifiedRbacApplication;
@@ -59,6 +60,15 @@ public class RoleManagement implements IJsonBackedObject {
     public RbacApplicationMultiple cloudPC;
 
     /**
+     * The Enterprise Apps.
+     * 
+     */
+    @SerializedName(value = "enterpriseApps", alternate = {"EnterpriseApps"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.RbacApplicationCollectionPage enterpriseApps;
+
+    /**
      * The Exchange.
      * 
      */
@@ -94,5 +104,9 @@ public class RoleManagement implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("enterpriseApps")) {
+            enterpriseApps = serializer.deserializeObject(json.get("enterpriseApps"), com.microsoft.graph.requests.RbacApplicationCollectionPage.class);
+        }
     }
 }

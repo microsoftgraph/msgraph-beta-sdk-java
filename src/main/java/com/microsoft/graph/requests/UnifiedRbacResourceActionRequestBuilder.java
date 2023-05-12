@@ -58,6 +58,16 @@ public class UnifiedRbacResourceActionRequestBuilder extends BaseRequestBuilder<
 
 
     /**
+     * Gets the request builder for AuthenticationContextClassReference
+     *
+     * @return the AuthenticationContextClassReferenceWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuthenticationContextClassReferenceWithReferenceRequestBuilder authenticationContext() {
+        return new com.microsoft.graph.requests.AuthenticationContextClassReferenceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationContext"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for UnifiedRbacResourceScope
      *
      * @return the UnifiedRbacResourceScopeRequestBuilder instance

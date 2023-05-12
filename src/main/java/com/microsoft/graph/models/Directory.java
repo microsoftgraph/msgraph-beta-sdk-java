@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ImpactedResourceCollectionPage;
 import com.microsoft.graph.requests.RecommendationCollectionPage;
-import com.microsoft.graph.requests.AdministrativeUnitCollectionPage;
 import com.microsoft.graph.requests.AttributeSetCollectionPage;
 import com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;

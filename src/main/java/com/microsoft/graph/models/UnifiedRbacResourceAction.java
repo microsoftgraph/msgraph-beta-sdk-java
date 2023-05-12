@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.AuthenticationContextClassReference;
 import com.microsoft.graph.models.UnifiedRbacResourceScope;
 import com.microsoft.graph.models.Entity;
 
@@ -79,6 +80,15 @@ public class UnifiedRbacResourceAction extends Entity implements IJsonBackedObje
     @Expose
 	@Nullable
     public String resourceScopeId;
+
+    /**
+     * The Authentication Context.
+     * 
+     */
+    @SerializedName(value = "authenticationContext", alternate = {"AuthenticationContext"})
+    @Expose
+	@Nullable
+    public AuthenticationContextClassReference authenticationContext;
 
     /**
      * The Resource Scope.

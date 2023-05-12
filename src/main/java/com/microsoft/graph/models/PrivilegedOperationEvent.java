@@ -27,7 +27,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Additional Information.
-     * Detailed human readable information for the event.
+     * 
      */
     @SerializedName(value = "additionalInformation", alternate = {"AdditionalInformation"})
     @Expose
@@ -36,7 +36,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Creation Date Time.
-     * Indicates the time when the event is created.
+     * 
      */
     @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
@@ -45,7 +45,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Expiration Date Time.
-     * This is only used when the requestType is Activate, and it indicates the expiration time for the role activation.
+     * 
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -54,7 +54,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Reference Key.
-     * Incident/Request ticket number during role activation. The value is presented only if the ticket number is provided during role activation.
+     * 
      */
     @SerializedName(value = "referenceKey", alternate = {"ReferenceKey"})
     @Expose
@@ -63,7 +63,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Reference System.
-     * Incident/Request ticketing system provided during tole activation. The value is presented only if the ticket system is provided during role activation.
+     * 
      */
     @SerializedName(value = "referenceSystem", alternate = {"ReferenceSystem"})
     @Expose
@@ -72,7 +72,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Requestor Id.
-     * The user id of the requestor who initiates the operation.
+     * 
      */
     @SerializedName(value = "requestorId", alternate = {"RequestorId"})
     @Expose
@@ -81,7 +81,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Requestor Name.
-     * The user name of the requestor who initiates the operation.
+     * 
      */
     @SerializedName(value = "requestorName", alternate = {"RequestorName"})
     @Expose
@@ -90,7 +90,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Request Type.
-     * The request operation type. The requestType value can be: Assign (role assignment), Activate (role activation), Unassign (remove role assignment), Deactivate (role deactivation), ScanAlertsNow (scan security alerts), DismissAlert (dismiss security alert), FixAlertItem (fix a security alert issue),  AccessReview_Review (review an Access Review), AccessReview_Create (create an Access Review) , AccessReview_Update (update an Access Review), AccessReview_Delete (delete an Access Review).
+     * 
      */
     @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose
@@ -99,7 +99,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Role Id.
-     * The id of the role that is associated with the operation.
+     * 
      */
     @SerializedName(value = "roleId", alternate = {"RoleId"})
     @Expose
@@ -108,7 +108,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Role Name.
-     * The name of the role.
+     * 
      */
     @SerializedName(value = "roleName", alternate = {"RoleName"})
     @Expose
@@ -117,7 +117,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Tenant Id.
-     * The tenant (organization) id.
+     * 
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -126,7 +126,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The User Id.
-     * The id of the user that is associated with the operation.
+     * 
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -135,7 +135,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The User Mail.
-     * The user's email.
+     * 
      */
     @SerializedName(value = "userMail", alternate = {"UserMail"})
     @Expose
@@ -144,7 +144,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The User Name.
-     * The user's display name.
+     * 
      */
     @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose

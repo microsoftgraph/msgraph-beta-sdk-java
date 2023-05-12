@@ -28,7 +28,7 @@ public class ExternalActivityResult extends ExternalActivity implements IJsonBac
 
     /**
      * The Error.
-     * Error information explaining failure to process external activity.
+     * Error information that explains the failure to process an external activity.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose

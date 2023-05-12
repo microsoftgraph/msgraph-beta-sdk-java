@@ -16,6 +16,7 @@ import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EducationAssignmentGradeType;
 import com.microsoft.graph.models.EducationItemBody;
 import com.microsoft.graph.models.EducationAssignmentStatus;
+import com.microsoft.graph.models.EducationGradingCategory;
 import com.microsoft.graph.models.EducationRubric;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationCategoryCollectionPage;
@@ -219,7 +220,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned.
+     * Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned, unknownFutureValue and inactive. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -243,6 +244,15 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.EducationCategoryCollectionPage categories;
+
+    /**
+     * The Grading Category.
+     * 
+     */
+    @SerializedName(value = "gradingCategory", alternate = {"GradingCategory"})
+    @Expose
+	@Nullable
+    public EducationGradingCategory gradingCategory;
 
     /**
      * The Resources.

@@ -53,7 +53,7 @@ public class Admin implements IJsonBackedObject {
 
     /**
      * The Sharepoint.
-     * A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive.
+     * 
      */
     @SerializedName(value = "sharepoint", alternate = {"Sharepoint"})
     @Expose
