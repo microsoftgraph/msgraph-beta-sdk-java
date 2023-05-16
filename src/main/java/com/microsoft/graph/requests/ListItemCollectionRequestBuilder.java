@@ -24,7 +24,6 @@ import com.microsoft.graph.requests.ListItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.ListItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.PrimitiveRequestBuilder;
 import com.microsoft.graph.models.ListItemCreateLinkParameterSet;
 import com.microsoft.graph.models.ListItemDeltaParameterSet;
 import com.microsoft.graph.models.ListItemGetActivitiesByIntervalParameterSet;
@@ -65,14 +64,5 @@ public class ListItemCollectionRequestBuilder extends BaseCollectionRequestBuild
     @Nonnull
     public ListItemDeltaCollectionRequestBuilder delta(@Nonnull final ListItemDeltaParameterSet parameters) {
         return new ListItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets the raw count request for the collection
-     * @return The raw count request for the collection
-     */
-    @Nonnull
-    public PrimitiveRequestBuilder<Long> count() {
-        return new PrimitiveRequestBuilder<Long>(getRequestUrlWithAdditionalSegment("$count"), getClient(), null, Long.class);
     }
 }

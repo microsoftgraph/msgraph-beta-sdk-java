@@ -40,7 +40,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allowed To Use SSPR.
-     * Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
+     * Indicates whether the Admin Self-Serve Password Reset feature is enabled on the tenant.
      */
     @SerializedName(value = "allowedToUseSSPR", alternate = {"AllowedToUseSSPR"})
     @Expose
@@ -67,7 +67,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allow User Consent For Risky Apps.
-     * Indicates whether user consent for risky apps is allowed. We recommend to keep this as false.
+     * Indicates whether user consent for risky apps is allowed. Default value is false. We recommend that you keep the value set to false.
      */
     @SerializedName(value = "allowUserConsentForRiskyApps", alternate = {"AllowUserConsentForRiskyApps"})
     @Expose

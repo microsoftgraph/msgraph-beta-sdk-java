@@ -183,4 +183,13 @@ public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder<Acces
     public AccessReviewInstanceSendReminderRequestBuilder sendReminder() {
         return new AccessReviewInstanceSendReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendReminder"), getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessReviewInstanceStopApplyDecisionsRequestBuilder stopApplyDecisions() {
+        return new AccessReviewInstanceStopApplyDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stopApplyDecisions"), getClient(), null);
+    }
 }

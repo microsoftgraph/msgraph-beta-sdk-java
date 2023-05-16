@@ -56,8 +56,17 @@ public class AttackSimulationUser implements IJsonBackedObject {
     public String email;
 
     /**
+     * The Out Of Office Days.
+     * 
+     */
+    @SerializedName(value = "outOfOfficeDays", alternate = {"OutOfOfficeDays"})
+    @Expose
+	@Nullable
+    public Integer outOfOfficeDays;
+
+    /**
      * The User Id.
-     * This is the id property value of the user resource that represents the user in the Azure Active Directory tenant.
+     * id property value of the user resource that represents the user in the Azure Active Directory tenant.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

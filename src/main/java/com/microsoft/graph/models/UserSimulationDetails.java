@@ -87,6 +87,15 @@ public class UserSimulationDetails implements IJsonBackedObject {
     public Boolean isCompromised;
 
     /**
+     * The Latest Simulation Activity.
+     * Indicates latest user activity.
+     */
+    @SerializedName(value = "latestSimulationActivity", alternate = {"LatestSimulationActivity"})
+    @Expose
+	@Nullable
+    public String latestSimulationActivity;
+
+    /**
      * The Reported Phish Date Time.
      * Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
      */

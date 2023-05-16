@@ -39,7 +39,7 @@ public class CrossTenantUserSyncInbound implements IJsonBackedObject {
 
     /**
      * The Is Sync Allowed.
-     * Defines whether user objects should be synchronized from the partner tenant. If set to false, any current user synchronization from the source tenant to the target tenant will stop. There is no impact on existing users that have already been synchronized.
+     * Defines whether user objects should be synchronized from the partner tenant. false causes any current user synchronization from the source tenant to the target tenant to stop. This property has no impact on existing users who have already been synchronized.
      */
     @SerializedName(value = "isSyncAllowed", alternate = {"IsSyncAllowed"})
     @Expose

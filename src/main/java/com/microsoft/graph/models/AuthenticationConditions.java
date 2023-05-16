@@ -40,7 +40,7 @@ public class AuthenticationConditions implements IJsonBackedObject {
 
     /**
      * The Applications.
-     * 
+     * Applications which will trigger a custom authentication extension.
      */
     @SerializedName(value = "applications", alternate = {"Applications"})
     @Expose

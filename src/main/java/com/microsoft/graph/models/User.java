@@ -353,6 +353,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<String> infoCatalogs;
 
     /**
+     * The Is License Reconciliation Needed.
+     * Indicates whether the user is pending an exchange mailbox license assignment.  Read-only.  Supports $filter (eq where true only).
+     */
+    @SerializedName(value = "isLicenseReconciliationNeeded", alternate = {"IsLicenseReconciliationNeeded"})
+    @Expose
+	@Nullable
+    public Boolean isLicenseReconciliationNeeded;
+
+    /**
      * The Is Management Restricted.
      * 
      */
@@ -624,7 +633,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Service Provisioning Errors.
-     * 
+     * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      */
     @SerializedName(value = "serviceProvisioningErrors", alternate = {"ServiceProvisioningErrors"})
     @Expose

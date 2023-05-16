@@ -58,7 +58,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
     @SerializedName(value = "conditionsNotSatisfied", alternate = {"ConditionsNotSatisfied"})
     @Expose
 	@Nullable
-    public EnumSet<ConditionalAccessConditions> conditionsNotSatisfied;
+    public java.util.List<EnumSet<ConditionalAccessConditions>> conditionsNotSatisfied;
 
     /**
      * The Conditions Satisfied.
@@ -67,7 +67,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
     @SerializedName(value = "conditionsSatisfied", alternate = {"ConditionsSatisfied"})
     @Expose
 	@Nullable
-    public EnumSet<ConditionalAccessConditions> conditionsSatisfied;
+    public java.util.List<EnumSet<ConditionalAccessConditions>> conditionsSatisfied;
 
     /**
      * The Display Name.

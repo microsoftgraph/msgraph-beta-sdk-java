@@ -39,7 +39,7 @@ public class AuthenticationConditionApplication implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * 
+     * The identifier for an application corresponding to a condition which will trigger an authenticationEventListener.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose

@@ -29,7 +29,7 @@ public class CredentialUserRegistrationCount extends Entity implements IJsonBack
 
     /**
      * The Total User Count.
-     * Provides the total user count in the tenant.
+     * Provides the count of users with accountEnabled set to true in the tenant.
      */
     @SerializedName(value = "totalUserCount", alternate = {"TotalUserCount"})
     @Expose

@@ -93,7 +93,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of key credential; for example, Symmetric, AsymmetricX509Cert.
+     * The type of key credential; for example, Symmetric, AsymmetricX509Cert, or X509CertAndPassword.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -102,7 +102,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Usage.
-     * A string that describes the purpose for which the key can be used; for example, Verify.
+     * A string that describes the purpose for which the key can be used; for example, None​, Verify​, PairwiseIdentifier​, Delegation​, Decrypt​, Encrypt​, HashedIdentifier​, SelfSignedTls, or Sign. If usage is Sign​, the type should be X509CertAndPassword​, and the passwordCredentials​ for signing should be defined.
      */
     @SerializedName(value = "usage", alternate = {"Usage"})
     @Expose

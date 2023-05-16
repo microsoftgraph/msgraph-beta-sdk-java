@@ -31,7 +31,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Audience.
-     * 
+     * Describes the audience the team template is available to. The possible values are: organization, user, public, unknownFutureValue.
      */
     @SerializedName(value = "audience", alternate = {"Audience"})
     @Expose
@@ -40,7 +40,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Categories.
-     * 
+     * The assigned categories for the team template.
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -49,7 +49,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Description.
-     * 
+     * A brief description of the team template as it will appear to the users in Microsoft Teams.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -58,7 +58,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Display Name.
-     * 
+     * The user defined name of the team template.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -67,7 +67,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Icon Url.
-     * 
+     * The icon url for the team template.
      */
     @SerializedName(value = "iconUrl", alternate = {"IconUrl"})
     @Expose
@@ -76,7 +76,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Language Tag.
-     * 
+     * Language the template is available in.
      */
     @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose
@@ -85,7 +85,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Modified By.
-     * 
+     * The identity of the user who last modified the team template.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -94,7 +94,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date time of when the team template was last modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -103,7 +103,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Parent Template Id.
-     * 
+     * The templateId for the team template
      */
     @SerializedName(value = "parentTemplateId", alternate = {"ParentTemplateId"})
     @Expose
@@ -112,7 +112,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Publisher Name.
-     * 
+     * The organization which published the team template.
      */
     @SerializedName(value = "publisherName", alternate = {"PublisherName"})
     @Expose
@@ -121,7 +121,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Short Description.
-     * 
+     * A short-description of the team template as it will appear to the users in Microsoft Teams.
      */
     @SerializedName(value = "shortDescription", alternate = {"ShortDescription"})
     @Expose
@@ -130,7 +130,7 @@ public class TeamTemplateDefinition extends Entity implements IJsonBackedObject 
 
     /**
      * The Team Definition.
-     * 
+     * Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
      */
     @SerializedName(value = "teamDefinition", alternate = {"TeamDefinition"})
     @Expose

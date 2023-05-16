@@ -9,6 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.OnPremisesAccidentalDeletionPrevention;
+import com.microsoft.graph.models.OnPremisesCurrentExportData;
+import com.microsoft.graph.models.OnPremisesWritebackConfiguration;
 
 
 import com.google.gson.JsonObject;
@@ -48,6 +50,33 @@ public class OnPremisesDirectorySynchronizationConfiguration implements IJsonBac
     public OnPremisesAccidentalDeletionPrevention accidentalDeletionPrevention;
 
     /**
+     * The Anchor Attribute.
+     * The anchor attribute allows customers to customize the property used to create source anchors for synchronization enabled objects.
+     */
+    @SerializedName(value = "anchorAttribute", alternate = {"AnchorAttribute"})
+    @Expose
+	@Nullable
+    public String anchorAttribute;
+
+    /**
+     * The Application Id.
+     * The identifier of the on-premises directory synchronization client application that is configured for the tenant.
+     */
+    @SerializedName(value = "applicationId", alternate = {"ApplicationId"})
+    @Expose
+	@Nullable
+    public String applicationId;
+
+    /**
+     * The Current Export Data.
+     * Data for the current export run.
+     */
+    @SerializedName(value = "currentExportData", alternate = {"CurrentExportData"})
+    @Expose
+	@Nullable
+    public OnPremisesCurrentExportData currentExportData;
+
+    /**
      * The Customer Requested Synchronization Interval.
      * Interval of time that the customer requested the sync client waits between sync cycles.
      */
@@ -57,6 +86,15 @@ public class OnPremisesDirectorySynchronizationConfiguration implements IJsonBac
     public javax.xml.datatype.Duration customerRequestedSynchronizationInterval;
 
     /**
+     * The Synchronization Client Version.
+     * Indicates the version of the on-premises directory synchronization application.
+     */
+    @SerializedName(value = "synchronizationClientVersion", alternate = {"SynchronizationClientVersion"})
+    @Expose
+	@Nullable
+    public String synchronizationClientVersion;
+
+    /**
      * The Synchronization Interval.
      * Interval of time the sync client should honor between sync cycles
      */
@@ -64,6 +102,15 @@ public class OnPremisesDirectorySynchronizationConfiguration implements IJsonBac
     @Expose
 	@Nullable
     public javax.xml.datatype.Duration synchronizationInterval;
+
+    /**
+     * The Writeback Configuration.
+     * Configuration to control how cloud created or owned objects are synchronized back to the on-premises directory.
+     */
+    @SerializedName(value = "writebackConfiguration", alternate = {"WritebackConfiguration"})
+    @Expose
+	@Nullable
+    public OnPremisesWritebackConfiguration writebackConfiguration;
 
 
     /**

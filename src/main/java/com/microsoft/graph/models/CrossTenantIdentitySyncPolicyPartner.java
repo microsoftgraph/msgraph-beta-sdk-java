@@ -40,7 +40,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD tenant to easily identify the policy. Optional.
+     * Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

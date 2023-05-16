@@ -28,7 +28,7 @@ public class OnTokenIssuanceStartListener extends AuthenticationEventListener im
 
     /**
      * The Handler.
-     * 
+     * The handler to invoke when conditions are met for this onTokenIssuanceStartListener.
      */
     @SerializedName(value = "handler", alternate = {"Handler"})
     @Expose

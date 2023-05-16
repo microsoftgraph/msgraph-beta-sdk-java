@@ -41,7 +41,7 @@ public class AuthenticationConditionsApplications implements IJsonBackedObject {
 
     /**
      * The Include All Applications.
-     * 
+     * Whether the custom authentication extension should trigger for all applications with appIds specified in the includeApplications relationship. This property must be set to false for listener of type onTokenIssuanceStartListener.
      */
     @SerializedName(value = "includeAllApplications", alternate = {"IncludeAllApplications"})
     @Expose
