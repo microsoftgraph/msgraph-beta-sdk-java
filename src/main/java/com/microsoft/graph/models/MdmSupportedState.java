@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Mdm Support Status of the setting. */
 public enum MdmSupportedState implements ValuedEnum {
     /** Mdm support status of the setting is not known. */
     Unknown("unknown"),

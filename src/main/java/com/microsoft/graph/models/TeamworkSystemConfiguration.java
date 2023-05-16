@@ -5,46 +5,45 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The date and time configurations for a device. */
-    private TeamworkDateTimeConfiguration _dateTimeConfiguration;
+    private TeamworkDateTimeConfiguration dateTimeConfiguration;
     /** The default password for the device. Write-Only. */
-    private String _defaultPassword;
+    private String defaultPassword;
     /** The device lock timeout in seconds. */
-    private Period _deviceLockTimeout;
+    private Period deviceLockTimeout;
     /** True if the device lock is enabled. */
-    private Boolean _isDeviceLockEnabled;
+    private Boolean isDeviceLockEnabled;
     /** True if logging is enabled. */
-    private Boolean _isLoggingEnabled;
+    private Boolean isLoggingEnabled;
     /** True if power saving is enabled. */
-    private Boolean _isPowerSavingEnabled;
+    private Boolean isPowerSavingEnabled;
     /** True if screen capture is enabled. */
-    private Boolean _isScreenCaptureEnabled;
+    private Boolean isScreenCaptureEnabled;
     /** True if silent mode is enabled. */
-    private Boolean _isSilentModeEnabled;
+    private Boolean isSilentModeEnabled;
     /** The language option for the device. */
-    private String _language;
+    private String language;
     /** The pin that unlocks the device. Write-Only. */
-    private String _lockPin;
+    private String lockPin;
     /** The logging level for the device. */
-    private String _loggingLevel;
+    private String loggingLevel;
     /** The network configuration for the device. */
-    private TeamworkNetworkConfiguration _networkConfiguration;
+    private TeamworkNetworkConfiguration networkConfiguration;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new teamworkSystemConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkSystemConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkSystemConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +61,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the dateTimeConfiguration property value. The date and time configurations for a device.
@@ -70,7 +69,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public TeamworkDateTimeConfiguration getDateTimeConfiguration() {
-        return this._dateTimeConfiguration;
+        return this.dateTimeConfiguration;
     }
     /**
      * Gets the defaultPassword property value. The default password for the device. Write-Only.
@@ -78,7 +77,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getDefaultPassword() {
-        return this._defaultPassword;
+        return this.defaultPassword;
     }
     /**
      * Gets the deviceLockTimeout property value. The device lock timeout in seconds.
@@ -86,30 +85,29 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Period getDeviceLockTimeout() {
-        return this._deviceLockTimeout;
+        return this.deviceLockTimeout;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkSystemConfiguration currentObject = this;
-        return new HashMap<>(13) {{
-            this.put("dateTimeConfiguration", (n) -> { currentObject.setDateTimeConfiguration(n.getObjectValue(TeamworkDateTimeConfiguration::createFromDiscriminatorValue)); });
-            this.put("defaultPassword", (n) -> { currentObject.setDefaultPassword(n.getStringValue()); });
-            this.put("deviceLockTimeout", (n) -> { currentObject.setDeviceLockTimeout(n.getPeriodValue()); });
-            this.put("isDeviceLockEnabled", (n) -> { currentObject.setIsDeviceLockEnabled(n.getBooleanValue()); });
-            this.put("isLoggingEnabled", (n) -> { currentObject.setIsLoggingEnabled(n.getBooleanValue()); });
-            this.put("isPowerSavingEnabled", (n) -> { currentObject.setIsPowerSavingEnabled(n.getBooleanValue()); });
-            this.put("isScreenCaptureEnabled", (n) -> { currentObject.setIsScreenCaptureEnabled(n.getBooleanValue()); });
-            this.put("isSilentModeEnabled", (n) -> { currentObject.setIsSilentModeEnabled(n.getBooleanValue()); });
-            this.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });
-            this.put("lockPin", (n) -> { currentObject.setLockPin(n.getStringValue()); });
-            this.put("loggingLevel", (n) -> { currentObject.setLoggingLevel(n.getStringValue()); });
-            this.put("networkConfiguration", (n) -> { currentObject.setNetworkConfiguration(n.getObjectValue(TeamworkNetworkConfiguration::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
+        deserializerMap.put("dateTimeConfiguration", (n) -> { this.setDateTimeConfiguration(n.getObjectValue(TeamworkDateTimeConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultPassword", (n) -> { this.setDefaultPassword(n.getStringValue()); });
+        deserializerMap.put("deviceLockTimeout", (n) -> { this.setDeviceLockTimeout(n.getPeriodValue()); });
+        deserializerMap.put("isDeviceLockEnabled", (n) -> { this.setIsDeviceLockEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isLoggingEnabled", (n) -> { this.setIsLoggingEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isPowerSavingEnabled", (n) -> { this.setIsPowerSavingEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isScreenCaptureEnabled", (n) -> { this.setIsScreenCaptureEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isSilentModeEnabled", (n) -> { this.setIsSilentModeEnabled(n.getBooleanValue()); });
+        deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
+        deserializerMap.put("lockPin", (n) -> { this.setLockPin(n.getStringValue()); });
+        deserializerMap.put("loggingLevel", (n) -> { this.setLoggingLevel(n.getStringValue()); });
+        deserializerMap.put("networkConfiguration", (n) -> { this.setNetworkConfiguration(n.getObjectValue(TeamworkNetworkConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDeviceLockEnabled property value. True if the device lock is enabled.
@@ -117,7 +115,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Boolean getIsDeviceLockEnabled() {
-        return this._isDeviceLockEnabled;
+        return this.isDeviceLockEnabled;
     }
     /**
      * Gets the isLoggingEnabled property value. True if logging is enabled.
@@ -125,7 +123,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Boolean getIsLoggingEnabled() {
-        return this._isLoggingEnabled;
+        return this.isLoggingEnabled;
     }
     /**
      * Gets the isPowerSavingEnabled property value. True if power saving is enabled.
@@ -133,7 +131,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Boolean getIsPowerSavingEnabled() {
-        return this._isPowerSavingEnabled;
+        return this.isPowerSavingEnabled;
     }
     /**
      * Gets the isScreenCaptureEnabled property value. True if screen capture is enabled.
@@ -141,7 +139,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Boolean getIsScreenCaptureEnabled() {
-        return this._isScreenCaptureEnabled;
+        return this.isScreenCaptureEnabled;
     }
     /**
      * Gets the isSilentModeEnabled property value. True if silent mode is enabled.
@@ -149,7 +147,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Boolean getIsSilentModeEnabled() {
-        return this._isSilentModeEnabled;
+        return this.isSilentModeEnabled;
     }
     /**
      * Gets the language property value. The language option for the device.
@@ -157,7 +155,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getLanguage() {
-        return this._language;
+        return this.language;
     }
     /**
      * Gets the lockPin property value. The pin that unlocks the device. Write-Only.
@@ -165,7 +163,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getLockPin() {
-        return this._lockPin;
+        return this.lockPin;
     }
     /**
      * Gets the loggingLevel property value. The logging level for the device.
@@ -173,7 +171,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getLoggingLevel() {
-        return this._loggingLevel;
+        return this.loggingLevel;
     }
     /**
      * Gets the networkConfiguration property value. The network configuration for the device.
@@ -181,7 +179,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public TeamworkNetworkConfiguration getNetworkConfiguration() {
-        return this._networkConfiguration;
+        return this.networkConfiguration;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -189,13 +187,14 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("dateTimeConfiguration", this.getDateTimeConfiguration());
@@ -218,111 +217,125 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the dateTimeConfiguration property value. The date and time configurations for a device.
      * @param value Value to set for the dateTimeConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateTimeConfiguration(@javax.annotation.Nullable final TeamworkDateTimeConfiguration value) {
-        this._dateTimeConfiguration = value;
+        this.dateTimeConfiguration = value;
     }
     /**
      * Sets the defaultPassword property value. The default password for the device. Write-Only.
      * @param value Value to set for the defaultPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultPassword(@javax.annotation.Nullable final String value) {
-        this._defaultPassword = value;
+        this.defaultPassword = value;
     }
     /**
      * Sets the deviceLockTimeout property value. The device lock timeout in seconds.
      * @param value Value to set for the deviceLockTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceLockTimeout(@javax.annotation.Nullable final Period value) {
-        this._deviceLockTimeout = value;
+        this.deviceLockTimeout = value;
     }
     /**
      * Sets the isDeviceLockEnabled property value. True if the device lock is enabled.
      * @param value Value to set for the isDeviceLockEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeviceLockEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isDeviceLockEnabled = value;
+        this.isDeviceLockEnabled = value;
     }
     /**
      * Sets the isLoggingEnabled property value. True if logging is enabled.
      * @param value Value to set for the isLoggingEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsLoggingEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isLoggingEnabled = value;
+        this.isLoggingEnabled = value;
     }
     /**
      * Sets the isPowerSavingEnabled property value. True if power saving is enabled.
      * @param value Value to set for the isPowerSavingEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPowerSavingEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isPowerSavingEnabled = value;
+        this.isPowerSavingEnabled = value;
     }
     /**
      * Sets the isScreenCaptureEnabled property value. True if screen capture is enabled.
      * @param value Value to set for the isScreenCaptureEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsScreenCaptureEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isScreenCaptureEnabled = value;
+        this.isScreenCaptureEnabled = value;
     }
     /**
      * Sets the isSilentModeEnabled property value. True if silent mode is enabled.
      * @param value Value to set for the isSilentModeEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSilentModeEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isSilentModeEnabled = value;
+        this.isSilentModeEnabled = value;
     }
     /**
      * Sets the language property value. The language option for the device.
      * @param value Value to set for the language property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguage(@javax.annotation.Nullable final String value) {
-        this._language = value;
+        this.language = value;
     }
     /**
      * Sets the lockPin property value. The pin that unlocks the device. Write-Only.
      * @param value Value to set for the lockPin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockPin(@javax.annotation.Nullable final String value) {
-        this._lockPin = value;
+        this.lockPin = value;
     }
     /**
      * Sets the loggingLevel property value. The logging level for the device.
      * @param value Value to set for the loggingLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoggingLevel(@javax.annotation.Nullable final String value) {
-        this._loggingLevel = value;
+        this.loggingLevel = value;
     }
     /**
      * Sets the networkConfiguration property value. The network configuration for the device.
      * @param value Value to set for the networkConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkConfiguration(@javax.annotation.Nullable final TeamworkNetworkConfiguration value) {
-        this._networkConfiguration = value;
+        this.networkConfiguration = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

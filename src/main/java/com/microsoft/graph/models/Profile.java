@@ -3,56 +3,55 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Profile extends Entity implements Parsable {
     /** The account property */
-    private java.util.List<UserAccountInformation> _account;
+    private java.util.List<UserAccountInformation> account;
     /** Represents details of addresses associated with the user. */
-    private java.util.List<ItemAddress> _addresses;
+    private java.util.List<ItemAddress> addresses;
     /** Represents the details of meaningful dates associated with a person. */
-    private java.util.List<PersonAnnualEvent> _anniversaries;
+    private java.util.List<PersonAnnualEvent> anniversaries;
     /** Represents the details of awards or honors associated with a person. */
-    private java.util.List<PersonAward> _awards;
+    private java.util.List<PersonAward> awards;
     /** Represents the details of certifications associated with a person. */
-    private java.util.List<PersonCertification> _certifications;
+    private java.util.List<PersonCertification> certifications;
     /** Represents data that a user has supplied related to undergraduate, graduate, postgraduate or other educational activities. */
-    private java.util.List<EducationalActivity> _educationalActivities;
+    private java.util.List<EducationalActivity> educationalActivities;
     /** Represents detailed information about email addresses associated with the user. */
-    private java.util.List<ItemEmail> _emails;
+    private java.util.List<ItemEmail> emails;
     /** Provides detailed information about interests the user has associated with themselves in various services. */
-    private java.util.List<PersonInterest> _interests;
+    private java.util.List<PersonInterest> interests;
     /** Represents detailed information about languages that a user has added to their profile. */
-    private java.util.List<LanguageProficiency> _languages;
+    private java.util.List<LanguageProficiency> languages;
     /** Represents the names a user has added to their profile. */
-    private java.util.List<PersonName> _names;
+    private java.util.List<PersonName> names;
     /** Represents notes that a user has added to their profile. */
-    private java.util.List<PersonAnnotation> _notes;
+    private java.util.List<PersonAnnotation> notes;
     /** Represents patents that a user has added to their profile. */
-    private java.util.List<ItemPatent> _patents;
+    private java.util.List<ItemPatent> patents;
     /** Represents detailed information about phone numbers associated with a user in various services. */
-    private java.util.List<ItemPhone> _phones;
+    private java.util.List<ItemPhone> phones;
     /** Represents detailed information about work positions associated with a user's profile. */
-    private java.util.List<WorkPosition> _positions;
+    private java.util.List<WorkPosition> positions;
     /** Represents detailed information about projects associated with a user. */
-    private java.util.List<ProjectParticipation> _projects;
+    private java.util.List<ProjectParticipation> projects;
     /** Represents details of any publications a user has added to their profile. */
-    private java.util.List<ItemPublication> _publications;
+    private java.util.List<ItemPublication> publications;
     /** Represents detailed information about skills associated with a user in various services. */
-    private java.util.List<SkillProficiency> _skills;
+    private java.util.List<SkillProficiency> skills;
     /** Represents web accounts the user has indicated they use or has added to their user profile. */
-    private java.util.List<WebAccount> _webAccounts;
+    private java.util.List<WebAccount> webAccounts;
     /** Represents detailed information about websites associated with a user in various services. */
-    private java.util.List<PersonWebsite> _websites;
+    private java.util.List<PersonWebsite> websites;
     /**
      * Instantiates a new Profile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Profile() {
         super();
-        this.setOdataType("#microsoft.graph.profile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,7 +69,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UserAccountInformation> getAccount() {
-        return this._account;
+        return this.account;
     }
     /**
      * Gets the addresses property value. Represents details of addresses associated with the user.
@@ -78,7 +77,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ItemAddress> getAddresses() {
-        return this._addresses;
+        return this.addresses;
     }
     /**
      * Gets the anniversaries property value. Represents the details of meaningful dates associated with a person.
@@ -86,7 +85,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PersonAnnualEvent> getAnniversaries() {
-        return this._anniversaries;
+        return this.anniversaries;
     }
     /**
      * Gets the awards property value. Represents the details of awards or honors associated with a person.
@@ -94,7 +93,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PersonAward> getAwards() {
-        return this._awards;
+        return this.awards;
     }
     /**
      * Gets the certifications property value. Represents the details of certifications associated with a person.
@@ -102,7 +101,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PersonCertification> getCertifications() {
-        return this._certifications;
+        return this.certifications;
     }
     /**
      * Gets the educationalActivities property value. Represents data that a user has supplied related to undergraduate, graduate, postgraduate or other educational activities.
@@ -110,7 +109,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EducationalActivity> getEducationalActivities() {
-        return this._educationalActivities;
+        return this.educationalActivities;
     }
     /**
      * Gets the emails property value. Represents detailed information about email addresses associated with the user.
@@ -118,36 +117,35 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ItemEmail> getEmails() {
-        return this._emails;
+        return this.emails;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Profile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("account", (n) -> { currentObject.setAccount(n.getCollectionOfObjectValues(UserAccountInformation::createFromDiscriminatorValue)); });
-            this.put("addresses", (n) -> { currentObject.setAddresses(n.getCollectionOfObjectValues(ItemAddress::createFromDiscriminatorValue)); });
-            this.put("anniversaries", (n) -> { currentObject.setAnniversaries(n.getCollectionOfObjectValues(PersonAnnualEvent::createFromDiscriminatorValue)); });
-            this.put("awards", (n) -> { currentObject.setAwards(n.getCollectionOfObjectValues(PersonAward::createFromDiscriminatorValue)); });
-            this.put("certifications", (n) -> { currentObject.setCertifications(n.getCollectionOfObjectValues(PersonCertification::createFromDiscriminatorValue)); });
-            this.put("educationalActivities", (n) -> { currentObject.setEducationalActivities(n.getCollectionOfObjectValues(EducationalActivity::createFromDiscriminatorValue)); });
-            this.put("emails", (n) -> { currentObject.setEmails(n.getCollectionOfObjectValues(ItemEmail::createFromDiscriminatorValue)); });
-            this.put("interests", (n) -> { currentObject.setInterests(n.getCollectionOfObjectValues(PersonInterest::createFromDiscriminatorValue)); });
-            this.put("languages", (n) -> { currentObject.setLanguages(n.getCollectionOfObjectValues(LanguageProficiency::createFromDiscriminatorValue)); });
-            this.put("names", (n) -> { currentObject.setNames(n.getCollectionOfObjectValues(PersonName::createFromDiscriminatorValue)); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getCollectionOfObjectValues(PersonAnnotation::createFromDiscriminatorValue)); });
-            this.put("patents", (n) -> { currentObject.setPatents(n.getCollectionOfObjectValues(ItemPatent::createFromDiscriminatorValue)); });
-            this.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(ItemPhone::createFromDiscriminatorValue)); });
-            this.put("positions", (n) -> { currentObject.setPositions(n.getCollectionOfObjectValues(WorkPosition::createFromDiscriminatorValue)); });
-            this.put("projects", (n) -> { currentObject.setProjects(n.getCollectionOfObjectValues(ProjectParticipation::createFromDiscriminatorValue)); });
-            this.put("publications", (n) -> { currentObject.setPublications(n.getCollectionOfObjectValues(ItemPublication::createFromDiscriminatorValue)); });
-            this.put("skills", (n) -> { currentObject.setSkills(n.getCollectionOfObjectValues(SkillProficiency::createFromDiscriminatorValue)); });
-            this.put("webAccounts", (n) -> { currentObject.setWebAccounts(n.getCollectionOfObjectValues(WebAccount::createFromDiscriminatorValue)); });
-            this.put("websites", (n) -> { currentObject.setWebsites(n.getCollectionOfObjectValues(PersonWebsite::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("account", (n) -> { this.setAccount(n.getCollectionOfObjectValues(UserAccountInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("addresses", (n) -> { this.setAddresses(n.getCollectionOfObjectValues(ItemAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("anniversaries", (n) -> { this.setAnniversaries(n.getCollectionOfObjectValues(PersonAnnualEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("awards", (n) -> { this.setAwards(n.getCollectionOfObjectValues(PersonAward::createFromDiscriminatorValue)); });
+        deserializerMap.put("certifications", (n) -> { this.setCertifications(n.getCollectionOfObjectValues(PersonCertification::createFromDiscriminatorValue)); });
+        deserializerMap.put("educationalActivities", (n) -> { this.setEducationalActivities(n.getCollectionOfObjectValues(EducationalActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("emails", (n) -> { this.setEmails(n.getCollectionOfObjectValues(ItemEmail::createFromDiscriminatorValue)); });
+        deserializerMap.put("interests", (n) -> { this.setInterests(n.getCollectionOfObjectValues(PersonInterest::createFromDiscriminatorValue)); });
+        deserializerMap.put("languages", (n) -> { this.setLanguages(n.getCollectionOfObjectValues(LanguageProficiency::createFromDiscriminatorValue)); });
+        deserializerMap.put("names", (n) -> { this.setNames(n.getCollectionOfObjectValues(PersonName::createFromDiscriminatorValue)); });
+        deserializerMap.put("notes", (n) -> { this.setNotes(n.getCollectionOfObjectValues(PersonAnnotation::createFromDiscriminatorValue)); });
+        deserializerMap.put("patents", (n) -> { this.setPatents(n.getCollectionOfObjectValues(ItemPatent::createFromDiscriminatorValue)); });
+        deserializerMap.put("phones", (n) -> { this.setPhones(n.getCollectionOfObjectValues(ItemPhone::createFromDiscriminatorValue)); });
+        deserializerMap.put("positions", (n) -> { this.setPositions(n.getCollectionOfObjectValues(WorkPosition::createFromDiscriminatorValue)); });
+        deserializerMap.put("projects", (n) -> { this.setProjects(n.getCollectionOfObjectValues(ProjectParticipation::createFromDiscriminatorValue)); });
+        deserializerMap.put("publications", (n) -> { this.setPublications(n.getCollectionOfObjectValues(ItemPublication::createFromDiscriminatorValue)); });
+        deserializerMap.put("skills", (n) -> { this.setSkills(n.getCollectionOfObjectValues(SkillProficiency::createFromDiscriminatorValue)); });
+        deserializerMap.put("webAccounts", (n) -> { this.setWebAccounts(n.getCollectionOfObjectValues(WebAccount::createFromDiscriminatorValue)); });
+        deserializerMap.put("websites", (n) -> { this.setWebsites(n.getCollectionOfObjectValues(PersonWebsite::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the interests property value. Provides detailed information about interests the user has associated with themselves in various services.
@@ -155,7 +153,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PersonInterest> getInterests() {
-        return this._interests;
+        return this.interests;
     }
     /**
      * Gets the languages property value. Represents detailed information about languages that a user has added to their profile.
@@ -163,7 +161,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<LanguageProficiency> getLanguages() {
-        return this._languages;
+        return this.languages;
     }
     /**
      * Gets the names property value. Represents the names a user has added to their profile.
@@ -171,7 +169,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PersonName> getNames() {
-        return this._names;
+        return this.names;
     }
     /**
      * Gets the notes property value. Represents notes that a user has added to their profile.
@@ -179,7 +177,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PersonAnnotation> getNotes() {
-        return this._notes;
+        return this.notes;
     }
     /**
      * Gets the patents property value. Represents patents that a user has added to their profile.
@@ -187,7 +185,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ItemPatent> getPatents() {
-        return this._patents;
+        return this.patents;
     }
     /**
      * Gets the phones property value. Represents detailed information about phone numbers associated with a user in various services.
@@ -195,7 +193,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ItemPhone> getPhones() {
-        return this._phones;
+        return this.phones;
     }
     /**
      * Gets the positions property value. Represents detailed information about work positions associated with a user's profile.
@@ -203,7 +201,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkPosition> getPositions() {
-        return this._positions;
+        return this.positions;
     }
     /**
      * Gets the projects property value. Represents detailed information about projects associated with a user.
@@ -211,7 +209,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ProjectParticipation> getProjects() {
-        return this._projects;
+        return this.projects;
     }
     /**
      * Gets the publications property value. Represents details of any publications a user has added to their profile.
@@ -219,7 +217,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ItemPublication> getPublications() {
-        return this._publications;
+        return this.publications;
     }
     /**
      * Gets the skills property value. Represents detailed information about skills associated with a user in various services.
@@ -227,7 +225,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SkillProficiency> getSkills() {
-        return this._skills;
+        return this.skills;
     }
     /**
      * Gets the webAccounts property value. Represents web accounts the user has indicated they use or has added to their user profile.
@@ -235,7 +233,7 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WebAccount> getWebAccounts() {
-        return this._webAccounts;
+        return this.webAccounts;
     }
     /**
      * Gets the websites property value. Represents detailed information about websites associated with a user in various services.
@@ -243,13 +241,14 @@ public class Profile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PersonWebsite> getWebsites() {
-        return this._websites;
+        return this.websites;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -278,151 +277,170 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the account property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccount(@javax.annotation.Nullable final java.util.List<UserAccountInformation> value) {
-        this._account = value;
+        this.account = value;
     }
     /**
      * Sets the addresses property value. Represents details of addresses associated with the user.
      * @param value Value to set for the addresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddresses(@javax.annotation.Nullable final java.util.List<ItemAddress> value) {
-        this._addresses = value;
+        this.addresses = value;
     }
     /**
      * Sets the anniversaries property value. Represents the details of meaningful dates associated with a person.
      * @param value Value to set for the anniversaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnniversaries(@javax.annotation.Nullable final java.util.List<PersonAnnualEvent> value) {
-        this._anniversaries = value;
+        this.anniversaries = value;
     }
     /**
      * Sets the awards property value. Represents the details of awards or honors associated with a person.
      * @param value Value to set for the awards property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAwards(@javax.annotation.Nullable final java.util.List<PersonAward> value) {
-        this._awards = value;
+        this.awards = value;
     }
     /**
      * Sets the certifications property value. Represents the details of certifications associated with a person.
      * @param value Value to set for the certifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertifications(@javax.annotation.Nullable final java.util.List<PersonCertification> value) {
-        this._certifications = value;
+        this.certifications = value;
     }
     /**
      * Sets the educationalActivities property value. Represents data that a user has supplied related to undergraduate, graduate, postgraduate or other educational activities.
      * @param value Value to set for the educationalActivities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEducationalActivities(@javax.annotation.Nullable final java.util.List<EducationalActivity> value) {
-        this._educationalActivities = value;
+        this.educationalActivities = value;
     }
     /**
      * Sets the emails property value. Represents detailed information about email addresses associated with the user.
      * @param value Value to set for the emails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmails(@javax.annotation.Nullable final java.util.List<ItemEmail> value) {
-        this._emails = value;
+        this.emails = value;
     }
     /**
      * Sets the interests property value. Provides detailed information about interests the user has associated with themselves in various services.
      * @param value Value to set for the interests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInterests(@javax.annotation.Nullable final java.util.List<PersonInterest> value) {
-        this._interests = value;
+        this.interests = value;
     }
     /**
      * Sets the languages property value. Represents detailed information about languages that a user has added to their profile.
      * @param value Value to set for the languages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguages(@javax.annotation.Nullable final java.util.List<LanguageProficiency> value) {
-        this._languages = value;
+        this.languages = value;
     }
     /**
      * Sets the names property value. Represents the names a user has added to their profile.
      * @param value Value to set for the names property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNames(@javax.annotation.Nullable final java.util.List<PersonName> value) {
-        this._names = value;
+        this.names = value;
     }
     /**
      * Sets the notes property value. Represents notes that a user has added to their profile.
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final java.util.List<PersonAnnotation> value) {
-        this._notes = value;
+        this.notes = value;
     }
     /**
      * Sets the patents property value. Represents patents that a user has added to their profile.
      * @param value Value to set for the patents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPatents(@javax.annotation.Nullable final java.util.List<ItemPatent> value) {
-        this._patents = value;
+        this.patents = value;
     }
     /**
      * Sets the phones property value. Represents detailed information about phone numbers associated with a user in various services.
      * @param value Value to set for the phones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhones(@javax.annotation.Nullable final java.util.List<ItemPhone> value) {
-        this._phones = value;
+        this.phones = value;
     }
     /**
      * Sets the positions property value. Represents detailed information about work positions associated with a user's profile.
      * @param value Value to set for the positions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPositions(@javax.annotation.Nullable final java.util.List<WorkPosition> value) {
-        this._positions = value;
+        this.positions = value;
     }
     /**
      * Sets the projects property value. Represents detailed information about projects associated with a user.
      * @param value Value to set for the projects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProjects(@javax.annotation.Nullable final java.util.List<ProjectParticipation> value) {
-        this._projects = value;
+        this.projects = value;
     }
     /**
      * Sets the publications property value. Represents details of any publications a user has added to their profile.
      * @param value Value to set for the publications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublications(@javax.annotation.Nullable final java.util.List<ItemPublication> value) {
-        this._publications = value;
+        this.publications = value;
     }
     /**
      * Sets the skills property value. Represents detailed information about skills associated with a user in various services.
      * @param value Value to set for the skills property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkills(@javax.annotation.Nullable final java.util.List<SkillProficiency> value) {
-        this._skills = value;
+        this.skills = value;
     }
     /**
      * Sets the webAccounts property value. Represents web accounts the user has indicated they use or has added to their user profile.
      * @param value Value to set for the webAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebAccounts(@javax.annotation.Nullable final java.util.List<WebAccount> value) {
-        this._webAccounts = value;
+        this.webAccounts = value;
     }
     /**
      * Sets the websites property value. Represents detailed information about websites associated with a user in various services.
      * @param value Value to set for the websites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebsites(@javax.annotation.Nullable final java.util.List<PersonWebsite> value) {
-        this._websites = value;
+        this.websites = value;
     }
 }

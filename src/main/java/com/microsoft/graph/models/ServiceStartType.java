@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Possible values of xbox service start type */
 public enum ServiceStartType implements ValuedEnum {
     /** Manual service start type(default) */
     Manual("manual"),

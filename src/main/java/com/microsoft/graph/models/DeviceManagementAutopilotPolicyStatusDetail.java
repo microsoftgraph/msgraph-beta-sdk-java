@@ -4,31 +4,32 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Policy status detail item contained by an autopilot event. */
+/**
+ * Policy status detail item contained by an autopilot event.
+ */
 public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implements Parsable {
     /** The complianceStatus property */
-    private DeviceManagementAutopilotPolicyComplianceStatus _complianceStatus;
+    private DeviceManagementAutopilotPolicyComplianceStatus complianceStatus;
     /** The friendly name of the policy. */
-    private String _displayName;
+    private String displayName;
     /** The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists. */
-    private Integer _errorCode;
+    private Integer errorCode;
     /** Timestamp of the reported policy status */
-    private OffsetDateTime _lastReportedDateTime;
+    private OffsetDateTime lastReportedDateTime;
     /** The policyType property */
-    private DeviceManagementAutopilotPolicyType _policyType;
+    private DeviceManagementAutopilotPolicyType policyType;
     /** Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session */
-    private Boolean _trackedOnEnrollmentStatus;
+    private Boolean trackedOnEnrollmentStatus;
     /**
      * Instantiates a new deviceManagementAutopilotPolicyStatusDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementAutopilotPolicyStatusDetail() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementAutopilotPolicyStatusDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +47,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      */
     @javax.annotation.Nullable
     public DeviceManagementAutopilotPolicyComplianceStatus getComplianceStatus() {
-        return this._complianceStatus;
+        return this.complianceStatus;
     }
     /**
      * Gets the displayName property value. The friendly name of the policy.
@@ -54,7 +55,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the errorCode property value. The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists.
@@ -62,23 +63,22 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      */
     @javax.annotation.Nullable
     public Integer getErrorCode() {
-        return this._errorCode;
+        return this.errorCode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementAutopilotPolicyStatusDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("complianceStatus", (n) -> { currentObject.setComplianceStatus(n.getEnumValue(DeviceManagementAutopilotPolicyComplianceStatus.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
-            this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("policyType", (n) -> { currentObject.setPolicyType(n.getEnumValue(DeviceManagementAutopilotPolicyType.class)); });
-            this.put("trackedOnEnrollmentStatus", (n) -> { currentObject.setTrackedOnEnrollmentStatus(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("complianceStatus", (n) -> { this.setComplianceStatus(n.getEnumValue(DeviceManagementAutopilotPolicyComplianceStatus.class)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getIntegerValue()); });
+        deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("policyType", (n) -> { this.setPolicyType(n.getEnumValue(DeviceManagementAutopilotPolicyType.class)); });
+        deserializerMap.put("trackedOnEnrollmentStatus", (n) -> { this.setTrackedOnEnrollmentStatus(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastReportedDateTime property value. Timestamp of the reported policy status
@@ -86,7 +86,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
-        return this._lastReportedDateTime;
+        return this.lastReportedDateTime;
     }
     /**
      * Gets the policyType property value. The policyType property
@@ -94,7 +94,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      */
     @javax.annotation.Nullable
     public DeviceManagementAutopilotPolicyType getPolicyType() {
-        return this._policyType;
+        return this.policyType;
     }
     /**
      * Gets the trackedOnEnrollmentStatus property value. Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
@@ -102,13 +102,14 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      */
     @javax.annotation.Nullable
     public Boolean getTrackedOnEnrollmentStatus() {
-        return this._trackedOnEnrollmentStatus;
+        return this.trackedOnEnrollmentStatus;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,47 +125,53 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * @param value Value to set for the complianceStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceStatus(@javax.annotation.Nullable final DeviceManagementAutopilotPolicyComplianceStatus value) {
-        this._complianceStatus = value;
+        this.complianceStatus = value;
     }
     /**
      * Sets the displayName property value. The friendly name of the policy.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the errorCode property value. The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists.
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Integer value) {
-        this._errorCode = value;
+        this.errorCode = value;
     }
     /**
      * Sets the lastReportedDateTime property value. Timestamp of the reported policy status
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastReportedDateTime = value;
+        this.lastReportedDateTime = value;
     }
     /**
      * Sets the policyType property value. The policyType property
      * @param value Value to set for the policyType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyType(@javax.annotation.Nullable final DeviceManagementAutopilotPolicyType value) {
-        this._policyType = value;
+        this.policyType = value;
     }
     /**
      * Sets the trackedOnEnrollmentStatus property value. Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
      * @param value Value to set for the trackedOnEnrollmentStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrackedOnEnrollmentStatus(@javax.annotation.Nullable final Boolean value) {
-        this._trackedOnEnrollmentStatus = value;
+        this.trackedOnEnrollmentStatus = value;
     }
 }

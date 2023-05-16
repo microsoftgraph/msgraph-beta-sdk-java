@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Subject Name Format Options for Apple devices. */
 public enum AppleSubjectNameFormat implements ValuedEnum {
     /** Common name. */
     CommonName("commonName"),

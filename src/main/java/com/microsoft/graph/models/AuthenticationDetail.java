@@ -5,34 +5,33 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token, Previously satisfied. */
-    private String _authenticationMethod;
+    private String authenticationMethod;
     /** Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (e.g. cloud, AD FS, PTA, PHS). */
-    private String _authenticationMethodDetail;
+    private String authenticationMethodDetail;
     /** Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _authenticationStepDateTime;
+    private OffsetDateTime authenticationStepDateTime;
     /** The step of authentication that this satisfied. For example, primary authentication, or multi-factor authentication. */
-    private String _authenticationStepRequirement;
+    private String authenticationStepRequirement;
     /** Details about why the step succeeded or failed. For examples, user is blocked, fraud code entered, no phone input - timed out, phone unreachable, or claim in token. */
-    private String _authenticationStepResultDetail;
+    private String authenticationStepResultDetail;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Indicates the status of the authentication step. Possible values: succeeded, failed. */
-    private Boolean _succeeded;
+    private Boolean succeeded;
     /**
      * Instantiates a new authenticationDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.authenticationDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +49,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the authenticationMethod property value. The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token, Previously satisfied.
@@ -58,7 +57,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAuthenticationMethod() {
-        return this._authenticationMethod;
+        return this.authenticationMethod;
     }
     /**
      * Gets the authenticationMethodDetail property value. Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (e.g. cloud, AD FS, PTA, PHS).
@@ -66,7 +65,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAuthenticationMethodDetail() {
-        return this._authenticationMethodDetail;
+        return this.authenticationMethodDetail;
     }
     /**
      * Gets the authenticationStepDateTime property value. Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -74,7 +73,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getAuthenticationStepDateTime() {
-        return this._authenticationStepDateTime;
+        return this.authenticationStepDateTime;
     }
     /**
      * Gets the authenticationStepRequirement property value. The step of authentication that this satisfied. For example, primary authentication, or multi-factor authentication.
@@ -82,7 +81,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAuthenticationStepRequirement() {
-        return this._authenticationStepRequirement;
+        return this.authenticationStepRequirement;
     }
     /**
      * Gets the authenticationStepResultDetail property value. Details about why the step succeeded or failed. For examples, user is blocked, fraud code entered, no phone input - timed out, phone unreachable, or claim in token.
@@ -90,24 +89,23 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAuthenticationStepResultDetail() {
-        return this._authenticationStepResultDetail;
+        return this.authenticationStepResultDetail;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationDetail currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getStringValue()); });
-            this.put("authenticationMethodDetail", (n) -> { currentObject.setAuthenticationMethodDetail(n.getStringValue()); });
-            this.put("authenticationStepDateTime", (n) -> { currentObject.setAuthenticationStepDateTime(n.getOffsetDateTimeValue()); });
-            this.put("authenticationStepRequirement", (n) -> { currentObject.setAuthenticationStepRequirement(n.getStringValue()); });
-            this.put("authenticationStepResultDetail", (n) -> { currentObject.setAuthenticationStepResultDetail(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("succeeded", (n) -> { currentObject.setSucceeded(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getStringValue()); });
+        deserializerMap.put("authenticationMethodDetail", (n) -> { this.setAuthenticationMethodDetail(n.getStringValue()); });
+        deserializerMap.put("authenticationStepDateTime", (n) -> { this.setAuthenticationStepDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("authenticationStepRequirement", (n) -> { this.setAuthenticationStepRequirement(n.getStringValue()); });
+        deserializerMap.put("authenticationStepResultDetail", (n) -> { this.setAuthenticationStepResultDetail(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("succeeded", (n) -> { this.setSucceeded(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -115,7 +113,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the succeeded property value. Indicates the status of the authentication step. Possible values: succeeded, failed.
@@ -123,13 +121,14 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSucceeded() {
-        return this._succeeded;
+        return this.succeeded;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("authenticationMethod", this.getAuthenticationMethod());
@@ -146,63 +145,71 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the authenticationMethod property value. The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token, Previously satisfied.
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final String value) {
-        this._authenticationMethod = value;
+        this.authenticationMethod = value;
     }
     /**
      * Sets the authenticationMethodDetail property value. Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (e.g. cloud, AD FS, PTA, PHS).
      * @param value Value to set for the authenticationMethodDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethodDetail(@javax.annotation.Nullable final String value) {
-        this._authenticationMethodDetail = value;
+        this.authenticationMethodDetail = value;
     }
     /**
      * Sets the authenticationStepDateTime property value. Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the authenticationStepDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationStepDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._authenticationStepDateTime = value;
+        this.authenticationStepDateTime = value;
     }
     /**
      * Sets the authenticationStepRequirement property value. The step of authentication that this satisfied. For example, primary authentication, or multi-factor authentication.
      * @param value Value to set for the authenticationStepRequirement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationStepRequirement(@javax.annotation.Nullable final String value) {
-        this._authenticationStepRequirement = value;
+        this.authenticationStepRequirement = value;
     }
     /**
      * Sets the authenticationStepResultDetail property value. Details about why the step succeeded or failed. For examples, user is blocked, fraud code entered, no phone input - timed out, phone unreachable, or claim in token.
      * @param value Value to set for the authenticationStepResultDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationStepResultDetail(@javax.annotation.Nullable final String value) {
-        this._authenticationStepResultDetail = value;
+        this.authenticationStepResultDetail = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the succeeded property value. Indicates the status of the authentication step. Possible values: succeeded, failed.
      * @param value Value to set for the succeeded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSucceeded(@javax.annotation.Nullable final Boolean value) {
-        this._succeeded = value;
+        this.succeeded = value;
     }
 }

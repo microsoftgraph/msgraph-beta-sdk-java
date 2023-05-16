@@ -3,60 +3,59 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Calendar extends Entity implements Parsable {
     /** Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness. */
-    private java.util.List<String> _allowedOnlineMeetingProviders;
+    private java.util.List<OnlineMeetingProviderType> allowedOnlineMeetingProviders;
     /** The calendarGroup in which to create the calendar. If the user has never explicitly set a group for the calendar, this property is  null. */
-    private String _calendarGroupId;
+    private String calendarGroupId;
     /** The permissions of the users with whom the calendar is shared. */
-    private java.util.List<CalendarPermission> _calendarPermissions;
+    private java.util.List<CalendarPermission> calendarPermissions;
     /** The calendar view for the calendar. Navigation property. Read-only. */
-    private java.util.List<Event> _calendarView;
+    private java.util.List<Event> calendarView;
     /** true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only. */
-    private Boolean _canEdit;
+    private Boolean canEdit;
     /** true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only. */
-    private Boolean _canShare;
+    private Boolean canShare;
     /** true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only. */
-    private Boolean _canViewPrivateItems;
+    private Boolean canViewPrivateItems;
     /** Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only. */
-    private String _changeKey;
+    private String changeKey;
     /** Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor. */
-    private CalendarColor _color;
+    private CalendarColor color;
     /** The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness. */
-    private OnlineMeetingProviderType _defaultOnlineMeetingProvider;
+    private OnlineMeetingProviderType defaultOnlineMeetingProvider;
     /** The events in the calendar. Navigation property. Read-only. */
-    private java.util.List<Event> _events;
+    private java.util.List<Event> events;
     /** The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty. */
-    private String _hexColor;
+    private String hexColor;
     /** true if this is the default calendar where new events are created by default, false otherwise. */
-    private Boolean _isDefaultCalendar;
+    private Boolean isDefaultCalendar;
     /** Indicates whether this user calendar can be deleted from the user mailbox. */
-    private Boolean _isRemovable;
+    private Boolean isRemovable;
     /** true if the user has shared the calendar with other users, false otherwise. Since only the user who created the calendar can share it, isShared and isSharedWithMe cannot be true for the same user. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only. */
-    private Boolean _isShared;
+    private Boolean isShared;
     /** true if the user has been shared this calendar, false otherwise. This property is always false for a calendar owner. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only. */
-    private Boolean _isSharedWithMe;
+    private Boolean isSharedWithMe;
     /** Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses. */
-    private Boolean _isTallyingResponses;
+    private Boolean isTallyingResponses;
     /** The collection of multi-value extended properties defined for the calendar. Read-only. Nullable. */
-    private java.util.List<MultiValueLegacyExtendedProperty> _multiValueExtendedProperties;
+    private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
     /** The calendar name. */
-    private String _name;
+    private String name;
     /** If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only. */
-    private EmailAddress _owner;
+    private EmailAddress owner;
     /** The collection of single-value extended properties defined for the calendar. Read-only. Nullable. */
-    private java.util.List<SingleValueLegacyExtendedProperty> _singleValueExtendedProperties;
+    private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
     /**
      * Instantiates a new calendar and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Calendar() {
         super();
-        this.setOdataType("#microsoft.graph.calendar");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,11 +69,11 @@ public class Calendar extends Entity implements Parsable {
     }
     /**
      * Gets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     * @return a string
+     * @return a onlineMeetingProviderType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getAllowedOnlineMeetingProviders() {
-        return this._allowedOnlineMeetingProviders;
+    public java.util.List<OnlineMeetingProviderType> getAllowedOnlineMeetingProviders() {
+        return this.allowedOnlineMeetingProviders;
     }
     /**
      * Gets the calendarGroupId property value. The calendarGroup in which to create the calendar. If the user has never explicitly set a group for the calendar, this property is  null.
@@ -82,7 +81,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCalendarGroupId() {
-        return this._calendarGroupId;
+        return this.calendarGroupId;
     }
     /**
      * Gets the calendarPermissions property value. The permissions of the users with whom the calendar is shared.
@@ -90,7 +89,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CalendarPermission> getCalendarPermissions() {
-        return this._calendarPermissions;
+        return this.calendarPermissions;
     }
     /**
      * Gets the calendarView property value. The calendar view for the calendar. Navigation property. Read-only.
@@ -98,7 +97,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Event> getCalendarView() {
-        return this._calendarView;
+        return this.calendarView;
     }
     /**
      * Gets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
@@ -106,7 +105,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getCanEdit() {
-        return this._canEdit;
+        return this.canEdit;
     }
     /**
      * Gets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
@@ -114,7 +113,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getCanShare() {
-        return this._canShare;
+        return this.canShare;
     }
     /**
      * Gets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
@@ -122,7 +121,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getCanViewPrivateItems() {
-        return this._canViewPrivateItems;
+        return this.canViewPrivateItems;
     }
     /**
      * Gets the changeKey property value. Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
@@ -130,7 +129,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getChangeKey() {
-        return this._changeKey;
+        return this.changeKey;
     }
     /**
      * Gets the color property value. Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
@@ -138,7 +137,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CalendarColor getColor() {
-        return this._color;
+        return this.color;
     }
     /**
      * Gets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
@@ -146,7 +145,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OnlineMeetingProviderType getDefaultOnlineMeetingProvider() {
-        return this._defaultOnlineMeetingProvider;
+        return this.defaultOnlineMeetingProvider;
     }
     /**
      * Gets the events property value. The events in the calendar. Navigation property. Read-only.
@@ -154,38 +153,37 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Event> getEvents() {
-        return this._events;
+        return this.events;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Calendar currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedOnlineMeetingProviders", (n) -> { currentObject.setAllowedOnlineMeetingProviders(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("calendarGroupId", (n) -> { currentObject.setCalendarGroupId(n.getStringValue()); });
-            this.put("calendarPermissions", (n) -> { currentObject.setCalendarPermissions(n.getCollectionOfObjectValues(CalendarPermission::createFromDiscriminatorValue)); });
-            this.put("calendarView", (n) -> { currentObject.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("canEdit", (n) -> { currentObject.setCanEdit(n.getBooleanValue()); });
-            this.put("canShare", (n) -> { currentObject.setCanShare(n.getBooleanValue()); });
-            this.put("canViewPrivateItems", (n) -> { currentObject.setCanViewPrivateItems(n.getBooleanValue()); });
-            this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
-            this.put("color", (n) -> { currentObject.setColor(n.getEnumValue(CalendarColor.class)); });
-            this.put("defaultOnlineMeetingProvider", (n) -> { currentObject.setDefaultOnlineMeetingProvider(n.getEnumValue(OnlineMeetingProviderType.class)); });
-            this.put("events", (n) -> { currentObject.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("hexColor", (n) -> { currentObject.setHexColor(n.getStringValue()); });
-            this.put("isDefaultCalendar", (n) -> { currentObject.setIsDefaultCalendar(n.getBooleanValue()); });
-            this.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
-            this.put("isShared", (n) -> { currentObject.setIsShared(n.getBooleanValue()); });
-            this.put("isSharedWithMe", (n) -> { currentObject.setIsSharedWithMe(n.getBooleanValue()); });
-            this.put("isTallyingResponses", (n) -> { currentObject.setIsTallyingResponses(n.getBooleanValue()); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedOnlineMeetingProviders", (n) -> { this.setAllowedOnlineMeetingProviders(n.getCollectionOfEnumValues(OnlineMeetingProviderType.class)); });
+        deserializerMap.put("calendarGroupId", (n) -> { this.setCalendarGroupId(n.getStringValue()); });
+        deserializerMap.put("calendarPermissions", (n) -> { this.setCalendarPermissions(n.getCollectionOfObjectValues(CalendarPermission::createFromDiscriminatorValue)); });
+        deserializerMap.put("calendarView", (n) -> { this.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("canEdit", (n) -> { this.setCanEdit(n.getBooleanValue()); });
+        deserializerMap.put("canShare", (n) -> { this.setCanShare(n.getBooleanValue()); });
+        deserializerMap.put("canViewPrivateItems", (n) -> { this.setCanViewPrivateItems(n.getBooleanValue()); });
+        deserializerMap.put("changeKey", (n) -> { this.setChangeKey(n.getStringValue()); });
+        deserializerMap.put("color", (n) -> { this.setColor(n.getEnumValue(CalendarColor.class)); });
+        deserializerMap.put("defaultOnlineMeetingProvider", (n) -> { this.setDefaultOnlineMeetingProvider(n.getEnumValue(OnlineMeetingProviderType.class)); });
+        deserializerMap.put("events", (n) -> { this.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("hexColor", (n) -> { this.setHexColor(n.getStringValue()); });
+        deserializerMap.put("isDefaultCalendar", (n) -> { this.setIsDefaultCalendar(n.getBooleanValue()); });
+        deserializerMap.put("isRemovable", (n) -> { this.setIsRemovable(n.getBooleanValue()); });
+        deserializerMap.put("isShared", (n) -> { this.setIsShared(n.getBooleanValue()); });
+        deserializerMap.put("isSharedWithMe", (n) -> { this.setIsSharedWithMe(n.getBooleanValue()); });
+        deserializerMap.put("isTallyingResponses", (n) -> { this.setIsTallyingResponses(n.getBooleanValue()); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("owner", (n) -> { this.setOwner(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
@@ -193,7 +191,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getHexColor() {
-        return this._hexColor;
+        return this.hexColor;
     }
     /**
      * Gets the isDefaultCalendar property value. true if this is the default calendar where new events are created by default, false otherwise.
@@ -201,7 +199,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDefaultCalendar() {
-        return this._isDefaultCalendar;
+        return this.isDefaultCalendar;
     }
     /**
      * Gets the isRemovable property value. Indicates whether this user calendar can be deleted from the user mailbox.
@@ -209,7 +207,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsRemovable() {
-        return this._isRemovable;
+        return this.isRemovable;
     }
     /**
      * Gets the isShared property value. true if the user has shared the calendar with other users, false otherwise. Since only the user who created the calendar can share it, isShared and isSharedWithMe cannot be true for the same user. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only.
@@ -217,7 +215,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsShared() {
-        return this._isShared;
+        return this.isShared;
     }
     /**
      * Gets the isSharedWithMe property value. true if the user has been shared this calendar, false otherwise. This property is always false for a calendar owner. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only.
@@ -225,7 +223,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsSharedWithMe() {
-        return this._isSharedWithMe;
+        return this.isSharedWithMe;
     }
     /**
      * Gets the isTallyingResponses property value. Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses.
@@ -233,7 +231,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsTallyingResponses() {
-        return this._isTallyingResponses;
+        return this.isTallyingResponses;
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
@@ -241,7 +239,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
-        return this._multiValueExtendedProperties;
+        return this.multiValueExtendedProperties;
     }
     /**
      * Gets the name property value. The calendar name.
@@ -249,7 +247,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
@@ -257,7 +255,7 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EmailAddress getOwner() {
-        return this._owner;
+        return this.owner;
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
@@ -265,17 +263,18 @@ public class Calendar extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
-        return this._singleValueExtendedProperties;
+        return this.singleValueExtendedProperties;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfPrimitiveValues("allowedOnlineMeetingProviders", this.getAllowedOnlineMeetingProviders());
+        writer.writeCollectionOfEnumValues("allowedOnlineMeetingProviders", this.getAllowedOnlineMeetingProviders());
         writer.writeStringValue("calendarGroupId", this.getCalendarGroupId());
         writer.writeCollectionOfObjectValues("calendarPermissions", this.getCalendarPermissions());
         writer.writeCollectionOfObjectValues("calendarView", this.getCalendarView());
@@ -302,167 +301,188 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the allowedOnlineMeetingProviders property.
      * @return a void
      */
-    public void setAllowedOnlineMeetingProviders(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._allowedOnlineMeetingProviders = value;
+    @javax.annotation.Nonnull
+    public void setAllowedOnlineMeetingProviders(@javax.annotation.Nullable final java.util.List<OnlineMeetingProviderType> value) {
+        this.allowedOnlineMeetingProviders = value;
     }
     /**
      * Sets the calendarGroupId property value. The calendarGroup in which to create the calendar. If the user has never explicitly set a group for the calendar, this property is  null.
      * @param value Value to set for the calendarGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarGroupId(@javax.annotation.Nullable final String value) {
-        this._calendarGroupId = value;
+        this.calendarGroupId = value;
     }
     /**
      * Sets the calendarPermissions property value. The permissions of the users with whom the calendar is shared.
      * @param value Value to set for the calendarPermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarPermissions(@javax.annotation.Nullable final java.util.List<CalendarPermission> value) {
-        this._calendarPermissions = value;
+        this.calendarPermissions = value;
     }
     /**
      * Sets the calendarView property value. The calendar view for the calendar. Navigation property. Read-only.
      * @param value Value to set for the calendarView property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarView(@javax.annotation.Nullable final java.util.List<Event> value) {
-        this._calendarView = value;
+        this.calendarView = value;
     }
     /**
      * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
      * @param value Value to set for the canEdit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCanEdit(@javax.annotation.Nullable final Boolean value) {
-        this._canEdit = value;
+        this.canEdit = value;
     }
     /**
      * Sets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
      * @param value Value to set for the canShare property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCanShare(@javax.annotation.Nullable final Boolean value) {
-        this._canShare = value;
+        this.canShare = value;
     }
     /**
      * Sets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
      * @param value Value to set for the canViewPrivateItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCanViewPrivateItems(@javax.annotation.Nullable final Boolean value) {
-        this._canViewPrivateItems = value;
+        this.canViewPrivateItems = value;
     }
     /**
      * Sets the changeKey property value. Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      * @param value Value to set for the changeKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeKey(@javax.annotation.Nullable final String value) {
-        this._changeKey = value;
+        this.changeKey = value;
     }
     /**
      * Sets the color property value. Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
      * @param value Value to set for the color property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final CalendarColor value) {
-        this._color = value;
+        this.color = value;
     }
     /**
      * Sets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      * @param value Value to set for the defaultOnlineMeetingProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultOnlineMeetingProvider(@javax.annotation.Nullable final OnlineMeetingProviderType value) {
-        this._defaultOnlineMeetingProvider = value;
+        this.defaultOnlineMeetingProvider = value;
     }
     /**
      * Sets the events property value. The events in the calendar. Navigation property. Read-only.
      * @param value Value to set for the events property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvents(@javax.annotation.Nullable final java.util.List<Event> value) {
-        this._events = value;
+        this.events = value;
     }
     /**
      * Sets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
      * @param value Value to set for the hexColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHexColor(@javax.annotation.Nullable final String value) {
-        this._hexColor = value;
+        this.hexColor = value;
     }
     /**
      * Sets the isDefaultCalendar property value. true if this is the default calendar where new events are created by default, false otherwise.
      * @param value Value to set for the isDefaultCalendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefaultCalendar(@javax.annotation.Nullable final Boolean value) {
-        this._isDefaultCalendar = value;
+        this.isDefaultCalendar = value;
     }
     /**
      * Sets the isRemovable property value. Indicates whether this user calendar can be deleted from the user mailbox.
      * @param value Value to set for the isRemovable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRemovable(@javax.annotation.Nullable final Boolean value) {
-        this._isRemovable = value;
+        this.isRemovable = value;
     }
     /**
      * Sets the isShared property value. true if the user has shared the calendar with other users, false otherwise. Since only the user who created the calendar can share it, isShared and isSharedWithMe cannot be true for the same user. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only.
      * @param value Value to set for the isShared property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsShared(@javax.annotation.Nullable final Boolean value) {
-        this._isShared = value;
+        this.isShared = value;
     }
     /**
      * Sets the isSharedWithMe property value. true if the user has been shared this calendar, false otherwise. This property is always false for a calendar owner. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only.
      * @param value Value to set for the isSharedWithMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSharedWithMe(@javax.annotation.Nullable final Boolean value) {
-        this._isSharedWithMe = value;
+        this.isSharedWithMe = value;
     }
     /**
      * Sets the isTallyingResponses property value. Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses.
      * @param value Value to set for the isTallyingResponses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsTallyingResponses(@javax.annotation.Nullable final Boolean value) {
-        this._isTallyingResponses = value;
+        this.isTallyingResponses = value;
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
-        this._multiValueExtendedProperties = value;
+        this.multiValueExtendedProperties = value;
     }
     /**
      * Sets the name property value. The calendar name.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final EmailAddress value) {
-        this._owner = value;
+        this.owner = value;
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
-        this._singleValueExtendedProperties = value;
+        this.singleValueExtendedProperties = value;
     }
 }

@@ -3,7 +3,6 @@ package com.microsoft.graph.models.externalconnectors;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum IdentitySourceType implements ValuedEnum {
     AzureActiveDirectory("azureActiveDirectory"),
     External("external"),

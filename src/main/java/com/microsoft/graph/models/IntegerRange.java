@@ -4,30 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IntegerRange implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The inclusive upper bound of the integer range. */
-    private Long _end;
+    private Long end;
     /** The maximum property */
-    private Long _maximum;
+    private Long maximum;
     /** The minimum property */
-    private Long _minimum;
+    private Long minimum;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The inclusive lower bound of the integer range. */
-    private Long _start;
+    private Long start;
     /**
      * Instantiates a new integerRange and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IntegerRange() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.integerRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +44,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the end property value. The inclusive upper bound of the integer range.
@@ -53,22 +52,21 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getEnd() {
-        return this._end;
+        return this.end;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IntegerRange currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("end", (n) -> { currentObject.setEnd(n.getLongValue()); });
-            this.put("maximum", (n) -> { currentObject.setMaximum(n.getLongValue()); });
-            this.put("minimum", (n) -> { currentObject.setMinimum(n.getLongValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("start", (n) -> { currentObject.setStart(n.getLongValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("end", (n) -> { this.setEnd(n.getLongValue()); });
+        deserializerMap.put("maximum", (n) -> { this.setMaximum(n.getLongValue()); });
+        deserializerMap.put("minimum", (n) -> { this.setMinimum(n.getLongValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("start", (n) -> { this.setStart(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maximum property value. The maximum property
@@ -76,7 +74,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getMaximum() {
-        return this._maximum;
+        return this.maximum;
     }
     /**
      * Gets the minimum property value. The minimum property
@@ -84,7 +82,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getMinimum() {
-        return this._minimum;
+        return this.minimum;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -92,7 +90,7 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the start property value. The inclusive lower bound of the integer range.
@@ -100,13 +98,14 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getStart() {
-        return this._start;
+        return this.start;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("end", this.getEnd());
@@ -121,47 +120,53 @@ public class IntegerRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the end property value. The inclusive upper bound of the integer range.
      * @param value Value to set for the end property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnd(@javax.annotation.Nullable final Long value) {
-        this._end = value;
+        this.end = value;
     }
     /**
      * Sets the maximum property value. The maximum property
      * @param value Value to set for the maximum property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximum(@javax.annotation.Nullable final Long value) {
-        this._maximum = value;
+        this.maximum = value;
     }
     /**
      * Sets the minimum property value. The minimum property
      * @param value Value to set for the minimum property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimum(@javax.annotation.Nullable final Long value) {
-        this._minimum = value;
+        this.minimum = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the start property value. The inclusive lower bound of the integer range.
      * @param value Value to set for the start property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStart(@javax.annotation.Nullable final Long value) {
-        this._start = value;
+        this.start = value;
     }
 }

@@ -4,39 +4,40 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for the deployment state of a WindowsDefenderApplicationControl supplemental policy for a device. */
+/**
+ * Contains properties for the deployment state of a WindowsDefenderApplicationControl supplemental policy for a device.
+ */
 public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extends Entity implements Parsable {
     /** Enum values for the various WindowsDefenderApplicationControl supplemental policy deployment statuses. */
-    private WindowsDefenderApplicationControlSupplementalPolicyStatuses _deploymentStatus;
+    private WindowsDefenderApplicationControlSupplementalPolicyStatuses deploymentStatus;
     /** Device ID. */
-    private String _deviceId;
+    private String deviceId;
     /** Device name. */
-    private String _deviceName;
+    private String deviceName;
     /** Last sync date time. */
-    private OffsetDateTime _lastSyncDateTime;
+    private OffsetDateTime lastSyncDateTime;
     /** Windows OS Version Description. */
-    private String _osDescription;
+    private String osDescription;
     /** Windows OS Version. */
-    private String _osVersion;
+    private String osVersion;
     /** The navigation link to the WindowsDefenderApplicationControl supplemental policy. */
-    private WindowsDefenderApplicationControlSupplementalPolicy _policy;
+    private WindowsDefenderApplicationControlSupplementalPolicy policy;
     /** Human readable version of the WindowsDefenderApplicationControl supplemental policy. */
-    private String _policyVersion;
+    private String policyVersion;
     /** The name of the user of this device. */
-    private String _userName;
+    private String userName;
     /** User Principal Name. */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus() {
         super();
-        this.setOdataType("#microsoft.graph.windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +55,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @javax.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicyStatuses getDeploymentStatus() {
-        return this._deploymentStatus;
+        return this.deploymentStatus;
     }
     /**
      * Gets the deviceId property value. Device ID.
@@ -62,7 +63,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the deviceName property value. Device name.
@@ -70,27 +71,26 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deploymentStatus", (n) -> { currentObject.setDeploymentStatus(n.getEnumValue(WindowsDefenderApplicationControlSupplementalPolicyStatuses.class)); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("osDescription", (n) -> { currentObject.setOsDescription(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("policy", (n) -> { currentObject.setPolicy(n.getObjectValue(WindowsDefenderApplicationControlSupplementalPolicy::createFromDiscriminatorValue)); });
-            this.put("policyVersion", (n) -> { currentObject.setPolicyVersion(n.getStringValue()); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deploymentStatus", (n) -> { this.setDeploymentStatus(n.getEnumValue(WindowsDefenderApplicationControlSupplementalPolicyStatuses.class)); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("osDescription", (n) -> { this.setOsDescription(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(WindowsDefenderApplicationControlSupplementalPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("policyVersion", (n) -> { this.setPolicyVersion(n.getStringValue()); });
+        deserializerMap.put("userName", (n) -> { this.setUserName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastSyncDateTime property value. Last sync date time.
@@ -98,7 +98,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this._lastSyncDateTime;
+        return this.lastSyncDateTime;
     }
     /**
      * Gets the osDescription property value. Windows OS Version Description.
@@ -106,7 +106,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @javax.annotation.Nullable
     public String getOsDescription() {
-        return this._osDescription;
+        return this.osDescription;
     }
     /**
      * Gets the osVersion property value. Windows OS Version.
@@ -114,7 +114,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @javax.annotation.Nullable
     public String getOsVersion() {
-        return this._osVersion;
+        return this.osVersion;
     }
     /**
      * Gets the policy property value. The navigation link to the WindowsDefenderApplicationControl supplemental policy.
@@ -122,7 +122,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @javax.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicy getPolicy() {
-        return this._policy;
+        return this.policy;
     }
     /**
      * Gets the policyVersion property value. Human readable version of the WindowsDefenderApplicationControl supplemental policy.
@@ -130,7 +130,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @javax.annotation.Nullable
     public String getPolicyVersion() {
-        return this._policyVersion;
+        return this.policyVersion;
     }
     /**
      * Gets the userName property value. The name of the user of this device.
@@ -138,7 +138,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @javax.annotation.Nullable
     public String getUserName() {
-        return this._userName;
+        return this.userName;
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name.
@@ -146,13 +146,14 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,79 +173,89 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @param value Value to set for the deploymentStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentStatus(@javax.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicyStatuses value) {
-        this._deploymentStatus = value;
+        this.deploymentStatus = value;
     }
     /**
      * Sets the deviceId property value. Device ID.
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the deviceName property value. Device name.
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the lastSyncDateTime property value. Last sync date time.
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSyncDateTime = value;
+        this.lastSyncDateTime = value;
     }
     /**
      * Sets the osDescription property value. Windows OS Version Description.
      * @param value Value to set for the osDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsDescription(@javax.annotation.Nullable final String value) {
-        this._osDescription = value;
+        this.osDescription = value;
     }
     /**
      * Sets the osVersion property value. Windows OS Version.
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
-        this._osVersion = value;
+        this.osVersion = value;
     }
     /**
      * Sets the policy property value. The navigation link to the WindowsDefenderApplicationControl supplemental policy.
      * @param value Value to set for the policy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicy(@javax.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicy value) {
-        this._policy = value;
+        this.policy = value;
     }
     /**
      * Sets the policyVersion property value. Human readable version of the WindowsDefenderApplicationControl supplemental policy.
      * @param value Value to set for the policyVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyVersion(@javax.annotation.Nullable final String value) {
-        this._policyVersion = value;
+        this.policyVersion = value;
     }
     /**
      * Sets the userName property value. The name of the user of this device.
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
-        this._userName = value;
+        this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

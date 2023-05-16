@@ -3,20 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InformationProtectionPolicy extends Entity implements Parsable {
     /** The labels property */
-    private java.util.List<InformationProtectionLabel> _labels;
+    private java.util.List<InformationProtectionLabel> labels;
     /**
      * Instantiates a new informationProtectionPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InformationProtectionPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.informationProtectionPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +29,13 @@ public class InformationProtectionPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InformationProtectionPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfObjectValues(InformationProtectionLabel::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("labels", (n) -> { this.setLabels(n.getCollectionOfObjectValues(InformationProtectionLabel::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the labels property value. The labels property
@@ -45,13 +43,14 @@ public class InformationProtectionPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<InformationProtectionLabel> getLabels() {
-        return this._labels;
+        return this.labels;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +61,8 @@ public class InformationProtectionPolicy extends Entity implements Parsable {
      * @param value Value to set for the labels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabels(@javax.annotation.Nullable final java.util.List<InformationProtectionLabel> value) {
-        this._labels = value;
+        this.labels = value;
     }
 }

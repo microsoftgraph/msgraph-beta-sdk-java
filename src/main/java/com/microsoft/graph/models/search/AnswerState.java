@@ -3,7 +3,6 @@ package com.microsoft.graph.models.search;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum AnswerState implements ValuedEnum {
     Published("published"),
     Draft("draft"),

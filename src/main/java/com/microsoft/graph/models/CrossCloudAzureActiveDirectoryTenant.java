@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Parsable {
     /** The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only. */
-    private String _cloudInstance;
+    private String cloudInstance;
     /** The name of the Azure Active Directory tenant. Read only. */
-    private String _displayName;
+    private String displayName;
     /** The ID of the Azure Active Directory tenant. Read only. */
-    private String _tenantId;
+    private String tenantId;
     /**
      * Instantiates a new CrossCloudAzureActiveDirectoryTenant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CrossCloudAzureActiveDirectoryTenant() {
         super();
         this.setOdataType("#microsoft.graph.crossCloudAzureActiveDirectoryTenant");
@@ -38,7 +38,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      */
     @javax.annotation.Nullable
     public String getCloudInstance() {
-        return this._cloudInstance;
+        return this.cloudInstance;
     }
     /**
      * Gets the displayName property value. The name of the Azure Active Directory tenant. Read only.
@@ -46,20 +46,19 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CrossCloudAzureActiveDirectoryTenant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("cloudInstance", (n) -> { currentObject.setCloudInstance(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("cloudInstance", (n) -> { this.setCloudInstance(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
@@ -67,13 +66,14 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * @param value Value to set for the cloudInstance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudInstance(@javax.annotation.Nullable final String value) {
-        this._cloudInstance = value;
+        this.cloudInstance = value;
     }
     /**
      * Sets the displayName property value. The name of the Azure Active Directory tenant. Read only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
 }

@@ -1,0 +1,28 @@
+package com.microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
+
+public enum MsiType implements ValuedEnum {
+    None("none"),
+    UserAssigned("userAssigned"),
+    SystemAssigned("systemAssigned"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    MsiType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static MsiType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "userAssigned": return UserAssigned;
+            case "systemAssigned": return SystemAssigned;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
+}

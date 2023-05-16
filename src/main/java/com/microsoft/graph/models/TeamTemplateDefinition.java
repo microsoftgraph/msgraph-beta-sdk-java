@@ -4,43 +4,41 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class TeamTemplateDefinition extends Entity implements Parsable {
-    /** The audience property */
-    private TeamTemplateAudience _audience;
-    /** The categories property */
-    private java.util.List<String> _categories;
-    /** The description property */
-    private String _description;
-    /** The displayName property */
-    private String _displayName;
-    /** The iconUrl property */
-    private String _iconUrl;
-    /** The languageTag property */
-    private String _languageTag;
-    /** The lastModifiedBy property */
-    private IdentitySet _lastModifiedBy;
-    /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** The parentTemplateId property */
-    private String _parentTemplateId;
-    /** The publisherName property */
-    private String _publisherName;
-    /** The shortDescription property */
-    private String _shortDescription;
-    /** The teamDefinition property */
-    private Team _teamDefinition;
+    /** Describes the audience the team template is available to. The possible values are: organization, user, public, unknownFutureValue. */
+    private TeamTemplateAudience audience;
+    /** The assigned categories for the team template. */
+    private java.util.List<String> categories;
+    /** A brief description of the team template as it will appear to the users in Microsoft Teams. */
+    private String description;
+    /** The user defined name of the team template. */
+    private String displayName;
+    /** The icon url for the team template. */
+    private String iconUrl;
+    /** Language the template is available in. */
+    private String languageTag;
+    /** The identity of the user who last modified the team template. */
+    private IdentitySet lastModifiedBy;
+    /** The date time of when the team template was last modified. */
+    private OffsetDateTime lastModifiedDateTime;
+    /** The templateId for the team template */
+    private String parentTemplateId;
+    /** The organization which published the team template. */
+    private String publisherName;
+    /** A short-description of the team template as it will appear to the users in Microsoft Teams. */
+    private String shortDescription;
+    /** Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team. */
+    private Team teamDefinition;
     /**
      * Instantiates a new teamTemplateDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamTemplateDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.teamTemplateDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,128 +51,128 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
         return new TeamTemplateDefinition();
     }
     /**
-     * Gets the audience property value. The audience property
+     * Gets the audience property value. Describes the audience the team template is available to. The possible values are: organization, user, public, unknownFutureValue.
      * @return a teamTemplateAudience
      */
     @javax.annotation.Nullable
     public TeamTemplateAudience getAudience() {
-        return this._audience;
+        return this.audience;
     }
     /**
-     * Gets the categories property value. The categories property
+     * Gets the categories property value. The assigned categories for the team template.
      * @return a string
      */
     @javax.annotation.Nullable
     public java.util.List<String> getCategories() {
-        return this._categories;
+        return this.categories;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A brief description of the team template as it will appear to the users in Microsoft Teams.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The user defined name of the team template.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamTemplateDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("audience", (n) -> { currentObject.setAudience(n.getEnumValue(TeamTemplateAudience.class)); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("iconUrl", (n) -> { currentObject.setIconUrl(n.getStringValue()); });
-            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("parentTemplateId", (n) -> { currentObject.setParentTemplateId(n.getStringValue()); });
-            this.put("publisherName", (n) -> { currentObject.setPublisherName(n.getStringValue()); });
-            this.put("shortDescription", (n) -> { currentObject.setShortDescription(n.getStringValue()); });
-            this.put("teamDefinition", (n) -> { currentObject.setTeamDefinition(n.getObjectValue(Team::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("audience", (n) -> { this.setAudience(n.getEnumValue(TeamTemplateAudience.class)); });
+        deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("iconUrl", (n) -> { this.setIconUrl(n.getStringValue()); });
+        deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("parentTemplateId", (n) -> { this.setParentTemplateId(n.getStringValue()); });
+        deserializerMap.put("publisherName", (n) -> { this.setPublisherName(n.getStringValue()); });
+        deserializerMap.put("shortDescription", (n) -> { this.setShortDescription(n.getStringValue()); });
+        deserializerMap.put("teamDefinition", (n) -> { this.setTeamDefinition(n.getObjectValue(Team::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
-     * Gets the iconUrl property value. The iconUrl property
+     * Gets the iconUrl property value. The icon url for the team template.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getIconUrl() {
-        return this._iconUrl;
+        return this.iconUrl;
     }
     /**
-     * Gets the languageTag property value. The languageTag property
+     * Gets the languageTag property value. Language the template is available in.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getLanguageTag() {
-        return this._languageTag;
+        return this.languageTag;
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The identity of the user who last modified the team template.
      * @return a identitySet
      */
     @javax.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date time of when the team template was last modified.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
-     * Gets the parentTemplateId property value. The parentTemplateId property
+     * Gets the parentTemplateId property value. The templateId for the team template
      * @return a string
      */
     @javax.annotation.Nullable
     public String getParentTemplateId() {
-        return this._parentTemplateId;
+        return this.parentTemplateId;
     }
     /**
-     * Gets the publisherName property value. The publisherName property
+     * Gets the publisherName property value. The organization which published the team template.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getPublisherName() {
-        return this._publisherName;
+        return this.publisherName;
     }
     /**
-     * Gets the shortDescription property value. The shortDescription property
+     * Gets the shortDescription property value. A short-description of the team template as it will appear to the users in Microsoft Teams.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getShortDescription() {
-        return this._shortDescription;
+        return this.shortDescription;
     }
     /**
-     * Gets the teamDefinition property value. The teamDefinition property
+     * Gets the teamDefinition property value. Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
      * @return a team
      */
     @javax.annotation.Nullable
     public Team getTeamDefinition() {
-        return this._teamDefinition;
+        return this.teamDefinition;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -192,99 +190,111 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
         writer.writeObjectValue("teamDefinition", this.getTeamDefinition());
     }
     /**
-     * Sets the audience property value. The audience property
+     * Sets the audience property value. Describes the audience the team template is available to. The possible values are: organization, user, public, unknownFutureValue.
      * @param value Value to set for the audience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudience(@javax.annotation.Nullable final TeamTemplateAudience value) {
-        this._audience = value;
+        this.audience = value;
     }
     /**
-     * Sets the categories property value. The categories property
+     * Sets the categories property value. The assigned categories for the team template.
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._categories = value;
+        this.categories = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A brief description of the team template as it will appear to the users in Microsoft Teams.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The user defined name of the team template.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
-     * Sets the iconUrl property value. The iconUrl property
+     * Sets the iconUrl property value. The icon url for the team template.
      * @param value Value to set for the iconUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIconUrl(@javax.annotation.Nullable final String value) {
-        this._iconUrl = value;
+        this.iconUrl = value;
     }
     /**
-     * Sets the languageTag property value. The languageTag property
+     * Sets the languageTag property value. Language the template is available in.
      * @param value Value to set for the languageTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageTag(@javax.annotation.Nullable final String value) {
-        this._languageTag = value;
+        this.languageTag = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The identity of the user who last modified the team template.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date time of when the team template was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
-     * Sets the parentTemplateId property value. The parentTemplateId property
+     * Sets the parentTemplateId property value. The templateId for the team template
      * @param value Value to set for the parentTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentTemplateId(@javax.annotation.Nullable final String value) {
-        this._parentTemplateId = value;
+        this.parentTemplateId = value;
     }
     /**
-     * Sets the publisherName property value. The publisherName property
+     * Sets the publisherName property value. The organization which published the team template.
      * @param value Value to set for the publisherName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisherName(@javax.annotation.Nullable final String value) {
-        this._publisherName = value;
+        this.publisherName = value;
     }
     /**
-     * Sets the shortDescription property value. The shortDescription property
+     * Sets the shortDescription property value. A short-description of the team template as it will appear to the users in Microsoft Teams.
      * @param value Value to set for the shortDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShortDescription(@javax.annotation.Nullable final String value) {
-        this._shortDescription = value;
+        this.shortDescription = value;
     }
     /**
-     * Sets the teamDefinition property value. The teamDefinition property
+     * Sets the teamDefinition property value. Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
      * @param value Value to set for the teamDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamDefinition(@javax.annotation.Nullable final Team value) {
-        this._teamDefinition = value;
+        this.teamDefinition = value;
     }
 }

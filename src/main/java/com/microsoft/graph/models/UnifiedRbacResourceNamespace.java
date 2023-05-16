@@ -3,23 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
     /** Name of the resource namespace. Typically, the same name as the id property, such as microsoft.aad.b2c. Required. Supports $filter (eq, startsWith). */
-    private String _name;
+    private String name;
     /** Operations that an authorized principal are allowed to perform. */
-    private java.util.List<UnifiedRbacResourceAction> _resourceActions;
+    private java.util.List<UnifiedRbacResourceAction> resourceActions;
     /**
      * Instantiates a new unifiedRbacResourceNamespace and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRbacResourceNamespace() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRbacResourceNamespace");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,15 +31,14 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnifiedRbacResourceNamespace currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("resourceActions", (n) -> { currentObject.setResourceActions(n.getCollectionOfObjectValues(UnifiedRbacResourceAction::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("resourceActions", (n) -> { this.setResourceActions(n.getCollectionOfObjectValues(UnifiedRbacResourceAction::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name of the resource namespace. Typically, the same name as the id property, such as microsoft.aad.b2c. Required. Supports $filter (eq, startsWith).
@@ -49,7 +46,7 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the resourceActions property value. Operations that an authorized principal are allowed to perform.
@@ -57,13 +54,14 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRbacResourceAction> getResourceActions() {
-        return this._resourceActions;
+        return this.resourceActions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,15 +73,17 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the resourceActions property value. Operations that an authorized principal are allowed to perform.
      * @param value Value to set for the resourceActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceActions(@javax.annotation.Nullable final java.util.List<UnifiedRbacResourceAction> value) {
-        this._resourceActions = value;
+        this.resourceActions = value;
     }
 }

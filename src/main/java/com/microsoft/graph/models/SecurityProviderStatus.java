@@ -4,32 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The enabled property */
-    private Boolean _enabled;
+    private Boolean enabled;
     /** The endpoint property */
-    private String _endpoint;
+    private String endpoint;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The provider property */
-    private String _provider;
+    private String provider;
     /** The region property */
-    private String _region;
+    private String region;
     /** The vendor property */
-    private String _vendor;
+    private String vendor;
     /**
      * Instantiates a new securityProviderStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityProviderStatus() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.securityProviderStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +46,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the enabled property value. The enabled property
@@ -55,7 +54,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getEnabled() {
-        return this._enabled;
+        return this.enabled;
     }
     /**
      * Gets the endpoint property value. The endpoint property
@@ -63,23 +62,22 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getEndpoint() {
-        return this._endpoint;
+        return this.endpoint;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SecurityProviderStatus currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("endpoint", (n) -> { currentObject.setEndpoint(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("provider", (n) -> { currentObject.setProvider(n.getStringValue()); });
-            this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
-            this.put("vendor", (n) -> { currentObject.setVendor(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("endpoint", (n) -> { this.setEndpoint(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("provider", (n) -> { this.setProvider(n.getStringValue()); });
+        deserializerMap.put("region", (n) -> { this.setRegion(n.getStringValue()); });
+        deserializerMap.put("vendor", (n) -> { this.setVendor(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -87,7 +85,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the provider property value. The provider property
@@ -95,7 +93,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getProvider() {
-        return this._provider;
+        return this.provider;
     }
     /**
      * Gets the region property value. The region property
@@ -103,7 +101,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRegion() {
-        return this._region;
+        return this.region;
     }
     /**
      * Gets the vendor property value. The vendor property
@@ -111,13 +109,14 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getVendor() {
-        return this._vendor;
+        return this.vendor;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("enabled", this.getEnabled());
@@ -133,55 +132,62 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the enabled property value. The enabled property
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._enabled = value;
+        this.enabled = value;
     }
     /**
      * Sets the endpoint property value. The endpoint property
      * @param value Value to set for the endpoint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpoint(@javax.annotation.Nullable final String value) {
-        this._endpoint = value;
+        this.endpoint = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the provider property value. The provider property
      * @param value Value to set for the provider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvider(@javax.annotation.Nullable final String value) {
-        this._provider = value;
+        this.provider = value;
     }
     /**
      * Sets the region property value. The region property
      * @param value Value to set for the region property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegion(@javax.annotation.Nullable final String value) {
-        this._region = value;
+        this.region = value;
     }
     /**
      * Sets the vendor property value. The vendor property
      * @param value Value to set for the vendor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendor(@javax.annotation.Nullable final String value) {
-        this._vendor = value;
+        this.vendor = value;
     }
 }
