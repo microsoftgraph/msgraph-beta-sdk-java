@@ -21,6 +21,7 @@ import com.microsoft.graph.requests.SiteCollectionRequest;
 import com.microsoft.graph.requests.SiteAddCollectionRequestBuilder;
 import com.microsoft.graph.requests.SiteRemoveCollectionRequestBuilder;
 import com.microsoft.graph.requests.SiteDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.SiteGetAllSitesCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -76,6 +77,15 @@ public class SiteCollectionRequestBuilder extends BaseCollectionRequestBuilder<S
     @Nonnull
     public SiteDeltaCollectionRequestBuilder delta() {
         return new SiteDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public SiteGetAllSitesCollectionRequestBuilder getAllSites() {
+        return new SiteGetAllSitesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllSites"), getClient(), null);
     }
 
     /**

@@ -27,7 +27,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
 
     /**
      * The App Id.
-     * 
+     * The globally unique identifier of the application to which access has been granted.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose

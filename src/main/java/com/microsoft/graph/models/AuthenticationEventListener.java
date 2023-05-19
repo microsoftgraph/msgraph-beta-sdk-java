@@ -28,7 +28,7 @@ public class AuthenticationEventListener extends Entity implements IJsonBackedOb
 
     /**
      * The Authentication Events Flow Id.
-     * 
+     * The identifier of the authenticationEventsFlow object.
      */
     @SerializedName(value = "authenticationEventsFlowId", alternate = {"AuthenticationEventsFlowId"})
     @Expose
@@ -37,7 +37,7 @@ public class AuthenticationEventListener extends Entity implements IJsonBackedOb
 
     /**
      * The Conditions.
-     * 
+     * The conditions on which this authenticationEventListener should trigger.
      */
     @SerializedName(value = "conditions", alternate = {"Conditions"})
     @Expose
@@ -46,7 +46,7 @@ public class AuthenticationEventListener extends Entity implements IJsonBackedOb
 
     /**
      * The Priority.
-     * 
+     * The priority of this handler. Between 0 (lower priority) and 1000 (higher priority).
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose

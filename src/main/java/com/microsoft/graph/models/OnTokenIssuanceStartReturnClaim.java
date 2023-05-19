@@ -39,7 +39,7 @@ public class OnTokenIssuanceStartReturnClaim implements IJsonBackedObject {
 
     /**
      * The Claim Id In Api Response.
-     * 
+     * The identifier of the claim returned by an API that is to be add to a token being issued.
      */
     @SerializedName(value = "claimIdInApiResponse", alternate = {"ClaimIdInApiResponse"})
     @Expose

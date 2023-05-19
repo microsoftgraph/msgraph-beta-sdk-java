@@ -27,7 +27,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
 
     /**
      * The Target Url.
-     * 
+     * The HTTP endpoint that a custom extension calls.
      */
     @SerializedName(value = "targetUrl", alternate = {"TargetUrl"})
     @Expose

@@ -27,7 +27,7 @@ public class EducationGradingCategory extends Entity implements IJsonBackedObjec
 
     /**
      * The Display Name.
-     * 
+     * The name of the grading category.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class EducationGradingCategory extends Entity implements IJsonBackedObjec
 
     /**
      * The Percentage Weight.
-     * 
+     * The weight of the category; an integer between 0 and 100.
      */
     @SerializedName(value = "percentageWeight", alternate = {"PercentageWeight"})
     @Expose

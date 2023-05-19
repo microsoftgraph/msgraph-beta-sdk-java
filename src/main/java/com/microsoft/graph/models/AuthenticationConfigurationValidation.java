@@ -41,7 +41,7 @@ public class AuthenticationConfigurationValidation implements IJsonBackedObject 
 
     /**
      * The Errors.
-     * 
+     * Errors in the validation result of a customAuthenticationExtension.
      */
     @SerializedName(value = "errors", alternate = {"Errors"})
     @Expose
@@ -50,7 +50,7 @@ public class AuthenticationConfigurationValidation implements IJsonBackedObject 
 
     /**
      * The Warnings.
-     * 
+     * Warnings in the validation result of a customAuthenticationExtension.
      */
     @SerializedName(value = "warnings", alternate = {"Warnings"})
     @Expose
