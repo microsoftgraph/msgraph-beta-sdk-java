@@ -3,21 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A class containing information about the payloads on which filter has been applied. */
+/**
+ * A class containing information about the payloads on which filter has been applied.
+ */
 public class AssignmentFilterEvaluationStatusDetails extends Entity implements Parsable {
     /** PayloadId on which filter has been applied. */
-    private String _payloadId;
+    private String payloadId;
     /**
      * Instantiates a new assignmentFilterEvaluationStatusDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignmentFilterEvaluationStatusDetails() {
         super();
-        this.setOdataType("#microsoft.graph.assignmentFilterEvaluationStatusDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,14 +32,13 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AssignmentFilterEvaluationStatusDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("payloadId", (n) -> { this.setPayloadId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the payloadId property value. PayloadId on which filter has been applied.
@@ -46,13 +46,14 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
      */
     @javax.annotation.Nullable
     public String getPayloadId() {
-        return this._payloadId;
+        return this.payloadId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,7 +64,8 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
      * @param value Value to set for the payloadId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadId(@javax.annotation.Nullable final String value) {
-        this._payloadId = value;
+        this.payloadId = value;
     }
 }

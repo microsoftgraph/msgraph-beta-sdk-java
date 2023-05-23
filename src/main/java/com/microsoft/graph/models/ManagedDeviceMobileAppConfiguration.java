@@ -1,48 +1,44 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidForWorkMobileAppConfiguration;
-import com.microsoft.graph.models.AndroidManagedStoreAppConfiguration;
-import com.microsoft.graph.models.IosMobileAppConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable {
     /** The list of group assignemenets for app configration. */
-    private java.util.List<ManagedDeviceMobileAppConfigurationAssignment> _assignments;
+    private java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments;
     /** DateTime the object was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Admin provided description of the Device Configuration. */
-    private String _description;
+    private String description;
     /** List of ManagedDeviceMobileAppConfigurationDeviceStatus. */
-    private java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> _deviceStatuses;
+    private java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> deviceStatuses;
     /** App configuration device status summary. */
-    private ManagedDeviceMobileAppConfigurationDeviceSummary _deviceStatusSummary;
+    private ManagedDeviceMobileAppConfigurationDeviceSummary deviceStatusSummary;
     /** Admin provided name of the device configuration. */
-    private String _displayName;
+    private String displayName;
     /** DateTime the object was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** List of Scope Tags for this App configuration entity. */
-    private java.util.List<String> _roleScopeTagIds;
+    private java.util.List<String> roleScopeTagIds;
     /** the associated app. */
-    private java.util.List<String> _targetedMobileApps;
+    private java.util.List<String> targetedMobileApps;
     /** List of ManagedDeviceMobileAppConfigurationUserStatus. */
-    private java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> _userStatuses;
+    private java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> userStatuses;
     /** App configuration user status summary. */
-    private ManagedDeviceMobileAppConfigurationUserSummary _userStatusSummary;
+    private ManagedDeviceMobileAppConfigurationUserSummary userStatusSummary;
     /** Version of the device configuration. */
-    private Integer _version;
+    private Integer version;
     /**
      * Instantiates a new ManagedDeviceMobileAppConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceMobileAppConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.managedDeviceMobileAppConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,7 +65,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
@@ -77,7 +73,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
@@ -85,7 +81,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the deviceStatuses property value. List of ManagedDeviceMobileAppConfigurationDeviceStatus.
@@ -93,7 +89,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> getDeviceStatuses() {
-        return this._deviceStatuses;
+        return this.deviceStatuses;
     }
     /**
      * Gets the deviceStatusSummary property value. App configuration device status summary.
@@ -101,7 +97,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationDeviceSummary getDeviceStatusSummary() {
-        return this._deviceStatusSummary;
+        return this.deviceStatusSummary;
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
@@ -109,29 +105,28 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedDeviceMobileAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceStatuses", (n) -> { currentObject.setDeviceStatuses(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationDeviceStatus::createFromDiscriminatorValue)); });
-            this.put("deviceStatusSummary", (n) -> { currentObject.setDeviceStatusSummary(n.getObjectValue(ManagedDeviceMobileAppConfigurationDeviceSummary::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("targetedMobileApps", (n) -> { currentObject.setTargetedMobileApps(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("userStatuses", (n) -> { currentObject.setUserStatuses(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationUserStatus::createFromDiscriminatorValue)); });
-            this.put("userStatusSummary", (n) -> { currentObject.setUserStatusSummary(n.getObjectValue(ManagedDeviceMobileAppConfigurationUserSummary::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceStatuses", (n) -> { this.setDeviceStatuses(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationDeviceStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStatusSummary", (n) -> { this.setDeviceStatusSummary(n.getObjectValue(ManagedDeviceMobileAppConfigurationDeviceSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("targetedMobileApps", (n) -> { this.setTargetedMobileApps(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("userStatuses", (n) -> { this.setUserStatuses(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationUserStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("userStatusSummary", (n) -> { this.setUserStatusSummary(n.getObjectValue(ManagedDeviceMobileAppConfigurationUserSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -139,7 +134,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this App configuration entity.
@@ -147,7 +142,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this._roleScopeTagIds;
+        return this.roleScopeTagIds;
     }
     /**
      * Gets the targetedMobileApps property value. the associated app.
@@ -155,7 +150,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTargetedMobileApps() {
-        return this._targetedMobileApps;
+        return this.targetedMobileApps;
     }
     /**
      * Gets the userStatuses property value. List of ManagedDeviceMobileAppConfigurationUserStatus.
@@ -163,7 +158,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> getUserStatuses() {
-        return this._userStatuses;
+        return this.userStatuses;
     }
     /**
      * Gets the userStatusSummary property value. App configuration user status summary.
@@ -171,7 +166,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationUserSummary getUserStatusSummary() {
-        return this._userStatusSummary;
+        return this.userStatusSummary;
     }
     /**
      * Gets the version property value. Version of the device configuration.
@@ -179,13 +174,14 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public Integer getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -207,95 +203,107 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the deviceStatuses property value. List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      * @param value Value to set for the deviceStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> value) {
-        this._deviceStatuses = value;
+        this.deviceStatuses = value;
     }
     /**
      * Sets the deviceStatusSummary property value. App configuration device status summary.
      * @param value Value to set for the deviceStatusSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatusSummary(@javax.annotation.Nullable final ManagedDeviceMobileAppConfigurationDeviceSummary value) {
-        this._deviceStatusSummary = value;
+        this.deviceStatusSummary = value;
     }
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this App configuration entity.
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roleScopeTagIds = value;
+        this.roleScopeTagIds = value;
     }
     /**
      * Sets the targetedMobileApps property value. the associated app.
      * @param value Value to set for the targetedMobileApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedMobileApps(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._targetedMobileApps = value;
+        this.targetedMobileApps = value;
     }
     /**
      * Sets the userStatuses property value. List of ManagedDeviceMobileAppConfigurationUserStatus.
      * @param value Value to set for the userStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStatuses(@javax.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> value) {
-        this._userStatuses = value;
+        this.userStatuses = value;
     }
     /**
      * Sets the userStatusSummary property value. App configuration user status summary.
      * @param value Value to set for the userStatusSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStatusSummary(@javax.annotation.Nullable final ManagedDeviceMobileAppConfigurationUserSummary value) {
-        this._userStatusSummary = value;
+        this.userStatusSummary = value;
     }
     /**
      * Sets the version property value. Version of the device configuration.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
-        this._version = value;
+        this.version = value;
     }
 }

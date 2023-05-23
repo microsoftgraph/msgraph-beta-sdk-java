@@ -3,31 +3,31 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharedDriveItem extends BaseItem implements Parsable {
     /** Used to access the underlying driveItem */
-    private DriveItem _driveItem;
+    private DriveItem driveItem;
     /** All driveItems contained in the sharing root. This collection cannot be enumerated. */
-    private java.util.List<DriveItem> _items;
+    private java.util.List<DriveItem> items;
     /** Used to access the underlying list */
-    private List _list;
+    private List list;
     /** Used to access the underlying listItem */
-    private ListItem _listItem;
+    private ListItem listItem;
     /** Information about the owner of the shared item being referenced. */
-    private IdentitySet _owner;
+    private IdentitySet owner;
     /** Used to access the permission representing the underlying sharing link */
-    private Permission _permission;
+    private Permission permission;
     /** The root property */
-    private DriveItem _root;
+    private DriveItem root;
     /** Used to access the underlying site */
-    private Site _site;
+    private Site site;
     /**
      * Instantiates a new SharedDriveItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharedDriveItem() {
         super();
         this.setOdataType("#microsoft.graph.sharedDriveItem");
@@ -48,25 +48,24 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public DriveItem getDriveItem() {
-        return this._driveItem;
+        return this.driveItem;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharedDriveItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("driveItem", (n) -> { currentObject.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-            this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
-            this.put("list", (n) -> { currentObject.setList(n.getObjectValue(List::createFromDiscriminatorValue)); });
-            this.put("listItem", (n) -> { currentObject.setListItem(n.getObjectValue(ListItem::createFromDiscriminatorValue)); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("permission", (n) -> { currentObject.setPermission(n.getObjectValue(Permission::createFromDiscriminatorValue)); });
-            this.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-            this.put("site", (n) -> { currentObject.setSite(n.getObjectValue(Site::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("driveItem", (n) -> { this.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("list", (n) -> { this.setList(n.getObjectValue(List::createFromDiscriminatorValue)); });
+        deserializerMap.put("listItem", (n) -> { this.setListItem(n.getObjectValue(ListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("owner", (n) -> { this.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("permission", (n) -> { this.setPermission(n.getObjectValue(Permission::createFromDiscriminatorValue)); });
+        deserializerMap.put("root", (n) -> { this.setRoot(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("site", (n) -> { this.setSite(n.getObjectValue(Site::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the items property value. All driveItems contained in the sharing root. This collection cannot be enumerated.
@@ -74,7 +73,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DriveItem> getItems() {
-        return this._items;
+        return this.items;
     }
     /**
      * Gets the list property value. Used to access the underlying list
@@ -82,7 +81,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public List getList() {
-        return this._list;
+        return this.list;
     }
     /**
      * Gets the listItem property value. Used to access the underlying listItem
@@ -90,7 +89,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public ListItem getListItem() {
-        return this._listItem;
+        return this.listItem;
     }
     /**
      * Gets the owner property value. Information about the owner of the shared item being referenced.
@@ -98,7 +97,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getOwner() {
-        return this._owner;
+        return this.owner;
     }
     /**
      * Gets the permission property value. Used to access the permission representing the underlying sharing link
@@ -106,7 +105,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Permission getPermission() {
-        return this._permission;
+        return this.permission;
     }
     /**
      * Gets the root property value. The root property
@@ -114,7 +113,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public DriveItem getRoot() {
-        return this._root;
+        return this.root;
     }
     /**
      * Gets the site property value. Used to access the underlying site
@@ -122,13 +121,14 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Site getSite() {
-        return this._site;
+        return this.site;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +146,71 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the driveItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriveItem(@javax.annotation.Nullable final DriveItem value) {
-        this._driveItem = value;
+        this.driveItem = value;
     }
     /**
      * Sets the items property value. All driveItems contained in the sharing root. This collection cannot be enumerated.
      * @param value Value to set for the items property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<DriveItem> value) {
-        this._items = value;
+        this.items = value;
     }
     /**
      * Sets the list property value. Used to access the underlying list
      * @param value Value to set for the list property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setList(@javax.annotation.Nullable final List value) {
-        this._list = value;
+        this.list = value;
     }
     /**
      * Sets the listItem property value. Used to access the underlying listItem
      * @param value Value to set for the listItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setListItem(@javax.annotation.Nullable final ListItem value) {
-        this._listItem = value;
+        this.listItem = value;
     }
     /**
      * Sets the owner property value. Information about the owner of the shared item being referenced.
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final IdentitySet value) {
-        this._owner = value;
+        this.owner = value;
     }
     /**
      * Sets the permission property value. Used to access the permission representing the underlying sharing link
      * @param value Value to set for the permission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermission(@javax.annotation.Nullable final Permission value) {
-        this._permission = value;
+        this.permission = value;
     }
     /**
      * Sets the root property value. The root property
      * @param value Value to set for the root property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoot(@javax.annotation.Nullable final DriveItem value) {
-        this._root = value;
+        this.root = value;
     }
     /**
      * Sets the site property value. Used to access the underlying site
      * @param value Value to set for the site property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSite(@javax.annotation.Nullable final Site value) {
-        this._site = value;
+        this.site = value;
     }
 }

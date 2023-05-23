@@ -4,28 +4,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ResourceReference implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The item's unique identifier. */
-    private String _id;
+    private String id;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** A string value that can be used to classify the item, such as 'microsoft.graph.driveItem' */
-    private String _type;
+    private String type;
     /** A URL leading to the referenced item. */
-    private String _webUrl;
+    private String webUrl;
     /**
      * Instantiates a new resourceReference and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResourceReference() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resourceReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,21 +42,20 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ResourceReference currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The item's unique identifier.
@@ -65,7 +63,7 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -73,7 +71,7 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the type property value. A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
@@ -81,7 +79,7 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Gets the webUrl property value. A URL leading to the referenced item.
@@ -89,13 +87,14 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
@@ -109,39 +108,44 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the id property value. The item's unique identifier.
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the type property value. A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
     /**
      * Sets the webUrl property value. A URL leading to the referenced item.
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

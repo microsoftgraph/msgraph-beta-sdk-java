@@ -4,36 +4,35 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidForWorkSettings extends Entity implements Parsable {
     /** Bind status of the tenant with the Google EMM API */
-    private AndroidForWorkBindStatus _bindStatus;
+    private AndroidForWorkBindStatus bindStatus;
     /** Indicates if this account is flighting for Android Device Owner Management with CloudDPC. */
-    private Boolean _deviceOwnerManagementEnabled;
+    private Boolean deviceOwnerManagementEnabled;
     /** Android for Work device management targeting type for the account */
-    private AndroidForWorkEnrollmentTarget _enrollmentTarget;
+    private AndroidForWorkEnrollmentTarget enrollmentTarget;
     /** Last completion time for app sync */
-    private OffsetDateTime _lastAppSyncDateTime;
+    private OffsetDateTime lastAppSyncDateTime;
     /** Sync status of the tenant with the Google EMM API */
-    private AndroidForWorkSyncStatus _lastAppSyncStatus;
+    private AndroidForWorkSyncStatus lastAppSyncStatus;
     /** Last modification time for Android for Work settings */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Organization name used when onboarding Android for Work */
-    private String _ownerOrganizationName;
+    private String ownerOrganizationName;
     /** Owner UPN that created the enterprise */
-    private String _ownerUserPrincipalName;
+    private String ownerUserPrincipalName;
     /** Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted' */
-    private java.util.List<String> _targetGroupIds;
+    private java.util.List<String> targetGroupIds;
     /**
      * Instantiates a new AndroidForWorkSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidForWorkSettings() {
         super();
-        this.setOdataType("#microsoft.graph.androidForWorkSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +50,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AndroidForWorkBindStatus getBindStatus() {
-        return this._bindStatus;
+        return this.bindStatus;
     }
     /**
      * Gets the deviceOwnerManagementEnabled property value. Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
@@ -59,7 +58,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getDeviceOwnerManagementEnabled() {
-        return this._deviceOwnerManagementEnabled;
+        return this.deviceOwnerManagementEnabled;
     }
     /**
      * Gets the enrollmentTarget property value. Android for Work device management targeting type for the account
@@ -67,26 +66,25 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AndroidForWorkEnrollmentTarget getEnrollmentTarget() {
-        return this._enrollmentTarget;
+        return this.enrollmentTarget;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidForWorkSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("bindStatus", (n) -> { currentObject.setBindStatus(n.getEnumValue(AndroidForWorkBindStatus.class)); });
-            this.put("deviceOwnerManagementEnabled", (n) -> { currentObject.setDeviceOwnerManagementEnabled(n.getBooleanValue()); });
-            this.put("enrollmentTarget", (n) -> { currentObject.setEnrollmentTarget(n.getEnumValue(AndroidForWorkEnrollmentTarget.class)); });
-            this.put("lastAppSyncDateTime", (n) -> { currentObject.setLastAppSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastAppSyncStatus", (n) -> { currentObject.setLastAppSyncStatus(n.getEnumValue(AndroidForWorkSyncStatus.class)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("ownerOrganizationName", (n) -> { currentObject.setOwnerOrganizationName(n.getStringValue()); });
-            this.put("ownerUserPrincipalName", (n) -> { currentObject.setOwnerUserPrincipalName(n.getStringValue()); });
-            this.put("targetGroupIds", (n) -> { currentObject.setTargetGroupIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bindStatus", (n) -> { this.setBindStatus(n.getEnumValue(AndroidForWorkBindStatus.class)); });
+        deserializerMap.put("deviceOwnerManagementEnabled", (n) -> { this.setDeviceOwnerManagementEnabled(n.getBooleanValue()); });
+        deserializerMap.put("enrollmentTarget", (n) -> { this.setEnrollmentTarget(n.getEnumValue(AndroidForWorkEnrollmentTarget.class)); });
+        deserializerMap.put("lastAppSyncDateTime", (n) -> { this.setLastAppSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastAppSyncStatus", (n) -> { this.setLastAppSyncStatus(n.getEnumValue(AndroidForWorkSyncStatus.class)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("ownerOrganizationName", (n) -> { this.setOwnerOrganizationName(n.getStringValue()); });
+        deserializerMap.put("ownerUserPrincipalName", (n) -> { this.setOwnerUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("targetGroupIds", (n) -> { this.setTargetGroupIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastAppSyncDateTime property value. Last completion time for app sync
@@ -94,7 +92,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastAppSyncDateTime() {
-        return this._lastAppSyncDateTime;
+        return this.lastAppSyncDateTime;
     }
     /**
      * Gets the lastAppSyncStatus property value. Sync status of the tenant with the Google EMM API
@@ -102,7 +100,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AndroidForWorkSyncStatus getLastAppSyncStatus() {
-        return this._lastAppSyncStatus;
+        return this.lastAppSyncStatus;
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modification time for Android for Work settings
@@ -110,7 +108,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the ownerOrganizationName property value. Organization name used when onboarding Android for Work
@@ -118,7 +116,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOwnerOrganizationName() {
-        return this._ownerOrganizationName;
+        return this.ownerOrganizationName;
     }
     /**
      * Gets the ownerUserPrincipalName property value. Owner UPN that created the enterprise
@@ -126,7 +124,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOwnerUserPrincipalName() {
-        return this._ownerUserPrincipalName;
+        return this.ownerUserPrincipalName;
     }
     /**
      * Gets the targetGroupIds property value. Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
@@ -134,13 +132,14 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTargetGroupIds() {
-        return this._targetGroupIds;
+        return this.targetGroupIds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,71 +158,80 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      * @param value Value to set for the bindStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBindStatus(@javax.annotation.Nullable final AndroidForWorkBindStatus value) {
-        this._bindStatus = value;
+        this.bindStatus = value;
     }
     /**
      * Sets the deviceOwnerManagementEnabled property value. Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
      * @param value Value to set for the deviceOwnerManagementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceOwnerManagementEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._deviceOwnerManagementEnabled = value;
+        this.deviceOwnerManagementEnabled = value;
     }
     /**
      * Sets the enrollmentTarget property value. Android for Work device management targeting type for the account
      * @param value Value to set for the enrollmentTarget property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentTarget(@javax.annotation.Nullable final AndroidForWorkEnrollmentTarget value) {
-        this._enrollmentTarget = value;
+        this.enrollmentTarget = value;
     }
     /**
      * Sets the lastAppSyncDateTime property value. Last completion time for app sync
      * @param value Value to set for the lastAppSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastAppSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastAppSyncDateTime = value;
+        this.lastAppSyncDateTime = value;
     }
     /**
      * Sets the lastAppSyncStatus property value. Sync status of the tenant with the Google EMM API
      * @param value Value to set for the lastAppSyncStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastAppSyncStatus(@javax.annotation.Nullable final AndroidForWorkSyncStatus value) {
-        this._lastAppSyncStatus = value;
+        this.lastAppSyncStatus = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modification time for Android for Work settings
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the ownerOrganizationName property value. Organization name used when onboarding Android for Work
      * @param value Value to set for the ownerOrganizationName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerOrganizationName(@javax.annotation.Nullable final String value) {
-        this._ownerOrganizationName = value;
+        this.ownerOrganizationName = value;
     }
     /**
      * Sets the ownerUserPrincipalName property value. Owner UPN that created the enterprise
      * @param value Value to set for the ownerUserPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._ownerUserPrincipalName = value;
+        this.ownerUserPrincipalName = value;
     }
     /**
      * Sets the targetGroupIds property value. Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
      * @param value Value to set for the targetGroupIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetGroupIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._targetGroupIds = value;
+        this.targetGroupIds = value;
     }
 }

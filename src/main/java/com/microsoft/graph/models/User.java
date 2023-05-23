@@ -5,305 +5,309 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class User extends DirectoryObject implements Parsable {
     /** A freeform text entry field for the user to describe themselves. Returned only on $select. */
-    private String _aboutMe;
+    private String aboutMe;
     /** true if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter (eq, ne, not, and in). */
-    private Boolean _accountEnabled;
+    private Boolean accountEnabled;
     /** The activities property */
-    private java.util.List<UserActivity> _activities;
+    private java.util.List<UserActivity> activities;
     /** Sets the age group of the user. Allowed values: null, Minor, NotAdult and Adult. Refer to the legal age group property definitions for further information. Supports $filter (eq, ne, not, and in). */
-    private String _ageGroup;
+    private String ageGroup;
     /** The user's terms of use acceptance statuses. Read-only. Nullable. */
-    private java.util.List<AgreementAcceptance> _agreementAcceptances;
+    private java.util.List<AgreementAcceptance> agreementAcceptances;
     /** The analytics property */
-    private UserAnalytics _analytics;
+    private UserAnalytics analytics;
     /** The appConsentRequestsForApproval property */
-    private java.util.List<AppConsentRequest> _appConsentRequestsForApproval;
+    private java.util.List<AppConsentRequest> appConsentRequestsForApproval;
     /** The appRoleAssignedResources property */
-    private java.util.List<ServicePrincipal> _appRoleAssignedResources;
+    private java.util.List<ServicePrincipal> appRoleAssignedResources;
     /** Represents the app roles a user has been granted for an application. Supports $expand. */
-    private java.util.List<AppRoleAssignment> _appRoleAssignments;
+    private java.util.List<AppRoleAssignment> appRoleAssignments;
     /** The approvals property */
-    private java.util.List<Approval> _approvals;
-    /** The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter (eq, not, and counting empty collections). */
-    private java.util.List<AssignedLicense> _assignedLicenses;
+    private java.util.List<Approval> approvals;
+    /** The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses. Not nullable. Supports $filter (eq, not, /$count eq 0, /$count ne 0). */
+    private java.util.List<AssignedLicense> assignedLicenses;
     /** The plans that are assigned to the user. Read-only. Not nullable.Supports $filter (eq and not). */
-    private java.util.List<AssignedPlan> _assignedPlans;
+    private java.util.List<AssignedPlan> assignedPlans;
     /** The authentication property */
-    private Authentication _authentication;
-    /** The authorizationInfo property */
-    private AuthorizationInfo _authorizationInfo;
+    private Authentication authentication;
+    /** Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith). */
+    private AuthorizationInfo authorizationInfo;
     /** The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select. */
-    private OffsetDateTime _birthday;
+    private OffsetDateTime birthday;
     /** The telephone numbers for the user. Only one number can be set for this property. Read-only for users synced from on-premises directory. Supports $filter (eq, not, ge, le, startsWith). */
-    private java.util.List<String> _businessPhones;
+    private java.util.List<String> businessPhones;
     /** The user's primary calendar. Read-only. */
-    private Calendar _calendar;
+    private Calendar calendar;
     /** The user's calendar groups. Read-only. Nullable. */
-    private java.util.List<CalendarGroup> _calendarGroups;
+    private java.util.List<CalendarGroup> calendarGroups;
     /** The user's calendars. Read-only. Nullable. */
-    private java.util.List<Calendar> _calendars;
+    private java.util.List<Calendar> calendars;
     /** The calendar view for the calendar. Read-only. Nullable. */
-    private java.util.List<Event> _calendarView;
+    private java.util.List<Event> calendarView;
     /** The chats property */
-    private java.util.List<Chat> _chats;
+    private java.util.List<Chat> chats;
     /** The city in which the user is located. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _city;
+    private String city;
     /** The cloudPCs property */
-    private java.util.List<CloudPC> _cloudPCs;
+    private java.util.List<CloudPC> cloudPCs;
     /** The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _companyName;
+    private String companyName;
     /** Sets whether consent has been obtained for minors. Allowed values: null, Granted, Denied and NotRequired. Refer to the legal age group property definitions for further information. Supports $filter (eq, ne, not, and in). */
-    private String _consentProvidedForMinor;
+    private String consentProvidedForMinor;
     /** The user's contacts folders. Read-only. Nullable. */
-    private java.util.List<ContactFolder> _contactFolders;
+    private java.util.List<ContactFolder> contactFolders;
     /** The user's contacts. Read-only. Nullable. */
-    private java.util.List<Contact> _contacts;
+    private java.util.List<Contact> contacts;
     /** The country/region in which the user is located; for example, US or UK. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _country;
-    /** The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, not , ge, le, in). */
-    private OffsetDateTime _createdDateTime;
+    private String country;
+    /** The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in). */
+    private OffsetDateTime createdDateTime;
     /** Directory objects that were created by the user. Read-only. Nullable. */
-    private java.util.List<DirectoryObject> _createdObjects;
+    private java.util.List<DirectoryObject> createdObjects;
     /** Indicates whether the user account was created through one of the following methods:  As a regular school or work account (null). As an external account (Invitation). As a local account for an Azure Active Directory B2C tenant (LocalAccount). Through self-service sign-up by an internal user using email verification (EmailVerified). Through self-service sign-up by an external user signing up through a link that is part of a user flow (SelfServiceSignUp).  Read-only.Supports $filter (eq, ne, not, and in). */
-    private String _creationType;
-    /** An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). */
-    private CustomSecurityAttributeValue _customSecurityAttributes;
+    private String creationType;
+    /** An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive. */
+    private CustomSecurityAttributeValue customSecurityAttributes;
     /** The name for the department in which the user works. Maximum length is 64 characters.Supports $filter (eq, ne, not , ge, le, in, and eq on null values). */
-    private String _department;
+    private String department;
     /** Get enrollment configurations targeted to the user */
-    private java.util.List<DeviceEnrollmentConfiguration> _deviceEnrollmentConfigurations;
+    private java.util.List<DeviceEnrollmentConfiguration> deviceEnrollmentConfigurations;
     /** The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000. */
-    private Integer _deviceEnrollmentLimit;
+    private Integer deviceEnrollmentLimit;
     /** The deviceKeys property */
-    private java.util.List<DeviceKey> _deviceKeys;
+    private java.util.List<DeviceKey> deviceKeys;
     /** The list of troubleshooting events for this user. */
-    private java.util.List<DeviceManagementTroubleshootingEvent> _deviceManagementTroubleshootingEvents;
+    private java.util.List<DeviceManagementTroubleshootingEvent> deviceManagementTroubleshootingEvents;
     /** The devices property */
-    private java.util.List<Device> _devices;
+    private java.util.List<Device> devices;
     /** The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand. */
-    private java.util.List<DirectoryObject> _directReports;
+    private java.util.List<DirectoryObject> directReports;
     /** The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderBy, and $search. */
-    private String _displayName;
+    private String displayName;
     /** The user's OneDrive. Read-only. */
-    private Drive _drive;
+    private Drive drive;
     /** A collection of drives available for this user. Read-only. */
-    private java.util.List<Drive> _drives;
+    private java.util.List<Drive> drives;
+    /** The employeeExperience property */
+    private EmployeeExperienceUser employeeExperience;
     /** The date and time when the user was hired or will start work in case of a future hire. Supports $filter (eq, ne, not , ge, le, in). */
-    private OffsetDateTime _employeeHireDate;
+    private OffsetDateTime employeeHireDate;
     /** The employee identifier assigned to the user by the organization. The maximum length is 16 characters.Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values). */
-    private String _employeeId;
-    /** The employeeLeaveDateTime property */
-    private OffsetDateTime _employeeLeaveDateTime;
+    private String employeeId;
+    /** The date and time when the user left or will leave the organization. To read this property, the calling app must be assigned the User-LifeCycleInfo.Read.All permission. To write this property, the calling app must be assigned the User.Read.All and User-LifeCycleInfo.ReadWrite.All permissions. To read this property in delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Administrator. To write this property in delegated scenarios, the admin needs the Global Administrator role. Supports $filter (eq, ne, not , ge, le, in). For more information, see Configure the employeeLeaveDateTime property for a user. */
+    private OffsetDateTime employeeLeaveDateTime;
     /** Represents organization data (e.g. division and costCenter) associated with a user. Supports $filter (eq, ne, not , ge, le, in). */
-    private EmployeeOrgData _employeeOrgData;
+    private EmployeeOrgData employeeOrgData;
     /** Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor. Supports $filter (eq, ne, not , ge, le, in, startsWith). */
-    private String _employeeType;
+    private String employeeType;
     /** The user's events. Default is to show events under the Default Calendar. Read-only. Nullable. */
-    private java.util.List<Event> _events;
+    private java.util.List<Event> events;
     /** The collection of open extensions defined for the user. Supports $expand. Nullable. */
-    private java.util.List<Extension> _extensions;
+    private java.util.List<Extension> extensions;
     /** For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Supports $filter (eq, ne, not , in). */
-    private String _externalUserState;
+    private String externalUserState;
     /** Shows the timestamp for the latest change to the externalUserState property. Supports $filter (eq, ne, not , in). */
-    private String _externalUserStateChangeDateTime;
+    private String externalUserStateChangeDateTime;
     /** The fax number of the user. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values). */
-    private String _faxNumber;
+    private String faxNumber;
     /** The followedSites property */
-    private java.util.List<Site> _followedSites;
+    private java.util.List<Site> followedSites;
     /** The given name (first name) of the user. Maximum length is 64 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values). */
-    private String _givenName;
+    private String givenName;
     /** The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs. */
-    private OffsetDateTime _hireDate;
+    private OffsetDateTime hireDate;
     /** Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName. */
-    private java.util.List<ObjectIdentity> _identities;
+    private java.util.List<ObjectIdentity> identities;
     /** The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Supports $filter (eq, not, ge, le, startsWith). */
-    private java.util.List<String> _imAddresses;
+    private java.util.List<String> imAddresses;
     /** Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance. */
-    private InferenceClassification _inferenceClassification;
+    private InferenceClassification inferenceClassification;
     /** Identifies the info segments assigned to the user.  Supports $filter (eq, not, ge, le, startsWith). */
-    private java.util.List<String> _infoCatalogs;
+    private java.util.List<String> infoCatalogs;
     /** The informationProtection property */
-    private InformationProtection _informationProtection;
+    private InformationProtection informationProtection;
     /** The insights property */
-    private ItemInsights _insights;
+    private ItemInsights insights;
     /** A list for the user to describe their interests. Returned only on $select. */
-    private java.util.List<String> _interests;
+    private java.util.List<String> interests;
+    /** Indicates whether the user is pending an exchange mailbox license assignment.  Read-only.  Supports $filter (eq where true only). */
+    private Boolean isLicenseReconciliationNeeded;
     /** The isManagementRestricted property */
-    private Boolean _isManagementRestricted;
-    /** Do not use – reserved for future use. */
-    private Boolean _isResourceAccount;
+    private Boolean isManagementRestricted;
+    /** Do not use  reserved for future use. */
+    private Boolean isResourceAccount;
     /** The user's job title. Maximum length is 128 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values). */
-    private String _jobTitle;
+    private String jobTitle;
     /** The joinedGroups property */
-    private java.util.List<Group> _joinedGroups;
+    private java.util.List<Group> joinedGroups;
     /** The Microsoft Teams teams that the user is a member of. Read-only. Nullable. */
-    private java.util.List<Team> _joinedTeams;
+    private java.util.List<Team> joinedTeams;
     /** The time when this Azure AD user last changed their password or when their password was created, , whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only on $select. */
-    private OffsetDateTime _lastPasswordChangeDateTime;
+    private OffsetDateTime lastPasswordChangeDateTime;
     /** Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult and Adult. Refer to the legal age group property definitions for further information. Returned only on $select. */
-    private String _legalAgeGroupClassification;
-    /** State of license assignments for this user. Read-only. Returned only on $select. */
-    private java.util.List<LicenseAssignmentState> _licenseAssignmentStates;
+    private String legalAgeGroupClassification;
+    /** State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select. */
+    private java.util.List<LicenseAssignmentState> licenseAssignmentStates;
     /** The licenseDetails property */
-    private java.util.List<LicenseDetails> _licenseDetails;
+    private java.util.List<LicenseDetails> licenseDetails;
     /** The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property cannot contain accent characters.  NOTE: We do not recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values). */
-    private String _mail;
+    private String mail;
     /** Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Returned only on $select. */
-    private MailboxSettings _mailboxSettings;
+    private MailboxSettings mailboxSettings;
     /** The user's mail folders. Read-only. Nullable. */
-    private java.util.List<MailFolder> _mailFolders;
+    private java.util.List<MailFolder> mailFolders;
     /** The mail alias for the user. This property must be specified when a user is created. Maximum length is 64 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _mailNickname;
+    private String mailNickname;
     /** Zero or more managed app registrations that belong to the user. */
-    private java.util.List<ManagedAppRegistration> _managedAppRegistrations;
+    private java.util.List<ManagedAppRegistration> managedAppRegistrations;
     /** The managed devices associated with the user. */
-    private java.util.List<ManagedDevice> _managedDevices;
+    private java.util.List<ManagedDevice> managedDevices;
     /** The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand. */
-    private DirectoryObject _manager;
+    private DirectoryObject manager;
     /** The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand. */
-    private java.util.List<DirectoryObject> _memberOf;
+    private java.util.List<DirectoryObject> memberOf;
     /** The messages in a mailbox or folder. Read-only. Nullable. */
-    private java.util.List<Message> _messages;
+    private java.util.List<Message> messages;
     /** The list of troubleshooting events for this user. */
-    private java.util.List<MobileAppIntentAndState> _mobileAppIntentAndStates;
+    private java.util.List<MobileAppIntentAndState> mobileAppIntentAndStates;
     /** The list of mobile app troubleshooting events for this user. */
-    private java.util.List<MobileAppTroubleshootingEvent> _mobileAppTroubleshootingEvents;
+    private java.util.List<MobileAppTroubleshootingEvent> mobileAppTroubleshootingEvents;
     /** The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _mobilePhone;
+    private String mobilePhone;
     /** The URL for the user's personal site. Returned only on $select. */
-    private String _mySite;
+    private String mySite;
     /** The notifications property */
-    private java.util.List<Notification> _notifications;
+    private java.util.List<Notification> notifications;
     /** The oauth2PermissionGrants property */
-    private java.util.List<OAuth2PermissionGrant> _oauth2PermissionGrants;
+    private java.util.List<OAuth2PermissionGrant> oauth2PermissionGrants;
     /** The office location in the user's place of business. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _officeLocation;
+    private String officeLocation;
     /** The onenote property */
-    private Onenote _onenote;
+    private Onenote onenote;
     /** The onlineMeetings property */
-    private java.util.List<OnlineMeeting> _onlineMeetings;
+    private java.util.List<OnlineMeeting> onlineMeetings;
     /** Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. */
-    private String _onPremisesDistinguishedName;
+    private String onPremisesDistinguishedName;
     /** Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. */
-    private String _onPremisesDomainName;
+    private String onPremisesDomainName;
     /** Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in). */
-    private OnPremisesExtensionAttributes _onPremisesExtensionAttributes;
+    private OnPremisesExtensionAttributes onPremisesExtensionAttributes;
     /** This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Note: The $ and _ characters cannot be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in). */
-    private String _onPremisesImmutableId;
+    private String onPremisesImmutableId;
     /** Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, in). */
-    private OffsetDateTime _onPremisesLastSyncDateTime;
+    private OffsetDateTime onPremisesLastSyncDateTime;
     /** Errors when using Microsoft synchronization product during provisioning.  Supports $filter (eq, not, ge, le). */
-    private java.util.List<OnPremisesProvisioningError> _onPremisesProvisioningErrors;
+    private java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
     /** Contains the on-premises sAMAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith). */
-    private String _onPremisesSamAccountName;
+    private String onPremisesSamAccountName;
     /** Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Supports $filter (eq including on null values). */
-    private String _onPremisesSecurityIdentifier;
+    private String onPremisesSecurityIdentifier;
     /** true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values). */
-    private Boolean _onPremisesSyncEnabled;
+    private Boolean onPremisesSyncEnabled;
     /** Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith). */
-    private String _onPremisesUserPrincipalName;
-    /** A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections). */
-    private java.util.List<String> _otherMails;
+    private String onPremisesUserPrincipalName;
+    /** A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0). */
+    private java.util.List<String> otherMails;
     /** Selective Outlook services available to the user. Read-only. Nullable. */
-    private OutlookUser _outlook;
+    private OutlookUser outlook;
     /** Devices that are owned by the user. Read-only. Nullable. Supports $expand. */
-    private java.util.List<DirectoryObject> _ownedDevices;
-    /** Directory objects that are owned by the user. Read-only. Nullable. Supports $expand. */
-    private java.util.List<DirectoryObject> _ownedObjects;
+    private java.util.List<DirectoryObject> ownedDevices;
+    /** Directory objects that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). */
+    private java.util.List<DirectoryObject> ownedObjects;
     /** Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. For more information on the default password policies, see Azure AD pasword policies. Supports $filter (ne, not, and eq on null values). */
-    private String _passwordPolicies;
-    /** Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon. Supports $filter (eq, ne, not, in, and eq on null values). */
-    private PasswordProfile _passwordProfile;
+    private String passwordPolicies;
+    /** Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Supports $filter (eq, ne, not, in, and eq on null values). */
+    private PasswordProfile passwordProfile;
     /** A list for the user to enumerate their past projects. Returned only on $select. */
-    private java.util.List<String> _pastProjects;
+    private java.util.List<String> pastProjects;
     /** Navigation property to get list of access reviews pending approval by reviewer. */
-    private java.util.List<AccessReviewInstance> _pendingAccessReviewInstances;
+    private java.util.List<AccessReviewInstance> pendingAccessReviewInstances;
     /** Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks. */
-    private java.util.List<Person> _people;
+    private java.util.List<Person> people;
     /** The user's profile photo. Read-only. */
-    private ProfilePhoto _photo;
+    private ProfilePhoto photo;
     /** The photos property */
-    private java.util.List<ProfilePhoto> _photos;
+    private java.util.List<ProfilePhoto> photos;
     /** Selective Planner services available to the user. Read-only. Nullable. */
-    private PlannerUser _planner;
+    private PlannerUser planner;
     /** The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _postalCode;
+    private String postalCode;
     /** The preferred data location for the user. For more information, see OneDrive Online Multi-Geo. */
-    private String _preferredDataLocation;
+    private String preferredDataLocation;
     /** The preferred language for the user. Should follow ISO 639-1 Code; for example en-US. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _preferredLanguage;
+    private String preferredLanguage;
     /** The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select. */
-    private String _preferredName;
+    private String preferredName;
     /** The presence property */
-    private Presence _presence;
+    private Presence presence;
     /** The print property */
-    private UserPrint _print;
+    private UserPrint print;
     /** Represents properties that are descriptive of a user in a tenant. */
-    private Profile _profile;
+    private Profile profile;
     /** The plans that are provisioned for the user. Read-only. Not nullable. Supports $filter (eq, not, ge, le). */
-    private java.util.List<ProvisionedPlan> _provisionedPlans;
-    /** For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections). */
-    private java.util.List<String> _proxyAddresses;
+    private java.util.List<ProvisionedPlan> provisionedPlans;
+    /** For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0). */
+    private java.util.List<String> proxyAddresses;
     /** Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use invalidateAllRefreshTokens to reset. */
-    private OffsetDateTime _refreshTokensValidFromDateTime;
+    private OffsetDateTime refreshTokensValidFromDateTime;
     /** Devices that are registered for the user. Read-only. Nullable. Supports $expand. */
-    private java.util.List<DirectoryObject> _registeredDevices;
+    private java.util.List<DirectoryObject> registeredDevices;
     /** A list for the user to enumerate their responsibilities. Returned only on $select. */
-    private java.util.List<String> _responsibilities;
+    private java.util.List<String> responsibilities;
     /** A list for the user to enumerate the schools they have attended. Returned only on $select. */
-    private java.util.List<String> _schools;
+    private java.util.List<String> schools;
     /** The scoped-role administrative unit memberships for this user. Read-only. Nullable. */
-    private java.util.List<ScopedRoleMembership> _scopedRoleMemberOf;
+    private java.util.List<ScopedRoleMembership> scopedRoleMemberOf;
     /** The security property */
-    private Security _security;
+    private Security security;
     /** Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith). */
-    private String _securityIdentifier;
+    private String securityIdentifier;
+    /** Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance). */
+    private java.util.List<ServiceProvisioningError> serviceProvisioningErrors;
     /** The settings property */
-    private UserSettings _settings;
+    private UserSettings settings;
     /** Do not use in Microsoft Graph. Manage this property through the Microsoft 365 admin center instead. Represents whether the user should be included in the Outlook global address list. See Known issue. */
-    private Boolean _showInAddressList;
-    /** Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but, not with any other filterable properties. Note: Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.Note: There's a known issue with retrieving this property.This property is not returned for a user who has never signed in or last signed in before April 2020. */
-    private SignInActivity _signInActivity;
+    private Boolean showInAddressList;
+    /** Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note:  Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.This property is not returned for a user who has never signed in or last signed in before April 2020. */
+    private SignInActivity signInActivity;
     /** Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset. */
-    private OffsetDateTime _signInSessionsValidFromDateTime;
+    private OffsetDateTime signInSessionsValidFromDateTime;
     /** A list for the user to enumerate their skills. Returned only on $select. */
-    private java.util.List<String> _skills;
+    private java.util.List<String> skills;
     /** The state or province in the user's address. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _state;
+    private String state;
     /** The street address of the user's place of business. Maximum length is 1024 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _streetAddress;
+    private String streetAddress;
     /** The user's surname (family name or last name). Maximum length is 64 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _surname;
-    /** The tasks property */
-    private Tasks _tasks;
+    private String surname;
     /** A container for Microsoft Teams features available for the user. Read-only. Nullable. */
-    private UserTeamwork _teamwork;
+    private UserTeamwork teamwork;
     /** Represents the To Do services available to a user. */
-    private Todo _todo;
+    private Todo todo;
     /** The groups, including nested groups, and directory roles that a user is a member of. Nullable. */
-    private java.util.List<DirectoryObject> _transitiveMemberOf;
+    private java.util.List<DirectoryObject> transitiveMemberOf;
     /** The transitive reports for a user. Read-only. */
-    private java.util.List<DirectoryObject> _transitiveReports;
+    private java.util.List<DirectoryObject> transitiveReports;
     /** A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
-    private String _usageLocation;
+    private String usageLocation;
     /** Represents the usage rights a user has been granted. */
-    private java.util.List<UsageRight> _usageRights;
+    private java.util.List<UsageRight> usageRights;
     /** The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property cannot contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderBy. */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /** A String value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory? */
-    private String _userType;
+    private String userType;
     /** Zero or more WIP device registrations that belong to the user. */
-    private java.util.List<WindowsInformationProtectionDeviceRegistration> _windowsInformationProtectionDeviceRegistrations;
+    private java.util.List<WindowsInformationProtectionDeviceRegistration> windowsInformationProtectionDeviceRegistrations;
     /**
-     * Instantiates a new User and sets the default values.
+     * Instantiates a new user and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public User() {
         super();
         this.setOdataType("#microsoft.graph.user");
@@ -311,7 +315,7 @@ public class User extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a User
+     * @return a user
      */
     @javax.annotation.Nonnull
     public static User createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -324,7 +328,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAboutMe() {
-        return this._aboutMe;
+        return this.aboutMe;
     }
     /**
      * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter (eq, ne, not, and in).
@@ -332,7 +336,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAccountEnabled() {
-        return this._accountEnabled;
+        return this.accountEnabled;
     }
     /**
      * Gets the activities property value. The activities property
@@ -340,7 +344,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UserActivity> getActivities() {
-        return this._activities;
+        return this.activities;
     }
     /**
      * Gets the ageGroup property value. Sets the age group of the user. Allowed values: null, Minor, NotAdult and Adult. Refer to the legal age group property definitions for further information. Supports $filter (eq, ne, not, and in).
@@ -348,7 +352,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAgeGroup() {
-        return this._ageGroup;
+        return this.ageGroup;
     }
     /**
      * Gets the agreementAcceptances property value. The user's terms of use acceptance statuses. Read-only. Nullable.
@@ -356,7 +360,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AgreementAcceptance> getAgreementAcceptances() {
-        return this._agreementAcceptances;
+        return this.agreementAcceptances;
     }
     /**
      * Gets the analytics property value. The analytics property
@@ -364,7 +368,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public UserAnalytics getAnalytics() {
-        return this._analytics;
+        return this.analytics;
     }
     /**
      * Gets the appConsentRequestsForApproval property value. The appConsentRequestsForApproval property
@@ -372,7 +376,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppConsentRequest> getAppConsentRequestsForApproval() {
-        return this._appConsentRequestsForApproval;
+        return this.appConsentRequestsForApproval;
     }
     /**
      * Gets the appRoleAssignedResources property value. The appRoleAssignedResources property
@@ -380,7 +384,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ServicePrincipal> getAppRoleAssignedResources() {
-        return this._appRoleAssignedResources;
+        return this.appRoleAssignedResources;
     }
     /**
      * Gets the appRoleAssignments property value. Represents the app roles a user has been granted for an application. Supports $expand.
@@ -388,7 +392,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppRoleAssignment> getAppRoleAssignments() {
-        return this._appRoleAssignments;
+        return this.appRoleAssignments;
     }
     /**
      * Gets the approvals property value. The approvals property
@@ -396,15 +400,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Approval> getApprovals() {
-        return this._approvals;
+        return this.approvals;
     }
     /**
-     * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter (eq, not, and counting empty collections).
+     * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses. Not nullable. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
      * @return a assignedLicense
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedLicense> getAssignedLicenses() {
-        return this._assignedLicenses;
+        return this.assignedLicenses;
     }
     /**
      * Gets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable.Supports $filter (eq and not).
@@ -412,7 +416,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
-        return this._assignedPlans;
+        return this.assignedPlans;
     }
     /**
      * Gets the authentication property value. The authentication property
@@ -420,15 +424,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Authentication getAuthentication() {
-        return this._authentication;
+        return this.authentication;
     }
     /**
-     * Gets the authorizationInfo property value. The authorizationInfo property
+     * Gets the authorizationInfo property value. Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
      * @return a authorizationInfo
      */
     @javax.annotation.Nullable
     public AuthorizationInfo getAuthorizationInfo() {
-        return this._authorizationInfo;
+        return this.authorizationInfo;
     }
     /**
      * Gets the birthday property value. The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
@@ -436,7 +440,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getBirthday() {
-        return this._birthday;
+        return this.birthday;
     }
     /**
      * Gets the businessPhones property value. The telephone numbers for the user. Only one number can be set for this property. Read-only for users synced from on-premises directory. Supports $filter (eq, not, ge, le, startsWith).
@@ -444,7 +448,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getBusinessPhones() {
-        return this._businessPhones;
+        return this.businessPhones;
     }
     /**
      * Gets the calendar property value. The user's primary calendar. Read-only.
@@ -452,7 +456,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Calendar getCalendar() {
-        return this._calendar;
+        return this.calendar;
     }
     /**
      * Gets the calendarGroups property value. The user's calendar groups. Read-only. Nullable.
@@ -460,7 +464,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CalendarGroup> getCalendarGroups() {
-        return this._calendarGroups;
+        return this.calendarGroups;
     }
     /**
      * Gets the calendars property value. The user's calendars. Read-only. Nullable.
@@ -468,7 +472,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Calendar> getCalendars() {
-        return this._calendars;
+        return this.calendars;
     }
     /**
      * Gets the calendarView property value. The calendar view for the calendar. Read-only. Nullable.
@@ -476,7 +480,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Event> getCalendarView() {
-        return this._calendarView;
+        return this.calendarView;
     }
     /**
      * Gets the chats property value. The chats property
@@ -484,7 +488,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Chat> getChats() {
-        return this._chats;
+        return this.chats;
     }
     /**
      * Gets the city property value. The city in which the user is located. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -492,7 +496,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCity() {
-        return this._city;
+        return this.city;
     }
     /**
      * Gets the cloudPCs property value. The cloudPCs property
@@ -500,7 +504,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPC> getCloudPCs() {
-        return this._cloudPCs;
+        return this.cloudPCs;
     }
     /**
      * Gets the companyName property value. The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -508,7 +512,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCompanyName() {
-        return this._companyName;
+        return this.companyName;
     }
     /**
      * Gets the consentProvidedForMinor property value. Sets whether consent has been obtained for minors. Allowed values: null, Granted, Denied and NotRequired. Refer to the legal age group property definitions for further information. Supports $filter (eq, ne, not, and in).
@@ -516,7 +520,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getConsentProvidedForMinor() {
-        return this._consentProvidedForMinor;
+        return this.consentProvidedForMinor;
     }
     /**
      * Gets the contactFolders property value. The user's contacts folders. Read-only. Nullable.
@@ -524,7 +528,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ContactFolder> getContactFolders() {
-        return this._contactFolders;
+        return this.contactFolders;
     }
     /**
      * Gets the contacts property value. The user's contacts. Read-only. Nullable.
@@ -532,7 +536,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Contact> getContacts() {
-        return this._contacts;
+        return this.contacts;
     }
     /**
      * Gets the country property value. The country/region in which the user is located; for example, US or UK. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -540,15 +544,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCountry() {
-        return this._country;
+        return this.country;
     }
     /**
-     * Gets the createdDateTime property value. The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, not , ge, le, in).
+     * Gets the createdDateTime property value. The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in).
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the createdObjects property value. Directory objects that were created by the user. Read-only. Nullable.
@@ -556,7 +560,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getCreatedObjects() {
-        return this._createdObjects;
+        return this.createdObjects;
     }
     /**
      * Gets the creationType property value. Indicates whether the user account was created through one of the following methods:  As a regular school or work account (null). As an external account (Invitation). As a local account for an Azure Active Directory B2C tenant (LocalAccount). Through self-service sign-up by an internal user using email verification (EmailVerified). Through self-service sign-up by an external user signing up through a link that is part of a user flow (SelfServiceSignUp).  Read-only.Supports $filter (eq, ne, not, and in).
@@ -564,15 +568,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCreationType() {
-        return this._creationType;
+        return this.creationType;
     }
     /**
-     * Gets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith).
+     * Gets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
      * @return a customSecurityAttributeValue
      */
     @javax.annotation.Nullable
     public CustomSecurityAttributeValue getCustomSecurityAttributes() {
-        return this._customSecurityAttributes;
+        return this.customSecurityAttributes;
     }
     /**
      * Gets the department property value. The name for the department in which the user works. Maximum length is 64 characters.Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
@@ -580,7 +584,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDepartment() {
-        return this._department;
+        return this.department;
     }
     /**
      * Gets the deviceEnrollmentConfigurations property value. Get enrollment configurations targeted to the user
@@ -588,7 +592,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceEnrollmentConfiguration> getDeviceEnrollmentConfigurations() {
-        return this._deviceEnrollmentConfigurations;
+        return this.deviceEnrollmentConfigurations;
     }
     /**
      * Gets the deviceEnrollmentLimit property value. The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
@@ -596,7 +600,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getDeviceEnrollmentLimit() {
-        return this._deviceEnrollmentLimit;
+        return this.deviceEnrollmentLimit;
     }
     /**
      * Gets the deviceKeys property value. The deviceKeys property
@@ -604,7 +608,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceKey> getDeviceKeys() {
-        return this._deviceKeys;
+        return this.deviceKeys;
     }
     /**
      * Gets the deviceManagementTroubleshootingEvents property value. The list of troubleshooting events for this user.
@@ -612,7 +616,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementTroubleshootingEvent> getDeviceManagementTroubleshootingEvents() {
-        return this._deviceManagementTroubleshootingEvents;
+        return this.deviceManagementTroubleshootingEvents;
     }
     /**
      * Gets the devices property value. The devices property
@@ -620,7 +624,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Device> getDevices() {
-        return this._devices;
+        return this.devices;
     }
     /**
      * Gets the directReports property value. The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
@@ -628,7 +632,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getDirectReports() {
-        return this._directReports;
+        return this.directReports;
     }
     /**
      * Gets the displayName property value. The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderBy, and $search.
@@ -636,7 +640,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the drive property value. The user's OneDrive. Read-only.
@@ -644,7 +648,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Drive getDrive() {
-        return this._drive;
+        return this.drive;
     }
     /**
      * Gets the drives property value. A collection of drives available for this user. Read-only.
@@ -652,7 +656,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Drive> getDrives() {
-        return this._drives;
+        return this.drives;
+    }
+    /**
+     * Gets the employeeExperience property value. The employeeExperience property
+     * @return a employeeExperienceUser
+     */
+    @javax.annotation.Nullable
+    public EmployeeExperienceUser getEmployeeExperience() {
+        return this.employeeExperience;
     }
     /**
      * Gets the employeeHireDate property value. The date and time when the user was hired or will start work in case of a future hire. Supports $filter (eq, ne, not , ge, le, in).
@@ -660,7 +672,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEmployeeHireDate() {
-        return this._employeeHireDate;
+        return this.employeeHireDate;
     }
     /**
      * Gets the employeeId property value. The employee identifier assigned to the user by the organization. The maximum length is 16 characters.Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
@@ -668,15 +680,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmployeeId() {
-        return this._employeeId;
+        return this.employeeId;
     }
     /**
-     * Gets the employeeLeaveDateTime property value. The employeeLeaveDateTime property
+     * Gets the employeeLeaveDateTime property value. The date and time when the user left or will leave the organization. To read this property, the calling app must be assigned the User-LifeCycleInfo.Read.All permission. To write this property, the calling app must be assigned the User.Read.All and User-LifeCycleInfo.ReadWrite.All permissions. To read this property in delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Administrator. To write this property in delegated scenarios, the admin needs the Global Administrator role. Supports $filter (eq, ne, not , ge, le, in). For more information, see Configure the employeeLeaveDateTime property for a user.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEmployeeLeaveDateTime() {
-        return this._employeeLeaveDateTime;
+        return this.employeeLeaveDateTime;
     }
     /**
      * Gets the employeeOrgData property value. Represents organization data (e.g. division and costCenter) associated with a user. Supports $filter (eq, ne, not , ge, le, in).
@@ -684,7 +696,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public EmployeeOrgData getEmployeeOrgData() {
-        return this._employeeOrgData;
+        return this.employeeOrgData;
     }
     /**
      * Gets the employeeType property value. Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor. Supports $filter (eq, ne, not , ge, le, in, startsWith).
@@ -692,7 +704,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmployeeType() {
-        return this._employeeType;
+        return this.employeeType;
     }
     /**
      * Gets the events property value. The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
@@ -700,7 +712,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Event> getEvents() {
-        return this._events;
+        return this.events;
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the user. Supports $expand. Nullable.
@@ -708,7 +720,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this._extensions;
+        return this.extensions;
     }
     /**
      * Gets the externalUserState property value. For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Supports $filter (eq, ne, not , in).
@@ -716,7 +728,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalUserState() {
-        return this._externalUserState;
+        return this.externalUserState;
     }
     /**
      * Gets the externalUserStateChangeDateTime property value. Shows the timestamp for the latest change to the externalUserState property. Supports $filter (eq, ne, not , in).
@@ -724,7 +736,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalUserStateChangeDateTime() {
-        return this._externalUserStateChangeDateTime;
+        return this.externalUserStateChangeDateTime;
     }
     /**
      * Gets the faxNumber property value. The fax number of the user. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
@@ -732,162 +744,163 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFaxNumber() {
-        return this._faxNumber;
+        return this.faxNumber;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final User currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("aboutMe", (n) -> { currentObject.setAboutMe(n.getStringValue()); });
-            this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
-            this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(UserActivity::createFromDiscriminatorValue)); });
-            this.put("ageGroup", (n) -> { currentObject.setAgeGroup(n.getStringValue()); });
-            this.put("agreementAcceptances", (n) -> { currentObject.setAgreementAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
-            this.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(UserAnalytics::createFromDiscriminatorValue)); });
-            this.put("appConsentRequestsForApproval", (n) -> { currentObject.setAppConsentRequestsForApproval(n.getCollectionOfObjectValues(AppConsentRequest::createFromDiscriminatorValue)); });
-            this.put("appRoleAssignedResources", (n) -> { currentObject.setAppRoleAssignedResources(n.getCollectionOfObjectValues(ServicePrincipal::createFromDiscriminatorValue)); });
-            this.put("appRoleAssignments", (n) -> { currentObject.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
-            this.put("approvals", (n) -> { currentObject.setApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
-            this.put("assignedLicenses", (n) -> { currentObject.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
-            this.put("assignedPlans", (n) -> { currentObject.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
-            this.put("authentication", (n) -> { currentObject.setAuthentication(n.getObjectValue(Authentication::createFromDiscriminatorValue)); });
-            this.put("authorizationInfo", (n) -> { currentObject.setAuthorizationInfo(n.getObjectValue(AuthorizationInfo::createFromDiscriminatorValue)); });
-            this.put("birthday", (n) -> { currentObject.setBirthday(n.getOffsetDateTimeValue()); });
-            this.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("calendar", (n) -> { currentObject.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
-            this.put("calendarGroups", (n) -> { currentObject.setCalendarGroups(n.getCollectionOfObjectValues(CalendarGroup::createFromDiscriminatorValue)); });
-            this.put("calendars", (n) -> { currentObject.setCalendars(n.getCollectionOfObjectValues(Calendar::createFromDiscriminatorValue)); });
-            this.put("calendarView", (n) -> { currentObject.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("chats", (n) -> { currentObject.setChats(n.getCollectionOfObjectValues(Chat::createFromDiscriminatorValue)); });
-            this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
-            this.put("cloudPCs", (n) -> { currentObject.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
-            this.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
-            this.put("consentProvidedForMinor", (n) -> { currentObject.setConsentProvidedForMinor(n.getStringValue()); });
-            this.put("contactFolders", (n) -> { currentObject.setContactFolders(n.getCollectionOfObjectValues(ContactFolder::createFromDiscriminatorValue)); });
-            this.put("contacts", (n) -> { currentObject.setContacts(n.getCollectionOfObjectValues(Contact::createFromDiscriminatorValue)); });
-            this.put("country", (n) -> { currentObject.setCountry(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdObjects", (n) -> { currentObject.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("creationType", (n) -> { currentObject.setCreationType(n.getStringValue()); });
-            this.put("customSecurityAttributes", (n) -> { currentObject.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
-            this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
-            this.put("deviceEnrollmentConfigurations", (n) -> { currentObject.setDeviceEnrollmentConfigurations(n.getCollectionOfObjectValues(DeviceEnrollmentConfiguration::createFromDiscriminatorValue)); });
-            this.put("deviceEnrollmentLimit", (n) -> { currentObject.setDeviceEnrollmentLimit(n.getIntegerValue()); });
-            this.put("deviceKeys", (n) -> { currentObject.setDeviceKeys(n.getCollectionOfObjectValues(DeviceKey::createFromDiscriminatorValue)); });
-            this.put("deviceManagementTroubleshootingEvents", (n) -> { currentObject.setDeviceManagementTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
-            this.put("devices", (n) -> { currentObject.setDevices(n.getCollectionOfObjectValues(Device::createFromDiscriminatorValue)); });
-            this.put("directReports", (n) -> { currentObject.setDirectReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("drive", (n) -> { currentObject.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
-            this.put("drives", (n) -> { currentObject.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
-            this.put("employeeHireDate", (n) -> { currentObject.setEmployeeHireDate(n.getOffsetDateTimeValue()); });
-            this.put("employeeId", (n) -> { currentObject.setEmployeeId(n.getStringValue()); });
-            this.put("employeeLeaveDateTime", (n) -> { currentObject.setEmployeeLeaveDateTime(n.getOffsetDateTimeValue()); });
-            this.put("employeeOrgData", (n) -> { currentObject.setEmployeeOrgData(n.getObjectValue(EmployeeOrgData::createFromDiscriminatorValue)); });
-            this.put("employeeType", (n) -> { currentObject.setEmployeeType(n.getStringValue()); });
-            this.put("events", (n) -> { currentObject.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("externalUserState", (n) -> { currentObject.setExternalUserState(n.getStringValue()); });
-            this.put("externalUserStateChangeDateTime", (n) -> { currentObject.setExternalUserStateChangeDateTime(n.getStringValue()); });
-            this.put("faxNumber", (n) -> { currentObject.setFaxNumber(n.getStringValue()); });
-            this.put("followedSites", (n) -> { currentObject.setFollowedSites(n.getCollectionOfObjectValues(Site::createFromDiscriminatorValue)); });
-            this.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
-            this.put("hireDate", (n) -> { currentObject.setHireDate(n.getOffsetDateTimeValue()); });
-            this.put("identities", (n) -> { currentObject.setIdentities(n.getCollectionOfObjectValues(ObjectIdentity::createFromDiscriminatorValue)); });
-            this.put("imAddresses", (n) -> { currentObject.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("inferenceClassification", (n) -> { currentObject.setInferenceClassification(n.getObjectValue(InferenceClassification::createFromDiscriminatorValue)); });
-            this.put("infoCatalogs", (n) -> { currentObject.setInfoCatalogs(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("informationProtection", (n) -> { currentObject.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
-            this.put("insights", (n) -> { currentObject.setInsights(n.getObjectValue(ItemInsights::createFromDiscriminatorValue)); });
-            this.put("interests", (n) -> { currentObject.setInterests(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isManagementRestricted", (n) -> { currentObject.setIsManagementRestricted(n.getBooleanValue()); });
-            this.put("isResourceAccount", (n) -> { currentObject.setIsResourceAccount(n.getBooleanValue()); });
-            this.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
-            this.put("joinedGroups", (n) -> { currentObject.setJoinedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
-            this.put("joinedTeams", (n) -> { currentObject.setJoinedTeams(n.getCollectionOfObjectValues(Team::createFromDiscriminatorValue)); });
-            this.put("lastPasswordChangeDateTime", (n) -> { currentObject.setLastPasswordChangeDateTime(n.getOffsetDateTimeValue()); });
-            this.put("legalAgeGroupClassification", (n) -> { currentObject.setLegalAgeGroupClassification(n.getStringValue()); });
-            this.put("licenseAssignmentStates", (n) -> { currentObject.setLicenseAssignmentStates(n.getCollectionOfObjectValues(LicenseAssignmentState::createFromDiscriminatorValue)); });
-            this.put("licenseDetails", (n) -> { currentObject.setLicenseDetails(n.getCollectionOfObjectValues(LicenseDetails::createFromDiscriminatorValue)); });
-            this.put("mail", (n) -> { currentObject.setMail(n.getStringValue()); });
-            this.put("mailboxSettings", (n) -> { currentObject.setMailboxSettings(n.getObjectValue(MailboxSettings::createFromDiscriminatorValue)); });
-            this.put("mailFolders", (n) -> { currentObject.setMailFolders(n.getCollectionOfObjectValues(MailFolder::createFromDiscriminatorValue)); });
-            this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("managedAppRegistrations", (n) -> { currentObject.setManagedAppRegistrations(n.getCollectionOfObjectValues(ManagedAppRegistration::createFromDiscriminatorValue)); });
-            this.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
-            this.put("manager", (n) -> { currentObject.setManager(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(Message::createFromDiscriminatorValue)); });
-            this.put("mobileAppIntentAndStates", (n) -> { currentObject.setMobileAppIntentAndStates(n.getCollectionOfObjectValues(MobileAppIntentAndState::createFromDiscriminatorValue)); });
-            this.put("mobileAppTroubleshootingEvents", (n) -> { currentObject.setMobileAppTroubleshootingEvents(n.getCollectionOfObjectValues(MobileAppTroubleshootingEvent::createFromDiscriminatorValue)); });
-            this.put("mobilePhone", (n) -> { currentObject.setMobilePhone(n.getStringValue()); });
-            this.put("mySite", (n) -> { currentObject.setMySite(n.getStringValue()); });
-            this.put("notifications", (n) -> { currentObject.setNotifications(n.getCollectionOfObjectValues(Notification::createFromDiscriminatorValue)); });
-            this.put("oauth2PermissionGrants", (n) -> { currentObject.setOauth2PermissionGrants(n.getCollectionOfObjectValues(OAuth2PermissionGrant::createFromDiscriminatorValue)); });
-            this.put("officeLocation", (n) -> { currentObject.setOfficeLocation(n.getStringValue()); });
-            this.put("onenote", (n) -> { currentObject.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
-            this.put("onlineMeetings", (n) -> { currentObject.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
-            this.put("onPremisesDistinguishedName", (n) -> { currentObject.setOnPremisesDistinguishedName(n.getStringValue()); });
-            this.put("onPremisesDomainName", (n) -> { currentObject.setOnPremisesDomainName(n.getStringValue()); });
-            this.put("onPremisesExtensionAttributes", (n) -> { currentObject.setOnPremisesExtensionAttributes(n.getObjectValue(OnPremisesExtensionAttributes::createFromDiscriminatorValue)); });
-            this.put("onPremisesImmutableId", (n) -> { currentObject.setOnPremisesImmutableId(n.getStringValue()); });
-            this.put("onPremisesLastSyncDateTime", (n) -> { currentObject.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("onPremisesProvisioningErrors", (n) -> { currentObject.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
-            this.put("onPremisesSamAccountName", (n) -> { currentObject.setOnPremisesSamAccountName(n.getStringValue()); });
-            this.put("onPremisesSecurityIdentifier", (n) -> { currentObject.setOnPremisesSecurityIdentifier(n.getStringValue()); });
-            this.put("onPremisesSyncEnabled", (n) -> { currentObject.setOnPremisesSyncEnabled(n.getBooleanValue()); });
-            this.put("onPremisesUserPrincipalName", (n) -> { currentObject.setOnPremisesUserPrincipalName(n.getStringValue()); });
-            this.put("otherMails", (n) -> { currentObject.setOtherMails(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("outlook", (n) -> { currentObject.setOutlook(n.getObjectValue(OutlookUser::createFromDiscriminatorValue)); });
-            this.put("ownedDevices", (n) -> { currentObject.setOwnedDevices(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("ownedObjects", (n) -> { currentObject.setOwnedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("passwordPolicies", (n) -> { currentObject.setPasswordPolicies(n.getStringValue()); });
-            this.put("passwordProfile", (n) -> { currentObject.setPasswordProfile(n.getObjectValue(PasswordProfile::createFromDiscriminatorValue)); });
-            this.put("pastProjects", (n) -> { currentObject.setPastProjects(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("pendingAccessReviewInstances", (n) -> { currentObject.setPendingAccessReviewInstances(n.getCollectionOfObjectValues(AccessReviewInstance::createFromDiscriminatorValue)); });
-            this.put("people", (n) -> { currentObject.setPeople(n.getCollectionOfObjectValues(Person::createFromDiscriminatorValue)); });
-            this.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
-            this.put("photos", (n) -> { currentObject.setPhotos(n.getCollectionOfObjectValues(ProfilePhoto::createFromDiscriminatorValue)); });
-            this.put("planner", (n) -> { currentObject.setPlanner(n.getObjectValue(PlannerUser::createFromDiscriminatorValue)); });
-            this.put("postalCode", (n) -> { currentObject.setPostalCode(n.getStringValue()); });
-            this.put("preferredDataLocation", (n) -> { currentObject.setPreferredDataLocation(n.getStringValue()); });
-            this.put("preferredLanguage", (n) -> { currentObject.setPreferredLanguage(n.getStringValue()); });
-            this.put("preferredName", (n) -> { currentObject.setPreferredName(n.getStringValue()); });
-            this.put("presence", (n) -> { currentObject.setPresence(n.getObjectValue(Presence::createFromDiscriminatorValue)); });
-            this.put("print", (n) -> { currentObject.setPrint(n.getObjectValue(UserPrint::createFromDiscriminatorValue)); });
-            this.put("profile", (n) -> { currentObject.setProfile(n.getObjectValue(Profile::createFromDiscriminatorValue)); });
-            this.put("provisionedPlans", (n) -> { currentObject.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
-            this.put("proxyAddresses", (n) -> { currentObject.setProxyAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("refreshTokensValidFromDateTime", (n) -> { currentObject.setRefreshTokensValidFromDateTime(n.getOffsetDateTimeValue()); });
-            this.put("registeredDevices", (n) -> { currentObject.setRegisteredDevices(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("responsibilities", (n) -> { currentObject.setResponsibilities(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("schools", (n) -> { currentObject.setSchools(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("scopedRoleMemberOf", (n) -> { currentObject.setScopedRoleMemberOf(n.getCollectionOfObjectValues(ScopedRoleMembership::createFromDiscriminatorValue)); });
-            this.put("security", (n) -> { currentObject.setSecurity(n.getObjectValue(Security::createFromDiscriminatorValue)); });
-            this.put("securityIdentifier", (n) -> { currentObject.setSecurityIdentifier(n.getStringValue()); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(UserSettings::createFromDiscriminatorValue)); });
-            this.put("showInAddressList", (n) -> { currentObject.setShowInAddressList(n.getBooleanValue()); });
-            this.put("signInActivity", (n) -> { currentObject.setSignInActivity(n.getObjectValue(SignInActivity::createFromDiscriminatorValue)); });
-            this.put("signInSessionsValidFromDateTime", (n) -> { currentObject.setSignInSessionsValidFromDateTime(n.getOffsetDateTimeValue()); });
-            this.put("skills", (n) -> { currentObject.setSkills(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-            this.put("streetAddress", (n) -> { currentObject.setStreetAddress(n.getStringValue()); });
-            this.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getObjectValue(Tasks::createFromDiscriminatorValue)); });
-            this.put("teamwork", (n) -> { currentObject.setTeamwork(n.getObjectValue(UserTeamwork::createFromDiscriminatorValue)); });
-            this.put("todo", (n) -> { currentObject.setTodo(n.getObjectValue(Todo::createFromDiscriminatorValue)); });
-            this.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("transitiveReports", (n) -> { currentObject.setTransitiveReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("usageLocation", (n) -> { currentObject.setUsageLocation(n.getStringValue()); });
-            this.put("usageRights", (n) -> { currentObject.setUsageRights(n.getCollectionOfObjectValues(UsageRight::createFromDiscriminatorValue)); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("userType", (n) -> { currentObject.setUserType(n.getStringValue()); });
-            this.put("windowsInformationProtectionDeviceRegistrations", (n) -> { currentObject.setWindowsInformationProtectionDeviceRegistrations(n.getCollectionOfObjectValues(WindowsInformationProtectionDeviceRegistration::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("aboutMe", (n) -> { this.setAboutMe(n.getStringValue()); });
+        deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
+        deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(UserActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("ageGroup", (n) -> { this.setAgeGroup(n.getStringValue()); });
+        deserializerMap.put("agreementAcceptances", (n) -> { this.setAgreementAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
+        deserializerMap.put("analytics", (n) -> { this.setAnalytics(n.getObjectValue(UserAnalytics::createFromDiscriminatorValue)); });
+        deserializerMap.put("appConsentRequestsForApproval", (n) -> { this.setAppConsentRequestsForApproval(n.getCollectionOfObjectValues(AppConsentRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("appRoleAssignedResources", (n) -> { this.setAppRoleAssignedResources(n.getCollectionOfObjectValues(ServicePrincipal::createFromDiscriminatorValue)); });
+        deserializerMap.put("appRoleAssignments", (n) -> { this.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("approvals", (n) -> { this.setApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedLicenses", (n) -> { this.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedPlans", (n) -> { this.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("authentication", (n) -> { this.setAuthentication(n.getObjectValue(Authentication::createFromDiscriminatorValue)); });
+        deserializerMap.put("authorizationInfo", (n) -> { this.setAuthorizationInfo(n.getObjectValue(AuthorizationInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("birthday", (n) -> { this.setBirthday(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("businessPhones", (n) -> { this.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("calendar", (n) -> { this.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
+        deserializerMap.put("calendarGroups", (n) -> { this.setCalendarGroups(n.getCollectionOfObjectValues(CalendarGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("calendars", (n) -> { this.setCalendars(n.getCollectionOfObjectValues(Calendar::createFromDiscriminatorValue)); });
+        deserializerMap.put("calendarView", (n) -> { this.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("chats", (n) -> { this.setChats(n.getCollectionOfObjectValues(Chat::createFromDiscriminatorValue)); });
+        deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
+        deserializerMap.put("cloudPCs", (n) -> { this.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
+        deserializerMap.put("companyName", (n) -> { this.setCompanyName(n.getStringValue()); });
+        deserializerMap.put("consentProvidedForMinor", (n) -> { this.setConsentProvidedForMinor(n.getStringValue()); });
+        deserializerMap.put("contactFolders", (n) -> { this.setContactFolders(n.getCollectionOfObjectValues(ContactFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("contacts", (n) -> { this.setContacts(n.getCollectionOfObjectValues(Contact::createFromDiscriminatorValue)); });
+        deserializerMap.put("country", (n) -> { this.setCountry(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdObjects", (n) -> { this.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("creationType", (n) -> { this.setCreationType(n.getStringValue()); });
+        deserializerMap.put("customSecurityAttributes", (n) -> { this.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
+        deserializerMap.put("deviceEnrollmentConfigurations", (n) -> { this.setDeviceEnrollmentConfigurations(n.getCollectionOfObjectValues(DeviceEnrollmentConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceEnrollmentLimit", (n) -> { this.setDeviceEnrollmentLimit(n.getIntegerValue()); });
+        deserializerMap.put("deviceKeys", (n) -> { this.setDeviceKeys(n.getCollectionOfObjectValues(DeviceKey::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceManagementTroubleshootingEvents", (n) -> { this.setDeviceManagementTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("devices", (n) -> { this.setDevices(n.getCollectionOfObjectValues(Device::createFromDiscriminatorValue)); });
+        deserializerMap.put("directReports", (n) -> { this.setDirectReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("drives", (n) -> { this.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("employeeExperience", (n) -> { this.setEmployeeExperience(n.getObjectValue(EmployeeExperienceUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("employeeHireDate", (n) -> { this.setEmployeeHireDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("employeeId", (n) -> { this.setEmployeeId(n.getStringValue()); });
+        deserializerMap.put("employeeLeaveDateTime", (n) -> { this.setEmployeeLeaveDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("employeeOrgData", (n) -> { this.setEmployeeOrgData(n.getObjectValue(EmployeeOrgData::createFromDiscriminatorValue)); });
+        deserializerMap.put("employeeType", (n) -> { this.setEmployeeType(n.getStringValue()); });
+        deserializerMap.put("events", (n) -> { this.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalUserState", (n) -> { this.setExternalUserState(n.getStringValue()); });
+        deserializerMap.put("externalUserStateChangeDateTime", (n) -> { this.setExternalUserStateChangeDateTime(n.getStringValue()); });
+        deserializerMap.put("faxNumber", (n) -> { this.setFaxNumber(n.getStringValue()); });
+        deserializerMap.put("followedSites", (n) -> { this.setFollowedSites(n.getCollectionOfObjectValues(Site::createFromDiscriminatorValue)); });
+        deserializerMap.put("givenName", (n) -> { this.setGivenName(n.getStringValue()); });
+        deserializerMap.put("hireDate", (n) -> { this.setHireDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("identities", (n) -> { this.setIdentities(n.getCollectionOfObjectValues(ObjectIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("imAddresses", (n) -> { this.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("inferenceClassification", (n) -> { this.setInferenceClassification(n.getObjectValue(InferenceClassification::createFromDiscriminatorValue)); });
+        deserializerMap.put("infoCatalogs", (n) -> { this.setInfoCatalogs(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("informationProtection", (n) -> { this.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("insights", (n) -> { this.setInsights(n.getObjectValue(ItemInsights::createFromDiscriminatorValue)); });
+        deserializerMap.put("interests", (n) -> { this.setInterests(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isLicenseReconciliationNeeded", (n) -> { this.setIsLicenseReconciliationNeeded(n.getBooleanValue()); });
+        deserializerMap.put("isManagementRestricted", (n) -> { this.setIsManagementRestricted(n.getBooleanValue()); });
+        deserializerMap.put("isResourceAccount", (n) -> { this.setIsResourceAccount(n.getBooleanValue()); });
+        deserializerMap.put("jobTitle", (n) -> { this.setJobTitle(n.getStringValue()); });
+        deserializerMap.put("joinedGroups", (n) -> { this.setJoinedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("joinedTeams", (n) -> { this.setJoinedTeams(n.getCollectionOfObjectValues(Team::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastPasswordChangeDateTime", (n) -> { this.setLastPasswordChangeDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("legalAgeGroupClassification", (n) -> { this.setLegalAgeGroupClassification(n.getStringValue()); });
+        deserializerMap.put("licenseAssignmentStates", (n) -> { this.setLicenseAssignmentStates(n.getCollectionOfObjectValues(LicenseAssignmentState::createFromDiscriminatorValue)); });
+        deserializerMap.put("licenseDetails", (n) -> { this.setLicenseDetails(n.getCollectionOfObjectValues(LicenseDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("mail", (n) -> { this.setMail(n.getStringValue()); });
+        deserializerMap.put("mailboxSettings", (n) -> { this.setMailboxSettings(n.getObjectValue(MailboxSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailFolders", (n) -> { this.setMailFolders(n.getCollectionOfObjectValues(MailFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("managedAppRegistrations", (n) -> { this.setManagedAppRegistrations(n.getCollectionOfObjectValues(ManagedAppRegistration::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDevices", (n) -> { this.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("manager", (n) -> { this.setManager(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(Message::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileAppIntentAndStates", (n) -> { this.setMobileAppIntentAndStates(n.getCollectionOfObjectValues(MobileAppIntentAndState::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileAppTroubleshootingEvents", (n) -> { this.setMobileAppTroubleshootingEvents(n.getCollectionOfObjectValues(MobileAppTroubleshootingEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobilePhone", (n) -> { this.setMobilePhone(n.getStringValue()); });
+        deserializerMap.put("mySite", (n) -> { this.setMySite(n.getStringValue()); });
+        deserializerMap.put("notifications", (n) -> { this.setNotifications(n.getCollectionOfObjectValues(Notification::createFromDiscriminatorValue)); });
+        deserializerMap.put("oauth2PermissionGrants", (n) -> { this.setOauth2PermissionGrants(n.getCollectionOfObjectValues(OAuth2PermissionGrant::createFromDiscriminatorValue)); });
+        deserializerMap.put("officeLocation", (n) -> { this.setOfficeLocation(n.getStringValue()); });
+        deserializerMap.put("onenote", (n) -> { this.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
+        deserializerMap.put("onlineMeetings", (n) -> { this.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesDistinguishedName", (n) -> { this.setOnPremisesDistinguishedName(n.getStringValue()); });
+        deserializerMap.put("onPremisesDomainName", (n) -> { this.setOnPremisesDomainName(n.getStringValue()); });
+        deserializerMap.put("onPremisesExtensionAttributes", (n) -> { this.setOnPremisesExtensionAttributes(n.getObjectValue(OnPremisesExtensionAttributes::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesImmutableId", (n) -> { this.setOnPremisesImmutableId(n.getStringValue()); });
+        deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onPremisesProvisioningErrors", (n) -> { this.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesSamAccountName", (n) -> { this.setOnPremisesSamAccountName(n.getStringValue()); });
+        deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
+        deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
+        deserializerMap.put("onPremisesUserPrincipalName", (n) -> { this.setOnPremisesUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("otherMails", (n) -> { this.setOtherMails(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("outlook", (n) -> { this.setOutlook(n.getObjectValue(OutlookUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("ownedDevices", (n) -> { this.setOwnedDevices(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("ownedObjects", (n) -> { this.setOwnedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("passwordPolicies", (n) -> { this.setPasswordPolicies(n.getStringValue()); });
+        deserializerMap.put("passwordProfile", (n) -> { this.setPasswordProfile(n.getObjectValue(PasswordProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("pastProjects", (n) -> { this.setPastProjects(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("pendingAccessReviewInstances", (n) -> { this.setPendingAccessReviewInstances(n.getCollectionOfObjectValues(AccessReviewInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("people", (n) -> { this.setPeople(n.getCollectionOfObjectValues(Person::createFromDiscriminatorValue)); });
+        deserializerMap.put("photo", (n) -> { this.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
+        deserializerMap.put("photos", (n) -> { this.setPhotos(n.getCollectionOfObjectValues(ProfilePhoto::createFromDiscriminatorValue)); });
+        deserializerMap.put("planner", (n) -> { this.setPlanner(n.getObjectValue(PlannerUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("postalCode", (n) -> { this.setPostalCode(n.getStringValue()); });
+        deserializerMap.put("preferredDataLocation", (n) -> { this.setPreferredDataLocation(n.getStringValue()); });
+        deserializerMap.put("preferredLanguage", (n) -> { this.setPreferredLanguage(n.getStringValue()); });
+        deserializerMap.put("preferredName", (n) -> { this.setPreferredName(n.getStringValue()); });
+        deserializerMap.put("presence", (n) -> { this.setPresence(n.getObjectValue(Presence::createFromDiscriminatorValue)); });
+        deserializerMap.put("print", (n) -> { this.setPrint(n.getObjectValue(UserPrint::createFromDiscriminatorValue)); });
+        deserializerMap.put("profile", (n) -> { this.setProfile(n.getObjectValue(Profile::createFromDiscriminatorValue)); });
+        deserializerMap.put("provisionedPlans", (n) -> { this.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("proxyAddresses", (n) -> { this.setProxyAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("refreshTokensValidFromDateTime", (n) -> { this.setRefreshTokensValidFromDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("registeredDevices", (n) -> { this.setRegisteredDevices(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("responsibilities", (n) -> { this.setResponsibilities(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("schools", (n) -> { this.setSchools(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("scopedRoleMemberOf", (n) -> { this.setScopedRoleMemberOf(n.getCollectionOfObjectValues(ScopedRoleMembership::createFromDiscriminatorValue)); });
+        deserializerMap.put("security", (n) -> { this.setSecurity(n.getObjectValue(Security::createFromDiscriminatorValue)); });
+        deserializerMap.put("securityIdentifier", (n) -> { this.setSecurityIdentifier(n.getStringValue()); });
+        deserializerMap.put("serviceProvisioningErrors", (n) -> { this.setServiceProvisioningErrors(n.getCollectionOfObjectValues(ServiceProvisioningError::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(UserSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("showInAddressList", (n) -> { this.setShowInAddressList(n.getBooleanValue()); });
+        deserializerMap.put("signInActivity", (n) -> { this.setSignInActivity(n.getObjectValue(SignInActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("signInSessionsValidFromDateTime", (n) -> { this.setSignInSessionsValidFromDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("skills", (n) -> { this.setSkills(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
+        deserializerMap.put("streetAddress", (n) -> { this.setStreetAddress(n.getStringValue()); });
+        deserializerMap.put("surname", (n) -> { this.setSurname(n.getStringValue()); });
+        deserializerMap.put("teamwork", (n) -> { this.setTeamwork(n.getObjectValue(UserTeamwork::createFromDiscriminatorValue)); });
+        deserializerMap.put("todo", (n) -> { this.setTodo(n.getObjectValue(Todo::createFromDiscriminatorValue)); });
+        deserializerMap.put("transitiveMemberOf", (n) -> { this.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("transitiveReports", (n) -> { this.setTransitiveReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("usageLocation", (n) -> { this.setUsageLocation(n.getStringValue()); });
+        deserializerMap.put("usageRights", (n) -> { this.setUsageRights(n.getCollectionOfObjectValues(UsageRight::createFromDiscriminatorValue)); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("userType", (n) -> { this.setUserType(n.getStringValue()); });
+        deserializerMap.put("windowsInformationProtectionDeviceRegistrations", (n) -> { this.setWindowsInformationProtectionDeviceRegistrations(n.getCollectionOfObjectValues(WindowsInformationProtectionDeviceRegistration::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the followedSites property value. The followedSites property
@@ -895,7 +908,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Site> getFollowedSites() {
-        return this._followedSites;
+        return this.followedSites;
     }
     /**
      * Gets the givenName property value. The given name (first name) of the user. Maximum length is 64 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
@@ -903,7 +916,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getGivenName() {
-        return this._givenName;
+        return this.givenName;
     }
     /**
      * Gets the hireDate property value. The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
@@ -911,7 +924,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getHireDate() {
-        return this._hireDate;
+        return this.hireDate;
     }
     /**
      * Gets the identities property value. Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
@@ -919,7 +932,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ObjectIdentity> getIdentities() {
-        return this._identities;
+        return this.identities;
     }
     /**
      * Gets the imAddresses property value. The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Supports $filter (eq, not, ge, le, startsWith).
@@ -927,7 +940,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getImAddresses() {
-        return this._imAddresses;
+        return this.imAddresses;
     }
     /**
      * Gets the inferenceClassification property value. Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
@@ -935,7 +948,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public InferenceClassification getInferenceClassification() {
-        return this._inferenceClassification;
+        return this.inferenceClassification;
     }
     /**
      * Gets the infoCatalogs property value. Identifies the info segments assigned to the user.  Supports $filter (eq, not, ge, le, startsWith).
@@ -943,7 +956,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getInfoCatalogs() {
-        return this._infoCatalogs;
+        return this.infoCatalogs;
     }
     /**
      * Gets the informationProtection property value. The informationProtection property
@@ -951,7 +964,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public InformationProtection getInformationProtection() {
-        return this._informationProtection;
+        return this.informationProtection;
     }
     /**
      * Gets the insights property value. The insights property
@@ -959,7 +972,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemInsights getInsights() {
-        return this._insights;
+        return this.insights;
     }
     /**
      * Gets the interests property value. A list for the user to describe their interests. Returned only on $select.
@@ -967,7 +980,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getInterests() {
-        return this._interests;
+        return this.interests;
+    }
+    /**
+     * Gets the isLicenseReconciliationNeeded property value. Indicates whether the user is pending an exchange mailbox license assignment.  Read-only.  Supports $filter (eq where true only).
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsLicenseReconciliationNeeded() {
+        return this.isLicenseReconciliationNeeded;
     }
     /**
      * Gets the isManagementRestricted property value. The isManagementRestricted property
@@ -975,15 +996,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsManagementRestricted() {
-        return this._isManagementRestricted;
+        return this.isManagementRestricted;
     }
     /**
-     * Gets the isResourceAccount property value. Do not use – reserved for future use.
+     * Gets the isResourceAccount property value. Do not use  reserved for future use.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIsResourceAccount() {
-        return this._isResourceAccount;
+        return this.isResourceAccount;
     }
     /**
      * Gets the jobTitle property value. The user's job title. Maximum length is 128 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
@@ -991,7 +1012,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getJobTitle() {
-        return this._jobTitle;
+        return this.jobTitle;
     }
     /**
      * Gets the joinedGroups property value. The joinedGroups property
@@ -999,7 +1020,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Group> getJoinedGroups() {
-        return this._joinedGroups;
+        return this.joinedGroups;
     }
     /**
      * Gets the joinedTeams property value. The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
@@ -1007,7 +1028,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Team> getJoinedTeams() {
-        return this._joinedTeams;
+        return this.joinedTeams;
     }
     /**
      * Gets the lastPasswordChangeDateTime property value. The time when this Azure AD user last changed their password or when their password was created, , whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only on $select.
@@ -1015,7 +1036,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastPasswordChangeDateTime() {
-        return this._lastPasswordChangeDateTime;
+        return this.lastPasswordChangeDateTime;
     }
     /**
      * Gets the legalAgeGroupClassification property value. Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult and Adult. Refer to the legal age group property definitions for further information. Returned only on $select.
@@ -1023,15 +1044,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLegalAgeGroupClassification() {
-        return this._legalAgeGroupClassification;
+        return this.legalAgeGroupClassification;
     }
     /**
-     * Gets the licenseAssignmentStates property value. State of license assignments for this user. Read-only. Returned only on $select.
+     * Gets the licenseAssignmentStates property value. State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select.
      * @return a licenseAssignmentState
      */
     @javax.annotation.Nullable
     public java.util.List<LicenseAssignmentState> getLicenseAssignmentStates() {
-        return this._licenseAssignmentStates;
+        return this.licenseAssignmentStates;
     }
     /**
      * Gets the licenseDetails property value. The licenseDetails property
@@ -1039,7 +1060,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<LicenseDetails> getLicenseDetails() {
-        return this._licenseDetails;
+        return this.licenseDetails;
     }
     /**
      * Gets the mail property value. The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property cannot contain accent characters.  NOTE: We do not recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
@@ -1047,7 +1068,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMail() {
-        return this._mail;
+        return this.mail;
     }
     /**
      * Gets the mailboxSettings property value. Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Returned only on $select.
@@ -1055,7 +1076,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public MailboxSettings getMailboxSettings() {
-        return this._mailboxSettings;
+        return this.mailboxSettings;
     }
     /**
      * Gets the mailFolders property value. The user's mail folders. Read-only. Nullable.
@@ -1063,7 +1084,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MailFolder> getMailFolders() {
-        return this._mailFolders;
+        return this.mailFolders;
     }
     /**
      * Gets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Maximum length is 64 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -1071,7 +1092,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMailNickname() {
-        return this._mailNickname;
+        return this.mailNickname;
     }
     /**
      * Gets the managedAppRegistrations property value. Zero or more managed app registrations that belong to the user.
@@ -1079,7 +1100,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppRegistration> getManagedAppRegistrations() {
-        return this._managedAppRegistrations;
+        return this.managedAppRegistrations;
     }
     /**
      * Gets the managedDevices property value. The managed devices associated with the user.
@@ -1087,7 +1108,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDevice> getManagedDevices() {
-        return this._managedDevices;
+        return this.managedDevices;
     }
     /**
      * Gets the manager property value. The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.
@@ -1095,7 +1116,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public DirectoryObject getManager() {
-        return this._manager;
+        return this.manager;
     }
     /**
      * Gets the memberOf property value. The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
@@ -1103,7 +1124,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
-        return this._memberOf;
+        return this.memberOf;
     }
     /**
      * Gets the messages property value. The messages in a mailbox or folder. Read-only. Nullable.
@@ -1111,7 +1132,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Message> getMessages() {
-        return this._messages;
+        return this.messages;
     }
     /**
      * Gets the mobileAppIntentAndStates property value. The list of troubleshooting events for this user.
@@ -1119,7 +1140,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileAppIntentAndState> getMobileAppIntentAndStates() {
-        return this._mobileAppIntentAndStates;
+        return this.mobileAppIntentAndStates;
     }
     /**
      * Gets the mobileAppTroubleshootingEvents property value. The list of mobile app troubleshooting events for this user.
@@ -1127,7 +1148,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileAppTroubleshootingEvent> getMobileAppTroubleshootingEvents() {
-        return this._mobileAppTroubleshootingEvents;
+        return this.mobileAppTroubleshootingEvents;
     }
     /**
      * Gets the mobilePhone property value. The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -1135,7 +1156,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMobilePhone() {
-        return this._mobilePhone;
+        return this.mobilePhone;
     }
     /**
      * Gets the mySite property value. The URL for the user's personal site. Returned only on $select.
@@ -1143,7 +1164,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMySite() {
-        return this._mySite;
+        return this.mySite;
     }
     /**
      * Gets the notifications property value. The notifications property
@@ -1151,7 +1172,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Notification> getNotifications() {
-        return this._notifications;
+        return this.notifications;
     }
     /**
      * Gets the oauth2PermissionGrants property value. The oauth2PermissionGrants property
@@ -1159,7 +1180,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OAuth2PermissionGrant> getOauth2PermissionGrants() {
-        return this._oauth2PermissionGrants;
+        return this.oauth2PermissionGrants;
     }
     /**
      * Gets the officeLocation property value. The office location in the user's place of business. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -1167,7 +1188,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOfficeLocation() {
-        return this._officeLocation;
+        return this.officeLocation;
     }
     /**
      * Gets the onenote property value. The onenote property
@@ -1175,7 +1196,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Onenote getOnenote() {
-        return this._onenote;
+        return this.onenote;
     }
     /**
      * Gets the onlineMeetings property value. The onlineMeetings property
@@ -1183,7 +1204,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OnlineMeeting> getOnlineMeetings() {
-        return this._onlineMeetings;
+        return this.onlineMeetings;
     }
     /**
      * Gets the onPremisesDistinguishedName property value. Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
@@ -1191,7 +1212,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOnPremisesDistinguishedName() {
-        return this._onPremisesDistinguishedName;
+        return this.onPremisesDistinguishedName;
     }
     /**
      * Gets the onPremisesDomainName property value. Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
@@ -1199,7 +1220,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOnPremisesDomainName() {
-        return this._onPremisesDomainName;
+        return this.onPremisesDomainName;
     }
     /**
      * Gets the onPremisesExtensionAttributes property value. Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
@@ -1207,7 +1228,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OnPremisesExtensionAttributes getOnPremisesExtensionAttributes() {
-        return this._onPremisesExtensionAttributes;
+        return this.onPremisesExtensionAttributes;
     }
     /**
      * Gets the onPremisesImmutableId property value. This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Note: The $ and _ characters cannot be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in).
@@ -1215,7 +1236,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOnPremisesImmutableId() {
-        return this._onPremisesImmutableId;
+        return this.onPremisesImmutableId;
     }
     /**
      * Gets the onPremisesLastSyncDateTime property value. Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, in).
@@ -1223,7 +1244,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getOnPremisesLastSyncDateTime() {
-        return this._onPremisesLastSyncDateTime;
+        return this.onPremisesLastSyncDateTime;
     }
     /**
      * Gets the onPremisesProvisioningErrors property value. Errors when using Microsoft synchronization product during provisioning.  Supports $filter (eq, not, ge, le).
@@ -1231,7 +1252,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OnPremisesProvisioningError> getOnPremisesProvisioningErrors() {
-        return this._onPremisesProvisioningErrors;
+        return this.onPremisesProvisioningErrors;
     }
     /**
      * Gets the onPremisesSamAccountName property value. Contains the on-premises sAMAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
@@ -1239,7 +1260,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOnPremisesSamAccountName() {
-        return this._onPremisesSamAccountName;
+        return this.onPremisesSamAccountName;
     }
     /**
      * Gets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Supports $filter (eq including on null values).
@@ -1247,7 +1268,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
-        return this._onPremisesSecurityIdentifier;
+        return this.onPremisesSecurityIdentifier;
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
@@ -1255,7 +1276,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
-        return this._onPremisesSyncEnabled;
+        return this.onPremisesSyncEnabled;
     }
     /**
      * Gets the onPremisesUserPrincipalName property value. Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
@@ -1263,15 +1284,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOnPremisesUserPrincipalName() {
-        return this._onPremisesUserPrincipalName;
+        return this.onPremisesUserPrincipalName;
     }
     /**
-     * Gets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
+     * Gets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @return a string
      */
     @javax.annotation.Nullable
     public java.util.List<String> getOtherMails() {
-        return this._otherMails;
+        return this.otherMails;
     }
     /**
      * Gets the outlook property value. Selective Outlook services available to the user. Read-only. Nullable.
@@ -1279,7 +1300,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OutlookUser getOutlook() {
-        return this._outlook;
+        return this.outlook;
     }
     /**
      * Gets the ownedDevices property value. Devices that are owned by the user. Read-only. Nullable. Supports $expand.
@@ -1287,15 +1308,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getOwnedDevices() {
-        return this._ownedDevices;
+        return this.ownedDevices;
     }
     /**
-     * Gets the ownedObjects property value. Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
+     * Gets the ownedObjects property value. Directory objects that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @return a directoryObject
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getOwnedObjects() {
-        return this._ownedObjects;
+        return this.ownedObjects;
     }
     /**
      * Gets the passwordPolicies property value. Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. For more information on the default password policies, see Azure AD pasword policies. Supports $filter (ne, not, and eq on null values).
@@ -1303,15 +1324,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPasswordPolicies() {
-        return this._passwordPolicies;
+        return this.passwordPolicies;
     }
     /**
-     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Supports $filter (eq, ne, not, in, and eq on null values).
      * @return a passwordProfile
      */
     @javax.annotation.Nullable
     public PasswordProfile getPasswordProfile() {
-        return this._passwordProfile;
+        return this.passwordProfile;
     }
     /**
      * Gets the pastProjects property value. A list for the user to enumerate their past projects. Returned only on $select.
@@ -1319,7 +1340,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getPastProjects() {
-        return this._pastProjects;
+        return this.pastProjects;
     }
     /**
      * Gets the pendingAccessReviewInstances property value. Navigation property to get list of access reviews pending approval by reviewer.
@@ -1327,7 +1348,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessReviewInstance> getPendingAccessReviewInstances() {
-        return this._pendingAccessReviewInstances;
+        return this.pendingAccessReviewInstances;
     }
     /**
      * Gets the people property value. Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
@@ -1335,7 +1356,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Person> getPeople() {
-        return this._people;
+        return this.people;
     }
     /**
      * Gets the photo property value. The user's profile photo. Read-only.
@@ -1343,7 +1364,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public ProfilePhoto getPhoto() {
-        return this._photo;
+        return this.photo;
     }
     /**
      * Gets the photos property value. The photos property
@@ -1351,7 +1372,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ProfilePhoto> getPhotos() {
-        return this._photos;
+        return this.photos;
     }
     /**
      * Gets the planner property value. Selective Planner services available to the user. Read-only. Nullable.
@@ -1359,7 +1380,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public PlannerUser getPlanner() {
-        return this._planner;
+        return this.planner;
     }
     /**
      * Gets the postalCode property value. The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -1367,7 +1388,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPostalCode() {
-        return this._postalCode;
+        return this.postalCode;
     }
     /**
      * Gets the preferredDataLocation property value. The preferred data location for the user. For more information, see OneDrive Online Multi-Geo.
@@ -1375,7 +1396,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPreferredDataLocation() {
-        return this._preferredDataLocation;
+        return this.preferredDataLocation;
     }
     /**
      * Gets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example en-US. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -1383,7 +1404,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPreferredLanguage() {
-        return this._preferredLanguage;
+        return this.preferredLanguage;
     }
     /**
      * Gets the preferredName property value. The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select.
@@ -1391,7 +1412,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPreferredName() {
-        return this._preferredName;
+        return this.preferredName;
     }
     /**
      * Gets the presence property value. The presence property
@@ -1399,7 +1420,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Presence getPresence() {
-        return this._presence;
+        return this.presence;
     }
     /**
      * Gets the print property value. The print property
@@ -1407,7 +1428,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public UserPrint getPrint() {
-        return this._print;
+        return this.print;
     }
     /**
      * Gets the profile property value. Represents properties that are descriptive of a user in a tenant.
@@ -1415,7 +1436,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Profile getProfile() {
-        return this._profile;
+        return this.profile;
     }
     /**
      * Gets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable. Supports $filter (eq, not, ge, le).
@@ -1423,15 +1444,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {
-        return this._provisionedPlans;
+        return this.provisionedPlans;
     }
     /**
-     * Gets the proxyAddresses property value. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
+     * Gets the proxyAddresses property value. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @return a string
      */
     @javax.annotation.Nullable
     public java.util.List<String> getProxyAddresses() {
-        return this._proxyAddresses;
+        return this.proxyAddresses;
     }
     /**
      * Gets the refreshTokensValidFromDateTime property value. Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use invalidateAllRefreshTokens to reset.
@@ -1439,7 +1460,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRefreshTokensValidFromDateTime() {
-        return this._refreshTokensValidFromDateTime;
+        return this.refreshTokensValidFromDateTime;
     }
     /**
      * Gets the registeredDevices property value. Devices that are registered for the user. Read-only. Nullable. Supports $expand.
@@ -1447,7 +1468,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getRegisteredDevices() {
-        return this._registeredDevices;
+        return this.registeredDevices;
     }
     /**
      * Gets the responsibilities property value. A list for the user to enumerate their responsibilities. Returned only on $select.
@@ -1455,7 +1476,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getResponsibilities() {
-        return this._responsibilities;
+        return this.responsibilities;
     }
     /**
      * Gets the schools property value. A list for the user to enumerate the schools they have attended. Returned only on $select.
@@ -1463,7 +1484,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSchools() {
-        return this._schools;
+        return this.schools;
     }
     /**
      * Gets the scopedRoleMemberOf property value. The scoped-role administrative unit memberships for this user. Read-only. Nullable.
@@ -1471,7 +1492,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ScopedRoleMembership> getScopedRoleMemberOf() {
-        return this._scopedRoleMemberOf;
+        return this.scopedRoleMemberOf;
     }
     /**
      * Gets the security property value. The security property
@@ -1479,7 +1500,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Security getSecurity() {
-        return this._security;
+        return this.security;
     }
     /**
      * Gets the securityIdentifier property value. Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
@@ -1487,7 +1508,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSecurityIdentifier() {
-        return this._securityIdentifier;
+        return this.securityIdentifier;
+    }
+    /**
+     * Gets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+     * @return a serviceProvisioningError
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ServiceProvisioningError> getServiceProvisioningErrors() {
+        return this.serviceProvisioningErrors;
     }
     /**
      * Gets the settings property value. The settings property
@@ -1495,7 +1524,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public UserSettings getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Gets the showInAddressList property value. Do not use in Microsoft Graph. Manage this property through the Microsoft 365 admin center instead. Represents whether the user should be included in the Outlook global address list. See Known issue.
@@ -1503,15 +1532,15 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getShowInAddressList() {
-        return this._showInAddressList;
+        return this.showInAddressList;
     }
     /**
-     * Gets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but, not with any other filterable properties. Note: Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.Note: There's a known issue with retrieving this property.This property is not returned for a user who has never signed in or last signed in before April 2020.
+     * Gets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note:  Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.This property is not returned for a user who has never signed in or last signed in before April 2020.
      * @return a signInActivity
      */
     @javax.annotation.Nullable
     public SignInActivity getSignInActivity() {
-        return this._signInActivity;
+        return this.signInActivity;
     }
     /**
      * Gets the signInSessionsValidFromDateTime property value. Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
@@ -1519,7 +1548,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getSignInSessionsValidFromDateTime() {
-        return this._signInSessionsValidFromDateTime;
+        return this.signInSessionsValidFromDateTime;
     }
     /**
      * Gets the skills property value. A list for the user to enumerate their skills. Returned only on $select.
@@ -1527,7 +1556,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSkills() {
-        return this._skills;
+        return this.skills;
     }
     /**
      * Gets the state property value. The state or province in the user's address. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -1535,7 +1564,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the streetAddress property value. The street address of the user's place of business. Maximum length is 1024 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -1543,7 +1572,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStreetAddress() {
-        return this._streetAddress;
+        return this.streetAddress;
     }
     /**
      * Gets the surname property value. The user's surname (family name or last name). Maximum length is 64 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -1551,15 +1580,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSurname() {
-        return this._surname;
-    }
-    /**
-     * Gets the tasks property value. The tasks property
-     * @return a tasks
-     */
-    @javax.annotation.Nullable
-    public Tasks getTasks() {
-        return this._tasks;
+        return this.surname;
     }
     /**
      * Gets the teamwork property value. A container for Microsoft Teams features available for the user. Read-only. Nullable.
@@ -1567,7 +1588,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public UserTeamwork getTeamwork() {
-        return this._teamwork;
+        return this.teamwork;
     }
     /**
      * Gets the todo property value. Represents the To Do services available to a user.
@@ -1575,7 +1596,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Todo getTodo() {
-        return this._todo;
+        return this.todo;
     }
     /**
      * Gets the transitiveMemberOf property value. The groups, including nested groups, and directory roles that a user is a member of. Nullable.
@@ -1583,7 +1604,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
-        return this._transitiveMemberOf;
+        return this.transitiveMemberOf;
     }
     /**
      * Gets the transitiveReports property value. The transitive reports for a user. Read-only.
@@ -1591,7 +1612,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveReports() {
-        return this._transitiveReports;
+        return this.transitiveReports;
     }
     /**
      * Gets the usageLocation property value. A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -1599,7 +1620,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUsageLocation() {
-        return this._usageLocation;
+        return this.usageLocation;
     }
     /**
      * Gets the usageRights property value. Represents the usage rights a user has been granted.
@@ -1607,7 +1628,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UsageRight> getUsageRights() {
-        return this._usageRights;
+        return this.usageRights;
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property cannot contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderBy.
@@ -1615,7 +1636,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Gets the userType property value. A String value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?
@@ -1623,7 +1644,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserType() {
-        return this._userType;
+        return this.userType;
     }
     /**
      * Gets the windowsInformationProtectionDeviceRegistrations property value. Zero or more WIP device registrations that belong to the user.
@@ -1631,13 +1652,14 @@ public class User extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsInformationProtectionDeviceRegistration> getWindowsInformationProtectionDeviceRegistrations() {
-        return this._windowsInformationProtectionDeviceRegistrations;
+        return this.windowsInformationProtectionDeviceRegistrations;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -1683,6 +1705,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeCollectionOfObjectValues("drives", this.getDrives());
+        writer.writeObjectValue("employeeExperience", this.getEmployeeExperience());
         writer.writeOffsetDateTimeValue("employeeHireDate", this.getEmployeeHireDate());
         writer.writeStringValue("employeeId", this.getEmployeeId());
         writer.writeOffsetDateTimeValue("employeeLeaveDateTime", this.getEmployeeLeaveDateTime());
@@ -1703,6 +1726,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeObjectValue("informationProtection", this.getInformationProtection());
         writer.writeObjectValue("insights", this.getInsights());
         writer.writeCollectionOfPrimitiveValues("interests", this.getInterests());
+        writer.writeBooleanValue("isLicenseReconciliationNeeded", this.getIsLicenseReconciliationNeeded());
         writer.writeBooleanValue("isManagementRestricted", this.getIsManagementRestricted());
         writer.writeBooleanValue("isResourceAccount", this.getIsResourceAccount());
         writer.writeStringValue("jobTitle", this.getJobTitle());
@@ -1768,6 +1792,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("scopedRoleMemberOf", this.getScopedRoleMemberOf());
         writer.writeObjectValue("security", this.getSecurity());
         writer.writeStringValue("securityIdentifier", this.getSecurityIdentifier());
+        writer.writeCollectionOfObjectValues("serviceProvisioningErrors", this.getServiceProvisioningErrors());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeBooleanValue("showInAddressList", this.getShowInAddressList());
         writer.writeObjectValue("signInActivity", this.getSignInActivity());
@@ -1776,7 +1801,6 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeStringValue("state", this.getState());
         writer.writeStringValue("streetAddress", this.getStreetAddress());
         writer.writeStringValue("surname", this.getSurname());
-        writer.writeObjectValue("tasks", this.getTasks());
         writer.writeObjectValue("teamwork", this.getTeamwork());
         writer.writeObjectValue("todo", this.getTodo());
         writer.writeCollectionOfObjectValues("transitiveMemberOf", this.getTransitiveMemberOf());
@@ -1792,1159 +1816,1322 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the aboutMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAboutMe(@javax.annotation.Nullable final String value) {
-        this._aboutMe = value;
+        this.aboutMe = value;
     }
     /**
      * Sets the accountEnabled property value. true if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter (eq, ne, not, and in).
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._accountEnabled = value;
+        this.accountEnabled = value;
     }
     /**
      * Sets the activities property value. The activities property
      * @param value Value to set for the activities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<UserActivity> value) {
-        this._activities = value;
+        this.activities = value;
     }
     /**
      * Sets the ageGroup property value. Sets the age group of the user. Allowed values: null, Minor, NotAdult and Adult. Refer to the legal age group property definitions for further information. Supports $filter (eq, ne, not, and in).
      * @param value Value to set for the ageGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgeGroup(@javax.annotation.Nullable final String value) {
-        this._ageGroup = value;
+        this.ageGroup = value;
     }
     /**
      * Sets the agreementAcceptances property value. The user's terms of use acceptance statuses. Read-only. Nullable.
      * @param value Value to set for the agreementAcceptances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgreementAcceptances(@javax.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
-        this._agreementAcceptances = value;
+        this.agreementAcceptances = value;
     }
     /**
      * Sets the analytics property value. The analytics property
      * @param value Value to set for the analytics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnalytics(@javax.annotation.Nullable final UserAnalytics value) {
-        this._analytics = value;
+        this.analytics = value;
     }
     /**
      * Sets the appConsentRequestsForApproval property value. The appConsentRequestsForApproval property
      * @param value Value to set for the appConsentRequestsForApproval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppConsentRequestsForApproval(@javax.annotation.Nullable final java.util.List<AppConsentRequest> value) {
-        this._appConsentRequestsForApproval = value;
+        this.appConsentRequestsForApproval = value;
     }
     /**
      * Sets the appRoleAssignedResources property value. The appRoleAssignedResources property
      * @param value Value to set for the appRoleAssignedResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignedResources(@javax.annotation.Nullable final java.util.List<ServicePrincipal> value) {
-        this._appRoleAssignedResources = value;
+        this.appRoleAssignedResources = value;
     }
     /**
      * Sets the appRoleAssignments property value. Represents the app roles a user has been granted for an application. Supports $expand.
      * @param value Value to set for the appRoleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignments(@javax.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
-        this._appRoleAssignments = value;
+        this.appRoleAssignments = value;
     }
     /**
      * Sets the approvals property value. The approvals property
      * @param value Value to set for the approvals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovals(@javax.annotation.Nullable final java.util.List<Approval> value) {
-        this._approvals = value;
+        this.approvals = value;
     }
     /**
-     * Sets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter (eq, not, and counting empty collections).
+     * Sets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses. Not nullable. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
      * @param value Value to set for the assignedLicenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedLicenses(@javax.annotation.Nullable final java.util.List<AssignedLicense> value) {
-        this._assignedLicenses = value;
+        this.assignedLicenses = value;
     }
     /**
      * Sets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable.Supports $filter (eq and not).
      * @param value Value to set for the assignedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedPlans(@javax.annotation.Nullable final java.util.List<AssignedPlan> value) {
-        this._assignedPlans = value;
+        this.assignedPlans = value;
     }
     /**
      * Sets the authentication property value. The authentication property
      * @param value Value to set for the authentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthentication(@javax.annotation.Nullable final Authentication value) {
-        this._authentication = value;
+        this.authentication = value;
     }
     /**
-     * Sets the authorizationInfo property value. The authorizationInfo property
+     * Sets the authorizationInfo property value. Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
      * @param value Value to set for the authorizationInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizationInfo(@javax.annotation.Nullable final AuthorizationInfo value) {
-        this._authorizationInfo = value;
+        this.authorizationInfo = value;
     }
     /**
      * Sets the birthday property value. The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
      * @param value Value to set for the birthday property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBirthday(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._birthday = value;
+        this.birthday = value;
     }
     /**
      * Sets the businessPhones property value. The telephone numbers for the user. Only one number can be set for this property. Read-only for users synced from on-premises directory. Supports $filter (eq, not, ge, le, startsWith).
      * @param value Value to set for the businessPhones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessPhones(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._businessPhones = value;
+        this.businessPhones = value;
     }
     /**
      * Sets the calendar property value. The user's primary calendar. Read-only.
      * @param value Value to set for the calendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendar(@javax.annotation.Nullable final Calendar value) {
-        this._calendar = value;
+        this.calendar = value;
     }
     /**
      * Sets the calendarGroups property value. The user's calendar groups. Read-only. Nullable.
      * @param value Value to set for the calendarGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarGroups(@javax.annotation.Nullable final java.util.List<CalendarGroup> value) {
-        this._calendarGroups = value;
+        this.calendarGroups = value;
     }
     /**
      * Sets the calendars property value. The user's calendars. Read-only. Nullable.
      * @param value Value to set for the calendars property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendars(@javax.annotation.Nullable final java.util.List<Calendar> value) {
-        this._calendars = value;
+        this.calendars = value;
     }
     /**
      * Sets the calendarView property value. The calendar view for the calendar. Read-only. Nullable.
      * @param value Value to set for the calendarView property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarView(@javax.annotation.Nullable final java.util.List<Event> value) {
-        this._calendarView = value;
+        this.calendarView = value;
     }
     /**
      * Sets the chats property value. The chats property
      * @param value Value to set for the chats property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChats(@javax.annotation.Nullable final java.util.List<Chat> value) {
-        this._chats = value;
+        this.chats = value;
     }
     /**
      * Sets the city property value. The city in which the user is located. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the city property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCity(@javax.annotation.Nullable final String value) {
-        this._city = value;
+        this.city = value;
     }
     /**
      * Sets the cloudPCs property value. The cloudPCs property
      * @param value Value to set for the cloudPCs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPCs(@javax.annotation.Nullable final java.util.List<CloudPC> value) {
-        this._cloudPCs = value;
+        this.cloudPCs = value;
     }
     /**
      * Sets the companyName property value. The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the companyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompanyName(@javax.annotation.Nullable final String value) {
-        this._companyName = value;
+        this.companyName = value;
     }
     /**
      * Sets the consentProvidedForMinor property value. Sets whether consent has been obtained for minors. Allowed values: null, Granted, Denied and NotRequired. Refer to the legal age group property definitions for further information. Supports $filter (eq, ne, not, and in).
      * @param value Value to set for the consentProvidedForMinor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConsentProvidedForMinor(@javax.annotation.Nullable final String value) {
-        this._consentProvidedForMinor = value;
+        this.consentProvidedForMinor = value;
     }
     /**
      * Sets the contactFolders property value. The user's contacts folders. Read-only. Nullable.
      * @param value Value to set for the contactFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactFolders(@javax.annotation.Nullable final java.util.List<ContactFolder> value) {
-        this._contactFolders = value;
+        this.contactFolders = value;
     }
     /**
      * Sets the contacts property value. The user's contacts. Read-only. Nullable.
      * @param value Value to set for the contacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContacts(@javax.annotation.Nullable final java.util.List<Contact> value) {
-        this._contacts = value;
+        this.contacts = value;
     }
     /**
      * Sets the country property value. The country/region in which the user is located; for example, US or UK. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the country property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountry(@javax.annotation.Nullable final String value) {
-        this._country = value;
+        this.country = value;
     }
     /**
-     * Sets the createdDateTime property value. The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, not , ge, le, in).
+     * Sets the createdDateTime property value. The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in).
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the createdObjects property value. Directory objects that were created by the user. Read-only. Nullable.
      * @param value Value to set for the createdObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._createdObjects = value;
+        this.createdObjects = value;
     }
     /**
      * Sets the creationType property value. Indicates whether the user account was created through one of the following methods:  As a regular school or work account (null). As an external account (Invitation). As a local account for an Azure Active Directory B2C tenant (LocalAccount). Through self-service sign-up by an internal user using email verification (EmailVerified). Through self-service sign-up by an external user signing up through a link that is part of a user flow (SelfServiceSignUp).  Read-only.Supports $filter (eq, ne, not, and in).
      * @param value Value to set for the creationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationType(@javax.annotation.Nullable final String value) {
-        this._creationType = value;
+        this.creationType = value;
     }
     /**
-     * Sets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith).
+     * Sets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
      * @param value Value to set for the customSecurityAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSecurityAttributes(@javax.annotation.Nullable final CustomSecurityAttributeValue value) {
-        this._customSecurityAttributes = value;
+        this.customSecurityAttributes = value;
     }
     /**
      * Sets the department property value. The name for the department in which the user works. Maximum length is 64 characters.Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
      * @param value Value to set for the department property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDepartment(@javax.annotation.Nullable final String value) {
-        this._department = value;
+        this.department = value;
     }
     /**
      * Sets the deviceEnrollmentConfigurations property value. Get enrollment configurations targeted to the user
      * @param value Value to set for the deviceEnrollmentConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceEnrollmentConfigurations(@javax.annotation.Nullable final java.util.List<DeviceEnrollmentConfiguration> value) {
-        this._deviceEnrollmentConfigurations = value;
+        this.deviceEnrollmentConfigurations = value;
     }
     /**
      * Sets the deviceEnrollmentLimit property value. The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
      * @param value Value to set for the deviceEnrollmentLimit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceEnrollmentLimit(@javax.annotation.Nullable final Integer value) {
-        this._deviceEnrollmentLimit = value;
+        this.deviceEnrollmentLimit = value;
     }
     /**
      * Sets the deviceKeys property value. The deviceKeys property
      * @param value Value to set for the deviceKeys property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceKeys(@javax.annotation.Nullable final java.util.List<DeviceKey> value) {
-        this._deviceKeys = value;
+        this.deviceKeys = value;
     }
     /**
      * Sets the deviceManagementTroubleshootingEvents property value. The list of troubleshooting events for this user.
      * @param value Value to set for the deviceManagementTroubleshootingEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagementTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingEvent> value) {
-        this._deviceManagementTroubleshootingEvents = value;
+        this.deviceManagementTroubleshootingEvents = value;
     }
     /**
      * Sets the devices property value. The devices property
      * @param value Value to set for the devices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevices(@javax.annotation.Nullable final java.util.List<Device> value) {
-        this._devices = value;
+        this.devices = value;
     }
     /**
      * Sets the directReports property value. The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
      * @param value Value to set for the directReports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectReports(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._directReports = value;
+        this.directReports = value;
     }
     /**
      * Sets the displayName property value. The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values), $orderBy, and $search.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the drive property value. The user's OneDrive. Read-only.
      * @param value Value to set for the drive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDrive(@javax.annotation.Nullable final Drive value) {
-        this._drive = value;
+        this.drive = value;
     }
     /**
      * Sets the drives property value. A collection of drives available for this user. Read-only.
      * @param value Value to set for the drives property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDrives(@javax.annotation.Nullable final java.util.List<Drive> value) {
-        this._drives = value;
+        this.drives = value;
+    }
+    /**
+     * Sets the employeeExperience property value. The employeeExperience property
+     * @param value Value to set for the employeeExperience property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setEmployeeExperience(@javax.annotation.Nullable final EmployeeExperienceUser value) {
+        this.employeeExperience = value;
     }
     /**
      * Sets the employeeHireDate property value. The date and time when the user was hired or will start work in case of a future hire. Supports $filter (eq, ne, not , ge, le, in).
      * @param value Value to set for the employeeHireDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeHireDate(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._employeeHireDate = value;
+        this.employeeHireDate = value;
     }
     /**
      * Sets the employeeId property value. The employee identifier assigned to the user by the organization. The maximum length is 16 characters.Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the employeeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeId(@javax.annotation.Nullable final String value) {
-        this._employeeId = value;
+        this.employeeId = value;
     }
     /**
-     * Sets the employeeLeaveDateTime property value. The employeeLeaveDateTime property
+     * Sets the employeeLeaveDateTime property value. The date and time when the user left or will leave the organization. To read this property, the calling app must be assigned the User-LifeCycleInfo.Read.All permission. To write this property, the calling app must be assigned the User.Read.All and User-LifeCycleInfo.ReadWrite.All permissions. To read this property in delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Administrator. To write this property in delegated scenarios, the admin needs the Global Administrator role. Supports $filter (eq, ne, not , ge, le, in). For more information, see Configure the employeeLeaveDateTime property for a user.
      * @param value Value to set for the employeeLeaveDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeLeaveDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._employeeLeaveDateTime = value;
+        this.employeeLeaveDateTime = value;
     }
     /**
      * Sets the employeeOrgData property value. Represents organization data (e.g. division and costCenter) associated with a user. Supports $filter (eq, ne, not , ge, le, in).
      * @param value Value to set for the employeeOrgData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeOrgData(@javax.annotation.Nullable final EmployeeOrgData value) {
-        this._employeeOrgData = value;
+        this.employeeOrgData = value;
     }
     /**
      * Sets the employeeType property value. Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor. Supports $filter (eq, ne, not , ge, le, in, startsWith).
      * @param value Value to set for the employeeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeType(@javax.annotation.Nullable final String value) {
-        this._employeeType = value;
+        this.employeeType = value;
     }
     /**
      * Sets the events property value. The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
      * @param value Value to set for the events property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvents(@javax.annotation.Nullable final java.util.List<Event> value) {
-        this._events = value;
+        this.events = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the user. Supports $expand. Nullable.
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
-        this._extensions = value;
+        this.extensions = value;
     }
     /**
      * Sets the externalUserState property value. For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Supports $filter (eq, ne, not , in).
      * @param value Value to set for the externalUserState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalUserState(@javax.annotation.Nullable final String value) {
-        this._externalUserState = value;
+        this.externalUserState = value;
     }
     /**
      * Sets the externalUserStateChangeDateTime property value. Shows the timestamp for the latest change to the externalUserState property. Supports $filter (eq, ne, not , in).
      * @param value Value to set for the externalUserStateChangeDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalUserStateChangeDateTime(@javax.annotation.Nullable final String value) {
-        this._externalUserStateChangeDateTime = value;
+        this.externalUserStateChangeDateTime = value;
     }
     /**
      * Sets the faxNumber property value. The fax number of the user. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the faxNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFaxNumber(@javax.annotation.Nullable final String value) {
-        this._faxNumber = value;
+        this.faxNumber = value;
     }
     /**
      * Sets the followedSites property value. The followedSites property
      * @param value Value to set for the followedSites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFollowedSites(@javax.annotation.Nullable final java.util.List<Site> value) {
-        this._followedSites = value;
+        this.followedSites = value;
     }
     /**
      * Sets the givenName property value. The given name (first name) of the user. Maximum length is 64 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the givenName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGivenName(@javax.annotation.Nullable final String value) {
-        this._givenName = value;
+        this.givenName = value;
     }
     /**
      * Sets the hireDate property value. The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
      * @param value Value to set for the hireDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHireDate(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._hireDate = value;
+        this.hireDate = value;
     }
     /**
      * Sets the identities property value. Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
      * @param value Value to set for the identities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentities(@javax.annotation.Nullable final java.util.List<ObjectIdentity> value) {
-        this._identities = value;
+        this.identities = value;
     }
     /**
      * Sets the imAddresses property value. The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Supports $filter (eq, not, ge, le, startsWith).
      * @param value Value to set for the imAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._imAddresses = value;
+        this.imAddresses = value;
     }
     /**
      * Sets the inferenceClassification property value. Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
      * @param value Value to set for the inferenceClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInferenceClassification(@javax.annotation.Nullable final InferenceClassification value) {
-        this._inferenceClassification = value;
+        this.inferenceClassification = value;
     }
     /**
      * Sets the infoCatalogs property value. Identifies the info segments assigned to the user.  Supports $filter (eq, not, ge, le, startsWith).
      * @param value Value to set for the infoCatalogs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfoCatalogs(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._infoCatalogs = value;
+        this.infoCatalogs = value;
     }
     /**
      * Sets the informationProtection property value. The informationProtection property
      * @param value Value to set for the informationProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInformationProtection(@javax.annotation.Nullable final InformationProtection value) {
-        this._informationProtection = value;
+        this.informationProtection = value;
     }
     /**
      * Sets the insights property value. The insights property
      * @param value Value to set for the insights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsights(@javax.annotation.Nullable final ItemInsights value) {
-        this._insights = value;
+        this.insights = value;
     }
     /**
      * Sets the interests property value. A list for the user to describe their interests. Returned only on $select.
      * @param value Value to set for the interests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInterests(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._interests = value;
+        this.interests = value;
+    }
+    /**
+     * Sets the isLicenseReconciliationNeeded property value. Indicates whether the user is pending an exchange mailbox license assignment.  Read-only.  Supports $filter (eq where true only).
+     * @param value Value to set for the isLicenseReconciliationNeeded property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsLicenseReconciliationNeeded(@javax.annotation.Nullable final Boolean value) {
+        this.isLicenseReconciliationNeeded = value;
     }
     /**
      * Sets the isManagementRestricted property value. The isManagementRestricted property
      * @param value Value to set for the isManagementRestricted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsManagementRestricted(@javax.annotation.Nullable final Boolean value) {
-        this._isManagementRestricted = value;
+        this.isManagementRestricted = value;
     }
     /**
-     * Sets the isResourceAccount property value. Do not use – reserved for future use.
+     * Sets the isResourceAccount property value. Do not use  reserved for future use.
      * @param value Value to set for the isResourceAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsResourceAccount(@javax.annotation.Nullable final Boolean value) {
-        this._isResourceAccount = value;
+        this.isResourceAccount = value;
     }
     /**
      * Sets the jobTitle property value. The user's job title. Maximum length is 128 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the jobTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobTitle(@javax.annotation.Nullable final String value) {
-        this._jobTitle = value;
+        this.jobTitle = value;
     }
     /**
      * Sets the joinedGroups property value. The joinedGroups property
      * @param value Value to set for the joinedGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinedGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
-        this._joinedGroups = value;
+        this.joinedGroups = value;
     }
     /**
      * Sets the joinedTeams property value. The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
      * @param value Value to set for the joinedTeams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinedTeams(@javax.annotation.Nullable final java.util.List<Team> value) {
-        this._joinedTeams = value;
+        this.joinedTeams = value;
     }
     /**
      * Sets the lastPasswordChangeDateTime property value. The time when this Azure AD user last changed their password or when their password was created, , whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only on $select.
      * @param value Value to set for the lastPasswordChangeDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastPasswordChangeDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastPasswordChangeDateTime = value;
+        this.lastPasswordChangeDateTime = value;
     }
     /**
      * Sets the legalAgeGroupClassification property value. Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult and Adult. Refer to the legal age group property definitions for further information. Returned only on $select.
      * @param value Value to set for the legalAgeGroupClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLegalAgeGroupClassification(@javax.annotation.Nullable final String value) {
-        this._legalAgeGroupClassification = value;
+        this.legalAgeGroupClassification = value;
     }
     /**
-     * Sets the licenseAssignmentStates property value. State of license assignments for this user. Read-only. Returned only on $select.
+     * Sets the licenseAssignmentStates property value. State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select.
      * @param value Value to set for the licenseAssignmentStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenseAssignmentStates(@javax.annotation.Nullable final java.util.List<LicenseAssignmentState> value) {
-        this._licenseAssignmentStates = value;
+        this.licenseAssignmentStates = value;
     }
     /**
      * Sets the licenseDetails property value. The licenseDetails property
      * @param value Value to set for the licenseDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenseDetails(@javax.annotation.Nullable final java.util.List<LicenseDetails> value) {
-        this._licenseDetails = value;
+        this.licenseDetails = value;
     }
     /**
      * Sets the mail property value. The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property cannot contain accent characters.  NOTE: We do not recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
      * @param value Value to set for the mail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMail(@javax.annotation.Nullable final String value) {
-        this._mail = value;
+        this.mail = value;
     }
     /**
      * Sets the mailboxSettings property value. Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Returned only on $select.
      * @param value Value to set for the mailboxSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxSettings(@javax.annotation.Nullable final MailboxSettings value) {
-        this._mailboxSettings = value;
+        this.mailboxSettings = value;
     }
     /**
      * Sets the mailFolders property value. The user's mail folders. Read-only. Nullable.
      * @param value Value to set for the mailFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailFolders(@javax.annotation.Nullable final java.util.List<MailFolder> value) {
-        this._mailFolders = value;
+        this.mailFolders = value;
     }
     /**
      * Sets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Maximum length is 64 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNickname(@javax.annotation.Nullable final String value) {
-        this._mailNickname = value;
+        this.mailNickname = value;
     }
     /**
      * Sets the managedAppRegistrations property value. Zero or more managed app registrations that belong to the user.
      * @param value Value to set for the managedAppRegistrations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedAppRegistrations(@javax.annotation.Nullable final java.util.List<ManagedAppRegistration> value) {
-        this._managedAppRegistrations = value;
+        this.managedAppRegistrations = value;
     }
     /**
      * Sets the managedDevices property value. The managed devices associated with the user.
      * @param value Value to set for the managedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
-        this._managedDevices = value;
+        this.managedDevices = value;
     }
     /**
      * Sets the manager property value. The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.
      * @param value Value to set for the manager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManager(@javax.annotation.Nullable final DirectoryObject value) {
-        this._manager = value;
+        this.manager = value;
     }
     /**
      * Sets the memberOf property value. The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the memberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._memberOf = value;
+        this.memberOf = value;
     }
     /**
      * Sets the messages property value. The messages in a mailbox or folder. Read-only. Nullable.
      * @param value Value to set for the messages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<Message> value) {
-        this._messages = value;
+        this.messages = value;
     }
     /**
      * Sets the mobileAppIntentAndStates property value. The list of troubleshooting events for this user.
      * @param value Value to set for the mobileAppIntentAndStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppIntentAndStates(@javax.annotation.Nullable final java.util.List<MobileAppIntentAndState> value) {
-        this._mobileAppIntentAndStates = value;
+        this.mobileAppIntentAndStates = value;
     }
     /**
      * Sets the mobileAppTroubleshootingEvents property value. The list of mobile app troubleshooting events for this user.
      * @param value Value to set for the mobileAppTroubleshootingEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<MobileAppTroubleshootingEvent> value) {
-        this._mobileAppTroubleshootingEvents = value;
+        this.mobileAppTroubleshootingEvents = value;
     }
     /**
      * Sets the mobilePhone property value. The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the mobilePhone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobilePhone(@javax.annotation.Nullable final String value) {
-        this._mobilePhone = value;
+        this.mobilePhone = value;
     }
     /**
      * Sets the mySite property value. The URL for the user's personal site. Returned only on $select.
      * @param value Value to set for the mySite property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMySite(@javax.annotation.Nullable final String value) {
-        this._mySite = value;
+        this.mySite = value;
     }
     /**
      * Sets the notifications property value. The notifications property
      * @param value Value to set for the notifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotifications(@javax.annotation.Nullable final java.util.List<Notification> value) {
-        this._notifications = value;
+        this.notifications = value;
     }
     /**
      * Sets the oauth2PermissionGrants property value. The oauth2PermissionGrants property
      * @param value Value to set for the oauth2PermissionGrants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOauth2PermissionGrants(@javax.annotation.Nullable final java.util.List<OAuth2PermissionGrant> value) {
-        this._oauth2PermissionGrants = value;
+        this.oauth2PermissionGrants = value;
     }
     /**
      * Sets the officeLocation property value. The office location in the user's place of business. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the officeLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeLocation(@javax.annotation.Nullable final String value) {
-        this._officeLocation = value;
+        this.officeLocation = value;
     }
     /**
      * Sets the onenote property value. The onenote property
      * @param value Value to set for the onenote property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnenote(@javax.annotation.Nullable final Onenote value) {
-        this._onenote = value;
+        this.onenote = value;
     }
     /**
      * Sets the onlineMeetings property value. The onlineMeetings property
      * @param value Value to set for the onlineMeetings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineMeetings(@javax.annotation.Nullable final java.util.List<OnlineMeeting> value) {
-        this._onlineMeetings = value;
+        this.onlineMeetings = value;
     }
     /**
      * Sets the onPremisesDistinguishedName property value. Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
      * @param value Value to set for the onPremisesDistinguishedName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesDistinguishedName(@javax.annotation.Nullable final String value) {
-        this._onPremisesDistinguishedName = value;
+        this.onPremisesDistinguishedName = value;
     }
     /**
      * Sets the onPremisesDomainName property value. Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
      * @param value Value to set for the onPremisesDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesDomainName(@javax.annotation.Nullable final String value) {
-        this._onPremisesDomainName = value;
+        this.onPremisesDomainName = value;
     }
     /**
      * Sets the onPremisesExtensionAttributes property value. Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
      * @param value Value to set for the onPremisesExtensionAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesExtensionAttributes(@javax.annotation.Nullable final OnPremisesExtensionAttributes value) {
-        this._onPremisesExtensionAttributes = value;
+        this.onPremisesExtensionAttributes = value;
     }
     /**
      * Sets the onPremisesImmutableId property value. This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Note: The $ and _ characters cannot be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in).
      * @param value Value to set for the onPremisesImmutableId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesImmutableId(@javax.annotation.Nullable final String value) {
-        this._onPremisesImmutableId = value;
+        this.onPremisesImmutableId = value;
     }
     /**
      * Sets the onPremisesLastSyncDateTime property value. Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, in).
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._onPremisesLastSyncDateTime = value;
+        this.onPremisesLastSyncDateTime = value;
     }
     /**
      * Sets the onPremisesProvisioningErrors property value. Errors when using Microsoft synchronization product during provisioning.  Supports $filter (eq, not, ge, le).
      * @param value Value to set for the onPremisesProvisioningErrors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesProvisioningErrors(@javax.annotation.Nullable final java.util.List<OnPremisesProvisioningError> value) {
-        this._onPremisesProvisioningErrors = value;
+        this.onPremisesProvisioningErrors = value;
     }
     /**
      * Sets the onPremisesSamAccountName property value. Contains the on-premises sAMAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
      * @param value Value to set for the onPremisesSamAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSamAccountName(@javax.annotation.Nullable final String value) {
-        this._onPremisesSamAccountName = value;
+        this.onPremisesSamAccountName = value;
     }
     /**
      * Sets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Supports $filter (eq including on null values).
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSecurityIdentifier(@javax.annotation.Nullable final String value) {
-        this._onPremisesSecurityIdentifier = value;
+        this.onPremisesSecurityIdentifier = value;
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._onPremisesSyncEnabled = value;
+        this.onPremisesSyncEnabled = value;
     }
     /**
      * Sets the onPremisesUserPrincipalName property value. Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith).
      * @param value Value to set for the onPremisesUserPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._onPremisesUserPrincipalName = value;
+        this.onPremisesUserPrincipalName = value;
     }
     /**
-     * Sets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
+     * Sets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @param value Value to set for the otherMails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOtherMails(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._otherMails = value;
+        this.otherMails = value;
     }
     /**
      * Sets the outlook property value. Selective Outlook services available to the user. Read-only. Nullable.
      * @param value Value to set for the outlook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutlook(@javax.annotation.Nullable final OutlookUser value) {
-        this._outlook = value;
+        this.outlook = value;
     }
     /**
      * Sets the ownedDevices property value. Devices that are owned by the user. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the ownedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnedDevices(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._ownedDevices = value;
+        this.ownedDevices = value;
     }
     /**
-     * Sets the ownedObjects property value. Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
+     * Sets the ownedObjects property value. Directory objects that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param value Value to set for the ownedObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._ownedObjects = value;
+        this.ownedObjects = value;
     }
     /**
      * Sets the passwordPolicies property value. Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. For more information on the default password policies, see Azure AD pasword policies. Supports $filter (ne, not, and eq on null values).
      * @param value Value to set for the passwordPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPolicies(@javax.annotation.Nullable final String value) {
-        this._passwordPolicies = value;
+        this.passwordPolicies = value;
     }
     /**
-     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Supports $filter (eq, ne, not, in, and eq on null values).
      * @param value Value to set for the passwordProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordProfile(@javax.annotation.Nullable final PasswordProfile value) {
-        this._passwordProfile = value;
+        this.passwordProfile = value;
     }
     /**
      * Sets the pastProjects property value. A list for the user to enumerate their past projects. Returned only on $select.
      * @param value Value to set for the pastProjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPastProjects(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._pastProjects = value;
+        this.pastProjects = value;
     }
     /**
      * Sets the pendingAccessReviewInstances property value. Navigation property to get list of access reviews pending approval by reviewer.
      * @param value Value to set for the pendingAccessReviewInstances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingAccessReviewInstances(@javax.annotation.Nullable final java.util.List<AccessReviewInstance> value) {
-        this._pendingAccessReviewInstances = value;
+        this.pendingAccessReviewInstances = value;
     }
     /**
      * Sets the people property value. Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
      * @param value Value to set for the people property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeople(@javax.annotation.Nullable final java.util.List<Person> value) {
-        this._people = value;
+        this.people = value;
     }
     /**
      * Sets the photo property value. The user's profile photo. Read-only.
      * @param value Value to set for the photo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoto(@javax.annotation.Nullable final ProfilePhoto value) {
-        this._photo = value;
+        this.photo = value;
     }
     /**
      * Sets the photos property value. The photos property
      * @param value Value to set for the photos property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhotos(@javax.annotation.Nullable final java.util.List<ProfilePhoto> value) {
-        this._photos = value;
+        this.photos = value;
     }
     /**
      * Sets the planner property value. Selective Planner services available to the user. Read-only. Nullable.
      * @param value Value to set for the planner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlanner(@javax.annotation.Nullable final PlannerUser value) {
-        this._planner = value;
+        this.planner = value;
     }
     /**
      * Sets the postalCode property value. The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the postalCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostalCode(@javax.annotation.Nullable final String value) {
-        this._postalCode = value;
+        this.postalCode = value;
     }
     /**
      * Sets the preferredDataLocation property value. The preferred data location for the user. For more information, see OneDrive Online Multi-Geo.
      * @param value Value to set for the preferredDataLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredDataLocation(@javax.annotation.Nullable final String value) {
-        this._preferredDataLocation = value;
+        this.preferredDataLocation = value;
     }
     /**
      * Sets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example en-US. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the preferredLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredLanguage(@javax.annotation.Nullable final String value) {
-        this._preferredLanguage = value;
+        this.preferredLanguage = value;
     }
     /**
      * Sets the preferredName property value. The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select.
      * @param value Value to set for the preferredName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredName(@javax.annotation.Nullable final String value) {
-        this._preferredName = value;
+        this.preferredName = value;
     }
     /**
      * Sets the presence property value. The presence property
      * @param value Value to set for the presence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPresence(@javax.annotation.Nullable final Presence value) {
-        this._presence = value;
+        this.presence = value;
     }
     /**
      * Sets the print property value. The print property
      * @param value Value to set for the print property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrint(@javax.annotation.Nullable final UserPrint value) {
-        this._print = value;
+        this.print = value;
     }
     /**
      * Sets the profile property value. Represents properties that are descriptive of a user in a tenant.
      * @param value Value to set for the profile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfile(@javax.annotation.Nullable final Profile value) {
-        this._profile = value;
+        this.profile = value;
     }
     /**
      * Sets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable. Supports $filter (eq, not, ge, le).
      * @param value Value to set for the provisionedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisionedPlans(@javax.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
-        this._provisionedPlans = value;
+        this.provisionedPlans = value;
     }
     /**
-     * Sets the proxyAddresses property value. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
+     * Sets the proxyAddresses property value. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
      * @param value Value to set for the proxyAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._proxyAddresses = value;
+        this.proxyAddresses = value;
     }
     /**
      * Sets the refreshTokensValidFromDateTime property value. Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use invalidateAllRefreshTokens to reset.
      * @param value Value to set for the refreshTokensValidFromDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRefreshTokensValidFromDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._refreshTokensValidFromDateTime = value;
+        this.refreshTokensValidFromDateTime = value;
     }
     /**
      * Sets the registeredDevices property value. Devices that are registered for the user. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the registeredDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegisteredDevices(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._registeredDevices = value;
+        this.registeredDevices = value;
     }
     /**
      * Sets the responsibilities property value. A list for the user to enumerate their responsibilities. Returned only on $select.
      * @param value Value to set for the responsibilities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponsibilities(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._responsibilities = value;
+        this.responsibilities = value;
     }
     /**
      * Sets the schools property value. A list for the user to enumerate the schools they have attended. Returned only on $select.
      * @param value Value to set for the schools property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchools(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._schools = value;
+        this.schools = value;
     }
     /**
      * Sets the scopedRoleMemberOf property value. The scoped-role administrative unit memberships for this user. Read-only. Nullable.
      * @param value Value to set for the scopedRoleMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopedRoleMemberOf(@javax.annotation.Nullable final java.util.List<ScopedRoleMembership> value) {
-        this._scopedRoleMemberOf = value;
+        this.scopedRoleMemberOf = value;
     }
     /**
      * Sets the security property value. The security property
      * @param value Value to set for the security property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurity(@javax.annotation.Nullable final Security value) {
-        this._security = value;
+        this.security = value;
     }
     /**
      * Sets the securityIdentifier property value. Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
      * @param value Value to set for the securityIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityIdentifier(@javax.annotation.Nullable final String value) {
-        this._securityIdentifier = value;
+        this.securityIdentifier = value;
+    }
+    /**
+     * Sets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+     * @param value Value to set for the serviceProvisioningErrors property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setServiceProvisioningErrors(@javax.annotation.Nullable final java.util.List<ServiceProvisioningError> value) {
+        this.serviceProvisioningErrors = value;
     }
     /**
      * Sets the settings property value. The settings property
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final UserSettings value) {
-        this._settings = value;
+        this.settings = value;
     }
     /**
      * Sets the showInAddressList property value. Do not use in Microsoft Graph. Manage this property through the Microsoft 365 admin center instead. Represents whether the user should be included in the Outlook global address list. See Known issue.
      * @param value Value to set for the showInAddressList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowInAddressList(@javax.annotation.Nullable final Boolean value) {
-        this._showInAddressList = value;
+        this.showInAddressList = value;
     }
     /**
-     * Sets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but, not with any other filterable properties. Note: Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.Note: There's a known issue with retrieving this property.This property is not returned for a user who has never signed in or last signed in before April 2020.
+     * Sets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note:  Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.This property is not returned for a user who has never signed in or last signed in before April 2020.
      * @param value Value to set for the signInActivity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInActivity(@javax.annotation.Nullable final SignInActivity value) {
-        this._signInActivity = value;
+        this.signInActivity = value;
     }
     /**
      * Sets the signInSessionsValidFromDateTime property value. Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
      * @param value Value to set for the signInSessionsValidFromDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInSessionsValidFromDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._signInSessionsValidFromDateTime = value;
+        this.signInSessionsValidFromDateTime = value;
     }
     /**
      * Sets the skills property value. A list for the user to enumerate their skills. Returned only on $select.
      * @param value Value to set for the skills property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkills(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._skills = value;
+        this.skills = value;
     }
     /**
      * Sets the state property value. The state or province in the user's address. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the streetAddress property value. The street address of the user's place of business. Maximum length is 1024 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the streetAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStreetAddress(@javax.annotation.Nullable final String value) {
-        this._streetAddress = value;
+        this.streetAddress = value;
     }
     /**
      * Sets the surname property value. The user's surname (family name or last name). Maximum length is 64 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the surname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurname(@javax.annotation.Nullable final String value) {
-        this._surname = value;
-    }
-    /**
-     * Sets the tasks property value. The tasks property
-     * @param value Value to set for the tasks property.
-     * @return a void
-     */
-    public void setTasks(@javax.annotation.Nullable final Tasks value) {
-        this._tasks = value;
+        this.surname = value;
     }
     /**
      * Sets the teamwork property value. A container for Microsoft Teams features available for the user. Read-only. Nullable.
      * @param value Value to set for the teamwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamwork(@javax.annotation.Nullable final UserTeamwork value) {
-        this._teamwork = value;
+        this.teamwork = value;
     }
     /**
      * Sets the todo property value. Represents the To Do services available to a user.
      * @param value Value to set for the todo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTodo(@javax.annotation.Nullable final Todo value) {
-        this._todo = value;
+        this.todo = value;
     }
     /**
      * Sets the transitiveMemberOf property value. The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._transitiveMemberOf = value;
+        this.transitiveMemberOf = value;
     }
     /**
      * Sets the transitiveReports property value. The transitive reports for a user. Read-only.
      * @param value Value to set for the transitiveReports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveReports(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._transitiveReports = value;
+        this.transitiveReports = value;
     }
     /**
      * Sets the usageLocation property value. A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @param value Value to set for the usageLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsageLocation(@javax.annotation.Nullable final String value) {
-        this._usageLocation = value;
+        this.usageLocation = value;
     }
     /**
      * Sets the usageRights property value. Represents the usage rights a user has been granted.
      * @param value Value to set for the usageRights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsageRights(@javax.annotation.Nullable final java.util.List<UsageRight> value) {
-        this._usageRights = value;
+        this.usageRights = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property cannot contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, ' . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderBy.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
     /**
      * Sets the userType property value. A String value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?
      * @param value Value to set for the userType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserType(@javax.annotation.Nullable final String value) {
-        this._userType = value;
+        this.userType = value;
     }
     /**
      * Sets the windowsInformationProtectionDeviceRegistrations property value. Zero or more WIP device registrations that belong to the user.
      * @param value Value to set for the windowsInformationProtectionDeviceRegistrations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsInformationProtectionDeviceRegistrations(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionDeviceRegistration> value) {
-        this._windowsInformationProtectionDeviceRegistrations = value;
+        this.windowsInformationProtectionDeviceRegistrations = value;
     }
 }

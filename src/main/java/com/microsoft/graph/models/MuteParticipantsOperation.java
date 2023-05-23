@@ -3,20 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MuteParticipantsOperation extends CommsOperation implements Parsable {
     /** The participants property */
-    private java.util.List<String> _participants;
+    private java.util.List<String> participants;
     /**
      * Instantiates a new MuteParticipantsOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MuteParticipantsOperation() {
         super();
-        this.setOdataType("#microsoft.graph.muteParticipantsOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +29,13 @@ public class MuteParticipantsOperation extends CommsOperation implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MuteParticipantsOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the participants property value. The participants property
@@ -45,13 +43,14 @@ public class MuteParticipantsOperation extends CommsOperation implements Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<String> getParticipants() {
-        return this._participants;
+        return this.participants;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +61,8 @@ public class MuteParticipantsOperation extends CommsOperation implements Parsabl
      * @param value Value to set for the participants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._participants = value;
+        this.participants = value;
     }
 }

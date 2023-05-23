@@ -4,38 +4,37 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /** The list of group assignments of the profile. */
-    private java.util.List<WindowsFeatureUpdateProfileAssignment> _assignments;
+    private java.util.List<WindowsFeatureUpdateProfileAssignment> assignments;
     /** The date time that the profile was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Friendly display name of the quality update profile deployable content */
-    private String _deployableContentDisplayName;
+    private String deployableContentDisplayName;
     /** The description of the profile which is specified by the user. */
-    private String _description;
+    private String description;
     /** The display name of the profile. */
-    private String _displayName;
+    private String displayName;
     /** The last supported date for a feature update */
-    private OffsetDateTime _endOfSupportDate;
+    private OffsetDateTime endOfSupportDate;
     /** The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on. */
-    private String _featureUpdateVersion;
+    private String featureUpdateVersion;
     /** The date time that the profile was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** List of Scope Tags for this Feature Update entity. */
-    private java.util.List<String> _roleScopeTagIds;
+    private java.util.List<String> roleScopeTagIds;
     /** The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers. */
-    private WindowsUpdateRolloutSettings _rolloutSettings;
+    private WindowsUpdateRolloutSettings rolloutSettings;
     /**
      * Instantiates a new WindowsFeatureUpdateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsFeatureUpdateProfile() {
         super();
-        this.setOdataType("#microsoft.graph.windowsFeatureUpdateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +52,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsFeatureUpdateProfileAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the createdDateTime property value. The date time that the profile was created.
@@ -61,7 +60,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the deployableContentDisplayName property value. Friendly display name of the quality update profile deployable content
@@ -69,7 +68,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeployableContentDisplayName() {
-        return this._deployableContentDisplayName;
+        return this.deployableContentDisplayName;
     }
     /**
      * Gets the description property value. The description of the profile which is specified by the user.
@@ -77,7 +76,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name of the profile.
@@ -85,7 +84,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the endOfSupportDate property value. The last supported date for a feature update
@@ -93,7 +92,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndOfSupportDate() {
-        return this._endOfSupportDate;
+        return this.endOfSupportDate;
     }
     /**
      * Gets the featureUpdateVersion property value. The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
@@ -101,27 +100,26 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFeatureUpdateVersion() {
-        return this._featureUpdateVersion;
+        return this.featureUpdateVersion;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsFeatureUpdateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsFeatureUpdateProfileAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deployableContentDisplayName", (n) -> { currentObject.setDeployableContentDisplayName(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("endOfSupportDate", (n) -> { currentObject.setEndOfSupportDate(n.getOffsetDateTimeValue()); });
-            this.put("featureUpdateVersion", (n) -> { currentObject.setFeatureUpdateVersion(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("rolloutSettings", (n) -> { currentObject.setRolloutSettings(n.getObjectValue(WindowsUpdateRolloutSettings::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(WindowsFeatureUpdateProfileAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deployableContentDisplayName", (n) -> { this.setDeployableContentDisplayName(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("endOfSupportDate", (n) -> { this.setEndOfSupportDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("featureUpdateVersion", (n) -> { this.setFeatureUpdateVersion(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("rolloutSettings", (n) -> { this.setRolloutSettings(n.getObjectValue(WindowsUpdateRolloutSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date time that the profile was last modified.
@@ -129,7 +127,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Feature Update entity.
@@ -137,7 +135,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this._roleScopeTagIds;
+        return this.roleScopeTagIds;
     }
     /**
      * Gets the rolloutSettings property value. The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
@@ -145,13 +143,14 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WindowsUpdateRolloutSettings getRolloutSettings() {
-        return this._rolloutSettings;
+        return this.rolloutSettings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,79 +170,89 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<WindowsFeatureUpdateProfileAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. The date time that the profile was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the deployableContentDisplayName property value. Friendly display name of the quality update profile deployable content
      * @param value Value to set for the deployableContentDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployableContentDisplayName(@javax.annotation.Nullable final String value) {
-        this._deployableContentDisplayName = value;
+        this.deployableContentDisplayName = value;
     }
     /**
      * Sets the description property value. The description of the profile which is specified by the user.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the profile.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the endOfSupportDate property value. The last supported date for a feature update
      * @param value Value to set for the endOfSupportDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndOfSupportDate(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endOfSupportDate = value;
+        this.endOfSupportDate = value;
     }
     /**
      * Sets the featureUpdateVersion property value. The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
      * @param value Value to set for the featureUpdateVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureUpdateVersion(@javax.annotation.Nullable final String value) {
-        this._featureUpdateVersion = value;
+        this.featureUpdateVersion = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date time that the profile was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Feature Update entity.
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roleScopeTagIds = value;
+        this.roleScopeTagIds = value;
     }
     /**
      * Sets the rolloutSettings property value. The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
      * @param value Value to set for the rolloutSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRolloutSettings(@javax.annotation.Nullable final WindowsUpdateRolloutSettings value) {
-        this._rolloutSettings = value;
+        this.rolloutSettings = value;
     }
 }

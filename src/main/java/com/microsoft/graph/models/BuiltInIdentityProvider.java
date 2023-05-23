@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable {
     /** The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required. */
-    private String _identityProviderType;
+    private String identityProviderType;
+    /** The state property */
+    private IdentityProviderState state;
     /**
      * Instantiates a new BuiltInIdentityProvider and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BuiltInIdentityProvider() {
         super();
         this.setOdataType("#microsoft.graph.builtInIdentityProvider");
@@ -30,14 +32,14 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BuiltInIdentityProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("identityProviderType", (n) -> { currentObject.setIdentityProviderType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("identityProviderType", (n) -> { this.setIdentityProviderType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(IdentityProviderState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the identityProviderType property value. The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
@@ -45,24 +47,44 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
      */
     @javax.annotation.Nullable
     public String getIdentityProviderType() {
-        return this._identityProviderType;
+        return this.identityProviderType;
+    }
+    /**
+     * Gets the state property value. The state property
+     * @return a identityProviderState
+     */
+    @javax.annotation.Nullable
+    public IdentityProviderState getState() {
+        return this.state;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("identityProviderType", this.getIdentityProviderType());
+        writer.writeEnumValue("state", this.getState());
     }
     /**
      * Sets the identityProviderType property value. The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
      * @param value Value to set for the identityProviderType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityProviderType(@javax.annotation.Nullable final String value) {
-        this._identityProviderType = value;
+        this.identityProviderType = value;
+    }
+    /**
+     * Sets the state property value. The state property
+     * @param value Value to set for the state property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setState(@javax.annotation.Nullable final IdentityProviderState value) {
+        this.state = value;
     }
 }

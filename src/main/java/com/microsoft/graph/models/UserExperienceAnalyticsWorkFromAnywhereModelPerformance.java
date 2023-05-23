@@ -3,36 +3,35 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity implements Parsable {
     /** The user experience work from anywhere's cloud identity score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _cloudIdentityScore;
+    private Double cloudIdentityScore;
     /** The user experience work from anywhere's cloud management score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _cloudManagementScore;
+    private Double cloudManagementScore;
     /** The user experience work from anywhere's cloud provisioning score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _cloudProvisioningScore;
+    private Double cloudProvisioningScore;
     /** The healthStatus property */
-    private UserExperienceAnalyticsHealthState _healthStatus;
+    private UserExperienceAnalyticsHealthState healthStatus;
     /** The user experience work from anywhere's manufacturer name of the devices. */
-    private String _manufacturer;
+    private String manufacturer;
     /** The user experience work from anywhere's model name of the devices. */
-    private String _model;
+    private String model;
     /** The user experience work from anywhere's devices count for the model. Valid values -2147483648 to 2147483647 */
-    private Integer _modelDeviceCount;
+    private Integer modelDeviceCount;
     /** The user experience work from anywhere windows score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _windowsScore;
+    private Double windowsScore;
     /** The user experience work from anywhere overall score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _workFromAnywhereScore;
+    private Double workFromAnywhereScore;
     /**
      * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereModelPerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereModelPerformance() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereModelPerformance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +49,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @javax.annotation.Nullable
     public Double getCloudIdentityScore() {
-        return this._cloudIdentityScore;
+        return this.cloudIdentityScore;
     }
     /**
      * Gets the cloudManagementScore property value. The user experience work from anywhere's cloud management score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -58,7 +57,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @javax.annotation.Nullable
     public Double getCloudManagementScore() {
-        return this._cloudManagementScore;
+        return this.cloudManagementScore;
     }
     /**
      * Gets the cloudProvisioningScore property value. The user experience work from anywhere's cloud provisioning score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -66,26 +65,25 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @javax.annotation.Nullable
     public Double getCloudProvisioningScore() {
-        return this._cloudProvisioningScore;
+        return this.cloudProvisioningScore;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsWorkFromAnywhereModelPerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("cloudIdentityScore", (n) -> { currentObject.setCloudIdentityScore(n.getDoubleValue()); });
-            this.put("cloudManagementScore", (n) -> { currentObject.setCloudManagementScore(n.getDoubleValue()); });
-            this.put("cloudProvisioningScore", (n) -> { currentObject.setCloudProvisioningScore(n.getDoubleValue()); });
-            this.put("healthStatus", (n) -> { currentObject.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("modelDeviceCount", (n) -> { currentObject.setModelDeviceCount(n.getIntegerValue()); });
-            this.put("windowsScore", (n) -> { currentObject.setWindowsScore(n.getDoubleValue()); });
-            this.put("workFromAnywhereScore", (n) -> { currentObject.setWorkFromAnywhereScore(n.getDoubleValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("cloudIdentityScore", (n) -> { this.setCloudIdentityScore(n.getDoubleValue()); });
+        deserializerMap.put("cloudManagementScore", (n) -> { this.setCloudManagementScore(n.getDoubleValue()); });
+        deserializerMap.put("cloudProvisioningScore", (n) -> { this.setCloudProvisioningScore(n.getDoubleValue()); });
+        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("modelDeviceCount", (n) -> { this.setModelDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("windowsScore", (n) -> { this.setWindowsScore(n.getDoubleValue()); });
+        deserializerMap.put("workFromAnywhereScore", (n) -> { this.setWorkFromAnywhereScore(n.getDoubleValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
@@ -93,7 +91,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
-        return this._healthStatus;
+        return this.healthStatus;
     }
     /**
      * Gets the manufacturer property value. The user experience work from anywhere's manufacturer name of the devices.
@@ -101,7 +99,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the model property value. The user experience work from anywhere's model name of the devices.
@@ -109,7 +107,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Gets the modelDeviceCount property value. The user experience work from anywhere's devices count for the model. Valid values -2147483648 to 2147483647
@@ -117,7 +115,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @javax.annotation.Nullable
     public Integer getModelDeviceCount() {
-        return this._modelDeviceCount;
+        return this.modelDeviceCount;
     }
     /**
      * Gets the windowsScore property value. The user experience work from anywhere windows score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -125,7 +123,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @javax.annotation.Nullable
     public Double getWindowsScore() {
-        return this._windowsScore;
+        return this.windowsScore;
     }
     /**
      * Gets the workFromAnywhereScore property value. The user experience work from anywhere overall score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -133,13 +131,14 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      */
     @javax.annotation.Nullable
     public Double getWorkFromAnywhereScore() {
-        return this._workFromAnywhereScore;
+        return this.workFromAnywhereScore;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,71 +157,80 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
      * @param value Value to set for the cloudIdentityScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudIdentityScore(@javax.annotation.Nullable final Double value) {
-        this._cloudIdentityScore = value;
+        this.cloudIdentityScore = value;
     }
     /**
      * Sets the cloudManagementScore property value. The user experience work from anywhere's cloud management score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudManagementScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudManagementScore(@javax.annotation.Nullable final Double value) {
-        this._cloudManagementScore = value;
+        this.cloudManagementScore = value;
     }
     /**
      * Sets the cloudProvisioningScore property value. The user experience work from anywhere's cloud provisioning score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the cloudProvisioningScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudProvisioningScore(@javax.annotation.Nullable final Double value) {
-        this._cloudProvisioningScore = value;
+        this.cloudProvisioningScore = value;
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
-        this._healthStatus = value;
+        this.healthStatus = value;
     }
     /**
      * Sets the manufacturer property value. The user experience work from anywhere's manufacturer name of the devices.
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the model property value. The user experience work from anywhere's model name of the devices.
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
      * Sets the modelDeviceCount property value. The user experience work from anywhere's devices count for the model. Valid values -2147483648 to 2147483647
      * @param value Value to set for the modelDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModelDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._modelDeviceCount = value;
+        this.modelDeviceCount = value;
     }
     /**
      * Sets the windowsScore property value. The user experience work from anywhere windows score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the windowsScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsScore(@javax.annotation.Nullable final Double value) {
-        this._windowsScore = value;
+        this.windowsScore = value;
     }
     /**
      * Sets the workFromAnywhereScore property value. The user experience work from anywhere overall score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the workFromAnywhereScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkFromAnywhereScore(@javax.annotation.Nullable final Double value) {
-        this._workFromAnywhereScore = value;
+        this.workFromAnywhereScore = value;
     }
 }

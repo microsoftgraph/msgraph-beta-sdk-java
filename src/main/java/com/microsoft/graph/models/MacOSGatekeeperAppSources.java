@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** App source options for macOS Gatekeeper. */
 public enum MacOSGatekeeperAppSources implements ValuedEnum {
     /** Device default value, no intent. */
     NotConfigured("notConfigured"),

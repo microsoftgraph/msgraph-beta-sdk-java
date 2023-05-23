@@ -1,37 +1,34 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AccessPackageMultipleChoiceQuestion;
-import com.microsoft.graph.models.AccessPackageTextInputQuestion;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** ID of the question. */
-    private String _id;
+    private String id;
     /** Specifies whether the requestor is allowed to edit answers to questions. */
-    private Boolean _isAnswerEditable;
+    private Boolean isAnswerEditable;
     /** Whether the requestor is required to supply an answer or not. */
-    private Boolean _isRequired;
+    private Boolean isRequired;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Relative position of this question when displaying a list of questions to the requestor. */
-    private Integer _sequence;
+    private Integer sequence;
     /** The text of the question to show to the requestor. */
-    private AccessPackageLocalizedContent _text;
+    private AccessPackageLocalizedContent text;
     /**
      * Instantiates a new accessPackageQuestion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageQuestion() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessPackageQuestion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,23 +54,22 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageQuestion currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("isAnswerEditable", (n) -> { currentObject.setIsAnswerEditable(n.getBooleanValue()); });
-            this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sequence", (n) -> { currentObject.setSequence(n.getIntegerValue()); });
-            this.put("text", (n) -> { currentObject.setText(n.getObjectValue(AccessPackageLocalizedContent::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("isAnswerEditable", (n) -> { this.setIsAnswerEditable(n.getBooleanValue()); });
+        deserializerMap.put("isRequired", (n) -> { this.setIsRequired(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sequence", (n) -> { this.setSequence(n.getIntegerValue()); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(AccessPackageLocalizedContent::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. ID of the question.
@@ -81,7 +77,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the isAnswerEditable property value. Specifies whether the requestor is allowed to edit answers to questions.
@@ -89,7 +85,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsAnswerEditable() {
-        return this._isAnswerEditable;
+        return this.isAnswerEditable;
     }
     /**
      * Gets the isRequired property value. Whether the requestor is required to supply an answer or not.
@@ -97,7 +93,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsRequired() {
-        return this._isRequired;
+        return this.isRequired;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -105,7 +101,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
@@ -113,7 +109,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getSequence() {
-        return this._sequence;
+        return this.sequence;
     }
     /**
      * Gets the text property value. The text of the question to show to the requestor.
@@ -121,13 +117,14 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageLocalizedContent getText() {
-        return this._text;
+        return this.text;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
@@ -143,55 +140,62 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the id property value. ID of the question.
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the isAnswerEditable property value. Specifies whether the requestor is allowed to edit answers to questions.
      * @param value Value to set for the isAnswerEditable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAnswerEditable(@javax.annotation.Nullable final Boolean value) {
-        this._isAnswerEditable = value;
+        this.isAnswerEditable = value;
     }
     /**
      * Sets the isRequired property value. Whether the requestor is required to supply an answer or not.
      * @param value Value to set for the isRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
-        this._isRequired = value;
+        this.isRequired = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
      * @param value Value to set for the sequence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSequence(@javax.annotation.Nullable final Integer value) {
-        this._sequence = value;
+        this.sequence = value;
     }
     /**
      * Sets the text property value. The text of the question to show to the requestor.
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final AccessPackageLocalizedContent value) {
-        this._text = value;
+        this.text = value;
     }
 }

@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InsightsSettings extends Entity implements Parsable {
     /** The ID of an Azure Active Directory group, of which the specified type of insights are disabled for its members. Default is empty. Optional. */
-    private String _disabledForGroup;
+    private String disabledForGroup;
     /** true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional. */
-    private Boolean _isEnabledInOrganization;
+    private Boolean isEnabledInOrganization;
     /**
      * Instantiates a new insightsSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InsightsSettings() {
         super();
-        this.setOdataType("#microsoft.graph.insightsSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,19 +35,18 @@ public class InsightsSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisabledForGroup() {
-        return this._disabledForGroup;
+        return this.disabledForGroup;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InsightsSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("disabledForGroup", (n) -> { currentObject.setDisabledForGroup(n.getStringValue()); });
-            this.put("isEnabledInOrganization", (n) -> { currentObject.setIsEnabledInOrganization(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("disabledForGroup", (n) -> { this.setDisabledForGroup(n.getStringValue()); });
+        deserializerMap.put("isEnabledInOrganization", (n) -> { this.setIsEnabledInOrganization(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabledInOrganization property value. true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
@@ -56,13 +54,14 @@ public class InsightsSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabledInOrganization() {
-        return this._isEnabledInOrganization;
+        return this.isEnabledInOrganization;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class InsightsSettings extends Entity implements Parsable {
      * @param value Value to set for the disabledForGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisabledForGroup(@javax.annotation.Nullable final String value) {
-        this._disabledForGroup = value;
+        this.disabledForGroup = value;
     }
     /**
      * Sets the isEnabledInOrganization property value. true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
      * @param value Value to set for the isEnabledInOrganization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabledInOrganization(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabledInOrganization = value;
+        this.isEnabledInOrganization = value;
     }
 }

@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Data type for a configuration item inside an Android for Work application's custom configuration schema */
 public enum AndroidForWorkAppConfigurationSchemaItemDataType implements ValuedEnum {
     Bool("bool"),
     Integer("integer"),

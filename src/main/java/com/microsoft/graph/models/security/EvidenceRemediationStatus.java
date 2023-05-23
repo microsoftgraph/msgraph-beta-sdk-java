@@ -3,18 +3,12 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum EvidenceRemediationStatus implements ValuedEnum {
     None("none"),
     Remediated("remediated"),
     Prevented("prevented"),
     Blocked("blocked"),
     NotFound("notFound"),
-    Active("active"),
-    PendingApproval("pendingApproval"),
-    Declined("declined"),
-    NotRemediated("notRemediated"),
-    Running("running"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     EvidenceRemediationStatus(final String value) {
@@ -31,11 +25,6 @@ public enum EvidenceRemediationStatus implements ValuedEnum {
             case "prevented": return Prevented;
             case "blocked": return Blocked;
             case "notFound": return NotFound;
-            case "active": return Active;
-            case "pendingApproval": return PendingApproval;
-            case "declined": return Declined;
-            case "notRemediated": return NotRemediated;
-            case "running": return Running;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

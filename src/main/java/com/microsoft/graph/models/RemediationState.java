@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Indicates the type of execution status of the device management script. */
 public enum RemediationState implements ValuedEnum {
     /** Unknown result. */
     Unknown("unknown"),
@@ -14,7 +14,9 @@ public enum RemediationState implements ValuedEnum {
     /** Remediation script executed successfully but failed to remediated the device state */
     RemediationFailed("remediationFailed"),
     /** Remediation script execution encountered and error or timed out */
-    ScriptError("scriptError");
+    ScriptError("scriptError"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     RemediationState(final String value) {
         this.value = value;
@@ -30,6 +32,7 @@ public enum RemediationState implements ValuedEnum {
             case "success": return Success;
             case "remediationFailed": return RemediationFailed;
             case "scriptError": return ScriptError;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

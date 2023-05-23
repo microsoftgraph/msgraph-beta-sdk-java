@@ -3,44 +3,43 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserExperienceAnalyticsResourcePerformance extends Entity implements Parsable {
     /** AverageSpikeTimeScore of a device or a model type. Valid values 0 to 100 */
-    private Integer _averageSpikeTimeScore;
+    private Integer averageSpikeTimeScore;
     /** CPU spike time in percentage. Valid values 0 to 100 */
-    private Double _cpuSpikeTimePercentage;
+    private Double cpuSpikeTimePercentage;
     /** Threshold of cpuSpikeTimeScore. Valid values 0 to 100 */
-    private Double _cpuSpikeTimePercentageThreshold;
+    private Double cpuSpikeTimePercentageThreshold;
     /** The user experience analytics device CPU spike time score. Valid values 0 to 100 */
-    private Integer _cpuSpikeTimeScore;
+    private Integer cpuSpikeTimeScore;
     /** User experience analytics summarized device count. */
-    private Long _deviceCount;
+    private Long deviceCount;
     /** The id of the device. */
-    private String _deviceId;
+    private String deviceId;
     /** The name of the device. */
-    private String _deviceName;
+    private String deviceName;
     /** Resource performance score of a specific device. Valid values 0 to 100 */
-    private Integer _deviceResourcePerformanceScore;
+    private Integer deviceResourcePerformanceScore;
     /** The user experience analytics device manufacturer. */
-    private String _manufacturer;
+    private String manufacturer;
     /** The user experience analytics device model. */
-    private String _model;
+    private String model;
     /** RAM spike time in percentage. Valid values 0 to 100 */
-    private Double _ramSpikeTimePercentage;
+    private Double ramSpikeTimePercentage;
     /** Threshold of ramSpikeTimeScore. Valid values 0 to 100 */
-    private Double _ramSpikeTimePercentageThreshold;
+    private Double ramSpikeTimePercentageThreshold;
     /** The user experience analytics device RAM spike time score. Valid values 0 to 100 */
-    private Integer _ramSpikeTimeScore;
+    private Integer ramSpikeTimeScore;
     /**
      * Instantiates a new UserExperienceAnalyticsResourcePerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsResourcePerformance() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsResourcePerformance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +57,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public Integer getAverageSpikeTimeScore() {
-        return this._averageSpikeTimeScore;
+        return this.averageSpikeTimeScore;
     }
     /**
      * Gets the cpuSpikeTimePercentage property value. CPU spike time in percentage. Valid values 0 to 100
@@ -66,7 +65,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public Double getCpuSpikeTimePercentage() {
-        return this._cpuSpikeTimePercentage;
+        return this.cpuSpikeTimePercentage;
     }
     /**
      * Gets the cpuSpikeTimePercentageThreshold property value. Threshold of cpuSpikeTimeScore. Valid values 0 to 100
@@ -74,7 +73,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public Double getCpuSpikeTimePercentageThreshold() {
-        return this._cpuSpikeTimePercentageThreshold;
+        return this.cpuSpikeTimePercentageThreshold;
     }
     /**
      * Gets the cpuSpikeTimeScore property value. The user experience analytics device CPU spike time score. Valid values 0 to 100
@@ -82,7 +81,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public Integer getCpuSpikeTimeScore() {
-        return this._cpuSpikeTimeScore;
+        return this.cpuSpikeTimeScore;
     }
     /**
      * Gets the deviceCount property value. User experience analytics summarized device count.
@@ -90,7 +89,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public Long getDeviceCount() {
-        return this._deviceCount;
+        return this.deviceCount;
     }
     /**
      * Gets the deviceId property value. The id of the device.
@@ -98,7 +97,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the deviceName property value. The name of the device.
@@ -106,7 +105,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * Gets the deviceResourcePerformanceScore property value. Resource performance score of a specific device. Valid values 0 to 100
@@ -114,30 +113,29 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public Integer getDeviceResourcePerformanceScore() {
-        return this._deviceResourcePerformanceScore;
+        return this.deviceResourcePerformanceScore;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsResourcePerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("averageSpikeTimeScore", (n) -> { currentObject.setAverageSpikeTimeScore(n.getIntegerValue()); });
-            this.put("cpuSpikeTimePercentage", (n) -> { currentObject.setCpuSpikeTimePercentage(n.getDoubleValue()); });
-            this.put("cpuSpikeTimePercentageThreshold", (n) -> { currentObject.setCpuSpikeTimePercentageThreshold(n.getDoubleValue()); });
-            this.put("cpuSpikeTimeScore", (n) -> { currentObject.setCpuSpikeTimeScore(n.getIntegerValue()); });
-            this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getLongValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("deviceResourcePerformanceScore", (n) -> { currentObject.setDeviceResourcePerformanceScore(n.getIntegerValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("ramSpikeTimePercentage", (n) -> { currentObject.setRamSpikeTimePercentage(n.getDoubleValue()); });
-            this.put("ramSpikeTimePercentageThreshold", (n) -> { currentObject.setRamSpikeTimePercentageThreshold(n.getDoubleValue()); });
-            this.put("ramSpikeTimeScore", (n) -> { currentObject.setRamSpikeTimeScore(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("averageSpikeTimeScore", (n) -> { this.setAverageSpikeTimeScore(n.getIntegerValue()); });
+        deserializerMap.put("cpuSpikeTimePercentage", (n) -> { this.setCpuSpikeTimePercentage(n.getDoubleValue()); });
+        deserializerMap.put("cpuSpikeTimePercentageThreshold", (n) -> { this.setCpuSpikeTimePercentageThreshold(n.getDoubleValue()); });
+        deserializerMap.put("cpuSpikeTimeScore", (n) -> { this.setCpuSpikeTimeScore(n.getIntegerValue()); });
+        deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getLongValue()); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("deviceResourcePerformanceScore", (n) -> { this.setDeviceResourcePerformanceScore(n.getIntegerValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("ramSpikeTimePercentage", (n) -> { this.setRamSpikeTimePercentage(n.getDoubleValue()); });
+        deserializerMap.put("ramSpikeTimePercentageThreshold", (n) -> { this.setRamSpikeTimePercentageThreshold(n.getDoubleValue()); });
+        deserializerMap.put("ramSpikeTimeScore", (n) -> { this.setRamSpikeTimeScore(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the manufacturer property value. The user experience analytics device manufacturer.
@@ -145,7 +143,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the model property value. The user experience analytics device model.
@@ -153,7 +151,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Gets the ramSpikeTimePercentage property value. RAM spike time in percentage. Valid values 0 to 100
@@ -161,7 +159,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public Double getRamSpikeTimePercentage() {
-        return this._ramSpikeTimePercentage;
+        return this.ramSpikeTimePercentage;
     }
     /**
      * Gets the ramSpikeTimePercentageThreshold property value. Threshold of ramSpikeTimeScore. Valid values 0 to 100
@@ -169,7 +167,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public Double getRamSpikeTimePercentageThreshold() {
-        return this._ramSpikeTimePercentageThreshold;
+        return this.ramSpikeTimePercentageThreshold;
     }
     /**
      * Gets the ramSpikeTimeScore property value. The user experience analytics device RAM spike time score. Valid values 0 to 100
@@ -177,13 +175,14 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     @javax.annotation.Nullable
     public Integer getRamSpikeTimeScore() {
-        return this._ramSpikeTimeScore;
+        return this.ramSpikeTimeScore;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -206,103 +205,116 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * @param value Value to set for the averageSpikeTimeScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageSpikeTimeScore(@javax.annotation.Nullable final Integer value) {
-        this._averageSpikeTimeScore = value;
+        this.averageSpikeTimeScore = value;
     }
     /**
      * Sets the cpuSpikeTimePercentage property value. CPU spike time in percentage. Valid values 0 to 100
      * @param value Value to set for the cpuSpikeTimePercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCpuSpikeTimePercentage(@javax.annotation.Nullable final Double value) {
-        this._cpuSpikeTimePercentage = value;
+        this.cpuSpikeTimePercentage = value;
     }
     /**
      * Sets the cpuSpikeTimePercentageThreshold property value. Threshold of cpuSpikeTimeScore. Valid values 0 to 100
      * @param value Value to set for the cpuSpikeTimePercentageThreshold property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCpuSpikeTimePercentageThreshold(@javax.annotation.Nullable final Double value) {
-        this._cpuSpikeTimePercentageThreshold = value;
+        this.cpuSpikeTimePercentageThreshold = value;
     }
     /**
      * Sets the cpuSpikeTimeScore property value. The user experience analytics device CPU spike time score. Valid values 0 to 100
      * @param value Value to set for the cpuSpikeTimeScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCpuSpikeTimeScore(@javax.annotation.Nullable final Integer value) {
-        this._cpuSpikeTimeScore = value;
+        this.cpuSpikeTimeScore = value;
     }
     /**
      * Sets the deviceCount property value. User experience analytics summarized device count.
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Long value) {
-        this._deviceCount = value;
+        this.deviceCount = value;
     }
     /**
      * Sets the deviceId property value. The id of the device.
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the deviceName property value. The name of the device.
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the deviceResourcePerformanceScore property value. Resource performance score of a specific device. Valid values 0 to 100
      * @param value Value to set for the deviceResourcePerformanceScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceResourcePerformanceScore(@javax.annotation.Nullable final Integer value) {
-        this._deviceResourcePerformanceScore = value;
+        this.deviceResourcePerformanceScore = value;
     }
     /**
      * Sets the manufacturer property value. The user experience analytics device manufacturer.
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the model property value. The user experience analytics device model.
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
      * Sets the ramSpikeTimePercentage property value. RAM spike time in percentage. Valid values 0 to 100
      * @param value Value to set for the ramSpikeTimePercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRamSpikeTimePercentage(@javax.annotation.Nullable final Double value) {
-        this._ramSpikeTimePercentage = value;
+        this.ramSpikeTimePercentage = value;
     }
     /**
      * Sets the ramSpikeTimePercentageThreshold property value. Threshold of ramSpikeTimeScore. Valid values 0 to 100
      * @param value Value to set for the ramSpikeTimePercentageThreshold property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRamSpikeTimePercentageThreshold(@javax.annotation.Nullable final Double value) {
-        this._ramSpikeTimePercentageThreshold = value;
+        this.ramSpikeTimePercentageThreshold = value;
     }
     /**
      * Sets the ramSpikeTimeScore property value. The user experience analytics device RAM spike time score. Valid values 0 to 100
      * @param value Value to set for the ramSpikeTimeScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRamSpikeTimeScore(@javax.annotation.Nullable final Integer value) {
-        this._ramSpikeTimeScore = value;
+        this.ramSpikeTimeScore = value;
     }
 }

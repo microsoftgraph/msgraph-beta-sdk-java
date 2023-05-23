@@ -4,22 +4,21 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the migrateToTemplate method. */
 public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The newTemplateId property */
-    private String _newTemplateId;
+    private String newTemplateId;
     /** The preserveCustomValues property */
-    private Boolean _preserveCustomValues;
+    private Boolean preserveCustomValues;
     /**
      * Instantiates a new migrateToTemplatePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MigrateToTemplatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -39,19 +38,18 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MigrateToTemplatePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("newTemplateId", (n) -> { currentObject.setNewTemplateId(n.getStringValue()); });
-            this.put("preserveCustomValues", (n) -> { currentObject.setPreserveCustomValues(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("newTemplateId", (n) -> { this.setNewTemplateId(n.getStringValue()); });
+        deserializerMap.put("preserveCustomValues", (n) -> { this.setPreserveCustomValues(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the newTemplateId property value. The newTemplateId property
@@ -59,7 +57,7 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public String getNewTemplateId() {
-        return this._newTemplateId;
+        return this.newTemplateId;
     }
     /**
      * Gets the preserveCustomValues property value. The preserveCustomValues property
@@ -67,13 +65,14 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public Boolean getPreserveCustomValues() {
-        return this._preserveCustomValues;
+        return this.preserveCustomValues;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("newTemplateId", this.getNewTemplateId());
@@ -85,23 +84,26 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the newTemplateId property value. The newTemplateId property
      * @param value Value to set for the newTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNewTemplateId(@javax.annotation.Nullable final String value) {
-        this._newTemplateId = value;
+        this.newTemplateId = value;
     }
     /**
      * Sets the preserveCustomValues property value. The preserveCustomValues property
      * @param value Value to set for the preserveCustomValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreserveCustomValues(@javax.annotation.Nullable final Boolean value) {
-        this._preserveCustomValues = value;
+        this.preserveCustomValues = value;
     }
 }

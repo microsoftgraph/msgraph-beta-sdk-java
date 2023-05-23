@@ -5,32 +5,31 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The assignedTo property */
-    private String _assignedTo;
+    private String assignedTo;
     /** The comment property */
-    private String _comment;
+    private String comment;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The state property */
-    private String _state;
+    private String state;
     /** The updatedBy property */
-    private String _updatedBy;
+    private String updatedBy;
     /** The updatedDateTime property */
-    private OffsetDateTime _updatedDateTime;
+    private OffsetDateTime updatedDateTime;
     /**
      * Instantiates a new secureScoreControlStateUpdate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecureScoreControlStateUpdate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.secureScoreControlStateUpdate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +47,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the assignedTo property value. The assignedTo property
@@ -56,7 +55,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getAssignedTo() {
-        return this._assignedTo;
+        return this.assignedTo;
     }
     /**
      * Gets the comment property value. The comment property
@@ -64,23 +63,22 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getComment() {
-        return this._comment;
+        return this.comment;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SecureScoreControlStateUpdate currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-            this.put("updatedBy", (n) -> { currentObject.setUpdatedBy(n.getStringValue()); });
-            this.put("updatedDateTime", (n) -> { currentObject.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
+        deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
+        deserializerMap.put("updatedBy", (n) -> { this.setUpdatedBy(n.getStringValue()); });
+        deserializerMap.put("updatedDateTime", (n) -> { this.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +86,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the state property value. The state property
@@ -96,7 +94,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the updatedBy property value. The updatedBy property
@@ -104,7 +102,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getUpdatedBy() {
-        return this._updatedBy;
+        return this.updatedBy;
     }
     /**
      * Gets the updatedDateTime property value. The updatedDateTime property
@@ -112,13 +110,14 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public OffsetDateTime getUpdatedDateTime() {
-        return this._updatedDateTime;
+        return this.updatedDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("assignedTo", this.getAssignedTo());
@@ -134,55 +133,62 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the assignedTo property value. The assignedTo property
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final String value) {
-        this._assignedTo = value;
+        this.assignedTo = value;
     }
     /**
      * Sets the comment property value. The comment property
      * @param value Value to set for the comment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final String value) {
-        this._comment = value;
+        this.comment = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the updatedBy property value. The updatedBy property
      * @param value Value to set for the updatedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdatedBy(@javax.annotation.Nullable final String value) {
-        this._updatedBy = value;
+        this.updatedBy = value;
     }
     /**
      * Sets the updatedDateTime property value. The updatedDateTime property
      * @param value Value to set for the updatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._updatedDateTime = value;
+        this.updatedDateTime = value;
     }
 }

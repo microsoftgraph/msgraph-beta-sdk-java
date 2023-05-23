@@ -4,28 +4,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MonitoringRule implements AdditionalDataHolder, Parsable {
     /** The action triggered when the threshold for the given signal is met. Possible values are: alertError, pauseDeployment, unknownFutureValue. */
-    private MonitoringAction _action;
+    private MonitoringAction action;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The signal to monitor. Possible values are: rollback, unknownFutureValue. */
-    private MonitoringSignal _signal;
+    private MonitoringSignal signal;
     /** The threshold for a signal at which to trigger action. An integer from 1 to 100 (inclusive). */
-    private Integer _threshold;
+    private Integer threshold;
     /**
      * Instantiates a new monitoringRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MonitoringRule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsUpdates.monitoringRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,7 +42,7 @@ public class MonitoringRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public MonitoringAction getAction() {
-        return this._action;
+        return this.action;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -51,21 +50,20 @@ public class MonitoringRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MonitoringRule currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(MonitoringAction.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("signal", (n) -> { currentObject.setSignal(n.getEnumValue(MonitoringSignal.class)); });
-            this.put("threshold", (n) -> { currentObject.setThreshold(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(MonitoringAction.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("signal", (n) -> { this.setSignal(n.getEnumValue(MonitoringSignal.class)); });
+        deserializerMap.put("threshold", (n) -> { this.setThreshold(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -73,7 +71,7 @@ public class MonitoringRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the signal property value. The signal to monitor. Possible values are: rollback, unknownFutureValue.
@@ -81,7 +79,7 @@ public class MonitoringRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public MonitoringSignal getSignal() {
-        return this._signal;
+        return this.signal;
     }
     /**
      * Gets the threshold property value. The threshold for a signal at which to trigger action. An integer from 1 to 100 (inclusive).
@@ -89,13 +87,14 @@ public class MonitoringRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getThreshold() {
-        return this._threshold;
+        return this.threshold;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
@@ -109,39 +108,44 @@ public class MonitoringRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final MonitoringAction value) {
-        this._action = value;
+        this.action = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the signal property value. The signal to monitor. Possible values are: rollback, unknownFutureValue.
      * @param value Value to set for the signal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignal(@javax.annotation.Nullable final MonitoringSignal value) {
-        this._signal = value;
+        this.signal = value;
     }
     /**
      * Sets the threshold property value. The threshold for a signal at which to trigger action. An integer from 1 to 100 (inclusive).
      * @param value Value to set for the threshold property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThreshold(@javax.annotation.Nullable final Integer value) {
-        this._threshold = value;
+        this.threshold = value;
     }
 }
