@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.identitygovernance.models.Workflow;
+import com.microsoft.graph.models.PrinterShare;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AttendeeBase;

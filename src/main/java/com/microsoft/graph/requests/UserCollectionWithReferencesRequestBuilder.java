@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.identitygovernance.models.Workflow;
+import com.microsoft.graph.models.PrinterShare;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AttendeeBase;
@@ -48,7 +48,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class UserCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<User, UserWithReferenceRequest, UserReferenceRequestBuilder, UserWithReferenceRequestBuilder, UserCollectionResponse, UserCollectionWithReferencesPage, UserCollectionReferenceRequest, UserCollectionReferenceRequestBuilder> {
 
     /**
-     * The request builder for this collection of Workflow
+     * The request builder for this collection of PrinterShare
      *
      * @param requestUrl     the request URL
      * @param client         the service client

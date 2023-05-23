@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AttributeDefinition;
-import com.microsoft.graph.models.MetadataEntry;
+import com.microsoft.graph.models.ObjectDefinitionMetadataEntry;
 
 
 import com.google.gson.JsonObject;
@@ -56,7 +56,7 @@ public class ObjectDefinition implements IJsonBackedObject {
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
 	@Nullable
-    public java.util.List<MetadataEntry> metadata;
+    public java.util.List<ObjectDefinitionMetadataEntry> metadata;
 
     /**
      * The Name.

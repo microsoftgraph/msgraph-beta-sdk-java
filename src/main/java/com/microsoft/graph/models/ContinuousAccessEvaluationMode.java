@@ -24,6 +24,10 @@ public enum ContinuousAccessEvaluationMode
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * strict Location
+    */
+    STRICT_LOCATION,
+    /**
     * For ContinuousAccessEvaluationMode values that were not expected from the service
     */
     UNEXPECTED_VALUE

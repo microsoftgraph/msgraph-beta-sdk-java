@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ApiApplication;
 import com.microsoft.graph.models.AppRole;
+import com.microsoft.graph.models.AuthenticationBehaviors;
 import com.microsoft.graph.models.Certification;
 import com.microsoft.graph.models.InformationalUrl;
 import com.microsoft.graph.models.KeyCredential;
@@ -77,6 +78,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AppRole> appRoles;
+
+    /**
+     * The Authentication Behaviors.
+     * 
+     */
+    @SerializedName(value = "authenticationBehaviors", alternate = {"AuthenticationBehaviors"})
+    @Expose
+	@Nullable
+    public AuthenticationBehaviors authenticationBehaviors;
 
     /**
      * The Certification.

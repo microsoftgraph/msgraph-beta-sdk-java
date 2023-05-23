@@ -29,7 +29,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
 
     /**
      * The Default Option Id.
-     * Default option for choice setting
+     * Default option for the choice setting.
      */
     @SerializedName(value = "defaultOptionId", alternate = {"DefaultOptionId"})
     @Expose
@@ -38,7 +38,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
 
     /**
      * The Options.
-     * Options for the setting that can be selected
+     * Options for the setting that can be selected.
      */
     @SerializedName(value = "options", alternate = {"Options"})
     @Expose

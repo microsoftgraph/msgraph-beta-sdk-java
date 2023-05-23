@@ -24,6 +24,10 @@ public enum LifecycleTaskCategory
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * mover
+    */
+    MOVER,
+    /**
     * For LifecycleTaskCategory values that were not expected from the service
     */
     UNEXPECTED_VALUE

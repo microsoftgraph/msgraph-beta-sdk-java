@@ -228,6 +228,14 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     UDP_CONNECTIVITY_CHECK_STUN_URL_NOT_ALLOW_LISTED,
     /**
+    * udp Connectivity Check Turn Url Not Allow Listed
+    */
+    UDP_CONNECTIVITY_CHECK_TURN_URL_NOT_ALLOW_LISTED,
+    /**
+    * udp Connectivity Check Urls Not Allow Listed
+    */
+    UDP_CONNECTIVITY_CHECK_URLS_NOT_ALLOW_LISTED,
+    /**
     * udp Connectivity Check Unknown Error
     */
     UDP_CONNECTIVITY_CHECK_UNKNOWN_ERROR,

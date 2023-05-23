@@ -24,6 +24,10 @@ public enum WorkflowTriggerTimeBasedAttribute
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * created Date Time
+    */
+    CREATED_DATE_TIME,
+    /**
     * For WorkflowTriggerTimeBasedAttribute values that were not expected from the service
     */
     UNEXPECTED_VALUE
