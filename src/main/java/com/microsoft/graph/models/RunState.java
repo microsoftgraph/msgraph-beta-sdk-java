@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Indicates the type of execution status of the device management script. */
 public enum RunState implements ValuedEnum {
     /** Unknown result. */
     Unknown("unknown"),

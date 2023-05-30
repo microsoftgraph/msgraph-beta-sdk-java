@@ -3,28 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrivilegedRoleSummary extends Entity implements Parsable {
-    /** The number of users that have the role assigned and the role is activated. */
-    private Integer _elevatedCount;
-    /** The number of users that have the role assigned but the role is deactivated. */
-    private Integer _managedCount;
-    /** true if the role activation requires MFA. false if the role activation doesn't require MFA. */
-    private Boolean _mfaEnabled;
-    /** Possible values are: ok, bad. The value depends on the ratio of (managedCount / usersCount). If the ratio is less than a predefined threshold, ok is returned. Otherwise, bad is returned. */
-    private RoleSummaryStatus _status;
-    /** The number of users that are assigned with the role. */
-    private Integer _usersCount;
+    /** The elevatedCount property */
+    private Integer elevatedCount;
+    /** The managedCount property */
+    private Integer managedCount;
+    /** The mfaEnabled property */
+    private Boolean mfaEnabled;
+    /** The status property */
+    private RoleSummaryStatus status;
+    /** The usersCount property */
+    private Integer usersCount;
     /**
      * Instantiates a new privilegedRoleSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivilegedRoleSummary() {
         super();
-        this.setOdataType("#microsoft.graph.privilegedRoleSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,65 +36,65 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
         return new PrivilegedRoleSummary();
     }
     /**
-     * Gets the elevatedCount property value. The number of users that have the role assigned and the role is activated.
+     * Gets the elevatedCount property value. The elevatedCount property
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getElevatedCount() {
-        return this._elevatedCount;
+        return this.elevatedCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrivilegedRoleSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("elevatedCount", (n) -> { currentObject.setElevatedCount(n.getIntegerValue()); });
-            this.put("managedCount", (n) -> { currentObject.setManagedCount(n.getIntegerValue()); });
-            this.put("mfaEnabled", (n) -> { currentObject.setMfaEnabled(n.getBooleanValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(RoleSummaryStatus.class)); });
-            this.put("usersCount", (n) -> { currentObject.setUsersCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("elevatedCount", (n) -> { this.setElevatedCount(n.getIntegerValue()); });
+        deserializerMap.put("managedCount", (n) -> { this.setManagedCount(n.getIntegerValue()); });
+        deserializerMap.put("mfaEnabled", (n) -> { this.setMfaEnabled(n.getBooleanValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RoleSummaryStatus.class)); });
+        deserializerMap.put("usersCount", (n) -> { this.setUsersCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the managedCount property value. The number of users that have the role assigned but the role is deactivated.
+     * Gets the managedCount property value. The managedCount property
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getManagedCount() {
-        return this._managedCount;
+        return this.managedCount;
     }
     /**
-     * Gets the mfaEnabled property value. true if the role activation requires MFA. false if the role activation doesn't require MFA.
+     * Gets the mfaEnabled property value. The mfaEnabled property
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getMfaEnabled() {
-        return this._mfaEnabled;
+        return this.mfaEnabled;
     }
     /**
-     * Gets the status property value. Possible values are: ok, bad. The value depends on the ratio of (managedCount / usersCount). If the ratio is less than a predefined threshold, ok is returned. Otherwise, bad is returned.
+     * Gets the status property value. The status property
      * @return a roleSummaryStatus
      */
     @javax.annotation.Nullable
     public RoleSummaryStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
-     * Gets the usersCount property value. The number of users that are assigned with the role.
+     * Gets the usersCount property value. The usersCount property
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getUsersCount() {
-        return this._usersCount;
+        return this.usersCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -106,43 +105,48 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
         writer.writeIntegerValue("usersCount", this.getUsersCount());
     }
     /**
-     * Sets the elevatedCount property value. The number of users that have the role assigned and the role is activated.
+     * Sets the elevatedCount property value. The elevatedCount property
      * @param value Value to set for the elevatedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setElevatedCount(@javax.annotation.Nullable final Integer value) {
-        this._elevatedCount = value;
+        this.elevatedCount = value;
     }
     /**
-     * Sets the managedCount property value. The number of users that have the role assigned but the role is deactivated.
+     * Sets the managedCount property value. The managedCount property
      * @param value Value to set for the managedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedCount(@javax.annotation.Nullable final Integer value) {
-        this._managedCount = value;
+        this.managedCount = value;
     }
     /**
-     * Sets the mfaEnabled property value. true if the role activation requires MFA. false if the role activation doesn't require MFA.
+     * Sets the mfaEnabled property value. The mfaEnabled property
      * @param value Value to set for the mfaEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._mfaEnabled = value;
+        this.mfaEnabled = value;
     }
     /**
-     * Sets the status property value. Possible values are: ok, bad. The value depends on the ratio of (managedCount / usersCount). If the ratio is less than a predefined threshold, ok is returned. Otherwise, bad is returned.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final RoleSummaryStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
-     * Sets the usersCount property value. The number of users that are assigned with the role.
+     * Sets the usersCount property value. The usersCount property
      * @param value Value to set for the usersCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsersCount(@javax.annotation.Nullable final Integer value) {
-        this._usersCount = value;
+        this.usersCount = value;
     }
 }

@@ -1,0 +1,363 @@
+package com.microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Parsable {
+    /** Rules and restrictions for applied categories. This value does not currently support overrides. Accepted values for the default rule and individual overrides are allow, block. */
+    private PlannerFieldRules appliedCategories;
+    /** Rules and restrictions for assignments. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, addSelf, addOther, remove, removeSelf, removeOther, block. */
+    private PlannerFieldRules assignments;
+    /** Rules and restrictions for checklist. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, update, check, reorder, block. */
+    private PlannerFieldRules checkLists;
+    /** The completionRequirements property */
+    private java.util.List<String> completionRequirements;
+    /** Rules and restrictions for deleting the task. Accepted values are allow and block. */
+    private java.util.List<String> delete;
+    /** Rules and restrictions for changing the due date of the task. Accepted values are allow and block. */
+    private java.util.List<String> dueDate;
+    /** Rules and restrictions for moving the task between buckets or plans. Accepted values are allow, moveBetweenPlans, moveBetweenBuckets, and block. */
+    private java.util.List<String> move;
+    /** Rules and restrictions for changing the notes of the task. Accepted values are allow and block. */
+    private java.util.List<String> notes;
+    /** Rules and restrictions for changing the order of the task. Accepted values are allow and block. */
+    private java.util.List<String> order;
+    /** Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, setToNotStarted, setToInProgress, and block. */
+    private java.util.List<String> percentComplete;
+    /** Rules and restrictions for changing the preview type of the task. Accepted values are allow and block. */
+    private java.util.List<String> previewType;
+    /** Rules and restrictions for changing the priority of the task. Accepted values are allow and block. */
+    private java.util.List<String> priority;
+    /** Rules and restrictions for references. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, block. */
+    private PlannerFieldRules references;
+    /** Rules and restrictions for changing the start date of the task. Accepted values are allow and block. */
+    private java.util.List<String> startDate;
+    /** Rules and restrictions for changing the title of the task. Accepted values are allow and block. */
+    private java.util.List<String> title;
+    /**
+     * Instantiates a new PlannerTaskPropertyRule and sets the default values.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public PlannerTaskPropertyRule() {
+        super();
+        this.setOdataType("#microsoft.graph.plannerTaskPropertyRule");
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a PlannerTaskPropertyRule
+     */
+    @javax.annotation.Nonnull
+    public static PlannerTaskPropertyRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new PlannerTaskPropertyRule();
+    }
+    /**
+     * Gets the appliedCategories property value. Rules and restrictions for applied categories. This value does not currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
+     * @return a plannerFieldRules
+     */
+    @javax.annotation.Nullable
+    public PlannerFieldRules getAppliedCategories() {
+        return this.appliedCategories;
+    }
+    /**
+     * Gets the assignments property value. Rules and restrictions for assignments. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, addSelf, addOther, remove, removeSelf, removeOther, block.
+     * @return a plannerFieldRules
+     */
+    @javax.annotation.Nullable
+    public PlannerFieldRules getAssignments() {
+        return this.assignments;
+    }
+    /**
+     * Gets the checkLists property value. Rules and restrictions for checklist. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, update, check, reorder, block.
+     * @return a plannerFieldRules
+     */
+    @javax.annotation.Nullable
+    public PlannerFieldRules getCheckLists() {
+        return this.checkLists;
+    }
+    /**
+     * Gets the completionRequirements property value. The completionRequirements property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getCompletionRequirements() {
+        return this.completionRequirements;
+    }
+    /**
+     * Gets the delete property value. Rules and restrictions for deleting the task. Accepted values are allow and block.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getDelete() {
+        return this.delete;
+    }
+    /**
+     * Gets the dueDate property value. Rules and restrictions for changing the due date of the task. Accepted values are allow and block.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getDueDate() {
+        return this.dueDate;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appliedCategories", (n) -> { this.setAppliedCategories(n.getObjectValue(PlannerFieldRules::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getObjectValue(PlannerFieldRules::createFromDiscriminatorValue)); });
+        deserializerMap.put("checkLists", (n) -> { this.setCheckLists(n.getObjectValue(PlannerFieldRules::createFromDiscriminatorValue)); });
+        deserializerMap.put("completionRequirements", (n) -> { this.setCompletionRequirements(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("delete", (n) -> { this.setDelete(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("dueDate", (n) -> { this.setDueDate(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("move", (n) -> { this.setMove(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notes", (n) -> { this.setNotes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("order", (n) -> { this.setOrder(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("references", (n) -> { this.setReferences(n.getObjectValue(PlannerFieldRules::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the move property value. Rules and restrictions for moving the task between buckets or plans. Accepted values are allow, moveBetweenPlans, moveBetweenBuckets, and block.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getMove() {
+        return this.move;
+    }
+    /**
+     * Gets the notes property value. Rules and restrictions for changing the notes of the task. Accepted values are allow and block.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getNotes() {
+        return this.notes;
+    }
+    /**
+     * Gets the order property value. Rules and restrictions for changing the order of the task. Accepted values are allow and block.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getOrder() {
+        return this.order;
+    }
+    /**
+     * Gets the percentComplete property value. Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, setToNotStarted, setToInProgress, and block.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getPercentComplete() {
+        return this.percentComplete;
+    }
+    /**
+     * Gets the previewType property value. Rules and restrictions for changing the preview type of the task. Accepted values are allow and block.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getPreviewType() {
+        return this.previewType;
+    }
+    /**
+     * Gets the priority property value. Rules and restrictions for changing the priority of the task. Accepted values are allow and block.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getPriority() {
+        return this.priority;
+    }
+    /**
+     * Gets the references property value. Rules and restrictions for references. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, block.
+     * @return a plannerFieldRules
+     */
+    @javax.annotation.Nullable
+    public PlannerFieldRules getReferences() {
+        return this.references;
+    }
+    /**
+     * Gets the startDate property value. Rules and restrictions for changing the start date of the task. Accepted values are allow and block.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getStartDate() {
+        return this.startDate;
+    }
+    /**
+     * Gets the title property value. Rules and restrictions for changing the title of the task. Accepted values are allow and block.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getTitle() {
+        return this.title;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeObjectValue("appliedCategories", this.getAppliedCategories());
+        writer.writeObjectValue("assignments", this.getAssignments());
+        writer.writeObjectValue("checkLists", this.getCheckLists());
+        writer.writeCollectionOfPrimitiveValues("completionRequirements", this.getCompletionRequirements());
+        writer.writeCollectionOfPrimitiveValues("delete", this.getDelete());
+        writer.writeCollectionOfPrimitiveValues("dueDate", this.getDueDate());
+        writer.writeCollectionOfPrimitiveValues("move", this.getMove());
+        writer.writeCollectionOfPrimitiveValues("notes", this.getNotes());
+        writer.writeCollectionOfPrimitiveValues("order", this.getOrder());
+        writer.writeCollectionOfPrimitiveValues("percentComplete", this.getPercentComplete());
+        writer.writeCollectionOfPrimitiveValues("previewType", this.getPreviewType());
+        writer.writeCollectionOfPrimitiveValues("priority", this.getPriority());
+        writer.writeObjectValue("references", this.getReferences());
+        writer.writeCollectionOfPrimitiveValues("startDate", this.getStartDate());
+        writer.writeCollectionOfPrimitiveValues("title", this.getTitle());
+    }
+    /**
+     * Sets the appliedCategories property value. Rules and restrictions for applied categories. This value does not currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
+     * @param value Value to set for the appliedCategories property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAppliedCategories(@javax.annotation.Nullable final PlannerFieldRules value) {
+        this.appliedCategories = value;
+    }
+    /**
+     * Sets the assignments property value. Rules and restrictions for assignments. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, addSelf, addOther, remove, removeSelf, removeOther, block.
+     * @param value Value to set for the assignments property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAssignments(@javax.annotation.Nullable final PlannerFieldRules value) {
+        this.assignments = value;
+    }
+    /**
+     * Sets the checkLists property value. Rules and restrictions for checklist. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, update, check, reorder, block.
+     * @param value Value to set for the checkLists property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCheckLists(@javax.annotation.Nullable final PlannerFieldRules value) {
+        this.checkLists = value;
+    }
+    /**
+     * Sets the completionRequirements property value. The completionRequirements property
+     * @param value Value to set for the completionRequirements property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCompletionRequirements(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.completionRequirements = value;
+    }
+    /**
+     * Sets the delete property value. Rules and restrictions for deleting the task. Accepted values are allow and block.
+     * @param value Value to set for the delete property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDelete(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.delete = value;
+    }
+    /**
+     * Sets the dueDate property value. Rules and restrictions for changing the due date of the task. Accepted values are allow and block.
+     * @param value Value to set for the dueDate property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDueDate(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.dueDate = value;
+    }
+    /**
+     * Sets the move property value. Rules and restrictions for moving the task between buckets or plans. Accepted values are allow, moveBetweenPlans, moveBetweenBuckets, and block.
+     * @param value Value to set for the move property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMove(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.move = value;
+    }
+    /**
+     * Sets the notes property value. Rules and restrictions for changing the notes of the task. Accepted values are allow and block.
+     * @param value Value to set for the notes property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setNotes(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.notes = value;
+    }
+    /**
+     * Sets the order property value. Rules and restrictions for changing the order of the task. Accepted values are allow and block.
+     * @param value Value to set for the order property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOrder(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.order = value;
+    }
+    /**
+     * Sets the percentComplete property value. Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, setToNotStarted, setToInProgress, and block.
+     * @param value Value to set for the percentComplete property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPercentComplete(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.percentComplete = value;
+    }
+    /**
+     * Sets the previewType property value. Rules and restrictions for changing the preview type of the task. Accepted values are allow and block.
+     * @param value Value to set for the previewType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPreviewType(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.previewType = value;
+    }
+    /**
+     * Sets the priority property value. Rules and restrictions for changing the priority of the task. Accepted values are allow and block.
+     * @param value Value to set for the priority property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPriority(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.priority = value;
+    }
+    /**
+     * Sets the references property value. Rules and restrictions for references. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, block.
+     * @param value Value to set for the references property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setReferences(@javax.annotation.Nullable final PlannerFieldRules value) {
+        this.references = value;
+    }
+    /**
+     * Sets the startDate property value. Rules and restrictions for changing the start date of the task. Accepted values are allow and block.
+     * @param value Value to set for the startDate property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setStartDate(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.startDate = value;
+    }
+    /**
+     * Sets the title property value. Rules and restrictions for changing the title of the task. Accepted values are allow and block.
+     * @param value Value to set for the title property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTitle(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.title = value;
+    }
+}

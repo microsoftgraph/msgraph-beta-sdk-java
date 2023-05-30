@@ -3,7 +3,6 @@ package com.microsoft.graph.models.externalconnectors;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum RuleOperation implements ValuedEnum {
     Equals("equals"),
     NotEquals("notEquals"),

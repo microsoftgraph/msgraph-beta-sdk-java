@@ -3,9 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum AppKeyCredentialRestrictionType implements ValuedEnum {
     AsymmetricKeyLifetime("asymmetricKeyLifetime"),
+    TrustedCertificateAuthority("trustedCertificateAuthority"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AppKeyCredentialRestrictionType(final String value) {
@@ -18,6 +18,7 @@ public enum AppKeyCredentialRestrictionType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "asymmetricKeyLifetime": return AsymmetricKeyLifetime;
+            case "trustedCertificateAuthority": return TrustedCertificateAuthority;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

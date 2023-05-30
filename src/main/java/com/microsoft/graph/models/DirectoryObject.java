@@ -1,55 +1,22 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
-import com.microsoft.graph.models.AdministrativeUnit;
-import com.microsoft.graph.models.Application;
-import com.microsoft.graph.models.AppManagementPolicy;
-import com.microsoft.graph.models.AuthorizationPolicy;
-import com.microsoft.graph.models.ClaimsMappingPolicy;
-import com.microsoft.graph.models.Contract;
-import com.microsoft.graph.models.CrossTenantAccessPolicy;
-import com.microsoft.graph.models.Device;
-import com.microsoft.graph.models.DirectoryObjectPartnerReference;
-import com.microsoft.graph.models.DirectoryRole;
-import com.microsoft.graph.models.DirectoryRoleTemplate;
-import com.microsoft.graph.models.DirectorySettingTemplate;
-import com.microsoft.graph.models.Endpoint;
-import com.microsoft.graph.models.ExtensionProperty;
-import com.microsoft.graph.models.ExternalIdentitiesPolicy;
-import com.microsoft.graph.models.Group;
-import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
-import com.microsoft.graph.models.IdentitySecurityDefaultsEnforcementPolicy;
-import com.microsoft.graph.models.Organization;
-import com.microsoft.graph.models.OrgContact;
-import com.microsoft.graph.models.PermissionGrantPolicy;
-import com.microsoft.graph.models.PolicyBase;
-import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
-import com.microsoft.graph.models.ServicePrincipal;
-import com.microsoft.graph.models.ServicePrincipalCreationPolicy;
-import com.microsoft.graph.models.StsPolicy;
-import com.microsoft.graph.models.TenantAppManagementPolicy;
-import com.microsoft.graph.models.TenantRelationshipAccessPolicyBase;
-import com.microsoft.graph.models.TokenIssuancePolicy;
-import com.microsoft.graph.models.TokenLifetimePolicy;
-import com.microsoft.graph.models.User;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DirectoryObject extends Entity implements Parsable {
     /** Date and time when this object was deleted. Always null when the object hasn't been deleted. */
-    private OffsetDateTime _deletedDateTime;
+    private OffsetDateTime deletedDateTime;
     /**
      * Instantiates a new directoryObject and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryObject() {
         super();
-        this.setOdataType("#microsoft.graph.directoryObject");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,6 +35,7 @@ public class DirectoryObject extends Entity implements Parsable {
                 case "#microsoft.graph.application": return new Application();
                 case "#microsoft.graph.appManagementPolicy": return new AppManagementPolicy();
                 case "#microsoft.graph.authorizationPolicy": return new AuthorizationPolicy();
+                case "#microsoft.graph.certificateBasedApplicationConfiguration": return new CertificateBasedApplicationConfiguration();
                 case "#microsoft.graph.claimsMappingPolicy": return new ClaimsMappingPolicy();
                 case "#microsoft.graph.contract": return new Contract();
                 case "#microsoft.graph.crossTenantAccessPolicy": return new CrossTenantAccessPolicy();
@@ -94,6 +62,7 @@ public class DirectoryObject extends Entity implements Parsable {
                 case "#microsoft.graph.tenantRelationshipAccessPolicyBase": return new TenantRelationshipAccessPolicyBase();
                 case "#microsoft.graph.tokenIssuancePolicy": return new TokenIssuancePolicy();
                 case "#microsoft.graph.tokenLifetimePolicy": return new TokenLifetimePolicy();
+                case "#microsoft.graph.trustedCertificateAuthorityAsEntityBase": return new TrustedCertificateAuthorityAsEntityBase();
                 case "#microsoft.graph.user": return new User();
             }
         }
@@ -105,24 +74,24 @@ public class DirectoryObject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
-        return this._deletedDateTime;
+        return this.deletedDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DirectoryObject currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deletedDateTime", (n) -> { currentObject.setDeletedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deletedDateTime", (n) -> { this.setDeletedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -133,7 +102,8 @@ public class DirectoryObject extends Entity implements Parsable {
      * @param value Value to set for the deletedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._deletedDateTime = value;
+        this.deletedDateTime = value;
     }
 }

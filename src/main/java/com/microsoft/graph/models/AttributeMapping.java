@@ -4,36 +4,35 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttributeMapping implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Default value to be used in case the source property was evaluated to null. Optional. */
-    private String _defaultValue;
+    private String defaultValue;
     /** For internal use only. */
-    private Boolean _exportMissingReferences;
+    private Boolean exportMissingReferences;
     /** The flowBehavior property */
-    private AttributeFlowBehavior _flowBehavior;
+    private AttributeFlowBehavior flowBehavior;
     /** The flowType property */
-    private AttributeFlowType _flowType;
+    private AttributeFlowType flowType;
     /** If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes. */
-    private Integer _matchingPriority;
+    private Integer matchingPriority;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Defines how a value should be extracted (or transformed) from the source object. */
-    private AttributeMappingSource _source;
+    private AttributeMappingSource source;
     /** Name of the attribute on the target object. */
-    private String _targetAttributeName;
+    private String targetAttributeName;
     /**
      * Instantiates a new attributeMapping and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttributeMapping() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attributeMapping");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +50,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the defaultValue property value. Default value to be used in case the source property was evaluated to null. Optional.
@@ -59,7 +58,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDefaultValue() {
-        return this._defaultValue;
+        return this.defaultValue;
     }
     /**
      * Gets the exportMissingReferences property value. For internal use only.
@@ -67,25 +66,24 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getExportMissingReferences() {
-        return this._exportMissingReferences;
+        return this.exportMissingReferences;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AttributeMapping currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
-            this.put("exportMissingReferences", (n) -> { currentObject.setExportMissingReferences(n.getBooleanValue()); });
-            this.put("flowBehavior", (n) -> { currentObject.setFlowBehavior(n.getEnumValue(AttributeFlowBehavior.class)); });
-            this.put("flowType", (n) -> { currentObject.setFlowType(n.getEnumValue(AttributeFlowType.class)); });
-            this.put("matchingPriority", (n) -> { currentObject.setMatchingPriority(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(AttributeMappingSource::createFromDiscriminatorValue)); });
-            this.put("targetAttributeName", (n) -> { currentObject.setTargetAttributeName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getStringValue()); });
+        deserializerMap.put("exportMissingReferences", (n) -> { this.setExportMissingReferences(n.getBooleanValue()); });
+        deserializerMap.put("flowBehavior", (n) -> { this.setFlowBehavior(n.getEnumValue(AttributeFlowBehavior.class)); });
+        deserializerMap.put("flowType", (n) -> { this.setFlowType(n.getEnumValue(AttributeFlowType.class)); });
+        deserializerMap.put("matchingPriority", (n) -> { this.setMatchingPriority(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(AttributeMappingSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetAttributeName", (n) -> { this.setTargetAttributeName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the flowBehavior property value. The flowBehavior property
@@ -93,7 +91,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AttributeFlowBehavior getFlowBehavior() {
-        return this._flowBehavior;
+        return this.flowBehavior;
     }
     /**
      * Gets the flowType property value. The flowType property
@@ -101,7 +99,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AttributeFlowType getFlowType() {
-        return this._flowType;
+        return this.flowType;
     }
     /**
      * Gets the matchingPriority property value. If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.
@@ -109,7 +107,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMatchingPriority() {
-        return this._matchingPriority;
+        return this.matchingPriority;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -117,7 +115,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the source property value. Defines how a value should be extracted (or transformed) from the source object.
@@ -125,7 +123,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AttributeMappingSource getSource() {
-        return this._source;
+        return this.source;
     }
     /**
      * Gets the targetAttributeName property value. Name of the attribute on the target object.
@@ -133,13 +131,14 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTargetAttributeName() {
-        return this._targetAttributeName;
+        return this.targetAttributeName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("defaultValue", this.getDefaultValue());
@@ -157,71 +156,80 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the defaultValue property value. Default value to be used in case the source property was evaluated to null. Optional.
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final String value) {
-        this._defaultValue = value;
+        this.defaultValue = value;
     }
     /**
      * Sets the exportMissingReferences property value. For internal use only.
      * @param value Value to set for the exportMissingReferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExportMissingReferences(@javax.annotation.Nullable final Boolean value) {
-        this._exportMissingReferences = value;
+        this.exportMissingReferences = value;
     }
     /**
      * Sets the flowBehavior property value. The flowBehavior property
      * @param value Value to set for the flowBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlowBehavior(@javax.annotation.Nullable final AttributeFlowBehavior value) {
-        this._flowBehavior = value;
+        this.flowBehavior = value;
     }
     /**
      * Sets the flowType property value. The flowType property
      * @param value Value to set for the flowType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlowType(@javax.annotation.Nullable final AttributeFlowType value) {
-        this._flowType = value;
+        this.flowType = value;
     }
     /**
      * Sets the matchingPriority property value. If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.
      * @param value Value to set for the matchingPriority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatchingPriority(@javax.annotation.Nullable final Integer value) {
-        this._matchingPriority = value;
+        this.matchingPriority = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the source property value. Defines how a value should be extracted (or transformed) from the source object.
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final AttributeMappingSource value) {
-        this._source = value;
+        this.source = value;
     }
     /**
      * Sets the targetAttributeName property value. Name of the attribute on the target object.
      * @param value Value to set for the targetAttributeName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetAttributeName(@javax.annotation.Nullable final String value) {
-        this._targetAttributeName = value;
+        this.targetAttributeName = value;
     }
 }

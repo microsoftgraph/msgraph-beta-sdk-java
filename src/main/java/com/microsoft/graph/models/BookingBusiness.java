@@ -3,49 +3,49 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingBusiness extends BookingNamedEntity implements Parsable {
     /** The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. */
-    private PhysicalAddress _address;
+    private PhysicalAddress address;
     /** All the appointments of this business. Read-only. Nullable. */
-    private java.util.List<BookingAppointment> _appointments;
+    private java.util.List<BookingAppointment> appointments;
     /** The hours of operation for the business. */
-    private java.util.List<BookingWorkHours> _businessHours;
+    private java.util.List<BookingWorkHours> businessHours;
     /** The type of business. */
-    private String _businessType;
+    private String businessType;
     /** The set of appointments of this business in a specified date range. Read-only. Nullable. */
-    private java.util.List<BookingAppointment> _calendarView;
+    private java.util.List<BookingAppointment> calendarView;
     /** All the customers of this business. Read-only. Nullable. */
-    private java.util.List<BookingCustomer> _customers;
+    private java.util.List<BookingCustomer> customers;
     /** All the custom questions of this business. Read-only. Nullable. */
-    private java.util.List<BookingCustomQuestion> _customQuestions;
+    private java.util.List<BookingCustomQuestion> customQuestions;
     /** The code for the currency that the business operates in on Microsoft Bookings. */
-    private String _defaultCurrencyIso;
+    private String defaultCurrencyIso;
     /** The email address for the business. */
-    private String _email;
+    private String email;
     /** The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only. */
-    private Boolean _isPublished;
+    private Boolean isPublished;
     /** The language of the self service booking page */
-    private String _languageTag;
+    private String languageTag;
     /** The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page. */
-    private String _phone;
+    private String phone;
     /** The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only. */
-    private String _publicUrl;
+    private String publicUrl;
     /** Specifies how bookings can be created for this business. */
-    private BookingSchedulingPolicy _schedulingPolicy;
+    private BookingSchedulingPolicy schedulingPolicy;
     /** All the services offered by this business. Read-only. Nullable. */
-    private java.util.List<BookingService> _services;
+    private java.util.List<BookingService> services;
     /** All the staff members that provide services in this business. Read-only. Nullable. */
-    private java.util.List<BookingStaffMember> _staffMembers;
+    private java.util.List<BookingStaffMember> staffMembers;
     /** The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page. */
-    private String _webSiteUrl;
+    private String webSiteUrl;
     /**
      * Instantiates a new BookingBusiness and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingBusiness() {
         super();
         this.setOdataType("#microsoft.graph.bookingBusiness");
@@ -66,7 +66,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public PhysicalAddress getAddress() {
-        return this._address;
+        return this.address;
     }
     /**
      * Gets the appointments property value. All the appointments of this business. Read-only. Nullable.
@@ -74,7 +74,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingAppointment> getAppointments() {
-        return this._appointments;
+        return this.appointments;
     }
     /**
      * Gets the businessHours property value. The hours of operation for the business.
@@ -82,7 +82,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingWorkHours> getBusinessHours() {
-        return this._businessHours;
+        return this.businessHours;
     }
     /**
      * Gets the businessType property value. The type of business.
@@ -90,7 +90,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBusinessType() {
-        return this._businessType;
+        return this.businessType;
     }
     /**
      * Gets the calendarView property value. The set of appointments of this business in a specified date range. Read-only. Nullable.
@@ -98,7 +98,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingAppointment> getCalendarView() {
-        return this._calendarView;
+        return this.calendarView;
     }
     /**
      * Gets the customers property value. All the customers of this business. Read-only. Nullable.
@@ -106,7 +106,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingCustomer> getCustomers() {
-        return this._customers;
+        return this.customers;
     }
     /**
      * Gets the customQuestions property value. All the custom questions of this business. Read-only. Nullable.
@@ -114,7 +114,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingCustomQuestion> getCustomQuestions() {
-        return this._customQuestions;
+        return this.customQuestions;
     }
     /**
      * Gets the defaultCurrencyIso property value. The code for the currency that the business operates in on Microsoft Bookings.
@@ -122,7 +122,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDefaultCurrencyIso() {
-        return this._defaultCurrencyIso;
+        return this.defaultCurrencyIso;
     }
     /**
      * Gets the email property value. The email address for the business.
@@ -130,34 +130,33 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmail() {
-        return this._email;
+        return this.email;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingBusiness currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("appointments", (n) -> { currentObject.setAppointments(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
-            this.put("businessHours", (n) -> { currentObject.setBusinessHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
-            this.put("businessType", (n) -> { currentObject.setBusinessType(n.getStringValue()); });
-            this.put("calendarView", (n) -> { currentObject.setCalendarView(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
-            this.put("customers", (n) -> { currentObject.setCustomers(n.getCollectionOfObjectValues(BookingCustomer::createFromDiscriminatorValue)); });
-            this.put("customQuestions", (n) -> { currentObject.setCustomQuestions(n.getCollectionOfObjectValues(BookingCustomQuestion::createFromDiscriminatorValue)); });
-            this.put("defaultCurrencyIso", (n) -> { currentObject.setDefaultCurrencyIso(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("isPublished", (n) -> { currentObject.setIsPublished(n.getBooleanValue()); });
-            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
-            this.put("phone", (n) -> { currentObject.setPhone(n.getStringValue()); });
-            this.put("publicUrl", (n) -> { currentObject.setPublicUrl(n.getStringValue()); });
-            this.put("schedulingPolicy", (n) -> { currentObject.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
-            this.put("services", (n) -> { currentObject.setServices(n.getCollectionOfObjectValues(BookingService::createFromDiscriminatorValue)); });
-            this.put("staffMembers", (n) -> { currentObject.setStaffMembers(n.getCollectionOfObjectValues(BookingStaffMember::createFromDiscriminatorValue)); });
-            this.put("webSiteUrl", (n) -> { currentObject.setWebSiteUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("appointments", (n) -> { this.setAppointments(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
+        deserializerMap.put("businessHours", (n) -> { this.setBusinessHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
+        deserializerMap.put("businessType", (n) -> { this.setBusinessType(n.getStringValue()); });
+        deserializerMap.put("calendarView", (n) -> { this.setCalendarView(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
+        deserializerMap.put("customers", (n) -> { this.setCustomers(n.getCollectionOfObjectValues(BookingCustomer::createFromDiscriminatorValue)); });
+        deserializerMap.put("customQuestions", (n) -> { this.setCustomQuestions(n.getCollectionOfObjectValues(BookingCustomQuestion::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultCurrencyIso", (n) -> { this.setDefaultCurrencyIso(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("isPublished", (n) -> { this.setIsPublished(n.getBooleanValue()); });
+        deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("phone", (n) -> { this.setPhone(n.getStringValue()); });
+        deserializerMap.put("publicUrl", (n) -> { this.setPublicUrl(n.getStringValue()); });
+        deserializerMap.put("schedulingPolicy", (n) -> { this.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("services", (n) -> { this.setServices(n.getCollectionOfObjectValues(BookingService::createFromDiscriminatorValue)); });
+        deserializerMap.put("staffMembers", (n) -> { this.setStaffMembers(n.getCollectionOfObjectValues(BookingStaffMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("webSiteUrl", (n) -> { this.setWebSiteUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isPublished property value. The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
@@ -165,7 +164,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsPublished() {
-        return this._isPublished;
+        return this.isPublished;
     }
     /**
      * Gets the languageTag property value. The language of the self service booking page
@@ -173,7 +172,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLanguageTag() {
-        return this._languageTag;
+        return this.languageTag;
     }
     /**
      * Gets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
@@ -181,7 +180,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPhone() {
-        return this._phone;
+        return this.phone;
     }
     /**
      * Gets the publicUrl property value. The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
@@ -189,7 +188,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPublicUrl() {
-        return this._publicUrl;
+        return this.publicUrl;
     }
     /**
      * Gets the schedulingPolicy property value. Specifies how bookings can be created for this business.
@@ -197,7 +196,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public BookingSchedulingPolicy getSchedulingPolicy() {
-        return this._schedulingPolicy;
+        return this.schedulingPolicy;
     }
     /**
      * Gets the services property value. All the services offered by this business. Read-only. Nullable.
@@ -205,7 +204,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingService> getServices() {
-        return this._services;
+        return this.services;
     }
     /**
      * Gets the staffMembers property value. All the staff members that provide services in this business. Read-only. Nullable.
@@ -213,7 +212,7 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingStaffMember> getStaffMembers() {
-        return this._staffMembers;
+        return this.staffMembers;
     }
     /**
      * Gets the webSiteUrl property value. The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page.
@@ -221,13 +220,14 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebSiteUrl() {
-        return this._webSiteUrl;
+        return this.webSiteUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -240,10 +240,8 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
         writer.writeCollectionOfObjectValues("customQuestions", this.getCustomQuestions());
         writer.writeStringValue("defaultCurrencyIso", this.getDefaultCurrencyIso());
         writer.writeStringValue("email", this.getEmail());
-        writer.writeBooleanValue("isPublished", this.getIsPublished());
         writer.writeStringValue("languageTag", this.getLanguageTag());
         writer.writeStringValue("phone", this.getPhone());
-        writer.writeStringValue("publicUrl", this.getPublicUrl());
         writer.writeObjectValue("schedulingPolicy", this.getSchedulingPolicy());
         writer.writeCollectionOfObjectValues("services", this.getServices());
         writer.writeCollectionOfObjectValues("staffMembers", this.getStaffMembers());
@@ -254,135 +252,152 @@ public class BookingBusiness extends BookingNamedEntity implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final PhysicalAddress value) {
-        this._address = value;
+        this.address = value;
     }
     /**
      * Sets the appointments property value. All the appointments of this business. Read-only. Nullable.
      * @param value Value to set for the appointments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppointments(@javax.annotation.Nullable final java.util.List<BookingAppointment> value) {
-        this._appointments = value;
+        this.appointments = value;
     }
     /**
      * Sets the businessHours property value. The hours of operation for the business.
      * @param value Value to set for the businessHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessHours(@javax.annotation.Nullable final java.util.List<BookingWorkHours> value) {
-        this._businessHours = value;
+        this.businessHours = value;
     }
     /**
      * Sets the businessType property value. The type of business.
      * @param value Value to set for the businessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessType(@javax.annotation.Nullable final String value) {
-        this._businessType = value;
+        this.businessType = value;
     }
     /**
      * Sets the calendarView property value. The set of appointments of this business in a specified date range. Read-only. Nullable.
      * @param value Value to set for the calendarView property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarView(@javax.annotation.Nullable final java.util.List<BookingAppointment> value) {
-        this._calendarView = value;
+        this.calendarView = value;
     }
     /**
      * Sets the customers property value. All the customers of this business. Read-only. Nullable.
      * @param value Value to set for the customers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomers(@javax.annotation.Nullable final java.util.List<BookingCustomer> value) {
-        this._customers = value;
+        this.customers = value;
     }
     /**
      * Sets the customQuestions property value. All the custom questions of this business. Read-only. Nullable.
      * @param value Value to set for the customQuestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomQuestions(@javax.annotation.Nullable final java.util.List<BookingCustomQuestion> value) {
-        this._customQuestions = value;
+        this.customQuestions = value;
     }
     /**
      * Sets the defaultCurrencyIso property value. The code for the currency that the business operates in on Microsoft Bookings.
      * @param value Value to set for the defaultCurrencyIso property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultCurrencyIso(@javax.annotation.Nullable final String value) {
-        this._defaultCurrencyIso = value;
+        this.defaultCurrencyIso = value;
     }
     /**
      * Sets the email property value. The email address for the business.
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
-        this._email = value;
+        this.email = value;
     }
     /**
      * Sets the isPublished property value. The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
      * @param value Value to set for the isPublished property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPublished(@javax.annotation.Nullable final Boolean value) {
-        this._isPublished = value;
+        this.isPublished = value;
     }
     /**
      * Sets the languageTag property value. The language of the self service booking page
      * @param value Value to set for the languageTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageTag(@javax.annotation.Nullable final String value) {
-        this._languageTag = value;
+        this.languageTag = value;
     }
     /**
      * Sets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
      * @param value Value to set for the phone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhone(@javax.annotation.Nullable final String value) {
-        this._phone = value;
+        this.phone = value;
     }
     /**
      * Sets the publicUrl property value. The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
      * @param value Value to set for the publicUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublicUrl(@javax.annotation.Nullable final String value) {
-        this._publicUrl = value;
+        this.publicUrl = value;
     }
     /**
      * Sets the schedulingPolicy property value. Specifies how bookings can be created for this business.
      * @param value Value to set for the schedulingPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedulingPolicy(@javax.annotation.Nullable final BookingSchedulingPolicy value) {
-        this._schedulingPolicy = value;
+        this.schedulingPolicy = value;
     }
     /**
      * Sets the services property value. All the services offered by this business. Read-only. Nullable.
      * @param value Value to set for the services property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServices(@javax.annotation.Nullable final java.util.List<BookingService> value) {
-        this._services = value;
+        this.services = value;
     }
     /**
      * Sets the staffMembers property value. All the staff members that provide services in this business. Read-only. Nullable.
      * @param value Value to set for the staffMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStaffMembers(@javax.annotation.Nullable final java.util.List<BookingStaffMember> value) {
-        this._staffMembers = value;
+        this.staffMembers = value;
     }
     /**
      * Sets the webSiteUrl property value. The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page.
      * @param value Value to set for the webSiteUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebSiteUrl(@javax.annotation.Nullable final String value) {
-        this._webSiteUrl = value;
+        this.webSiteUrl = value;
     }
 }

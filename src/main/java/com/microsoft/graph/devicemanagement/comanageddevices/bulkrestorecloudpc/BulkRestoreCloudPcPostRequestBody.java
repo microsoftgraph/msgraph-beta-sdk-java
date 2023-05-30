@@ -6,24 +6,23 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the bulkRestoreCloudPc method. */
 public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The managedDeviceIds property */
-    private java.util.List<String> _managedDeviceIds;
+    private java.util.List<String> managedDeviceIds;
     /** The restorePointDateTime property */
-    private OffsetDateTime _restorePointDateTime;
+    private OffsetDateTime restorePointDateTime;
     /** The timeRange property */
-    private RestoreTimeRange _timeRange;
+    private RestoreTimeRange timeRange;
     /**
      * Instantiates a new bulkRestoreCloudPcPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BulkRestoreCloudPcPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -43,20 +42,19 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BulkRestoreCloudPcPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("managedDeviceIds", (n) -> { currentObject.setManagedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("restorePointDateTime", (n) -> { currentObject.setRestorePointDateTime(n.getOffsetDateTimeValue()); });
-            this.put("timeRange", (n) -> { currentObject.setTimeRange(n.getEnumValue(RestoreTimeRange.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("managedDeviceIds", (n) -> { this.setManagedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("restorePointDateTime", (n) -> { this.setRestorePointDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("timeRange", (n) -> { this.setTimeRange(n.getEnumValue(RestoreTimeRange.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceIds property value. The managedDeviceIds property
@@ -64,7 +62,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public java.util.List<String> getManagedDeviceIds() {
-        return this._managedDeviceIds;
+        return this.managedDeviceIds;
     }
     /**
      * Gets the restorePointDateTime property value. The restorePointDateTime property
@@ -72,7 +70,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRestorePointDateTime() {
-        return this._restorePointDateTime;
+        return this.restorePointDateTime;
     }
     /**
      * Gets the timeRange property value. The timeRange property
@@ -80,13 +78,14 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public RestoreTimeRange getTimeRange() {
-        return this._timeRange;
+        return this.timeRange;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("managedDeviceIds", this.getManagedDeviceIds());
@@ -99,31 +98,35 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the managedDeviceIds property value. The managedDeviceIds property
      * @param value Value to set for the managedDeviceIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._managedDeviceIds = value;
+        this.managedDeviceIds = value;
     }
     /**
      * Sets the restorePointDateTime property value. The restorePointDateTime property
      * @param value Value to set for the restorePointDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestorePointDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._restorePointDateTime = value;
+        this.restorePointDateTime = value;
     }
     /**
      * Sets the timeRange property value. The timeRange property
      * @param value Value to set for the timeRange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeRange(@javax.annotation.Nullable final RestoreTimeRange value) {
-        this._timeRange = value;
+        this.timeRange = value;
     }
 }

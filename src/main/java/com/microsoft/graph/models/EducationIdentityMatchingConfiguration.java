@@ -3,17 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationIdentityMatchingConfiguration extends EducationIdentitySynchronizationConfiguration implements Parsable {
     /** Mapping between the user account and the options to use to uniquely identify the user to update. */
-    private java.util.List<EducationIdentityMatchingOptions> _matchingOptions;
+    private java.util.List<EducationIdentityMatchingOptions> matchingOptions;
     /**
      * Instantiates a new EducationIdentityMatchingConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationIdentityMatchingConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.educationIdentityMatchingConfiguration");
@@ -30,14 +30,13 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationIdentityMatchingConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("matchingOptions", (n) -> { currentObject.setMatchingOptions(n.getCollectionOfObjectValues(EducationIdentityMatchingOptions::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("matchingOptions", (n) -> { this.setMatchingOptions(n.getCollectionOfObjectValues(EducationIdentityMatchingOptions::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the matchingOptions property value. Mapping between the user account and the options to use to uniquely identify the user to update.
@@ -45,13 +44,14 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
      */
     @javax.annotation.Nullable
     public java.util.List<EducationIdentityMatchingOptions> getMatchingOptions() {
-        return this._matchingOptions;
+        return this.matchingOptions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +62,8 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
      * @param value Value to set for the matchingOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatchingOptions(@javax.annotation.Nullable final java.util.List<EducationIdentityMatchingOptions> value) {
-        this._matchingOptions = value;
+        this.matchingOptions = value;
     }
 }

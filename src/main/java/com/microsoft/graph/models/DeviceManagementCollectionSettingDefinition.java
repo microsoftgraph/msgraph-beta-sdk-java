@@ -3,20 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementCollectionSettingDefinition extends DeviceManagementSettingDefinition implements Parsable {
     /** The Setting Definition ID that describes what each element of the collection looks like */
-    private String _elementDefinitionId;
+    private String elementDefinitionId;
     /**
      * Instantiates a new DeviceManagementCollectionSettingDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementCollectionSettingDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementCollectionSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,24 +33,24 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
      */
     @javax.annotation.Nullable
     public String getElementDefinitionId() {
-        return this._elementDefinitionId;
+        return this.elementDefinitionId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementCollectionSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("elementDefinitionId", (n) -> { currentObject.setElementDefinitionId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("elementDefinitionId", (n) -> { this.setElementDefinitionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +61,8 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
      * @param value Value to set for the elementDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setElementDefinitionId(@javax.annotation.Nullable final String value) {
-        this._elementDefinitionId = value;
+        this.elementDefinitionId = value;
     }
 }

@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Microsoft Launcher Search Bar Placement selection. */
 public enum MicrosoftLauncherSearchBarPlacement implements ValuedEnum {
     /** Not configured; this value is ignored. */
     NotConfigured("notConfigured"),

@@ -3,24 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Program extends Entity implements Parsable {
     /** Controls associated with the program. */
-    private java.util.List<ProgramControl> _controls;
+    private java.util.List<ProgramControl> controls;
     /** The description of the program. */
-    private String _description;
+    private String description;
     /** The name of the program.  Required on create. */
-    private String _displayName;
+    private String displayName;
     /**
      * Instantiates a new Program and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Program() {
         super();
-        this.setOdataType("#microsoft.graph.program");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,7 +37,7 @@ public class Program extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ProgramControl> getControls() {
-        return this._controls;
+        return this.controls;
     }
     /**
      * Gets the description property value. The description of the program.
@@ -46,7 +45,7 @@ public class Program extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The name of the program.  Required on create.
@@ -54,26 +53,26 @@ public class Program extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Program currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("controls", (n) -> { currentObject.setControls(n.getCollectionOfObjectValues(ProgramControl::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("controls", (n) -> { this.setControls(n.getCollectionOfObjectValues(ProgramControl::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +85,26 @@ public class Program extends Entity implements Parsable {
      * @param value Value to set for the controls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setControls(@javax.annotation.Nullable final java.util.List<ProgramControl> value) {
-        this._controls = value;
+        this.controls = value;
     }
     /**
      * Sets the description property value. The description of the program.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the program.  Required on create.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
 }

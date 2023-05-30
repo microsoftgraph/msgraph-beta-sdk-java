@@ -3,24 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OemWarrantyInformationOnboarding extends Entity implements Parsable {
-    /** Specifies whether warranty API is available. This property is read-only. */
-    private Boolean _available;
-    /** Specifies whether warranty query is enabled for given OEM. This property is read-only. */
-    private Boolean _enabled;
-    /** OEM name. This property is read-only. */
-    private String _oemName;
     /**
      * Instantiates a new OemWarrantyInformationOnboarding and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OemWarrantyInformationOnboarding() {
         super();
-        this.setOdataType("#microsoft.graph.oemWarrantyInformationOnboarding");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,76 +26,22 @@ public class OemWarrantyInformationOnboarding extends Entity implements Parsable
         return new OemWarrantyInformationOnboarding();
     }
     /**
-     * Gets the available property value. Specifies whether warranty API is available. This property is read-only.
-     * @return a boolean
-     */
-    @javax.annotation.Nullable
-    public Boolean getAvailable() {
-        return this._available;
-    }
-    /**
-     * Gets the enabled property value. Specifies whether warranty query is enabled for given OEM. This property is read-only.
-     * @return a boolean
-     */
-    @javax.annotation.Nullable
-    public Boolean getEnabled() {
-        return this._enabled;
-    }
-    /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OemWarrantyInformationOnboarding currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("available", (n) -> { currentObject.setAvailable(n.getBooleanValue()); });
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("oemName", (n) -> { currentObject.setOemName(n.getStringValue()); });
-        }};
-    }
-    /**
-     * Gets the oemName property value. OEM name. This property is read-only.
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOemName() {
-        return this._oemName;
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("available", this.getAvailable());
-        writer.writeBooleanValue("enabled", this.getEnabled());
-        writer.writeStringValue("oemName", this.getOemName());
-    }
-    /**
-     * Sets the available property value. Specifies whether warranty API is available. This property is read-only.
-     * @param value Value to set for the available property.
-     * @return a void
-     */
-    public void setAvailable(@javax.annotation.Nullable final Boolean value) {
-        this._available = value;
-    }
-    /**
-     * Sets the enabled property value. Specifies whether warranty query is enabled for given OEM. This property is read-only.
-     * @param value Value to set for the enabled property.
-     * @return a void
-     */
-    public void setEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._enabled = value;
-    }
-    /**
-     * Sets the oemName property value. OEM name. This property is read-only.
-     * @param value Value to set for the oemName property.
-     * @return a void
-     */
-    public void setOemName(@javax.annotation.Nullable final String value) {
-        this._oemName = value;
     }
 }

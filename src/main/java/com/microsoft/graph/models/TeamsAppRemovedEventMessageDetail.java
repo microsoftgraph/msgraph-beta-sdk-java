@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implements Parsable {
     /** Initiator of the event. */
-    private IdentitySet _initiator;
+    private IdentitySet initiator;
     /** Display name of the teamsApp. */
-    private String _teamsAppDisplayName;
+    private String teamsAppDisplayName;
     /** Unique identifier of the teamsApp. */
-    private String _teamsAppId;
+    private String teamsAppId;
     /**
      * Instantiates a new TeamsAppRemovedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsAppRemovedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamsAppRemovedEventMessageDetail");
@@ -34,16 +34,15 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamsAppRemovedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("teamsAppDisplayName", (n) -> { currentObject.setTeamsAppDisplayName(n.getStringValue()); });
-            this.put("teamsAppId", (n) -> { currentObject.setTeamsAppId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamsAppDisplayName", (n) -> { this.setTeamsAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. Initiator of the event.
@@ -51,7 +50,7 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Gets the teamsAppDisplayName property value. Display name of the teamsApp.
@@ -59,7 +58,7 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
      */
     @javax.annotation.Nullable
     public String getTeamsAppDisplayName() {
-        return this._teamsAppDisplayName;
+        return this.teamsAppDisplayName;
     }
     /**
      * Gets the teamsAppId property value. Unique identifier of the teamsApp.
@@ -67,13 +66,14 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
      */
     @javax.annotation.Nullable
     public String getTeamsAppId() {
-        return this._teamsAppId;
+        return this.teamsAppId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
     /**
      * Sets the teamsAppDisplayName property value. Display name of the teamsApp.
      * @param value Value to set for the teamsAppDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppDisplayName(@javax.annotation.Nullable final String value) {
-        this._teamsAppDisplayName = value;
+        this.teamsAppDisplayName = value;
     }
     /**
      * Sets the teamsAppId property value. Unique identifier of the teamsApp.
      * @param value Value to set for the teamsAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
-        this._teamsAppId = value;
+        this.teamsAppId = value;
     }
 }

@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense implements Parsable {
     /** The device name. */
-    private String _deviceName;
+    private String deviceName;
     /** The managed device ID. */
-    private String _managedDeviceId;
+    private String managedDeviceId;
     /**
      * Instantiates a new IosVppAppAssignedDeviceLicense and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosVppAppAssignedDeviceLicense() {
         super();
-        this.setOdataType("#microsoft.graph.iosVppAppAssignedDeviceLicense");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,19 +35,18 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosVppAppAssignedDeviceLicense currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceId property value. The managed device ID.
@@ -56,13 +54,14 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
      */
     @javax.annotation.Nullable
     public String getManagedDeviceId() {
-        return this._managedDeviceId;
+        return this.managedDeviceId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the managedDeviceId property value. The managed device ID.
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
-        this._managedDeviceId = value;
+        this.managedDeviceId = value;
     }
 }
