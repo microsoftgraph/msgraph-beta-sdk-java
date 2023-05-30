@@ -88,15 +88,6 @@ public class SynchronizationJobRequestBuilder extends BaseRequestBuilder<Synchro
      * @return the request builder
      */
     @Nonnull
-    public SynchronizationJobStopRequestBuilder stop() {
-        return new SynchronizationJobStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
     public SynchronizationJobPauseRequestBuilder pause() {
         return new SynchronizationJobPauseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pause"), getClient(), null);
     }

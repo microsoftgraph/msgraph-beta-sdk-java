@@ -44,9 +44,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 
 /**
  * The class for the User With Reference Request.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserWithReferenceRequest extends BaseWithReferenceRequest<User> {
 
     /**

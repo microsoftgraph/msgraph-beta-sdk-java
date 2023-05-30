@@ -117,9 +117,7 @@ public class WorkflowBase implements IJsonBackedObject {
     /**
      * The Created By.
      * The user who created the workflow.
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
 	@Nullable
@@ -128,9 +126,7 @@ public class WorkflowBase implements IJsonBackedObject {
     /**
      * The Last Modified By.
      * The user who last modified the workflow.
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
 	@Nullable

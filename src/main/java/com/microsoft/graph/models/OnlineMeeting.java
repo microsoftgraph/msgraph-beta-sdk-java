@@ -26,6 +26,7 @@ import com.microsoft.graph.models.VirtualAppointment;
 import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.MeetingRegistration;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.CallRecordingCollectionPage;
 import com.microsoft.graph.requests.CallTranscriptCollectionPage;
 
 
@@ -352,6 +353,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public MeetingRegistration registration;
 
     /**
+     * The Recordings.
+     * 
+     */
+    @SerializedName(value = "recordings", alternate = {"Recordings"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CallRecordingCollectionPage recordings;
+
+    /**
      * The Transcripts.
      * The transcripts of an online meeting. Read-only.
      */
@@ -372,6 +382,10 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
         if (json.has("attendanceReports")) {
             attendanceReports = serializer.deserializeObject(json.get("attendanceReports"), com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage.class);
+        }
+
+        if (json.has("recordings")) {
+            recordings = serializer.deserializeObject(json.get("recordings"), com.microsoft.graph.requests.CallRecordingCollectionPage.class);
         }
 
         if (json.has("transcripts")) {

@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.CertificateAuthorityPath;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ImpactedResourceCollectionPage;
 import com.microsoft.graph.requests.RecommendationCollectionPage;
@@ -72,6 +73,15 @@ public class Directory extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.AttributeSetCollectionPage attributeSets;
+
+    /**
+     * The Certificate Authorities.
+     * 
+     */
+    @SerializedName(value = "certificateAuthorities", alternate = {"CertificateAuthorities"})
+    @Expose
+	@Nullable
+    public CertificateAuthorityPath certificateAuthorities;
 
     /**
      * The Custom Security Attribute Definitions.

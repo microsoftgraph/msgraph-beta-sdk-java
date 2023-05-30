@@ -20,9 +20,7 @@ import com.microsoft.graph.models.UserExportDeviceAndAppManagementDataParameterS
 
 /**
  * The class for the User Export Device And App Management Data Request.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserExportDeviceAndAppManagementDataRequest extends BaseRequest<DeviceAndAppManagementData> {
     /**
      * The request for this UserExportDeviceAndAppManagementData

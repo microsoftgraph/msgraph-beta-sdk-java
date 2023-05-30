@@ -70,7 +70,7 @@ public class IdentityProviderBaseReferenceRequest extends BaseReferenceRequest<I
     @Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBase> putAsync(@Nonnull final IdentityProviderBase srcIdentityProviderBase) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/identity/identityProviders/" + srcIdentityProviderBase.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/identityProviders/" + srcIdentityProviderBase.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -84,7 +84,7 @@ public class IdentityProviderBaseReferenceRequest extends BaseReferenceRequest<I
     @Nullable
     public IdentityProviderBase put(@Nonnull final IdentityProviderBase srcIdentityProviderBase) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/identity/identityProviders/" + srcIdentityProviderBase.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/identityProviders/" + srcIdentityProviderBase.id));
         return send(HttpMethod.PUT, payload);
     }
 }

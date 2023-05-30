@@ -114,9 +114,7 @@ public class UserProcessingResult extends Entity implements IJsonBackedObject {
     /**
      * The Subject.
      * The unique identifier of the AAD user targeted for the taskProcessingResult.Supports $filter(eq, ne) and $expand.
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
 	@Nullable

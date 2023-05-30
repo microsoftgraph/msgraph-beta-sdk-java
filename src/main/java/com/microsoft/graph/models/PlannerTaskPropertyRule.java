@@ -55,6 +55,15 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
     public PlannerFieldRules checkLists;
 
     /**
+     * The Completion Requirements.
+     * 
+     */
+    @SerializedName(value = "completionRequirements", alternate = {"CompletionRequirements"})
+    @Expose
+	@Nullable
+    public java.util.List<String> completionRequirements;
+
+    /**
      * The Delete.
      * Rules and restrictions for deleting the task. Accepted values are allow and block.
      */

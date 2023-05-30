@@ -136,6 +136,16 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
     public com.microsoft.graph.requests.AttributeSetRequestBuilder attributeSets(@Nonnull final String id) {
         return new com.microsoft.graph.requests.AttributeSetRequestBuilder(getRequestUrlWithAdditionalSegment("attributeSets") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for CertificateAuthorityPath
+     *
+     * @return the CertificateAuthorityPathRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CertificateAuthorityPathRequestBuilder certificateAuthorities() {
+        return new com.microsoft.graph.requests.CertificateAuthorityPathRequestBuilder(getRequestUrlWithAdditionalSegment("certificateAuthorities"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the CustomSecurityAttributeDefinition collection
      *

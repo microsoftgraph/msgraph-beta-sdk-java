@@ -77,9 +77,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements IJson
     /**
      * The Last Modified By.
      * Navigation link to a member object who modified the record. For example, to a user.
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
 	@Nullable

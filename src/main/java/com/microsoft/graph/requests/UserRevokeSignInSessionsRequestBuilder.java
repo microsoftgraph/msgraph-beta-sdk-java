@@ -17,9 +17,7 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the User Revoke Sign In Sessions Request Builder.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserRevokeSignInSessionsRequestBuilder extends BaseActionRequestBuilder<Boolean> {
 
     /**

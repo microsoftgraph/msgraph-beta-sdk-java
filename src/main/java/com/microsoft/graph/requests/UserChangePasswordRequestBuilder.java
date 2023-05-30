@@ -18,9 +18,7 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the User Change Password Request Builder.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserChangePasswordRequestBuilder extends BaseActionRequestBuilder<User> {
 
     /**
