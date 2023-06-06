@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.StringKeyStringValuePair;
-import com.microsoft.graph.models.MetadataEntry;
+import com.microsoft.graph.models.AttributeDefinitionMetadataEntry;
 import com.microsoft.graph.models.Mutability;
 import com.microsoft.graph.models.ReferencedObject;
 import com.microsoft.graph.models.AttributeType;
@@ -90,12 +90,12 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Metadata.
-     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
+     * Metadata for the given object.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
 	@Nullable
-    public java.util.List<MetadataEntry> metadata;
+    public java.util.List<AttributeDefinitionMetadataEntry> metadata;
 
     /**
      * The Multivalued.

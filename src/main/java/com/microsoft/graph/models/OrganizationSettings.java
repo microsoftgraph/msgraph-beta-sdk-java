@@ -10,8 +10,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MicrosoftApplicationDataAccessSettings;
-import com.microsoft.graph.models.InsightsSettings;
 import com.microsoft.graph.models.PronounsSettings;
+import com.microsoft.graph.models.InsightsSettings;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ProfileCardPropertyCollectionPage;
 
@@ -40,6 +40,24 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
     public MicrosoftApplicationDataAccessSettings microsoftApplicationDataAccess;
 
     /**
+     * The Profile Card Properties.
+     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
+     */
+    @SerializedName(value = "profileCardProperties", alternate = {"ProfileCardProperties"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.ProfileCardPropertyCollectionPage profileCardProperties;
+
+    /**
+     * The Pronouns.
+     * Represents administrator settings that manage the support of pronouns in an organization.
+     */
+    @SerializedName(value = "pronouns", alternate = {"Pronouns"})
+    @Expose
+	@Nullable
+    public PronounsSettings pronouns;
+
+    /**
      * The Contact Insights.
      * Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user's contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
      */
@@ -65,24 +83,6 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public InsightsSettings peopleInsights;
-
-    /**
-     * The Profile Card Properties.
-     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
-     */
-    @SerializedName(value = "profileCardProperties", alternate = {"ProfileCardProperties"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.ProfileCardPropertyCollectionPage profileCardProperties;
-
-    /**
-     * The Pronouns.
-     * Represents administrator settings that manage the support of pronouns in an organization.
-     */
-    @SerializedName(value = "pronouns", alternate = {"Pronouns"})
-    @Expose
-	@Nullable
-    public PronounsSettings pronouns;
 
 
     /**

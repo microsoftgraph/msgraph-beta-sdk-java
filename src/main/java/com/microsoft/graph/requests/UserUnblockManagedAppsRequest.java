@@ -18,9 +18,7 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the User Unblock Managed Apps Request.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserUnblockManagedAppsRequest extends BaseRequest<Void> {
     /**
      * The request for this UserUnblockManagedApps

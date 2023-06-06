@@ -94,7 +94,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
 
     /**
      * The Tenant Restrictions.
-     * 
+     * Defines the default tenant restrictions configuration for your organization users accessing an external organization on your network or devices.
      */
     @SerializedName(value = "tenantRestrictions", alternate = {"TenantRestrictions"})
     @Expose

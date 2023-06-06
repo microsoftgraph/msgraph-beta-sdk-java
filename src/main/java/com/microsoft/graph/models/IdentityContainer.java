@@ -13,6 +13,7 @@ import com.microsoft.graph.models.ConditionalAccessRoot;
 import com.microsoft.graph.models.ContinuousAccessEvaluationPolicy;
 import com.microsoft.graph.requests.IdentityApiConnectorCollectionPage;
 import com.microsoft.graph.requests.AuthenticationEventListenerCollectionPage;
+import com.microsoft.graph.requests.AuthenticationEventsFlowCollectionPage;
 import com.microsoft.graph.requests.B2cIdentityUserFlowCollectionPage;
 import com.microsoft.graph.requests.B2xIdentityUserFlowCollectionPage;
 import com.microsoft.graph.requests.CustomAuthenticationExtensionCollectionPage;
@@ -65,6 +66,15 @@ public class IdentityContainer implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.AuthenticationEventListenerCollectionPage authenticationEventListeners;
+
+    /**
+     * The Authentication Events Flows.
+     * Represents the entry point for self-service sign up and sign in user flows in both Azure AD workforce and customer tenants.
+     */
+    @SerializedName(value = "authenticationEventsFlows", alternate = {"AuthenticationEventsFlows"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AuthenticationEventsFlowCollectionPage authenticationEventsFlows;
 
     /**
      * The B2c User Flows.
@@ -156,6 +166,10 @@ public class IdentityContainer implements IJsonBackedObject {
 
         if (json.has("authenticationEventListeners")) {
             authenticationEventListeners = serializer.deserializeObject(json.get("authenticationEventListeners"), com.microsoft.graph.requests.AuthenticationEventListenerCollectionPage.class);
+        }
+
+        if (json.has("authenticationEventsFlows")) {
+            authenticationEventsFlows = serializer.deserializeObject(json.get("authenticationEventsFlows"), com.microsoft.graph.requests.AuthenticationEventsFlowCollectionPage.class);
         }
 
         if (json.has("b2cUserFlows")) {

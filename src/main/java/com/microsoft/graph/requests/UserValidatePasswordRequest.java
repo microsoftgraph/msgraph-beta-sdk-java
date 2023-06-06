@@ -20,9 +20,7 @@ import com.microsoft.graph.models.UserValidatePasswordParameterSet;
 
 /**
  * The class for the User Validate Password Request.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserValidatePasswordRequest extends BaseRequest<PasswordValidationInformation> {
     /**
      * The request for this UserValidatePassword

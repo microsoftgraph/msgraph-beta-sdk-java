@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.ContentCustomization;
 import com.microsoft.graph.models.LoginPageLayoutConfiguration;
 import com.microsoft.graph.models.LoginPageTextVisibilitySettings;
 import com.microsoft.graph.models.Entity;
@@ -63,6 +64,15 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
     @Expose
 	@Nullable
     public java.util.List<String> cdnList;
+
+    /**
+     * The Content Customization.
+     * 
+     */
+    @SerializedName(value = "contentCustomization", alternate = {"ContentCustomization"})
+    @Expose
+	@Nullable
+    public ContentCustomization contentCustomization;
 
     /**
      * The Custom Account Reset Credentials Url.

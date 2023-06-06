@@ -134,7 +134,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Event Type.
-     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and anomalousUserActivity.  For more information about each value, see riskEventType values.
+     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, anomalousUserActivity, userReportedSuspiciousActivity.  For more information about each value, see riskEventType values.
      */
     @SerializedName(value = "riskEventType", alternate = {"RiskEventType"})
     @Expose

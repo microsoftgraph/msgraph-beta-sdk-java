@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.UserDefaultAuthenticationMethodType;
 
 
 import com.google.gson.JsonObject;
@@ -45,6 +46,15 @@ public class SignInPreferences implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean isSystemPreferredAuthenticationMethodEnabled;
+
+    /**
+     * The User Preferred Method For Secondary Authentication.
+     * 
+     */
+    @SerializedName(value = "userPreferredMethodForSecondaryAuthentication", alternate = {"UserPreferredMethodForSecondaryAuthentication"})
+    @Expose
+	@Nullable
+    public UserDefaultAuthenticationMethodType userPreferredMethodForSecondaryAuthentication;
 
 
     /**

@@ -22,9 +22,7 @@ import com.microsoft.graph.requests.UserGetManagedAppPoliciesCollectionResponse;
 
 /**
  * The class for the User Get Managed App Policies Collection Page.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserGetManagedAppPoliciesCollectionPage extends BaseCollectionPage<ManagedAppPolicy, UserGetManagedAppPoliciesCollectionRequestBuilder> {
 
     /**

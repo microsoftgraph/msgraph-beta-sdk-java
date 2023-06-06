@@ -67,9 +67,7 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
     /**
      * The Allowed Users.
      * The users who have access to print using the printer.
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
 	@Nullable
     public com.microsoft.graph.requests.UserCollectionPage allowedUsers;
 

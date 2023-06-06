@@ -165,7 +165,7 @@ public class SearchRequest implements IJsonBackedObject {
 
     /**
      * The Size.
-     * The size of the page to be retrieved. Optional.
+     * The size of the page to be retrieved. The maximum value is 500. Optional.
      */
     @SerializedName(value = "size", alternate = {"Size"})
     @Expose
