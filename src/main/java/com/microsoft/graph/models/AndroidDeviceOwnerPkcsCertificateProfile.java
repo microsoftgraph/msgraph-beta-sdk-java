@@ -3,37 +3,37 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertificateProfileBase implements Parsable {
     /** Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue. */
-    private AndroidDeviceOwnerCertificateAccessType _certificateAccessType;
+    private AndroidDeviceOwnerCertificateAccessType certificateAccessType;
     /** CertificateStore types */
-    private CertificateStore _certificateStore;
+    private CertificateStore certificateStore;
     /** PKCS Certificate Template Name */
-    private String _certificateTemplateName;
+    private String certificateTemplateName;
     /** PKCS Certification Authority */
-    private String _certificationAuthority;
+    private String certificationAuthority;
     /** PKCS Certification Authority Name */
-    private String _certificationAuthorityName;
+    private String certificationAuthorityName;
     /** Device Management Certification Authority Types. */
-    private DeviceManagementCertificationAuthority _certificationAuthorityType;
+    private DeviceManagementCertificationAuthority certificationAuthorityType;
     /** Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements. */
-    private java.util.List<CustomSubjectAlternativeName> _customSubjectAlternativeNames;
+    private java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
     /** Certificate state for devices. This collection can contain a maximum of 2147483647 elements. */
-    private java.util.List<ManagedDeviceCertificateState> _managedDeviceCertificateStates;
+    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
     /** Certificate access information. This collection can contain a maximum of 50 elements. */
-    private java.util.List<AndroidDeviceOwnerSilentCertificateAccess> _silentCertificateAccessDetails;
+    private java.util.List<AndroidDeviceOwnerSilentCertificateAccess> silentCertificateAccessDetails;
     /** Custom String that defines the AAD Attribute. */
-    private String _subjectAlternativeNameFormatString;
+    private String subjectAlternativeNameFormatString;
     /** Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US */
-    private String _subjectNameFormatString;
+    private String subjectNameFormatString;
     /**
      * Instantiates a new AndroidDeviceOwnerPkcsCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerPkcsCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerPkcsCertificateProfile");
@@ -54,7 +54,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     @javax.annotation.Nullable
     public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
-        return this._certificateAccessType;
+        return this.certificateAccessType;
     }
     /**
      * Gets the certificateStore property value. CertificateStore types
@@ -62,7 +62,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     @javax.annotation.Nullable
     public CertificateStore getCertificateStore() {
-        return this._certificateStore;
+        return this.certificateStore;
     }
     /**
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name
@@ -70,7 +70,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     @javax.annotation.Nullable
     public String getCertificateTemplateName() {
-        return this._certificateTemplateName;
+        return this.certificateTemplateName;
     }
     /**
      * Gets the certificationAuthority property value. PKCS Certification Authority
@@ -78,7 +78,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     @javax.annotation.Nullable
     public String getCertificationAuthority() {
-        return this._certificationAuthority;
+        return this.certificationAuthority;
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name
@@ -86,7 +86,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     @javax.annotation.Nullable
     public String getCertificationAuthorityName() {
-        return this._certificationAuthorityName;
+        return this.certificationAuthorityName;
     }
     /**
      * Gets the certificationAuthorityType property value. Device Management Certification Authority Types.
@@ -94,7 +94,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     @javax.annotation.Nullable
     public DeviceManagementCertificationAuthority getCertificationAuthorityType() {
-        return this._certificationAuthorityType;
+        return this.certificationAuthorityType;
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
@@ -102,28 +102,27 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     @javax.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
-        return this._customSubjectAlternativeNames;
+        return this.customSubjectAlternativeNames;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidDeviceOwnerPkcsCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificateAccessType", (n) -> { currentObject.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
-            this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
-            this.put("certificateTemplateName", (n) -> { currentObject.setCertificateTemplateName(n.getStringValue()); });
-            this.put("certificationAuthority", (n) -> { currentObject.setCertificationAuthority(n.getStringValue()); });
-            this.put("certificationAuthorityName", (n) -> { currentObject.setCertificationAuthorityName(n.getStringValue()); });
-            this.put("certificationAuthorityType", (n) -> { currentObject.setCertificationAuthorityType(n.getEnumValue(DeviceManagementCertificationAuthority.class)); });
-            this.put("customSubjectAlternativeNames", (n) -> { currentObject.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
-            this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
-            this.put("silentCertificateAccessDetails", (n) -> { currentObject.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
-            this.put("subjectAlternativeNameFormatString", (n) -> { currentObject.setSubjectAlternativeNameFormatString(n.getStringValue()); });
-            this.put("subjectNameFormatString", (n) -> { currentObject.setSubjectNameFormatString(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
+        deserializerMap.put("certificateTemplateName", (n) -> { this.setCertificateTemplateName(n.getStringValue()); });
+        deserializerMap.put("certificationAuthority", (n) -> { this.setCertificationAuthority(n.getStringValue()); });
+        deserializerMap.put("certificationAuthorityName", (n) -> { this.setCertificationAuthorityName(n.getStringValue()); });
+        deserializerMap.put("certificationAuthorityType", (n) -> { this.setCertificationAuthorityType(n.getEnumValue(DeviceManagementCertificationAuthority.class)); });
+        deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
+        deserializerMap.put("silentCertificateAccessDetails", (n) -> { this.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjectAlternativeNameFormatString", (n) -> { this.setSubjectAlternativeNameFormatString(n.getStringValue()); });
+        deserializerMap.put("subjectNameFormatString", (n) -> { this.setSubjectNameFormatString(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
@@ -131,7 +130,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this._managedDeviceCertificateStates;
+        return this.managedDeviceCertificateStates;
     }
     /**
      * Gets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
@@ -139,7 +138,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     @javax.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> getSilentCertificateAccessDetails() {
-        return this._silentCertificateAccessDetails;
+        return this.silentCertificateAccessDetails;
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
@@ -147,7 +146,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     @javax.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this._subjectAlternativeNameFormatString;
+        return this.subjectAlternativeNameFormatString;
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -155,13 +154,14 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     @javax.annotation.Nullable
     public String getSubjectNameFormatString() {
-        return this._subjectNameFormatString;
+        return this.subjectNameFormatString;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,87 +182,98 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * @param value Value to set for the certificateAccessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateAccessType(@javax.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
-        this._certificateAccessType = value;
+        this.certificateAccessType = value;
     }
     /**
      * Sets the certificateStore property value. CertificateStore types
      * @param value Value to set for the certificateStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateStore(@javax.annotation.Nullable final CertificateStore value) {
-        this._certificateStore = value;
+        this.certificateStore = value;
     }
     /**
      * Sets the certificateTemplateName property value. PKCS Certificate Template Name
      * @param value Value to set for the certificateTemplateName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateTemplateName(@javax.annotation.Nullable final String value) {
-        this._certificateTemplateName = value;
+        this.certificateTemplateName = value;
     }
     /**
      * Sets the certificationAuthority property value. PKCS Certification Authority
      * @param value Value to set for the certificationAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthority(@javax.annotation.Nullable final String value) {
-        this._certificationAuthority = value;
+        this.certificationAuthority = value;
     }
     /**
      * Sets the certificationAuthorityName property value. PKCS Certification Authority Name
      * @param value Value to set for the certificationAuthorityName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthorityName(@javax.annotation.Nullable final String value) {
-        this._certificationAuthorityName = value;
+        this.certificationAuthorityName = value;
     }
     /**
      * Sets the certificationAuthorityType property value. Device Management Certification Authority Types.
      * @param value Value to set for the certificationAuthorityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthorityType(@javax.annotation.Nullable final DeviceManagementCertificationAuthority value) {
-        this._certificationAuthorityType = value;
+        this.certificationAuthorityType = value;
     }
     /**
      * Sets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the customSubjectAlternativeNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSubjectAlternativeNames(@javax.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
-        this._customSubjectAlternativeNames = value;
+        this.customSubjectAlternativeNames = value;
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this._managedDeviceCertificateStates = value;
+        this.managedDeviceCertificateStates = value;
     }
     /**
      * Sets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
      * @param value Value to set for the silentCertificateAccessDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSilentCertificateAccessDetails(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerSilentCertificateAccess> value) {
-        this._silentCertificateAccessDetails = value;
+        this.silentCertificateAccessDetails = value;
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
-        this._subjectAlternativeNameFormatString = value;
+        this.subjectAlternativeNameFormatString = value;
     }
     /**
      * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
-        this._subjectNameFormatString = value;
+        this.subjectNameFormatString = value;
     }
 }

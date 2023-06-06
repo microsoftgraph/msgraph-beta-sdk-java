@@ -3,35 +3,36 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Configuration State for a given device. */
+/**
+ * Device Configuration State for a given device.
+ */
 public class DeviceConfigurationState extends Entity implements Parsable {
     /** The name of the policy for this policyBase */
-    private String _displayName;
+    private String displayName;
     /** Supported platform types for policies. */
-    private PolicyPlatformType _platformType;
+    private PolicyPlatformType platformType;
     /** Count of how many setting a policy holds */
-    private Integer _settingCount;
+    private Integer settingCount;
     /** The settingStates property */
-    private java.util.List<DeviceConfigurationSettingState> _settingStates;
+    private java.util.List<DeviceConfigurationSettingState> settingStates;
     /** The state property */
-    private ComplianceStatus _state;
+    private ComplianceStatus state;
     /** User unique identifier, must be Guid */
-    private String _userId;
+    private String userId;
     /** User Principal Name */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /** The version of the policy */
-    private Integer _version;
+    private Integer version;
     /**
      * Instantiates a new deviceConfigurationState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfigurationState() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,25 +50,24 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceConfigurationState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
-            this.put("settingCount", (n) -> { currentObject.setSettingCount(n.getIntegerValue()); });
-            this.put("settingStates", (n) -> { currentObject.setSettingStates(n.getCollectionOfObjectValues(DeviceConfigurationSettingState::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ComplianceStatus.class)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("platformType", (n) -> { this.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
+        deserializerMap.put("settingCount", (n) -> { this.setSettingCount(n.getIntegerValue()); });
+        deserializerMap.put("settingStates", (n) -> { this.setSettingStates(n.getCollectionOfObjectValues(DeviceConfigurationSettingState::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the platformType property value. Supported platform types for policies.
@@ -75,7 +75,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
-        return this._platformType;
+        return this.platformType;
     }
     /**
      * Gets the settingCount property value. Count of how many setting a policy holds
@@ -83,7 +83,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getSettingCount() {
-        return this._settingCount;
+        return this.settingCount;
     }
     /**
      * Gets the settingStates property value. The settingStates property
@@ -91,7 +91,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceConfigurationSettingState> getSettingStates() {
-        return this._settingStates;
+        return this.settingStates;
     }
     /**
      * Gets the state property value. The state property
@@ -99,7 +99,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ComplianceStatus getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the userId property value. User unique identifier, must be Guid
@@ -107,7 +107,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
@@ -115,7 +115,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Gets the version property value. The version of the policy
@@ -123,13 +123,14 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,63 +148,71 @@ public class DeviceConfigurationState extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the platformType property value. Supported platform types for policies.
      * @param value Value to set for the platformType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformType(@javax.annotation.Nullable final PolicyPlatformType value) {
-        this._platformType = value;
+        this.platformType = value;
     }
     /**
      * Sets the settingCount property value. Count of how many setting a policy holds
      * @param value Value to set for the settingCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingCount(@javax.annotation.Nullable final Integer value) {
-        this._settingCount = value;
+        this.settingCount = value;
     }
     /**
      * Sets the settingStates property value. The settingStates property
      * @param value Value to set for the settingStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingStates(@javax.annotation.Nullable final java.util.List<DeviceConfigurationSettingState> value) {
-        this._settingStates = value;
+        this.settingStates = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the userId property value. User unique identifier, must be Guid
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
     /**
      * Sets the version property value. The version of the policy
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
-        this._version = value;
+        this.version = value;
     }
 }

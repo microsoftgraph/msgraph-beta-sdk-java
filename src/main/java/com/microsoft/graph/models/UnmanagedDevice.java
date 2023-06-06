@@ -5,45 +5,46 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Unmanaged device discovered in the network. */
+/**
+ * Unmanaged device discovered in the network.
+ */
 public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Device name. */
-    private String _deviceName;
+    private String deviceName;
     /** Domain. */
-    private String _domain;
+    private String domain;
     /** IP address. */
-    private String _ipAddress;
+    private String ipAddress;
     /** Last logged on user. */
-    private String _lastLoggedOnUser;
+    private String lastLoggedOnUser;
     /** Last seen date and time. */
-    private OffsetDateTime _lastSeenDateTime;
+    private OffsetDateTime lastSeenDateTime;
     /** Location. */
-    private String _location;
+    private String location;
     /** MAC address. */
-    private String _macAddress;
+    private String macAddress;
     /** Manufacturer. */
-    private String _manufacturer;
+    private String manufacturer;
     /** Model. */
-    private String _model;
+    private String model;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Operating system. */
-    private String _os;
+    private String os;
     /** Operating system version. */
-    private String _osVersion;
+    private String osVersion;
     /**
      * Instantiates a new unmanagedDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnmanagedDevice() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.unmanagedDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +62,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the deviceName property value. Device name.
@@ -69,7 +70,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * Gets the domain property value. Domain.
@@ -77,29 +78,28 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDomain() {
-        return this._domain;
+        return this.domain;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnmanagedDevice currentObject = this;
-        return new HashMap<>(12) {{
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("domain", (n) -> { currentObject.setDomain(n.getStringValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("lastLoggedOnUser", (n) -> { currentObject.setLastLoggedOnUser(n.getStringValue()); });
-            this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getStringValue()); });
-            this.put("macAddress", (n) -> { currentObject.setMacAddress(n.getStringValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("os", (n) -> { currentObject.setOs(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("domain", (n) -> { this.setDomain(n.getStringValue()); });
+        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("lastLoggedOnUser", (n) -> { this.setLastLoggedOnUser(n.getStringValue()); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
+        deserializerMap.put("macAddress", (n) -> { this.setMacAddress(n.getStringValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("os", (n) -> { this.setOs(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddress property value. IP address.
@@ -107,7 +107,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getIpAddress() {
-        return this._ipAddress;
+        return this.ipAddress;
     }
     /**
      * Gets the lastLoggedOnUser property value. Last logged on user.
@@ -115,7 +115,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLastLoggedOnUser() {
-        return this._lastLoggedOnUser;
+        return this.lastLoggedOnUser;
     }
     /**
      * Gets the lastSeenDateTime property value. Last seen date and time.
@@ -123,7 +123,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this._lastSeenDateTime;
+        return this.lastSeenDateTime;
     }
     /**
      * Gets the location property value. Location.
@@ -131,7 +131,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLocation() {
-        return this._location;
+        return this.location;
     }
     /**
      * Gets the macAddress property value. MAC address.
@@ -139,7 +139,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMacAddress() {
-        return this._macAddress;
+        return this.macAddress;
     }
     /**
      * Gets the manufacturer property value. Manufacturer.
@@ -147,7 +147,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the model property value. Model.
@@ -155,7 +155,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -163,7 +163,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the os property value. Operating system.
@@ -171,7 +171,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOs() {
-        return this._os;
+        return this.os;
     }
     /**
      * Gets the osVersion property value. Operating system version.
@@ -179,13 +179,14 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOsVersion() {
-        return this._osVersion;
+        return this.osVersion;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceName", this.getDeviceName());
@@ -207,103 +208,116 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the deviceName property value. Device name.
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the domain property value. Domain.
      * @param value Value to set for the domain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomain(@javax.annotation.Nullable final String value) {
-        this._domain = value;
+        this.domain = value;
     }
     /**
      * Sets the ipAddress property value. IP address.
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
-        this._ipAddress = value;
+        this.ipAddress = value;
     }
     /**
      * Sets the lastLoggedOnUser property value. Last logged on user.
      * @param value Value to set for the lastLoggedOnUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastLoggedOnUser(@javax.annotation.Nullable final String value) {
-        this._lastLoggedOnUser = value;
+        this.lastLoggedOnUser = value;
     }
     /**
      * Sets the lastSeenDateTime property value. Last seen date and time.
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSeenDateTime = value;
+        this.lastSeenDateTime = value;
     }
     /**
      * Sets the location property value. Location.
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final String value) {
-        this._location = value;
+        this.location = value;
     }
     /**
      * Sets the macAddress property value. MAC address.
      * @param value Value to set for the macAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacAddress(@javax.annotation.Nullable final String value) {
-        this._macAddress = value;
+        this.macAddress = value;
     }
     /**
      * Sets the manufacturer property value. Manufacturer.
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the model property value. Model.
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the os property value. Operating system.
      * @param value Value to set for the os property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOs(@javax.annotation.Nullable final String value) {
-        this._os = value;
+        this.os = value;
     }
     /**
      * Sets the osVersion property value. Operating system version.
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
-        this._osVersion = value;
+        this.osVersion = value;
     }
 }

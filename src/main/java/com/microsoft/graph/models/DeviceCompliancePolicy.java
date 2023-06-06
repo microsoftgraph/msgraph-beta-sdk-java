@@ -1,64 +1,54 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidCompliancePolicy;
-import com.microsoft.graph.models.AndroidDeviceOwnerCompliancePolicy;
-import com.microsoft.graph.models.AndroidForWorkCompliancePolicy;
-import com.microsoft.graph.models.AndroidWorkProfileCompliancePolicy;
-import com.microsoft.graph.models.AospDeviceOwnerCompliancePolicy;
-import com.microsoft.graph.models.DefaultDeviceCompliancePolicy;
-import com.microsoft.graph.models.IosCompliancePolicy;
-import com.microsoft.graph.models.MacOSCompliancePolicy;
-import com.microsoft.graph.models.Windows10CompliancePolicy;
-import com.microsoft.graph.models.Windows10MobileCompliancePolicy;
-import com.microsoft.graph.models.Windows81CompliancePolicy;
-import com.microsoft.graph.models.WindowsPhone81CompliancePolicy;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This is the base class for Compliance policy. Compliance policies are platform specific and individual per-platform compliance policies inherit from here. 
+ */
 public class DeviceCompliancePolicy extends Entity implements Parsable {
     /** The collection of assignments for this compliance policy. */
-    private java.util.List<DeviceCompliancePolicyAssignment> _assignments;
+    private java.util.List<DeviceCompliancePolicyAssignment> assignments;
     /** DateTime the object was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Admin provided description of the Device Configuration. */
-    private String _description;
+    private String description;
     /** Compliance Setting State Device Summary */
-    private java.util.List<SettingStateDeviceSummary> _deviceSettingStateSummaries;
+    private java.util.List<SettingStateDeviceSummary> deviceSettingStateSummaries;
     /** List of DeviceComplianceDeviceStatus. */
-    private java.util.List<DeviceComplianceDeviceStatus> _deviceStatuses;
+    private java.util.List<DeviceComplianceDeviceStatus> deviceStatuses;
     /** Device compliance devices status overview */
-    private DeviceComplianceDeviceOverview _deviceStatusOverview;
+    private DeviceComplianceDeviceOverview deviceStatusOverview;
     /** Admin provided name of the device configuration. */
-    private String _displayName;
+    private String displayName;
     /** DateTime the object was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** List of Scope Tags for this Entity instance. */
-    private java.util.List<String> _roleScopeTagIds;
+    private java.util.List<String> roleScopeTagIds;
     /** The list of scheduled action for this rule */
-    private java.util.List<DeviceComplianceScheduledActionForRule> _scheduledActionsForRule;
+    private java.util.List<DeviceComplianceScheduledActionForRule> scheduledActionsForRule;
     /** List of DeviceComplianceUserStatus. */
-    private java.util.List<DeviceComplianceUserStatus> _userStatuses;
+    private java.util.List<DeviceComplianceUserStatus> userStatuses;
     /** Device compliance users status overview */
-    private DeviceComplianceUserOverview _userStatusOverview;
+    private DeviceComplianceUserOverview userStatusOverview;
     /** Version of the device configuration. */
-    private Integer _version;
+    private Integer version;
     /**
-     * Instantiates a new DeviceCompliancePolicy and sets the default values.
+     * Instantiates a new deviceCompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceCompliancePolicy() {
         super();
-        this.setOdataType("#microsoft.graph.deviceCompliancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceCompliancePolicy
+     * @return a deviceCompliancePolicy
      */
     @javax.annotation.Nonnull
     public static DeviceCompliancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -89,7 +79,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceCompliancePolicyAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
@@ -97,7 +87,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
@@ -105,7 +95,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the deviceSettingStateSummaries property value. Compliance Setting State Device Summary
@@ -113,7 +103,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SettingStateDeviceSummary> getDeviceSettingStateSummaries() {
-        return this._deviceSettingStateSummaries;
+        return this.deviceSettingStateSummaries;
     }
     /**
      * Gets the deviceStatuses property value. List of DeviceComplianceDeviceStatus.
@@ -121,7 +111,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceComplianceDeviceStatus> getDeviceStatuses() {
-        return this._deviceStatuses;
+        return this.deviceStatuses;
     }
     /**
      * Gets the deviceStatusOverview property value. Device compliance devices status overview
@@ -129,7 +119,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceComplianceDeviceOverview getDeviceStatusOverview() {
-        return this._deviceStatusOverview;
+        return this.deviceStatusOverview;
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
@@ -137,30 +127,29 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceCompliancePolicyAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceSettingStateSummaries", (n) -> { currentObject.setDeviceSettingStateSummaries(n.getCollectionOfObjectValues(SettingStateDeviceSummary::createFromDiscriminatorValue)); });
-            this.put("deviceStatuses", (n) -> { currentObject.setDeviceStatuses(n.getCollectionOfObjectValues(DeviceComplianceDeviceStatus::createFromDiscriminatorValue)); });
-            this.put("deviceStatusOverview", (n) -> { currentObject.setDeviceStatusOverview(n.getObjectValue(DeviceComplianceDeviceOverview::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("scheduledActionsForRule", (n) -> { currentObject.setScheduledActionsForRule(n.getCollectionOfObjectValues(DeviceComplianceScheduledActionForRule::createFromDiscriminatorValue)); });
-            this.put("userStatuses", (n) -> { currentObject.setUserStatuses(n.getCollectionOfObjectValues(DeviceComplianceUserStatus::createFromDiscriminatorValue)); });
-            this.put("userStatusOverview", (n) -> { currentObject.setUserStatusOverview(n.getObjectValue(DeviceComplianceUserOverview::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(DeviceCompliancePolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceSettingStateSummaries", (n) -> { this.setDeviceSettingStateSummaries(n.getCollectionOfObjectValues(SettingStateDeviceSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStatuses", (n) -> { this.setDeviceStatuses(n.getCollectionOfObjectValues(DeviceComplianceDeviceStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStatusOverview", (n) -> { this.setDeviceStatusOverview(n.getObjectValue(DeviceComplianceDeviceOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("scheduledActionsForRule", (n) -> { this.setScheduledActionsForRule(n.getCollectionOfObjectValues(DeviceComplianceScheduledActionForRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("userStatuses", (n) -> { this.setUserStatuses(n.getCollectionOfObjectValues(DeviceComplianceUserStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("userStatusOverview", (n) -> { this.setUserStatusOverview(n.getObjectValue(DeviceComplianceUserOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -168,7 +157,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
@@ -176,7 +165,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this._roleScopeTagIds;
+        return this.roleScopeTagIds;
     }
     /**
      * Gets the scheduledActionsForRule property value. The list of scheduled action for this rule
@@ -184,7 +173,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceComplianceScheduledActionForRule> getScheduledActionsForRule() {
-        return this._scheduledActionsForRule;
+        return this.scheduledActionsForRule;
     }
     /**
      * Gets the userStatuses property value. List of DeviceComplianceUserStatus.
@@ -192,7 +181,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceComplianceUserStatus> getUserStatuses() {
-        return this._userStatuses;
+        return this.userStatuses;
     }
     /**
      * Gets the userStatusOverview property value. Device compliance users status overview
@@ -200,7 +189,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceComplianceUserOverview getUserStatusOverview() {
-        return this._userStatusOverview;
+        return this.userStatusOverview;
     }
     /**
      * Gets the version property value. Version of the device configuration.
@@ -208,13 +197,14 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -237,103 +227,116 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicyAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the deviceSettingStateSummaries property value. Compliance Setting State Device Summary
      * @param value Value to set for the deviceSettingStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceSettingStateSummaries(@javax.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
-        this._deviceSettingStateSummaries = value;
+        this.deviceSettingStateSummaries = value;
     }
     /**
      * Sets the deviceStatuses property value. List of DeviceComplianceDeviceStatus.
      * @param value Value to set for the deviceStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<DeviceComplianceDeviceStatus> value) {
-        this._deviceStatuses = value;
+        this.deviceStatuses = value;
     }
     /**
      * Sets the deviceStatusOverview property value. Device compliance devices status overview
      * @param value Value to set for the deviceStatusOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatusOverview(@javax.annotation.Nullable final DeviceComplianceDeviceOverview value) {
-        this._deviceStatusOverview = value;
+        this.deviceStatusOverview = value;
     }
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roleScopeTagIds = value;
+        this.roleScopeTagIds = value;
     }
     /**
      * Sets the scheduledActionsForRule property value. The list of scheduled action for this rule
      * @param value Value to set for the scheduledActionsForRule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduledActionsForRule(@javax.annotation.Nullable final java.util.List<DeviceComplianceScheduledActionForRule> value) {
-        this._scheduledActionsForRule = value;
+        this.scheduledActionsForRule = value;
     }
     /**
      * Sets the userStatuses property value. List of DeviceComplianceUserStatus.
      * @param value Value to set for the userStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStatuses(@javax.annotation.Nullable final java.util.List<DeviceComplianceUserStatus> value) {
-        this._userStatuses = value;
+        this.userStatuses = value;
     }
     /**
      * Sets the userStatusOverview property value. Device compliance users status overview
      * @param value Value to set for the userStatusOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStatusOverview(@javax.annotation.Nullable final DeviceComplianceUserOverview value) {
-        this._userStatusOverview = value;
+        this.userStatusOverview = value;
     }
     /**
      * Sets the version property value. Version of the device configuration.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
-        this._version = value;
+        this.version = value;
     }
 }

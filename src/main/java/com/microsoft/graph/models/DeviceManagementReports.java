@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementReports extends Entity implements Parsable {
     /** Entity representing the configuration of a cached report */
-    private java.util.List<DeviceManagementCachedReportConfiguration> _cachedReportConfigurations;
+    private java.util.List<DeviceManagementCachedReportConfiguration> cachedReportConfigurations;
     /** Entity representing a job to export a report */
-    private java.util.List<DeviceManagementExportJob> _exportJobs;
+    private java.util.List<DeviceManagementExportJob> exportJobs;
     /**
      * Instantiates a new DeviceManagementReports and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementReports() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementReports");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +35,7 @@ public class DeviceManagementReports extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementCachedReportConfiguration> getCachedReportConfigurations() {
-        return this._cachedReportConfigurations;
+        return this.cachedReportConfigurations;
     }
     /**
      * Gets the exportJobs property value. Entity representing a job to export a report
@@ -44,25 +43,25 @@ public class DeviceManagementReports extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementExportJob> getExportJobs() {
-        return this._exportJobs;
+        return this.exportJobs;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementReports currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("cachedReportConfigurations", (n) -> { currentObject.setCachedReportConfigurations(n.getCollectionOfObjectValues(DeviceManagementCachedReportConfiguration::createFromDiscriminatorValue)); });
-            this.put("exportJobs", (n) -> { currentObject.setExportJobs(n.getCollectionOfObjectValues(DeviceManagementExportJob::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("cachedReportConfigurations", (n) -> { this.setCachedReportConfigurations(n.getCollectionOfObjectValues(DeviceManagementCachedReportConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("exportJobs", (n) -> { this.setExportJobs(n.getCollectionOfObjectValues(DeviceManagementExportJob::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class DeviceManagementReports extends Entity implements Parsable {
      * @param value Value to set for the cachedReportConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCachedReportConfigurations(@javax.annotation.Nullable final java.util.List<DeviceManagementCachedReportConfiguration> value) {
-        this._cachedReportConfigurations = value;
+        this.cachedReportConfigurations = value;
     }
     /**
      * Sets the exportJobs property value. Entity representing a job to export a report
      * @param value Value to set for the exportJobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExportJobs(@javax.annotation.Nullable final java.util.List<DeviceManagementExportJob> value) {
-        this._exportJobs = value;
+        this.exportJobs = value;
     }
 }

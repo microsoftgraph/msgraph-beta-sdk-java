@@ -3,33 +3,39 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
 public class Participant extends Entity implements Parsable {
     /** The info property */
-    private ParticipantInfo _info;
+    private ParticipantInfo info;
     /** The isIdentityAnonymized property */
-    private Boolean _isIdentityAnonymized;
+    private Boolean isIdentityAnonymized;
     /** true if the participant is in lobby. */
-    private Boolean _isInLobby;
+    private Boolean isInLobby;
     /** true if the participant is muted (client or server muted). */
-    private Boolean _isMuted;
+    private Boolean isMuted;
     /** The list of media streams. */
-    private java.util.List<MediaStream> _mediaStreams;
+    private java.util.List<MediaStream> mediaStreams;
     /** A blob of data provided by the participant in the roster. */
-    private String _metadata;
+    private String metadata;
+    /** The preferredDisplayName property */
+    private String preferredDisplayName;
     /** Information on whether the participant has recording capability. */
-    private RecordingInfo _recordingInfo;
+    private RecordingInfo recordingInfo;
+    /** Indicates the reason why the participant was removed from the roster. */
+    private RemovedState removedState;
+    /** Indicates the reason or reasons why media content from this participant is restricted. */
+    private OnlineMeetingRestricted restrictedExperience;
+    /** Indicates the roster sequence number the participant was last updated in. */
+    private Long rosterSequenceNumber;
     /**
      * Instantiates a new participant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Participant() {
         super();
-        this.setOdataType("#microsoft.graph.participant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,20 +49,23 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Participant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("isIdentityAnonymized", (n) -> { currentObject.setIsIdentityAnonymized(n.getBooleanValue()); });
-            this.put("isInLobby", (n) -> { currentObject.setIsInLobby(n.getBooleanValue()); });
-            this.put("isMuted", (n) -> { currentObject.setIsMuted(n.getBooleanValue()); });
-            this.put("mediaStreams", (n) -> { currentObject.setMediaStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
-            this.put("metadata", (n) -> { currentObject.setMetadata(n.getStringValue()); });
-            this.put("recordingInfo", (n) -> { currentObject.setRecordingInfo(n.getObjectValue(RecordingInfo::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("info", (n) -> { this.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("isIdentityAnonymized", (n) -> { this.setIsIdentityAnonymized(n.getBooleanValue()); });
+        deserializerMap.put("isInLobby", (n) -> { this.setIsInLobby(n.getBooleanValue()); });
+        deserializerMap.put("isMuted", (n) -> { this.setIsMuted(n.getBooleanValue()); });
+        deserializerMap.put("mediaStreams", (n) -> { this.setMediaStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
+        deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getStringValue()); });
+        deserializerMap.put("preferredDisplayName", (n) -> { this.setPreferredDisplayName(n.getStringValue()); });
+        deserializerMap.put("recordingInfo", (n) -> { this.setRecordingInfo(n.getObjectValue(RecordingInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("removedState", (n) -> { this.setRemovedState(n.getObjectValue(RemovedState::createFromDiscriminatorValue)); });
+        deserializerMap.put("restrictedExperience", (n) -> { this.setRestrictedExperience(n.getObjectValue(OnlineMeetingRestricted::createFromDiscriminatorValue)); });
+        deserializerMap.put("rosterSequenceNumber", (n) -> { this.setRosterSequenceNumber(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the info property value. The info property
@@ -64,7 +73,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ParticipantInfo getInfo() {
-        return this._info;
+        return this.info;
     }
     /**
      * Gets the isIdentityAnonymized property value. The isIdentityAnonymized property
@@ -72,7 +81,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsIdentityAnonymized() {
-        return this._isIdentityAnonymized;
+        return this.isIdentityAnonymized;
     }
     /**
      * Gets the isInLobby property value. true if the participant is in lobby.
@@ -80,7 +89,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsInLobby() {
-        return this._isInLobby;
+        return this.isInLobby;
     }
     /**
      * Gets the isMuted property value. true if the participant is muted (client or server muted).
@@ -88,7 +97,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsMuted() {
-        return this._isMuted;
+        return this.isMuted;
     }
     /**
      * Gets the mediaStreams property value. The list of media streams.
@@ -96,7 +105,7 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MediaStream> getMediaStreams() {
-        return this._mediaStreams;
+        return this.mediaStreams;
     }
     /**
      * Gets the metadata property value. A blob of data provided by the participant in the roster.
@@ -104,7 +113,15 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMetadata() {
-        return this._metadata;
+        return this.metadata;
+    }
+    /**
+     * Gets the preferredDisplayName property value. The preferredDisplayName property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getPreferredDisplayName() {
+        return this.preferredDisplayName;
     }
     /**
      * Gets the recordingInfo property value. Information on whether the participant has recording capability.
@@ -112,13 +129,38 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RecordingInfo getRecordingInfo() {
-        return this._recordingInfo;
+        return this.recordingInfo;
+    }
+    /**
+     * Gets the removedState property value. Indicates the reason why the participant was removed from the roster.
+     * @return a removedState
+     */
+    @javax.annotation.Nullable
+    public RemovedState getRemovedState() {
+        return this.removedState;
+    }
+    /**
+     * Gets the restrictedExperience property value. Indicates the reason or reasons why media content from this participant is restricted.
+     * @return a onlineMeetingRestricted
+     */
+    @javax.annotation.Nullable
+    public OnlineMeetingRestricted getRestrictedExperience() {
+        return this.restrictedExperience;
+    }
+    /**
+     * Gets the rosterSequenceNumber property value. Indicates the roster sequence number the participant was last updated in.
+     * @return a int64
+     */
+    @javax.annotation.Nullable
+    public Long getRosterSequenceNumber() {
+        return this.rosterSequenceNumber;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -128,62 +170,109 @@ public class Participant extends Entity implements Parsable {
         writer.writeBooleanValue("isMuted", this.getIsMuted());
         writer.writeCollectionOfObjectValues("mediaStreams", this.getMediaStreams());
         writer.writeStringValue("metadata", this.getMetadata());
+        writer.writeStringValue("preferredDisplayName", this.getPreferredDisplayName());
         writer.writeObjectValue("recordingInfo", this.getRecordingInfo());
+        writer.writeObjectValue("removedState", this.getRemovedState());
+        writer.writeObjectValue("restrictedExperience", this.getRestrictedExperience());
+        writer.writeLongValue("rosterSequenceNumber", this.getRosterSequenceNumber());
     }
     /**
      * Sets the info property value. The info property
      * @param value Value to set for the info property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfo(@javax.annotation.Nullable final ParticipantInfo value) {
-        this._info = value;
+        this.info = value;
     }
     /**
      * Sets the isIdentityAnonymized property value. The isIdentityAnonymized property
      * @param value Value to set for the isIdentityAnonymized property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsIdentityAnonymized(@javax.annotation.Nullable final Boolean value) {
-        this._isIdentityAnonymized = value;
+        this.isIdentityAnonymized = value;
     }
     /**
      * Sets the isInLobby property value. true if the participant is in lobby.
      * @param value Value to set for the isInLobby property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsInLobby(@javax.annotation.Nullable final Boolean value) {
-        this._isInLobby = value;
+        this.isInLobby = value;
     }
     /**
      * Sets the isMuted property value. true if the participant is muted (client or server muted).
      * @param value Value to set for the isMuted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMuted(@javax.annotation.Nullable final Boolean value) {
-        this._isMuted = value;
+        this.isMuted = value;
     }
     /**
      * Sets the mediaStreams property value. The list of media streams.
      * @param value Value to set for the mediaStreams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaStreams(@javax.annotation.Nullable final java.util.List<MediaStream> value) {
-        this._mediaStreams = value;
+        this.mediaStreams = value;
     }
     /**
      * Sets the metadata property value. A blob of data provided by the participant in the roster.
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final String value) {
-        this._metadata = value;
+        this.metadata = value;
+    }
+    /**
+     * Sets the preferredDisplayName property value. The preferredDisplayName property
+     * @param value Value to set for the preferredDisplayName property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPreferredDisplayName(@javax.annotation.Nullable final String value) {
+        this.preferredDisplayName = value;
     }
     /**
      * Sets the recordingInfo property value. Information on whether the participant has recording capability.
      * @param value Value to set for the recordingInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordingInfo(@javax.annotation.Nullable final RecordingInfo value) {
-        this._recordingInfo = value;
+        this.recordingInfo = value;
+    }
+    /**
+     * Sets the removedState property value. Indicates the reason why the participant was removed from the roster.
+     * @param value Value to set for the removedState property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRemovedState(@javax.annotation.Nullable final RemovedState value) {
+        this.removedState = value;
+    }
+    /**
+     * Sets the restrictedExperience property value. Indicates the reason or reasons why media content from this participant is restricted.
+     * @param value Value to set for the restrictedExperience property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRestrictedExperience(@javax.annotation.Nullable final OnlineMeetingRestricted value) {
+        this.restrictedExperience = value;
+    }
+    /**
+     * Sets the rosterSequenceNumber property value. Indicates the roster sequence number the participant was last updated in.
+     * @param value Value to set for the rosterSequenceNumber property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRosterSequenceNumber(@javax.annotation.Nullable final Long value) {
+        this.rosterSequenceNumber = value;
     }
 }

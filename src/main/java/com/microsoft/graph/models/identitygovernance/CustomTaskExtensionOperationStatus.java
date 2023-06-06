@@ -3,7 +3,6 @@ package com.microsoft.graph.models.identitygovernance;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the resume method. */
 public enum CustomTaskExtensionOperationStatus implements ValuedEnum {
     Completed("completed"),
     Failed("failed"),

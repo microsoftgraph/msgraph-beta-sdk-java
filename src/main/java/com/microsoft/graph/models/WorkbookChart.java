@@ -3,43 +3,41 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WorkbookChart extends Entity implements Parsable {
     /** Represents chart axes. Read-only. */
-    private WorkbookChartAxes _axes;
+    private WorkbookChartAxes axes;
     /** Represents the datalabels on the chart. Read-only. */
-    private WorkbookChartDataLabels _dataLabels;
+    private WorkbookChartDataLabels dataLabels;
     /** Encapsulates the format properties for the chart area. Read-only. */
-    private WorkbookChartAreaFormat _format;
+    private WorkbookChartAreaFormat format;
     /** Represents the height, in points, of the chart object. */
-    private Double _height;
+    private Double height;
     /** The distance, in points, from the left side of the chart to the worksheet origin. */
-    private Double _left;
+    private Double left;
     /** Represents the legend for the chart. Read-only. */
-    private WorkbookChartLegend _legend;
+    private WorkbookChartLegend legend;
     /** Represents the name of a chart object. */
-    private String _name;
+    private String name;
     /** Represents either a single series or collection of series in the chart. Read-only. */
-    private java.util.List<WorkbookChartSeries> _series;
+    private java.util.List<WorkbookChartSeries> series;
     /** Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only. */
-    private WorkbookChartTitle _title;
+    private WorkbookChartTitle title;
     /** Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart). */
-    private Double _top;
+    private Double top;
     /** Represents the width, in points, of the chart object. */
-    private Double _width;
+    private Double width;
     /** The worksheet containing the current chart. Read-only. */
-    private WorkbookWorksheet _worksheet;
+    private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new workbookChart and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChart() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChart");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,7 +55,7 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartAxes getAxes() {
-        return this._axes;
+        return this.axes;
     }
     /**
      * Gets the dataLabels property value. Represents the datalabels on the chart. Read-only.
@@ -65,29 +63,28 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartDataLabels getDataLabels() {
-        return this._dataLabels;
+        return this.dataLabels;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChart currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("axes", (n) -> { currentObject.setAxes(n.getObjectValue(WorkbookChartAxes::createFromDiscriminatorValue)); });
-            this.put("dataLabels", (n) -> { currentObject.setDataLabels(n.getObjectValue(WorkbookChartDataLabels::createFromDiscriminatorValue)); });
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartAreaFormat::createFromDiscriminatorValue)); });
-            this.put("height", (n) -> { currentObject.setHeight(n.getDoubleValue()); });
-            this.put("left", (n) -> { currentObject.setLeft(n.getDoubleValue()); });
-            this.put("legend", (n) -> { currentObject.setLegend(n.getObjectValue(WorkbookChartLegend::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("series", (n) -> { currentObject.setSeries(n.getCollectionOfObjectValues(WorkbookChartSeries::createFromDiscriminatorValue)); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getObjectValue(WorkbookChartTitle::createFromDiscriminatorValue)); });
-            this.put("top", (n) -> { currentObject.setTop(n.getDoubleValue()); });
-            this.put("width", (n) -> { currentObject.setWidth(n.getDoubleValue()); });
-            this.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("axes", (n) -> { this.setAxes(n.getObjectValue(WorkbookChartAxes::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataLabels", (n) -> { this.setDataLabels(n.getObjectValue(WorkbookChartDataLabels::createFromDiscriminatorValue)); });
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartAreaFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("height", (n) -> { this.setHeight(n.getDoubleValue()); });
+        deserializerMap.put("left", (n) -> { this.setLeft(n.getDoubleValue()); });
+        deserializerMap.put("legend", (n) -> { this.setLegend(n.getObjectValue(WorkbookChartLegend::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("series", (n) -> { this.setSeries(n.getCollectionOfObjectValues(WorkbookChartSeries::createFromDiscriminatorValue)); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getObjectValue(WorkbookChartTitle::createFromDiscriminatorValue)); });
+        deserializerMap.put("top", (n) -> { this.setTop(n.getDoubleValue()); });
+        deserializerMap.put("width", (n) -> { this.setWidth(n.getDoubleValue()); });
+        deserializerMap.put("worksheet", (n) -> { this.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. Encapsulates the format properties for the chart area. Read-only.
@@ -95,7 +92,7 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartAreaFormat getFormat() {
-        return this._format;
+        return this.format;
     }
     /**
      * Gets the height property value. Represents the height, in points, of the chart object.
@@ -103,7 +100,7 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getHeight() {
-        return this._height;
+        return this.height;
     }
     /**
      * Gets the left property value. The distance, in points, from the left side of the chart to the worksheet origin.
@@ -111,7 +108,7 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getLeft() {
-        return this._left;
+        return this.left;
     }
     /**
      * Gets the legend property value. Represents the legend for the chart. Read-only.
@@ -119,7 +116,7 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartLegend getLegend() {
-        return this._legend;
+        return this.legend;
     }
     /**
      * Gets the name property value. Represents the name of a chart object.
@@ -127,7 +124,7 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the series property value. Represents either a single series or collection of series in the chart. Read-only.
@@ -135,7 +132,7 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookChartSeries> getSeries() {
-        return this._series;
+        return this.series;
     }
     /**
      * Gets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
@@ -143,7 +140,7 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartTitle getTitle() {
-        return this._title;
+        return this.title;
     }
     /**
      * Gets the top property value. Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
@@ -151,7 +148,7 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getTop() {
-        return this._top;
+        return this.top;
     }
     /**
      * Gets the width property value. Represents the width, in points, of the chart object.
@@ -159,7 +156,7 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getWidth() {
-        return this._width;
+        return this.width;
     }
     /**
      * Gets the worksheet property value. The worksheet containing the current chart. Read-only.
@@ -167,13 +164,14 @@ public class WorkbookChart extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {
-        return this._worksheet;
+        return this.worksheet;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,95 +193,107 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the axes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAxes(@javax.annotation.Nullable final WorkbookChartAxes value) {
-        this._axes = value;
+        this.axes = value;
     }
     /**
      * Sets the dataLabels property value. Represents the datalabels on the chart. Read-only.
      * @param value Value to set for the dataLabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataLabels(@javax.annotation.Nullable final WorkbookChartDataLabels value) {
-        this._dataLabels = value;
+        this.dataLabels = value;
     }
     /**
      * Sets the format property value. Encapsulates the format properties for the chart area. Read-only.
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartAreaFormat value) {
-        this._format = value;
+        this.format = value;
     }
     /**
      * Sets the height property value. Represents the height, in points, of the chart object.
      * @param value Value to set for the height property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeight(@javax.annotation.Nullable final Double value) {
-        this._height = value;
+        this.height = value;
     }
     /**
      * Sets the left property value. The distance, in points, from the left side of the chart to the worksheet origin.
      * @param value Value to set for the left property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLeft(@javax.annotation.Nullable final Double value) {
-        this._left = value;
+        this.left = value;
     }
     /**
      * Sets the legend property value. Represents the legend for the chart. Read-only.
      * @param value Value to set for the legend property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLegend(@javax.annotation.Nullable final WorkbookChartLegend value) {
-        this._legend = value;
+        this.legend = value;
     }
     /**
      * Sets the name property value. Represents the name of a chart object.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the series property value. Represents either a single series or collection of series in the chart. Read-only.
      * @param value Value to set for the series property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeries(@javax.annotation.Nullable final java.util.List<WorkbookChartSeries> value) {
-        this._series = value;
+        this.series = value;
     }
     /**
      * Sets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final WorkbookChartTitle value) {
-        this._title = value;
+        this.title = value;
     }
     /**
      * Sets the top property value. Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
      * @param value Value to set for the top property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTop(@javax.annotation.Nullable final Double value) {
-        this._top = value;
+        this.top = value;
     }
     /**
      * Sets the width property value. Represents the width, in points, of the chart object.
      * @param value Value to set for the width property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWidth(@javax.annotation.Nullable final Double value) {
-        this._width = value;
+        this.width = value;
     }
     /**
      * Sets the worksheet property value. The worksheet containing the current chart. Read-only.
      * @param value Value to set for the worksheet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorksheet(@javax.annotation.Nullable final WorkbookWorksheet value) {
-        this._worksheet = value;
+        this.worksheet = value;
     }
 }

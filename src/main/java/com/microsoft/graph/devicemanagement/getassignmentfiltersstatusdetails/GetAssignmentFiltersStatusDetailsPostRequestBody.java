@@ -4,30 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getAssignmentFiltersStatusDetails method. */
 public class GetAssignmentFiltersStatusDetailsPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The assignmentFilterIds property */
-    private java.util.List<String> _assignmentFilterIds;
+    private java.util.List<String> assignmentFilterIds;
     /** The managedDeviceId property */
-    private String _managedDeviceId;
+    private String managedDeviceId;
     /** The payloadId property */
-    private String _payloadId;
+    private String payloadId;
     /** The skip property */
-    private Integer _skip;
+    private Integer skip;
     /** The top property */
-    private Integer _top;
+    private Integer top;
     /** The userId property */
-    private String _userId;
+    private String userId;
     /**
      * Instantiates a new getAssignmentFiltersStatusDetailsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetAssignmentFiltersStatusDetailsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,7 +46,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the assignmentFilterIds property value. The assignmentFilterIds property
@@ -55,23 +54,22 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAssignmentFilterIds() {
-        return this._assignmentFilterIds;
+        return this.assignmentFilterIds;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GetAssignmentFiltersStatusDetailsPostRequestBody currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("assignmentFilterIds", (n) -> { currentObject.setAssignmentFilterIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
-            this.put("skip", (n) -> { currentObject.setSkip(n.getIntegerValue()); });
-            this.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("assignmentFilterIds", (n) -> { this.setAssignmentFilterIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("payloadId", (n) -> { this.setPayloadId(n.getStringValue()); });
+        deserializerMap.put("skip", (n) -> { this.setSkip(n.getIntegerValue()); });
+        deserializerMap.put("top", (n) -> { this.setTop(n.getIntegerValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceId property value. The managedDeviceId property
@@ -79,7 +77,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      */
     @javax.annotation.Nullable
     public String getManagedDeviceId() {
-        return this._managedDeviceId;
+        return this.managedDeviceId;
     }
     /**
      * Gets the payloadId property value. The payloadId property
@@ -87,7 +85,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      */
     @javax.annotation.Nullable
     public String getPayloadId() {
-        return this._payloadId;
+        return this.payloadId;
     }
     /**
      * Gets the skip property value. The skip property
@@ -95,7 +93,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      */
     @javax.annotation.Nullable
     public Integer getSkip() {
-        return this._skip;
+        return this.skip;
     }
     /**
      * Gets the top property value. The top property
@@ -103,7 +101,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      */
     @javax.annotation.Nullable
     public Integer getTop() {
-        return this._top;
+        return this.top;
     }
     /**
      * Gets the userId property value. The userId property
@@ -111,13 +109,14 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("assignmentFilterIds", this.getAssignmentFilterIds());
@@ -133,55 +132,62 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the assignmentFilterIds property value. The assignmentFilterIds property
      * @param value Value to set for the assignmentFilterIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._assignmentFilterIds = value;
+        this.assignmentFilterIds = value;
     }
     /**
      * Sets the managedDeviceId property value. The managedDeviceId property
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
-        this._managedDeviceId = value;
+        this.managedDeviceId = value;
     }
     /**
      * Sets the payloadId property value. The payloadId property
      * @param value Value to set for the payloadId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadId(@javax.annotation.Nullable final String value) {
-        this._payloadId = value;
+        this.payloadId = value;
     }
     /**
      * Sets the skip property value. The skip property
      * @param value Value to set for the skip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkip(@javax.annotation.Nullable final Integer value) {
-        this._skip = value;
+        this.skip = value;
     }
     /**
      * Sets the top property value. The top property
      * @param value Value to set for the top property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTop(@javax.annotation.Nullable final Integer value) {
-        this._top = value;
+        this.top = value;
     }
     /**
      * Sets the userId property value. The userId property
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

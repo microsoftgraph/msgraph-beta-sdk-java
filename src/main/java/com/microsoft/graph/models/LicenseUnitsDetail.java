@@ -4,28 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The number of units that are enabled for the active subscription of the service SKU. */
-    private Integer _enabled;
+    private Integer enabled;
+    /** The lockedOut property */
+    private Integer lockedOut;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted. */
-    private Integer _suspended;
+    private Integer suspended;
     /** The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state). */
-    private Integer _warning;
+    private Integer warning;
     /**
      * Instantiates a new licenseUnitsDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LicenseUnitsDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.licenseUnitsDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,7 +44,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the enabled property value. The number of units that are enabled for the active subscription of the service SKU.
@@ -51,21 +52,29 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getEnabled() {
-        return this._enabled;
+        return this.enabled;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LicenseUnitsDetail currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("suspended", (n) -> { currentObject.setSuspended(n.getIntegerValue()); });
-            this.put("warning", (n) -> { currentObject.setWarning(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getIntegerValue()); });
+        deserializerMap.put("lockedOut", (n) -> { this.setLockedOut(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("suspended", (n) -> { this.setSuspended(n.getIntegerValue()); });
+        deserializerMap.put("warning", (n) -> { this.setWarning(n.getIntegerValue()); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the lockedOut property value. The lockedOut property
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getLockedOut() {
+        return this.lockedOut;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -73,7 +82,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
@@ -81,7 +90,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getSuspended() {
-        return this._suspended;
+        return this.suspended;
     }
     /**
      * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
@@ -89,16 +98,18 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getWarning() {
-        return this._warning;
+        return this.warning;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("enabled", this.getEnabled());
+        writer.writeIntegerValue("lockedOut", this.getLockedOut());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("suspended", this.getSuspended());
         writer.writeIntegerValue("warning", this.getWarning());
@@ -109,39 +120,53 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the enabled property value. The number of units that are enabled for the active subscription of the service SKU.
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Integer value) {
-        this._enabled = value;
+        this.enabled = value;
+    }
+    /**
+     * Sets the lockedOut property value. The lockedOut property
+     * @param value Value to set for the lockedOut property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLockedOut(@javax.annotation.Nullable final Integer value) {
+        this.lockedOut = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
      * @param value Value to set for the suspended property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuspended(@javax.annotation.Nullable final Integer value) {
-        this._suspended = value;
+        this.suspended = value;
     }
     /**
      * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
      * @param value Value to set for the warning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWarning(@javax.annotation.Nullable final Integer value) {
-        this._warning = value;
+        this.warning = value;
     }
 }

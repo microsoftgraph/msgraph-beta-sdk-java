@@ -3,28 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshootingEvent implements Parsable {
     /** Intune application identifier. */
-    private String _applicationId;
+    private String applicationId;
     /** The collection property of AppLogUploadRequest. */
-    private java.util.List<AppLogCollectionRequest> _appLogCollectionRequests;
-    /** Intune Mobile Application Troubleshooting History Item */
-    private java.util.List<MobileAppTroubleshootingHistoryItem> _history;
+    private java.util.List<AppLogCollectionRequest> appLogCollectionRequests;
     /** Device identifier created or collected by Intune. */
-    private String _managedDeviceIdentifier;
+    private String deviceId;
+    /** Intune Mobile Application Troubleshooting History Item */
+    private java.util.List<MobileAppTroubleshootingHistoryItem> history;
+    /** Device identifier created or collected by Intune. */
+    private String managedDeviceIdentifier;
     /** Identifier for the user that tried to enroll the device. */
-    private String _userId;
+    private String userId;
     /**
      * Instantiates a new MobileAppTroubleshootingEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppTroubleshootingEvent() {
         super();
-        this.setOdataType("#microsoft.graph.mobileAppTroubleshootingEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,7 +43,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      */
     @javax.annotation.Nullable
     public String getApplicationId() {
-        return this._applicationId;
+        return this.applicationId;
     }
     /**
      * Gets the appLogCollectionRequests property value. The collection property of AppLogUploadRequest.
@@ -50,22 +51,30 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      */
     @javax.annotation.Nullable
     public java.util.List<AppLogCollectionRequest> getAppLogCollectionRequests() {
-        return this._appLogCollectionRequests;
+        return this.appLogCollectionRequests;
+    }
+    /**
+     * Gets the deviceId property value. Device identifier created or collected by Intune.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDeviceId() {
+        return this.deviceId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileAppTroubleshootingEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
-            this.put("appLogCollectionRequests", (n) -> { currentObject.setAppLogCollectionRequests(n.getCollectionOfObjectValues(AppLogCollectionRequest::createFromDiscriminatorValue)); });
-            this.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(MobileAppTroubleshootingHistoryItem::createFromDiscriminatorValue)); });
-            this.put("managedDeviceIdentifier", (n) -> { currentObject.setManagedDeviceIdentifier(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationId", (n) -> { this.setApplicationId(n.getStringValue()); });
+        deserializerMap.put("appLogCollectionRequests", (n) -> { this.setAppLogCollectionRequests(n.getCollectionOfObjectValues(AppLogCollectionRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(MobileAppTroubleshootingHistoryItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceIdentifier", (n) -> { this.setManagedDeviceIdentifier(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the history property value. Intune Mobile Application Troubleshooting History Item
@@ -73,7 +82,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      */
     @javax.annotation.Nullable
     public java.util.List<MobileAppTroubleshootingHistoryItem> getHistory() {
-        return this._history;
+        return this.history;
     }
     /**
      * Gets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
@@ -81,7 +90,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      */
     @javax.annotation.Nullable
     public String getManagedDeviceIdentifier() {
-        return this._managedDeviceIdentifier;
+        return this.managedDeviceIdentifier;
     }
     /**
      * Gets the userId property value. Identifier for the user that tried to enroll the device.
@@ -89,18 +98,20 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("applicationId", this.getApplicationId());
         writer.writeCollectionOfObjectValues("appLogCollectionRequests", this.getAppLogCollectionRequests());
+        writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeCollectionOfObjectValues("history", this.getHistory());
         writer.writeStringValue("managedDeviceIdentifier", this.getManagedDeviceIdentifier());
         writer.writeStringValue("userId", this.getUserId());
@@ -110,39 +121,53 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * @param value Value to set for the applicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationId(@javax.annotation.Nullable final String value) {
-        this._applicationId = value;
+        this.applicationId = value;
     }
     /**
      * Sets the appLogCollectionRequests property value. The collection property of AppLogUploadRequest.
      * @param value Value to set for the appLogCollectionRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppLogCollectionRequests(@javax.annotation.Nullable final java.util.List<AppLogCollectionRequest> value) {
-        this._appLogCollectionRequests = value;
+        this.appLogCollectionRequests = value;
+    }
+    /**
+     * Sets the deviceId property value. Device identifier created or collected by Intune.
+     * @param value Value to set for the deviceId property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDeviceId(@javax.annotation.Nullable final String value) {
+        this.deviceId = value;
     }
     /**
      * Sets the history property value. Intune Mobile Application Troubleshooting History Item
      * @param value Value to set for the history property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistory(@javax.annotation.Nullable final java.util.List<MobileAppTroubleshootingHistoryItem> value) {
-        this._history = value;
+        this.history = value;
     }
     /**
      * Sets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
      * @param value Value to set for the managedDeviceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceIdentifier(@javax.annotation.Nullable final String value) {
-        this._managedDeviceIdentifier = value;
+        this.managedDeviceIdentifier = value;
     }
     /**
      * Sets the userId property value. Identifier for the user that tried to enroll the device.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

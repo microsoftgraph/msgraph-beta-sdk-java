@@ -4,26 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GovernancePolicy implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The decisionMakerCriteria property */
-    private java.util.List<GovernanceCriteria> _decisionMakerCriteria;
+    private java.util.List<GovernanceCriteria> decisionMakerCriteria;
     /** The notificationPolicy property */
-    private GovernanceNotificationPolicy _notificationPolicy;
+    private GovernanceNotificationPolicy notificationPolicy;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new governancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GovernancePolicy() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.governancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +40,7 @@ public class GovernancePolicy implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the decisionMakerCriteria property value. The decisionMakerCriteria property
@@ -49,20 +48,19 @@ public class GovernancePolicy implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<GovernanceCriteria> getDecisionMakerCriteria() {
-        return this._decisionMakerCriteria;
+        return this.decisionMakerCriteria;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GovernancePolicy currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("decisionMakerCriteria", (n) -> { currentObject.setDecisionMakerCriteria(n.getCollectionOfObjectValues(GovernanceCriteria::createFromDiscriminatorValue)); });
-            this.put("notificationPolicy", (n) -> { currentObject.setNotificationPolicy(n.getObjectValue(GovernanceNotificationPolicy::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("decisionMakerCriteria", (n) -> { this.setDecisionMakerCriteria(n.getCollectionOfObjectValues(GovernanceCriteria::createFromDiscriminatorValue)); });
+        deserializerMap.put("notificationPolicy", (n) -> { this.setNotificationPolicy(n.getObjectValue(GovernanceNotificationPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notificationPolicy property value. The notificationPolicy property
@@ -70,7 +68,7 @@ public class GovernancePolicy implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public GovernanceNotificationPolicy getNotificationPolicy() {
-        return this._notificationPolicy;
+        return this.notificationPolicy;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -78,13 +76,14 @@ public class GovernancePolicy implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("decisionMakerCriteria", this.getDecisionMakerCriteria());
@@ -97,31 +96,35 @@ public class GovernancePolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the decisionMakerCriteria property value. The decisionMakerCriteria property
      * @param value Value to set for the decisionMakerCriteria property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecisionMakerCriteria(@javax.annotation.Nullable final java.util.List<GovernanceCriteria> value) {
-        this._decisionMakerCriteria = value;
+        this.decisionMakerCriteria = value;
     }
     /**
      * Sets the notificationPolicy property value. The notificationPolicy property
      * @param value Value to set for the notificationPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationPolicy(@javax.annotation.Nullable final GovernanceNotificationPolicy value) {
-        this._notificationPolicy = value;
+        this.notificationPolicy = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

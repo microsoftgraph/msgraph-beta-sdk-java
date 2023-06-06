@@ -4,20 +4,19 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the addCopyFromContentTypeHub method. */
 public class AddCopyFromContentTypeHubPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The contentTypeId property */
-    private String _contentTypeId;
+    private String contentTypeId;
     /**
      * Instantiates a new addCopyFromContentTypeHubPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddCopyFromContentTypeHubPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,7 +36,7 @@ public class AddCopyFromContentTypeHubPostRequestBody implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the contentTypeId property value. The contentTypeId property
@@ -45,24 +44,24 @@ public class AddCopyFromContentTypeHubPostRequestBody implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public String getContentTypeId() {
-        return this._contentTypeId;
+        return this.contentTypeId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AddCopyFromContentTypeHubPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("contentTypeId", (n) -> { currentObject.setContentTypeId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("contentTypeId", (n) -> { this.setContentTypeId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("contentTypeId", this.getContentTypeId());
@@ -73,15 +72,17 @@ public class AddCopyFromContentTypeHubPostRequestBody implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the contentTypeId property value. The contentTypeId property
      * @param value Value to set for the contentTypeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentTypeId(@javax.annotation.Nullable final String value) {
-        this._contentTypeId = value;
+        this.contentTypeId = value;
     }
 }

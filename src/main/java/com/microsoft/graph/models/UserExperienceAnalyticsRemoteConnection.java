@@ -3,44 +3,43 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserExperienceAnalyticsRemoteConnection extends Entity implements Parsable {
     /** The sign in failure percentage of Cloud PC Device. Valid values 0 to 100 */
-    private Double _cloudPcFailurePercentage;
+    private Double cloudPcFailurePercentage;
     /** The round tip time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308 */
-    private Double _cloudPcRoundTripTime;
+    private Double cloudPcRoundTripTime;
     /** The sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308 */
-    private Double _cloudPcSignInTime;
+    private Double cloudPcSignInTime;
     /** The core boot time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308 */
-    private Double _coreBootTime;
+    private Double coreBootTime;
     /** The core sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308 */
-    private Double _coreSignInTime;
+    private Double coreSignInTime;
     /** The count of remote connection. Valid values 0 to 2147483647 */
-    private Integer _deviceCount;
+    private Integer deviceCount;
     /** The id of the device. */
-    private String _deviceId;
+    private String deviceId;
     /** The name of the device. */
-    private String _deviceName;
+    private String deviceName;
     /** The user experience analytics manufacturer. */
-    private String _manufacturer;
+    private String manufacturer;
     /** The user experience analytics device model. */
-    private String _model;
+    private String model;
     /** The remote sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308 */
-    private Double _remoteSignInTime;
+    private Double remoteSignInTime;
     /** The user experience analytics userPrincipalName. */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /** The user experience analytics virtual network. */
-    private String _virtualNetwork;
+    private String virtualNetwork;
     /**
      * Instantiates a new UserExperienceAnalyticsRemoteConnection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsRemoteConnection() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsRemoteConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +57,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public Double getCloudPcFailurePercentage() {
-        return this._cloudPcFailurePercentage;
+        return this.cloudPcFailurePercentage;
     }
     /**
      * Gets the cloudPcRoundTripTime property value. The round tip time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
@@ -66,7 +65,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public Double getCloudPcRoundTripTime() {
-        return this._cloudPcRoundTripTime;
+        return this.cloudPcRoundTripTime;
     }
     /**
      * Gets the cloudPcSignInTime property value. The sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
@@ -74,7 +73,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public Double getCloudPcSignInTime() {
-        return this._cloudPcSignInTime;
+        return this.cloudPcSignInTime;
     }
     /**
      * Gets the coreBootTime property value. The core boot time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
@@ -82,7 +81,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public Double getCoreBootTime() {
-        return this._coreBootTime;
+        return this.coreBootTime;
     }
     /**
      * Gets the coreSignInTime property value. The core sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
@@ -90,7 +89,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public Double getCoreSignInTime() {
-        return this._coreSignInTime;
+        return this.coreSignInTime;
     }
     /**
      * Gets the deviceCount property value. The count of remote connection. Valid values 0 to 2147483647
@@ -98,7 +97,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public Integer getDeviceCount() {
-        return this._deviceCount;
+        return this.deviceCount;
     }
     /**
      * Gets the deviceId property value. The id of the device.
@@ -106,7 +105,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the deviceName property value. The name of the device.
@@ -114,30 +113,29 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsRemoteConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("cloudPcFailurePercentage", (n) -> { currentObject.setCloudPcFailurePercentage(n.getDoubleValue()); });
-            this.put("cloudPcRoundTripTime", (n) -> { currentObject.setCloudPcRoundTripTime(n.getDoubleValue()); });
-            this.put("cloudPcSignInTime", (n) -> { currentObject.setCloudPcSignInTime(n.getDoubleValue()); });
-            this.put("coreBootTime", (n) -> { currentObject.setCoreBootTime(n.getDoubleValue()); });
-            this.put("coreSignInTime", (n) -> { currentObject.setCoreSignInTime(n.getDoubleValue()); });
-            this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("remoteSignInTime", (n) -> { currentObject.setRemoteSignInTime(n.getDoubleValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("virtualNetwork", (n) -> { currentObject.setVirtualNetwork(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("cloudPcFailurePercentage", (n) -> { this.setCloudPcFailurePercentage(n.getDoubleValue()); });
+        deserializerMap.put("cloudPcRoundTripTime", (n) -> { this.setCloudPcRoundTripTime(n.getDoubleValue()); });
+        deserializerMap.put("cloudPcSignInTime", (n) -> { this.setCloudPcSignInTime(n.getDoubleValue()); });
+        deserializerMap.put("coreBootTime", (n) -> { this.setCoreBootTime(n.getDoubleValue()); });
+        deserializerMap.put("coreSignInTime", (n) -> { this.setCoreSignInTime(n.getDoubleValue()); });
+        deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("remoteSignInTime", (n) -> { this.setRemoteSignInTime(n.getDoubleValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("virtualNetwork", (n) -> { this.setVirtualNetwork(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the manufacturer property value. The user experience analytics manufacturer.
@@ -145,7 +143,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the model property value. The user experience analytics device model.
@@ -153,7 +151,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Gets the remoteSignInTime property value. The remote sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
@@ -161,7 +159,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public Double getRemoteSignInTime() {
-        return this._remoteSignInTime;
+        return this.remoteSignInTime;
     }
     /**
      * Gets the userPrincipalName property value. The user experience analytics userPrincipalName.
@@ -169,7 +167,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Gets the virtualNetwork property value. The user experience analytics virtual network.
@@ -177,13 +175,14 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     @javax.annotation.Nullable
     public String getVirtualNetwork() {
-        return this._virtualNetwork;
+        return this.virtualNetwork;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -206,103 +205,116 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the cloudPcFailurePercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcFailurePercentage(@javax.annotation.Nullable final Double value) {
-        this._cloudPcFailurePercentage = value;
+        this.cloudPcFailurePercentage = value;
     }
     /**
      * Sets the cloudPcRoundTripTime property value. The round tip time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the cloudPcRoundTripTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcRoundTripTime(@javax.annotation.Nullable final Double value) {
-        this._cloudPcRoundTripTime = value;
+        this.cloudPcRoundTripTime = value;
     }
     /**
      * Sets the cloudPcSignInTime property value. The sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the cloudPcSignInTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcSignInTime(@javax.annotation.Nullable final Double value) {
-        this._cloudPcSignInTime = value;
+        this.cloudPcSignInTime = value;
     }
     /**
      * Sets the coreBootTime property value. The core boot time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the coreBootTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCoreBootTime(@javax.annotation.Nullable final Double value) {
-        this._coreBootTime = value;
+        this.coreBootTime = value;
     }
     /**
      * Sets the coreSignInTime property value. The core sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the coreSignInTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCoreSignInTime(@javax.annotation.Nullable final Double value) {
-        this._coreSignInTime = value;
+        this.coreSignInTime = value;
     }
     /**
      * Sets the deviceCount property value. The count of remote connection. Valid values 0 to 2147483647
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._deviceCount = value;
+        this.deviceCount = value;
     }
     /**
      * Sets the deviceId property value. The id of the device.
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the deviceName property value. The name of the device.
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the manufacturer property value. The user experience analytics manufacturer.
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the model property value. The user experience analytics device model.
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
      * Sets the remoteSignInTime property value. The remote sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the remoteSignInTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteSignInTime(@javax.annotation.Nullable final Double value) {
-        this._remoteSignInTime = value;
+        this.remoteSignInTime = value;
     }
     /**
      * Sets the userPrincipalName property value. The user experience analytics userPrincipalName.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
     /**
      * Sets the virtualNetwork property value. The user experience analytics virtual network.
      * @param value Value to set for the virtualNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVirtualNetwork(@javax.annotation.Nullable final String value) {
-        this._virtualNetwork = value;
+        this.virtualNetwork = value;
     }
 }

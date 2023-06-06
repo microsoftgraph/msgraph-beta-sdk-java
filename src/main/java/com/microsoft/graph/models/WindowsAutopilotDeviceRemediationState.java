@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Device remediation status, indicating whether or not hardware has been changed for an Autopilot-registered device. */
 public enum WindowsAutopilotDeviceRemediationState implements ValuedEnum {
     /** Unknown status. */
     Unknown("unknown"),

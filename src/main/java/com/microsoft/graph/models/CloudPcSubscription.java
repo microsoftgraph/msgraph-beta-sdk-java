@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcSubscription extends Entity implements Parsable {
     /** The ID of the subscription. */
-    private String _subscriptionId;
+    private String subscriptionId;
     /** The name of the subscription. */
-    private String _subscriptionName;
+    private String subscriptionName;
     /**
      * Instantiates a new cloudPcSubscription and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcSubscription() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcSubscription");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +31,14 @@ public class CloudPcSubscription extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcSubscription currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
-            this.put("subscriptionName", (n) -> { currentObject.setSubscriptionName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("subscriptionName", (n) -> { this.setSubscriptionName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the subscriptionId property value. The ID of the subscription.
@@ -48,7 +46,7 @@ public class CloudPcSubscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSubscriptionId() {
-        return this._subscriptionId;
+        return this.subscriptionId;
     }
     /**
      * Gets the subscriptionName property value. The name of the subscription.
@@ -56,13 +54,14 @@ public class CloudPcSubscription extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSubscriptionName() {
-        return this._subscriptionName;
+        return this.subscriptionName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class CloudPcSubscription extends Entity implements Parsable {
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionId(@javax.annotation.Nullable final String value) {
-        this._subscriptionId = value;
+        this.subscriptionId = value;
     }
     /**
      * Sets the subscriptionName property value. The name of the subscription.
      * @param value Value to set for the subscriptionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionName(@javax.annotation.Nullable final String value) {
-        this._subscriptionName = value;
+        this.subscriptionName = value;
     }
 }

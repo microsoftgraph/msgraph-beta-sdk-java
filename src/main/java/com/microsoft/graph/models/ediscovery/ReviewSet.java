@@ -6,26 +6,25 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ReviewSet extends Entity implements Parsable {
     /** The user who created the review set. Read-only. */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** The datetime when the review set was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The review set name. The name is unique with a maximum limit of 64 characters. */
-    private String _displayName;
+    private String displayName;
     /** The queries property */
-    private java.util.List<ReviewSetQuery> _queries;
+    private java.util.List<ReviewSetQuery> queries;
     /**
      * Instantiates a new reviewSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReviewSet() {
         super();
-        this.setOdataType("#microsoft.graph.ediscovery.reviewSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,7 +42,7 @@ public class ReviewSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The datetime when the review set was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -51,7 +50,7 @@ public class ReviewSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the displayName property value. The review set name. The name is unique with a maximum limit of 64 characters.
@@ -59,21 +58,20 @@ public class ReviewSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ReviewSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("queries", (n) -> { currentObject.setQueries(n.getCollectionOfObjectValues(ReviewSetQuery::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("queries", (n) -> { this.setQueries(n.getCollectionOfObjectValues(ReviewSetQuery::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the queries property value. The queries property
@@ -81,13 +79,14 @@ public class ReviewSet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ReviewSetQuery> getQueries() {
-        return this._queries;
+        return this.queries;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -101,31 +100,35 @@ public class ReviewSet extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The datetime when the review set was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. The review set name. The name is unique with a maximum limit of 64 characters.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the queries property value. The queries property
      * @param value Value to set for the queries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueries(@javax.annotation.Nullable final java.util.List<ReviewSetQuery> value) {
-        this._queries = value;
+        this.queries = value;
     }
 }

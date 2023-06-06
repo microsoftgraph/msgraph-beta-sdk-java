@@ -4,26 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Key. */
-    private String _key;
+    private Map<String, Object> additionalData;
+    /** The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization. */
+    private String key;
     /** The OdataType property */
-    private String _odataType;
-    /** Value. */
-    private Long _value;
+    private String odataType;
+    /** Total number of synchronized objects. */
+    private Long value;
     /**
      * Instantiates a new stringKeyLongValuePair and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public StringKeyLongValuePair() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.stringKeyLongValuePair");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,28 +40,27 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final StringKeyLongValuePair currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getLongValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the key property value. Key.
+     * Gets the key property value. The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getKey() {
-        return this._key;
+        return this.key;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -70,21 +68,22 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the value property value. Value.
+     * Gets the value property value. Total number of synchronized objects.
      * @return a int64
      */
     @javax.annotation.Nullable
     public Long getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("key", this.getKey());
@@ -97,31 +96,35 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
-     * Sets the key property value. Key.
+     * Sets the key property value. The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
      * @param value Value to set for the key property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKey(@javax.annotation.Nullable final String value) {
-        this._key = value;
+        this.key = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the value property value. Value.
+     * Sets the value property value. Total number of synchronized objects.
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Long value) {
-        this._value = value;
+        this.value = value;
     }
 }

@@ -3,24 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Synchronization extends Entity implements Parsable {
     /** Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory. */
-    private java.util.List<SynchronizationJob> _jobs;
+    private java.util.List<SynchronizationJob> jobs;
     /** Represents a collection of credentials to access provisioned cloud applications. */
-    private java.util.List<SynchronizationSecretKeyStringValuePair> _secrets;
+    private java.util.List<SynchronizationSecretKeyStringValuePair> secrets;
     /** Pre-configured synchronization settings for a particular application. */
-    private java.util.List<SynchronizationTemplate> _templates;
+    private java.util.List<SynchronizationTemplate> templates;
     /**
      * Instantiates a new synchronization and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Synchronization() {
         super();
-        this.setOdataType("#microsoft.graph.synchronization");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,16 +33,15 @@ public class Synchronization extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Synchronization currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("jobs", (n) -> { currentObject.setJobs(n.getCollectionOfObjectValues(SynchronizationJob::createFromDiscriminatorValue)); });
-            this.put("secrets", (n) -> { currentObject.setSecrets(n.getCollectionOfObjectValues(SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue)); });
-            this.put("templates", (n) -> { currentObject.setTemplates(n.getCollectionOfObjectValues(SynchronizationTemplate::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("jobs", (n) -> { this.setJobs(n.getCollectionOfObjectValues(SynchronizationJob::createFromDiscriminatorValue)); });
+        deserializerMap.put("secrets", (n) -> { this.setSecrets(n.getCollectionOfObjectValues(SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("templates", (n) -> { this.setTemplates(n.getCollectionOfObjectValues(SynchronizationTemplate::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the jobs property value. Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
@@ -51,7 +49,7 @@ public class Synchronization extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SynchronizationJob> getJobs() {
-        return this._jobs;
+        return this.jobs;
     }
     /**
      * Gets the secrets property value. Represents a collection of credentials to access provisioned cloud applications.
@@ -59,7 +57,7 @@ public class Synchronization extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SynchronizationSecretKeyStringValuePair> getSecrets() {
-        return this._secrets;
+        return this.secrets;
     }
     /**
      * Gets the templates property value. Pre-configured synchronization settings for a particular application.
@@ -67,13 +65,14 @@ public class Synchronization extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SynchronizationTemplate> getTemplates() {
-        return this._templates;
+        return this.templates;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +85,26 @@ public class Synchronization extends Entity implements Parsable {
      * @param value Value to set for the jobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobs(@javax.annotation.Nullable final java.util.List<SynchronizationJob> value) {
-        this._jobs = value;
+        this.jobs = value;
     }
     /**
      * Sets the secrets property value. Represents a collection of credentials to access provisioned cloud applications.
      * @param value Value to set for the secrets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecrets(@javax.annotation.Nullable final java.util.List<SynchronizationSecretKeyStringValuePair> value) {
-        this._secrets = value;
+        this.secrets = value;
     }
     /**
      * Sets the templates property value. Pre-configured synchronization settings for a particular application.
      * @param value Value to set for the templates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplates(@javax.annotation.Nullable final java.util.List<SynchronizationTemplate> value) {
-        this._templates = value;
+        this.templates = value;
     }
 }

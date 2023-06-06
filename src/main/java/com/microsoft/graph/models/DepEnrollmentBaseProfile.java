@@ -1,57 +1,57 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DepIOSEnrollmentProfile;
-import com.microsoft.graph.models.DepMacOSEnrollmentProfile;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsable {
     /** Indicates if Apple id setup pane is disabled */
-    private Boolean _appleIdDisabled;
+    private Boolean appleIdDisabled;
     /** Indicates if Apple pay setup pane is disabled */
-    private Boolean _applePayDisabled;
+    private Boolean applePayDisabled;
     /** URL for setup assistant login */
-    private Boolean _configurationWebUrl;
+    private Boolean configurationWebUrl;
     /** Sets a literal or name pattern. */
-    private String _deviceNameTemplate;
+    private String deviceNameTemplate;
     /** Indicates if diagnostics setup pane is disabled */
-    private Boolean _diagnosticsDisabled;
+    private Boolean diagnosticsDisabled;
     /** Indicates if displaytone setup screen is disabled */
-    private Boolean _displayToneSetupDisabled;
+    private Boolean displayToneSetupDisabled;
+    /** enabledSkipKeys contains all the enabled skip keys as strings */
+    private java.util.List<String> enabledSkipKeys;
     /** Indicates if this is the default profile */
-    private Boolean _isDefault;
+    private Boolean isDefault;
     /** Indicates if the profile is mandatory */
-    private Boolean _isMandatory;
+    private Boolean isMandatory;
     /** Indicates if Location service setup pane is disabled */
-    private Boolean _locationDisabled;
+    private Boolean locationDisabled;
     /** Indicates if privacy screen is disabled */
-    private Boolean _privacyPaneDisabled;
+    private Boolean privacyPaneDisabled;
     /** Indicates if the profile removal option is disabled */
-    private Boolean _profileRemovalDisabled;
+    private Boolean profileRemovalDisabled;
     /** Indicates if Restore setup pane is blocked */
-    private Boolean _restoreBlocked;
+    private Boolean restoreBlocked;
     /** Indicates if screen timeout setup is disabled */
-    private Boolean _screenTimeScreenDisabled;
+    private Boolean screenTimeScreenDisabled;
     /** Indicates if siri setup pane is disabled */
-    private Boolean _siriDisabled;
-    /** Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information. */
-    private Boolean _supervisedModeEnabled;
+    private Boolean siriDisabled;
+    /** Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information. */
+    private Boolean supervisedModeEnabled;
     /** Support department information */
-    private String _supportDepartment;
+    private String supportDepartment;
     /** Support phone number */
-    private String _supportPhoneNumber;
+    private String supportPhoneNumber;
     /** Indicates if 'Terms and Conditions' setup pane is disabled */
-    private Boolean _termsAndConditionsDisabled;
+    private Boolean termsAndConditionsDisabled;
     /** Indicates if touch id setup pane is disabled */
-    private Boolean _touchIdDisabled;
+    private Boolean touchIdDisabled;
     /**
      * Instantiates a new DepEnrollmentBaseProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DepEnrollmentBaseProfile() {
         super();
         this.setOdataType("#microsoft.graph.depEnrollmentBaseProfile");
@@ -80,7 +80,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getAppleIdDisabled() {
-        return this._appleIdDisabled;
+        return this.appleIdDisabled;
     }
     /**
      * Gets the applePayDisabled property value. Indicates if Apple pay setup pane is disabled
@@ -88,7 +88,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getApplePayDisabled() {
-        return this._applePayDisabled;
+        return this.applePayDisabled;
     }
     /**
      * Gets the configurationWebUrl property value. URL for setup assistant login
@@ -96,7 +96,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getConfigurationWebUrl() {
-        return this._configurationWebUrl;
+        return this.configurationWebUrl;
     }
     /**
      * Gets the deviceNameTemplate property value. Sets a literal or name pattern.
@@ -104,7 +104,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public String getDeviceNameTemplate() {
-        return this._deviceNameTemplate;
+        return this.deviceNameTemplate;
     }
     /**
      * Gets the diagnosticsDisabled property value. Indicates if diagnostics setup pane is disabled
@@ -112,7 +112,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getDiagnosticsDisabled() {
-        return this._diagnosticsDisabled;
+        return this.diagnosticsDisabled;
     }
     /**
      * Gets the displayToneSetupDisabled property value. Indicates if displaytone setup screen is disabled
@@ -120,36 +120,44 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getDisplayToneSetupDisabled() {
-        return this._displayToneSetupDisabled;
+        return this.displayToneSetupDisabled;
+    }
+    /**
+     * Gets the enabledSkipKeys property value. enabledSkipKeys contains all the enabled skip keys as strings
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getEnabledSkipKeys() {
+        return this.enabledSkipKeys;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DepEnrollmentBaseProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appleIdDisabled", (n) -> { currentObject.setAppleIdDisabled(n.getBooleanValue()); });
-            this.put("applePayDisabled", (n) -> { currentObject.setApplePayDisabled(n.getBooleanValue()); });
-            this.put("configurationWebUrl", (n) -> { currentObject.setConfigurationWebUrl(n.getBooleanValue()); });
-            this.put("deviceNameTemplate", (n) -> { currentObject.setDeviceNameTemplate(n.getStringValue()); });
-            this.put("diagnosticsDisabled", (n) -> { currentObject.setDiagnosticsDisabled(n.getBooleanValue()); });
-            this.put("displayToneSetupDisabled", (n) -> { currentObject.setDisplayToneSetupDisabled(n.getBooleanValue()); });
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("isMandatory", (n) -> { currentObject.setIsMandatory(n.getBooleanValue()); });
-            this.put("locationDisabled", (n) -> { currentObject.setLocationDisabled(n.getBooleanValue()); });
-            this.put("privacyPaneDisabled", (n) -> { currentObject.setPrivacyPaneDisabled(n.getBooleanValue()); });
-            this.put("profileRemovalDisabled", (n) -> { currentObject.setProfileRemovalDisabled(n.getBooleanValue()); });
-            this.put("restoreBlocked", (n) -> { currentObject.setRestoreBlocked(n.getBooleanValue()); });
-            this.put("screenTimeScreenDisabled", (n) -> { currentObject.setScreenTimeScreenDisabled(n.getBooleanValue()); });
-            this.put("siriDisabled", (n) -> { currentObject.setSiriDisabled(n.getBooleanValue()); });
-            this.put("supervisedModeEnabled", (n) -> { currentObject.setSupervisedModeEnabled(n.getBooleanValue()); });
-            this.put("supportDepartment", (n) -> { currentObject.setSupportDepartment(n.getStringValue()); });
-            this.put("supportPhoneNumber", (n) -> { currentObject.setSupportPhoneNumber(n.getStringValue()); });
-            this.put("termsAndConditionsDisabled", (n) -> { currentObject.setTermsAndConditionsDisabled(n.getBooleanValue()); });
-            this.put("touchIdDisabled", (n) -> { currentObject.setTouchIdDisabled(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appleIdDisabled", (n) -> { this.setAppleIdDisabled(n.getBooleanValue()); });
+        deserializerMap.put("applePayDisabled", (n) -> { this.setApplePayDisabled(n.getBooleanValue()); });
+        deserializerMap.put("configurationWebUrl", (n) -> { this.setConfigurationWebUrl(n.getBooleanValue()); });
+        deserializerMap.put("deviceNameTemplate", (n) -> { this.setDeviceNameTemplate(n.getStringValue()); });
+        deserializerMap.put("diagnosticsDisabled", (n) -> { this.setDiagnosticsDisabled(n.getBooleanValue()); });
+        deserializerMap.put("displayToneSetupDisabled", (n) -> { this.setDisplayToneSetupDisabled(n.getBooleanValue()); });
+        deserializerMap.put("enabledSkipKeys", (n) -> { this.setEnabledSkipKeys(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("isMandatory", (n) -> { this.setIsMandatory(n.getBooleanValue()); });
+        deserializerMap.put("locationDisabled", (n) -> { this.setLocationDisabled(n.getBooleanValue()); });
+        deserializerMap.put("privacyPaneDisabled", (n) -> { this.setPrivacyPaneDisabled(n.getBooleanValue()); });
+        deserializerMap.put("profileRemovalDisabled", (n) -> { this.setProfileRemovalDisabled(n.getBooleanValue()); });
+        deserializerMap.put("restoreBlocked", (n) -> { this.setRestoreBlocked(n.getBooleanValue()); });
+        deserializerMap.put("screenTimeScreenDisabled", (n) -> { this.setScreenTimeScreenDisabled(n.getBooleanValue()); });
+        deserializerMap.put("siriDisabled", (n) -> { this.setSiriDisabled(n.getBooleanValue()); });
+        deserializerMap.put("supervisedModeEnabled", (n) -> { this.setSupervisedModeEnabled(n.getBooleanValue()); });
+        deserializerMap.put("supportDepartment", (n) -> { this.setSupportDepartment(n.getStringValue()); });
+        deserializerMap.put("supportPhoneNumber", (n) -> { this.setSupportPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("termsAndConditionsDisabled", (n) -> { this.setTermsAndConditionsDisabled(n.getBooleanValue()); });
+        deserializerMap.put("touchIdDisabled", (n) -> { this.setTouchIdDisabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefault property value. Indicates if this is the default profile
@@ -157,7 +165,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getIsDefault() {
-        return this._isDefault;
+        return this.isDefault;
     }
     /**
      * Gets the isMandatory property value. Indicates if the profile is mandatory
@@ -165,7 +173,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getIsMandatory() {
-        return this._isMandatory;
+        return this.isMandatory;
     }
     /**
      * Gets the locationDisabled property value. Indicates if Location service setup pane is disabled
@@ -173,7 +181,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getLocationDisabled() {
-        return this._locationDisabled;
+        return this.locationDisabled;
     }
     /**
      * Gets the privacyPaneDisabled property value. Indicates if privacy screen is disabled
@@ -181,7 +189,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getPrivacyPaneDisabled() {
-        return this._privacyPaneDisabled;
+        return this.privacyPaneDisabled;
     }
     /**
      * Gets the profileRemovalDisabled property value. Indicates if the profile removal option is disabled
@@ -189,7 +197,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getProfileRemovalDisabled() {
-        return this._profileRemovalDisabled;
+        return this.profileRemovalDisabled;
     }
     /**
      * Gets the restoreBlocked property value. Indicates if Restore setup pane is blocked
@@ -197,7 +205,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getRestoreBlocked() {
-        return this._restoreBlocked;
+        return this.restoreBlocked;
     }
     /**
      * Gets the screenTimeScreenDisabled property value. Indicates if screen timeout setup is disabled
@@ -205,7 +213,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getScreenTimeScreenDisabled() {
-        return this._screenTimeScreenDisabled;
+        return this.screenTimeScreenDisabled;
     }
     /**
      * Gets the siriDisabled property value. Indicates if siri setup pane is disabled
@@ -213,15 +221,15 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getSiriDisabled() {
-        return this._siriDisabled;
+        return this.siriDisabled;
     }
     /**
-     * Gets the supervisedModeEnabled property value. Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+     * Gets the supervisedModeEnabled property value. Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getSupervisedModeEnabled() {
-        return this._supervisedModeEnabled;
+        return this.supervisedModeEnabled;
     }
     /**
      * Gets the supportDepartment property value. Support department information
@@ -229,7 +237,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public String getSupportDepartment() {
-        return this._supportDepartment;
+        return this.supportDepartment;
     }
     /**
      * Gets the supportPhoneNumber property value. Support phone number
@@ -237,7 +245,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public String getSupportPhoneNumber() {
-        return this._supportPhoneNumber;
+        return this.supportPhoneNumber;
     }
     /**
      * Gets the termsAndConditionsDisabled property value. Indicates if 'Terms and Conditions' setup pane is disabled
@@ -245,7 +253,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getTermsAndConditionsDisabled() {
-        return this._termsAndConditionsDisabled;
+        return this.termsAndConditionsDisabled;
     }
     /**
      * Gets the touchIdDisabled property value. Indicates if touch id setup pane is disabled
@@ -253,13 +261,14 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getTouchIdDisabled() {
-        return this._touchIdDisabled;
+        return this.touchIdDisabled;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -269,6 +278,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
         writer.writeStringValue("deviceNameTemplate", this.getDeviceNameTemplate());
         writer.writeBooleanValue("diagnosticsDisabled", this.getDiagnosticsDisabled());
         writer.writeBooleanValue("displayToneSetupDisabled", this.getDisplayToneSetupDisabled());
+        writer.writeCollectionOfPrimitiveValues("enabledSkipKeys", this.getEnabledSkipKeys());
         writer.writeBooleanValue("isDefault", this.getIsDefault());
         writer.writeBooleanValue("isMandatory", this.getIsMandatory());
         writer.writeBooleanValue("locationDisabled", this.getLocationDisabled());
@@ -288,151 +298,179 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      * @param value Value to set for the appleIdDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleIdDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._appleIdDisabled = value;
+        this.appleIdDisabled = value;
     }
     /**
      * Sets the applePayDisabled property value. Indicates if Apple pay setup pane is disabled
      * @param value Value to set for the applePayDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplePayDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._applePayDisabled = value;
+        this.applePayDisabled = value;
     }
     /**
      * Sets the configurationWebUrl property value. URL for setup assistant login
      * @param value Value to set for the configurationWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationWebUrl(@javax.annotation.Nullable final Boolean value) {
-        this._configurationWebUrl = value;
+        this.configurationWebUrl = value;
     }
     /**
      * Sets the deviceNameTemplate property value. Sets a literal or name pattern.
      * @param value Value to set for the deviceNameTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceNameTemplate(@javax.annotation.Nullable final String value) {
-        this._deviceNameTemplate = value;
+        this.deviceNameTemplate = value;
     }
     /**
      * Sets the diagnosticsDisabled property value. Indicates if diagnostics setup pane is disabled
      * @param value Value to set for the diagnosticsDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiagnosticsDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._diagnosticsDisabled = value;
+        this.diagnosticsDisabled = value;
     }
     /**
      * Sets the displayToneSetupDisabled property value. Indicates if displaytone setup screen is disabled
      * @param value Value to set for the displayToneSetupDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayToneSetupDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._displayToneSetupDisabled = value;
+        this.displayToneSetupDisabled = value;
+    }
+    /**
+     * Sets the enabledSkipKeys property value. enabledSkipKeys contains all the enabled skip keys as strings
+     * @param value Value to set for the enabledSkipKeys property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setEnabledSkipKeys(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.enabledSkipKeys = value;
     }
     /**
      * Sets the isDefault property value. Indicates if this is the default profile
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isDefault = value;
+        this.isDefault = value;
     }
     /**
      * Sets the isMandatory property value. Indicates if the profile is mandatory
      * @param value Value to set for the isMandatory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMandatory(@javax.annotation.Nullable final Boolean value) {
-        this._isMandatory = value;
+        this.isMandatory = value;
     }
     /**
      * Sets the locationDisabled property value. Indicates if Location service setup pane is disabled
      * @param value Value to set for the locationDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._locationDisabled = value;
+        this.locationDisabled = value;
     }
     /**
      * Sets the privacyPaneDisabled property value. Indicates if privacy screen is disabled
      * @param value Value to set for the privacyPaneDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyPaneDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._privacyPaneDisabled = value;
+        this.privacyPaneDisabled = value;
     }
     /**
      * Sets the profileRemovalDisabled property value. Indicates if the profile removal option is disabled
      * @param value Value to set for the profileRemovalDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileRemovalDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._profileRemovalDisabled = value;
+        this.profileRemovalDisabled = value;
     }
     /**
      * Sets the restoreBlocked property value. Indicates if Restore setup pane is blocked
      * @param value Value to set for the restoreBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestoreBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._restoreBlocked = value;
+        this.restoreBlocked = value;
     }
     /**
      * Sets the screenTimeScreenDisabled property value. Indicates if screen timeout setup is disabled
      * @param value Value to set for the screenTimeScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenTimeScreenDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._screenTimeScreenDisabled = value;
+        this.screenTimeScreenDisabled = value;
     }
     /**
      * Sets the siriDisabled property value. Indicates if siri setup pane is disabled
      * @param value Value to set for the siriDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiriDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._siriDisabled = value;
+        this.siriDisabled = value;
     }
     /**
-     * Sets the supervisedModeEnabled property value. Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+     * Sets the supervisedModeEnabled property value. Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
      * @param value Value to set for the supervisedModeEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupervisedModeEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._supervisedModeEnabled = value;
+        this.supervisedModeEnabled = value;
     }
     /**
      * Sets the supportDepartment property value. Support department information
      * @param value Value to set for the supportDepartment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportDepartment(@javax.annotation.Nullable final String value) {
-        this._supportDepartment = value;
+        this.supportDepartment = value;
     }
     /**
      * Sets the supportPhoneNumber property value. Support phone number
      * @param value Value to set for the supportPhoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportPhoneNumber(@javax.annotation.Nullable final String value) {
-        this._supportPhoneNumber = value;
+        this.supportPhoneNumber = value;
     }
     /**
      * Sets the termsAndConditionsDisabled property value. Indicates if 'Terms and Conditions' setup pane is disabled
      * @param value Value to set for the termsAndConditionsDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsAndConditionsDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._termsAndConditionsDisabled = value;
+        this.termsAndConditionsDisabled = value;
     }
     /**
      * Sets the touchIdDisabled property value. Indicates if touch id setup pane is disabled
      * @param value Value to set for the touchIdDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTouchIdDisabled(@javax.annotation.Nullable final Boolean value) {
-        this._touchIdDisabled = value;
+        this.touchIdDisabled = value;
     }
 }
