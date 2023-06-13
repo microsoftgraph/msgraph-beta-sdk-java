@@ -3,20 +3,19 @@ package com.microsoft.graph.models.ediscovery;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class NoncustodialDataSource extends DataSourceContainer implements Parsable {
     /** Indicates if hold is applied to non-custodial data source (such as mailbox or site). */
-    private Boolean _applyHoldToSource;
+    private Boolean applyHoldToSource;
     /** User source or SharePoint site data source as non-custodial data source. */
-    private DataSource _dataSource;
+    private DataSource dataSource;
     /**
-     * Instantiates a new noncustodialDataSource and sets the default values.
+     * Instantiates a new NoncustodialDataSource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public NoncustodialDataSource() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.noncustodialDataSource");
@@ -24,7 +23,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a noncustodialDataSource
+     * @return a NoncustodialDataSource
      */
     @javax.annotation.Nonnull
     public static NoncustodialDataSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +36,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getApplyHoldToSource() {
-        return this._applyHoldToSource;
+        return this.applyHoldToSource;
     }
     /**
      * Gets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
@@ -45,25 +44,25 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
      */
     @javax.annotation.Nullable
     public DataSource getDataSource() {
-        return this._dataSource;
+        return this.dataSource;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final NoncustodialDataSource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applyHoldToSource", (n) -> { currentObject.setApplyHoldToSource(n.getBooleanValue()); });
-            this.put("dataSource", (n) -> { currentObject.setDataSource(n.getObjectValue(DataSource::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applyHoldToSource", (n) -> { this.setApplyHoldToSource(n.getBooleanValue()); });
+        deserializerMap.put("dataSource", (n) -> { this.setDataSource(n.getObjectValue(DataSource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,15 +74,17 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
      * @param value Value to set for the applyHoldToSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplyHoldToSource(@javax.annotation.Nullable final Boolean value) {
-        this._applyHoldToSource = value;
+        this.applyHoldToSource = value;
     }
     /**
      * Sets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
      * @param value Value to set for the dataSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSource(@javax.annotation.Nullable final DataSource value) {
-        this._dataSource = value;
+        this.dataSource = value;
     }
 }

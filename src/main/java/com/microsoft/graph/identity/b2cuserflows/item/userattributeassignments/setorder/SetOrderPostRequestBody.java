@@ -5,20 +5,19 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the setOrder method. */
 public class SetOrderPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The newAssignmentOrder property */
-    private AssignmentOrder _newAssignmentOrder;
+    private AssignmentOrder newAssignmentOrder;
     /**
      * Instantiates a new setOrderPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SetOrderPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,18 +37,17 @@ public class SetOrderPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SetOrderPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("newAssignmentOrder", (n) -> { currentObject.setNewAssignmentOrder(n.getObjectValue(AssignmentOrder::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("newAssignmentOrder", (n) -> { this.setNewAssignmentOrder(n.getObjectValue(AssignmentOrder::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the newAssignmentOrder property value. The newAssignmentOrder property
@@ -57,13 +55,14 @@ public class SetOrderPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AssignmentOrder getNewAssignmentOrder() {
-        return this._newAssignmentOrder;
+        return this.newAssignmentOrder;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("newAssignmentOrder", this.getNewAssignmentOrder());
@@ -74,15 +73,17 @@ public class SetOrderPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the newAssignmentOrder property value. The newAssignmentOrder property
      * @param value Value to set for the newAssignmentOrder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNewAssignmentOrder(@javax.annotation.Nullable final AssignmentOrder value) {
-        this._newAssignmentOrder = value;
+        this.newAssignmentOrder = value;
     }
 }

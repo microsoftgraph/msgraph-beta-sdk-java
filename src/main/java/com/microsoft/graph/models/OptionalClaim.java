@@ -4,30 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OptionalClaim implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property. */
-    private java.util.List<String> _additionalProperties;
+    private java.util.List<String> additionalProperties;
     /** If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false. */
-    private Boolean _essential;
+    private Boolean essential;
     /** The name of the optional claim. */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object. */
-    private String _source;
+    private String source;
     /**
      * Instantiates a new optionalClaim and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OptionalClaim() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.optionalClaim");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +44,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the additionalProperties property value. Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
@@ -53,7 +52,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAdditionalProperties() {
-        return this._additionalProperties;
+        return this.additionalProperties;
     }
     /**
      * Gets the essential property value. If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
@@ -61,22 +60,21 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getEssential() {
-        return this._essential;
+        return this.essential;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OptionalClaim currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("additionalProperties", (n) -> { currentObject.setAdditionalProperties(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("essential", (n) -> { currentObject.setEssential(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("additionalProperties", (n) -> { this.setAdditionalProperties(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("essential", (n) -> { this.setEssential(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. The name of the optional claim.
@@ -84,7 +82,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -92,7 +90,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the source property value. The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.
@@ -100,13 +98,14 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSource() {
-        return this._source;
+        return this.source;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("additionalProperties", this.getAdditionalProperties());
@@ -121,47 +120,53 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the additionalProperties property value. Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
      * @param value Value to set for the additionalProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalProperties(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._additionalProperties = value;
+        this.additionalProperties = value;
     }
     /**
      * Sets the essential property value. If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
      * @param value Value to set for the essential property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEssential(@javax.annotation.Nullable final Boolean value) {
-        this._essential = value;
+        this.essential = value;
     }
     /**
      * Sets the name property value. The name of the optional claim.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the source property value. The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final String value) {
-        this._source = value;
+        this.source = value;
     }
 }

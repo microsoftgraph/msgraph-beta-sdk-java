@@ -3,41 +3,40 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AdvancedThreatProtectionOnboardingStateSummary extends Entity implements Parsable {
     /** Not yet documented */
-    private java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> _advancedThreatProtectionOnboardingDeviceSettingStates;
+    private java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> advancedThreatProtectionOnboardingDeviceSettingStates;
     /** Number of compliant devices */
-    private Integer _compliantDeviceCount;
+    private Integer compliantDeviceCount;
     /** Number of conflict devices */
-    private Integer _conflictDeviceCount;
+    private Integer conflictDeviceCount;
     /** Number of error devices */
-    private Integer _errorDeviceCount;
+    private Integer errorDeviceCount;
     /** Number of NonCompliant devices */
-    private Integer _nonCompliantDeviceCount;
+    private Integer nonCompliantDeviceCount;
     /** Number of not applicable devices */
-    private Integer _notApplicableDeviceCount;
+    private Integer notApplicableDeviceCount;
     /** Number of not assigned devices */
-    private Integer _notAssignedDeviceCount;
+    private Integer notAssignedDeviceCount;
     /** Number of remediated devices */
-    private Integer _remediatedDeviceCount;
+    private Integer remediatedDeviceCount;
     /** Number of unknown devices */
-    private Integer _unknownDeviceCount;
+    private Integer unknownDeviceCount;
     /**
-     * Instantiates a new advancedThreatProtectionOnboardingStateSummary and sets the default values.
+     * Instantiates a new AdvancedThreatProtectionOnboardingStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AdvancedThreatProtectionOnboardingStateSummary() {
         super();
-        this.setOdataType("#microsoft.graph.advancedThreatProtectionOnboardingStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a advancedThreatProtectionOnboardingStateSummary
+     * @return a AdvancedThreatProtectionOnboardingStateSummary
      */
     @javax.annotation.Nonnull
     public static AdvancedThreatProtectionOnboardingStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +49,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> getAdvancedThreatProtectionOnboardingDeviceSettingStates() {
-        return this._advancedThreatProtectionOnboardingDeviceSettingStates;
+        return this.advancedThreatProtectionOnboardingDeviceSettingStates;
     }
     /**
      * Gets the compliantDeviceCount property value. Number of compliant devices
@@ -58,7 +57,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public Integer getCompliantDeviceCount() {
-        return this._compliantDeviceCount;
+        return this.compliantDeviceCount;
     }
     /**
      * Gets the conflictDeviceCount property value. Number of conflict devices
@@ -66,7 +65,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public Integer getConflictDeviceCount() {
-        return this._conflictDeviceCount;
+        return this.conflictDeviceCount;
     }
     /**
      * Gets the errorDeviceCount property value. Number of error devices
@@ -74,26 +73,25 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public Integer getErrorDeviceCount() {
-        return this._errorDeviceCount;
+        return this.errorDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AdvancedThreatProtectionOnboardingStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("advancedThreatProtectionOnboardingDeviceSettingStates", (n) -> { currentObject.setAdvancedThreatProtectionOnboardingDeviceSettingStates(n.getCollectionOfObjectValues(AdvancedThreatProtectionOnboardingDeviceSettingState::createFromDiscriminatorValue)); });
-            this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("conflictDeviceCount", (n) -> { currentObject.setConflictDeviceCount(n.getIntegerValue()); });
-            this.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
-            this.put("nonCompliantDeviceCount", (n) -> { currentObject.setNonCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("notApplicableDeviceCount", (n) -> { currentObject.setNotApplicableDeviceCount(n.getIntegerValue()); });
-            this.put("notAssignedDeviceCount", (n) -> { currentObject.setNotAssignedDeviceCount(n.getIntegerValue()); });
-            this.put("remediatedDeviceCount", (n) -> { currentObject.setRemediatedDeviceCount(n.getIntegerValue()); });
-            this.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("advancedThreatProtectionOnboardingDeviceSettingStates", (n) -> { this.setAdvancedThreatProtectionOnboardingDeviceSettingStates(n.getCollectionOfObjectValues(AdvancedThreatProtectionOnboardingDeviceSettingState::createFromDiscriminatorValue)); });
+        deserializerMap.put("compliantDeviceCount", (n) -> { this.setCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("conflictDeviceCount", (n) -> { this.setConflictDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("errorDeviceCount", (n) -> { this.setErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("nonCompliantDeviceCount", (n) -> { this.setNonCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("notApplicableDeviceCount", (n) -> { this.setNotApplicableDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("notAssignedDeviceCount", (n) -> { this.setNotAssignedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("remediatedDeviceCount", (n) -> { this.setRemediatedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("unknownDeviceCount", (n) -> { this.setUnknownDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Number of NonCompliant devices
@@ -101,7 +99,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
-        return this._nonCompliantDeviceCount;
+        return this.nonCompliantDeviceCount;
     }
     /**
      * Gets the notApplicableDeviceCount property value. Number of not applicable devices
@@ -109,7 +107,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
-        return this._notApplicableDeviceCount;
+        return this.notApplicableDeviceCount;
     }
     /**
      * Gets the notAssignedDeviceCount property value. Number of not assigned devices
@@ -117,7 +115,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public Integer getNotAssignedDeviceCount() {
-        return this._notAssignedDeviceCount;
+        return this.notAssignedDeviceCount;
     }
     /**
      * Gets the remediatedDeviceCount property value. Number of remediated devices
@@ -125,7 +123,7 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
-        return this._remediatedDeviceCount;
+        return this.remediatedDeviceCount;
     }
     /**
      * Gets the unknownDeviceCount property value. Number of unknown devices
@@ -133,13 +131,14 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      */
     @javax.annotation.Nullable
     public Integer getUnknownDeviceCount() {
-        return this._unknownDeviceCount;
+        return this.unknownDeviceCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,71 +157,80 @@ public class AdvancedThreatProtectionOnboardingStateSummary extends Entity imple
      * @param value Value to set for the advancedThreatProtectionOnboardingDeviceSettingStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionOnboardingDeviceSettingStates(@javax.annotation.Nullable final java.util.List<AdvancedThreatProtectionOnboardingDeviceSettingState> value) {
-        this._advancedThreatProtectionOnboardingDeviceSettingStates = value;
+        this.advancedThreatProtectionOnboardingDeviceSettingStates = value;
     }
     /**
      * Sets the compliantDeviceCount property value. Number of compliant devices
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._compliantDeviceCount = value;
+        this.compliantDeviceCount = value;
     }
     /**
      * Sets the conflictDeviceCount property value. Number of conflict devices
      * @param value Value to set for the conflictDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._conflictDeviceCount = value;
+        this.conflictDeviceCount = value;
     }
     /**
      * Sets the errorDeviceCount property value. Number of error devices
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._errorDeviceCount = value;
+        this.errorDeviceCount = value;
     }
     /**
      * Sets the nonCompliantDeviceCount property value. Number of NonCompliant devices
      * @param value Value to set for the nonCompliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNonCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._nonCompliantDeviceCount = value;
+        this.nonCompliantDeviceCount = value;
     }
     /**
      * Sets the notApplicableDeviceCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._notApplicableDeviceCount = value;
+        this.notApplicableDeviceCount = value;
     }
     /**
      * Sets the notAssignedDeviceCount property value. Number of not assigned devices
      * @param value Value to set for the notAssignedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotAssignedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._notAssignedDeviceCount = value;
+        this.notAssignedDeviceCount = value;
     }
     /**
      * Sets the remediatedDeviceCount property value. Number of remediated devices
      * @param value Value to set for the remediatedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediatedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._remediatedDeviceCount = value;
+        this.remediatedDeviceCount = value;
     }
     /**
      * Sets the unknownDeviceCount property value. Number of unknown devices
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._unknownDeviceCount = value;
+        this.unknownDeviceCount = value;
     }
 }

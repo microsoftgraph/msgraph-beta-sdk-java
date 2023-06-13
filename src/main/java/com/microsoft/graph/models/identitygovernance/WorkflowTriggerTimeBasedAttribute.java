@@ -3,11 +3,11 @@ package com.microsoft.graph.models.identitygovernance;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum WorkflowTriggerTimeBasedAttribute implements ValuedEnum {
     EmployeeHireDate("employeeHireDate"),
     EmployeeLeaveDateTime("employeeLeaveDateTime"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    CreatedDateTime("createdDateTime");
     public final String value;
     WorkflowTriggerTimeBasedAttribute(final String value) {
         this.value = value;
@@ -21,6 +21,7 @@ public enum WorkflowTriggerTimeBasedAttribute implements ValuedEnum {
             case "employeeHireDate": return EmployeeHireDate;
             case "employeeLeaveDateTime": return EmployeeLeaveDateTime;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "createdDateTime": return CreatedDateTime;
             default: return null;
         }
     }

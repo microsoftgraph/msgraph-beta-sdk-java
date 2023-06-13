@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Windows quality update classification */
 public enum WindowsQualityUpdateClassification implements ValuedEnum {
     /** All update type */
     All("all"),

@@ -3,42 +3,49 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class VirtualEndpoint extends Entity implements Parsable {
     /** Cloud PC audit event. */
-    private java.util.List<CloudPcAuditEvent> _auditEvents;
+    private java.util.List<CloudPcAuditEvent> auditEvents;
+    /** The bulkActions property */
+    private java.util.List<CloudPcBulkAction> bulkActions;
     /** Cloud managed virtual desktops. */
-    private java.util.List<CloudPC> _cloudPCs;
+    private java.util.List<CloudPC> cloudPCs;
+    /** Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations. */
+    private CloudPcCrossCloudGovernmentOrganizationMapping crossCloudGovernmentOrganizationMapping;
     /** The image resource on Cloud PC. */
-    private java.util.List<CloudPcDeviceImage> _deviceImages;
+    private java.util.List<CloudPcDeviceImage> deviceImages;
     /** The external partner settings on a Cloud PC. */
-    private java.util.List<CloudPcExternalPartnerSetting> _externalPartnerSettings;
+    private java.util.List<CloudPcExternalPartnerSetting> externalPartnerSettings;
     /** The gallery image resource on Cloud PC. */
-    private java.util.List<CloudPcGalleryImage> _galleryImages;
+    private java.util.List<CloudPcGalleryImage> galleryImages;
     /** A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs. */
-    private java.util.List<CloudPcOnPremisesConnection> _onPremisesConnections;
+    private java.util.List<CloudPcOnPremisesConnection> onPremisesConnections;
     /** The Cloud PC organization settings for a tenant. */
-    private CloudPcOrganizationSettings _organizationSettings;
+    private CloudPcOrganizationSettings organizationSettings;
     /** Cloud PC provisioning policy. */
-    private java.util.List<CloudPcProvisioningPolicy> _provisioningPolicies;
+    private java.util.List<CloudPcProvisioningPolicy> provisioningPolicies;
+    /** Cloud PC related reports. */
+    private CloudPcReports reports;
     /** Cloud PC service plans. */
-    private java.util.List<CloudPcServicePlan> _servicePlans;
+    private java.util.List<CloudPcServicePlan> servicePlans;
+    /** Cloud PC shared-use service plans. */
+    private java.util.List<CloudPcSharedUseServicePlan> sharedUseServicePlans;
     /** Cloud PC snapshots. */
-    private java.util.List<CloudPcSnapshot> _snapshots;
+    private java.util.List<CloudPcSnapshot> snapshots;
     /** Cloud PC supported regions. */
-    private java.util.List<CloudPcSupportedRegion> _supportedRegions;
+    private java.util.List<CloudPcSupportedRegion> supportedRegions;
     /** Cloud PC user settings. */
-    private java.util.List<CloudPcUserSetting> _userSettings;
+    private java.util.List<CloudPcUserSetting> userSettings;
     /**
      * Instantiates a new virtualEndpoint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VirtualEndpoint() {
         super();
-        this.setOdataType("#microsoft.graph.virtualEndpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,7 +63,15 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcAuditEvent> getAuditEvents() {
-        return this._auditEvents;
+        return this.auditEvents;
+    }
+    /**
+     * Gets the bulkActions property value. The bulkActions property
+     * @return a cloudPcBulkAction
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CloudPcBulkAction> getBulkActions() {
+        return this.bulkActions;
     }
     /**
      * Gets the cloudPCs property value. Cloud managed virtual desktops.
@@ -64,7 +79,15 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPC> getCloudPCs() {
-        return this._cloudPCs;
+        return this.cloudPCs;
+    }
+    /**
+     * Gets the crossCloudGovernmentOrganizationMapping property value. Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
+     * @return a cloudPcCrossCloudGovernmentOrganizationMapping
+     */
+    @javax.annotation.Nullable
+    public CloudPcCrossCloudGovernmentOrganizationMapping getCrossCloudGovernmentOrganizationMapping() {
+        return this.crossCloudGovernmentOrganizationMapping;
     }
     /**
      * Gets the deviceImages property value. The image resource on Cloud PC.
@@ -72,7 +95,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcDeviceImage> getDeviceImages() {
-        return this._deviceImages;
+        return this.deviceImages;
     }
     /**
      * Gets the externalPartnerSettings property value. The external partner settings on a Cloud PC.
@@ -80,29 +103,32 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcExternalPartnerSetting> getExternalPartnerSettings() {
-        return this._externalPartnerSettings;
+        return this.externalPartnerSettings;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VirtualEndpoint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("auditEvents", (n) -> { currentObject.setAuditEvents(n.getCollectionOfObjectValues(CloudPcAuditEvent::createFromDiscriminatorValue)); });
-            this.put("cloudPCs", (n) -> { currentObject.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
-            this.put("deviceImages", (n) -> { currentObject.setDeviceImages(n.getCollectionOfObjectValues(CloudPcDeviceImage::createFromDiscriminatorValue)); });
-            this.put("externalPartnerSettings", (n) -> { currentObject.setExternalPartnerSettings(n.getCollectionOfObjectValues(CloudPcExternalPartnerSetting::createFromDiscriminatorValue)); });
-            this.put("galleryImages", (n) -> { currentObject.setGalleryImages(n.getCollectionOfObjectValues(CloudPcGalleryImage::createFromDiscriminatorValue)); });
-            this.put("onPremisesConnections", (n) -> { currentObject.setOnPremisesConnections(n.getCollectionOfObjectValues(CloudPcOnPremisesConnection::createFromDiscriminatorValue)); });
-            this.put("organizationSettings", (n) -> { currentObject.setOrganizationSettings(n.getObjectValue(CloudPcOrganizationSettings::createFromDiscriminatorValue)); });
-            this.put("provisioningPolicies", (n) -> { currentObject.setProvisioningPolicies(n.getCollectionOfObjectValues(CloudPcProvisioningPolicy::createFromDiscriminatorValue)); });
-            this.put("servicePlans", (n) -> { currentObject.setServicePlans(n.getCollectionOfObjectValues(CloudPcServicePlan::createFromDiscriminatorValue)); });
-            this.put("snapshots", (n) -> { currentObject.setSnapshots(n.getCollectionOfObjectValues(CloudPcSnapshot::createFromDiscriminatorValue)); });
-            this.put("supportedRegions", (n) -> { currentObject.setSupportedRegions(n.getCollectionOfObjectValues(CloudPcSupportedRegion::createFromDiscriminatorValue)); });
-            this.put("userSettings", (n) -> { currentObject.setUserSettings(n.getCollectionOfObjectValues(CloudPcUserSetting::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("auditEvents", (n) -> { this.setAuditEvents(n.getCollectionOfObjectValues(CloudPcAuditEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("bulkActions", (n) -> { this.setBulkActions(n.getCollectionOfObjectValues(CloudPcBulkAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudPCs", (n) -> { this.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
+        deserializerMap.put("crossCloudGovernmentOrganizationMapping", (n) -> { this.setCrossCloudGovernmentOrganizationMapping(n.getObjectValue(CloudPcCrossCloudGovernmentOrganizationMapping::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceImages", (n) -> { this.setDeviceImages(n.getCollectionOfObjectValues(CloudPcDeviceImage::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalPartnerSettings", (n) -> { this.setExternalPartnerSettings(n.getCollectionOfObjectValues(CloudPcExternalPartnerSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("galleryImages", (n) -> { this.setGalleryImages(n.getCollectionOfObjectValues(CloudPcGalleryImage::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesConnections", (n) -> { this.setOnPremisesConnections(n.getCollectionOfObjectValues(CloudPcOnPremisesConnection::createFromDiscriminatorValue)); });
+        deserializerMap.put("organizationSettings", (n) -> { this.setOrganizationSettings(n.getObjectValue(CloudPcOrganizationSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("provisioningPolicies", (n) -> { this.setProvisioningPolicies(n.getCollectionOfObjectValues(CloudPcProvisioningPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("reports", (n) -> { this.setReports(n.getObjectValue(CloudPcReports::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePlans", (n) -> { this.setServicePlans(n.getCollectionOfObjectValues(CloudPcServicePlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedUseServicePlans", (n) -> { this.setSharedUseServicePlans(n.getCollectionOfObjectValues(CloudPcSharedUseServicePlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("snapshots", (n) -> { this.setSnapshots(n.getCollectionOfObjectValues(CloudPcSnapshot::createFromDiscriminatorValue)); });
+        deserializerMap.put("supportedRegions", (n) -> { this.setSupportedRegions(n.getCollectionOfObjectValues(CloudPcSupportedRegion::createFromDiscriminatorValue)); });
+        deserializerMap.put("userSettings", (n) -> { this.setUserSettings(n.getCollectionOfObjectValues(CloudPcUserSetting::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the galleryImages property value. The gallery image resource on Cloud PC.
@@ -110,7 +136,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcGalleryImage> getGalleryImages() {
-        return this._galleryImages;
+        return this.galleryImages;
     }
     /**
      * Gets the onPremisesConnections property value. A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs.
@@ -118,7 +144,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcOnPremisesConnection> getOnPremisesConnections() {
-        return this._onPremisesConnections;
+        return this.onPremisesConnections;
     }
     /**
      * Gets the organizationSettings property value. The Cloud PC organization settings for a tenant.
@@ -126,7 +152,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CloudPcOrganizationSettings getOrganizationSettings() {
-        return this._organizationSettings;
+        return this.organizationSettings;
     }
     /**
      * Gets the provisioningPolicies property value. Cloud PC provisioning policy.
@@ -134,7 +160,15 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcProvisioningPolicy> getProvisioningPolicies() {
-        return this._provisioningPolicies;
+        return this.provisioningPolicies;
+    }
+    /**
+     * Gets the reports property value. Cloud PC related reports.
+     * @return a cloudPcReports
+     */
+    @javax.annotation.Nullable
+    public CloudPcReports getReports() {
+        return this.reports;
     }
     /**
      * Gets the servicePlans property value. Cloud PC service plans.
@@ -142,7 +176,15 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcServicePlan> getServicePlans() {
-        return this._servicePlans;
+        return this.servicePlans;
+    }
+    /**
+     * Gets the sharedUseServicePlans property value. Cloud PC shared-use service plans.
+     * @return a cloudPcSharedUseServicePlan
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CloudPcSharedUseServicePlan> getSharedUseServicePlans() {
+        return this.sharedUseServicePlans;
     }
     /**
      * Gets the snapshots property value. Cloud PC snapshots.
@@ -150,7 +192,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcSnapshot> getSnapshots() {
-        return this._snapshots;
+        return this.snapshots;
     }
     /**
      * Gets the supportedRegions property value. Cloud PC supported regions.
@@ -158,7 +200,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcSupportedRegion> getSupportedRegions() {
-        return this._supportedRegions;
+        return this.supportedRegions;
     }
     /**
      * Gets the userSettings property value. Cloud PC user settings.
@@ -166,25 +208,30 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcUserSetting> getUserSettings() {
-        return this._userSettings;
+        return this.userSettings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("auditEvents", this.getAuditEvents());
+        writer.writeCollectionOfObjectValues("bulkActions", this.getBulkActions());
         writer.writeCollectionOfObjectValues("cloudPCs", this.getCloudPCs());
+        writer.writeObjectValue("crossCloudGovernmentOrganizationMapping", this.getCrossCloudGovernmentOrganizationMapping());
         writer.writeCollectionOfObjectValues("deviceImages", this.getDeviceImages());
         writer.writeCollectionOfObjectValues("externalPartnerSettings", this.getExternalPartnerSettings());
         writer.writeCollectionOfObjectValues("galleryImages", this.getGalleryImages());
         writer.writeCollectionOfObjectValues("onPremisesConnections", this.getOnPremisesConnections());
         writer.writeObjectValue("organizationSettings", this.getOrganizationSettings());
         writer.writeCollectionOfObjectValues("provisioningPolicies", this.getProvisioningPolicies());
+        writer.writeObjectValue("reports", this.getReports());
         writer.writeCollectionOfObjectValues("servicePlans", this.getServicePlans());
+        writer.writeCollectionOfObjectValues("sharedUseServicePlans", this.getSharedUseServicePlans());
         writer.writeCollectionOfObjectValues("snapshots", this.getSnapshots());
         writer.writeCollectionOfObjectValues("supportedRegions", this.getSupportedRegions());
         writer.writeCollectionOfObjectValues("userSettings", this.getUserSettings());
@@ -194,95 +241,143 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the auditEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuditEvents(@javax.annotation.Nullable final java.util.List<CloudPcAuditEvent> value) {
-        this._auditEvents = value;
+        this.auditEvents = value;
+    }
+    /**
+     * Sets the bulkActions property value. The bulkActions property
+     * @param value Value to set for the bulkActions property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setBulkActions(@javax.annotation.Nullable final java.util.List<CloudPcBulkAction> value) {
+        this.bulkActions = value;
     }
     /**
      * Sets the cloudPCs property value. Cloud managed virtual desktops.
      * @param value Value to set for the cloudPCs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPCs(@javax.annotation.Nullable final java.util.List<CloudPC> value) {
-        this._cloudPCs = value;
+        this.cloudPCs = value;
+    }
+    /**
+     * Sets the crossCloudGovernmentOrganizationMapping property value. Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
+     * @param value Value to set for the crossCloudGovernmentOrganizationMapping property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCrossCloudGovernmentOrganizationMapping(@javax.annotation.Nullable final CloudPcCrossCloudGovernmentOrganizationMapping value) {
+        this.crossCloudGovernmentOrganizationMapping = value;
     }
     /**
      * Sets the deviceImages property value. The image resource on Cloud PC.
      * @param value Value to set for the deviceImages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceImages(@javax.annotation.Nullable final java.util.List<CloudPcDeviceImage> value) {
-        this._deviceImages = value;
+        this.deviceImages = value;
     }
     /**
      * Sets the externalPartnerSettings property value. The external partner settings on a Cloud PC.
      * @param value Value to set for the externalPartnerSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalPartnerSettings(@javax.annotation.Nullable final java.util.List<CloudPcExternalPartnerSetting> value) {
-        this._externalPartnerSettings = value;
+        this.externalPartnerSettings = value;
     }
     /**
      * Sets the galleryImages property value. The gallery image resource on Cloud PC.
      * @param value Value to set for the galleryImages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGalleryImages(@javax.annotation.Nullable final java.util.List<CloudPcGalleryImage> value) {
-        this._galleryImages = value;
+        this.galleryImages = value;
     }
     /**
      * Sets the onPremisesConnections property value. A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs.
      * @param value Value to set for the onPremisesConnections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesConnections(@javax.annotation.Nullable final java.util.List<CloudPcOnPremisesConnection> value) {
-        this._onPremisesConnections = value;
+        this.onPremisesConnections = value;
     }
     /**
      * Sets the organizationSettings property value. The Cloud PC organization settings for a tenant.
      * @param value Value to set for the organizationSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizationSettings(@javax.annotation.Nullable final CloudPcOrganizationSettings value) {
-        this._organizationSettings = value;
+        this.organizationSettings = value;
     }
     /**
      * Sets the provisioningPolicies property value. Cloud PC provisioning policy.
      * @param value Value to set for the provisioningPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningPolicies(@javax.annotation.Nullable final java.util.List<CloudPcProvisioningPolicy> value) {
-        this._provisioningPolicies = value;
+        this.provisioningPolicies = value;
+    }
+    /**
+     * Sets the reports property value. Cloud PC related reports.
+     * @param value Value to set for the reports property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setReports(@javax.annotation.Nullable final CloudPcReports value) {
+        this.reports = value;
     }
     /**
      * Sets the servicePlans property value. Cloud PC service plans.
      * @param value Value to set for the servicePlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePlans(@javax.annotation.Nullable final java.util.List<CloudPcServicePlan> value) {
-        this._servicePlans = value;
+        this.servicePlans = value;
+    }
+    /**
+     * Sets the sharedUseServicePlans property value. Cloud PC shared-use service plans.
+     * @param value Value to set for the sharedUseServicePlans property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSharedUseServicePlans(@javax.annotation.Nullable final java.util.List<CloudPcSharedUseServicePlan> value) {
+        this.sharedUseServicePlans = value;
     }
     /**
      * Sets the snapshots property value. Cloud PC snapshots.
      * @param value Value to set for the snapshots property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSnapshots(@javax.annotation.Nullable final java.util.List<CloudPcSnapshot> value) {
-        this._snapshots = value;
+        this.snapshots = value;
     }
     /**
      * Sets the supportedRegions property value. Cloud PC supported regions.
      * @param value Value to set for the supportedRegions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedRegions(@javax.annotation.Nullable final java.util.List<CloudPcSupportedRegion> value) {
-        this._supportedRegions = value;
+        this.supportedRegions = value;
     }
     /**
      * Sets the userSettings property value. Cloud PC user settings.
      * @param value Value to set for the userSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserSettings(@javax.annotation.Nullable final java.util.List<CloudPcUserSetting> value) {
-        this._userSettings = value;
+        this.userSettings = value;
     }
 }

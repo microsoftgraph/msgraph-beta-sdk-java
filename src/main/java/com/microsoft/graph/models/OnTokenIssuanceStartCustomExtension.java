@@ -3,17 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnTokenIssuanceStartCustomExtension extends CustomAuthenticationExtension implements Parsable {
-    /** The claimsForTokenConfiguration property */
-    private java.util.List<OnTokenIssuanceStartReturnClaim> _claimsForTokenConfiguration;
+    /** Collection of claims to be returned by the API called by this custom authentication extension. */
+    private java.util.List<OnTokenIssuanceStartReturnClaim> claimsForTokenConfiguration;
     /**
      * Instantiates a new OnTokenIssuanceStartCustomExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnTokenIssuanceStartCustomExtension() {
         super();
         this.setOdataType("#microsoft.graph.onTokenIssuanceStartCustomExtension");
@@ -29,40 +29,41 @@ public class OnTokenIssuanceStartCustomExtension extends CustomAuthenticationExt
         return new OnTokenIssuanceStartCustomExtension();
     }
     /**
-     * Gets the claimsForTokenConfiguration property value. The claimsForTokenConfiguration property
+     * Gets the claimsForTokenConfiguration property value. Collection of claims to be returned by the API called by this custom authentication extension.
      * @return a onTokenIssuanceStartReturnClaim
      */
     @javax.annotation.Nullable
     public java.util.List<OnTokenIssuanceStartReturnClaim> getClaimsForTokenConfiguration() {
-        return this._claimsForTokenConfiguration;
+        return this.claimsForTokenConfiguration;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnTokenIssuanceStartCustomExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("claimsForTokenConfiguration", (n) -> { currentObject.setClaimsForTokenConfiguration(n.getCollectionOfObjectValues(OnTokenIssuanceStartReturnClaim::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("claimsForTokenConfiguration", (n) -> { this.setClaimsForTokenConfiguration(n.getCollectionOfObjectValues(OnTokenIssuanceStartReturnClaim::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("claimsForTokenConfiguration", this.getClaimsForTokenConfiguration());
     }
     /**
-     * Sets the claimsForTokenConfiguration property value. The claimsForTokenConfiguration property
+     * Sets the claimsForTokenConfiguration property value. Collection of claims to be returned by the API called by this custom authentication extension.
      * @param value Value to set for the claimsForTokenConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClaimsForTokenConfiguration(@javax.annotation.Nullable final java.util.List<OnTokenIssuanceStartReturnClaim> value) {
-        this._claimsForTokenConfiguration = value;
+        this.claimsForTokenConfiguration = value;
     }
 }

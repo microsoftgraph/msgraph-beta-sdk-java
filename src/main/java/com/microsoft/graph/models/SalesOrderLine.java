@@ -5,75 +5,74 @@ import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+import java.util.UUID;
 public class SalesOrderLine extends Entity implements Parsable {
     /** The account property */
-    private Account _account;
+    private Account account;
     /** The accountId property */
-    private String _accountId;
+    private UUID accountId;
     /** The amountExcludingTax property */
-    private BigDecimal _amountExcludingTax;
+    private BigDecimal amountExcludingTax;
     /** The amountIncludingTax property */
-    private BigDecimal _amountIncludingTax;
+    private BigDecimal amountIncludingTax;
     /** The description property */
-    private String _description;
+    private String description;
     /** The discountAmount property */
-    private BigDecimal _discountAmount;
+    private BigDecimal discountAmount;
     /** The discountAppliedBeforeTax property */
-    private Boolean _discountAppliedBeforeTax;
+    private Boolean discountAppliedBeforeTax;
     /** The discountPercent property */
-    private BigDecimal _discountPercent;
+    private BigDecimal discountPercent;
     /** The documentId property */
-    private String _documentId;
+    private UUID documentId;
     /** The invoiceDiscountAllocation property */
-    private BigDecimal _invoiceDiscountAllocation;
+    private BigDecimal invoiceDiscountAllocation;
     /** The invoicedQuantity property */
-    private BigDecimal _invoicedQuantity;
+    private BigDecimal invoicedQuantity;
     /** The invoiceQuantity property */
-    private BigDecimal _invoiceQuantity;
+    private BigDecimal invoiceQuantity;
     /** The item property */
-    private Item _item;
+    private Item item;
     /** The itemId property */
-    private String _itemId;
+    private UUID itemId;
     /** The lineType property */
-    private String _lineType;
+    private String lineType;
     /** The netAmount property */
-    private BigDecimal _netAmount;
+    private BigDecimal netAmount;
     /** The netAmountIncludingTax property */
-    private BigDecimal _netAmountIncludingTax;
+    private BigDecimal netAmountIncludingTax;
     /** The netTaxAmount property */
-    private BigDecimal _netTaxAmount;
+    private BigDecimal netTaxAmount;
     /** The quantity property */
-    private BigDecimal _quantity;
+    private BigDecimal quantity;
     /** The sequence property */
-    private Integer _sequence;
+    private Integer sequence;
     /** The shipmentDate property */
-    private LocalDate _shipmentDate;
+    private LocalDate shipmentDate;
     /** The shippedQuantity property */
-    private BigDecimal _shippedQuantity;
+    private BigDecimal shippedQuantity;
     /** The shipQuantity property */
-    private BigDecimal _shipQuantity;
+    private BigDecimal shipQuantity;
     /** The taxCode property */
-    private String _taxCode;
+    private String taxCode;
     /** The taxPercent property */
-    private BigDecimal _taxPercent;
+    private BigDecimal taxPercent;
     /** The totalTaxAmount property */
-    private BigDecimal _totalTaxAmount;
+    private BigDecimal totalTaxAmount;
     /** The unitOfMeasureId property */
-    private String _unitOfMeasureId;
+    private UUID unitOfMeasureId;
     /** The unitPrice property */
-    private BigDecimal _unitPrice;
+    private BigDecimal unitPrice;
     /**
      * Instantiates a new salesOrderLine and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SalesOrderLine() {
         super();
-        this.setOdataType("#microsoft.graph.salesOrderLine");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -91,15 +90,15 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Account getAccount() {
-        return this._account;
+        return this.account;
     }
     /**
      * Gets the accountId property value. The accountId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getAccountId() {
-        return this._accountId;
+    public UUID getAccountId() {
+        return this.accountId;
     }
     /**
      * Gets the amountExcludingTax property value. The amountExcludingTax property
@@ -107,7 +106,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getAmountExcludingTax() {
-        return this._amountExcludingTax;
+        return this.amountExcludingTax;
     }
     /**
      * Gets the amountIncludingTax property value. The amountIncludingTax property
@@ -115,7 +114,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getAmountIncludingTax() {
-        return this._amountIncludingTax;
+        return this.amountIncludingTax;
     }
     /**
      * Gets the description property value. The description property
@@ -123,7 +122,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the discountAmount property value. The discountAmount property
@@ -131,7 +130,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getDiscountAmount() {
-        return this._discountAmount;
+        return this.discountAmount;
     }
     /**
      * Gets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
@@ -139,7 +138,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getDiscountAppliedBeforeTax() {
-        return this._discountAppliedBeforeTax;
+        return this.discountAppliedBeforeTax;
     }
     /**
      * Gets the discountPercent property value. The discountPercent property
@@ -147,53 +146,52 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getDiscountPercent() {
-        return this._discountPercent;
+        return this.discountPercent;
     }
     /**
      * Gets the documentId property value. The documentId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getDocumentId() {
-        return this._documentId;
+    public UUID getDocumentId() {
+        return this.documentId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SalesOrderLine currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("account", (n) -> { currentObject.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
-            this.put("accountId", (n) -> { currentObject.setAccountId(n.getStringValue()); });
-            this.put("amountExcludingTax", (n) -> { currentObject.setAmountExcludingTax(n.getBigDecimalValue()); });
-            this.put("amountIncludingTax", (n) -> { currentObject.setAmountIncludingTax(n.getBigDecimalValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("discountAmount", (n) -> { currentObject.setDiscountAmount(n.getBigDecimalValue()); });
-            this.put("discountAppliedBeforeTax", (n) -> { currentObject.setDiscountAppliedBeforeTax(n.getBooleanValue()); });
-            this.put("discountPercent", (n) -> { currentObject.setDiscountPercent(n.getBigDecimalValue()); });
-            this.put("documentId", (n) -> { currentObject.setDocumentId(n.getStringValue()); });
-            this.put("invoiceDiscountAllocation", (n) -> { currentObject.setInvoiceDiscountAllocation(n.getBigDecimalValue()); });
-            this.put("invoicedQuantity", (n) -> { currentObject.setInvoicedQuantity(n.getBigDecimalValue()); });
-            this.put("invoiceQuantity", (n) -> { currentObject.setInvoiceQuantity(n.getBigDecimalValue()); });
-            this.put("item", (n) -> { currentObject.setItem(n.getObjectValue(Item::createFromDiscriminatorValue)); });
-            this.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
-            this.put("lineType", (n) -> { currentObject.setLineType(n.getStringValue()); });
-            this.put("netAmount", (n) -> { currentObject.setNetAmount(n.getBigDecimalValue()); });
-            this.put("netAmountIncludingTax", (n) -> { currentObject.setNetAmountIncludingTax(n.getBigDecimalValue()); });
-            this.put("netTaxAmount", (n) -> { currentObject.setNetTaxAmount(n.getBigDecimalValue()); });
-            this.put("quantity", (n) -> { currentObject.setQuantity(n.getBigDecimalValue()); });
-            this.put("sequence", (n) -> { currentObject.setSequence(n.getIntegerValue()); });
-            this.put("shipmentDate", (n) -> { currentObject.setShipmentDate(n.getLocalDateValue()); });
-            this.put("shippedQuantity", (n) -> { currentObject.setShippedQuantity(n.getBigDecimalValue()); });
-            this.put("shipQuantity", (n) -> { currentObject.setShipQuantity(n.getBigDecimalValue()); });
-            this.put("taxCode", (n) -> { currentObject.setTaxCode(n.getStringValue()); });
-            this.put("taxPercent", (n) -> { currentObject.setTaxPercent(n.getBigDecimalValue()); });
-            this.put("totalTaxAmount", (n) -> { currentObject.setTotalTaxAmount(n.getBigDecimalValue()); });
-            this.put("unitOfMeasureId", (n) -> { currentObject.setUnitOfMeasureId(n.getStringValue()); });
-            this.put("unitPrice", (n) -> { currentObject.setUnitPrice(n.getBigDecimalValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("account", (n) -> { this.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
+        deserializerMap.put("accountId", (n) -> { this.setAccountId(n.getUUIDValue()); });
+        deserializerMap.put("amountExcludingTax", (n) -> { this.setAmountExcludingTax(n.getBigDecimalValue()); });
+        deserializerMap.put("amountIncludingTax", (n) -> { this.setAmountIncludingTax(n.getBigDecimalValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("discountAmount", (n) -> { this.setDiscountAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("discountAppliedBeforeTax", (n) -> { this.setDiscountAppliedBeforeTax(n.getBooleanValue()); });
+        deserializerMap.put("discountPercent", (n) -> { this.setDiscountPercent(n.getBigDecimalValue()); });
+        deserializerMap.put("documentId", (n) -> { this.setDocumentId(n.getUUIDValue()); });
+        deserializerMap.put("invoiceDiscountAllocation", (n) -> { this.setInvoiceDiscountAllocation(n.getBigDecimalValue()); });
+        deserializerMap.put("invoicedQuantity", (n) -> { this.setInvoicedQuantity(n.getBigDecimalValue()); });
+        deserializerMap.put("invoiceQuantity", (n) -> { this.setInvoiceQuantity(n.getBigDecimalValue()); });
+        deserializerMap.put("item", (n) -> { this.setItem(n.getObjectValue(Item::createFromDiscriminatorValue)); });
+        deserializerMap.put("itemId", (n) -> { this.setItemId(n.getUUIDValue()); });
+        deserializerMap.put("lineType", (n) -> { this.setLineType(n.getStringValue()); });
+        deserializerMap.put("netAmount", (n) -> { this.setNetAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("netAmountIncludingTax", (n) -> { this.setNetAmountIncludingTax(n.getBigDecimalValue()); });
+        deserializerMap.put("netTaxAmount", (n) -> { this.setNetTaxAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("quantity", (n) -> { this.setQuantity(n.getBigDecimalValue()); });
+        deserializerMap.put("sequence", (n) -> { this.setSequence(n.getIntegerValue()); });
+        deserializerMap.put("shipmentDate", (n) -> { this.setShipmentDate(n.getLocalDateValue()); });
+        deserializerMap.put("shippedQuantity", (n) -> { this.setShippedQuantity(n.getBigDecimalValue()); });
+        deserializerMap.put("shipQuantity", (n) -> { this.setShipQuantity(n.getBigDecimalValue()); });
+        deserializerMap.put("taxCode", (n) -> { this.setTaxCode(n.getStringValue()); });
+        deserializerMap.put("taxPercent", (n) -> { this.setTaxPercent(n.getBigDecimalValue()); });
+        deserializerMap.put("totalTaxAmount", (n) -> { this.setTotalTaxAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("unitOfMeasureId", (n) -> { this.setUnitOfMeasureId(n.getUUIDValue()); });
+        deserializerMap.put("unitPrice", (n) -> { this.setUnitPrice(n.getBigDecimalValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the invoiceDiscountAllocation property value. The invoiceDiscountAllocation property
@@ -201,7 +199,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getInvoiceDiscountAllocation() {
-        return this._invoiceDiscountAllocation;
+        return this.invoiceDiscountAllocation;
     }
     /**
      * Gets the invoicedQuantity property value. The invoicedQuantity property
@@ -209,7 +207,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getInvoicedQuantity() {
-        return this._invoicedQuantity;
+        return this.invoicedQuantity;
     }
     /**
      * Gets the invoiceQuantity property value. The invoiceQuantity property
@@ -217,7 +215,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getInvoiceQuantity() {
-        return this._invoiceQuantity;
+        return this.invoiceQuantity;
     }
     /**
      * Gets the item property value. The item property
@@ -225,15 +223,15 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Item getItem() {
-        return this._item;
+        return this.item;
     }
     /**
      * Gets the itemId property value. The itemId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getItemId() {
-        return this._itemId;
+    public UUID getItemId() {
+        return this.itemId;
     }
     /**
      * Gets the lineType property value. The lineType property
@@ -241,7 +239,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLineType() {
-        return this._lineType;
+        return this.lineType;
     }
     /**
      * Gets the netAmount property value. The netAmount property
@@ -249,7 +247,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getNetAmount() {
-        return this._netAmount;
+        return this.netAmount;
     }
     /**
      * Gets the netAmountIncludingTax property value. The netAmountIncludingTax property
@@ -257,7 +255,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getNetAmountIncludingTax() {
-        return this._netAmountIncludingTax;
+        return this.netAmountIncludingTax;
     }
     /**
      * Gets the netTaxAmount property value. The netTaxAmount property
@@ -265,7 +263,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getNetTaxAmount() {
-        return this._netTaxAmount;
+        return this.netTaxAmount;
     }
     /**
      * Gets the quantity property value. The quantity property
@@ -273,7 +271,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getQuantity() {
-        return this._quantity;
+        return this.quantity;
     }
     /**
      * Gets the sequence property value. The sequence property
@@ -281,7 +279,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getSequence() {
-        return this._sequence;
+        return this.sequence;
     }
     /**
      * Gets the shipmentDate property value. The shipmentDate property
@@ -289,7 +287,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getShipmentDate() {
-        return this._shipmentDate;
+        return this.shipmentDate;
     }
     /**
      * Gets the shippedQuantity property value. The shippedQuantity property
@@ -297,7 +295,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getShippedQuantity() {
-        return this._shippedQuantity;
+        return this.shippedQuantity;
     }
     /**
      * Gets the shipQuantity property value. The shipQuantity property
@@ -305,7 +303,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getShipQuantity() {
-        return this._shipQuantity;
+        return this.shipQuantity;
     }
     /**
      * Gets the taxCode property value. The taxCode property
@@ -313,7 +311,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTaxCode() {
-        return this._taxCode;
+        return this.taxCode;
     }
     /**
      * Gets the taxPercent property value. The taxPercent property
@@ -321,7 +319,7 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getTaxPercent() {
-        return this._taxPercent;
+        return this.taxPercent;
     }
     /**
      * Gets the totalTaxAmount property value. The totalTaxAmount property
@@ -329,15 +327,15 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getTotalTaxAmount() {
-        return this._totalTaxAmount;
+        return this.totalTaxAmount;
     }
     /**
      * Gets the unitOfMeasureId property value. The unitOfMeasureId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getUnitOfMeasureId() {
-        return this._unitOfMeasureId;
+    public UUID getUnitOfMeasureId() {
+        return this.unitOfMeasureId;
     }
     /**
      * Gets the unitPrice property value. The unitPrice property
@@ -345,30 +343,31 @@ public class SalesOrderLine extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getUnitPrice() {
-        return this._unitPrice;
+        return this.unitPrice;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("account", this.getAccount());
-        writer.writeStringValue("accountId", this.getAccountId());
+        writer.writeUUIDValue("accountId", this.getAccountId());
         writer.writeBigDecimalValue("amountExcludingTax", this.getAmountExcludingTax());
         writer.writeBigDecimalValue("amountIncludingTax", this.getAmountIncludingTax());
         writer.writeStringValue("description", this.getDescription());
         writer.writeBigDecimalValue("discountAmount", this.getDiscountAmount());
         writer.writeBooleanValue("discountAppliedBeforeTax", this.getDiscountAppliedBeforeTax());
         writer.writeBigDecimalValue("discountPercent", this.getDiscountPercent());
-        writer.writeStringValue("documentId", this.getDocumentId());
+        writer.writeUUIDValue("documentId", this.getDocumentId());
         writer.writeBigDecimalValue("invoiceDiscountAllocation", this.getInvoiceDiscountAllocation());
         writer.writeBigDecimalValue("invoicedQuantity", this.getInvoicedQuantity());
         writer.writeBigDecimalValue("invoiceQuantity", this.getInvoiceQuantity());
         writer.writeObjectValue("item", this.getItem());
-        writer.writeStringValue("itemId", this.getItemId());
+        writer.writeUUIDValue("itemId", this.getItemId());
         writer.writeStringValue("lineType", this.getLineType());
         writer.writeBigDecimalValue("netAmount", this.getNetAmount());
         writer.writeBigDecimalValue("netAmountIncludingTax", this.getNetAmountIncludingTax());
@@ -381,7 +380,7 @@ public class SalesOrderLine extends Entity implements Parsable {
         writer.writeStringValue("taxCode", this.getTaxCode());
         writer.writeBigDecimalValue("taxPercent", this.getTaxPercent());
         writer.writeBigDecimalValue("totalTaxAmount", this.getTotalTaxAmount());
-        writer.writeStringValue("unitOfMeasureId", this.getUnitOfMeasureId());
+        writer.writeUUIDValue("unitOfMeasureId", this.getUnitOfMeasureId());
         writer.writeBigDecimalValue("unitPrice", this.getUnitPrice());
     }
     /**
@@ -389,223 +388,251 @@ public class SalesOrderLine extends Entity implements Parsable {
      * @param value Value to set for the account property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccount(@javax.annotation.Nullable final Account value) {
-        this._account = value;
+        this.account = value;
     }
     /**
      * Sets the accountId property value. The accountId property
      * @param value Value to set for the accountId property.
      * @return a void
      */
-    public void setAccountId(@javax.annotation.Nullable final String value) {
-        this._accountId = value;
+    @javax.annotation.Nonnull
+    public void setAccountId(@javax.annotation.Nullable final UUID value) {
+        this.accountId = value;
     }
     /**
      * Sets the amountExcludingTax property value. The amountExcludingTax property
      * @param value Value to set for the amountExcludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAmountExcludingTax(@javax.annotation.Nullable final BigDecimal value) {
-        this._amountExcludingTax = value;
+        this.amountExcludingTax = value;
     }
     /**
      * Sets the amountIncludingTax property value. The amountIncludingTax property
      * @param value Value to set for the amountIncludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAmountIncludingTax(@javax.annotation.Nullable final BigDecimal value) {
-        this._amountIncludingTax = value;
+        this.amountIncludingTax = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the discountAmount property value. The discountAmount property
      * @param value Value to set for the discountAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountAmount(@javax.annotation.Nullable final BigDecimal value) {
-        this._discountAmount = value;
+        this.discountAmount = value;
     }
     /**
      * Sets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
      * @param value Value to set for the discountAppliedBeforeTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountAppliedBeforeTax(@javax.annotation.Nullable final Boolean value) {
-        this._discountAppliedBeforeTax = value;
+        this.discountAppliedBeforeTax = value;
     }
     /**
      * Sets the discountPercent property value. The discountPercent property
      * @param value Value to set for the discountPercent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountPercent(@javax.annotation.Nullable final BigDecimal value) {
-        this._discountPercent = value;
+        this.discountPercent = value;
     }
     /**
      * Sets the documentId property value. The documentId property
      * @param value Value to set for the documentId property.
      * @return a void
      */
-    public void setDocumentId(@javax.annotation.Nullable final String value) {
-        this._documentId = value;
+    @javax.annotation.Nonnull
+    public void setDocumentId(@javax.annotation.Nullable final UUID value) {
+        this.documentId = value;
     }
     /**
      * Sets the invoiceDiscountAllocation property value. The invoiceDiscountAllocation property
      * @param value Value to set for the invoiceDiscountAllocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceDiscountAllocation(@javax.annotation.Nullable final BigDecimal value) {
-        this._invoiceDiscountAllocation = value;
+        this.invoiceDiscountAllocation = value;
     }
     /**
      * Sets the invoicedQuantity property value. The invoicedQuantity property
      * @param value Value to set for the invoicedQuantity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoicedQuantity(@javax.annotation.Nullable final BigDecimal value) {
-        this._invoicedQuantity = value;
+        this.invoicedQuantity = value;
     }
     /**
      * Sets the invoiceQuantity property value. The invoiceQuantity property
      * @param value Value to set for the invoiceQuantity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceQuantity(@javax.annotation.Nullable final BigDecimal value) {
-        this._invoiceQuantity = value;
+        this.invoiceQuantity = value;
     }
     /**
      * Sets the item property value. The item property
      * @param value Value to set for the item property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItem(@javax.annotation.Nullable final Item value) {
-        this._item = value;
+        this.item = value;
     }
     /**
      * Sets the itemId property value. The itemId property
      * @param value Value to set for the itemId property.
      * @return a void
      */
-    public void setItemId(@javax.annotation.Nullable final String value) {
-        this._itemId = value;
+    @javax.annotation.Nonnull
+    public void setItemId(@javax.annotation.Nullable final UUID value) {
+        this.itemId = value;
     }
     /**
      * Sets the lineType property value. The lineType property
      * @param value Value to set for the lineType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLineType(@javax.annotation.Nullable final String value) {
-        this._lineType = value;
+        this.lineType = value;
     }
     /**
      * Sets the netAmount property value. The netAmount property
      * @param value Value to set for the netAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetAmount(@javax.annotation.Nullable final BigDecimal value) {
-        this._netAmount = value;
+        this.netAmount = value;
     }
     /**
      * Sets the netAmountIncludingTax property value. The netAmountIncludingTax property
      * @param value Value to set for the netAmountIncludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetAmountIncludingTax(@javax.annotation.Nullable final BigDecimal value) {
-        this._netAmountIncludingTax = value;
+        this.netAmountIncludingTax = value;
     }
     /**
      * Sets the netTaxAmount property value. The netTaxAmount property
      * @param value Value to set for the netTaxAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetTaxAmount(@javax.annotation.Nullable final BigDecimal value) {
-        this._netTaxAmount = value;
+        this.netTaxAmount = value;
     }
     /**
      * Sets the quantity property value. The quantity property
      * @param value Value to set for the quantity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuantity(@javax.annotation.Nullable final BigDecimal value) {
-        this._quantity = value;
+        this.quantity = value;
     }
     /**
      * Sets the sequence property value. The sequence property
      * @param value Value to set for the sequence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSequence(@javax.annotation.Nullable final Integer value) {
-        this._sequence = value;
+        this.sequence = value;
     }
     /**
      * Sets the shipmentDate property value. The shipmentDate property
      * @param value Value to set for the shipmentDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShipmentDate(@javax.annotation.Nullable final LocalDate value) {
-        this._shipmentDate = value;
+        this.shipmentDate = value;
     }
     /**
      * Sets the shippedQuantity property value. The shippedQuantity property
      * @param value Value to set for the shippedQuantity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShippedQuantity(@javax.annotation.Nullable final BigDecimal value) {
-        this._shippedQuantity = value;
+        this.shippedQuantity = value;
     }
     /**
      * Sets the shipQuantity property value. The shipQuantity property
      * @param value Value to set for the shipQuantity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShipQuantity(@javax.annotation.Nullable final BigDecimal value) {
-        this._shipQuantity = value;
+        this.shipQuantity = value;
     }
     /**
      * Sets the taxCode property value. The taxCode property
      * @param value Value to set for the taxCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxCode(@javax.annotation.Nullable final String value) {
-        this._taxCode = value;
+        this.taxCode = value;
     }
     /**
      * Sets the taxPercent property value. The taxPercent property
      * @param value Value to set for the taxPercent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxPercent(@javax.annotation.Nullable final BigDecimal value) {
-        this._taxPercent = value;
+        this.taxPercent = value;
     }
     /**
      * Sets the totalTaxAmount property value. The totalTaxAmount property
      * @param value Value to set for the totalTaxAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalTaxAmount(@javax.annotation.Nullable final BigDecimal value) {
-        this._totalTaxAmount = value;
+        this.totalTaxAmount = value;
     }
     /**
      * Sets the unitOfMeasureId property value. The unitOfMeasureId property
      * @param value Value to set for the unitOfMeasureId property.
      * @return a void
      */
-    public void setUnitOfMeasureId(@javax.annotation.Nullable final String value) {
-        this._unitOfMeasureId = value;
+    @javax.annotation.Nonnull
+    public void setUnitOfMeasureId(@javax.annotation.Nullable final UUID value) {
+        this.unitOfMeasureId = value;
     }
     /**
      * Sets the unitPrice property value. The unitPrice property
      * @param value Value to set for the unitPrice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnitPrice(@javax.annotation.Nullable final BigDecimal value) {
-        this._unitPrice = value;
+        this.unitPrice = value;
     }
 }

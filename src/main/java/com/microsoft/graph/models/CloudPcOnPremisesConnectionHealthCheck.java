@@ -5,36 +5,37 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Additional details about the health check or the recommended action. */
-    private String _additionalDetails;
+    private String additionalDetails;
+    /** The unique identifier of the health check item-related activities. This identifier can be useful in troubleshooting. */
+    private String correlationId;
     /** The display name for this health check item. */
-    private String _displayName;
+    private String displayName;
     /** The end time of the health check item. Read-only. */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** The type of error that occurred during this health check. */
-    private CloudPcOnPremisesConnectionHealthCheckErrorType _errorType;
+    private CloudPcOnPremisesConnectionHealthCheckErrorType errorType;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The recommended action to fix the corresponding error. */
-    private String _recommendedAction;
+    private String recommendedAction;
     /** The start time of the health check item. Read-only. */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /** The status property */
-    private CloudPcOnPremisesConnectionStatus _status;
+    private CloudPcOnPremisesConnectionStatus status;
     /**
      * Instantiates a new cloudPcOnPremisesConnectionHealthCheck and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcOnPremisesConnectionHealthCheck() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.cloudPcOnPremisesConnectionHealthCheck");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +53,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the additionalDetails property value. Additional details about the health check or the recommended action.
@@ -60,7 +61,15 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public String getAdditionalDetails() {
-        return this._additionalDetails;
+        return this.additionalDetails;
+    }
+    /**
+     * Gets the correlationId property value. The unique identifier of the health check item-related activities. This identifier can be useful in troubleshooting.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getCorrelationId() {
+        return this.correlationId;
     }
     /**
      * Gets the displayName property value. The display name for this health check item.
@@ -68,7 +77,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the endDateTime property value. The end time of the health check item. Read-only.
@@ -76,7 +85,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * Gets the errorType property value. The type of error that occurred during this health check.
@@ -84,25 +93,25 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public CloudPcOnPremisesConnectionHealthCheckErrorType getErrorType() {
-        return this._errorType;
+        return this.errorType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcOnPremisesConnectionHealthCheck currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("errorType", (n) -> { currentObject.setErrorType(n.getEnumValue(CloudPcOnPremisesConnectionHealthCheckErrorType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recommendedAction", (n) -> { currentObject.setRecommendedAction(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        deserializerMap.put("additionalDetails", (n) -> { this.setAdditionalDetails(n.getStringValue()); });
+        deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("errorType", (n) -> { this.setErrorType(n.getEnumValue(CloudPcOnPremisesConnectionHealthCheckErrorType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendedAction", (n) -> { this.setRecommendedAction(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -110,7 +119,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the recommendedAction property value. The recommended action to fix the corresponding error.
@@ -118,7 +127,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public String getRecommendedAction() {
-        return this._recommendedAction;
+        return this.recommendedAction;
     }
     /**
      * Gets the startDateTime property value. The start time of the health check item. Read-only.
@@ -126,7 +135,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the status property value. The status property
@@ -134,16 +143,18 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public CloudPcOnPremisesConnectionStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("additionalDetails", this.getAdditionalDetails());
+        writer.writeStringValue("correlationId", this.getCorrelationId());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeEnumValue("errorType", this.getErrorType());
@@ -158,71 +169,89 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the additionalDetails property value. Additional details about the health check or the recommended action.
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalDetails(@javax.annotation.Nullable final String value) {
-        this._additionalDetails = value;
+        this.additionalDetails = value;
+    }
+    /**
+     * Sets the correlationId property value. The unique identifier of the health check item-related activities. This identifier can be useful in troubleshooting.
+     * @param value Value to set for the correlationId property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCorrelationId(@javax.annotation.Nullable final String value) {
+        this.correlationId = value;
     }
     /**
      * Sets the displayName property value. The display name for this health check item.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the endDateTime property value. The end time of the health check item. Read-only.
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the errorType property value. The type of error that occurred during this health check.
      * @param value Value to set for the errorType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorType(@javax.annotation.Nullable final CloudPcOnPremisesConnectionHealthCheckErrorType value) {
-        this._errorType = value;
+        this.errorType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the recommendedAction property value. The recommended action to fix the corresponding error.
      * @param value Value to set for the recommendedAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedAction(@javax.annotation.Nullable final String value) {
-        this._recommendedAction = value;
+        this.recommendedAction = value;
     }
     /**
      * Sets the startDateTime property value. The start time of the health check item. Read-only.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CloudPcOnPremisesConnectionStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

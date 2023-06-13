@@ -3,25 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WorkbookChartSeries extends Entity implements Parsable {
     /** Represents the formatting of a chart series, which includes fill and line formatting. Read-only. */
-    private WorkbookChartSeriesFormat _format;
+    private WorkbookChartSeriesFormat format;
     /** Represents the name of a series in a chart. */
-    private String _name;
+    private String name;
     /** Represents a collection of all points in the series. Read-only. */
-    private java.util.List<WorkbookChartPoint> _points;
+    private java.util.List<WorkbookChartPoint> points;
     /**
      * Instantiates a new workbookChartSeries and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartSeries() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartSeries");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,16 +33,15 @@ public class WorkbookChartSeries extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartSeries currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartSeriesFormat::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("points", (n) -> { currentObject.setPoints(n.getCollectionOfObjectValues(WorkbookChartPoint::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartSeriesFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("points", (n) -> { this.setPoints(n.getCollectionOfObjectValues(WorkbookChartPoint::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
@@ -52,7 +49,7 @@ public class WorkbookChartSeries extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartSeriesFormat getFormat() {
-        return this._format;
+        return this.format;
     }
     /**
      * Gets the name property value. Represents the name of a series in a chart.
@@ -60,7 +57,7 @@ public class WorkbookChartSeries extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the points property value. Represents a collection of all points in the series. Read-only.
@@ -68,13 +65,14 @@ public class WorkbookChartSeries extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookChartPoint> getPoints() {
-        return this._points;
+        return this.points;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,23 +85,26 @@ public class WorkbookChartSeries extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartSeriesFormat value) {
-        this._format = value;
+        this.format = value;
     }
     /**
      * Sets the name property value. Represents the name of a series in a chart.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the points property value. Represents a collection of all points in the series. Read-only.
      * @param value Value to set for the points property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPoints(@javax.annotation.Nullable final java.util.List<WorkbookChartPoint> value) {
-        this._points = value;
+        this.points = value;
     }
 }

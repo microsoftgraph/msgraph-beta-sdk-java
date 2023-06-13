@@ -4,47 +4,47 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The user experience analytics device performance entity contains device performance details.
+ */
 public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity implements Parsable {
     /** The number of app crashes for the device. Valid values -2147483648 to 2147483647 */
-    private Integer _appCrashCount;
+    private Integer appCrashCount;
     /** The number of app hangs for the device. Valid values -2147483648 to 2147483647 */
-    private Integer _appHangCount;
+    private Integer appHangCount;
     /** The number of distinct app crashes for the device. Valid values -2147483648 to 2147483647 */
-    private Integer _crashedAppCount;
+    private Integer crashedAppCount;
     /** The app health score of the device. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _deviceAppHealthScore;
-    /** The overall app health status of the device. */
-    private String _deviceAppHealthStatus;
+    private Double deviceAppHealthScore;
     /** The name of the device. */
-    private String _deviceDisplayName;
+    private String deviceDisplayName;
     /** The id of the device. */
-    private String _deviceId;
+    private String deviceId;
     /** The manufacturer name of the device. */
-    private String _deviceManufacturer;
+    private String deviceManufacturer;
     /** The model name of the device. */
-    private String _deviceModel;
+    private String deviceModel;
     /** The healthStatus property */
-    private UserExperienceAnalyticsHealthState _healthStatus;
+    private UserExperienceAnalyticsHealthState healthStatus;
     /** The mean time to failure for the device in minutes. Valid values -2147483648 to 2147483647 */
-    private Integer _meanTimeToFailureInMinutes;
+    private Integer meanTimeToFailureInMinutes;
     /** The date and time when the statistics were last computed. */
-    private OffsetDateTime _processedDateTime;
+    private OffsetDateTime processedDateTime;
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthDevicePerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsAppHealthDevicePerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsAppHealthDevicePerformance() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthDevicePerformance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthDevicePerformance
+     * @return a userExperienceAnalyticsAppHealthDevicePerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthDevicePerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @javax.annotation.Nullable
     public Integer getAppCrashCount() {
-        return this._appCrashCount;
+        return this.appCrashCount;
     }
     /**
      * Gets the appHangCount property value. The number of app hangs for the device. Valid values -2147483648 to 2147483647
@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @javax.annotation.Nullable
     public Integer getAppHangCount() {
-        return this._appHangCount;
+        return this.appHangCount;
     }
     /**
      * Gets the crashedAppCount property value. The number of distinct app crashes for the device. Valid values -2147483648 to 2147483647
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @javax.annotation.Nullable
     public Integer getCrashedAppCount() {
-        return this._crashedAppCount;
+        return this.crashedAppCount;
     }
     /**
      * Gets the deviceAppHealthScore property value. The app health score of the device. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -81,15 +81,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @javax.annotation.Nullable
     public Double getDeviceAppHealthScore() {
-        return this._deviceAppHealthScore;
-    }
-    /**
-     * Gets the deviceAppHealthStatus property value. The overall app health status of the device.
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getDeviceAppHealthStatus() {
-        return this._deviceAppHealthStatus;
+        return this.deviceAppHealthScore;
     }
     /**
      * Gets the deviceDisplayName property value. The name of the device.
@@ -97,7 +89,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @javax.annotation.Nullable
     public String getDeviceDisplayName() {
-        return this._deviceDisplayName;
+        return this.deviceDisplayName;
     }
     /**
      * Gets the deviceId property value. The id of the device.
@@ -105,7 +97,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the deviceManufacturer property value. The manufacturer name of the device.
@@ -113,7 +105,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @javax.annotation.Nullable
     public String getDeviceManufacturer() {
-        return this._deviceManufacturer;
+        return this.deviceManufacturer;
     }
     /**
      * Gets the deviceModel property value. The model name of the device.
@@ -121,29 +113,27 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @javax.annotation.Nullable
     public String getDeviceModel() {
-        return this._deviceModel;
+        return this.deviceModel;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsAppHealthDevicePerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appCrashCount", (n) -> { currentObject.setAppCrashCount(n.getIntegerValue()); });
-            this.put("appHangCount", (n) -> { currentObject.setAppHangCount(n.getIntegerValue()); });
-            this.put("crashedAppCount", (n) -> { currentObject.setCrashedAppCount(n.getIntegerValue()); });
-            this.put("deviceAppHealthScore", (n) -> { currentObject.setDeviceAppHealthScore(n.getDoubleValue()); });
-            this.put("deviceAppHealthStatus", (n) -> { currentObject.setDeviceAppHealthStatus(n.getStringValue()); });
-            this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceManufacturer", (n) -> { currentObject.setDeviceManufacturer(n.getStringValue()); });
-            this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
-            this.put("healthStatus", (n) -> { currentObject.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
-            this.put("meanTimeToFailureInMinutes", (n) -> { currentObject.setMeanTimeToFailureInMinutes(n.getIntegerValue()); });
-            this.put("processedDateTime", (n) -> { currentObject.setProcessedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appCrashCount", (n) -> { this.setAppCrashCount(n.getIntegerValue()); });
+        deserializerMap.put("appHangCount", (n) -> { this.setAppHangCount(n.getIntegerValue()); });
+        deserializerMap.put("crashedAppCount", (n) -> { this.setCrashedAppCount(n.getIntegerValue()); });
+        deserializerMap.put("deviceAppHealthScore", (n) -> { this.setDeviceAppHealthScore(n.getDoubleValue()); });
+        deserializerMap.put("deviceDisplayName", (n) -> { this.setDeviceDisplayName(n.getStringValue()); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceManufacturer", (n) -> { this.setDeviceManufacturer(n.getStringValue()); });
+        deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
+        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
+        deserializerMap.put("meanTimeToFailureInMinutes", (n) -> { this.setMeanTimeToFailureInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("processedDateTime", (n) -> { this.setProcessedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
@@ -151,7 +141,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
-        return this._healthStatus;
+        return this.healthStatus;
     }
     /**
      * Gets the meanTimeToFailureInMinutes property value. The mean time to failure for the device in minutes. Valid values -2147483648 to 2147483647
@@ -159,7 +149,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @javax.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {
-        return this._meanTimeToFailureInMinutes;
+        return this.meanTimeToFailureInMinutes;
     }
     /**
      * Gets the processedDateTime property value. The date and time when the statistics were last computed.
@@ -167,13 +157,14 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      */
     @javax.annotation.Nullable
     public OffsetDateTime getProcessedDateTime() {
-        return this._processedDateTime;
+        return this.processedDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -181,7 +172,6 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
         writer.writeIntegerValue("appHangCount", this.getAppHangCount());
         writer.writeIntegerValue("crashedAppCount", this.getCrashedAppCount());
         writer.writeDoubleValue("deviceAppHealthScore", this.getDeviceAppHealthScore());
-        writer.writeStringValue("deviceAppHealthStatus", this.getDeviceAppHealthStatus());
         writer.writeStringValue("deviceDisplayName", this.getDeviceDisplayName());
         writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeStringValue("deviceManufacturer", this.getDeviceManufacturer());
@@ -195,95 +185,98 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
      * @param value Value to set for the appCrashCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppCrashCount(@javax.annotation.Nullable final Integer value) {
-        this._appCrashCount = value;
+        this.appCrashCount = value;
     }
     /**
      * Sets the appHangCount property value. The number of app hangs for the device. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appHangCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppHangCount(@javax.annotation.Nullable final Integer value) {
-        this._appHangCount = value;
+        this.appHangCount = value;
     }
     /**
      * Sets the crashedAppCount property value. The number of distinct app crashes for the device. Valid values -2147483648 to 2147483647
      * @param value Value to set for the crashedAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCrashedAppCount(@javax.annotation.Nullable final Integer value) {
-        this._crashedAppCount = value;
+        this.crashedAppCount = value;
     }
     /**
      * Sets the deviceAppHealthScore property value. The app health score of the device. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the deviceAppHealthScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceAppHealthScore(@javax.annotation.Nullable final Double value) {
-        this._deviceAppHealthScore = value;
-    }
-    /**
-     * Sets the deviceAppHealthStatus property value. The overall app health status of the device.
-     * @param value Value to set for the deviceAppHealthStatus property.
-     * @return a void
-     */
-    public void setDeviceAppHealthStatus(@javax.annotation.Nullable final String value) {
-        this._deviceAppHealthStatus = value;
+        this.deviceAppHealthScore = value;
     }
     /**
      * Sets the deviceDisplayName property value. The name of the device.
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
-        this._deviceDisplayName = value;
+        this.deviceDisplayName = value;
     }
     /**
      * Sets the deviceId property value. The id of the device.
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the deviceManufacturer property value. The manufacturer name of the device.
      * @param value Value to set for the deviceManufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManufacturer(@javax.annotation.Nullable final String value) {
-        this._deviceManufacturer = value;
+        this.deviceManufacturer = value;
     }
     /**
      * Sets the deviceModel property value. The model name of the device.
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
-        this._deviceModel = value;
+        this.deviceModel = value;
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
-        this._healthStatus = value;
+        this.healthStatus = value;
     }
     /**
      * Sets the meanTimeToFailureInMinutes property value. The mean time to failure for the device in minutes. Valid values -2147483648 to 2147483647
      * @param value Value to set for the meanTimeToFailureInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeanTimeToFailureInMinutes(@javax.annotation.Nullable final Integer value) {
-        this._meanTimeToFailureInMinutes = value;
+        this.meanTimeToFailureInMinutes = value;
     }
     /**
      * Sets the processedDateTime property value. The date and time when the statistics were last computed.
      * @param value Value to set for the processedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._processedDateTime = value;
+        this.processedDateTime = value;
     }
 }

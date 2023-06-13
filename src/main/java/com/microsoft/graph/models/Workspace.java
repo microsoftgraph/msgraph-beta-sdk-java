@@ -3,34 +3,33 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class Workspace extends Place implements Parsable {
     /** Specifies the building name or building number that the workspace is in. */
-    private String _building;
+    private String building;
     /** Specifies the capacity of the workspace. */
-    private Integer _capacity;
+    private Integer capacity;
     /** Email address of the workspace. */
-    private String _emailAddress;
+    private String emailAddress;
     /** Specifies a descriptive label for the floor, for example, P. */
-    private String _floorLabel;
+    private String floorLabel;
     /** Specifies the floor number that the workspace is on. */
-    private Integer _floorNumber;
+    private Integer floorNumber;
     /** Specifies whether the workspace is wheelchair accessible. */
-    private Boolean _isWheelChairAccessible;
+    private Boolean isWheelChairAccessible;
     /** Specifies a descriptive label for the workspace, for example, a number or name. */
-    private String _label;
+    private String label;
     /** Specifies a nickname for the workspace, for example, 'quiet workspace'. */
-    private String _nickname;
+    private String nickname;
     /** Specifies additional features of the workspace, for example, details like the type of view or furniture type. */
-    private java.util.List<String> _tags;
+    private java.util.List<String> tags;
     /**
      * Instantiates a new workspace and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Workspace() {
         super();
         this.setOdataType("#microsoft.graph.workspace");
@@ -51,7 +50,7 @@ public class Workspace extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBuilding() {
-        return this._building;
+        return this.building;
     }
     /**
      * Gets the capacity property value. Specifies the capacity of the workspace.
@@ -59,7 +58,7 @@ public class Workspace extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getCapacity() {
-        return this._capacity;
+        return this.capacity;
     }
     /**
      * Gets the emailAddress property value. Email address of the workspace.
@@ -67,26 +66,25 @@ public class Workspace extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmailAddress() {
-        return this._emailAddress;
+        return this.emailAddress;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Workspace currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("building", (n) -> { currentObject.setBuilding(n.getStringValue()); });
-            this.put("capacity", (n) -> { currentObject.setCapacity(n.getIntegerValue()); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
-            this.put("floorLabel", (n) -> { currentObject.setFloorLabel(n.getStringValue()); });
-            this.put("floorNumber", (n) -> { currentObject.setFloorNumber(n.getIntegerValue()); });
-            this.put("isWheelChairAccessible", (n) -> { currentObject.setIsWheelChairAccessible(n.getBooleanValue()); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
-            this.put("nickname", (n) -> { currentObject.setNickname(n.getStringValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("building", (n) -> { this.setBuilding(n.getStringValue()); });
+        deserializerMap.put("capacity", (n) -> { this.setCapacity(n.getIntegerValue()); });
+        deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("floorLabel", (n) -> { this.setFloorLabel(n.getStringValue()); });
+        deserializerMap.put("floorNumber", (n) -> { this.setFloorNumber(n.getIntegerValue()); });
+        deserializerMap.put("isWheelChairAccessible", (n) -> { this.setIsWheelChairAccessible(n.getBooleanValue()); });
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
+        deserializerMap.put("nickname", (n) -> { this.setNickname(n.getStringValue()); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
@@ -94,7 +92,7 @@ public class Workspace extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFloorLabel() {
-        return this._floorLabel;
+        return this.floorLabel;
     }
     /**
      * Gets the floorNumber property value. Specifies the floor number that the workspace is on.
@@ -102,7 +100,7 @@ public class Workspace extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getFloorNumber() {
-        return this._floorNumber;
+        return this.floorNumber;
     }
     /**
      * Gets the isWheelChairAccessible property value. Specifies whether the workspace is wheelchair accessible.
@@ -110,7 +108,7 @@ public class Workspace extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsWheelChairAccessible() {
-        return this._isWheelChairAccessible;
+        return this.isWheelChairAccessible;
     }
     /**
      * Gets the label property value. Specifies a descriptive label for the workspace, for example, a number or name.
@@ -118,7 +116,7 @@ public class Workspace extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLabel() {
-        return this._label;
+        return this.label;
     }
     /**
      * Gets the nickname property value. Specifies a nickname for the workspace, for example, 'quiet workspace'.
@@ -126,7 +124,7 @@ public class Workspace extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNickname() {
-        return this._nickname;
+        return this.nickname;
     }
     /**
      * Gets the tags property value. Specifies additional features of the workspace, for example, details like the type of view or furniture type.
@@ -134,13 +132,14 @@ public class Workspace extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this._tags;
+        return this.tags;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,71 +158,80 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the building property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBuilding(@javax.annotation.Nullable final String value) {
-        this._building = value;
+        this.building = value;
     }
     /**
      * Sets the capacity property value. Specifies the capacity of the workspace.
      * @param value Value to set for the capacity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCapacity(@javax.annotation.Nullable final Integer value) {
-        this._capacity = value;
+        this.capacity = value;
     }
     /**
      * Sets the emailAddress property value. Email address of the workspace.
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
-        this._emailAddress = value;
+        this.emailAddress = value;
     }
     /**
      * Sets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
      * @param value Value to set for the floorLabel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFloorLabel(@javax.annotation.Nullable final String value) {
-        this._floorLabel = value;
+        this.floorLabel = value;
     }
     /**
      * Sets the floorNumber property value. Specifies the floor number that the workspace is on.
      * @param value Value to set for the floorNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFloorNumber(@javax.annotation.Nullable final Integer value) {
-        this._floorNumber = value;
+        this.floorNumber = value;
     }
     /**
      * Sets the isWheelChairAccessible property value. Specifies whether the workspace is wheelchair accessible.
      * @param value Value to set for the isWheelChairAccessible property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsWheelChairAccessible(@javax.annotation.Nullable final Boolean value) {
-        this._isWheelChairAccessible = value;
+        this.isWheelChairAccessible = value;
     }
     /**
      * Sets the label property value. Specifies a descriptive label for the workspace, for example, a number or name.
      * @param value Value to set for the label property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabel(@javax.annotation.Nullable final String value) {
-        this._label = value;
+        this.label = value;
     }
     /**
      * Sets the nickname property value. Specifies a nickname for the workspace, for example, 'quiet workspace'.
      * @param value Value to set for the nickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNickname(@javax.annotation.Nullable final String value) {
-        this._nickname = value;
+        this.nickname = value;
     }
     /**
      * Sets the tags property value. Specifies additional features of the workspace, for example, details like the type of view or furniture type.
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._tags = value;
+        this.tags = value;
     }
 }

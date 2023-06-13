@@ -4,30 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InboundSharedUserProfile implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The displayName property */
-    private String _displayName;
-    /** The homeTenantId property */
-    private String _homeTenantId;
+    private Map<String, Object> additionalData;
+    /** The name displayed in the address book for teh user at the time when the sharing record was created. Read-only. */
+    private String displayName;
+    /** The home tenant id of the external user. Read-only. */
+    private String homeTenantId;
     /** The OdataType property */
-    private String _odataType;
-    /** The userId property */
-    private String _userId;
-    /** The userPrincipalName property */
-    private String _userPrincipalName;
+    private String odataType;
+    /** The object id of the external user. Read-only. */
+    private String userId;
+    /** The user principal name (UPN) of the external user. Read-only. */
+    private String userPrincipalName;
     /**
      * Instantiates a new inboundSharedUserProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InboundSharedUserProfile() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.inboundSharedUserProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,38 +44,37 @@ public class InboundSharedUserProfile implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name displayed in the address book for teh user at the time when the sharing record was created. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InboundSharedUserProfile currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("homeTenantId", (n) -> { currentObject.setHomeTenantId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("homeTenantId", (n) -> { this.setHomeTenantId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the homeTenantId property value. The homeTenantId property
+     * Gets the homeTenantId property value. The home tenant id of the external user. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getHomeTenantId() {
-        return this._homeTenantId;
+        return this.homeTenantId;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -84,29 +82,30 @@ public class InboundSharedUserProfile implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. The object id of the external user. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
-     * Gets the userPrincipalName property value. The userPrincipalName property
+     * Gets the userPrincipalName property value. The user principal name (UPN) of the external user. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -121,47 +120,53 @@ public class InboundSharedUserProfile implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name displayed in the address book for teh user at the time when the sharing record was created. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
-     * Sets the homeTenantId property value. The homeTenantId property
+     * Sets the homeTenantId property value. The home tenant id of the external user. Read-only.
      * @param value Value to set for the homeTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeTenantId(@javax.annotation.Nullable final String value) {
-        this._homeTenantId = value;
+        this.homeTenantId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. The object id of the external user. Read-only.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
-     * Sets the userPrincipalName property value. The userPrincipalName property
+     * Sets the userPrincipalName property value. The user principal name (UPN) of the external user. Read-only.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsable {
     /** The display name of the AzureAD group that will be locked to this kiosk configuration */
-    private String _displayName;
+    private String displayName;
     /** The ID of the AzureAD group that will be locked to this kiosk configuration */
-    private String _groupId;
+    private String groupId;
     /**
      * Instantiates a new WindowsKioskAzureADGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskAzureADGroup() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskAzureADGroup");
@@ -36,19 +36,18 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsKioskAzureADGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupId property value. The ID of the AzureAD group that will be locked to this kiosk configuration
@@ -56,13 +55,14 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
      */
     @javax.annotation.Nullable
     public String getGroupId() {
-        return this._groupId;
+        return this.groupId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the groupId property value. The ID of the AzureAD group that will be locked to this kiosk configuration
      * @param value Value to set for the groupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupId(@javax.annotation.Nullable final String value) {
-        this._groupId = value;
+        this.groupId = value;
     }
 }

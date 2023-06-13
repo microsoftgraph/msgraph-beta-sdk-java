@@ -3,17 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OrganizationalBranding extends OrganizationalBrandingProperties implements Parsable {
     /** Add different branding based on a locale. */
-    private java.util.List<OrganizationalBrandingLocalization> _localizations;
+    private java.util.List<OrganizationalBrandingLocalization> localizations;
     /**
      * Instantiates a new OrganizationalBranding and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalBranding() {
         super();
         this.setOdataType("#microsoft.graph.organizationalBranding");
@@ -30,14 +30,13 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OrganizationalBranding currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("localizations", (n) -> { currentObject.setLocalizations(n.getCollectionOfObjectValues(OrganizationalBrandingLocalization::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("localizations", (n) -> { this.setLocalizations(n.getCollectionOfObjectValues(OrganizationalBrandingLocalization::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the localizations property value. Add different branding based on a locale.
@@ -45,13 +44,14 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      */
     @javax.annotation.Nullable
     public java.util.List<OrganizationalBrandingLocalization> getLocalizations() {
-        return this._localizations;
+        return this.localizations;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +62,8 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      * @param value Value to set for the localizations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalizations(@javax.annotation.Nullable final java.util.List<OrganizationalBrandingLocalization> value) {
-        this._localizations = value;
+        this.localizations = value;
     }
 }
