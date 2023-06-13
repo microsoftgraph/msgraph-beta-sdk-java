@@ -41,9 +41,7 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the User With Reference Request Builder.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserWithReferenceRequestBuilder extends BaseWithReferenceRequestBuilder<User, UserWithReferenceRequest, UserReferenceRequestBuilder> {
 
     /**

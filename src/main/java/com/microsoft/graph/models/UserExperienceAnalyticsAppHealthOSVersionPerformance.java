@@ -70,15 +70,6 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
 	@Nullable
     public Double osVersionAppHealthScore;
 
-    /**
-     * The Os Version App Health Status.
-     * The overall app health status of the OS version.
-     */
-    @SerializedName(value = "osVersionAppHealthStatus", alternate = {"OsVersionAppHealthStatus"})
-    @Expose
-	@Nullable
-    public String osVersionAppHealthStatus;
-
 
     /**
      * Sets the raw JSON object

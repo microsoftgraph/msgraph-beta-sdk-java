@@ -12,7 +12,9 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 
 /**
  * The class for the Cloud Pc Provisioning Policy Collection Response.
+ * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
  */
+@Deprecated
 public class CloudPcProvisioningPolicyCollectionResponse extends BaseCollectionResponse<CloudPcProvisioningPolicy> {
 
 }

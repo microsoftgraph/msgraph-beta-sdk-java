@@ -22,9 +22,7 @@ import com.microsoft.graph.requests.UserGetManagedAppDiagnosticStatusesCollectio
 
 /**
  * The class for the User Get Managed App Diagnostic Statuses Collection Page.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserGetManagedAppDiagnosticStatusesCollectionPage extends BaseCollectionPage<ManagedAppDiagnosticStatus, UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder> {
 
     /**

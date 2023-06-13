@@ -11,13 +11,10 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MimeContent;
 import com.microsoft.graph.models.MobileAppPublishingState;
-import com.microsoft.graph.models.MobileAppInstallSummary;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MobileAppAssignmentCollectionPage;
 import com.microsoft.graph.requests.MobileAppCategoryCollectionPage;
-import com.microsoft.graph.requests.MobileAppInstallStatusCollectionPage;
 import com.microsoft.graph.requests.MobileAppRelationshipCollectionPage;
-import com.microsoft.graph.requests.UserAppInstallStatusCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -222,24 +219,6 @@ public class MobileApp extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.MobileAppCategoryCollectionPage categories;
 
     /**
-     * The Device Statuses.
-     * The list of installation states for this mobile app.
-     */
-    @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.MobileAppInstallStatusCollectionPage deviceStatuses;
-
-    /**
-     * The Install Summary.
-     * Mobile App Install Summary.
-     */
-    @SerializedName(value = "installSummary", alternate = {"InstallSummary"})
-    @Expose
-	@Nullable
-    public MobileAppInstallSummary installSummary;
-
-    /**
      * The Relationships.
      * List of relationships for this mobile app.
      */
@@ -247,15 +226,6 @@ public class MobileApp extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.MobileAppRelationshipCollectionPage relationships;
-
-    /**
-     * The User Statuses.
-     * The list of installation states for this mobile app.
-     */
-    @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.UserAppInstallStatusCollectionPage userStatuses;
 
 
     /**
@@ -275,16 +245,8 @@ public class MobileApp extends Entity implements IJsonBackedObject {
             categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.MobileAppCategoryCollectionPage.class);
         }
 
-        if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), com.microsoft.graph.requests.MobileAppInstallStatusCollectionPage.class);
-        }
-
         if (json.has("relationships")) {
             relationships = serializer.deserializeObject(json.get("relationships"), com.microsoft.graph.requests.MobileAppRelationshipCollectionPage.class);
-        }
-
-        if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses"), com.microsoft.graph.requests.UserAppInstallStatusCollectionPage.class);
         }
     }
 }

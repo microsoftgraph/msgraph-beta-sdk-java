@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.B2xIdentityUserFlow;
+import com.microsoft.graph.models.OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp;
 import com.microsoft.graph.models.IdentityProviderBase;
 import java.util.Arrays;
 import java.util.EnumSet;

@@ -116,7 +116,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Tenant Restrictions.
-     * 
+     * Defines the partner-specific tenant restrictions configuration for your organization users accessing a partner organization using partner supplied idenities on your network or devices.
      */
     @SerializedName(value = "tenantRestrictions", alternate = {"TenantRestrictions"})
     @Expose

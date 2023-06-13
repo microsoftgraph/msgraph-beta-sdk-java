@@ -14,7 +14,6 @@ import com.microsoft.graph.models.Currency;
 import com.microsoft.graph.models.Customer;
 import com.microsoft.graph.models.PaymentTerm;
 import com.microsoft.graph.models.ShipmentMethod;
-import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.SalesInvoiceLineCollectionPage;
 
 
@@ -29,8 +28,21 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Sales Invoice.
  */
-public class SalesInvoice extends Entity implements IJsonBackedObject {
+public class SalesInvoice implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Billing Postal Address.
@@ -166,6 +178,15 @@ public class SalesInvoice extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String externalDocumentNumber;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName(value = "id", alternate = {"Id"})
+    @Expose
+	@Nullable
+    public java.util.UUID id;
 
     /**
      * The Invoice Date.

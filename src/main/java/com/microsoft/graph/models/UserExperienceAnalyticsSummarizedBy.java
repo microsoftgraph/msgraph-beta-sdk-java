@@ -36,6 +36,10 @@ public enum UserExperienceAnalyticsSummarizedBy
     */
     OPERATING_SYSTEM_VERSION_REGRESSION,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For UserExperienceAnalyticsSummarizedBy values that were not expected from the service
     */
     UNEXPECTED_VALUE

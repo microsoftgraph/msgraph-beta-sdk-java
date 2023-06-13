@@ -18,7 +18,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Cloud Pc Provisioning Policy Apply Config Request Builder.
+ * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
  */
+@Deprecated
 public class CloudPcProvisioningPolicyApplyConfigRequestBuilder extends BaseActionRequestBuilder<CloudPcProvisioningPolicy> {
 
     /**

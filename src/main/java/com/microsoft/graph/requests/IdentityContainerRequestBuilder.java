@@ -97,6 +97,26 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
         return new com.microsoft.graph.requests.AuthenticationEventListenerRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationEventListeners") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the AuthenticationEventsFlow collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuthenticationEventsFlowCollectionRequestBuilder authenticationEventsFlows() {
+        return new com.microsoft.graph.requests.AuthenticationEventsFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationEventsFlows"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AuthenticationEventsFlow item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuthenticationEventsFlowRequestBuilder authenticationEventsFlows(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuthenticationEventsFlowRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationEventsFlows") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the B2cIdentityUserFlow collection
      *
      * @return the collection request builder

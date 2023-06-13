@@ -40,7 +40,7 @@ public class DevicesFilter implements IJsonBackedObject {
 
     /**
      * The Mode.
-     * 
+     * Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.Not implemented yet
      */
     @SerializedName(value = "mode", alternate = {"Mode"})
     @Expose
@@ -49,7 +49,7 @@ public class DevicesFilter implements IJsonBackedObject {
 
     /**
      * The Rule.
-     * 
+     * Defines the rule to filter the devices. An example would be device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation' Not implemented yet
      */
     @SerializedName(value = "rule", alternate = {"Rule"})
     @Expose

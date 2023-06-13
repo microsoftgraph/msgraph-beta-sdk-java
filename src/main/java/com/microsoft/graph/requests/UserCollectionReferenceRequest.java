@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.identitygovernance.models.Workflow;
+import com.microsoft.graph.models.PrinterShare;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AttendeeBase;
@@ -51,9 +51,7 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 
 /**
  * The class for the User Collection Reference Request.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<User, UserWithReferenceRequest, UserReferenceRequestBuilder, UserWithReferenceRequestBuilder, UserCollectionResponse, UserCollectionWithReferencesPage, UserCollectionWithReferencesRequest> {
 
     /**

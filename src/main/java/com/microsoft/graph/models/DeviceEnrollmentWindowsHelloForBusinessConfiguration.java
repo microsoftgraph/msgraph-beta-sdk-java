@@ -37,6 +37,15 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     public Enablement enhancedBiometricsState;
 
     /**
+     * The Enhanced Sign In Security.
+     * Setting to configure Enahcned sign-in security. Default is enabled on one secure modality (face or fingerprint)
+     */
+    @SerializedName(value = "enhancedSignInSecurity", alternate = {"EnhancedSignInSecurity"})
+    @Expose
+	@Nullable
+    public Integer enhancedSignInSecurity;
+
+    /**
      * The Pin Expiration In Days.
      * Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
      */

@@ -18,9 +18,7 @@ import java.util.ArrayList;
 
 /**
  * The class for the User Export Personal Data Parameter Set.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserExportPersonalDataParameterSet {
     /**
      * The storage Location.

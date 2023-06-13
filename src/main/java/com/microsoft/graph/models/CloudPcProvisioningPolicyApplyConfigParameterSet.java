@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Cloud Pc Provisioning Policy Apply Config Parameter Set.
+ * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
  */
+@Deprecated
 public class CloudPcProvisioningPolicyApplyConfigParameterSet {
     /**
      * The cloud Pc Ids.

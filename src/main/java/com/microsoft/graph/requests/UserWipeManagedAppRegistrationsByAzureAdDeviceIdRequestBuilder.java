@@ -18,9 +18,7 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the User Wipe Managed App Registrations By Azure Ad Device Id Request Builder.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserWipeManagedAppRegistrationsByAzureAdDeviceIdRequestBuilder extends BaseActionRequestBuilder<User> {
 
     /**

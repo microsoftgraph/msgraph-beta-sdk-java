@@ -11,7 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AttributeMapping;
 import com.microsoft.graph.models.ObjectFlowTypes;
-import com.microsoft.graph.models.MetadataEntry;
+import com.microsoft.graph.models.ObjectMappingMetadataEntry;
 import com.microsoft.graph.models.Filter;
 
 
@@ -76,7 +76,7 @@ public class ObjectMapping implements IJsonBackedObject {
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
 	@Nullable
-    public java.util.List<MetadataEntry> metadata;
+    public java.util.List<ObjectMappingMetadataEntry> metadata;
 
     /**
      * The Name.

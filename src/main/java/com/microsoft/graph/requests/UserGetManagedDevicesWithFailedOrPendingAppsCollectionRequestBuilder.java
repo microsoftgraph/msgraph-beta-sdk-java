@@ -24,9 +24,7 @@ import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
 
 /**
  * The class for the User Get Managed Devices With Failed Or Pending Apps Collection Request Builder.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserGetManagedDevicesWithFailedOrPendingAppsCollectionRequestBuilder extends BaseFunctionCollectionRequestBuilder<ManagedDeviceSummarizedAppState, UserGetManagedDevicesWithFailedOrPendingAppsCollectionRequestBuilder, UserGetManagedDevicesWithFailedOrPendingAppsCollectionResponse, UserGetManagedDevicesWithFailedOrPendingAppsCollectionPage, UserGetManagedDevicesWithFailedOrPendingAppsCollectionRequest> {
 
     /**

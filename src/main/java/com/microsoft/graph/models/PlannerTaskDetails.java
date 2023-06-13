@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.PlannerChecklistItems;
+import com.microsoft.graph.models.PlannerTaskCompletionRequirementDetails;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.PlannerPreviewType;
 import com.microsoft.graph.models.PlannerExternalReferences;
@@ -37,6 +38,15 @@ public class PlannerTaskDetails extends PlannerDelta implements IJsonBackedObjec
     @Expose
 	@Nullable
     public PlannerChecklistItems checklist;
+
+    /**
+     * The Completion Requirements.
+     * Contains detailed information about requirements on the task.
+     */
+    @SerializedName(value = "completionRequirements", alternate = {"CompletionRequirements"})
+    @Expose
+	@Nullable
+    public PlannerTaskCompletionRequirementDetails completionRequirements;
 
     /**
      * The Description.

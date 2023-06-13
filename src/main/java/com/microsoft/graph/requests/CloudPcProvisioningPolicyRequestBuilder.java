@@ -21,7 +21,9 @@ import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignParameterSet;
 
 /**
  * The class for the Cloud Pc Provisioning Policy Request Builder.
+ * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
  */
+@Deprecated
 public class CloudPcProvisioningPolicyRequestBuilder extends BaseRequestBuilder<CloudPcProvisioningPolicy> {
 
     /**
@@ -82,7 +84,9 @@ public class CloudPcProvisioningPolicyRequestBuilder extends BaseRequestBuilder<
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
      */
+    @Deprecated
     @Nonnull
     public CloudPcProvisioningPolicyApplyRequestBuilder apply() {
         return new CloudPcProvisioningPolicyApplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.apply"), getClient(), null);
@@ -92,7 +96,9 @@ public class CloudPcProvisioningPolicyRequestBuilder extends BaseRequestBuilder<
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
      */
+    @Deprecated
     @Nonnull
     public CloudPcProvisioningPolicyAssignRequestBuilder assign(@Nonnull final CloudPcProvisioningPolicyAssignParameterSet parameters) {
         return new CloudPcProvisioningPolicyAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, parameters);

@@ -8,7 +8,6 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -22,8 +21,21 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Aged Accounts Payable.
  */
-public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
+public class AgedAccountsPayable implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Aged As Of Date.
@@ -60,6 +72,15 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.math.BigDecimal currentAmount;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName(value = "id", alternate = {"Id"})
+    @Expose
+	@Nullable
+    public java.util.UUID id;
 
     /**
      * The Name.
@@ -105,6 +126,15 @@ public class AgedAccountsPayable extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String periodLengthFilter;
+
+    /**
+     * The Vendor Id.
+     * 
+     */
+    @SerializedName(value = "vendorId", alternate = {"VendorId"})
+    @Expose
+	@Nullable
+    public String vendorId;
 
     /**
      * The Vendor Number.

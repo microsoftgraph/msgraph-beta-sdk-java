@@ -22,9 +22,7 @@ import com.microsoft.graph.requests.UserReminderViewCollectionResponse;
 
 /**
  * The class for the User Reminder View Collection Page.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserReminderViewCollectionPage extends BaseCollectionPage<Reminder, UserReminderViewCollectionRequestBuilder> {
 
     /**

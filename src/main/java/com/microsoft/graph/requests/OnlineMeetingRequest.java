@@ -31,6 +31,21 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
+     */
+    public OnlineMeetingRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient<?> client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends OnlineMeeting> responseClass) {
+        super(requestUrl, client, requestOptions, responseClass);
+    }
+
+    /**
+     * The request for the OnlineMeeting
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public OnlineMeetingRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnlineMeeting.class);

@@ -28,6 +28,10 @@ public enum UserExperienceAnalyticsInsightSeverity
     */
     ERROR,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For UserExperienceAnalyticsInsightSeverity values that were not expected from the service
     */
     UNEXPECTED_VALUE

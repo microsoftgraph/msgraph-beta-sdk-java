@@ -18,7 +18,9 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the Cloud Pc Provisioning Policy Apply Request.
+ * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
  */
+@Deprecated
 public class CloudPcProvisioningPolicyApplyRequest extends BaseRequest<Void> {
     /**
      * The request for this CloudPcProvisioningPolicyApply

@@ -258,18 +258,14 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     /**
      * The Approvers.
      * 
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
 	@Nullable
     public com.microsoft.graph.requests.UserCollectionPage approvers;
 
     /**
      * The Collaborators.
      * 
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
 	@Nullable
     public com.microsoft.graph.requests.UserCollectionPage collaborators;
 
