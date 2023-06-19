@@ -153,7 +153,7 @@ def fixAscNames = { name ->
 }
 
 compileJava {
-  options.compilerArgs << "-parameters" << '-Xmx8g'
+  options.compilerArgs << "-parameters"
   sourceCompatibility = '1.8'
   targetCompatibility = '1.8'
 }
