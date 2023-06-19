@@ -62,8 +62,8 @@ public class VirtualEventRegistrationRequestBuilder extends BaseRequestBuilder<V
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.VirtualEventRegistrationQuestionCollectionWithReferencesRequestBuilder questions() {
-        return new com.microsoft.graph.requests.VirtualEventRegistrationQuestionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("questions"), getClient(), null);
+    public com.microsoft.graph.requests.VirtualEventRegistrationQuestionCollectionRequestBuilder questions() {
+        return new com.microsoft.graph.requests.VirtualEventRegistrationQuestionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("questions"), getClient(), null);
     }
 
     /**
@@ -73,8 +73,8 @@ public class VirtualEventRegistrationRequestBuilder extends BaseRequestBuilder<V
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.VirtualEventRegistrationQuestionWithReferenceRequestBuilder questions(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.VirtualEventRegistrationQuestionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("questions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.VirtualEventRegistrationQuestionRequestBuilder questions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.VirtualEventRegistrationQuestionRequestBuilder(getRequestUrlWithAdditionalSegment("questions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the VirtualEventRegistrant collection
@@ -82,8 +82,8 @@ public class VirtualEventRegistrationRequestBuilder extends BaseRequestBuilder<V
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.VirtualEventRegistrantCollectionWithReferencesRequestBuilder registrants() {
-        return new com.microsoft.graph.requests.VirtualEventRegistrantCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registrants"), getClient(), null);
+    public com.microsoft.graph.requests.VirtualEventRegistrantCollectionRequestBuilder registrants() {
+        return new com.microsoft.graph.requests.VirtualEventRegistrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registrants"), getClient(), null);
     }
 
     /**
@@ -93,7 +93,7 @@ public class VirtualEventRegistrationRequestBuilder extends BaseRequestBuilder<V
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.VirtualEventRegistrantWithReferenceRequestBuilder registrants(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.VirtualEventRegistrantWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registrants") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.VirtualEventRegistrantRequestBuilder registrants(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.VirtualEventRegistrantRequestBuilder(getRequestUrlWithAdditionalSegment("registrants") + "/" + id, getClient(), null);
     }
 }

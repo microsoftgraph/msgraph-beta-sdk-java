@@ -50,6 +50,8 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
      * The Questions.
      * Registration questions.
      */
+    @SerializedName(value = "questions", alternate = {"Questions"})
+    @Expose
 	@Nullable
     public com.microsoft.graph.requests.VirtualEventRegistrationQuestionCollectionPage questions;
 
@@ -57,6 +59,8 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
      * The Registrants.
      * Information of attendees who have registered for the virtual event.
      */
+    @SerializedName(value = "registrants", alternate = {"Registrants"})
+    @Expose
 	@Nullable
     public com.microsoft.graph.requests.VirtualEventRegistrantCollectionPage registrants;
 
