@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DefaultMfaMethodType;
+import com.microsoft.graph.models.UserDefaultAuthenticationMethod;
 import com.microsoft.graph.models.SignInUserType;
 import com.microsoft.graph.models.Entity;
 
@@ -101,8 +102,17 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
     public Boolean isSsprRegistered;
 
     /**
-     * The Last Updated Date Time.
+     * The Is System Preferred Authentication Method Enabled.
      * 
+     */
+    @SerializedName(value = "isSystemPreferredAuthenticationMethodEnabled", alternate = {"IsSystemPreferredAuthenticationMethodEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isSystemPreferredAuthenticationMethodEnabled;
+
+    /**
+     * The Last Updated Date Time.
+     * The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
@@ -119,6 +129,15 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
     public java.util.List<String> methodsRegistered;
 
     /**
+     * The System Preferred Authentication Methods.
+     * 
+     */
+    @SerializedName(value = "systemPreferredAuthenticationMethods", alternate = {"SystemPreferredAuthenticationMethods"})
+    @Expose
+	@Nullable
+    public java.util.List<String> systemPreferredAuthenticationMethods;
+
+    /**
      * The User Display Name.
      * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
      */
@@ -126,6 +145,15 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
     @Expose
 	@Nullable
     public String userDisplayName;
+
+    /**
+     * The User Preferred Method For Secondary Authentication.
+     * 
+     */
+    @SerializedName(value = "userPreferredMethodForSecondaryAuthentication", alternate = {"UserPreferredMethodForSecondaryAuthentication"})
+    @Expose
+	@Nullable
+    public UserDefaultAuthenticationMethod userPreferredMethodForSecondaryAuthentication;
 
     /**
      * The User Principal Name.

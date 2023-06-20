@@ -6,8 +6,10 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyApplyRequest;
 import com.microsoft.graph.models.CloudPcProvisioningPolicy;
-
+import com.microsoft.graph.models.CloudPcPolicySettingType;
+import java.util.EnumSet;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.CloudPcProvisioningPolicyApplyParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +19,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Cloud Pc Provisioning Policy Apply Request Builder.
+ * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
  */
+@Deprecated
 public class CloudPcProvisioningPolicyApplyRequestBuilder extends BaseActionRequestBuilder<CloudPcProvisioningPolicy> {
 
     /**
@@ -29,6 +33,19 @@ public class CloudPcProvisioningPolicyApplyRequestBuilder extends BaseActionRequ
      */
     public CloudPcProvisioningPolicyApplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
+    }
+    private CloudPcProvisioningPolicyApplyParameterSet body;
+    /**
+     * The request builder for this CloudPcProvisioningPolicyApply
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param parameters     the parameters for the service method
+     */
+    public CloudPcProvisioningPolicyApplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CloudPcProvisioningPolicyApplyParameterSet parameters) {
+        super(requestUrl, client, requestOptions);
+        this.body = parameters;
     }
 
     /**
@@ -54,6 +71,7 @@ public class CloudPcProvisioningPolicyApplyRequestBuilder extends BaseActionRequ
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        request.body = this.body;
         return request;
     }
 }

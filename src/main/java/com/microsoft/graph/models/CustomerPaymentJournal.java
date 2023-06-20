@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Account;
-import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CustomerPaymentCollectionPage;
 
 
@@ -25,8 +24,21 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Customer Payment Journal.
  */
-public class CustomerPaymentJournal extends Entity implements IJsonBackedObject {
+public class CustomerPaymentJournal implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Balancing Account Id.
@@ -63,6 +75,15 @@ public class CustomerPaymentJournal extends Entity implements IJsonBackedObject 
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName(value = "id", alternate = {"Id"})
+    @Expose
+	@Nullable
+    public java.util.UUID id;
 
     /**
      * The Last Modified Date Time.

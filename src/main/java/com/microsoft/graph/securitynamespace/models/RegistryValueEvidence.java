@@ -26,6 +26,15 @@ public class RegistryValueEvidence extends AlertEvidence implements IJsonBackedO
 
 
     /**
+     * The Mde Device Id.
+     * 
+     */
+    @SerializedName(value = "mdeDeviceId", alternate = {"MdeDeviceId"})
+    @Expose
+	@Nullable
+    public String mdeDeviceId;
+
+    /**
      * The Registry Hive.
      * Registry hive of the key that the recorded action was applied to.
      */

@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CloudPcProvisioningPolicy;
+import com.microsoft.graph.models.CloudPcPolicySettingType;
+import java.util.EnumSet;
 import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +23,9 @@ import com.microsoft.graph.http.HttpMethod;
 
 /**
  * The class for the Cloud Pc Provisioning Policy Request.
+ * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
  */
+@Deprecated
 public class CloudPcProvisioningPolicyRequest extends BaseRequest<CloudPcProvisioningPolicy> {
 	
     /**

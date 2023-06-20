@@ -11,8 +11,6 @@ import com.microsoft.graph.models.ManagedIOSLobApp;
 import com.microsoft.graph.models.MobileAppAssignment;
 import com.microsoft.graph.models.MobileAppRelationship;
 import com.microsoft.graph.models.HasPayloadLinkResultItem;
-import com.microsoft.graph.models.MobileAppRelationshipState;
-import com.microsoft.graph.models.MobileApp;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -85,9 +85,7 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the User.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class User extends DirectoryObject implements IJsonBackedObject {
 
 
@@ -363,7 +361,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Management Restricted.
-     * 
+     * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.
      */
     @SerializedName(value = "isManagementRestricted", alternate = {"IsManagementRestricted"})
     @Expose
@@ -435,7 +433,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mobile Phone.
-     * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
      */
     @SerializedName(value = "mobilePhone", alternate = {"MobilePhone"})
     @Expose

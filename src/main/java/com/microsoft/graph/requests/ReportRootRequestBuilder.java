@@ -169,6 +169,26 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
 
 
     /**
+     *  Gets a request builder for the AppCredentialSignInActivity collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AppCredentialSignInActivityCollectionRequestBuilder appCredentialSignInActivities() {
+        return new com.microsoft.graph.requests.AppCredentialSignInActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appCredentialSignInActivities"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AppCredentialSignInActivity item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AppCredentialSignInActivityRequestBuilder appCredentialSignInActivities(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AppCredentialSignInActivityRequestBuilder(getRequestUrlWithAdditionalSegment("appCredentialSignInActivities") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the ApplicationSignInDetailedSummary collection
      *
      * @return the collection request builder
@@ -217,6 +237,26 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     @Nonnull
     public com.microsoft.graph.requests.CredentialUserRegistrationDetailsRequestBuilder credentialUserRegistrationDetails(@Nonnull final String id) {
         return new com.microsoft.graph.requests.CredentialUserRegistrationDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationDetails") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ServicePrincipalSignInActivity collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ServicePrincipalSignInActivityCollectionRequestBuilder servicePrincipalSignInActivities() {
+        return new com.microsoft.graph.requests.ServicePrincipalSignInActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("servicePrincipalSignInActivities"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ServicePrincipalSignInActivity item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ServicePrincipalSignInActivityRequestBuilder servicePrincipalSignInActivities(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServicePrincipalSignInActivityRequestBuilder(getRequestUrlWithAdditionalSegment("servicePrincipalSignInActivities") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserCredentialUsageDetails collection

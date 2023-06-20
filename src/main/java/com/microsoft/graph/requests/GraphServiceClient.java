@@ -200,9 +200,7 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * Gets the collection of Users objects
      *
      * @return the request builder for the collection of Users objects
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
     @Nonnull
     public com.microsoft.graph.requests.UserCollectionRequestBuilder users() {
         return new com.microsoft.graph.requests.UserCollectionRequestBuilder(getServiceRoot() + "/users", this, null);
@@ -213,9 +211,7 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      *
      * @param id the id of the Users to retrieve
      * @return the request builder for the Users object
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
     @Nonnull
     public com.microsoft.graph.requests.UserRequestBuilder users(@Nonnull final String id) {
         return new com.microsoft.graph.requests.UserRequestBuilder(getServiceRoot() + "/users/" + id, this, null);
@@ -1932,16 +1928,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the OrganizationalBranding
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder branding() {
-        return new com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder(getServiceRoot() + "/branding", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the Directory
      */
     @Nonnull
@@ -1953,9 +1939,7 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * Gets the GraphServiceRequestBuilder
      *
      * @return the User
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
     @Nonnull
     public com.microsoft.graph.requests.UserRequestBuilder me() {
         return new com.microsoft.graph.requests.UserRequestBuilder(getServiceRoot() + "/me", this, null);
@@ -2009,6 +1993,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public com.microsoft.graph.requests.DriveRequestBuilder drive() {
         return new com.microsoft.graph.requests.DriveRequestBuilder(getServiceRoot() + "/drive", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the EmployeeExperience
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EmployeeExperienceRequestBuilder employeeExperience() {
+        return new com.microsoft.graph.requests.EmployeeExperienceRequestBuilder(getServiceRoot() + "/employeeExperience", this, null);
     }
 
     /**
@@ -2144,10 +2138,10 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the EmployeeExperience
+     * @return the NetworkAccessRoot
      */
     @Nonnull
-    public com.microsoft.graph.requests.EmployeeExperienceRequestBuilder employeeExperience() {
-        return new com.microsoft.graph.requests.EmployeeExperienceRequestBuilder(getServiceRoot() + "/employeeExperience", this, null);
+    public com.microsoft.graph.networkaccess.requests.NetworkAccessRootRequestBuilder networkAccess() {
+        return new com.microsoft.graph.networkaccess.requests.NetworkAccessRootRequestBuilder(getServiceRoot() + "/networkAccess", this, null);
     }
 }

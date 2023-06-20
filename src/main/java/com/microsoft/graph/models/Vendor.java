@@ -13,7 +13,6 @@ import com.microsoft.graph.models.PostalAddressType;
 import com.microsoft.graph.models.Currency;
 import com.microsoft.graph.models.PaymentMethod;
 import com.microsoft.graph.models.PaymentTerm;
-import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PictureCollectionPage;
 
 
@@ -28,8 +27,21 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Vendor.
  */
-public class Vendor extends Entity implements IJsonBackedObject {
+public class Vendor implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Address.
@@ -93,6 +105,15 @@ public class Vendor extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String email;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName(value = "id", alternate = {"Id"})
+    @Expose
+	@Nullable
+    public java.util.UUID id;
 
     /**
      * The Last Modified Date Time.

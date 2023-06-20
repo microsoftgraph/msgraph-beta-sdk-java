@@ -99,7 +99,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Summary.
-     * 
+     * Contains summary information about the channel, including number of guests, members, owners, and an indicator for members from other tenants. The summary property will only be returned if it is specified in the $select clause of the Get channel method.
      */
     @SerializedName(value = "summary", alternate = {"Summary"})
     @Expose

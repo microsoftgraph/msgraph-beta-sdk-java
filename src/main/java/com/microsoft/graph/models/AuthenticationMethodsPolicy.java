@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AuthenticationMethodsPolicyMigrationState;
 import com.microsoft.graph.models.RegistrationEnforcement;
+import com.microsoft.graph.models.ReportSuspiciousActivitySettings;
 import com.microsoft.graph.models.SystemCredentialPreferences;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionPage;
@@ -92,6 +93,15 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public RegistrationEnforcement registrationEnforcement;
+
+    /**
+     * The Report Suspicious Activity Settings.
+     * Enable users to report unexpected voice call or phone app notification multi-factor authentication prompts as suspicious.
+     */
+    @SerializedName(value = "reportSuspiciousActivitySettings", alternate = {"ReportSuspiciousActivitySettings"})
+    @Expose
+	@Nullable
+    public ReportSuspiciousActivitySettings reportSuspiciousActivitySettings;
 
     /**
      * The System Credential Preferences.

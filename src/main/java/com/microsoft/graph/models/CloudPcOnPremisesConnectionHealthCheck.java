@@ -49,6 +49,15 @@ public class CloudPcOnPremisesConnectionHealthCheck implements IJsonBackedObject
     public String additionalDetails;
 
     /**
+     * The Correlation Id.
+     * The unique identifier of the health check item-related activities. This identifier can be useful in troubleshooting.
+     */
+    @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
+    @Expose
+	@Nullable
+    public String correlationId;
+
+    /**
      * The Display Name.
      * The display name for this health check item.
      */

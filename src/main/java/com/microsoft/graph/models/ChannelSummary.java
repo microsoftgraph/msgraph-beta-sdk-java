@@ -39,7 +39,7 @@ public class ChannelSummary implements IJsonBackedObject {
 
     /**
      * The Guests Count.
-     * 
+     * Count of guests in a channel.
      */
     @SerializedName(value = "guestsCount", alternate = {"GuestsCount"})
     @Expose
@@ -48,7 +48,7 @@ public class ChannelSummary implements IJsonBackedObject {
 
     /**
      * The Has Members From Other Tenants.
-     * 
+     * Indicates whether external members are included on the channel.
      */
     @SerializedName(value = "hasMembersFromOtherTenants", alternate = {"HasMembersFromOtherTenants"})
     @Expose
@@ -57,7 +57,7 @@ public class ChannelSummary implements IJsonBackedObject {
 
     /**
      * The Members Count.
-     * 
+     * Count of members in a channel.
      */
     @SerializedName(value = "membersCount", alternate = {"MembersCount"})
     @Expose
@@ -66,7 +66,7 @@ public class ChannelSummary implements IJsonBackedObject {
 
     /**
      * The Owners Count.
-     * 
+     * Count of owners in a channel.
      */
     @SerializedName(value = "ownersCount", alternate = {"OwnersCount"})
     @Expose

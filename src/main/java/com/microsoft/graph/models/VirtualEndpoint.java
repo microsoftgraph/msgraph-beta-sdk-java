@@ -14,6 +14,7 @@ import com.microsoft.graph.models.CloudPcOrganizationSettings;
 import com.microsoft.graph.models.CloudPcReports;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPcAuditEventCollectionPage;
+import com.microsoft.graph.requests.CloudPcBulkActionCollectionPage;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionPage;
@@ -49,6 +50,15 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.CloudPcAuditEventCollectionPage auditEvents;
+
+    /**
+     * The Bulk Actions.
+     * 
+     */
+    @SerializedName(value = "bulkActions", alternate = {"BulkActions"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CloudPcBulkActionCollectionPage bulkActions;
 
     /**
      * The Cloud PCs.
@@ -116,7 +126,9 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     /**
      * The Provisioning Policies.
      * Cloud PC provisioning policy.
+     * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
      */
+    @Deprecated
     @SerializedName(value = "provisioningPolicies", alternate = {"ProvisioningPolicies"})
     @Expose
 	@Nullable
@@ -188,6 +200,10 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
         if (json.has("auditEvents")) {
             auditEvents = serializer.deserializeObject(json.get("auditEvents"), com.microsoft.graph.requests.CloudPcAuditEventCollectionPage.class);
+        }
+
+        if (json.has("bulkActions")) {
+            bulkActions = serializer.deserializeObject(json.get("bulkActions"), com.microsoft.graph.requests.CloudPcBulkActionCollectionPage.class);
         }
 
         if (json.has("cloudPCs")) {

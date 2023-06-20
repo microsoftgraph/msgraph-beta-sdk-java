@@ -28,7 +28,7 @@ public class CrossTenantAccessPolicyTenantRestrictions extends CrossTenantAccess
 
     /**
      * The Devices.
-     * 
+     * Defines the rule for filtering devices and whether devices satisfying the rule should be allowed or blocked. Not implemented.
      */
     @SerializedName(value = "devices", alternate = {"Devices"})
     @Expose

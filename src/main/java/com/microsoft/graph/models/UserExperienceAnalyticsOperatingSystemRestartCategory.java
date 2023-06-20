@@ -48,6 +48,10 @@ public enum UserExperienceAnalyticsOperatingSystemRestartCategory
     */
     UPDATE,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For UserExperienceAnalyticsOperatingSystemRestartCategory values that were not expected from the service
     */
     UNEXPECTED_VALUE

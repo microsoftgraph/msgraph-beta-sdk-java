@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.UserDefaultAuthenticationMethodType;
 
 
 import com.google.gson.JsonObject;
@@ -45,6 +46,15 @@ public class SignInPreferences implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean isSystemPreferredAuthenticationMethodEnabled;
+
+    /**
+     * The User Preferred Method For Secondary Authentication.
+     * The default second-factor method used by the user when signing in. If a user is enabled for system-preferred authentication, then this value is ignored except for a few scenarios where a user is authenticating via NPS extension or ADFS adapter. Possible values are push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, and unknownFutureValue
+     */
+    @SerializedName(value = "userPreferredMethodForSecondaryAuthentication", alternate = {"UserPreferredMethodForSecondaryAuthentication"})
+    @Expose
+	@Nullable
+    public UserDefaultAuthenticationMethodType userPreferredMethodForSecondaryAuthentication;
 
 
     /**

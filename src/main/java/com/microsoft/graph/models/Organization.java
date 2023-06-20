@@ -139,6 +139,15 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<String> marketingNotificationEmails;
 
     /**
+     * The On Premises Last Password Sync Date Time.
+     * The last time a password sync request was received for the tenant.
+     */
+    @SerializedName(value = "onPremisesLastPasswordSyncDateTime", alternate = {"OnPremisesLastPasswordSyncDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime onPremisesLastPasswordSyncDateTime;
+
+    /**
      * The On Premises Last Sync Date Time.
      * The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */

@@ -24,6 +24,10 @@ public enum LifecycleWorkflowCategory
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * mover
+    */
+    MOVER,
+    /**
     * For LifecycleWorkflowCategory values that were not expected from the service
     */
     UNEXPECTED_VALUE

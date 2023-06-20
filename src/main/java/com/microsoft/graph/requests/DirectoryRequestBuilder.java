@@ -136,6 +136,16 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
     public com.microsoft.graph.requests.AttributeSetRequestBuilder attributeSets(@Nonnull final String id) {
         return new com.microsoft.graph.requests.AttributeSetRequestBuilder(getRequestUrlWithAdditionalSegment("attributeSets") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for CertificateAuthorityPath
+     *
+     * @return the CertificateAuthorityPathRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CertificateAuthorityPathRequestBuilder certificateAuthorities() {
+        return new com.microsoft.graph.requests.CertificateAuthorityPathRequestBuilder(getRequestUrlWithAdditionalSegment("certificateAuthorities"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the CustomSecurityAttributeDefinition collection
      *
@@ -395,6 +405,26 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
     @Nonnull
     public com.microsoft.graph.requests.SharedEmailDomainRequestBuilder sharedEmailDomains(@Nonnull final String id) {
         return new com.microsoft.graph.requests.SharedEmailDomainRequestBuilder(getRequestUrlWithAdditionalSegment("sharedEmailDomains") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CompanySubscription collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CompanySubscriptionCollectionRequestBuilder subscriptions() {
+        return new com.microsoft.graph.requests.CompanySubscriptionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CompanySubscription item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CompanySubscriptionRequestBuilder subscriptions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CompanySubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the FeatureRolloutPolicy collection

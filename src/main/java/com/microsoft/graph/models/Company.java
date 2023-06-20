@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccountCollectionPage;
 import com.microsoft.graph.requests.AgedAccountsPayableCollectionPage;
 import com.microsoft.graph.requests.AgedAccountsReceivableCollectionPage;
@@ -58,8 +57,21 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Company.
  */
-public class Company extends Entity implements IJsonBackedObject {
+public class Company implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Business Profile Id.
@@ -78,6 +90,15 @@ public class Company extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName(value = "id", alternate = {"Id"})
+    @Expose
+	@Nullable
+    public java.util.UUID id;
 
     /**
      * The Name.

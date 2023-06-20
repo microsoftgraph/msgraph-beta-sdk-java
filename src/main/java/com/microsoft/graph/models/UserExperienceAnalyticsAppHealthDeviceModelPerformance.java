@@ -80,15 +80,6 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
 	@Nullable
     public Double modelAppHealthScore;
 
-    /**
-     * The Model App Health Status.
-     * The overall app health status of the device model.
-     */
-    @SerializedName(value = "modelAppHealthStatus", alternate = {"ModelAppHealthStatus"})
-    @Expose
-	@Nullable
-    public String modelAppHealthStatus;
-
 
     /**
      * Sets the raw JSON object

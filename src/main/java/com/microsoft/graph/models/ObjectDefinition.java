@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AttributeDefinition;
-import com.microsoft.graph.models.MetadataEntry;
+import com.microsoft.graph.models.ObjectDefinitionMetadataEntry;
 
 
 import com.google.gson.JsonObject;
@@ -42,7 +42,7 @@ public class ObjectDefinition implements IJsonBackedObject {
 
     /**
      * The Attributes.
-     * 
+     * Defines attributes of the object.
      */
     @SerializedName(value = "attributes", alternate = {"Attributes"})
     @Expose
@@ -51,16 +51,16 @@ public class ObjectDefinition implements IJsonBackedObject {
 
     /**
      * The Metadata.
-     * 
+     * Metadata for the given object.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
 	@Nullable
-    public java.util.List<MetadataEntry> metadata;
+    public java.util.List<ObjectDefinitionMetadataEntry> metadata;
 
     /**
      * The Name.
-     * 
+     * Name of the object. Must be unique within a directory definition. Not nullable.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -69,7 +69,7 @@ public class ObjectDefinition implements IJsonBackedObject {
 
     /**
      * The Supported Apis.
-     * 
+     * The API that the provisioning service queries to retrieve data for synchronization.
      */
     @SerializedName(value = "supportedApis", alternate = {"SupportedApis"})
     @Expose

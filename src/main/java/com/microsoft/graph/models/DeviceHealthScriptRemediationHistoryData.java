@@ -47,6 +47,15 @@ public class DeviceHealthScriptRemediationHistoryData implements IJsonBackedObje
     public com.microsoft.graph.core.DateOnly date;
 
     /**
+     * The Detect Failed Device Count.
+     * The number of devices for which the detection script found an issue.
+     */
+    @SerializedName(value = "detectFailedDeviceCount", alternate = {"DetectFailedDeviceCount"})
+    @Expose
+	@Nullable
+    public Integer detectFailedDeviceCount;
+
+    /**
      * The No Issue Device Count.
      * The number of devices that were found to have no issue by the device health script.
      */

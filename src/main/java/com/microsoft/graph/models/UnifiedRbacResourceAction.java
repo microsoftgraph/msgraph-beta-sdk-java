@@ -64,6 +64,15 @@ public class UnifiedRbacResourceAction extends Entity implements IJsonBackedObje
     public Boolean isAuthenticationContextSettable;
 
     /**
+     * The Is Privileged.
+     * 
+     */
+    @SerializedName(value = "isPrivileged", alternate = {"IsPrivileged"})
+    @Expose
+	@Nullable
+    public Boolean isPrivileged;
+
+    /**
      * The Name.
      * Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq).
      */

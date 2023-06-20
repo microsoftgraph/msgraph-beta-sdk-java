@@ -29,7 +29,7 @@ public class Approval extends Entity implements IJsonBackedObject {
 
     /**
      * The Steps.
-     * 
+     * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      */
     @SerializedName(value = "steps", alternate = {"Steps"})
     @Expose

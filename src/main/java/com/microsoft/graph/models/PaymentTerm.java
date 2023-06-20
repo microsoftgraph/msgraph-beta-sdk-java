@@ -8,7 +8,6 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -22,8 +21,21 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Payment Term.
  */
-public class PaymentTerm extends Entity implements IJsonBackedObject {
+public class PaymentTerm implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Calculate Discount On Credit Memos.
@@ -78,6 +90,15 @@ public class PaymentTerm extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String dueDateCalculation;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName(value = "id", alternate = {"Id"})
+    @Expose
+	@Nullable
+    public java.util.UUID id;
 
     /**
      * The Last Modified Date Time.
