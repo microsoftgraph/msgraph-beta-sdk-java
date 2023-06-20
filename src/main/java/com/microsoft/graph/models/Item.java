@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ItemCategory;
-import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PictureCollectionPage;
 
 
@@ -25,8 +24,21 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Item.
  */
-public class Item extends Entity implements IJsonBackedObject {
+public class Item implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Base Unit Of Measure Id.
@@ -63,6 +75,15 @@ public class Item extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String gtin;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName(value = "id", alternate = {"Id"})
+    @Expose
+	@Nullable
+    public java.util.UUID id;
 
     /**
      * The Inventory.

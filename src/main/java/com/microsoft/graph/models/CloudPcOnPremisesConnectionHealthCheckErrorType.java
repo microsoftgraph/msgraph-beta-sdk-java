@@ -216,6 +216,14 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     PERMISSION_CHECK_NO_RESOURCE_GROUP_NETWORK_CONTRIBUTOR_ROLE,
     /**
+    * permission Check No Windows365Network User Role
+    */
+    PERMISSION_CHECK_NO_WINDOWS365_NETWORK_USER_ROLE,
+    /**
+    * permission Check No Windows365Network Interface Contributor Role
+    */
+    PERMISSION_CHECK_NO_WINDOWS365_NETWORK_INTERFACE_CONTRIBUTOR_ROLE,
+    /**
     * permission Check Transient Service Error
     */
     PERMISSION_CHECK_TRANSIENT_SERVICE_ERROR,
@@ -227,6 +235,14 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     * udp Connectivity Check Stun Url Not Allow Listed
     */
     UDP_CONNECTIVITY_CHECK_STUN_URL_NOT_ALLOW_LISTED,
+    /**
+    * udp Connectivity Check Turn Url Not Allow Listed
+    */
+    UDP_CONNECTIVITY_CHECK_TURN_URL_NOT_ALLOW_LISTED,
+    /**
+    * udp Connectivity Check Urls Not Allow Listed
+    */
+    UDP_CONNECTIVITY_CHECK_URLS_NOT_ALLOW_LISTED,
     /**
     * udp Connectivity Check Unknown Error
     */

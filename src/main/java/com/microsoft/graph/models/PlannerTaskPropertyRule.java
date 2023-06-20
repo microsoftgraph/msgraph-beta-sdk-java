@@ -55,6 +55,15 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
     public PlannerFieldRules checkLists;
 
     /**
+     * The Completion Requirements.
+     * Rules and restrictions for completion requirements of the task. Accepted values are allow, add, remove, edit, and block.
+     */
+    @SerializedName(value = "completionRequirements", alternate = {"CompletionRequirements"})
+    @Expose
+	@Nullable
+    public java.util.List<String> completionRequirements;
+
+    /**
      * The Delete.
      * Rules and restrictions for deleting the task. Accepted values are allow and block.
      */
@@ -101,7 +110,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Percent Complete.
-     * Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, setToNotStarted, setToInProgress, and block.
+     * Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, overrideRequirements, setToNotStarted, setToInProgress, and block.
      */
     @SerializedName(value = "percentComplete", alternate = {"PercentComplete"})
     @Expose

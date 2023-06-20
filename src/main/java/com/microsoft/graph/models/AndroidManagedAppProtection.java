@@ -52,6 +52,15 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     public java.util.List<String> allowedAndroidDeviceModels;
 
     /**
+     * The App Action If Account Is Clocked Out.
+     * Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+     */
+    @SerializedName(value = "appActionIfAccountIsClockedOut", alternate = {"AppActionIfAccountIsClockedOut"})
+    @Expose
+	@Nullable
+    public ManagedAppRemediationAction appActionIfAccountIsClockedOut;
+
+    /**
      * The App Action If Android Device Manufacturer Not Allowed.
      * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. Possible values are: block, wipe, warn.
      */

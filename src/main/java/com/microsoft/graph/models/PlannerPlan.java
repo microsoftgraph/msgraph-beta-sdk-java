@@ -92,7 +92,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Shared With Containers.
-     * 
+     * List of containers the plan is shared with.
      */
     @SerializedName(value = "sharedWithContainers", alternate = {"SharedWithContainers"})
     @Expose

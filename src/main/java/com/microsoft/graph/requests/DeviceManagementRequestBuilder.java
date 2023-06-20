@@ -1286,6 +1286,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new com.microsoft.graph.requests.MobileAppTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppTroubleshootingEvents") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the PrivilegeManagementElevation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PrivilegeManagementElevationCollectionRequestBuilder privilegeManagementElevations() {
+        return new com.microsoft.graph.requests.PrivilegeManagementElevationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("privilegeManagementElevations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the PrivilegeManagementElevation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PrivilegeManagementElevationRequestBuilder privilegeManagementElevations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrivilegeManagementElevationRequestBuilder(getRequestUrlWithAdditionalSegment("privilegeManagementElevations") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the RemoteActionAudit collection
      *
      * @return the collection request builder
@@ -1334,6 +1354,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyRequestBuilder userExperienceAnalyticsAnomaly(@Nonnull final String id) {
         return new com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAnomaly") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsAnomalyCorrelationGroupOverview collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCorrelationGroupOverviewCollectionRequestBuilder userExperienceAnalyticsAnomalyCorrelationGroupOverview() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCorrelationGroupOverviewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAnomalyCorrelationGroupOverview"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsAnomalyCorrelationGroupOverview item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder userExperienceAnalyticsAnomalyCorrelationGroupOverview(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAnomalyCorrelationGroupOverview") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserExperienceAnalyticsAnomalyDevice collection

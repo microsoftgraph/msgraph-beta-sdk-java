@@ -32,6 +32,10 @@ public enum IncidentStatus
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * awaiting Action
+    */
+    AWAITING_ACTION,
+    /**
     * For IncidentStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -56,7 +56,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements IJsonBa
 
     /**
      * The Is Searchable.
-     * Indicates whether custom security attribute values will be indexed for searching on objects that are assigned attribute values. Cannot be changed later.
+     * Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later.
      */
     @SerializedName(value = "isSearchable", alternate = {"IsSearchable"})
     @Expose
@@ -74,7 +74,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements IJsonBa
 
     /**
      * The Status.
-     * Specifies whether the custom security attribute is active or deactivated. Acceptable values are Available and Deprecated. Can be changed later.
+     * Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -83,7 +83,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements IJsonBa
 
     /**
      * The Type.
-     * Data type for the custom security attribute values. Supported types are Boolean, Integer, and String. Cannot be changed later.
+     * Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -101,7 +101,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements IJsonBa
 
     /**
      * The Allowed Values.
-     * Values that are predefined for this custom security attribute.This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
+     * Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
      */
     @SerializedName(value = "allowedValues", alternate = {"AllowedValues"})
     @Expose

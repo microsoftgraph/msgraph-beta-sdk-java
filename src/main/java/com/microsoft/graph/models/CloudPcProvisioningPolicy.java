@@ -29,7 +29,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Cloud Pc Provisioning Policy.
+ * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
  */
+@Deprecated
 public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObject {
 
 

@@ -56,9 +56,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
     /**
      * The User.
      * 
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
     @SerializedName(value = "user", alternate = {"User"})
     @Expose
 	@Nullable

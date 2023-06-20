@@ -5,7 +5,8 @@
 
 package com.microsoft.graph.models;
 
-
+import com.microsoft.graph.models.CloudPcPolicySettingType;
+import java.util.EnumSet;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
@@ -18,8 +19,19 @@ import java.util.ArrayList;
 
 /**
  * The class for the Cloud Pc Provisioning Policy Apply Parameter Set.
+ * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
  */
+@Deprecated
 public class CloudPcProvisioningPolicyApplyParameterSet {
+    /**
+     * The policy Settings.
+     * 
+     */
+    @SerializedName(value = "policySettings", alternate = {"PolicySettings"})
+    @Expose
+	@Nullable
+    public EnumSet<CloudPcPolicySettingType> policySettings;
+
 
     /**
      * Instiaciates a new CloudPcProvisioningPolicyApplyParameterSet
@@ -30,6 +42,7 @@ public class CloudPcProvisioningPolicyApplyParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected CloudPcProvisioningPolicyApplyParameterSet(@Nonnull final CloudPcProvisioningPolicyApplyParameterSetBuilder builder) {
+        this.policySettings = builder.policySettings;
     }
     /**
      * Gets a new builder for the body
@@ -43,6 +56,21 @@ public class CloudPcProvisioningPolicyApplyParameterSet {
      * Fluent builder for the CloudPcProvisioningPolicyApplyParameterSet
      */
     public static final class CloudPcProvisioningPolicyApplyParameterSetBuilder {
+        /**
+         * The policySettings parameter value
+         */
+        @Nullable
+        protected EnumSet<CloudPcPolicySettingType> policySettings;
+        /**
+         * Sets the PolicySettings
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public CloudPcProvisioningPolicyApplyParameterSetBuilder withPolicySettings(@Nullable final EnumSet<CloudPcPolicySettingType> val) {
+            this.policySettings = val;
+            return this;
+        }
         /**
          * Instanciates a new CloudPcProvisioningPolicyApplyParameterSetBuilder
          */
@@ -64,6 +92,9 @@ public class CloudPcProvisioningPolicyApplyParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.policySettings != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("policySettings", policySettings));
+        }
         return result;
     }
 }

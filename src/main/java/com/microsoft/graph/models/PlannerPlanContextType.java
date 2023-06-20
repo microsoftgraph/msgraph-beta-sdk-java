@@ -36,6 +36,10 @@ public enum PlannerPlanContextType
     */
     LOOP_PAGE,
     /**
+    * project
+    */
+    PROJECT,
+    /**
     * For PlannerPlanContextType values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.B2xIdentityUserFlow;
+import com.microsoft.graph.models.OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp;
 import com.microsoft.graph.models.IdentityProviderBase;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class IdentityProviderBaseCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<IdentityProviderBase, IdentityProviderBaseWithReferenceRequest, IdentityProviderBaseReferenceRequestBuilder, IdentityProviderBaseWithReferenceRequestBuilder, IdentityProviderBaseCollectionResponse, IdentityProviderBaseCollectionWithReferencesPage, IdentityProviderBaseCollectionReferenceRequest, IdentityProviderBaseCollectionReferenceRequestBuilder> {
 
     /**
-     * The request builder for this collection of B2xIdentityUserFlow
+     * The request builder for this collection of OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp
      *
      * @param requestUrl     the request URL
      * @param client         the service client

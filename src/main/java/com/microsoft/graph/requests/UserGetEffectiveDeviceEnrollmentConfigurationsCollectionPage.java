@@ -22,9 +22,7 @@ import com.microsoft.graph.requests.UserGetEffectiveDeviceEnrollmentConfiguratio
 
 /**
  * The class for the User Get Effective Device Enrollment Configurations Collection Page.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserGetEffectiveDeviceEnrollmentConfigurationsCollectionPage extends BaseCollectionPage<DeviceEnrollmentConfiguration, UserGetEffectiveDeviceEnrollmentConfigurationsCollectionRequestBuilder> {
 
     /**

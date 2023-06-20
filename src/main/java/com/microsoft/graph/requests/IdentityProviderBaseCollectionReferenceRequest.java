@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.B2xIdentityUserFlow;
+import com.microsoft.graph.models.OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp;
 import com.microsoft.graph.models.IdentityProviderBase;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -52,7 +52,7 @@ public class IdentityProviderBaseCollectionReferenceRequest extends BaseCollecti
     @Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBase> postAsync(@Nonnull final IdentityProviderBase newIdentityProviderBase) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/identity/userFlowIdentityProviders/" + newIdentityProviderBase.id);
+        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/identity/identityProviders/" + newIdentityProviderBase.id);
         return new IdentityProviderBaseWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .postAsync(newIdentityProviderBase, body);
@@ -66,7 +66,7 @@ public class IdentityProviderBaseCollectionReferenceRequest extends BaseCollecti
     @Nonnull
     public IdentityProviderBase post(@Nonnull final IdentityProviderBase newIdentityProviderBase) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/identity/userFlowIdentityProviders/" + newIdentityProviderBase.id);
+        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/identity/identityProviders/" + newIdentityProviderBase.id);
         return new IdentityProviderBaseWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
                 .buildRequest(getBaseRequest().getHeaders())
                 .post(newIdentityProviderBase, body);

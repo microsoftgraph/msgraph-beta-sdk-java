@@ -19,9 +19,7 @@ import java.util.ArrayList;
 
 /**
  * The class for the User Translate Exchange Ids Parameter Set.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserTranslateExchangeIdsParameterSet {
     /**
      * The input Ids.

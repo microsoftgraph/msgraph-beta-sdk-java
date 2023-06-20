@@ -86,6 +86,15 @@ public class Participant extends Entity implements IJsonBackedObject {
     public String metadata;
 
     /**
+     * The Preferred Display Name.
+     * 
+     */
+    @SerializedName(value = "preferredDisplayName", alternate = {"PreferredDisplayName"})
+    @Expose
+	@Nullable
+    public String preferredDisplayName;
+
+    /**
      * The Recording Info.
      * Information on whether the participant has recording capability.
      */

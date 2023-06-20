@@ -61,4 +61,30 @@ public class IdentityUserFlowAttributeReferenceRequest extends BaseReferenceRequ
         addExpandOption(value);
         return this;
     }
+    /**
+     * Puts the IdentityUserFlowAttribute
+     *
+     * @param srcIdentityUserFlowAttribute the IdentityUserFlowAttribute reference to PUT
+     * @return a future with the result
+     */
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> putAsync(@Nonnull final IdentityUserFlowAttribute srcIdentityUserFlowAttribute) {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/attributes/" + srcIdentityUserFlowAttribute.id));
+        return sendAsync(HttpMethod.PUT, payload);
+    }
+
+    /**
+     * Puts the IdentityUserFlowAttribute
+     *
+     * @param srcIdentityUserFlowAttribute the IdentityUserFlowAttribute reference to PUT
+     * @return the IdentityUserFlowAttribute
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    @Nullable
+    public IdentityUserFlowAttribute put(@Nonnull final IdentityUserFlowAttribute srcIdentityUserFlowAttribute) throws ClientException {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/attributes/" + srcIdentityUserFlowAttribute.id));
+        return send(HttpMethod.PUT, payload);
+    }
 }

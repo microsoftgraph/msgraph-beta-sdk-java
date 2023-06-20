@@ -78,6 +78,8 @@ import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceR
 import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetReportFiltersParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetSettingNonComplianceReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetWindowsDriverUpdateAlertSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetWindowsQualityUpdateAlertSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportParameterSet;
@@ -803,6 +805,26 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetSettingNonComplianceReportRequestBuilder getSettingNonComplianceReport(@Nonnull final DeviceManagementReportsGetSettingNonComplianceReportParameterSet parameters) {
         return new DeviceManagementReportsGetSettingNonComplianceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSettingNonComplianceReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportRequestBuilder getWindowsDriverUpdateAlertsPerPolicyPerDeviceReport(@Nonnull final DeviceManagementReportsGetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportParameterSet parameters) {
+        return new DeviceManagementReportsGetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getWindowsDriverUpdateAlertsPerPolicyPerDeviceReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetWindowsDriverUpdateAlertSummaryReportRequestBuilder getWindowsDriverUpdateAlertSummaryReport(@Nonnull final DeviceManagementReportsGetWindowsDriverUpdateAlertSummaryReportParameterSet parameters) {
+        return new DeviceManagementReportsGetWindowsDriverUpdateAlertSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getWindowsDriverUpdateAlertSummaryReport"), getClient(), null, parameters);
     }
 
     /**

@@ -71,9 +71,7 @@ import com.microsoft.graph.models.DirectoryObjectGetUserOwnedObjectsParameterSet
 
 /**
  * The class for the User Collection Request Builder.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<User, UserRequestBuilder, UserCollectionResponse, UserCollectionPage, UserCollectionRequest> {
 
     /**
@@ -93,9 +91,7 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
     @Nonnull
     public UserValidatePasswordRequestBuilder validatePassword(@Nonnull final UserValidatePasswordParameterSet parameters) {
         return new UserValidatePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validatePassword"), getClient(), null, parameters);
@@ -104,9 +100,7 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
     @Nonnull
     public UserDeltaCollectionRequestBuilder delta() {
         return new UserDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
@@ -115,9 +109,7 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
     @Nonnull
     public UserGetManagedAppBlockedUsersCollectionRequestBuilder getManagedAppBlockedUsers() {
         return new UserGetManagedAppBlockedUsersCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedAppBlockedUsers"), getClient(), null);

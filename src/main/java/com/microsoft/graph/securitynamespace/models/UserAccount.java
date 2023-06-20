@@ -39,7 +39,7 @@ public class UserAccount implements IJsonBackedObject {
 
     /**
      * The Account Name.
-     * The user account's displayed name.
+     * The displayed name of the user account.
      */
     @SerializedName(value = "accountName", alternate = {"AccountName"})
     @Expose
@@ -48,7 +48,7 @@ public class UserAccount implements IJsonBackedObject {
 
     /**
      * The Azure Ad User Id.
-     * The user object identifier in Azure AD.
+     * The user object identifier in Azure Active Directory (Azure AD).
      */
     @SerializedName(value = "azureAdUserId", alternate = {"AzureAdUserId"})
     @Expose
@@ -57,7 +57,7 @@ public class UserAccount implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The user display name in Azure AD.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

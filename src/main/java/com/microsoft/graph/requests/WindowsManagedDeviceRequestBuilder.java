@@ -23,7 +23,6 @@ import com.microsoft.graph.models.ObliterationBehavior;
 import com.microsoft.graph.models.PowerliftIncidentMetadata;
 import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.DeviceCompliancePolicySettingState;
-import com.microsoft.graph.models.OemWarranty;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -712,14 +711,5 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder<Windo
     @Nonnull
     public ManagedDeviceGetFileVaultKeyRequestBuilder getFileVaultKey() {
         return new ManagedDeviceGetFileVaultKeyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getFileVaultKey"), getClient(), null);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public ManagedDeviceGetOemWarrantyRequestBuilder getOemWarranty() {
-        return new ManagedDeviceGetOemWarrantyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOemWarranty"), getClient(), null);
     }
 }

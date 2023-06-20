@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceHealthScriptParameter;
+import com.microsoft.graph.models.DeviceHealthScriptType;
 import com.microsoft.graph.models.RunAsAccountType;
 import com.microsoft.graph.models.DeviceHealthScriptRunSummary;
 import com.microsoft.graph.models.Entity;
@@ -66,6 +67,15 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<DeviceHealthScriptParameter> detectionScriptParameters;
+
+    /**
+     * The Device Health Script Type.
+     * DeviceHealthScriptType for the script policy
+     */
+    @SerializedName(value = "deviceHealthScriptType", alternate = {"DeviceHealthScriptType"})
+    @Expose
+	@Nullable
+    public DeviceHealthScriptType deviceHealthScriptType;
 
     /**
      * The Display Name.

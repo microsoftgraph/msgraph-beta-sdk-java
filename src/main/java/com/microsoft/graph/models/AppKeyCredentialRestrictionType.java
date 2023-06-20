@@ -16,6 +16,10 @@ public enum AppKeyCredentialRestrictionType
     */
     ASYMMETRIC_KEY_LIFETIME,
     /**
+    * trusted Certificate Authority
+    */
+    TRUSTED_CERTIFICATE_AUTHORITY,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

@@ -56,6 +56,15 @@ public class Connector extends Entity implements IJsonBackedObject {
     public ConnectorStatus status;
 
     /**
+     * The Version.
+     * 
+     */
+    @SerializedName(value = "version", alternate = {"Version"})
+    @Expose
+	@Nullable
+    public String version;
+
+    /**
      * The Member Of.
      * The connectorGroup that the connector is a member of. Read-only.
      */
