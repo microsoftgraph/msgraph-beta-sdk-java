@@ -36,6 +36,10 @@ public enum CloudPcReportName
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * no License Available Connectivity Failure Report
+    */
+    NO_LICENSE_AVAILABLE_CONNECTIVITY_FAILURE_REPORT,
+    /**
     * For CloudPcReportName values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -100,24 +100,24 @@ public class WorkflowRequestBuilder extends BaseRequestBuilder<Workflow> {
         return new com.microsoft.graph.identitygovernance.requests.TaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the User collection
+     *  Gets a request builder for the UserProcessingResult collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder executionScope() {
-        return new com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("executionScope"), getClient(), null);
+    public com.microsoft.graph.identitygovernance.requests.UserProcessingResultCollectionWithReferencesRequestBuilder executionScope() {
+        return new com.microsoft.graph.identitygovernance.requests.UserProcessingResultCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("executionScope"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the User item
+     * Gets a request builder for the UserProcessingResult item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder executionScope(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("executionScope") + "/" + id, getClient(), null);
+    public com.microsoft.graph.identitygovernance.requests.UserProcessingResultWithReferenceRequestBuilder executionScope(@Nonnull final String id) {
+        return new com.microsoft.graph.identitygovernance.requests.UserProcessingResultWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("executionScope") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Run collection

@@ -41,7 +41,7 @@ public class ProvisioningStatusInfo implements IJsonBackedObject {
 
     /**
      * The Error Information.
-     * 
+     * If status is not success/ skipped details for the error are contained in this.
      */
     @SerializedName(value = "errorInformation", alternate = {"ErrorInformation"})
     @Expose
@@ -50,7 +50,7 @@ public class ProvisioningStatusInfo implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Possible values are: success, warning, failure, skipped, unknownFutureValue.
+     * Possible values are: success, failure, skipped, warning, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

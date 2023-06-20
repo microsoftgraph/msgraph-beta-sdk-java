@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStatus;
 import com.microsoft.graph.models.Entity;
 
 
@@ -53,6 +54,15 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements IJso
     public java.time.OffsetDateTime anomalyOnDeviceLatestOccurrenceDateTime;
 
     /**
+     * The Correlation Group Id.
+     * The unique identifier of the correlation group.
+     */
+    @SerializedName(value = "correlationGroupId", alternate = {"CorrelationGroupId"})
+    @Expose
+	@Nullable
+    public String correlationGroupId;
+
+    /**
      * The Device Id.
      * The unique identifier of the device.
      */
@@ -87,6 +97,15 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements IJso
     @Expose
 	@Nullable
     public String deviceName;
+
+    /**
+     * The Device Status.
+     * Indicates the device status with respect to the correlation group. At risk devices are devices that share correlation group features but may not yet be affected by an anomaly, such as when a device is experiencing crashes on an application but that application has not been used on the device but is currently installed. This could lead to the device becoming anomalous if the application in question were to be used. Possible values are: anomolous, affected or atRisk
+     */
+    @SerializedName(value = "deviceStatus", alternate = {"DeviceStatus"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsDeviceStatus deviceStatus;
 
     /**
      * The Os Name.

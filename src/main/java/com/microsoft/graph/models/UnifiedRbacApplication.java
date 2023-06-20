@@ -31,7 +31,7 @@ public class UnifiedRbacApplication extends Entity implements IJsonBackedObject 
 
     /**
      * The Custom App Scopes.
-     * 
+     * Workload-specific scope object that represents the resources for which the principal has been granted access.
      */
     @SerializedName(value = "customAppScopes", alternate = {"CustomAppScopes"})
     @Expose

@@ -41,7 +41,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     @SerializedName(value = "medianImpactInMs", alternate = {"MedianImpactInMs"})
     @Expose
 	@Nullable
-    public Integer medianImpactInMs;
+    public Long medianImpactInMs;
 
     /**
      * The Median Impact In Ms2.
@@ -86,7 +86,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     @SerializedName(value = "totalImpactInMs", alternate = {"TotalImpactInMs"})
     @Expose
 	@Nullable
-    public Integer totalImpactInMs;
+    public Long totalImpactInMs;
 
     /**
      * The Total Impact In Ms2.

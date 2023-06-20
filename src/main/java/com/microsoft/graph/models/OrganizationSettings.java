@@ -49,24 +49,6 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
     public InsightsSettings contactInsights;
 
     /**
-     * The Item Insights.
-     * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
-     */
-    @SerializedName(value = "itemInsights", alternate = {"ItemInsights"})
-    @Expose
-	@Nullable
-    public InsightsSettings itemInsights;
-
-    /**
-     * The People Insights.
-     * Contains the properties that are configured by an administrator for the visibility of a list of people relevant and working with a user in Microsoft 365. List peopleInsights returns the settings to display or return people insights in an organization.
-     */
-    @SerializedName(value = "peopleInsights", alternate = {"PeopleInsights"})
-    @Expose
-	@Nullable
-    public InsightsSettings peopleInsights;
-
-    /**
      * The Profile Card Properties.
      * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
      */
@@ -83,6 +65,24 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public PronounsSettings pronouns;
+
+    /**
+     * The Item Insights.
+     * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
+     */
+    @SerializedName(value = "itemInsights", alternate = {"ItemInsights"})
+    @Expose
+	@Nullable
+    public InsightsSettings itemInsights;
+
+    /**
+     * The People Insights.
+     * Contains the properties that are configured by an administrator for the visibility of a list of people relevant and working with a user in Microsoft 365. List peopleInsights returns the settings to display or return people insights in an organization.
+     */
+    @SerializedName(value = "peopleInsights", alternate = {"PeopleInsights"})
+    @Expose
+	@Nullable
+    public InsightsSettings peopleInsights;
 
 
     /**

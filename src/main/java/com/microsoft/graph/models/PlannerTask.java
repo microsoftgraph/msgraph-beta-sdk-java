@@ -14,6 +14,7 @@ import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.PlannerTaskCreation;
 import com.microsoft.graph.models.PlannerPreviewType;
 import com.microsoft.graph.models.PlannerTaskRecurrence;
+import com.microsoft.graph.models.PlannerTaskCompletionRequirements;
 import com.microsoft.graph.models.PlannerAssignedToTaskBoardTaskFormat;
 import com.microsoft.graph.models.PlannerBucketTaskBoardTaskFormat;
 import com.microsoft.graph.models.PlannerTaskDetails;
@@ -223,6 +224,15 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Integer referenceCount;
+
+    /**
+     * The Specified Completion Requirements.
+     * Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
+     */
+    @SerializedName(value = "specifiedCompletionRequirements", alternate = {"SpecifiedCompletionRequirements"})
+    @Expose
+	@Nullable
+    public EnumSet<PlannerTaskCompletionRequirements> specifiedCompletionRequirements;
 
     /**
      * The Start Date Time.

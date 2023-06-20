@@ -19,7 +19,9 @@ import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignParameterSet;
 
 /**
  * The class for the Cloud Pc Provisioning Policy Assign Request.
+ * @deprecated The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023.
  */
+@Deprecated
 public class CloudPcProvisioningPolicyAssignRequest extends BaseRequest<Void> {
     /**
      * The request for this CloudPcProvisioningPolicyAssign

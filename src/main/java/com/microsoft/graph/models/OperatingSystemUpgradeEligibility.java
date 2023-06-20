@@ -28,6 +28,10 @@ public enum OperatingSystemUpgradeEligibility
     */
     CAPABLE,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For OperatingSystemUpgradeEligibility values that were not expected from the service
     */
     UNEXPECTED_VALUE

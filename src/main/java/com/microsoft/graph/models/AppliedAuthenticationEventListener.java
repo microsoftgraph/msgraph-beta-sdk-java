@@ -41,7 +41,7 @@ public class AppliedAuthenticationEventListener implements IJsonBackedObject {
 
     /**
      * The Event Type.
-     * The type of authentication event that triggered the custom extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
+     * The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
      */
     @SerializedName(value = "eventType", alternate = {"EventType"})
     @Expose
@@ -50,7 +50,7 @@ public class AppliedAuthenticationEventListener implements IJsonBackedObject {
 
     /**
      * The Executed Listener Id.
-     * ID of the Event Listener that was executed.
+     * ID of the authentication event listener that was executed.
      */
     @SerializedName(value = "executedListenerId", alternate = {"ExecutedListenerId"})
     @Expose

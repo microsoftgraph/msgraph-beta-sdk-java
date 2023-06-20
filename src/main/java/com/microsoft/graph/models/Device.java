@@ -186,7 +186,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Management Restricted.
-     * 
+     * true if the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.
      */
     @SerializedName(value = "isManagementRestricted", alternate = {"IsManagementRestricted"})
     @Expose

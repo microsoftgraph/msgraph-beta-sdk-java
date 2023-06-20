@@ -92,8 +92,10 @@ import com.microsoft.graph.requests.DeviceHealthScriptCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementScriptCollectionPage;
 import com.microsoft.graph.requests.DeviceShellScriptCollectionPage;
 import com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage;
+import com.microsoft.graph.requests.PrivilegeManagementElevationCollectionPage;
 import com.microsoft.graph.requests.RemoteActionAuditCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCorrelationGroupOverviewCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyDeviceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage;
@@ -960,6 +962,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage mobileAppTroubleshootingEvents;
 
     /**
+     * The Privilege Management Elevations.
+     * The endpoint privilege management elevation event entity contains elevation details.
+     */
+    @SerializedName(value = "privilegeManagementElevations", alternate = {"PrivilegeManagementElevations"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.PrivilegeManagementElevationCollectionPage privilegeManagementElevations;
+
+    /**
      * The Remote Action Audits.
      * The list of device remote action audits with the tenant.
      */
@@ -985,6 +996,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCollectionPage userExperienceAnalyticsAnomaly;
+
+    /**
+     * The User Experience Analytics Anomaly Correlation Group Overview.
+     * The user experience analytics anomaly correlation group overview entity contains the information for each correlation group of an anomaly.
+     */
+    @SerializedName(value = "userExperienceAnalyticsAnomalyCorrelationGroupOverview", alternate = {"UserExperienceAnalyticsAnomalyCorrelationGroupOverview"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCorrelationGroupOverviewCollectionPage userExperienceAnalyticsAnomalyCorrelationGroupOverview;
 
     /**
      * The User Experience Analytics Anomaly Device.
@@ -2013,12 +2033,20 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             mobileAppTroubleshootingEvents = serializer.deserializeObject(json.get("mobileAppTroubleshootingEvents"), com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage.class);
         }
 
+        if (json.has("privilegeManagementElevations")) {
+            privilegeManagementElevations = serializer.deserializeObject(json.get("privilegeManagementElevations"), com.microsoft.graph.requests.PrivilegeManagementElevationCollectionPage.class);
+        }
+
         if (json.has("remoteActionAudits")) {
             remoteActionAudits = serializer.deserializeObject(json.get("remoteActionAudits"), com.microsoft.graph.requests.RemoteActionAuditCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAnomaly")) {
             userExperienceAnalyticsAnomaly = serializer.deserializeObject(json.get("userExperienceAnalyticsAnomaly"), com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAnomalyCorrelationGroupOverview")) {
+            userExperienceAnalyticsAnomalyCorrelationGroupOverview = serializer.deserializeObject(json.get("userExperienceAnalyticsAnomalyCorrelationGroupOverview"), com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCorrelationGroupOverviewCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAnomalyDevice")) {

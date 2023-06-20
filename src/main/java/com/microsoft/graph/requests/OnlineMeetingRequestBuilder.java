@@ -109,6 +109,26 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
         return new com.microsoft.graph.requests.MeetingRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment("registration"), getClient(), null);
     }
     /**
+     *  Gets a request builder for the CallRecording collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CallRecordingCollectionRequestBuilder recordings() {
+        return new com.microsoft.graph.requests.CallRecordingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("recordings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CallRecording item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CallRecordingRequestBuilder recordings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CallRecordingRequestBuilder(getRequestUrlWithAdditionalSegment("recordings") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the CallTranscript collection
      *
      * @return the collection request builder
@@ -147,6 +167,16 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
     @Nonnull
     public OnlineMeetingAttendeeReportStreamRequestBuilder attendeeReport() {
         return new OnlineMeetingAttendeeReportStreamRequestBuilder(getRequestUrlWithAdditionalSegment("attendeeReport"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for broadcastRecording
+     *
+     * @return the OnlineMeetingBroadcastRecordingStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OnlineMeetingBroadcastRecordingStreamRequestBuilder broadcastRecording() {
+        return new OnlineMeetingBroadcastRecordingStreamRequestBuilder(getRequestUrlWithAdditionalSegment("broadcastRecording"), getClient(), null);
     }
 
     /**

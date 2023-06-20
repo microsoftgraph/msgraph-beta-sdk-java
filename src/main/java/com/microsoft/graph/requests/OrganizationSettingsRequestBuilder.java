@@ -76,26 +76,6 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<Organ
     public com.microsoft.graph.requests.InsightsSettingsRequestBuilder contactInsights() {
         return new com.microsoft.graph.requests.InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("contactInsights"), getClient(), null);
     }
-
-    /**
-     * Gets the request builder for InsightsSettings
-     *
-     * @return the InsightsSettingsRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.InsightsSettingsRequestBuilder itemInsights() {
-        return new com.microsoft.graph.requests.InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for InsightsSettings
-     *
-     * @return the InsightsSettingsRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.InsightsSettingsRequestBuilder peopleInsights() {
-        return new com.microsoft.graph.requests.InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("peopleInsights"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the ProfileCardProperty collection
      *
@@ -125,5 +105,25 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<Organ
     @Nonnull
     public com.microsoft.graph.requests.PronounsSettingsRequestBuilder pronouns() {
         return new com.microsoft.graph.requests.PronounsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("pronouns"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for InsightsSettings
+     *
+     * @return the InsightsSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.InsightsSettingsRequestBuilder itemInsights() {
+        return new com.microsoft.graph.requests.InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for InsightsSettings
+     *
+     * @return the InsightsSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.InsightsSettingsRequestBuilder peopleInsights() {
+        return new com.microsoft.graph.requests.InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("peopleInsights"), getClient(), null);
     }
 }

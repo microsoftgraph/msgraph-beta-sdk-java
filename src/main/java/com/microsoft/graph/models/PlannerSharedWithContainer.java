@@ -28,7 +28,7 @@ public class PlannerSharedWithContainer extends PlannerPlanContainer implements 
 
     /**
      * The Access Level.
-     * 
+     * The maxmimum access level the shared container can provide to the plan. The possible values are: readAccess, readWriteAccess, fullAccess, unknownFutureValue.
      */
     @SerializedName(value = "accessLevel", alternate = {"AccessLevel"})
     @Expose

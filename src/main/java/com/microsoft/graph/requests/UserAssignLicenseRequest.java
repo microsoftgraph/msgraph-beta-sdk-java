@@ -19,9 +19,7 @@ import com.microsoft.graph.models.UserAssignLicenseParameterSet;
 
 /**
  * The class for the User Assign License Request.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserAssignLicenseRequest extends BaseRequest<User> {
     /**
      * The request for this UserAssignLicense

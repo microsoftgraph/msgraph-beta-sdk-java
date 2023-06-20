@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.CertificateAuthorityPath;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ImpactedResourceCollectionPage;
 import com.microsoft.graph.requests.RecommendationCollectionPage;
@@ -20,6 +21,7 @@ import com.microsoft.graph.requests.InboundSharedUserProfileCollectionPage;
 import com.microsoft.graph.requests.OnPremisesDirectorySynchronizationCollectionPage;
 import com.microsoft.graph.requests.OutboundSharedUserProfileCollectionPage;
 import com.microsoft.graph.requests.SharedEmailDomainCollectionPage;
+import com.microsoft.graph.requests.CompanySubscriptionCollectionPage;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage;
 
 
@@ -72,6 +74,15 @@ public class Directory extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.AttributeSetCollectionPage attributeSets;
+
+    /**
+     * The Certificate Authorities.
+     * 
+     */
+    @SerializedName(value = "certificateAuthorities", alternate = {"CertificateAuthorities"})
+    @Expose
+	@Nullable
+    public CertificateAuthorityPath certificateAuthorities;
 
     /**
      * The Custom Security Attribute Definitions.
@@ -137,6 +148,15 @@ public class Directory extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.SharedEmailDomainCollectionPage sharedEmailDomains;
 
     /**
+     * The Subscriptions.
+     * 
+     */
+    @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CompanySubscriptionCollectionPage subscriptions;
+
+    /**
      * The Feature Rollout Policies.
      * 
      * @deprecated Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
@@ -199,6 +219,10 @@ public class Directory extends Entity implements IJsonBackedObject {
 
         if (json.has("sharedEmailDomains")) {
             sharedEmailDomains = serializer.deserializeObject(json.get("sharedEmailDomains"), com.microsoft.graph.requests.SharedEmailDomainCollectionPage.class);
+        }
+
+        if (json.has("subscriptions")) {
+            subscriptions = serializer.deserializeObject(json.get("subscriptions"), com.microsoft.graph.requests.CompanySubscriptionCollectionPage.class);
         }
 
         if (json.has("featureRolloutPolicies")) {

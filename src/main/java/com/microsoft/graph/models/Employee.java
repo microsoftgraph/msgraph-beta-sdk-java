@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PostalAddressType;
-import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PictureCollectionPage;
 
 
@@ -25,8 +24,21 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Employee.
  */
-public class Employee extends Entity implements IJsonBackedObject {
+public class Employee implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Address.
@@ -81,6 +93,15 @@ public class Employee extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String givenName;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName(value = "id", alternate = {"Id"})
+    @Expose
+	@Nullable
+    public java.util.UUID id;
 
     /**
      * The Job Title.

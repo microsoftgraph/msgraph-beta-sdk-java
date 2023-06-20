@@ -40,6 +40,15 @@ public class Financials implements IJsonBackedObject {
     }
 
     /**
+     * The Id.
+     * 
+     */
+    @SerializedName(value = "id", alternate = {"Id"})
+    @Expose
+	@Nullable
+    public java.util.UUID id;
+
+    /**
      * The Companies.
      * 
      */

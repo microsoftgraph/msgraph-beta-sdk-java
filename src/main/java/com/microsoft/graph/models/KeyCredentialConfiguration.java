@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AppKeyCredentialRestrictionType;
 
 
@@ -37,6 +38,15 @@ public class KeyCredentialConfiguration implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Certificate Based Application Configuration Ids.
+     * 
+     */
+    @SerializedName(value = "certificateBasedApplicationConfigurationIds", alternate = {"CertificateBasedApplicationConfigurationIds"})
+    @Expose
+	@Nullable
+    public java.util.List<String> certificateBasedApplicationConfigurationIds;
 
     /**
      * The Max Lifetime.

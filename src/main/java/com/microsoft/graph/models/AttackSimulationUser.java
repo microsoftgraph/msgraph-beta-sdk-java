@@ -57,7 +57,7 @@ public class AttackSimulationUser implements IJsonBackedObject {
 
     /**
      * The Out Of Office Days.
-     * 
+     * Number of days the user is OOF during a simulation journey/course of a campaign.
      */
     @SerializedName(value = "outOfOfficeDays", alternate = {"OutOfOfficeDays"})
     @Expose
@@ -66,7 +66,7 @@ public class AttackSimulationUser implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * id property value of the user resource that represents the user in the Azure Active Directory tenant.
+     * The id property value of the user resource that represents the user in the Azure Active Directory tenant.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

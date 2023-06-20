@@ -12,8 +12,10 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AuthenticationMethodsRoot;
 import com.microsoft.graph.models.SecurityReportsRoot;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AppCredentialSignInActivityCollectionPage;
 import com.microsoft.graph.requests.ApplicationSignInDetailedSummaryCollectionPage;
 import com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionPage;
+import com.microsoft.graph.requests.ServicePrincipalSignInActivityCollectionPage;
 import com.microsoft.graph.requests.UserCredentialUsageDetailsCollectionPage;
 import com.microsoft.graph.requests.PrintUsageCollectionPage;
 
@@ -31,6 +33,15 @@ import javax.annotation.Nonnull;
  */
 public class ReportRoot extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The App Credential Sign In Activities.
+     * Represents a collection of sign-in activities of application credentials.
+     */
+    @SerializedName(value = "appCredentialSignInActivities", alternate = {"AppCredentialSignInActivities"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AppCredentialSignInActivityCollectionPage appCredentialSignInActivities;
 
     /**
      * The Application Sign In Detailed Summary.
@@ -58,6 +69,15 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionPage credentialUserRegistrationDetails;
+
+    /**
+     * The Service Principal Sign In Activities.
+     * Represents a collection of sign-in activities of service principals.
+     */
+    @SerializedName(value = "servicePrincipalSignInActivities", alternate = {"ServicePrincipalSignInActivities"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.ServicePrincipalSignInActivityCollectionPage servicePrincipalSignInActivities;
 
     /**
      * The User Credential Usage Details.
@@ -168,12 +188,20 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
+        if (json.has("appCredentialSignInActivities")) {
+            appCredentialSignInActivities = serializer.deserializeObject(json.get("appCredentialSignInActivities"), com.microsoft.graph.requests.AppCredentialSignInActivityCollectionPage.class);
+        }
+
         if (json.has("applicationSignInDetailedSummary")) {
             applicationSignInDetailedSummary = serializer.deserializeObject(json.get("applicationSignInDetailedSummary"), com.microsoft.graph.requests.ApplicationSignInDetailedSummaryCollectionPage.class);
         }
 
         if (json.has("credentialUserRegistrationDetails")) {
             credentialUserRegistrationDetails = serializer.deserializeObject(json.get("credentialUserRegistrationDetails"), com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionPage.class);
+        }
+
+        if (json.has("servicePrincipalSignInActivities")) {
+            servicePrincipalSignInActivities = serializer.deserializeObject(json.get("servicePrincipalSignInActivities"), com.microsoft.graph.requests.ServicePrincipalSignInActivityCollectionPage.class);
         }
 
         if (json.has("userCredentialUsageDetails")) {

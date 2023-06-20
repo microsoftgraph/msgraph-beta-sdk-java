@@ -10,10 +10,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.identitygovernance.models.WorkflowBase;
-import com.microsoft.graph.requests.UserCollectionPage;
 import com.microsoft.graph.identitygovernance.requests.RunCollectionPage;
 import com.microsoft.graph.identitygovernance.requests.TaskReportCollectionPage;
-import com.microsoft.graph.identitygovernance.requests.UserProcessingResultCollectionPage;
 import com.microsoft.graph.identitygovernance.requests.WorkflowVersionCollectionPage;
 
 
@@ -70,11 +68,9 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
     /**
      * The Execution Scope.
      * The unique identifier of the Azure AD identity that last modified the workflow object.
-     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
-    @Deprecated
 	@Nullable
-    public com.microsoft.graph.requests.UserCollectionPage executionScope;
+    public com.microsoft.graph.identitygovernance.requests.UserProcessingResultCollectionPage executionScope;
 
     /**
      * The Runs.
@@ -123,7 +119,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
 
         if (json.has("executionScope")) {
-            executionScope = serializer.deserializeObject(json.get("executionScope"), com.microsoft.graph.requests.UserCollectionPage.class);
+            executionScope = serializer.deserializeObject(json.get("executionScope"), com.microsoft.graph.identitygovernance.requests.UserProcessingResultCollectionPage.class);
         }
 
         if (json.has("runs")) {

@@ -23,7 +23,6 @@ import com.microsoft.graph.models.ObliterationBehavior;
 import com.microsoft.graph.models.PowerliftIncidentMetadata;
 import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.DeviceCompliancePolicySettingState;
-import com.microsoft.graph.models.OemWarranty;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

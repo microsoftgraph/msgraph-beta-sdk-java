@@ -28,7 +28,7 @@ public class CustomAppScope extends AppScope implements IJsonBackedObject {
 
     /**
      * The Custom Attributes.
-     * 
+     * An open dictionary type that holds workload-specific properties for the scope object.
      */
     @SerializedName(value = "customAttributes", alternate = {"CustomAttributes"})
     @Expose

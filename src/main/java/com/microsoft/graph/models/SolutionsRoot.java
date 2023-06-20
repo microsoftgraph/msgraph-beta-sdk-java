@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.VirtualEventsRoot;
 import com.microsoft.graph.requests.BusinessScenarioCollectionPage;
 
 
@@ -47,6 +48,15 @@ public class SolutionsRoot implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.BusinessScenarioCollectionPage businessScenarios;
+
+    /**
+     * The Virtual Events.
+     * 
+     */
+    @SerializedName(value = "virtualEvents", alternate = {"VirtualEvents"})
+    @Expose
+	@Nullable
+    public VirtualEventsRoot virtualEvents;
 
 
     /**

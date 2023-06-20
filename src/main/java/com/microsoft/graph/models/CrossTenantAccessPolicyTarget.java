@@ -40,7 +40,7 @@ public class CrossTenantAccessPolicyTarget implements IJsonBackedObject {
 
     /**
      * The Target.
-     * The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values.
+     * Can be one of the following values:  The unique identifier of the user, group, or application  AllUsers  AllApplications - Refers to any Microsoft cloud application.  Office365 - Includes the applications mentioned as part of the Office365 suite.
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

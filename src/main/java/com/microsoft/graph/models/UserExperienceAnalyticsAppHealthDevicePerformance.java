@@ -63,15 +63,6 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
     public Double deviceAppHealthScore;
 
     /**
-     * The Device App Health Status.
-     * The overall app health status of the device.
-     */
-    @SerializedName(value = "deviceAppHealthStatus", alternate = {"DeviceAppHealthStatus"})
-    @Expose
-	@Nullable
-    public String deviceAppHealthStatus;
-
-    /**
      * The Device Display Name.
      * The name of the device.
      */

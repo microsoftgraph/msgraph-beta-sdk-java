@@ -75,6 +75,15 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
     public Boolean isEnabled;
 
     /**
+     * The Is Privileged.
+     * 
+     */
+    @SerializedName(value = "isPrivileged", alternate = {"IsPrivileged"})
+    @Expose
+	@Nullable
+    public Boolean isPrivileged;
+
+    /**
      * The Resource Scopes.
      * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
      */

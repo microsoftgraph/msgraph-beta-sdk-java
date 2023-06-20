@@ -77,6 +77,26 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
         return new com.microsoft.graph.requests.CloudPcAuditEventRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the CloudPcBulkAction collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CloudPcBulkActionCollectionRequestBuilder bulkActions() {
+        return new com.microsoft.graph.requests.CloudPcBulkActionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("bulkActions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPcBulkAction item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CloudPcBulkActionRequestBuilder bulkActions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcBulkActionRequestBuilder(getRequestUrlWithAdditionalSegment("bulkActions") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the CloudPC collection
      *
      * @return the collection request builder

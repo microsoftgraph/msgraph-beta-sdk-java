@@ -22,9 +22,7 @@ import com.microsoft.graph.requests.UserGetLoggedOnManagedDevicesCollectionRespo
 
 /**
  * The class for the User Get Logged On Managed Devices Collection Page.
- * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
-@Deprecated
 public class UserGetLoggedOnManagedDevicesCollectionPage extends BaseCollectionPage<ManagedDevice, UserGetLoggedOnManagedDevicesCollectionRequestBuilder> {
 
     /**

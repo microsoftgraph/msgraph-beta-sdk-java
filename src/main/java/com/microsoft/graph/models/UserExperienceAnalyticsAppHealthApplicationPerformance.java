@@ -71,15 +71,6 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     public Double appHealthScore;
 
     /**
-     * The App Health Status.
-     * The overall health status of the app.
-     */
-    @SerializedName(value = "appHealthStatus", alternate = {"AppHealthStatus"})
-    @Expose
-	@Nullable
-    public String appHealthStatus;
-
-    /**
      * The App Name.
      * The name of the application.
      */
