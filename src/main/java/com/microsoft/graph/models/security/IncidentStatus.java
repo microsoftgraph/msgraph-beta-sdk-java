@@ -3,12 +3,13 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum IncidentStatus implements ValuedEnum {
     Active("active"),
     Resolved("resolved"),
+    InProgress("inProgress"),
     Redirected("redirected"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    AwaitingAction("awaitingAction");
     public final String value;
     IncidentStatus(final String value) {
         this.value = value;
@@ -21,8 +22,10 @@ public enum IncidentStatus implements ValuedEnum {
         switch(searchValue) {
             case "active": return Active;
             case "resolved": return Resolved;
+            case "inProgress": return InProgress;
             case "redirected": return Redirected;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "awaitingAction": return AwaitingAction;
             default: return null;
         }
     }

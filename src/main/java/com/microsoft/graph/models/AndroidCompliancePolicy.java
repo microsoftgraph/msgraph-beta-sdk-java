@@ -3,69 +3,69 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /** Device threat protection levels for the Device Threat Protection API. */
-    private DeviceThreatProtectionLevel _advancedThreatProtectionRequiredSecurityLevel;
+    private DeviceThreatProtectionLevel advancedThreatProtectionRequiredSecurityLevel;
     /** Condition statement id. */
-    private String _conditionStatementId;
+    private String conditionStatementId;
     /** Require that devices have enabled device threat protection. */
-    private Boolean _deviceThreatProtectionEnabled;
+    private Boolean deviceThreatProtectionEnabled;
     /** Device threat protection levels for the Device Threat Protection API. */
-    private DeviceThreatProtectionLevel _deviceThreatProtectionRequiredSecurityLevel;
+    private DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
     /** Minimum Android security patch level. */
-    private String _minAndroidSecurityPatchLevel;
+    private String minAndroidSecurityPatchLevel;
     /** Maximum Android version. */
-    private String _osMaximumVersion;
+    private String osMaximumVersion;
     /** Minimum Android version. */
-    private String _osMinimumVersion;
+    private String osMinimumVersion;
     /** Number of days before the password expires. Valid values 1 to 365 */
-    private Integer _passwordExpirationDays;
+    private Integer passwordExpirationDays;
     /** Minimum password length. Valid values 4 to 16 */
-    private Integer _passwordMinimumLength;
+    private Integer passwordMinimumLength;
     /** Minutes of inactivity before a password is required. */
-    private Integer _passwordMinutesOfInactivityBeforeLock;
+    private Integer passwordMinutesOfInactivityBeforeLock;
     /** Number of previous passwords to block. Valid values 1 to 24 */
-    private Integer _passwordPreviousPasswordBlockCount;
+    private Integer passwordPreviousPasswordBlockCount;
     /** Require a password to unlock device. */
-    private Boolean _passwordRequired;
+    private Boolean passwordRequired;
     /** Android required password type. */
-    private AndroidRequiredPasswordType _passwordRequiredType;
+    private AndroidRequiredPasswordType passwordRequiredType;
     /** Number of sign-in failures allowed before factory reset. Valid values 1 to 16 */
-    private Integer _passwordSignInFailureCountBeforeFactoryReset;
+    private Integer passwordSignInFailureCountBeforeFactoryReset;
     /** The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. */
-    private AndroidRequiredPasswordComplexity _requiredPasswordComplexity;
+    private AndroidRequiredPasswordComplexity requiredPasswordComplexity;
     /** Require the device to not have the specified apps installed. This collection can contain a maximum of 100 elements. */
-    private java.util.List<AppListItem> _restrictedApps;
+    private java.util.List<AppListItem> restrictedApps;
     /** Block device administrator managed devices. */
-    private Boolean _securityBlockDeviceAdministratorManagedDevices;
+    private Boolean securityBlockDeviceAdministratorManagedDevices;
     /** Devices must not be jailbroken or rooted. */
-    private Boolean _securityBlockJailbrokenDevices;
+    private Boolean securityBlockJailbrokenDevices;
     /** Disable USB debugging on Android devices. */
-    private Boolean _securityDisableUsbDebugging;
+    private Boolean securityDisableUsbDebugging;
     /** Require that devices disallow installation of apps from unknown sources. */
-    private Boolean _securityPreventInstallAppsFromUnknownSources;
+    private Boolean securityPreventInstallAppsFromUnknownSources;
     /** Require the device to pass the Company Portal client app runtime integrity check. */
-    private Boolean _securityRequireCompanyPortalAppIntegrity;
+    private Boolean securityRequireCompanyPortalAppIntegrity;
     /** Require Google Play Services to be installed and enabled on the device. */
-    private Boolean _securityRequireGooglePlayServices;
+    private Boolean securityRequireGooglePlayServices;
     /** Require the device to pass the SafetyNet basic integrity check. */
-    private Boolean _securityRequireSafetyNetAttestationBasicIntegrity;
+    private Boolean securityRequireSafetyNetAttestationBasicIntegrity;
     /** Require the device to pass the SafetyNet certified device check. */
-    private Boolean _securityRequireSafetyNetAttestationCertifiedDevice;
+    private Boolean securityRequireSafetyNetAttestationCertifiedDevice;
     /** Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date. */
-    private Boolean _securityRequireUpToDateSecurityProviders;
+    private Boolean securityRequireUpToDateSecurityProviders;
     /** Require the Android Verify apps feature is turned on. */
-    private Boolean _securityRequireVerifyApps;
+    private Boolean securityRequireVerifyApps;
     /** Require encryption on Android devices. */
-    private Boolean _storageRequireEncryption;
+    private Boolean storageRequireEncryption;
     /**
      * Instantiates a new AndroidCompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.androidCompliancePolicy");
@@ -82,11 +82,11 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
     }
     /**
      * Gets the advancedThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     * @return a deviceThreatProtectionLevel
+     * @return a DeviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
     public DeviceThreatProtectionLevel getAdvancedThreatProtectionRequiredSecurityLevel() {
-        return this._advancedThreatProtectionRequiredSecurityLevel;
+        return this.advancedThreatProtectionRequiredSecurityLevel;
     }
     /**
      * Gets the conditionStatementId property value. Condition statement id.
@@ -94,7 +94,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public String getConditionStatementId() {
-        return this._conditionStatementId;
+        return this.conditionStatementId;
     }
     /**
      * Gets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
@@ -102,52 +102,51 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
-        return this._deviceThreatProtectionEnabled;
+        return this.deviceThreatProtectionEnabled;
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     * @return a deviceThreatProtectionLevel
+     * @return a DeviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
-        return this._deviceThreatProtectionRequiredSecurityLevel;
+        return this.deviceThreatProtectionRequiredSecurityLevel;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("conditionStatementId", (n) -> { currentObject.setConditionStatementId(n.getStringValue()); });
-            this.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
-            this.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("minAndroidSecurityPatchLevel", (n) -> { currentObject.setMinAndroidSecurityPatchLevel(n.getStringValue()); });
-            this.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
-            this.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidRequiredPasswordType.class)); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("requiredPasswordComplexity", (n) -> { currentObject.setRequiredPasswordComplexity(n.getEnumValue(AndroidRequiredPasswordComplexity.class)); });
-            this.put("restrictedApps", (n) -> { currentObject.setRestrictedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("securityBlockDeviceAdministratorManagedDevices", (n) -> { currentObject.setSecurityBlockDeviceAdministratorManagedDevices(n.getBooleanValue()); });
-            this.put("securityBlockJailbrokenDevices", (n) -> { currentObject.setSecurityBlockJailbrokenDevices(n.getBooleanValue()); });
-            this.put("securityDisableUsbDebugging", (n) -> { currentObject.setSecurityDisableUsbDebugging(n.getBooleanValue()); });
-            this.put("securityPreventInstallAppsFromUnknownSources", (n) -> { currentObject.setSecurityPreventInstallAppsFromUnknownSources(n.getBooleanValue()); });
-            this.put("securityRequireCompanyPortalAppIntegrity", (n) -> { currentObject.setSecurityRequireCompanyPortalAppIntegrity(n.getBooleanValue()); });
-            this.put("securityRequireGooglePlayServices", (n) -> { currentObject.setSecurityRequireGooglePlayServices(n.getBooleanValue()); });
-            this.put("securityRequireSafetyNetAttestationBasicIntegrity", (n) -> { currentObject.setSecurityRequireSafetyNetAttestationBasicIntegrity(n.getBooleanValue()); });
-            this.put("securityRequireSafetyNetAttestationCertifiedDevice", (n) -> { currentObject.setSecurityRequireSafetyNetAttestationCertifiedDevice(n.getBooleanValue()); });
-            this.put("securityRequireUpToDateSecurityProviders", (n) -> { currentObject.setSecurityRequireUpToDateSecurityProviders(n.getBooleanValue()); });
-            this.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
-            this.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { this.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("conditionStatementId", (n) -> { this.setConditionStatementId(n.getStringValue()); });
+        deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { this.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { this.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("minAndroidSecurityPatchLevel", (n) -> { this.setMinAndroidSecurityPatchLevel(n.getStringValue()); });
+        deserializerMap.put("osMaximumVersion", (n) -> { this.setOsMaximumVersion(n.getStringValue()); });
+        deserializerMap.put("osMinimumVersion", (n) -> { this.setOsMinimumVersion(n.getStringValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { this.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidRequiredPasswordType.class)); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { this.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("requiredPasswordComplexity", (n) -> { this.setRequiredPasswordComplexity(n.getEnumValue(AndroidRequiredPasswordComplexity.class)); });
+        deserializerMap.put("restrictedApps", (n) -> { this.setRestrictedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("securityBlockDeviceAdministratorManagedDevices", (n) -> { this.setSecurityBlockDeviceAdministratorManagedDevices(n.getBooleanValue()); });
+        deserializerMap.put("securityBlockJailbrokenDevices", (n) -> { this.setSecurityBlockJailbrokenDevices(n.getBooleanValue()); });
+        deserializerMap.put("securityDisableUsbDebugging", (n) -> { this.setSecurityDisableUsbDebugging(n.getBooleanValue()); });
+        deserializerMap.put("securityPreventInstallAppsFromUnknownSources", (n) -> { this.setSecurityPreventInstallAppsFromUnknownSources(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireCompanyPortalAppIntegrity", (n) -> { this.setSecurityRequireCompanyPortalAppIntegrity(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireGooglePlayServices", (n) -> { this.setSecurityRequireGooglePlayServices(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireSafetyNetAttestationBasicIntegrity", (n) -> { this.setSecurityRequireSafetyNetAttestationBasicIntegrity(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireSafetyNetAttestationCertifiedDevice", (n) -> { this.setSecurityRequireSafetyNetAttestationCertifiedDevice(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireUpToDateSecurityProviders", (n) -> { this.setSecurityRequireUpToDateSecurityProviders(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireVerifyApps", (n) -> { this.setSecurityRequireVerifyApps(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireEncryption", (n) -> { this.setStorageRequireEncryption(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
@@ -155,7 +154,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public String getMinAndroidSecurityPatchLevel() {
-        return this._minAndroidSecurityPatchLevel;
+        return this.minAndroidSecurityPatchLevel;
     }
     /**
      * Gets the osMaximumVersion property value. Maximum Android version.
@@ -163,7 +162,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public String getOsMaximumVersion() {
-        return this._osMaximumVersion;
+        return this.osMaximumVersion;
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Android version.
@@ -171,7 +170,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public String getOsMinimumVersion() {
-        return this._osMinimumVersion;
+        return this.osMinimumVersion;
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
@@ -179,7 +178,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this._passwordExpirationDays;
+        return this.passwordExpirationDays;
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
@@ -187,7 +186,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this._passwordMinimumLength;
+        return this.passwordMinimumLength;
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
@@ -195,7 +194,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
-        return this._passwordMinutesOfInactivityBeforeLock;
+        return this.passwordMinutesOfInactivityBeforeLock;
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
@@ -203,7 +202,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this._passwordPreviousPasswordBlockCount;
+        return this.passwordPreviousPasswordBlockCount;
     }
     /**
      * Gets the passwordRequired property value. Require a password to unlock device.
@@ -211,15 +210,15 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getPasswordRequired() {
-        return this._passwordRequired;
+        return this.passwordRequired;
     }
     /**
      * Gets the passwordRequiredType property value. Android required password type.
-     * @return a androidRequiredPasswordType
+     * @return a AndroidRequiredPasswordType
      */
     @javax.annotation.Nullable
     public AndroidRequiredPasswordType getPasswordRequiredType() {
-        return this._passwordRequiredType;
+        return this.passwordRequiredType;
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign-in failures allowed before factory reset. Valid values 1 to 16
@@ -227,15 +226,15 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
-        return this._passwordSignInFailureCountBeforeFactoryReset;
+        return this.passwordSignInFailureCountBeforeFactoryReset;
     }
     /**
      * Gets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
-     * @return a androidRequiredPasswordComplexity
+     * @return a AndroidRequiredPasswordComplexity
      */
     @javax.annotation.Nullable
     public AndroidRequiredPasswordComplexity getRequiredPasswordComplexity() {
-        return this._requiredPasswordComplexity;
+        return this.requiredPasswordComplexity;
     }
     /**
      * Gets the restrictedApps property value. Require the device to not have the specified apps installed. This collection can contain a maximum of 100 elements.
@@ -243,7 +242,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getRestrictedApps() {
-        return this._restrictedApps;
+        return this.restrictedApps;
     }
     /**
      * Gets the securityBlockDeviceAdministratorManagedDevices property value. Block device administrator managed devices.
@@ -251,7 +250,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getSecurityBlockDeviceAdministratorManagedDevices() {
-        return this._securityBlockDeviceAdministratorManagedDevices;
+        return this.securityBlockDeviceAdministratorManagedDevices;
     }
     /**
      * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
@@ -259,7 +258,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getSecurityBlockJailbrokenDevices() {
-        return this._securityBlockJailbrokenDevices;
+        return this.securityBlockJailbrokenDevices;
     }
     /**
      * Gets the securityDisableUsbDebugging property value. Disable USB debugging on Android devices.
@@ -267,7 +266,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getSecurityDisableUsbDebugging() {
-        return this._securityDisableUsbDebugging;
+        return this.securityDisableUsbDebugging;
     }
     /**
      * Gets the securityPreventInstallAppsFromUnknownSources property value. Require that devices disallow installation of apps from unknown sources.
@@ -275,7 +274,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getSecurityPreventInstallAppsFromUnknownSources() {
-        return this._securityPreventInstallAppsFromUnknownSources;
+        return this.securityPreventInstallAppsFromUnknownSources;
     }
     /**
      * Gets the securityRequireCompanyPortalAppIntegrity property value. Require the device to pass the Company Portal client app runtime integrity check.
@@ -283,7 +282,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getSecurityRequireCompanyPortalAppIntegrity() {
-        return this._securityRequireCompanyPortalAppIntegrity;
+        return this.securityRequireCompanyPortalAppIntegrity;
     }
     /**
      * Gets the securityRequireGooglePlayServices property value. Require Google Play Services to be installed and enabled on the device.
@@ -291,7 +290,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getSecurityRequireGooglePlayServices() {
-        return this._securityRequireGooglePlayServices;
+        return this.securityRequireGooglePlayServices;
     }
     /**
      * Gets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the SafetyNet basic integrity check.
@@ -299,7 +298,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getSecurityRequireSafetyNetAttestationBasicIntegrity() {
-        return this._securityRequireSafetyNetAttestationBasicIntegrity;
+        return this.securityRequireSafetyNetAttestationBasicIntegrity;
     }
     /**
      * Gets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the SafetyNet certified device check.
@@ -307,7 +306,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getSecurityRequireSafetyNetAttestationCertifiedDevice() {
-        return this._securityRequireSafetyNetAttestationCertifiedDevice;
+        return this.securityRequireSafetyNetAttestationCertifiedDevice;
     }
     /**
      * Gets the securityRequireUpToDateSecurityProviders property value. Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
@@ -315,7 +314,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getSecurityRequireUpToDateSecurityProviders() {
-        return this._securityRequireUpToDateSecurityProviders;
+        return this.securityRequireUpToDateSecurityProviders;
     }
     /**
      * Gets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
@@ -323,7 +322,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getSecurityRequireVerifyApps() {
-        return this._securityRequireVerifyApps;
+        return this.securityRequireVerifyApps;
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on Android devices.
@@ -331,13 +330,14 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     @javax.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
-        return this._storageRequireEncryption;
+        return this.storageRequireEncryption;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -374,215 +374,242 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the advancedThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
-        this._advancedThreatProtectionRequiredSecurityLevel = value;
+        this.advancedThreatProtectionRequiredSecurityLevel = value;
     }
     /**
      * Sets the conditionStatementId property value. Condition statement id.
      * @param value Value to set for the conditionStatementId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionStatementId(@javax.annotation.Nullable final String value) {
-        this._conditionStatementId = value;
+        this.conditionStatementId = value;
     }
     /**
      * Sets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
      * @param value Value to set for the deviceThreatProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._deviceThreatProtectionEnabled = value;
+        this.deviceThreatProtectionEnabled = value;
     }
     /**
      * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
-        this._deviceThreatProtectionRequiredSecurityLevel = value;
+        this.deviceThreatProtectionRequiredSecurityLevel = value;
     }
     /**
      * Sets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
      * @param value Value to set for the minAndroidSecurityPatchLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinAndroidSecurityPatchLevel(@javax.annotation.Nullable final String value) {
-        this._minAndroidSecurityPatchLevel = value;
+        this.minAndroidSecurityPatchLevel = value;
     }
     /**
      * Sets the osMaximumVersion property value. Maximum Android version.
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
-        this._osMaximumVersion = value;
+        this.osMaximumVersion = value;
     }
     /**
      * Sets the osMinimumVersion property value. Minimum Android version.
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
-        this._osMinimumVersion = value;
+        this.osMinimumVersion = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
-        this._passwordExpirationDays = value;
+        this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinimumLength = value;
+        this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinutesOfInactivityBeforeLock = value;
+        this.passwordMinutesOfInactivityBeforeLock = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
-        this._passwordPreviousPasswordBlockCount = value;
+        this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequired property value. Require a password to unlock device.
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
-        this._passwordRequired = value;
+        this.passwordRequired = value;
     }
     /**
      * Sets the passwordRequiredType property value. Android required password type.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidRequiredPasswordType value) {
-        this._passwordRequiredType = value;
+        this.passwordRequiredType = value;
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign-in failures allowed before factory reset. Valid values 1 to 16
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
-        this._passwordSignInFailureCountBeforeFactoryReset = value;
+        this.passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
      * @param value Value to set for the requiredPasswordComplexity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredPasswordComplexity(@javax.annotation.Nullable final AndroidRequiredPasswordComplexity value) {
-        this._requiredPasswordComplexity = value;
+        this.requiredPasswordComplexity = value;
     }
     /**
      * Sets the restrictedApps property value. Require the device to not have the specified apps installed. This collection can contain a maximum of 100 elements.
      * @param value Value to set for the restrictedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestrictedApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._restrictedApps = value;
+        this.restrictedApps = value;
     }
     /**
      * Sets the securityBlockDeviceAdministratorManagedDevices property value. Block device administrator managed devices.
      * @param value Value to set for the securityBlockDeviceAdministratorManagedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityBlockDeviceAdministratorManagedDevices(@javax.annotation.Nullable final Boolean value) {
-        this._securityBlockDeviceAdministratorManagedDevices = value;
+        this.securityBlockDeviceAdministratorManagedDevices = value;
     }
     /**
      * Sets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
      * @param value Value to set for the securityBlockJailbrokenDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityBlockJailbrokenDevices(@javax.annotation.Nullable final Boolean value) {
-        this._securityBlockJailbrokenDevices = value;
+        this.securityBlockJailbrokenDevices = value;
     }
     /**
      * Sets the securityDisableUsbDebugging property value. Disable USB debugging on Android devices.
      * @param value Value to set for the securityDisableUsbDebugging property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityDisableUsbDebugging(@javax.annotation.Nullable final Boolean value) {
-        this._securityDisableUsbDebugging = value;
+        this.securityDisableUsbDebugging = value;
     }
     /**
      * Sets the securityPreventInstallAppsFromUnknownSources property value. Require that devices disallow installation of apps from unknown sources.
      * @param value Value to set for the securityPreventInstallAppsFromUnknownSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityPreventInstallAppsFromUnknownSources(@javax.annotation.Nullable final Boolean value) {
-        this._securityPreventInstallAppsFromUnknownSources = value;
+        this.securityPreventInstallAppsFromUnknownSources = value;
     }
     /**
      * Sets the securityRequireCompanyPortalAppIntegrity property value. Require the device to pass the Company Portal client app runtime integrity check.
      * @param value Value to set for the securityRequireCompanyPortalAppIntegrity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireCompanyPortalAppIntegrity(@javax.annotation.Nullable final Boolean value) {
-        this._securityRequireCompanyPortalAppIntegrity = value;
+        this.securityRequireCompanyPortalAppIntegrity = value;
     }
     /**
      * Sets the securityRequireGooglePlayServices property value. Require Google Play Services to be installed and enabled on the device.
      * @param value Value to set for the securityRequireGooglePlayServices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireGooglePlayServices(@javax.annotation.Nullable final Boolean value) {
-        this._securityRequireGooglePlayServices = value;
+        this.securityRequireGooglePlayServices = value;
     }
     /**
      * Sets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the SafetyNet basic integrity check.
      * @param value Value to set for the securityRequireSafetyNetAttestationBasicIntegrity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireSafetyNetAttestationBasicIntegrity(@javax.annotation.Nullable final Boolean value) {
-        this._securityRequireSafetyNetAttestationBasicIntegrity = value;
+        this.securityRequireSafetyNetAttestationBasicIntegrity = value;
     }
     /**
      * Sets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the SafetyNet certified device check.
      * @param value Value to set for the securityRequireSafetyNetAttestationCertifiedDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireSafetyNetAttestationCertifiedDevice(@javax.annotation.Nullable final Boolean value) {
-        this._securityRequireSafetyNetAttestationCertifiedDevice = value;
+        this.securityRequireSafetyNetAttestationCertifiedDevice = value;
     }
     /**
      * Sets the securityRequireUpToDateSecurityProviders property value. Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
      * @param value Value to set for the securityRequireUpToDateSecurityProviders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireUpToDateSecurityProviders(@javax.annotation.Nullable final Boolean value) {
-        this._securityRequireUpToDateSecurityProviders = value;
+        this.securityRequireUpToDateSecurityProviders = value;
     }
     /**
      * Sets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
      * @param value Value to set for the securityRequireVerifyApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireVerifyApps(@javax.annotation.Nullable final Boolean value) {
-        this._securityRequireVerifyApps = value;
+        this.securityRequireVerifyApps = value;
     }
     /**
      * Sets the storageRequireEncryption property value. Require encryption on Android devices.
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
-        this._storageRequireEncryption = value;
+        this.storageRequireEncryption = value;
     }
 }

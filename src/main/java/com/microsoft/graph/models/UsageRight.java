@@ -3,25 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class UsageRight extends Entity implements Parsable {
     /** Product id corresponding to the usage right. */
-    private String _catalogId;
+    private String catalogId;
     /** Identifier of the service corresponding to the usage right. */
-    private String _serviceIdentifier;
+    private String serviceIdentifier;
     /** The state property */
-    private UsageRightState _state;
+    private UsageRightState state;
     /**
      * Instantiates a new usageRight and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UsageRight() {
         super();
-        this.setOdataType("#microsoft.graph.usageRight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,20 +37,19 @@ public class UsageRight extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCatalogId() {
-        return this._catalogId;
+        return this.catalogId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UsageRight currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("catalogId", (n) -> { currentObject.setCatalogId(n.getStringValue()); });
-            this.put("serviceIdentifier", (n) -> { currentObject.setServiceIdentifier(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(UsageRightState.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("catalogId", (n) -> { this.setCatalogId(n.getStringValue()); });
+        deserializerMap.put("serviceIdentifier", (n) -> { this.setServiceIdentifier(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(UsageRightState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the serviceIdentifier property value. Identifier of the service corresponding to the usage right.
@@ -60,21 +57,22 @@ public class UsageRight extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getServiceIdentifier() {
-        return this._serviceIdentifier;
+        return this.serviceIdentifier;
     }
     /**
      * Gets the state property value. The state property
-     * @return a usageRightState
+     * @return a UsageRightState
      */
     @javax.annotation.Nullable
     public UsageRightState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,23 +85,26 @@ public class UsageRight extends Entity implements Parsable {
      * @param value Value to set for the catalogId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalogId(@javax.annotation.Nullable final String value) {
-        this._catalogId = value;
+        this.catalogId = value;
     }
     /**
      * Sets the serviceIdentifier property value. Identifier of the service corresponding to the usage right.
      * @param value Value to set for the serviceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceIdentifier(@javax.annotation.Nullable final String value) {
-        this._serviceIdentifier = value;
+        this.serviceIdentifier = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final UsageRightState value) {
-        this._state = value;
+        this.state = value;
     }
 }

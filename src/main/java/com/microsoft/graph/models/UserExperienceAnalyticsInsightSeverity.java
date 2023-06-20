@@ -3,12 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Indicates severity of insights. Possible values are: None, Informational, Warning, Error. */
 public enum UserExperienceAnalyticsInsightSeverity implements ValuedEnum {
+    /** Indicates that the insight severity is none. */
     None("none"),
+    /** Indicates that the insight severity is informational. */
     Informational("informational"),
+    /** Indicates that the insight severity is warning. */
     Warning("warning"),
-    Error("error");
+    /** Indicates that the insight severity is error. */
+    Error("error"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     UserExperienceAnalyticsInsightSeverity(final String value) {
         this.value = value;
@@ -23,6 +29,7 @@ public enum UserExperienceAnalyticsInsightSeverity implements ValuedEnum {
             case "informational": return Informational;
             case "warning": return Warning;
             case "error": return Error;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

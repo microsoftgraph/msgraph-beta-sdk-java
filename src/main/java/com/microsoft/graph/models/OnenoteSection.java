@@ -3,28 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable {
     /** Indicates whether this is the user's default section. Read-only. */
-    private Boolean _isDefault;
+    private Boolean isDefault;
     /** Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web. */
-    private SectionLinks _links;
+    private SectionLinks links;
     /** The collection of pages in the section.  Read-only. Nullable. */
-    private java.util.List<OnenotePage> _pages;
+    private java.util.List<OnenotePage> pages;
     /** The pages endpoint where you can get details for all the pages in the section. Read-only. */
-    private String _pagesUrl;
+    private String pagesUrl;
     /** The notebook that contains the section.  Read-only. */
-    private Notebook _parentNotebook;
+    private Notebook parentNotebook;
     /** The section group that contains the section.  Read-only. */
-    private SectionGroup _parentSectionGroup;
+    private SectionGroup parentSectionGroup;
     /**
      * Instantiates a new onenoteSection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnenoteSection() {
         super();
         this.setOdataType("#microsoft.graph.onenoteSection");
@@ -41,19 +40,18 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnenoteSection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(SectionLinks::createFromDiscriminatorValue)); });
-            this.put("pages", (n) -> { currentObject.setPages(n.getCollectionOfObjectValues(OnenotePage::createFromDiscriminatorValue)); });
-            this.put("pagesUrl", (n) -> { currentObject.setPagesUrl(n.getStringValue()); });
-            this.put("parentNotebook", (n) -> { currentObject.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
-            this.put("parentSectionGroup", (n) -> { currentObject.setParentSectionGroup(n.getObjectValue(SectionGroup::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("links", (n) -> { this.setLinks(n.getObjectValue(SectionLinks::createFromDiscriminatorValue)); });
+        deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(OnenotePage::createFromDiscriminatorValue)); });
+        deserializerMap.put("pagesUrl", (n) -> { this.setPagesUrl(n.getStringValue()); });
+        deserializerMap.put("parentNotebook", (n) -> { this.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentSectionGroup", (n) -> { this.setParentSectionGroup(n.getObjectValue(SectionGroup::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefault property value. Indicates whether this is the user's default section. Read-only.
@@ -61,7 +59,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getIsDefault() {
-        return this._isDefault;
+        return this.isDefault;
     }
     /**
      * Gets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
@@ -69,7 +67,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @javax.annotation.Nullable
     public SectionLinks getLinks() {
-        return this._links;
+        return this.links;
     }
     /**
      * Gets the pages property value. The collection of pages in the section.  Read-only. Nullable.
@@ -77,7 +75,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<OnenotePage> getPages() {
-        return this._pages;
+        return this.pages;
     }
     /**
      * Gets the pagesUrl property value. The pages endpoint where you can get details for all the pages in the section. Read-only.
@@ -85,7 +83,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @javax.annotation.Nullable
     public String getPagesUrl() {
-        return this._pagesUrl;
+        return this.pagesUrl;
     }
     /**
      * Gets the parentNotebook property value. The notebook that contains the section.  Read-only.
@@ -93,7 +91,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @javax.annotation.Nullable
     public Notebook getParentNotebook() {
-        return this._parentNotebook;
+        return this.parentNotebook;
     }
     /**
      * Gets the parentSectionGroup property value. The section group that contains the section.  Read-only.
@@ -101,13 +99,14 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     @javax.annotation.Nullable
     public SectionGroup getParentSectionGroup() {
-        return this._parentSectionGroup;
+        return this.parentSectionGroup;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +122,53 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isDefault = value;
+        this.isDefault = value;
     }
     /**
      * Sets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
      * @param value Value to set for the links property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinks(@javax.annotation.Nullable final SectionLinks value) {
-        this._links = value;
+        this.links = value;
     }
     /**
      * Sets the pages property value. The collection of pages in the section.  Read-only. Nullable.
      * @param value Value to set for the pages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPages(@javax.annotation.Nullable final java.util.List<OnenotePage> value) {
-        this._pages = value;
+        this.pages = value;
     }
     /**
      * Sets the pagesUrl property value. The pages endpoint where you can get details for all the pages in the section. Read-only.
      * @param value Value to set for the pagesUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPagesUrl(@javax.annotation.Nullable final String value) {
-        this._pagesUrl = value;
+        this.pagesUrl = value;
     }
     /**
      * Sets the parentNotebook property value. The notebook that contains the section.  Read-only.
      * @param value Value to set for the parentNotebook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentNotebook(@javax.annotation.Nullable final Notebook value) {
-        this._parentNotebook = value;
+        this.parentNotebook = value;
     }
     /**
      * Sets the parentSectionGroup property value. The section group that contains the section.  Read-only.
      * @param value Value to set for the parentSectionGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentSectionGroup(@javax.annotation.Nullable final SectionGroup value) {
-        this._parentSectionGroup = value;
+        this.parentSectionGroup = value;
     }
 }

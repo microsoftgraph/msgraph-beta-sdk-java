@@ -1,26 +1,23 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.InvokeUserFlowListener;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class AuthenticationListener extends Entity implements Parsable {
     /** The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high. */
-    private Integer _priority;
+    private Integer priority;
     /** Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to. */
-    private AuthenticationSourceFilter _sourceFilter;
+    private AuthenticationSourceFilter sourceFilter;
     /**
      * Instantiates a new authenticationListener and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationListener() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationListener");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,15 +38,14 @@ public class AuthenticationListener extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationListener currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("sourceFilter", (n) -> { currentObject.setSourceFilter(n.getObjectValue(AuthenticationSourceFilter::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("sourceFilter", (n) -> { this.setSourceFilter(n.getObjectValue(AuthenticationSourceFilter::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the priority property value. The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high.
@@ -57,7 +53,7 @@ public class AuthenticationListener extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPriority() {
-        return this._priority;
+        return this.priority;
     }
     /**
      * Gets the sourceFilter property value. Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to.
@@ -65,13 +61,14 @@ public class AuthenticationListener extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AuthenticationSourceFilter getSourceFilter() {
-        return this._sourceFilter;
+        return this.sourceFilter;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -83,15 +80,17 @@ public class AuthenticationListener extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
-        this._priority = value;
+        this.priority = value;
     }
     /**
      * Sets the sourceFilter property value. Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to.
      * @param value Value to set for the sourceFilter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceFilter(@javax.annotation.Nullable final AuthenticationSourceFilter value) {
-        this._sourceFilter = value;
+        this.sourceFilter = value;
     }
 }

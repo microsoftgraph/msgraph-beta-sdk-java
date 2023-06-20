@@ -3,29 +3,33 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implements Parsable {
     /** Update behavior options for macOS software updates. */
-    private MacOSSoftwareUpdateBehavior _allOtherUpdateBehavior;
+    private MacOSSoftwareUpdateBehavior allOtherUpdateBehavior;
     /** Update behavior options for macOS software updates. */
-    private MacOSSoftwareUpdateBehavior _configDataUpdateBehavior;
+    private MacOSSoftwareUpdateBehavior configDataUpdateBehavior;
     /** Update behavior options for macOS software updates. */
-    private MacOSSoftwareUpdateBehavior _criticalUpdateBehavior;
+    private MacOSSoftwareUpdateBehavior criticalUpdateBehavior;
     /** Custom Time windows when updates will be allowed or blocked. This collection can contain a maximum of 20 elements. */
-    private java.util.List<CustomUpdateTimeWindow> _customUpdateTimeWindows;
+    private java.util.List<CustomUpdateTimeWindow> customUpdateTimeWindows;
     /** Update behavior options for macOS software updates. */
-    private MacOSSoftwareUpdateBehavior _firmwareUpdateBehavior;
-    /** Update schedule type for macOS software updates. */
-    private MacOSSoftwareUpdateScheduleType _updateScheduleType;
+    private MacOSSoftwareUpdateBehavior firmwareUpdateBehavior;
+    /** The maximum number of times the system allows the user to postpone an update before its installed. Supported values: 0 - 366. Valid values 0 to 365 */
+    private Integer maxUserDeferralsCount;
+    /** The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue. */
+    private MacOSPriority priority;
+    /** Updatescheduletypefor macOS software updates. */
+    private MacOSSoftwareUpdateScheduleType updateScheduleType;
     /** Minutes indicating UTC offset for each update time window */
-    private Integer _updateTimeWindowUtcOffsetInMinutes;
+    private Integer updateTimeWindowUtcOffsetInMinutes;
     /**
      * Instantiates a new MacOSSoftwareUpdateConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSSoftwareUpdateConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSSoftwareUpdateConfiguration");
@@ -42,27 +46,27 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the allOtherUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a macOSSoftwareUpdateBehavior
+     * @return a MacOSSoftwareUpdateBehavior
      */
     @javax.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getAllOtherUpdateBehavior() {
-        return this._allOtherUpdateBehavior;
+        return this.allOtherUpdateBehavior;
     }
     /**
      * Gets the configDataUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a macOSSoftwareUpdateBehavior
+     * @return a MacOSSoftwareUpdateBehavior
      */
     @javax.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getConfigDataUpdateBehavior() {
-        return this._configDataUpdateBehavior;
+        return this.configDataUpdateBehavior;
     }
     /**
      * Gets the criticalUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a macOSSoftwareUpdateBehavior
+     * @return a MacOSSoftwareUpdateBehavior
      */
     @javax.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getCriticalUpdateBehavior() {
-        return this._criticalUpdateBehavior;
+        return this.criticalUpdateBehavior;
     }
     /**
      * Gets the customUpdateTimeWindows property value. Custom Time windows when updates will be allowed or blocked. This collection can contain a maximum of 20 elements.
@@ -70,40 +74,57 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      */
     @javax.annotation.Nullable
     public java.util.List<CustomUpdateTimeWindow> getCustomUpdateTimeWindows() {
-        return this._customUpdateTimeWindows;
+        return this.customUpdateTimeWindows;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSSoftwareUpdateConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allOtherUpdateBehavior", (n) -> { currentObject.setAllOtherUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
-            this.put("configDataUpdateBehavior", (n) -> { currentObject.setConfigDataUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
-            this.put("criticalUpdateBehavior", (n) -> { currentObject.setCriticalUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
-            this.put("customUpdateTimeWindows", (n) -> { currentObject.setCustomUpdateTimeWindows(n.getCollectionOfObjectValues(CustomUpdateTimeWindow::createFromDiscriminatorValue)); });
-            this.put("firmwareUpdateBehavior", (n) -> { currentObject.setFirmwareUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
-            this.put("updateScheduleType", (n) -> { currentObject.setUpdateScheduleType(n.getEnumValue(MacOSSoftwareUpdateScheduleType.class)); });
-            this.put("updateTimeWindowUtcOffsetInMinutes", (n) -> { currentObject.setUpdateTimeWindowUtcOffsetInMinutes(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allOtherUpdateBehavior", (n) -> { this.setAllOtherUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
+        deserializerMap.put("configDataUpdateBehavior", (n) -> { this.setConfigDataUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
+        deserializerMap.put("criticalUpdateBehavior", (n) -> { this.setCriticalUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
+        deserializerMap.put("customUpdateTimeWindows", (n) -> { this.setCustomUpdateTimeWindows(n.getCollectionOfObjectValues(CustomUpdateTimeWindow::createFromDiscriminatorValue)); });
+        deserializerMap.put("firmwareUpdateBehavior", (n) -> { this.setFirmwareUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
+        deserializerMap.put("maxUserDeferralsCount", (n) -> { this.setMaxUserDeferralsCount(n.getIntegerValue()); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getEnumValue(MacOSPriority.class)); });
+        deserializerMap.put("updateScheduleType", (n) -> { this.setUpdateScheduleType(n.getEnumValue(MacOSSoftwareUpdateScheduleType.class)); });
+        deserializerMap.put("updateTimeWindowUtcOffsetInMinutes", (n) -> { this.setUpdateTimeWindowUtcOffsetInMinutes(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the firmwareUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a macOSSoftwareUpdateBehavior
+     * @return a MacOSSoftwareUpdateBehavior
      */
     @javax.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getFirmwareUpdateBehavior() {
-        return this._firmwareUpdateBehavior;
+        return this.firmwareUpdateBehavior;
     }
     /**
-     * Gets the updateScheduleType property value. Update schedule type for macOS software updates.
-     * @return a macOSSoftwareUpdateScheduleType
+     * Gets the maxUserDeferralsCount property value. The maximum number of times the system allows the user to postpone an update before its installed. Supported values: 0 - 366. Valid values 0 to 365
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getMaxUserDeferralsCount() {
+        return this.maxUserDeferralsCount;
+    }
+    /**
+     * Gets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
+     * @return a macOSPriority
+     */
+    @javax.annotation.Nullable
+    public MacOSPriority getPriority() {
+        return this.priority;
+    }
+    /**
+     * Gets the updateScheduleType property value. Updatescheduletypefor macOS software updates.
+     * @return a MacOSSoftwareUpdateScheduleType
      */
     @javax.annotation.Nullable
     public MacOSSoftwareUpdateScheduleType getUpdateScheduleType() {
-        return this._updateScheduleType;
+        return this.updateScheduleType;
     }
     /**
      * Gets the updateTimeWindowUtcOffsetInMinutes property value. Minutes indicating UTC offset for each update time window
@@ -111,13 +132,14 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      */
     @javax.annotation.Nullable
     public Integer getUpdateTimeWindowUtcOffsetInMinutes() {
-        return this._updateTimeWindowUtcOffsetInMinutes;
+        return this.updateTimeWindowUtcOffsetInMinutes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -126,6 +148,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         writer.writeEnumValue("criticalUpdateBehavior", this.getCriticalUpdateBehavior());
         writer.writeCollectionOfObjectValues("customUpdateTimeWindows", this.getCustomUpdateTimeWindows());
         writer.writeEnumValue("firmwareUpdateBehavior", this.getFirmwareUpdateBehavior());
+        writer.writeIntegerValue("maxUserDeferralsCount", this.getMaxUserDeferralsCount());
+        writer.writeEnumValue("priority", this.getPriority());
         writer.writeEnumValue("updateScheduleType", this.getUpdateScheduleType());
         writer.writeIntegerValue("updateTimeWindowUtcOffsetInMinutes", this.getUpdateTimeWindowUtcOffsetInMinutes());
     }
@@ -134,55 +158,80 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the allOtherUpdateBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllOtherUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
-        this._allOtherUpdateBehavior = value;
+        this.allOtherUpdateBehavior = value;
     }
     /**
      * Sets the configDataUpdateBehavior property value. Update behavior options for macOS software updates.
      * @param value Value to set for the configDataUpdateBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigDataUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
-        this._configDataUpdateBehavior = value;
+        this.configDataUpdateBehavior = value;
     }
     /**
      * Sets the criticalUpdateBehavior property value. Update behavior options for macOS software updates.
      * @param value Value to set for the criticalUpdateBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCriticalUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
-        this._criticalUpdateBehavior = value;
+        this.criticalUpdateBehavior = value;
     }
     /**
      * Sets the customUpdateTimeWindows property value. Custom Time windows when updates will be allowed or blocked. This collection can contain a maximum of 20 elements.
      * @param value Value to set for the customUpdateTimeWindows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomUpdateTimeWindows(@javax.annotation.Nullable final java.util.List<CustomUpdateTimeWindow> value) {
-        this._customUpdateTimeWindows = value;
+        this.customUpdateTimeWindows = value;
     }
     /**
      * Sets the firmwareUpdateBehavior property value. Update behavior options for macOS software updates.
      * @param value Value to set for the firmwareUpdateBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirmwareUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
-        this._firmwareUpdateBehavior = value;
+        this.firmwareUpdateBehavior = value;
     }
     /**
-     * Sets the updateScheduleType property value. Update schedule type for macOS software updates.
+     * Sets the maxUserDeferralsCount property value. The maximum number of times the system allows the user to postpone an update before its installed. Supported values: 0 - 366. Valid values 0 to 365
+     * @param value Value to set for the maxUserDeferralsCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMaxUserDeferralsCount(@javax.annotation.Nullable final Integer value) {
+        this.maxUserDeferralsCount = value;
+    }
+    /**
+     * Sets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
+     * @param value Value to set for the priority property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPriority(@javax.annotation.Nullable final MacOSPriority value) {
+        this.priority = value;
+    }
+    /**
+     * Sets the updateScheduleType property value. Updatescheduletypefor macOS software updates.
      * @param value Value to set for the updateScheduleType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateScheduleType(@javax.annotation.Nullable final MacOSSoftwareUpdateScheduleType value) {
-        this._updateScheduleType = value;
+        this.updateScheduleType = value;
     }
     /**
      * Sets the updateTimeWindowUtcOffsetInMinutes property value. Minutes indicating UTC offset for each update time window
      * @param value Value to set for the updateTimeWindowUtcOffsetInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateTimeWindowUtcOffsetInMinutes(@javax.annotation.Nullable final Integer value) {
-        this._updateTimeWindowUtcOffsetInMinutes = value;
+        this.updateTimeWindowUtcOffsetInMinutes = value;
     }
 }

@@ -3,29 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class OnPremisesAgentGroup extends Entity implements Parsable {
     /** List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable. */
-    private java.util.List<OnPremisesAgent> _agents;
+    private java.util.List<OnPremisesAgent> agents;
     /** Display name of the onPremisesAgentGroup. */
-    private String _displayName;
+    private String displayName;
     /** Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system. */
-    private Boolean _isDefault;
+    private Boolean isDefault;
     /** List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable. */
-    private java.util.List<PublishedResource> _publishedResources;
+    private java.util.List<PublishedResource> publishedResources;
     /** The publishingType property */
-    private OnPremisesPublishingType _publishingType;
+    private OnPremisesPublishingType publishingType;
     /**
      * Instantiates a new onPremisesAgentGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnPremisesAgentGroup() {
         super();
-        this.setOdataType("#microsoft.graph.onPremisesAgentGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,7 +41,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OnPremisesAgent> getAgents() {
-        return this._agents;
+        return this.agents;
     }
     /**
      * Gets the displayName property value. Display name of the onPremisesAgentGroup.
@@ -51,22 +49,21 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnPremisesAgentGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("agents", (n) -> { currentObject.setAgents(n.getCollectionOfObjectValues(OnPremisesAgent::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("publishedResources", (n) -> { currentObject.setPublishedResources(n.getCollectionOfObjectValues(PublishedResource::createFromDiscriminatorValue)); });
-            this.put("publishingType", (n) -> { currentObject.setPublishingType(n.getEnumValue(OnPremisesPublishingType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("agents", (n) -> { this.setAgents(n.getCollectionOfObjectValues(OnPremisesAgent::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("publishedResources", (n) -> { this.setPublishedResources(n.getCollectionOfObjectValues(PublishedResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("publishingType", (n) -> { this.setPublishingType(n.getEnumValue(OnPremisesPublishingType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefault property value. Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
@@ -74,7 +71,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDefault() {
-        return this._isDefault;
+        return this.isDefault;
     }
     /**
      * Gets the publishedResources property value. List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
@@ -82,21 +79,22 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PublishedResource> getPublishedResources() {
-        return this._publishedResources;
+        return this.publishedResources;
     }
     /**
      * Gets the publishingType property value. The publishingType property
-     * @return a onPremisesPublishingType
+     * @return a OnPremisesPublishingType
      */
     @javax.annotation.Nullable
     public OnPremisesPublishingType getPublishingType() {
-        return this._publishingType;
+        return this.publishingType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,39 +109,44 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * @param value Value to set for the agents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgents(@javax.annotation.Nullable final java.util.List<OnPremisesAgent> value) {
-        this._agents = value;
+        this.agents = value;
     }
     /**
      * Sets the displayName property value. Display name of the onPremisesAgentGroup.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the isDefault property value. Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isDefault = value;
+        this.isDefault = value;
     }
     /**
      * Sets the publishedResources property value. List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      * @param value Value to set for the publishedResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedResources(@javax.annotation.Nullable final java.util.List<PublishedResource> value) {
-        this._publishedResources = value;
+        this.publishedResources = value;
     }
     /**
      * Sets the publishingType property value. The publishingType property
      * @param value Value to set for the publishingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingType(@javax.annotation.Nullable final OnPremisesPublishingType value) {
-        this._publishingType = value;
+        this.publishingType = value;
     }
 }

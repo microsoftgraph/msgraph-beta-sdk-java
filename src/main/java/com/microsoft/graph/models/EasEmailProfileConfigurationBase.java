@@ -1,28 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.IosEasEmailProfileConfiguration;
-import com.microsoft.graph.models.Windows10EasEmailProfileConfiguration;
-import com.microsoft.graph.models.WindowsPhoneEASEmailProfileConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EasEmailProfileConfigurationBase extends DeviceConfiguration implements Parsable {
     /** Custom domain name value used while generating an email profile before installing on the device. */
-    private String _customDomainName;
+    private String customDomainName;
     /** UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName. */
-    private DomainNameSource _userDomainNameSource;
+    private DomainNameSource userDomainNameSource;
     /** Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName. */
-    private UsernameSource _usernameAADSource;
+    private UsernameSource usernameAADSource;
     /** Possible values for username source or email source. */
-    private UserEmailSource _usernameSource;
+    private UserEmailSource usernameSource;
     /**
      * Instantiates a new EasEmailProfileConfigurationBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EasEmailProfileConfigurationBase() {
         super();
         this.setOdataType("#microsoft.graph.easEmailProfileConfigurationBase");
@@ -52,21 +49,20 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      */
     @javax.annotation.Nullable
     public String getCustomDomainName() {
-        return this._customDomainName;
+        return this.customDomainName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EasEmailProfileConfigurationBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("customDomainName", (n) -> { currentObject.setCustomDomainName(n.getStringValue()); });
-            this.put("userDomainNameSource", (n) -> { currentObject.setUserDomainNameSource(n.getEnumValue(DomainNameSource.class)); });
-            this.put("usernameAADSource", (n) -> { currentObject.setUsernameAADSource(n.getEnumValue(UsernameSource.class)); });
-            this.put("usernameSource", (n) -> { currentObject.setUsernameSource(n.getEnumValue(UserEmailSource.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("customDomainName", (n) -> { this.setCustomDomainName(n.getStringValue()); });
+        deserializerMap.put("userDomainNameSource", (n) -> { this.setUserDomainNameSource(n.getEnumValue(DomainNameSource.class)); });
+        deserializerMap.put("usernameAADSource", (n) -> { this.setUsernameAADSource(n.getEnumValue(UsernameSource.class)); });
+        deserializerMap.put("usernameSource", (n) -> { this.setUsernameSource(n.getEnumValue(UserEmailSource.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
@@ -74,7 +70,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      */
     @javax.annotation.Nullable
     public DomainNameSource getUserDomainNameSource() {
-        return this._userDomainNameSource;
+        return this.userDomainNameSource;
     }
     /**
      * Gets the usernameAADSource property value. Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
@@ -82,21 +78,22 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      */
     @javax.annotation.Nullable
     public UsernameSource getUsernameAADSource() {
-        return this._usernameAADSource;
+        return this.usernameAADSource;
     }
     /**
      * Gets the usernameSource property value. Possible values for username source or email source.
-     * @return a userEmailSource
+     * @return a UserEmailSource
      */
     @javax.annotation.Nullable
     public UserEmailSource getUsernameSource() {
-        return this._usernameSource;
+        return this.usernameSource;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,31 +107,35 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      * @param value Value to set for the customDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDomainName(@javax.annotation.Nullable final String value) {
-        this._customDomainName = value;
+        this.customDomainName = value;
     }
     /**
      * Sets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
      * @param value Value to set for the userDomainNameSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDomainNameSource(@javax.annotation.Nullable final DomainNameSource value) {
-        this._userDomainNameSource = value;
+        this.userDomainNameSource = value;
     }
     /**
      * Sets the usernameAADSource property value. Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
      * @param value Value to set for the usernameAADSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameAADSource(@javax.annotation.Nullable final UsernameSource value) {
-        this._usernameAADSource = value;
+        this.usernameAADSource = value;
     }
     /**
      * Sets the usernameSource property value. Possible values for username source or email source.
      * @param value Value to set for the usernameSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameSource(@javax.annotation.Nullable final UserEmailSource value) {
-        this._usernameSource = value;
+        this.usernameSource = value;
     }
 }

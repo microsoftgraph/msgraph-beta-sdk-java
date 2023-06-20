@@ -5,46 +5,45 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The code property */
-    private SynchronizationStatusCode _code;
+    private SynchronizationStatusCode code;
     /** Number of consecutive times this job failed. */
-    private Long _countSuccessiveCompleteFailures;
+    private Long countSuccessiveCompleteFailures;
     /** true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors. */
-    private Boolean _escrowsPruned;
+    private Boolean escrowsPruned;
     /** Details of the last execution of the job. */
-    private SynchronizationTaskExecution _lastExecution;
+    private SynchronizationTaskExecution lastExecution;
     /** Details of the last execution of this job, which didn't have any errors. */
-    private SynchronizationTaskExecution _lastSuccessfulExecution;
+    private SynchronizationTaskExecution lastSuccessfulExecution;
     /** Details of the last execution of the job, which exported objects into the target directory. */
-    private SynchronizationTaskExecution _lastSuccessfulExecutionWithExports;
+    private SynchronizationTaskExecution lastSuccessfulExecutionWithExports;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Details of the progress of a job toward completion. */
-    private java.util.List<SynchronizationProgress> _progress;
+    private java.util.List<SynchronizationProgress> progress;
     /** If job is in quarantine, quarantine details. */
-    private SynchronizationQuarantine _quarantine;
+    private SynchronizationQuarantine quarantine;
     /** The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _steadyStateFirstAchievedTime;
+    private OffsetDateTime steadyStateFirstAchievedTime;
     /** The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _steadyStateLastAchievedTime;
+    private OffsetDateTime steadyStateLastAchievedTime;
     /** Count of synchronized objects, listed by object type. */
-    private java.util.List<StringKeyLongValuePair> _synchronizedEntryCountByType;
+    private java.util.List<StringKeyLongValuePair> synchronizedEntryCountByType;
     /** In the event of an error, the URL with the troubleshooting steps for the issue. */
-    private String _troubleshootingUrl;
+    private String troubleshootingUrl;
     /**
      * Instantiates a new synchronizationStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationStatus() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.synchronizationStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,15 +61,15 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the code property value. The code property
-     * @return a synchronizationStatusCode
+     * @return a SynchronizationStatusCode
      */
     @javax.annotation.Nullable
     public SynchronizationStatusCode getCode() {
-        return this._code;
+        return this.code;
     }
     /**
      * Gets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
@@ -78,7 +77,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getCountSuccessiveCompleteFailures() {
-        return this._countSuccessiveCompleteFailures;
+        return this.countSuccessiveCompleteFailures;
     }
     /**
      * Gets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
@@ -86,30 +85,29 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getEscrowsPruned() {
-        return this._escrowsPruned;
+        return this.escrowsPruned;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SynchronizationStatus currentObject = this;
-        return new HashMap<>(13) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getEnumValue(SynchronizationStatusCode.class)); });
-            this.put("countSuccessiveCompleteFailures", (n) -> { currentObject.setCountSuccessiveCompleteFailures(n.getLongValue()); });
-            this.put("escrowsPruned", (n) -> { currentObject.setEscrowsPruned(n.getBooleanValue()); });
-            this.put("lastExecution", (n) -> { currentObject.setLastExecution(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
-            this.put("lastSuccessfulExecution", (n) -> { currentObject.setLastSuccessfulExecution(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
-            this.put("lastSuccessfulExecutionWithExports", (n) -> { currentObject.setLastSuccessfulExecutionWithExports(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("progress", (n) -> { currentObject.setProgress(n.getCollectionOfObjectValues(SynchronizationProgress::createFromDiscriminatorValue)); });
-            this.put("quarantine", (n) -> { currentObject.setQuarantine(n.getObjectValue(SynchronizationQuarantine::createFromDiscriminatorValue)); });
-            this.put("steadyStateFirstAchievedTime", (n) -> { currentObject.setSteadyStateFirstAchievedTime(n.getOffsetDateTimeValue()); });
-            this.put("steadyStateLastAchievedTime", (n) -> { currentObject.setSteadyStateLastAchievedTime(n.getOffsetDateTimeValue()); });
-            this.put("synchronizedEntryCountByType", (n) -> { currentObject.setSynchronizedEntryCountByType(n.getCollectionOfObjectValues(StringKeyLongValuePair::createFromDiscriminatorValue)); });
-            this.put("troubleshootingUrl", (n) -> { currentObject.setTroubleshootingUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
+        deserializerMap.put("code", (n) -> { this.setCode(n.getEnumValue(SynchronizationStatusCode.class)); });
+        deserializerMap.put("countSuccessiveCompleteFailures", (n) -> { this.setCountSuccessiveCompleteFailures(n.getLongValue()); });
+        deserializerMap.put("escrowsPruned", (n) -> { this.setEscrowsPruned(n.getBooleanValue()); });
+        deserializerMap.put("lastExecution", (n) -> { this.setLastExecution(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSuccessfulExecution", (n) -> { this.setLastSuccessfulExecution(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSuccessfulExecutionWithExports", (n) -> { this.setLastSuccessfulExecutionWithExports(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("progress", (n) -> { this.setProgress(n.getCollectionOfObjectValues(SynchronizationProgress::createFromDiscriminatorValue)); });
+        deserializerMap.put("quarantine", (n) -> { this.setQuarantine(n.getObjectValue(SynchronizationQuarantine::createFromDiscriminatorValue)); });
+        deserializerMap.put("steadyStateFirstAchievedTime", (n) -> { this.setSteadyStateFirstAchievedTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("steadyStateLastAchievedTime", (n) -> { this.setSteadyStateLastAchievedTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("synchronizedEntryCountByType", (n) -> { this.setSynchronizedEntryCountByType(n.getCollectionOfObjectValues(StringKeyLongValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("troubleshootingUrl", (n) -> { this.setTroubleshootingUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastExecution property value. Details of the last execution of the job.
@@ -117,7 +115,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SynchronizationTaskExecution getLastExecution() {
-        return this._lastExecution;
+        return this.lastExecution;
     }
     /**
      * Gets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
@@ -125,7 +123,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SynchronizationTaskExecution getLastSuccessfulExecution() {
-        return this._lastSuccessfulExecution;
+        return this.lastSuccessfulExecution;
     }
     /**
      * Gets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
@@ -133,7 +131,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SynchronizationTaskExecution getLastSuccessfulExecutionWithExports() {
-        return this._lastSuccessfulExecutionWithExports;
+        return this.lastSuccessfulExecutionWithExports;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -141,7 +139,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the progress property value. Details of the progress of a job toward completion.
@@ -149,7 +147,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SynchronizationProgress> getProgress() {
-        return this._progress;
+        return this.progress;
     }
     /**
      * Gets the quarantine property value. If job is in quarantine, quarantine details.
@@ -157,7 +155,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SynchronizationQuarantine getQuarantine() {
-        return this._quarantine;
+        return this.quarantine;
     }
     /**
      * Gets the steadyStateFirstAchievedTime property value. The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -165,7 +163,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getSteadyStateFirstAchievedTime() {
-        return this._steadyStateFirstAchievedTime;
+        return this.steadyStateFirstAchievedTime;
     }
     /**
      * Gets the steadyStateLastAchievedTime property value. The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -173,7 +171,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getSteadyStateLastAchievedTime() {
-        return this._steadyStateLastAchievedTime;
+        return this.steadyStateLastAchievedTime;
     }
     /**
      * Gets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
@@ -181,7 +179,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<StringKeyLongValuePair> getSynchronizedEntryCountByType() {
-        return this._synchronizedEntryCountByType;
+        return this.synchronizedEntryCountByType;
     }
     /**
      * Gets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
@@ -189,13 +187,14 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTroubleshootingUrl() {
-        return this._troubleshootingUrl;
+        return this.troubleshootingUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("code", this.getCode());
@@ -218,111 +217,125 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the code property value. The code property
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final SynchronizationStatusCode value) {
-        this._code = value;
+        this.code = value;
     }
     /**
      * Sets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
      * @param value Value to set for the countSuccessiveCompleteFailures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountSuccessiveCompleteFailures(@javax.annotation.Nullable final Long value) {
-        this._countSuccessiveCompleteFailures = value;
+        this.countSuccessiveCompleteFailures = value;
     }
     /**
      * Sets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      * @param value Value to set for the escrowsPruned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEscrowsPruned(@javax.annotation.Nullable final Boolean value) {
-        this._escrowsPruned = value;
+        this.escrowsPruned = value;
     }
     /**
      * Sets the lastExecution property value. Details of the last execution of the job.
      * @param value Value to set for the lastExecution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastExecution(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
-        this._lastExecution = value;
+        this.lastExecution = value;
     }
     /**
      * Sets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
      * @param value Value to set for the lastSuccessfulExecution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSuccessfulExecution(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
-        this._lastSuccessfulExecution = value;
+        this.lastSuccessfulExecution = value;
     }
     /**
      * Sets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
      * @param value Value to set for the lastSuccessfulExecutionWithExports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSuccessfulExecutionWithExports(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
-        this._lastSuccessfulExecutionWithExports = value;
+        this.lastSuccessfulExecutionWithExports = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the progress property value. Details of the progress of a job toward completion.
      * @param value Value to set for the progress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgress(@javax.annotation.Nullable final java.util.List<SynchronizationProgress> value) {
-        this._progress = value;
+        this.progress = value;
     }
     /**
      * Sets the quarantine property value. If job is in quarantine, quarantine details.
      * @param value Value to set for the quarantine property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuarantine(@javax.annotation.Nullable final SynchronizationQuarantine value) {
-        this._quarantine = value;
+        this.quarantine = value;
     }
     /**
      * Sets the steadyStateFirstAchievedTime property value. The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the steadyStateFirstAchievedTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSteadyStateFirstAchievedTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._steadyStateFirstAchievedTime = value;
+        this.steadyStateFirstAchievedTime = value;
     }
     /**
      * Sets the steadyStateLastAchievedTime property value. The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the steadyStateLastAchievedTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSteadyStateLastAchievedTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._steadyStateLastAchievedTime = value;
+        this.steadyStateLastAchievedTime = value;
     }
     /**
      * Sets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
      * @param value Value to set for the synchronizedEntryCountByType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSynchronizedEntryCountByType(@javax.annotation.Nullable final java.util.List<StringKeyLongValuePair> value) {
-        this._synchronizedEntryCountByType = value;
+        this.synchronizedEntryCountByType = value;
     }
     /**
      * Sets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
      * @param value Value to set for the troubleshootingUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTroubleshootingUrl(@javax.annotation.Nullable final String value) {
-        this._troubleshootingUrl = value;
+        this.troubleshootingUrl = value;
     }
 }

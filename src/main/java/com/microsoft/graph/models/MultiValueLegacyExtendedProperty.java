@@ -3,21 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class MultiValueLegacyExtendedProperty extends Entity implements Parsable {
     /** A collection of property values. */
-    private java.util.List<String> _value;
+    private java.util.List<String> value;
     /**
      * Instantiates a new multiValueLegacyExtendedProperty and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MultiValueLegacyExtendedProperty() {
         super();
-        this.setOdataType("#microsoft.graph.multiValueLegacyExtendedProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,14 +29,13 @@ public class MultiValueLegacyExtendedProperty extends Entity implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MultiValueLegacyExtendedProperty currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. A collection of property values.
@@ -46,13 +43,14 @@ public class MultiValueLegacyExtendedProperty extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<String> getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,7 +61,8 @@ public class MultiValueLegacyExtendedProperty extends Entity implements Parsable
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._value = value;
+        this.value = value;
     }
 }

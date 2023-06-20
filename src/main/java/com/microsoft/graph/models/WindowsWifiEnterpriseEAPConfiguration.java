@@ -3,69 +3,69 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration implements Parsable {
     /** Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. */
-    private WiFiAuthenticationMethod _authenticationMethod;
+    private WiFiAuthenticationMethod authenticationMethod;
     /** Specify the number of seconds for the client to wait after an authentication attempt before failing. Valid range 1-3600. */
-    private Integer _authenticationPeriodInSeconds;
+    private Integer authenticationPeriodInSeconds;
     /** Specify the number of seconds between a failed authentication and the next authentication attempt. Valid range 1-3600. */
-    private Integer _authenticationRetryDelayPeriodInSeconds;
-    /** Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you’re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. */
-    private WifiAuthenticationType _authenticationType;
-    /** Specify whether to cache user credentials on the device so that users don’t need to keep entering them each time they connect. */
-    private Boolean _cacheCredentials;
+    private Integer authenticationRetryDelayPeriodInSeconds;
+    /** Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. */
+    private WifiAuthenticationType authenticationType;
+    /** Specify whether to cache user credentials on the device so that users dont need to keep entering them each time they connect. */
+    private Boolean cacheCredentials;
     /** Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP. */
-    private Boolean _disableUserPromptForServerValidation;
+    private Boolean disableUserPromptForServerValidation;
     /** Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600. */
-    private Integer _eapolStartPeriodInSeconds;
+    private Integer eapolStartPeriodInSeconds;
     /** Extensible Authentication Protocol (EAP) configuration types. */
-    private EapType _eapType;
+    private EapType eapType;
     /** Specify whether the wifi connection should enable pairwise master key caching. */
-    private Boolean _enablePairwiseMasterKeyCaching;
+    private Boolean enablePairwiseMasterKeyCaching;
     /** Specify whether pre-authentication should be enabled. */
-    private Boolean _enablePreAuthentication;
+    private Boolean enablePreAuthentication;
     /** Specify identity certificate for client authentication. */
-    private WindowsCertificateProfileBase _identityCertificateForClientAuthentication;
+    private WindowsCertificateProfileBase identityCertificateForClientAuthentication;
     /** Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. */
-    private NonEapAuthenticationMethodForEapTtlsType _innerAuthenticationProtocolForEAPTTLS;
+    private NonEapAuthenticationMethodForEapTtlsType innerAuthenticationProtocolForEAPTTLS;
     /** Specify the maximum authentication failures allowed for a set of credentials. Valid range 1-100. */
-    private Integer _maximumAuthenticationFailures;
+    private Integer maximumAuthenticationFailures;
     /** Specify maximum authentication timeout (in seconds).  Valid range: 1-120 */
-    private Integer _maximumAuthenticationTimeoutInSeconds;
+    private Integer maximumAuthenticationTimeoutInSeconds;
     /** Specifiy the maximum number of EAPOL (Extensible Authentication Protocol over LAN) Start messages to be sent before returning failure. Valid range 1-100. */
-    private Integer _maximumEAPOLStartMessages;
+    private Integer maximumEAPOLStartMessages;
     /** Specify maximum number of pairwise master keys in cache.  Valid range: 1-255 */
-    private Integer _maximumNumberOfPairwiseMasterKeysInCache;
+    private Integer maximumNumberOfPairwiseMasterKeysInCache;
     /** Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440 */
-    private Integer _maximumPairwiseMasterKeyCacheTimeInMinutes;
+    private Integer maximumPairwiseMasterKeyCacheTimeInMinutes;
     /** Specify maximum pre-authentication attempts.  Valid range: 1-16 */
-    private Integer _maximumPreAuthenticationAttempts;
+    private Integer maximumPreAuthenticationAttempts;
     /** Specify the network single sign on type. Possible values are: disabled, prelogon, postlogon. */
-    private NetworkSingleSignOnType _networkSingleSignOn;
+    private NetworkSingleSignOnType networkSingleSignOn;
     /** Specify the string to replace usernames for privacy when using EAP TTLS or PEAP. */
-    private String _outerIdentityPrivacyTemporaryValue;
+    private String outerIdentityPrivacyTemporaryValue;
     /** Specify whether to enable verification of server's identity by validating the certificate when EAP type is selected as PEAP. */
-    private Boolean _performServerValidation;
+    private Boolean performServerValidation;
     /** Specify whether the wifi connection should prompt for additional authentication credentials. */
-    private Boolean _promptForAdditionalAuthenticationCredentials;
+    private Boolean promptForAdditionalAuthenticationCredentials;
     /** Specify whether to enable cryptographic binding when EAP type is selected as PEAP. */
-    private Boolean _requireCryptographicBinding;
+    private Boolean requireCryptographicBinding;
     /** Specify root certificate for client validation. */
-    private Windows81TrustedRootCertificate _rootCertificateForClientValidation;
+    private Windows81TrustedRootCertificate rootCertificateForClientValidation;
     /** Specify root certificate for server validation. This collection can contain a maximum of 500 elements. */
-    private java.util.List<Windows81TrustedRootCertificate> _rootCertificatesForServerValidation;
+    private java.util.List<Windows81TrustedRootCertificate> rootCertificatesForServerValidation;
     /** Specify trusted server certificate names. */
-    private java.util.List<String> _trustedServerCertificateNames;
-    /** Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to ​Disabled. */
-    private Boolean _userBasedVirtualLan;
+    private java.util.List<String> trustedServerCertificateNames;
+    /** Specifiy whether to change the virtual LAN used by the device based on the users credentials. Cannot be used when NetworkSingleSignOnType is set to Disabled. */
+    private Boolean userBasedVirtualLan;
     /**
      * Instantiates a new WindowsWifiEnterpriseEAPConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsWifiEnterpriseEAPConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsWifiEnterpriseEAPConfiguration");
@@ -86,7 +86,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public WiFiAuthenticationMethod getAuthenticationMethod() {
-        return this._authenticationMethod;
+        return this.authenticationMethod;
     }
     /**
      * Gets the authenticationPeriodInSeconds property value. Specify the number of seconds for the client to wait after an authentication attempt before failing. Valid range 1-3600.
@@ -94,7 +94,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Integer getAuthenticationPeriodInSeconds() {
-        return this._authenticationPeriodInSeconds;
+        return this.authenticationPeriodInSeconds;
     }
     /**
      * Gets the authenticationRetryDelayPeriodInSeconds property value. Specify the number of seconds between a failed authentication and the next authentication attempt. Valid range 1-3600.
@@ -102,23 +102,23 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Integer getAuthenticationRetryDelayPeriodInSeconds() {
-        return this._authenticationRetryDelayPeriodInSeconds;
+        return this.authenticationRetryDelayPeriodInSeconds;
     }
     /**
-     * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you’re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
+     * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
      * @return a wifiAuthenticationType
      */
     @javax.annotation.Nullable
     public WifiAuthenticationType getAuthenticationType() {
-        return this._authenticationType;
+        return this.authenticationType;
     }
     /**
-     * Gets the cacheCredentials property value. Specify whether to cache user credentials on the device so that users don’t need to keep entering them each time they connect.
+     * Gets the cacheCredentials property value. Specify whether to cache user credentials on the device so that users dont need to keep entering them each time they connect.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getCacheCredentials() {
-        return this._cacheCredentials;
+        return this.cacheCredentials;
     }
     /**
      * Gets the disableUserPromptForServerValidation property value. Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP.
@@ -126,7 +126,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Boolean getDisableUserPromptForServerValidation() {
-        return this._disableUserPromptForServerValidation;
+        return this.disableUserPromptForServerValidation;
     }
     /**
      * Gets the eapolStartPeriodInSeconds property value. Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600.
@@ -134,15 +134,15 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Integer getEapolStartPeriodInSeconds() {
-        return this._eapolStartPeriodInSeconds;
+        return this.eapolStartPeriodInSeconds;
     }
     /**
      * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
-     * @return a eapType
+     * @return a EapType
      */
     @javax.annotation.Nullable
     public EapType getEapType() {
-        return this._eapType;
+        return this.eapType;
     }
     /**
      * Gets the enablePairwiseMasterKeyCaching property value. Specify whether the wifi connection should enable pairwise master key caching.
@@ -150,7 +150,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Boolean getEnablePairwiseMasterKeyCaching() {
-        return this._enablePairwiseMasterKeyCaching;
+        return this.enablePairwiseMasterKeyCaching;
     }
     /**
      * Gets the enablePreAuthentication property value. Specify whether pre-authentication should be enabled.
@@ -158,44 +158,43 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Boolean getEnablePreAuthentication() {
-        return this._enablePreAuthentication;
+        return this.enablePreAuthentication;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsWifiEnterpriseEAPConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
-            this.put("authenticationPeriodInSeconds", (n) -> { currentObject.setAuthenticationPeriodInSeconds(n.getIntegerValue()); });
-            this.put("authenticationRetryDelayPeriodInSeconds", (n) -> { currentObject.setAuthenticationRetryDelayPeriodInSeconds(n.getIntegerValue()); });
-            this.put("authenticationType", (n) -> { currentObject.setAuthenticationType(n.getEnumValue(WifiAuthenticationType.class)); });
-            this.put("cacheCredentials", (n) -> { currentObject.setCacheCredentials(n.getBooleanValue()); });
-            this.put("disableUserPromptForServerValidation", (n) -> { currentObject.setDisableUserPromptForServerValidation(n.getBooleanValue()); });
-            this.put("eapolStartPeriodInSeconds", (n) -> { currentObject.setEapolStartPeriodInSeconds(n.getIntegerValue()); });
-            this.put("eapType", (n) -> { currentObject.setEapType(n.getEnumValue(EapType.class)); });
-            this.put("enablePairwiseMasterKeyCaching", (n) -> { currentObject.setEnablePairwiseMasterKeyCaching(n.getBooleanValue()); });
-            this.put("enablePreAuthentication", (n) -> { currentObject.setEnablePreAuthentication(n.getBooleanValue()); });
-            this.put("identityCertificateForClientAuthentication", (n) -> { currentObject.setIdentityCertificateForClientAuthentication(n.getObjectValue(WindowsCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("innerAuthenticationProtocolForEAPTTLS", (n) -> { currentObject.setInnerAuthenticationProtocolForEAPTTLS(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType.class)); });
-            this.put("maximumAuthenticationFailures", (n) -> { currentObject.setMaximumAuthenticationFailures(n.getIntegerValue()); });
-            this.put("maximumAuthenticationTimeoutInSeconds", (n) -> { currentObject.setMaximumAuthenticationTimeoutInSeconds(n.getIntegerValue()); });
-            this.put("maximumEAPOLStartMessages", (n) -> { currentObject.setMaximumEAPOLStartMessages(n.getIntegerValue()); });
-            this.put("maximumNumberOfPairwiseMasterKeysInCache", (n) -> { currentObject.setMaximumNumberOfPairwiseMasterKeysInCache(n.getIntegerValue()); });
-            this.put("maximumPairwiseMasterKeyCacheTimeInMinutes", (n) -> { currentObject.setMaximumPairwiseMasterKeyCacheTimeInMinutes(n.getIntegerValue()); });
-            this.put("maximumPreAuthenticationAttempts", (n) -> { currentObject.setMaximumPreAuthenticationAttempts(n.getIntegerValue()); });
-            this.put("networkSingleSignOn", (n) -> { currentObject.setNetworkSingleSignOn(n.getEnumValue(NetworkSingleSignOnType.class)); });
-            this.put("outerIdentityPrivacyTemporaryValue", (n) -> { currentObject.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
-            this.put("performServerValidation", (n) -> { currentObject.setPerformServerValidation(n.getBooleanValue()); });
-            this.put("promptForAdditionalAuthenticationCredentials", (n) -> { currentObject.setPromptForAdditionalAuthenticationCredentials(n.getBooleanValue()); });
-            this.put("requireCryptographicBinding", (n) -> { currentObject.setRequireCryptographicBinding(n.getBooleanValue()); });
-            this.put("rootCertificateForClientValidation", (n) -> { currentObject.setRootCertificateForClientValidation(n.getObjectValue(Windows81TrustedRootCertificate::createFromDiscriminatorValue)); });
-            this.put("rootCertificatesForServerValidation", (n) -> { currentObject.setRootCertificatesForServerValidation(n.getCollectionOfObjectValues(Windows81TrustedRootCertificate::createFromDiscriminatorValue)); });
-            this.put("trustedServerCertificateNames", (n) -> { currentObject.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("userBasedVirtualLan", (n) -> { currentObject.setUserBasedVirtualLan(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
+        deserializerMap.put("authenticationPeriodInSeconds", (n) -> { this.setAuthenticationPeriodInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("authenticationRetryDelayPeriodInSeconds", (n) -> { this.setAuthenticationRetryDelayPeriodInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("authenticationType", (n) -> { this.setAuthenticationType(n.getEnumValue(WifiAuthenticationType.class)); });
+        deserializerMap.put("cacheCredentials", (n) -> { this.setCacheCredentials(n.getBooleanValue()); });
+        deserializerMap.put("disableUserPromptForServerValidation", (n) -> { this.setDisableUserPromptForServerValidation(n.getBooleanValue()); });
+        deserializerMap.put("eapolStartPeriodInSeconds", (n) -> { this.setEapolStartPeriodInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("eapType", (n) -> { this.setEapType(n.getEnumValue(EapType.class)); });
+        deserializerMap.put("enablePairwiseMasterKeyCaching", (n) -> { this.setEnablePairwiseMasterKeyCaching(n.getBooleanValue()); });
+        deserializerMap.put("enablePreAuthentication", (n) -> { this.setEnablePreAuthentication(n.getBooleanValue()); });
+        deserializerMap.put("identityCertificateForClientAuthentication", (n) -> { this.setIdentityCertificateForClientAuthentication(n.getObjectValue(WindowsCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("innerAuthenticationProtocolForEAPTTLS", (n) -> { this.setInnerAuthenticationProtocolForEAPTTLS(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType.class)); });
+        deserializerMap.put("maximumAuthenticationFailures", (n) -> { this.setMaximumAuthenticationFailures(n.getIntegerValue()); });
+        deserializerMap.put("maximumAuthenticationTimeoutInSeconds", (n) -> { this.setMaximumAuthenticationTimeoutInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("maximumEAPOLStartMessages", (n) -> { this.setMaximumEAPOLStartMessages(n.getIntegerValue()); });
+        deserializerMap.put("maximumNumberOfPairwiseMasterKeysInCache", (n) -> { this.setMaximumNumberOfPairwiseMasterKeysInCache(n.getIntegerValue()); });
+        deserializerMap.put("maximumPairwiseMasterKeyCacheTimeInMinutes", (n) -> { this.setMaximumPairwiseMasterKeyCacheTimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("maximumPreAuthenticationAttempts", (n) -> { this.setMaximumPreAuthenticationAttempts(n.getIntegerValue()); });
+        deserializerMap.put("networkSingleSignOn", (n) -> { this.setNetworkSingleSignOn(n.getEnumValue(NetworkSingleSignOnType.class)); });
+        deserializerMap.put("outerIdentityPrivacyTemporaryValue", (n) -> { this.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
+        deserializerMap.put("performServerValidation", (n) -> { this.setPerformServerValidation(n.getBooleanValue()); });
+        deserializerMap.put("promptForAdditionalAuthenticationCredentials", (n) -> { this.setPromptForAdditionalAuthenticationCredentials(n.getBooleanValue()); });
+        deserializerMap.put("requireCryptographicBinding", (n) -> { this.setRequireCryptographicBinding(n.getBooleanValue()); });
+        deserializerMap.put("rootCertificateForClientValidation", (n) -> { this.setRootCertificateForClientValidation(n.getObjectValue(Windows81TrustedRootCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("rootCertificatesForServerValidation", (n) -> { this.setRootCertificatesForServerValidation(n.getCollectionOfObjectValues(Windows81TrustedRootCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("trustedServerCertificateNames", (n) -> { this.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("userBasedVirtualLan", (n) -> { this.setUserBasedVirtualLan(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identityCertificateForClientAuthentication property value. Specify identity certificate for client authentication.
@@ -203,7 +202,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public WindowsCertificateProfileBase getIdentityCertificateForClientAuthentication() {
-        return this._identityCertificateForClientAuthentication;
+        return this.identityCertificateForClientAuthentication;
     }
     /**
      * Gets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
@@ -211,7 +210,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEAPTTLS() {
-        return this._innerAuthenticationProtocolForEAPTTLS;
+        return this.innerAuthenticationProtocolForEAPTTLS;
     }
     /**
      * Gets the maximumAuthenticationFailures property value. Specify the maximum authentication failures allowed for a set of credentials. Valid range 1-100.
@@ -219,7 +218,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Integer getMaximumAuthenticationFailures() {
-        return this._maximumAuthenticationFailures;
+        return this.maximumAuthenticationFailures;
     }
     /**
      * Gets the maximumAuthenticationTimeoutInSeconds property value. Specify maximum authentication timeout (in seconds).  Valid range: 1-120
@@ -227,7 +226,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Integer getMaximumAuthenticationTimeoutInSeconds() {
-        return this._maximumAuthenticationTimeoutInSeconds;
+        return this.maximumAuthenticationTimeoutInSeconds;
     }
     /**
      * Gets the maximumEAPOLStartMessages property value. Specifiy the maximum number of EAPOL (Extensible Authentication Protocol over LAN) Start messages to be sent before returning failure. Valid range 1-100.
@@ -235,7 +234,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Integer getMaximumEAPOLStartMessages() {
-        return this._maximumEAPOLStartMessages;
+        return this.maximumEAPOLStartMessages;
     }
     /**
      * Gets the maximumNumberOfPairwiseMasterKeysInCache property value. Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
@@ -243,7 +242,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Integer getMaximumNumberOfPairwiseMasterKeysInCache() {
-        return this._maximumNumberOfPairwiseMasterKeysInCache;
+        return this.maximumNumberOfPairwiseMasterKeysInCache;
     }
     /**
      * Gets the maximumPairwiseMasterKeyCacheTimeInMinutes property value. Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
@@ -251,7 +250,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Integer getMaximumPairwiseMasterKeyCacheTimeInMinutes() {
-        return this._maximumPairwiseMasterKeyCacheTimeInMinutes;
+        return this.maximumPairwiseMasterKeyCacheTimeInMinutes;
     }
     /**
      * Gets the maximumPreAuthenticationAttempts property value. Specify maximum pre-authentication attempts.  Valid range: 1-16
@@ -259,7 +258,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Integer getMaximumPreAuthenticationAttempts() {
-        return this._maximumPreAuthenticationAttempts;
+        return this.maximumPreAuthenticationAttempts;
     }
     /**
      * Gets the networkSingleSignOn property value. Specify the network single sign on type. Possible values are: disabled, prelogon, postlogon.
@@ -267,7 +266,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public NetworkSingleSignOnType getNetworkSingleSignOn() {
-        return this._networkSingleSignOn;
+        return this.networkSingleSignOn;
     }
     /**
      * Gets the outerIdentityPrivacyTemporaryValue property value. Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
@@ -275,7 +274,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public String getOuterIdentityPrivacyTemporaryValue() {
-        return this._outerIdentityPrivacyTemporaryValue;
+        return this.outerIdentityPrivacyTemporaryValue;
     }
     /**
      * Gets the performServerValidation property value. Specify whether to enable verification of server's identity by validating the certificate when EAP type is selected as PEAP.
@@ -283,7 +282,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Boolean getPerformServerValidation() {
-        return this._performServerValidation;
+        return this.performServerValidation;
     }
     /**
      * Gets the promptForAdditionalAuthenticationCredentials property value. Specify whether the wifi connection should prompt for additional authentication credentials.
@@ -291,7 +290,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Boolean getPromptForAdditionalAuthenticationCredentials() {
-        return this._promptForAdditionalAuthenticationCredentials;
+        return this.promptForAdditionalAuthenticationCredentials;
     }
     /**
      * Gets the requireCryptographicBinding property value. Specify whether to enable cryptographic binding when EAP type is selected as PEAP.
@@ -299,7 +298,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Boolean getRequireCryptographicBinding() {
-        return this._requireCryptographicBinding;
+        return this.requireCryptographicBinding;
     }
     /**
      * Gets the rootCertificateForClientValidation property value. Specify root certificate for client validation.
@@ -307,7 +306,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public Windows81TrustedRootCertificate getRootCertificateForClientValidation() {
-        return this._rootCertificateForClientValidation;
+        return this.rootCertificateForClientValidation;
     }
     /**
      * Gets the rootCertificatesForServerValidation property value. Specify root certificate for server validation. This collection can contain a maximum of 500 elements.
@@ -315,7 +314,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public java.util.List<Windows81TrustedRootCertificate> getRootCertificatesForServerValidation() {
-        return this._rootCertificatesForServerValidation;
+        return this.rootCertificatesForServerValidation;
     }
     /**
      * Gets the trustedServerCertificateNames property value. Specify trusted server certificate names.
@@ -323,21 +322,22 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTrustedServerCertificateNames() {
-        return this._trustedServerCertificateNames;
+        return this.trustedServerCertificateNames;
     }
     /**
-     * Gets the userBasedVirtualLan property value. Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to ​Disabled.
+     * Gets the userBasedVirtualLan property value. Specifiy whether to change the virtual LAN used by the device based on the users credentials. Cannot be used when NetworkSingleSignOnType is set to Disabled.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getUserBasedVirtualLan() {
-        return this._userBasedVirtualLan;
+        return this.userBasedVirtualLan;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -374,215 +374,242 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final WiFiAuthenticationMethod value) {
-        this._authenticationMethod = value;
+        this.authenticationMethod = value;
     }
     /**
      * Sets the authenticationPeriodInSeconds property value. Specify the number of seconds for the client to wait after an authentication attempt before failing. Valid range 1-3600.
      * @param value Value to set for the authenticationPeriodInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._authenticationPeriodInSeconds = value;
+        this.authenticationPeriodInSeconds = value;
     }
     /**
      * Sets the authenticationRetryDelayPeriodInSeconds property value. Specify the number of seconds between a failed authentication and the next authentication attempt. Valid range 1-3600.
      * @param value Value to set for the authenticationRetryDelayPeriodInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationRetryDelayPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._authenticationRetryDelayPeriodInSeconds = value;
+        this.authenticationRetryDelayPeriodInSeconds = value;
     }
     /**
-     * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you’re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
+     * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
      * @param value Value to set for the authenticationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationType(@javax.annotation.Nullable final WifiAuthenticationType value) {
-        this._authenticationType = value;
+        this.authenticationType = value;
     }
     /**
-     * Sets the cacheCredentials property value. Specify whether to cache user credentials on the device so that users don’t need to keep entering them each time they connect.
+     * Sets the cacheCredentials property value. Specify whether to cache user credentials on the device so that users dont need to keep entering them each time they connect.
      * @param value Value to set for the cacheCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheCredentials(@javax.annotation.Nullable final Boolean value) {
-        this._cacheCredentials = value;
+        this.cacheCredentials = value;
     }
     /**
      * Sets the disableUserPromptForServerValidation property value. Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP.
      * @param value Value to set for the disableUserPromptForServerValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableUserPromptForServerValidation(@javax.annotation.Nullable final Boolean value) {
-        this._disableUserPromptForServerValidation = value;
+        this.disableUserPromptForServerValidation = value;
     }
     /**
      * Sets the eapolStartPeriodInSeconds property value. Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600.
      * @param value Value to set for the eapolStartPeriodInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapolStartPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._eapolStartPeriodInSeconds = value;
+        this.eapolStartPeriodInSeconds = value;
     }
     /**
      * Sets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @param value Value to set for the eapType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapType(@javax.annotation.Nullable final EapType value) {
-        this._eapType = value;
+        this.eapType = value;
     }
     /**
      * Sets the enablePairwiseMasterKeyCaching property value. Specify whether the wifi connection should enable pairwise master key caching.
      * @param value Value to set for the enablePairwiseMasterKeyCaching property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnablePairwiseMasterKeyCaching(@javax.annotation.Nullable final Boolean value) {
-        this._enablePairwiseMasterKeyCaching = value;
+        this.enablePairwiseMasterKeyCaching = value;
     }
     /**
      * Sets the enablePreAuthentication property value. Specify whether pre-authentication should be enabled.
      * @param value Value to set for the enablePreAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnablePreAuthentication(@javax.annotation.Nullable final Boolean value) {
-        this._enablePreAuthentication = value;
+        this.enablePreAuthentication = value;
     }
     /**
      * Sets the identityCertificateForClientAuthentication property value. Specify identity certificate for client authentication.
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final WindowsCertificateProfileBase value) {
-        this._identityCertificateForClientAuthentication = value;
+        this.identityCertificateForClientAuthentication = value;
     }
     /**
      * Sets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEAPTTLS property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInnerAuthenticationProtocolForEAPTTLS(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
-        this._innerAuthenticationProtocolForEAPTTLS = value;
+        this.innerAuthenticationProtocolForEAPTTLS = value;
     }
     /**
      * Sets the maximumAuthenticationFailures property value. Specify the maximum authentication failures allowed for a set of credentials. Valid range 1-100.
      * @param value Value to set for the maximumAuthenticationFailures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumAuthenticationFailures(@javax.annotation.Nullable final Integer value) {
-        this._maximumAuthenticationFailures = value;
+        this.maximumAuthenticationFailures = value;
     }
     /**
      * Sets the maximumAuthenticationTimeoutInSeconds property value. Specify maximum authentication timeout (in seconds).  Valid range: 1-120
      * @param value Value to set for the maximumAuthenticationTimeoutInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumAuthenticationTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._maximumAuthenticationTimeoutInSeconds = value;
+        this.maximumAuthenticationTimeoutInSeconds = value;
     }
     /**
      * Sets the maximumEAPOLStartMessages property value. Specifiy the maximum number of EAPOL (Extensible Authentication Protocol over LAN) Start messages to be sent before returning failure. Valid range 1-100.
      * @param value Value to set for the maximumEAPOLStartMessages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumEAPOLStartMessages(@javax.annotation.Nullable final Integer value) {
-        this._maximumEAPOLStartMessages = value;
+        this.maximumEAPOLStartMessages = value;
     }
     /**
      * Sets the maximumNumberOfPairwiseMasterKeysInCache property value. Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
      * @param value Value to set for the maximumNumberOfPairwiseMasterKeysInCache property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumNumberOfPairwiseMasterKeysInCache(@javax.annotation.Nullable final Integer value) {
-        this._maximumNumberOfPairwiseMasterKeysInCache = value;
+        this.maximumNumberOfPairwiseMasterKeysInCache = value;
     }
     /**
      * Sets the maximumPairwiseMasterKeyCacheTimeInMinutes property value. Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
      * @param value Value to set for the maximumPairwiseMasterKeyCacheTimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumPairwiseMasterKeyCacheTimeInMinutes(@javax.annotation.Nullable final Integer value) {
-        this._maximumPairwiseMasterKeyCacheTimeInMinutes = value;
+        this.maximumPairwiseMasterKeyCacheTimeInMinutes = value;
     }
     /**
      * Sets the maximumPreAuthenticationAttempts property value. Specify maximum pre-authentication attempts.  Valid range: 1-16
      * @param value Value to set for the maximumPreAuthenticationAttempts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumPreAuthenticationAttempts(@javax.annotation.Nullable final Integer value) {
-        this._maximumPreAuthenticationAttempts = value;
+        this.maximumPreAuthenticationAttempts = value;
     }
     /**
      * Sets the networkSingleSignOn property value. Specify the network single sign on type. Possible values are: disabled, prelogon, postlogon.
      * @param value Value to set for the networkSingleSignOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkSingleSignOn(@javax.annotation.Nullable final NetworkSingleSignOnType value) {
-        this._networkSingleSignOn = value;
+        this.networkSingleSignOn = value;
     }
     /**
      * Sets the outerIdentityPrivacyTemporaryValue property value. Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
-        this._outerIdentityPrivacyTemporaryValue = value;
+        this.outerIdentityPrivacyTemporaryValue = value;
     }
     /**
      * Sets the performServerValidation property value. Specify whether to enable verification of server's identity by validating the certificate when EAP type is selected as PEAP.
      * @param value Value to set for the performServerValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPerformServerValidation(@javax.annotation.Nullable final Boolean value) {
-        this._performServerValidation = value;
+        this.performServerValidation = value;
     }
     /**
      * Sets the promptForAdditionalAuthenticationCredentials property value. Specify whether the wifi connection should prompt for additional authentication credentials.
      * @param value Value to set for the promptForAdditionalAuthenticationCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPromptForAdditionalAuthenticationCredentials(@javax.annotation.Nullable final Boolean value) {
-        this._promptForAdditionalAuthenticationCredentials = value;
+        this.promptForAdditionalAuthenticationCredentials = value;
     }
     /**
      * Sets the requireCryptographicBinding property value. Specify whether to enable cryptographic binding when EAP type is selected as PEAP.
      * @param value Value to set for the requireCryptographicBinding property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireCryptographicBinding(@javax.annotation.Nullable final Boolean value) {
-        this._requireCryptographicBinding = value;
+        this.requireCryptographicBinding = value;
     }
     /**
      * Sets the rootCertificateForClientValidation property value. Specify root certificate for client validation.
      * @param value Value to set for the rootCertificateForClientValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificateForClientValidation(@javax.annotation.Nullable final Windows81TrustedRootCertificate value) {
-        this._rootCertificateForClientValidation = value;
+        this.rootCertificateForClientValidation = value;
     }
     /**
      * Sets the rootCertificatesForServerValidation property value. Specify root certificate for server validation. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the rootCertificatesForServerValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificatesForServerValidation(@javax.annotation.Nullable final java.util.List<Windows81TrustedRootCertificate> value) {
-        this._rootCertificatesForServerValidation = value;
+        this.rootCertificatesForServerValidation = value;
     }
     /**
      * Sets the trustedServerCertificateNames property value. Specify trusted server certificate names.
      * @param value Value to set for the trustedServerCertificateNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._trustedServerCertificateNames = value;
+        this.trustedServerCertificateNames = value;
     }
     /**
-     * Sets the userBasedVirtualLan property value. Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to ​Disabled.
+     * Sets the userBasedVirtualLan property value. Specifiy whether to change the virtual LAN used by the device based on the users credentials. Cannot be used when NetworkSingleSignOnType is set to Disabled.
      * @param value Value to set for the userBasedVirtualLan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserBasedVirtualLan(@javax.annotation.Nullable final Boolean value) {
-        this._userBasedVirtualLan = value;
+        this.userBasedVirtualLan = value;
     }
 }

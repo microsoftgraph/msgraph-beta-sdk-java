@@ -4,37 +4,38 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** BitLocker Recovery Options. */
+/**
+ * BitLocker Recovery Options.
+ */
 public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Indicates whether to block certificate-based data recovery agent. */
-    private Boolean _blockDataRecoveryAgent;
+    private Boolean blockDataRecoveryAgent;
     /** Indicates whether or not to enable BitLocker until recovery information is stored in AD DS. */
-    private Boolean _enableBitLockerAfterRecoveryInformationToStore;
+    private Boolean enableBitLockerAfterRecoveryInformationToStore;
     /** Indicates whether or not to allow BitLocker recovery information to store in AD DS. */
-    private Boolean _enableRecoveryInformationSaveToStore;
+    private Boolean enableRecoveryInformationSaveToStore;
     /** Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk. */
-    private Boolean _hideRecoveryOptions;
+    private Boolean hideRecoveryOptions;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** BitLockerRecoveryInformationType types */
-    private BitLockerRecoveryInformationType _recoveryInformationToStore;
+    private BitLockerRecoveryInformationType recoveryInformationToStore;
     /** Possible values of the ConfigurationUsage list. */
-    private ConfigurationUsage _recoveryKeyUsage;
+    private ConfigurationUsage recoveryKeyUsage;
     /** Possible values of the ConfigurationUsage list. */
-    private ConfigurationUsage _recoveryPasswordUsage;
+    private ConfigurationUsage recoveryPasswordUsage;
     /**
      * Instantiates a new bitLockerRecoveryOptions and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BitLockerRecoveryOptions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bitLockerRecoveryOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +53,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the blockDataRecoveryAgent property value. Indicates whether to block certificate-based data recovery agent.
@@ -60,7 +61,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getBlockDataRecoveryAgent() {
-        return this._blockDataRecoveryAgent;
+        return this.blockDataRecoveryAgent;
     }
     /**
      * Gets the enableBitLockerAfterRecoveryInformationToStore property value. Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
@@ -68,7 +69,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getEnableBitLockerAfterRecoveryInformationToStore() {
-        return this._enableBitLockerAfterRecoveryInformationToStore;
+        return this.enableBitLockerAfterRecoveryInformationToStore;
     }
     /**
      * Gets the enableRecoveryInformationSaveToStore property value. Indicates whether or not to allow BitLocker recovery information to store in AD DS.
@@ -76,25 +77,24 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getEnableRecoveryInformationSaveToStore() {
-        return this._enableRecoveryInformationSaveToStore;
+        return this.enableRecoveryInformationSaveToStore;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BitLockerRecoveryOptions currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("blockDataRecoveryAgent", (n) -> { currentObject.setBlockDataRecoveryAgent(n.getBooleanValue()); });
-            this.put("enableBitLockerAfterRecoveryInformationToStore", (n) -> { currentObject.setEnableBitLockerAfterRecoveryInformationToStore(n.getBooleanValue()); });
-            this.put("enableRecoveryInformationSaveToStore", (n) -> { currentObject.setEnableRecoveryInformationSaveToStore(n.getBooleanValue()); });
-            this.put("hideRecoveryOptions", (n) -> { currentObject.setHideRecoveryOptions(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recoveryInformationToStore", (n) -> { currentObject.setRecoveryInformationToStore(n.getEnumValue(BitLockerRecoveryInformationType.class)); });
-            this.put("recoveryKeyUsage", (n) -> { currentObject.setRecoveryKeyUsage(n.getEnumValue(ConfigurationUsage.class)); });
-            this.put("recoveryPasswordUsage", (n) -> { currentObject.setRecoveryPasswordUsage(n.getEnumValue(ConfigurationUsage.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        deserializerMap.put("blockDataRecoveryAgent", (n) -> { this.setBlockDataRecoveryAgent(n.getBooleanValue()); });
+        deserializerMap.put("enableBitLockerAfterRecoveryInformationToStore", (n) -> { this.setEnableBitLockerAfterRecoveryInformationToStore(n.getBooleanValue()); });
+        deserializerMap.put("enableRecoveryInformationSaveToStore", (n) -> { this.setEnableRecoveryInformationSaveToStore(n.getBooleanValue()); });
+        deserializerMap.put("hideRecoveryOptions", (n) -> { this.setHideRecoveryOptions(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recoveryInformationToStore", (n) -> { this.setRecoveryInformationToStore(n.getEnumValue(BitLockerRecoveryInformationType.class)); });
+        deserializerMap.put("recoveryKeyUsage", (n) -> { this.setRecoveryKeyUsage(n.getEnumValue(ConfigurationUsage.class)); });
+        deserializerMap.put("recoveryPasswordUsage", (n) -> { this.setRecoveryPasswordUsage(n.getEnumValue(ConfigurationUsage.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the hideRecoveryOptions property value. Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
@@ -102,7 +102,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getHideRecoveryOptions() {
-        return this._hideRecoveryOptions;
+        return this.hideRecoveryOptions;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -110,37 +110,38 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the recoveryInformationToStore property value. BitLockerRecoveryInformationType types
-     * @return a bitLockerRecoveryInformationType
+     * @return a BitLockerRecoveryInformationType
      */
     @javax.annotation.Nullable
     public BitLockerRecoveryInformationType getRecoveryInformationToStore() {
-        return this._recoveryInformationToStore;
+        return this.recoveryInformationToStore;
     }
     /**
      * Gets the recoveryKeyUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a configurationUsage
+     * @return a ConfigurationUsage
      */
     @javax.annotation.Nullable
     public ConfigurationUsage getRecoveryKeyUsage() {
-        return this._recoveryKeyUsage;
+        return this.recoveryKeyUsage;
     }
     /**
      * Gets the recoveryPasswordUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a configurationUsage
+     * @return a ConfigurationUsage
      */
     @javax.annotation.Nullable
     public ConfigurationUsage getRecoveryPasswordUsage() {
-        return this._recoveryPasswordUsage;
+        return this.recoveryPasswordUsage;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("blockDataRecoveryAgent", this.getBlockDataRecoveryAgent());
@@ -158,71 +159,80 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the blockDataRecoveryAgent property value. Indicates whether to block certificate-based data recovery agent.
      * @param value Value to set for the blockDataRecoveryAgent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockDataRecoveryAgent(@javax.annotation.Nullable final Boolean value) {
-        this._blockDataRecoveryAgent = value;
+        this.blockDataRecoveryAgent = value;
     }
     /**
      * Sets the enableBitLockerAfterRecoveryInformationToStore property value. Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
      * @param value Value to set for the enableBitLockerAfterRecoveryInformationToStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableBitLockerAfterRecoveryInformationToStore(@javax.annotation.Nullable final Boolean value) {
-        this._enableBitLockerAfterRecoveryInformationToStore = value;
+        this.enableBitLockerAfterRecoveryInformationToStore = value;
     }
     /**
      * Sets the enableRecoveryInformationSaveToStore property value. Indicates whether or not to allow BitLocker recovery information to store in AD DS.
      * @param value Value to set for the enableRecoveryInformationSaveToStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableRecoveryInformationSaveToStore(@javax.annotation.Nullable final Boolean value) {
-        this._enableRecoveryInformationSaveToStore = value;
+        this.enableRecoveryInformationSaveToStore = value;
     }
     /**
      * Sets the hideRecoveryOptions property value. Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
      * @param value Value to set for the hideRecoveryOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideRecoveryOptions(@javax.annotation.Nullable final Boolean value) {
-        this._hideRecoveryOptions = value;
+        this.hideRecoveryOptions = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the recoveryInformationToStore property value. BitLockerRecoveryInformationType types
      * @param value Value to set for the recoveryInformationToStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecoveryInformationToStore(@javax.annotation.Nullable final BitLockerRecoveryInformationType value) {
-        this._recoveryInformationToStore = value;
+        this.recoveryInformationToStore = value;
     }
     /**
      * Sets the recoveryKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the recoveryKeyUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecoveryKeyUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
-        this._recoveryKeyUsage = value;
+        this.recoveryKeyUsage = value;
     }
     /**
      * Sets the recoveryPasswordUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the recoveryPasswordUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecoveryPasswordUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
-        this._recoveryPasswordUsage = value;
+        this.recoveryPasswordUsage = value;
     }
 }

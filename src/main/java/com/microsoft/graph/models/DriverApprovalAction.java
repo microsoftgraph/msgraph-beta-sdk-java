@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the executeAction method. */
+/** An enum type to represent approval actions of single or list of drivers. */
 public enum DriverApprovalAction implements ValuedEnum {
     /** This indicates the action to approve single or list of drivers. */
     Approve("approve"),

@@ -3,23 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSCustomConfiguration extends DeviceConfiguration implements Parsable {
     /** Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel */
-    private AppleDeploymentChannel _deploymentChannel;
+    private AppleDeploymentChannel deploymentChannel;
     /** Payload. (UTF8 encoded byte array) */
-    private byte[] _payload;
+    private byte[] payload;
     /** Payload file name (.mobileconfig */
-    private String _payloadFileName;
+    private String payloadFileName;
     /** Name that is displayed to the user. */
-    private String _payloadName;
+    private String payloadName;
     /**
      * Instantiates a new MacOSCustomConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSCustomConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSCustomConfiguration");
@@ -36,33 +36,32 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the deploymentChannel property value. Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel
-     * @return a appleDeploymentChannel
+     * @return a AppleDeploymentChannel
      */
     @javax.annotation.Nullable
     public AppleDeploymentChannel getDeploymentChannel() {
-        return this._deploymentChannel;
+        return this.deploymentChannel;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSCustomConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deploymentChannel", (n) -> { currentObject.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel.class)); });
-            this.put("payload", (n) -> { currentObject.setPayload(n.getByteArrayValue()); });
-            this.put("payloadFileName", (n) -> { currentObject.setPayloadFileName(n.getStringValue()); });
-            this.put("payloadName", (n) -> { currentObject.setPayloadName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deploymentChannel", (n) -> { this.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel.class)); });
+        deserializerMap.put("payload", (n) -> { this.setPayload(n.getByteArrayValue()); });
+        deserializerMap.put("payloadFileName", (n) -> { this.setPayloadFileName(n.getStringValue()); });
+        deserializerMap.put("payloadName", (n) -> { this.setPayloadName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array)
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getPayload() {
-        return this._payload;
+        return this.payload;
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.mobileconfig
@@ -70,7 +69,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      */
     @javax.annotation.Nullable
     public String getPayloadFileName() {
-        return this._payloadFileName;
+        return this.payloadFileName;
     }
     /**
      * Gets the payloadName property value. Name that is displayed to the user.
@@ -78,13 +77,14 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      */
     @javax.annotation.Nullable
     public String getPayloadName() {
-        return this._payloadName;
+        return this.payloadName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,31 +98,35 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the deploymentChannel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentChannel(@javax.annotation.Nullable final AppleDeploymentChannel value) {
-        this._deploymentChannel = value;
+        this.deploymentChannel = value;
     }
     /**
      * Sets the payload property value. Payload. (UTF8 encoded byte array)
      * @param value Value to set for the payload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayload(@javax.annotation.Nullable final byte[] value) {
-        this._payload = value;
+        this.payload = value;
     }
     /**
      * Sets the payloadFileName property value. Payload file name (.mobileconfig
      * @param value Value to set for the payloadFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadFileName(@javax.annotation.Nullable final String value) {
-        this._payloadFileName = value;
+        this.payloadFileName = value;
     }
     /**
      * Sets the payloadName property value. Name that is displayed to the user.
      * @param value Value to set for the payloadName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadName(@javax.annotation.Nullable final String value) {
-        this._payloadName = value;
+        this.payloadName = value;
     }
 }

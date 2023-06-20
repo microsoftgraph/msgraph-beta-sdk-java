@@ -4,29 +4,27 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     /** The accessContainer property */
-    private DelegatedAdminAccessContainer _accessContainer;
+    private DelegatedAdminAccessContainer accessContainer;
     /** The accessDetails property */
-    private DelegatedAdminAccessDetails _accessDetails;
+    private DelegatedAdminAccessDetails accessDetails;
     /** The date and time in ISO 8601 format and in UTC time when the access assignment was created. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The date and time in ISO 8601 and in UTC time when this access assignment was last modified. Read-only. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue. */
-    private DelegatedAdminAccessAssignmentStatus _status;
+    private DelegatedAdminAccessAssignmentStatus status;
     /**
      * Instantiates a new delegatedAdminAccessAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedAdminAccessAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.delegatedAdminAccessAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,19 +38,19 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessContainer property value. The accessContainer property
-     * @return a delegatedAdminAccessContainer
+     * @return a DelegatedAdminAccessContainer
      */
     @javax.annotation.Nullable
     public DelegatedAdminAccessContainer getAccessContainer() {
-        return this._accessContainer;
+        return this.accessContainer;
     }
     /**
      * Gets the accessDetails property value. The accessDetails property
-     * @return a delegatedAdminAccessDetails
+     * @return a DelegatedAdminAccessDetails
      */
     @javax.annotation.Nullable
     public DelegatedAdminAccessDetails getAccessDetails() {
-        return this._accessDetails;
+        return this.accessDetails;
     }
     /**
      * Gets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the access assignment was created. Read-only.
@@ -60,22 +58,21 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DelegatedAdminAccessAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessContainer", (n) -> { currentObject.setAccessContainer(n.getObjectValue(DelegatedAdminAccessContainer::createFromDiscriminatorValue)); });
-            this.put("accessDetails", (n) -> { currentObject.setAccessDetails(n.getObjectValue(DelegatedAdminAccessDetails::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DelegatedAdminAccessAssignmentStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessContainer", (n) -> { this.setAccessContainer(n.getObjectValue(DelegatedAdminAccessContainer::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessDetails", (n) -> { this.setAccessDetails(n.getObjectValue(DelegatedAdminAccessDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DelegatedAdminAccessAssignmentStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time in ISO 8601 and in UTC time when this access assignment was last modified. Read-only.
@@ -83,7 +80,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the status property value. The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
@@ -91,13 +88,14 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DelegatedAdminAccessAssignmentStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,39 +110,44 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      * @param value Value to set for the accessContainer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessContainer(@javax.annotation.Nullable final DelegatedAdminAccessContainer value) {
-        this._accessContainer = value;
+        this.accessContainer = value;
     }
     /**
      * Sets the accessDetails property value. The accessDetails property
      * @param value Value to set for the accessDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessDetails(@javax.annotation.Nullable final DelegatedAdminAccessDetails value) {
-        this._accessDetails = value;
+        this.accessDetails = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the access assignment was created. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time in ISO 8601 and in UTC time when this access assignment was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the status property value. The status of the access assignment. Read-only. The possible values are: pending, active, deleting, deleted, error, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DelegatedAdminAccessAssignmentStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

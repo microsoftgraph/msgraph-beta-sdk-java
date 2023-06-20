@@ -1,35 +1,31 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AllDevicesAssignmentTarget;
-import com.microsoft.graph.models.AllLicensedUsersAssignmentTarget;
-import com.microsoft.graph.models.ConfigurationManagerCollectionAssignmentTarget;
-import com.microsoft.graph.models.ExclusionGroupAssignmentTarget;
-import com.microsoft.graph.models.GroupAssignmentTarget;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Base type for assignment targets. */
+/**
+ * Base type for assignment targets.
+ */
 public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The Id of the filter for the target assignment. */
-    private String _deviceAndAppManagementAssignmentFilterId;
+    private String deviceAndAppManagementAssignmentFilterId;
     /** Represents type of the assignment filter. */
-    private DeviceAndAppManagementAssignmentFilterType _deviceAndAppManagementAssignmentFilterType;
+    private DeviceAndAppManagementAssignmentFilterType deviceAndAppManagementAssignmentFilterType;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new deviceAndAppManagementAssignmentTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceAndAppManagementAssignmentTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,6 +41,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
             switch (mappingValue) {
                 case "#microsoft.graph.allDevicesAssignmentTarget": return new AllDevicesAssignmentTarget();
                 case "#microsoft.graph.allLicensedUsersAssignmentTarget": return new AllLicensedUsersAssignmentTarget();
+                case "#microsoft.graph.androidFotaDeploymentAssignmentTarget": return new AndroidFotaDeploymentAssignmentTarget();
                 case "#microsoft.graph.configurationManagerCollectionAssignmentTarget": return new ConfigurationManagerCollectionAssignmentTarget();
                 case "#microsoft.graph.exclusionGroupAssignmentTarget": return new ExclusionGroupAssignmentTarget();
                 case "#microsoft.graph.groupAssignmentTarget": return new GroupAssignmentTarget();
@@ -58,7 +55,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the deviceAndAppManagementAssignmentFilterId property value. The Id of the filter for the target assignment.
@@ -66,28 +63,27 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public String getDeviceAndAppManagementAssignmentFilterId() {
-        return this._deviceAndAppManagementAssignmentFilterId;
+        return this.deviceAndAppManagementAssignmentFilterId;
     }
     /**
      * Gets the deviceAndAppManagementAssignmentFilterType property value. Represents type of the assignment filter.
-     * @return a deviceAndAppManagementAssignmentFilterType
+     * @return a DeviceAndAppManagementAssignmentFilterType
      */
     @javax.annotation.Nullable
     public DeviceAndAppManagementAssignmentFilterType getDeviceAndAppManagementAssignmentFilterType() {
-        return this._deviceAndAppManagementAssignmentFilterType;
+        return this.deviceAndAppManagementAssignmentFilterType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceAndAppManagementAssignmentTarget currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("deviceAndAppManagementAssignmentFilterId", (n) -> { currentObject.setDeviceAndAppManagementAssignmentFilterId(n.getStringValue()); });
-            this.put("deviceAndAppManagementAssignmentFilterType", (n) -> { currentObject.setDeviceAndAppManagementAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("deviceAndAppManagementAssignmentFilterId", (n) -> { this.setDeviceAndAppManagementAssignmentFilterId(n.getStringValue()); });
+        deserializerMap.put("deviceAndAppManagementAssignmentFilterType", (n) -> { this.setDeviceAndAppManagementAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -95,13 +91,14 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceAndAppManagementAssignmentFilterId", this.getDeviceAndAppManagementAssignmentFilterId());
@@ -114,31 +111,35 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the deviceAndAppManagementAssignmentFilterId property value. The Id of the filter for the target assignment.
      * @param value Value to set for the deviceAndAppManagementAssignmentFilterId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceAndAppManagementAssignmentFilterId(@javax.annotation.Nullable final String value) {
-        this._deviceAndAppManagementAssignmentFilterId = value;
+        this.deviceAndAppManagementAssignmentFilterId = value;
     }
     /**
      * Sets the deviceAndAppManagementAssignmentFilterType property value. Represents type of the assignment filter.
      * @param value Value to set for the deviceAndAppManagementAssignmentFilterType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceAndAppManagementAssignmentFilterType(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentFilterType value) {
-        this._deviceAndAppManagementAssignmentFilterType = value;
+        this.deviceAndAppManagementAssignmentFilterType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

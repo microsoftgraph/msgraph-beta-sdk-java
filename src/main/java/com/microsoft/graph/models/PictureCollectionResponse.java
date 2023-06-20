@@ -1,26 +1,21 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class PictureCollectionResponse implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The OdataNextLink property */
-    private String _odataNextLink;
+public class PictureCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
-    private java.util.List<Picture> _value;
+    private java.util.List<Picture> value;
     /**
      * Instantiates a new PictureCollectionResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PictureCollectionResponse() {
-        this.setAdditionalData(new HashMap<>());
+        super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,74 +28,41 @@ public class PictureCollectionResponse implements AdditionalDataHolder, Parsable
         return new PictureCollectionResponse();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
-     */
-    @javax.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
-    }
-    /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PictureCollectionResponse currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("@odata.nextLink", (n) -> { currentObject.setOdataNextLink(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(Picture::createFromDiscriminatorValue)); });
-        }};
-    }
-    /**
-     * Gets the @odata.nextLink property value. The OdataNextLink property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataNextLink() {
-        return this._odataNextLink;
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(Picture::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property
-     * @return a picture
+     * @return a Picture
      */
     @javax.annotation.Nullable
     public java.util.List<Picture> getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.nextLink", this.getOdataNextLink());
+        super.serialize(writer);
         writer.writeCollectionOfObjectValues("value", this.getValue());
-        writer.writeAdditionalData(this.getAdditionalData());
-    }
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     * @return a void
-     */
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
-    }
-    /**
-     * Sets the @odata.nextLink property value. The OdataNextLink property
-     * @param value Value to set for the OdataNextLink property.
-     * @return a void
-     */
-    public void setOdataNextLink(@javax.annotation.Nullable final String value) {
-        this._odataNextLink = value;
     }
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<Picture> value) {
-        this._value = value;
+        this.value = value;
     }
 }

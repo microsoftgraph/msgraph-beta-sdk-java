@@ -3,32 +3,33 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingStaffMember extends BookingPerson implements Parsable {
     /** True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking. */
-    private Boolean _availabilityIsAffectedByPersonalCalendar;
+    private Boolean availabilityIsAffectedByPersonalCalendar;
     /** Identifies a color to represent the staff member. The color corresponds to the color palette in the Staff details page in the Bookings app. */
-    private Integer _colorIndex;
-    /** The isEmailNotificationEnabled property */
-    private Boolean _isEmailNotificationEnabled;
+    private Integer colorIndex;
+    /** True indicates that a staff member will be notified via email when a booking assigned to them is created or changed. */
+    private Boolean isEmailNotificationEnabled;
+    /** The membershipStatus property */
+    private BookingStaffMembershipStatus membershipStatus;
     /** The role property */
-    private BookingStaffRole _role;
+    private BookingStaffRole role;
     /** The time zone of the staff member. For a list of possible values, see dateTimeTimeZone. */
-    private String _timeZone;
+    private String timeZone;
     /** True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting. */
-    private Boolean _useBusinessHours;
+    private Boolean useBusinessHours;
     /** The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business. */
-    private java.util.List<BookingWorkHours> _workingHours;
+    private java.util.List<BookingWorkHours> workingHours;
     /**
      * Instantiates a new BookingStaffMember and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingStaffMember() {
         super();
-        this.setOdataType("#microsoft.graph.bookingStaffMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +47,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAvailabilityIsAffectedByPersonalCalendar() {
-        return this._availabilityIsAffectedByPersonalCalendar;
+        return this.availabilityIsAffectedByPersonalCalendar;
     }
     /**
      * Gets the colorIndex property value. Identifies a color to represent the staff member. The color corresponds to the color palette in the Staff details page in the Bookings app.
@@ -54,40 +55,48 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getColorIndex() {
-        return this._colorIndex;
+        return this.colorIndex;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingStaffMember currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("availabilityIsAffectedByPersonalCalendar", (n) -> { currentObject.setAvailabilityIsAffectedByPersonalCalendar(n.getBooleanValue()); });
-            this.put("colorIndex", (n) -> { currentObject.setColorIndex(n.getIntegerValue()); });
-            this.put("isEmailNotificationEnabled", (n) -> { currentObject.setIsEmailNotificationEnabled(n.getBooleanValue()); });
-            this.put("role", (n) -> { currentObject.setRole(n.getEnumValue(BookingStaffRole.class)); });
-            this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
-            this.put("useBusinessHours", (n) -> { currentObject.setUseBusinessHours(n.getBooleanValue()); });
-            this.put("workingHours", (n) -> { currentObject.setWorkingHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("availabilityIsAffectedByPersonalCalendar", (n) -> { this.setAvailabilityIsAffectedByPersonalCalendar(n.getBooleanValue()); });
+        deserializerMap.put("colorIndex", (n) -> { this.setColorIndex(n.getIntegerValue()); });
+        deserializerMap.put("isEmailNotificationEnabled", (n) -> { this.setIsEmailNotificationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("membershipStatus", (n) -> { this.setMembershipStatus(n.getEnumValue(BookingStaffMembershipStatus.class)); });
+        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(BookingStaffRole.class)); });
+        deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
+        deserializerMap.put("useBusinessHours", (n) -> { this.setUseBusinessHours(n.getBooleanValue()); });
+        deserializerMap.put("workingHours", (n) -> { this.setWorkingHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
-     * Gets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     * Gets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIsEmailNotificationEnabled() {
-        return this._isEmailNotificationEnabled;
+        return this.isEmailNotificationEnabled;
+    }
+    /**
+     * Gets the membershipStatus property value. The membershipStatus property
+     * @return a BookingStaffMembershipStatus
+     */
+    @javax.annotation.Nullable
+    public BookingStaffMembershipStatus getMembershipStatus() {
+        return this.membershipStatus;
     }
     /**
      * Gets the role property value. The role property
-     * @return a bookingStaffRole
+     * @return a BookingStaffRole
      */
     @javax.annotation.Nullable
     public BookingStaffRole getRole() {
-        return this._role;
+        return this.role;
     }
     /**
      * Gets the timeZone property value. The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
@@ -95,7 +104,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTimeZone() {
-        return this._timeZone;
+        return this.timeZone;
     }
     /**
      * Gets the useBusinessHours property value. True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
@@ -103,7 +112,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getUseBusinessHours() {
-        return this._useBusinessHours;
+        return this.useBusinessHours;
     }
     /**
      * Gets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
@@ -111,19 +120,21 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<BookingWorkHours> getWorkingHours() {
-        return this._workingHours;
+        return this.workingHours;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("availabilityIsAffectedByPersonalCalendar", this.getAvailabilityIsAffectedByPersonalCalendar());
         writer.writeIntegerValue("colorIndex", this.getColorIndex());
         writer.writeBooleanValue("isEmailNotificationEnabled", this.getIsEmailNotificationEnabled());
+        writer.writeEnumValue("membershipStatus", this.getMembershipStatus());
         writer.writeEnumValue("role", this.getRole());
         writer.writeStringValue("timeZone", this.getTimeZone());
         writer.writeBooleanValue("useBusinessHours", this.getUseBusinessHours());
@@ -134,55 +145,71 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * @param value Value to set for the availabilityIsAffectedByPersonalCalendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailabilityIsAffectedByPersonalCalendar(@javax.annotation.Nullable final Boolean value) {
-        this._availabilityIsAffectedByPersonalCalendar = value;
+        this.availabilityIsAffectedByPersonalCalendar = value;
     }
     /**
      * Sets the colorIndex property value. Identifies a color to represent the staff member. The color corresponds to the color palette in the Staff details page in the Bookings app.
      * @param value Value to set for the colorIndex property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColorIndex(@javax.annotation.Nullable final Integer value) {
-        this._colorIndex = value;
+        this.colorIndex = value;
     }
     /**
-     * Sets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     * Sets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
      * @param value Value to set for the isEmailNotificationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEmailNotificationEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEmailNotificationEnabled = value;
+        this.isEmailNotificationEnabled = value;
+    }
+    /**
+     * Sets the membershipStatus property value. The membershipStatus property
+     * @param value Value to set for the membershipStatus property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMembershipStatus(@javax.annotation.Nullable final BookingStaffMembershipStatus value) {
+        this.membershipStatus = value;
     }
     /**
      * Sets the role property value. The role property
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final BookingStaffRole value) {
-        this._role = value;
+        this.role = value;
     }
     /**
      * Sets the timeZone property value. The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
      * @param value Value to set for the timeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeZone(@javax.annotation.Nullable final String value) {
-        this._timeZone = value;
+        this.timeZone = value;
     }
     /**
      * Sets the useBusinessHours property value. True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
      * @param value Value to set for the useBusinessHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseBusinessHours(@javax.annotation.Nullable final Boolean value) {
-        this._useBusinessHours = value;
+        this.useBusinessHours = value;
     }
     /**
      * Sets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
      * @param value Value to set for the workingHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkingHours(@javax.annotation.Nullable final java.util.List<BookingWorkHours> value) {
-        this._workingHours = value;
+        this.workingHours = value;
     }
 }

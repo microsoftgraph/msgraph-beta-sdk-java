@@ -1,46 +1,44 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DeviceManagementAbstractComplexSettingDefinition;
-import com.microsoft.graph.models.DeviceManagementCollectionSettingDefinition;
-import com.microsoft.graph.models.DeviceManagementComplexSettingDefinition;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Entity representing the defintion for a given setting */
+/**
+ * Entity representing the defintion for a given setting
+ */
 public class DeviceManagementSettingDefinition extends Entity implements Parsable {
     /** Collection of constraints for the setting value */
-    private java.util.List<DeviceManagementConstraint> _constraints;
+    private java.util.List<DeviceManagementConstraint> constraints;
     /** Collection of dependencies on other settings */
-    private java.util.List<DeviceManagementSettingDependency> _dependencies;
+    private java.util.List<DeviceManagementSettingDependency> dependencies;
     /** The setting's description */
-    private String _description;
+    private String description;
     /** The setting's display name */
-    private String _displayName;
+    private String displayName;
     /** Url to setting documentation */
-    private String _documentationUrl;
+    private String documentationUrl;
     /** subtitle of the setting header for more details about the category/section */
-    private String _headerSubtitle;
+    private String headerSubtitle;
     /** title of the setting header represents a category/section of a setting/settings */
-    private String _headerTitle;
+    private String headerTitle;
     /** If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting */
-    private Boolean _isTopLevel;
+    private Boolean isTopLevel;
     /** Keywords associated with the setting */
-    private java.util.List<String> _keywords;
+    private java.util.List<String> keywords;
     /** Placeholder text as an example of valid input */
-    private String _placeholderText;
+    private String placeholderText;
     /** The valueType property */
-    private DeviceManangementIntentValueType _valueType;
+    private DeviceManangementIntentValueType valueType;
     /**
      * Instantiates a new deviceManagementSettingDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,7 +65,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementConstraint> getConstraints() {
-        return this._constraints;
+        return this.constraints;
     }
     /**
      * Gets the dependencies property value. Collection of dependencies on other settings
@@ -75,7 +73,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementSettingDependency> getDependencies() {
-        return this._dependencies;
+        return this.dependencies;
     }
     /**
      * Gets the description property value. The setting's description
@@ -83,7 +81,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The setting's display name
@@ -91,7 +89,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the documentationUrl property value. Url to setting documentation
@@ -99,28 +97,27 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getDocumentationUrl() {
-        return this._documentationUrl;
+        return this.documentationUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("constraints", (n) -> { currentObject.setConstraints(n.getCollectionOfObjectValues(DeviceManagementConstraint::createFromDiscriminatorValue)); });
-            this.put("dependencies", (n) -> { currentObject.setDependencies(n.getCollectionOfObjectValues(DeviceManagementSettingDependency::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("documentationUrl", (n) -> { currentObject.setDocumentationUrl(n.getStringValue()); });
-            this.put("headerSubtitle", (n) -> { currentObject.setHeaderSubtitle(n.getStringValue()); });
-            this.put("headerTitle", (n) -> { currentObject.setHeaderTitle(n.getStringValue()); });
-            this.put("isTopLevel", (n) -> { currentObject.setIsTopLevel(n.getBooleanValue()); });
-            this.put("keywords", (n) -> { currentObject.setKeywords(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("placeholderText", (n) -> { currentObject.setPlaceholderText(n.getStringValue()); });
-            this.put("valueType", (n) -> { currentObject.setValueType(n.getEnumValue(DeviceManangementIntentValueType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("constraints", (n) -> { this.setConstraints(n.getCollectionOfObjectValues(DeviceManagementConstraint::createFromDiscriminatorValue)); });
+        deserializerMap.put("dependencies", (n) -> { this.setDependencies(n.getCollectionOfObjectValues(DeviceManagementSettingDependency::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("documentationUrl", (n) -> { this.setDocumentationUrl(n.getStringValue()); });
+        deserializerMap.put("headerSubtitle", (n) -> { this.setHeaderSubtitle(n.getStringValue()); });
+        deserializerMap.put("headerTitle", (n) -> { this.setHeaderTitle(n.getStringValue()); });
+        deserializerMap.put("isTopLevel", (n) -> { this.setIsTopLevel(n.getBooleanValue()); });
+        deserializerMap.put("keywords", (n) -> { this.setKeywords(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("placeholderText", (n) -> { this.setPlaceholderText(n.getStringValue()); });
+        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(DeviceManangementIntentValueType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the headerSubtitle property value. subtitle of the setting header for more details about the category/section
@@ -128,7 +125,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getHeaderSubtitle() {
-        return this._headerSubtitle;
+        return this.headerSubtitle;
     }
     /**
      * Gets the headerTitle property value. title of the setting header represents a category/section of a setting/settings
@@ -136,7 +133,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getHeaderTitle() {
-        return this._headerTitle;
+        return this.headerTitle;
     }
     /**
      * Gets the isTopLevel property value. If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
@@ -144,7 +141,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public Boolean getIsTopLevel() {
-        return this._isTopLevel;
+        return this.isTopLevel;
     }
     /**
      * Gets the keywords property value. Keywords associated with the setting
@@ -152,7 +149,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<String> getKeywords() {
-        return this._keywords;
+        return this.keywords;
     }
     /**
      * Gets the placeholderText property value. Placeholder text as an example of valid input
@@ -160,21 +157,22 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getPlaceholderText() {
-        return this._placeholderText;
+        return this.placeholderText;
     }
     /**
      * Gets the valueType property value. The valueType property
-     * @return a deviceManangementIntentValueType
+     * @return a DeviceManangementIntentValueType
      */
     @javax.annotation.Nullable
     public DeviceManangementIntentValueType getValueType() {
-        return this._valueType;
+        return this.valueType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,87 +193,98 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
      * @param value Value to set for the constraints property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConstraints(@javax.annotation.Nullable final java.util.List<DeviceManagementConstraint> value) {
-        this._constraints = value;
+        this.constraints = value;
     }
     /**
      * Sets the dependencies property value. Collection of dependencies on other settings
      * @param value Value to set for the dependencies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependencies(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingDependency> value) {
-        this._dependencies = value;
+        this.dependencies = value;
     }
     /**
      * Sets the description property value. The setting's description
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The setting's display name
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the documentationUrl property value. Url to setting documentation
      * @param value Value to set for the documentationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDocumentationUrl(@javax.annotation.Nullable final String value) {
-        this._documentationUrl = value;
+        this.documentationUrl = value;
     }
     /**
      * Sets the headerSubtitle property value. subtitle of the setting header for more details about the category/section
      * @param value Value to set for the headerSubtitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeaderSubtitle(@javax.annotation.Nullable final String value) {
-        this._headerSubtitle = value;
+        this.headerSubtitle = value;
     }
     /**
      * Sets the headerTitle property value. title of the setting header represents a category/section of a setting/settings
      * @param value Value to set for the headerTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeaderTitle(@javax.annotation.Nullable final String value) {
-        this._headerTitle = value;
+        this.headerTitle = value;
     }
     /**
      * Sets the isTopLevel property value. If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
      * @param value Value to set for the isTopLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsTopLevel(@javax.annotation.Nullable final Boolean value) {
-        this._isTopLevel = value;
+        this.isTopLevel = value;
     }
     /**
      * Sets the keywords property value. Keywords associated with the setting
      * @param value Value to set for the keywords property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeywords(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._keywords = value;
+        this.keywords = value;
     }
     /**
      * Sets the placeholderText property value. Placeholder text as an example of valid input
      * @param value Value to set for the placeholderText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlaceholderText(@javax.annotation.Nullable final String value) {
-        this._placeholderText = value;
+        this.placeholderText = value;
     }
     /**
      * Sets the valueType property value. The valueType property
      * @param value Value to set for the valueType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueType(@javax.annotation.Nullable final DeviceManangementIntentValueType value) {
-        this._valueType = value;
+        this.valueType = value;
     }
 }

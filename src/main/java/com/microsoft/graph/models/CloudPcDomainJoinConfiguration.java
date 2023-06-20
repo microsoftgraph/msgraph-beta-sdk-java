@@ -4,33 +4,34 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Azure AD joined. If you enter an onPremisesConnectionId, leave regionName as empty. */
-    private String _onPremisesConnectionId;
+    private String onPremisesConnectionId;
+    /** The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when provisioning a Cloud PC, and the Cloud PC will be put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, and southKorea. Read-only. */
+    private CloudPcRegionGroup regionGroup;
     /** The supported Azure region where the IT admin wants the provisioning policy to create Cloud PCs. The underlying virtual network will be created and managed by the Windows 365 service. This can only be entered if the IT admin chooses Azure AD joined as the domain join type. If you enter a regionName, leave onPremisesConnectionId as empty. */
-    private String _regionName;
+    private String regionName;
     /** Specifies how the provisioned Cloud PC will be joined to Azure AD. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave regionName as empty. If you choose the azureADJoin type, provide a value for either onPremisesConnectionId or regionName. The possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue. */
-    private CloudPcDomainJoinType _type;
+    private CloudPcDomainJoinType type;
     /**
-     * Instantiates a new cloudPcDomainJoinConfiguration and sets the default values.
+     * Instantiates a new CloudPcDomainJoinConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcDomainJoinConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.cloudPcDomainJoinConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcDomainJoinConfiguration
+     * @return a CloudPcDomainJoinConfiguration
      */
     @javax.annotation.Nonnull
     public static CloudPcDomainJoinConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -43,21 +44,21 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcDomainJoinConfiguration currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("onPremisesConnectionId", (n) -> { currentObject.setOnPremisesConnectionId(n.getStringValue()); });
-            this.put("regionName", (n) -> { currentObject.setRegionName(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(CloudPcDomainJoinType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onPremisesConnectionId", (n) -> { this.setOnPremisesConnectionId(n.getStringValue()); });
+        deserializerMap.put("regionGroup", (n) -> { this.setRegionGroup(n.getEnumValue(CloudPcRegionGroup.class)); });
+        deserializerMap.put("regionName", (n) -> { this.setRegionName(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CloudPcDomainJoinType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -65,7 +66,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the onPremisesConnectionId property value. The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Azure AD joined. If you enter an onPremisesConnectionId, leave regionName as empty.
@@ -73,7 +74,15 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public String getOnPremisesConnectionId() {
-        return this._onPremisesConnectionId;
+        return this.onPremisesConnectionId;
+    }
+    /**
+     * Gets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when provisioning a Cloud PC, and the Cloud PC will be put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, and southKorea. Read-only.
+     * @return a cloudPcRegionGroup
+     */
+    @javax.annotation.Nullable
+    public CloudPcRegionGroup getRegionGroup() {
+        return this.regionGroup;
     }
     /**
      * Gets the regionName property value. The supported Azure region where the IT admin wants the provisioning policy to create Cloud PCs. The underlying virtual network will be created and managed by the Windows 365 service. This can only be entered if the IT admin chooses Azure AD joined as the domain join type. If you enter a regionName, leave onPremisesConnectionId as empty.
@@ -81,7 +90,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public String getRegionName() {
-        return this._regionName;
+        return this.regionName;
     }
     /**
      * Gets the type property value. Specifies how the provisioned Cloud PC will be joined to Azure AD. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave regionName as empty. If you choose the azureADJoin type, provide a value for either onPremisesConnectionId or regionName. The possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
@@ -89,17 +98,19 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public CloudPcDomainJoinType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
+        writer.writeEnumValue("regionGroup", this.getRegionGroup());
         writer.writeStringValue("regionName", this.getRegionName());
         writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -109,39 +120,53 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the onPremisesConnectionId property value. The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Azure AD joined. If you enter an onPremisesConnectionId, leave regionName as empty.
      * @param value Value to set for the onPremisesConnectionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesConnectionId(@javax.annotation.Nullable final String value) {
-        this._onPremisesConnectionId = value;
+        this.onPremisesConnectionId = value;
+    }
+    /**
+     * Sets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when provisioning a Cloud PC, and the Cloud PC will be put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, and southKorea. Read-only.
+     * @param value Value to set for the regionGroup property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRegionGroup(@javax.annotation.Nullable final CloudPcRegionGroup value) {
+        this.regionGroup = value;
     }
     /**
      * Sets the regionName property value. The supported Azure region where the IT admin wants the provisioning policy to create Cloud PCs. The underlying virtual network will be created and managed by the Windows 365 service. This can only be entered if the IT admin chooses Azure AD joined as the domain join type. If you enter a regionName, leave onPremisesConnectionId as empty.
      * @param value Value to set for the regionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegionName(@javax.annotation.Nullable final String value) {
-        this._regionName = value;
+        this.regionName = value;
     }
     /**
      * Sets the type property value. Specifies how the provisioned Cloud PC will be joined to Azure AD. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave regionName as empty. If you choose the azureADJoin type, provide a value for either onPremisesConnectionId or regionName. The possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final CloudPcDomainJoinType value) {
-        this._type = value;
+        this.type = value;
     }
 }

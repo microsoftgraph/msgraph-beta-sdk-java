@@ -5,22 +5,21 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the updateRecordingStatus method. */
 public class UpdateRecordingStatusPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The clientContext property */
-    private String _clientContext;
+    private String clientContext;
     /** The status property */
-    private RecordingStatus _status;
+    private RecordingStatus status;
     /**
      * Instantiates a new updateRecordingStatusPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateRecordingStatusPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -40,7 +39,7 @@ public class UpdateRecordingStatusPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the clientContext property value. The clientContext property
@@ -48,33 +47,33 @@ public class UpdateRecordingStatusPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nullable
     public String getClientContext() {
-        return this._clientContext;
+        return this.clientContext;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdateRecordingStatusPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(RecordingStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("clientContext", (n) -> { this.setClientContext(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RecordingStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the status property value. The status property
-     * @return a recordingStatus
+     * @return a RecordingStatus
      */
     @javax.annotation.Nullable
     public RecordingStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("clientContext", this.getClientContext());
@@ -86,23 +85,26 @@ public class UpdateRecordingStatusPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the clientContext property value. The clientContext property
      * @param value Value to set for the clientContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
-        this._clientContext = value;
+        this.clientContext = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final RecordingStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

@@ -3,26 +3,28 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Operating System restart category. */
 public enum UserExperienceAnalyticsOperatingSystemRestartCategory implements ValuedEnum {
-    /** Unknown */
+    /** Default. Set to unknown if device operating system restart category has not yet been calculated. */
     Unknown("unknown"),
-    /** Restart with update */
+    /** Indicates that the device operating system restart is along with an update. */
     RestartWithUpdate("restartWithUpdate"),
-    /** Restart without update */
+    /** Indicates that the device operating system restart is without update. */
     RestartWithoutUpdate("restartWithoutUpdate"),
-    /** Blue screen restart */
+    /** Indicates that the device operating system restart is due to a specific stop error. */
     BlueScreen("blueScreen"),
-    /** Shutdown with update */
+    /** Indicates that the device operating system restart is due to shutdown with update. */
     ShutdownWithUpdate("shutdownWithUpdate"),
-    /** Shutdown without update */
+    /** Indicates that the device operating system restart is due to shutdown without update. */
     ShutdownWithoutUpdate("shutdownWithoutUpdate"),
-    /** Long power button press */
+    /** Indicates that the device operating system restart is due to update long power-button press. */
     LongPowerButtonPress("longPowerButtonPress"),
-    /** Boot error */
+    /** Indicates that the device operating system restart is due to boot error. */
     BootError("bootError"),
-    /** Update */
-    Update("update");
+    /** Indicates that the device operating system restarted after an update. */
+    Update("update"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     UserExperienceAnalyticsOperatingSystemRestartCategory(final String value) {
         this.value = value;
@@ -42,6 +44,7 @@ public enum UserExperienceAnalyticsOperatingSystemRestartCategory implements Val
             case "longPowerButtonPress": return LongPowerButtonPress;
             case "bootError": return BootError;
             case "update": return Update;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

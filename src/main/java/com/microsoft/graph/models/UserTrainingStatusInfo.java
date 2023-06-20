@@ -5,35 +5,34 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Date and time of assignment of the training to the user. */
-    private OffsetDateTime _assignedDateTime;
+    private OffsetDateTime assignedDateTime;
     /** Date and time of completion of the training by the user. */
-    private OffsetDateTime _completionDateTime;
+    private OffsetDateTime completionDateTime;
     /** Display name of the assigned training. */
-    private String _displayName;
+    private String displayName;
     /** The OdataType property */
-    private String _odataType;
-    /** Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue. */
-    private TrainingStatus _trainingStatus;
+    private String odataType;
+    /** The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue. */
+    private TrainingStatus trainingStatus;
     /**
-     * Instantiates a new userTrainingStatusInfo and sets the default values.
+     * Instantiates a new UserTrainingStatusInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserTrainingStatusInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userTrainingStatusInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userTrainingStatusInfo
+     * @return a UserTrainingStatusInfo
      */
     @javax.annotation.Nonnull
     public static UserTrainingStatusInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +45,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the assignedDateTime property value. Date and time of assignment of the training to the user.
@@ -54,7 +53,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getAssignedDateTime() {
-        return this._assignedDateTime;
+        return this.assignedDateTime;
     }
     /**
      * Gets the completionDateTime property value. Date and time of completion of the training by the user.
@@ -62,7 +61,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
-        return this._completionDateTime;
+        return this.completionDateTime;
     }
     /**
      * Gets the displayName property value. Display name of the assigned training.
@@ -70,22 +69,21 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserTrainingStatusInfo currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("assignedDateTime", (n) -> { currentObject.setAssignedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("completionDateTime", (n) -> { currentObject.setCompletionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("trainingStatus", (n) -> { currentObject.setTrainingStatus(n.getEnumValue(TrainingStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("assignedDateTime", (n) -> { this.setAssignedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("completionDateTime", (n) -> { this.setCompletionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("trainingStatus", (n) -> { this.setTrainingStatus(n.getEnumValue(TrainingStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,21 +91,22 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the trainingStatus property value. Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Gets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @return a trainingStatus
      */
     @javax.annotation.Nullable
     public TrainingStatus getTrainingStatus() {
-        return this._trainingStatus;
+        return this.trainingStatus;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("assignedDateTime", this.getAssignedDateTime());
@@ -122,47 +121,53 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the assignedDateTime property value. Date and time of assignment of the training to the user.
      * @param value Value to set for the assignedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._assignedDateTime = value;
+        this.assignedDateTime = value;
     }
     /**
      * Sets the completionDateTime property value. Date and time of completion of the training by the user.
      * @param value Value to set for the completionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._completionDateTime = value;
+        this.completionDateTime = value;
     }
     /**
      * Sets the displayName property value. Display name of the assigned training.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the trainingStatus property value. Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Sets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @param value Value to set for the trainingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrainingStatus(@javax.annotation.Nullable final TrainingStatus value) {
-        this._trainingStatus = value;
+        this.trainingStatus = value;
     }
 }

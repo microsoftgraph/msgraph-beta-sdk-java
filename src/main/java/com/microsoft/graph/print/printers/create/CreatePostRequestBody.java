@@ -5,32 +5,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the create method. */
 public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The certificateSigningRequest property */
-    private PrintCertificateSigningRequest _certificateSigningRequest;
+    private PrintCertificateSigningRequest certificateSigningRequest;
     /** The connectorId property */
-    private String _connectorId;
+    private String connectorId;
     /** The displayName property */
-    private String _displayName;
+    private String displayName;
     /** The hasPhysicalDevice property */
-    private Boolean _hasPhysicalDevice;
+    private Boolean hasPhysicalDevice;
     /** The manufacturer property */
-    private String _manufacturer;
+    private String manufacturer;
     /** The model property */
-    private String _model;
+    private String model;
     /** The physicalDeviceId property */
-    private String _physicalDeviceId;
+    private String physicalDeviceId;
     /**
      * Instantiates a new createPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CreatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,15 +49,15 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the certificateSigningRequest property value. The certificateSigningRequest property
-     * @return a printCertificateSigningRequest
+     * @return a PrintCertificateSigningRequest
      */
     @javax.annotation.Nullable
     public PrintCertificateSigningRequest getCertificateSigningRequest() {
-        return this._certificateSigningRequest;
+        return this.certificateSigningRequest;
     }
     /**
      * Gets the connectorId property value. The connectorId property
@@ -66,7 +65,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getConnectorId() {
-        return this._connectorId;
+        return this.connectorId;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -74,24 +73,23 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CreatePostRequestBody currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("certificateSigningRequest", (n) -> { currentObject.setCertificateSigningRequest(n.getObjectValue(PrintCertificateSigningRequest::createFromDiscriminatorValue)); });
-            this.put("connectorId", (n) -> { currentObject.setConnectorId(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("hasPhysicalDevice", (n) -> { currentObject.setHasPhysicalDevice(n.getBooleanValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("physicalDeviceId", (n) -> { currentObject.setPhysicalDeviceId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("certificateSigningRequest", (n) -> { this.setCertificateSigningRequest(n.getObjectValue(PrintCertificateSigningRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("connectorId", (n) -> { this.setConnectorId(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("hasPhysicalDevice", (n) -> { this.setHasPhysicalDevice(n.getBooleanValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("physicalDeviceId", (n) -> { this.setPhysicalDeviceId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hasPhysicalDevice property value. The hasPhysicalDevice property
@@ -99,7 +97,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getHasPhysicalDevice() {
-        return this._hasPhysicalDevice;
+        return this.hasPhysicalDevice;
     }
     /**
      * Gets the manufacturer property value. The manufacturer property
@@ -107,7 +105,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the model property value. The model property
@@ -115,7 +113,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Gets the physicalDeviceId property value. The physicalDeviceId property
@@ -123,13 +121,14 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPhysicalDeviceId() {
-        return this._physicalDeviceId;
+        return this.physicalDeviceId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("certificateSigningRequest", this.getCertificateSigningRequest());
@@ -146,63 +145,71 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the certificateSigningRequest property value. The certificateSigningRequest property
      * @param value Value to set for the certificateSigningRequest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateSigningRequest(@javax.annotation.Nullable final PrintCertificateSigningRequest value) {
-        this._certificateSigningRequest = value;
+        this.certificateSigningRequest = value;
     }
     /**
      * Sets the connectorId property value. The connectorId property
      * @param value Value to set for the connectorId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectorId(@javax.annotation.Nullable final String value) {
-        this._connectorId = value;
+        this.connectorId = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the hasPhysicalDevice property value. The hasPhysicalDevice property
      * @param value Value to set for the hasPhysicalDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasPhysicalDevice(@javax.annotation.Nullable final Boolean value) {
-        this._hasPhysicalDevice = value;
+        this.hasPhysicalDevice = value;
     }
     /**
      * Sets the manufacturer property value. The manufacturer property
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the model property value. The model property
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
      * Sets the physicalDeviceId property value. The physicalDeviceId property
      * @param value Value to set for the physicalDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhysicalDeviceId(@javax.annotation.Nullable final String value) {
-        this._physicalDeviceId = value;
+        this.physicalDeviceId = value;
     }
 }

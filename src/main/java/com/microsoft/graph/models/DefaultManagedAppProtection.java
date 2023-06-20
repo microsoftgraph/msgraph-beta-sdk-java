@@ -3,121 +3,125 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DefaultManagedAppProtection extends ManagedAppProtection implements Parsable {
     /** Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work. (Android only) */
-    private String _allowedAndroidDeviceManufacturers;
+    private String allowedAndroidDeviceManufacturers;
     /** List of device models allowed, as a string, for the managed app to work. (Android Only) */
-    private java.util.List<String> _allowedAndroidDeviceModels;
+    private java.util.List<String> allowedAndroidDeviceModels;
     /** Semicolon seperated list of device models allowed, as a string, for the managed app to work. (iOS Only) */
-    private String _allowedIosDeviceModels;
+    private String allowedIosDeviceModels;
+    /** Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). */
+    private ManagedAppRemediationAction appActionIfAccountIsClockedOut;
     /** An admin initiated action to be applied on a managed app. */
-    private ManagedAppRemediationAction _appActionIfAndroidDeviceManufacturerNotAllowed;
+    private ManagedAppRemediationAction appActionIfAndroidDeviceManufacturerNotAllowed;
     /** An admin initiated action to be applied on a managed app. */
-    private ManagedAppRemediationAction _appActionIfAndroidDeviceModelNotAllowed;
+    private ManagedAppRemediationAction appActionIfAndroidDeviceModelNotAllowed;
     /** An admin initiated action to be applied on a managed app. */
-    private ManagedAppRemediationAction _appActionIfAndroidSafetyNetAppsVerificationFailed;
+    private ManagedAppRemediationAction appActionIfAndroidSafetyNetAppsVerificationFailed;
     /** An admin initiated action to be applied on a managed app. */
-    private ManagedAppRemediationAction _appActionIfAndroidSafetyNetDeviceAttestationFailed;
+    private ManagedAppRemediationAction appActionIfAndroidSafetyNetDeviceAttestationFailed;
     /** An admin initiated action to be applied on a managed app. */
-    private ManagedAppRemediationAction _appActionIfDeviceLockNotSet;
+    private ManagedAppRemediationAction appActionIfDeviceLockNotSet;
     /** If the device does not have a passcode of high complexity or higher, trigger the stored action. Possible values are: block, wipe, warn. */
-    private ManagedAppRemediationAction _appActionIfDevicePasscodeComplexityLessThanHigh;
+    private ManagedAppRemediationAction appActionIfDevicePasscodeComplexityLessThanHigh;
     /** If the device does not have a passcode of low complexity or higher, trigger the stored action. Possible values are: block, wipe, warn. */
-    private ManagedAppRemediationAction _appActionIfDevicePasscodeComplexityLessThanLow;
+    private ManagedAppRemediationAction appActionIfDevicePasscodeComplexityLessThanLow;
     /** If the device does not have a passcode of medium complexity or higher, trigger the stored action. Possible values are: block, wipe, warn. */
-    private ManagedAppRemediationAction _appActionIfDevicePasscodeComplexityLessThanMedium;
+    private ManagedAppRemediationAction appActionIfDevicePasscodeComplexityLessThanMedium;
     /** An admin initiated action to be applied on a managed app. */
-    private ManagedAppRemediationAction _appActionIfIosDeviceModelNotAllowed;
+    private ManagedAppRemediationAction appActionIfIosDeviceModelNotAllowed;
     /** Represents the level to which app data is encrypted for managed apps */
-    private ManagedAppDataEncryptionType _appDataEncryptionType;
+    private ManagedAppDataEncryptionType appDataEncryptionType;
     /** List of apps to which the policy is deployed. */
-    private java.util.List<ManagedMobileApp> _apps;
+    private java.util.List<ManagedMobileApp> apps;
     /** Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True. (Android Only) */
-    private Boolean _biometricAuthenticationBlocked;
+    private Boolean biometricAuthenticationBlocked;
     /** Maximum number of days Company Portal update can be deferred on the device or app access will be blocked. */
-    private Integer _blockAfterCompanyPortalUpdateDeferralInDays;
+    private Integer blockAfterCompanyPortalUpdateDeferralInDays;
     /** Whether the app should connect to the configured VPN on launch (Android only). */
-    private Boolean _connectToVpnOnLaunch;
+    private Boolean connectToVpnOnLaunch;
     /** Friendly name of the preferred custom browser to open weblink on Android. (Android only) */
-    private String _customBrowserDisplayName;
+    private String customBrowserDisplayName;
     /** Unique identifier of a custom browser to open weblink on Android. (Android only) */
-    private String _customBrowserPackageId;
+    private String customBrowserPackageId;
     /** A custom browser protocol to open weblink on iOS. (iOS only) */
-    private String _customBrowserProtocol;
+    private String customBrowserProtocol;
     /** Friendly name of a custom dialer app to click-to-open a phone number on Android. */
-    private String _customDialerAppDisplayName;
+    private String customDialerAppDisplayName;
     /** PackageId of a custom dialer app to click-to-open a phone number on Android. */
-    private String _customDialerAppPackageId;
+    private String customDialerAppPackageId;
     /** Protocol of a custom dialer app to click-to-open a phone number on iOS, for example, skype:. */
-    private String _customDialerAppProtocol;
+    private String customDialerAppProtocol;
     /** A set of string key and string value pairs to be sent to the affected users, unalterned by this service */
-    private java.util.List<KeyValuePair> _customSettings;
+    private java.util.List<KeyValuePair> customSettings;
     /** Count of apps to which the current policy is deployed. */
-    private Integer _deployedAppCount;
+    private Integer deployedAppCount;
     /** Navigation property to deployment summary of the configuration. */
-    private ManagedAppPolicyDeploymentSummary _deploymentSummary;
+    private ManagedAppPolicyDeploymentSummary deploymentSummary;
     /** Defines if any kind of lock must be required on device. (android only) */
-    private Boolean _deviceLockRequired;
+    private Boolean deviceLockRequired;
     /** When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only) */
-    private Boolean _disableAppEncryptionIfDeviceEncryptionIsEnabled;
+    private Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
     /** Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps. (iOS Only) */
-    private Boolean _disableProtectionOfManagedOutboundOpenInData;
+    private Boolean disableProtectionOfManagedOutboundOpenInData;
     /** Indicates whether managed-app data should be encrypted. (Android only) */
-    private Boolean _encryptAppData;
+    private Boolean encryptAppData;
     /** Android App packages in this list will be exempt from the policy and will be able to receive data from managed apps. (Android only) */
-    private java.util.List<KeyValuePair> _exemptedAppPackages;
+    private java.util.List<KeyValuePair> exemptedAppPackages;
     /** iOS Apps in this list will be exempt from the policy and will be able to receive data from managed apps. (iOS Only) */
-    private java.util.List<KeyValuePair> _exemptedAppProtocols;
+    private java.util.List<KeyValuePair> exemptedAppProtocols;
     /** Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only) */
-    private Boolean _faceIdBlocked;
+    private Boolean faceIdBlocked;
     /** Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False. (iOS Only) */
-    private Boolean _filterOpenInToOnlyManagedApps;
+    private Boolean filterOpenInToOnlyManagedApps;
     /** Indicate to the client to enable both biometrics and fingerprints for the app. */
-    private Boolean _fingerprintAndBiometricEnabled;
+    private Boolean fingerprintAndBiometricEnabled;
     /** Minimum version of the Company portal that must be installed on the device or app access will be blocked */
-    private String _minimumRequiredCompanyPortalVersion;
+    private String minimumRequiredCompanyPortalVersion;
     /** Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only) */
-    private String _minimumRequiredPatchVersion;
+    private String minimumRequiredPatchVersion;
     /** Versions less than the specified version will block the managed app from accessing company data. (iOS Only) */
-    private String _minimumRequiredSdkVersion;
+    private String minimumRequiredSdkVersion;
     /** Minimum version of the Company portal that must be installed on the device or the user will receive a warning */
-    private String _minimumWarningCompanyPortalVersion;
+    private String minimumWarningCompanyPortalVersion;
     /** Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only) */
-    private String _minimumWarningPatchVersion;
+    private String minimumWarningPatchVersion;
+    /** Versions less than the specified version will result in warning message on the managed app from accessing company data. (iOS only) */
+    private String minimumWarningSdkVersion;
     /** Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped */
-    private String _minimumWipeCompanyPortalVersion;
+    private String minimumWipeCompanyPortalVersion;
     /** Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data. (Android only) */
-    private String _minimumWipePatchVersion;
+    private String minimumWipePatchVersion;
     /** Versions less than the specified version will block the managed app from accessing company data. */
-    private String _minimumWipeSdkVersion;
+    private String minimumWipeSdkVersion;
     /** Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps. (iOS Only) */
-    private Boolean _protectInboundDataFromUnknownSources;
+    private Boolean protectInboundDataFromUnknownSources;
     /** Require user to apply Class 3 Biometrics on their Android device. */
-    private Boolean _requireClass3Biometrics;
+    private Boolean requireClass3Biometrics;
     /** An admin enforced Android SafetyNet Device Attestation requirement on a managed app. */
-    private AndroidManagedAppSafetyNetAppsVerificationType _requiredAndroidSafetyNetAppsVerificationType;
+    private AndroidManagedAppSafetyNetAppsVerificationType requiredAndroidSafetyNetAppsVerificationType;
     /** An admin enforced Android SafetyNet Device Attestation requirement on a managed app. */
-    private AndroidManagedAppSafetyNetDeviceAttestationType _requiredAndroidSafetyNetDeviceAttestationType;
+    private AndroidManagedAppSafetyNetDeviceAttestationType requiredAndroidSafetyNetDeviceAttestationType;
     /** An admin enforced Android SafetyNet evaluation type requirement on a managed app. */
-    private AndroidManagedAppSafetyNetEvaluationType _requiredAndroidSafetyNetEvaluationType;
+    private AndroidManagedAppSafetyNetEvaluationType requiredAndroidSafetyNetEvaluationType;
     /** A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device. */
-    private Boolean _requirePinAfterBiometricChange;
+    private Boolean requirePinAfterBiometricChange;
     /** Indicates whether screen capture is blocked. (Android only) */
-    private Boolean _screenCaptureBlocked;
+    private Boolean screenCaptureBlocked;
     /** Defines if third party keyboards are allowed while accessing a managed app. (iOS Only) */
-    private Boolean _thirdPartyKeyboardsBlocked;
+    private Boolean thirdPartyKeyboardsBlocked;
     /** Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning */
-    private Integer _warnAfterCompanyPortalUpdateDeferralInDays;
+    private Integer warnAfterCompanyPortalUpdateDeferralInDays;
     /** Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped */
-    private Integer _wipeAfterCompanyPortalUpdateDeferralInDays;
+    private Integer wipeAfterCompanyPortalUpdateDeferralInDays;
     /**
      * Instantiates a new DefaultManagedAppProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DefaultManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.defaultManagedAppProtection");
@@ -138,7 +142,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getAllowedAndroidDeviceManufacturers() {
-        return this._allowedAndroidDeviceManufacturers;
+        return this.allowedAndroidDeviceManufacturers;
     }
     /**
      * Gets the allowedAndroidDeviceModels property value. List of device models allowed, as a string, for the managed app to work. (Android Only)
@@ -146,7 +150,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAllowedAndroidDeviceModels() {
-        return this._allowedAndroidDeviceModels;
+        return this.allowedAndroidDeviceModels;
     }
     /**
      * Gets the allowedIosDeviceModels property value. Semicolon seperated list of device models allowed, as a string, for the managed app to work. (iOS Only)
@@ -154,47 +158,55 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getAllowedIosDeviceModels() {
-        return this._allowedIosDeviceModels;
+        return this.allowedIosDeviceModels;
+    }
+    /**
+     * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+     * @return a managedAppRemediationAction
+     */
+    @javax.annotation.Nullable
+    public ManagedAppRemediationAction getAppActionIfAccountIsClockedOut() {
+        return this.appActionIfAccountIsClockedOut;
     }
     /**
      * Gets the appActionIfAndroidDeviceManufacturerNotAllowed property value. An admin initiated action to be applied on a managed app.
-     * @return a managedAppRemediationAction
+     * @return a ManagedAppRemediationAction
      */
     @javax.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidDeviceManufacturerNotAllowed() {
-        return this._appActionIfAndroidDeviceManufacturerNotAllowed;
+        return this.appActionIfAndroidDeviceManufacturerNotAllowed;
     }
     /**
      * Gets the appActionIfAndroidDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
-     * @return a managedAppRemediationAction
+     * @return a ManagedAppRemediationAction
      */
     @javax.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidDeviceModelNotAllowed() {
-        return this._appActionIfAndroidDeviceModelNotAllowed;
+        return this.appActionIfAndroidDeviceModelNotAllowed;
     }
     /**
      * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed property value. An admin initiated action to be applied on a managed app.
-     * @return a managedAppRemediationAction
+     * @return a ManagedAppRemediationAction
      */
     @javax.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidSafetyNetAppsVerificationFailed() {
-        return this._appActionIfAndroidSafetyNetAppsVerificationFailed;
+        return this.appActionIfAndroidSafetyNetAppsVerificationFailed;
     }
     /**
      * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed property value. An admin initiated action to be applied on a managed app.
-     * @return a managedAppRemediationAction
+     * @return a ManagedAppRemediationAction
      */
     @javax.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidSafetyNetDeviceAttestationFailed() {
-        return this._appActionIfAndroidSafetyNetDeviceAttestationFailed;
+        return this.appActionIfAndroidSafetyNetDeviceAttestationFailed;
     }
     /**
      * Gets the appActionIfDeviceLockNotSet property value. An admin initiated action to be applied on a managed app.
-     * @return a managedAppRemediationAction
+     * @return a ManagedAppRemediationAction
      */
     @javax.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDeviceLockNotSet() {
-        return this._appActionIfDeviceLockNotSet;
+        return this.appActionIfDeviceLockNotSet;
     }
     /**
      * Gets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
@@ -202,7 +214,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanHigh() {
-        return this._appActionIfDevicePasscodeComplexityLessThanHigh;
+        return this.appActionIfDevicePasscodeComplexityLessThanHigh;
     }
     /**
      * Gets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
@@ -210,7 +222,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanLow() {
-        return this._appActionIfDevicePasscodeComplexityLessThanLow;
+        return this.appActionIfDevicePasscodeComplexityLessThanLow;
     }
     /**
      * Gets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
@@ -218,23 +230,23 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanMedium() {
-        return this._appActionIfDevicePasscodeComplexityLessThanMedium;
+        return this.appActionIfDevicePasscodeComplexityLessThanMedium;
     }
     /**
      * Gets the appActionIfIosDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
-     * @return a managedAppRemediationAction
+     * @return a ManagedAppRemediationAction
      */
     @javax.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfIosDeviceModelNotAllowed() {
-        return this._appActionIfIosDeviceModelNotAllowed;
+        return this.appActionIfIosDeviceModelNotAllowed;
     }
     /**
      * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
-     * @return a managedAppDataEncryptionType
+     * @return a ManagedAppDataEncryptionType
      */
     @javax.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {
-        return this._appDataEncryptionType;
+        return this.appDataEncryptionType;
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
@@ -242,7 +254,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
-        return this._apps;
+        return this.apps;
     }
     /**
      * Gets the biometricAuthenticationBlocked property value. Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True. (Android Only)
@@ -250,7 +262,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getBiometricAuthenticationBlocked() {
-        return this._biometricAuthenticationBlocked;
+        return this.biometricAuthenticationBlocked;
     }
     /**
      * Gets the blockAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or app access will be blocked.
@@ -258,7 +270,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Integer getBlockAfterCompanyPortalUpdateDeferralInDays() {
-        return this._blockAfterCompanyPortalUpdateDeferralInDays;
+        return this.blockAfterCompanyPortalUpdateDeferralInDays;
     }
     /**
      * Gets the connectToVpnOnLaunch property value. Whether the app should connect to the configured VPN on launch (Android only).
@@ -266,7 +278,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getConnectToVpnOnLaunch() {
-        return this._connectToVpnOnLaunch;
+        return this.connectToVpnOnLaunch;
     }
     /**
      * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. (Android only)
@@ -274,7 +286,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getCustomBrowserDisplayName() {
-        return this._customBrowserDisplayName;
+        return this.customBrowserDisplayName;
     }
     /**
      * Gets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android. (Android only)
@@ -282,7 +294,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getCustomBrowserPackageId() {
-        return this._customBrowserPackageId;
+        return this.customBrowserPackageId;
     }
     /**
      * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. (iOS only)
@@ -290,7 +302,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getCustomBrowserProtocol() {
-        return this._customBrowserProtocol;
+        return this.customBrowserProtocol;
     }
     /**
      * Gets the customDialerAppDisplayName property value. Friendly name of a custom dialer app to click-to-open a phone number on Android.
@@ -298,7 +310,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getCustomDialerAppDisplayName() {
-        return this._customDialerAppDisplayName;
+        return this.customDialerAppDisplayName;
     }
     /**
      * Gets the customDialerAppPackageId property value. PackageId of a custom dialer app to click-to-open a phone number on Android.
@@ -306,7 +318,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getCustomDialerAppPackageId() {
-        return this._customDialerAppPackageId;
+        return this.customDialerAppPackageId;
     }
     /**
      * Gets the customDialerAppProtocol property value. Protocol of a custom dialer app to click-to-open a phone number on iOS, for example, skype:.
@@ -314,15 +326,15 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getCustomDialerAppProtocol() {
-        return this._customDialerAppProtocol;
+        return this.customDialerAppProtocol;
     }
     /**
      * Gets the customSettings property value. A set of string key and string value pairs to be sent to the affected users, unalterned by this service
-     * @return a keyValuePair
+     * @return a KeyValuePair
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {
-        return this._customSettings;
+        return this.customSettings;
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
@@ -330,7 +342,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Integer getDeployedAppCount() {
-        return this._deployedAppCount;
+        return this.deployedAppCount;
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
@@ -338,7 +350,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
-        return this._deploymentSummary;
+        return this.deploymentSummary;
     }
     /**
      * Gets the deviceLockRequired property value. Defines if any kind of lock must be required on device. (android only)
@@ -346,7 +358,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getDeviceLockRequired() {
-        return this._deviceLockRequired;
+        return this.deviceLockRequired;
     }
     /**
      * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
@@ -354,7 +366,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getDisableAppEncryptionIfDeviceEncryptionIsEnabled() {
-        return this._disableAppEncryptionIfDeviceEncryptionIsEnabled;
+        return this.disableAppEncryptionIfDeviceEncryptionIsEnabled;
     }
     /**
      * Gets the disableProtectionOfManagedOutboundOpenInData property value. Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps. (iOS Only)
@@ -362,7 +374,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getDisableProtectionOfManagedOutboundOpenInData() {
-        return this._disableProtectionOfManagedOutboundOpenInData;
+        return this.disableProtectionOfManagedOutboundOpenInData;
     }
     /**
      * Gets the encryptAppData property value. Indicates whether managed-app data should be encrypted. (Android only)
@@ -370,7 +382,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getEncryptAppData() {
-        return this._encryptAppData;
+        return this.encryptAppData;
     }
     /**
      * Gets the exemptedAppPackages property value. Android App packages in this list will be exempt from the policy and will be able to receive data from managed apps. (Android only)
@@ -378,7 +390,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getExemptedAppPackages() {
-        return this._exemptedAppPackages;
+        return this.exemptedAppPackages;
     }
     /**
      * Gets the exemptedAppProtocols property value. iOS Apps in this list will be exempt from the policy and will be able to receive data from managed apps. (iOS Only)
@@ -386,7 +398,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getExemptedAppProtocols() {
-        return this._exemptedAppProtocols;
+        return this.exemptedAppProtocols;
     }
     /**
      * Gets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
@@ -394,70 +406,71 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getFaceIdBlocked() {
-        return this._faceIdBlocked;
+        return this.faceIdBlocked;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DefaultManagedAppProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedAndroidDeviceManufacturers", (n) -> { currentObject.setAllowedAndroidDeviceManufacturers(n.getStringValue()); });
-            this.put("allowedAndroidDeviceModels", (n) -> { currentObject.setAllowedAndroidDeviceModels(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("allowedIosDeviceModels", (n) -> { currentObject.setAllowedIosDeviceModels(n.getStringValue()); });
-            this.put("appActionIfAndroidDeviceManufacturerNotAllowed", (n) -> { currentObject.setAppActionIfAndroidDeviceManufacturerNotAllowed(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfAndroidDeviceModelNotAllowed", (n) -> { currentObject.setAppActionIfAndroidDeviceModelNotAllowed(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfAndroidSafetyNetAppsVerificationFailed", (n) -> { currentObject.setAppActionIfAndroidSafetyNetAppsVerificationFailed(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfAndroidSafetyNetDeviceAttestationFailed", (n) -> { currentObject.setAppActionIfAndroidSafetyNetDeviceAttestationFailed(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfDeviceLockNotSet", (n) -> { currentObject.setAppActionIfDeviceLockNotSet(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfDevicePasscodeComplexityLessThanHigh", (n) -> { currentObject.setAppActionIfDevicePasscodeComplexityLessThanHigh(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfDevicePasscodeComplexityLessThanLow", (n) -> { currentObject.setAppActionIfDevicePasscodeComplexityLessThanLow(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfDevicePasscodeComplexityLessThanMedium", (n) -> { currentObject.setAppActionIfDevicePasscodeComplexityLessThanMedium(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfIosDeviceModelNotAllowed", (n) -> { currentObject.setAppActionIfIosDeviceModelNotAllowed(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appDataEncryptionType", (n) -> { currentObject.setAppDataEncryptionType(n.getEnumValue(ManagedAppDataEncryptionType.class)); });
-            this.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
-            this.put("biometricAuthenticationBlocked", (n) -> { currentObject.setBiometricAuthenticationBlocked(n.getBooleanValue()); });
-            this.put("blockAfterCompanyPortalUpdateDeferralInDays", (n) -> { currentObject.setBlockAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
-            this.put("connectToVpnOnLaunch", (n) -> { currentObject.setConnectToVpnOnLaunch(n.getBooleanValue()); });
-            this.put("customBrowserDisplayName", (n) -> { currentObject.setCustomBrowserDisplayName(n.getStringValue()); });
-            this.put("customBrowserPackageId", (n) -> { currentObject.setCustomBrowserPackageId(n.getStringValue()); });
-            this.put("customBrowserProtocol", (n) -> { currentObject.setCustomBrowserProtocol(n.getStringValue()); });
-            this.put("customDialerAppDisplayName", (n) -> { currentObject.setCustomDialerAppDisplayName(n.getStringValue()); });
-            this.put("customDialerAppPackageId", (n) -> { currentObject.setCustomDialerAppPackageId(n.getStringValue()); });
-            this.put("customDialerAppProtocol", (n) -> { currentObject.setCustomDialerAppProtocol(n.getStringValue()); });
-            this.put("customSettings", (n) -> { currentObject.setCustomSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("deployedAppCount", (n) -> { currentObject.setDeployedAppCount(n.getIntegerValue()); });
-            this.put("deploymentSummary", (n) -> { currentObject.setDeploymentSummary(n.getObjectValue(ManagedAppPolicyDeploymentSummary::createFromDiscriminatorValue)); });
-            this.put("deviceLockRequired", (n) -> { currentObject.setDeviceLockRequired(n.getBooleanValue()); });
-            this.put("disableAppEncryptionIfDeviceEncryptionIsEnabled", (n) -> { currentObject.setDisableAppEncryptionIfDeviceEncryptionIsEnabled(n.getBooleanValue()); });
-            this.put("disableProtectionOfManagedOutboundOpenInData", (n) -> { currentObject.setDisableProtectionOfManagedOutboundOpenInData(n.getBooleanValue()); });
-            this.put("encryptAppData", (n) -> { currentObject.setEncryptAppData(n.getBooleanValue()); });
-            this.put("exemptedAppPackages", (n) -> { currentObject.setExemptedAppPackages(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("exemptedAppProtocols", (n) -> { currentObject.setExemptedAppProtocols(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("faceIdBlocked", (n) -> { currentObject.setFaceIdBlocked(n.getBooleanValue()); });
-            this.put("filterOpenInToOnlyManagedApps", (n) -> { currentObject.setFilterOpenInToOnlyManagedApps(n.getBooleanValue()); });
-            this.put("fingerprintAndBiometricEnabled", (n) -> { currentObject.setFingerprintAndBiometricEnabled(n.getBooleanValue()); });
-            this.put("minimumRequiredCompanyPortalVersion", (n) -> { currentObject.setMinimumRequiredCompanyPortalVersion(n.getStringValue()); });
-            this.put("minimumRequiredPatchVersion", (n) -> { currentObject.setMinimumRequiredPatchVersion(n.getStringValue()); });
-            this.put("minimumRequiredSdkVersion", (n) -> { currentObject.setMinimumRequiredSdkVersion(n.getStringValue()); });
-            this.put("minimumWarningCompanyPortalVersion", (n) -> { currentObject.setMinimumWarningCompanyPortalVersion(n.getStringValue()); });
-            this.put("minimumWarningPatchVersion", (n) -> { currentObject.setMinimumWarningPatchVersion(n.getStringValue()); });
-            this.put("minimumWipeCompanyPortalVersion", (n) -> { currentObject.setMinimumWipeCompanyPortalVersion(n.getStringValue()); });
-            this.put("minimumWipePatchVersion", (n) -> { currentObject.setMinimumWipePatchVersion(n.getStringValue()); });
-            this.put("minimumWipeSdkVersion", (n) -> { currentObject.setMinimumWipeSdkVersion(n.getStringValue()); });
-            this.put("protectInboundDataFromUnknownSources", (n) -> { currentObject.setProtectInboundDataFromUnknownSources(n.getBooleanValue()); });
-            this.put("requireClass3Biometrics", (n) -> { currentObject.setRequireClass3Biometrics(n.getBooleanValue()); });
-            this.put("requiredAndroidSafetyNetAppsVerificationType", (n) -> { currentObject.setRequiredAndroidSafetyNetAppsVerificationType(n.getEnumValue(AndroidManagedAppSafetyNetAppsVerificationType.class)); });
-            this.put("requiredAndroidSafetyNetDeviceAttestationType", (n) -> { currentObject.setRequiredAndroidSafetyNetDeviceAttestationType(n.getEnumValue(AndroidManagedAppSafetyNetDeviceAttestationType.class)); });
-            this.put("requiredAndroidSafetyNetEvaluationType", (n) -> { currentObject.setRequiredAndroidSafetyNetEvaluationType(n.getEnumValue(AndroidManagedAppSafetyNetEvaluationType.class)); });
-            this.put("requirePinAfterBiometricChange", (n) -> { currentObject.setRequirePinAfterBiometricChange(n.getBooleanValue()); });
-            this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
-            this.put("thirdPartyKeyboardsBlocked", (n) -> { currentObject.setThirdPartyKeyboardsBlocked(n.getBooleanValue()); });
-            this.put("warnAfterCompanyPortalUpdateDeferralInDays", (n) -> { currentObject.setWarnAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
-            this.put("wipeAfterCompanyPortalUpdateDeferralInDays", (n) -> { currentObject.setWipeAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedAndroidDeviceManufacturers", (n) -> { this.setAllowedAndroidDeviceManufacturers(n.getStringValue()); });
+        deserializerMap.put("allowedAndroidDeviceModels", (n) -> { this.setAllowedAndroidDeviceModels(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("allowedIosDeviceModels", (n) -> { this.setAllowedIosDeviceModels(n.getStringValue()); });
+        deserializerMap.put("appActionIfAccountIsClockedOut", (n) -> { this.setAppActionIfAccountIsClockedOut(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfAndroidDeviceManufacturerNotAllowed", (n) -> { this.setAppActionIfAndroidDeviceManufacturerNotAllowed(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfAndroidDeviceModelNotAllowed", (n) -> { this.setAppActionIfAndroidDeviceModelNotAllowed(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfAndroidSafetyNetAppsVerificationFailed", (n) -> { this.setAppActionIfAndroidSafetyNetAppsVerificationFailed(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfAndroidSafetyNetDeviceAttestationFailed", (n) -> { this.setAppActionIfAndroidSafetyNetDeviceAttestationFailed(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfDeviceLockNotSet", (n) -> { this.setAppActionIfDeviceLockNotSet(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanHigh", (n) -> { this.setAppActionIfDevicePasscodeComplexityLessThanHigh(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanLow", (n) -> { this.setAppActionIfDevicePasscodeComplexityLessThanLow(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanMedium", (n) -> { this.setAppActionIfDevicePasscodeComplexityLessThanMedium(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfIosDeviceModelNotAllowed", (n) -> { this.setAppActionIfIosDeviceModelNotAllowed(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appDataEncryptionType", (n) -> { this.setAppDataEncryptionType(n.getEnumValue(ManagedAppDataEncryptionType.class)); });
+        deserializerMap.put("apps", (n) -> { this.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("biometricAuthenticationBlocked", (n) -> { this.setBiometricAuthenticationBlocked(n.getBooleanValue()); });
+        deserializerMap.put("blockAfterCompanyPortalUpdateDeferralInDays", (n) -> { this.setBlockAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
+        deserializerMap.put("connectToVpnOnLaunch", (n) -> { this.setConnectToVpnOnLaunch(n.getBooleanValue()); });
+        deserializerMap.put("customBrowserDisplayName", (n) -> { this.setCustomBrowserDisplayName(n.getStringValue()); });
+        deserializerMap.put("customBrowserPackageId", (n) -> { this.setCustomBrowserPackageId(n.getStringValue()); });
+        deserializerMap.put("customBrowserProtocol", (n) -> { this.setCustomBrowserProtocol(n.getStringValue()); });
+        deserializerMap.put("customDialerAppDisplayName", (n) -> { this.setCustomDialerAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("customDialerAppPackageId", (n) -> { this.setCustomDialerAppPackageId(n.getStringValue()); });
+        deserializerMap.put("customDialerAppProtocol", (n) -> { this.setCustomDialerAppProtocol(n.getStringValue()); });
+        deserializerMap.put("customSettings", (n) -> { this.setCustomSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("deployedAppCount", (n) -> { this.setDeployedAppCount(n.getIntegerValue()); });
+        deserializerMap.put("deploymentSummary", (n) -> { this.setDeploymentSummary(n.getObjectValue(ManagedAppPolicyDeploymentSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceLockRequired", (n) -> { this.setDeviceLockRequired(n.getBooleanValue()); });
+        deserializerMap.put("disableAppEncryptionIfDeviceEncryptionIsEnabled", (n) -> { this.setDisableAppEncryptionIfDeviceEncryptionIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("disableProtectionOfManagedOutboundOpenInData", (n) -> { this.setDisableProtectionOfManagedOutboundOpenInData(n.getBooleanValue()); });
+        deserializerMap.put("encryptAppData", (n) -> { this.setEncryptAppData(n.getBooleanValue()); });
+        deserializerMap.put("exemptedAppPackages", (n) -> { this.setExemptedAppPackages(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("exemptedAppProtocols", (n) -> { this.setExemptedAppProtocols(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("faceIdBlocked", (n) -> { this.setFaceIdBlocked(n.getBooleanValue()); });
+        deserializerMap.put("filterOpenInToOnlyManagedApps", (n) -> { this.setFilterOpenInToOnlyManagedApps(n.getBooleanValue()); });
+        deserializerMap.put("fingerprintAndBiometricEnabled", (n) -> { this.setFingerprintAndBiometricEnabled(n.getBooleanValue()); });
+        deserializerMap.put("minimumRequiredCompanyPortalVersion", (n) -> { this.setMinimumRequiredCompanyPortalVersion(n.getStringValue()); });
+        deserializerMap.put("minimumRequiredPatchVersion", (n) -> { this.setMinimumRequiredPatchVersion(n.getStringValue()); });
+        deserializerMap.put("minimumRequiredSdkVersion", (n) -> { this.setMinimumRequiredSdkVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWarningCompanyPortalVersion", (n) -> { this.setMinimumWarningCompanyPortalVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWarningPatchVersion", (n) -> { this.setMinimumWarningPatchVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWarningSdkVersion", (n) -> { this.setMinimumWarningSdkVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWipeCompanyPortalVersion", (n) -> { this.setMinimumWipeCompanyPortalVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWipePatchVersion", (n) -> { this.setMinimumWipePatchVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWipeSdkVersion", (n) -> { this.setMinimumWipeSdkVersion(n.getStringValue()); });
+        deserializerMap.put("protectInboundDataFromUnknownSources", (n) -> { this.setProtectInboundDataFromUnknownSources(n.getBooleanValue()); });
+        deserializerMap.put("requireClass3Biometrics", (n) -> { this.setRequireClass3Biometrics(n.getBooleanValue()); });
+        deserializerMap.put("requiredAndroidSafetyNetAppsVerificationType", (n) -> { this.setRequiredAndroidSafetyNetAppsVerificationType(n.getEnumValue(AndroidManagedAppSafetyNetAppsVerificationType.class)); });
+        deserializerMap.put("requiredAndroidSafetyNetDeviceAttestationType", (n) -> { this.setRequiredAndroidSafetyNetDeviceAttestationType(n.getEnumValue(AndroidManagedAppSafetyNetDeviceAttestationType.class)); });
+        deserializerMap.put("requiredAndroidSafetyNetEvaluationType", (n) -> { this.setRequiredAndroidSafetyNetEvaluationType(n.getEnumValue(AndroidManagedAppSafetyNetEvaluationType.class)); });
+        deserializerMap.put("requirePinAfterBiometricChange", (n) -> { this.setRequirePinAfterBiometricChange(n.getBooleanValue()); });
+        deserializerMap.put("screenCaptureBlocked", (n) -> { this.setScreenCaptureBlocked(n.getBooleanValue()); });
+        deserializerMap.put("thirdPartyKeyboardsBlocked", (n) -> { this.setThirdPartyKeyboardsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("warnAfterCompanyPortalUpdateDeferralInDays", (n) -> { this.setWarnAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
+        deserializerMap.put("wipeAfterCompanyPortalUpdateDeferralInDays", (n) -> { this.setWipeAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the filterOpenInToOnlyManagedApps property value. Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False. (iOS Only)
@@ -465,7 +478,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getFilterOpenInToOnlyManagedApps() {
-        return this._filterOpenInToOnlyManagedApps;
+        return this.filterOpenInToOnlyManagedApps;
     }
     /**
      * Gets the fingerprintAndBiometricEnabled property value. Indicate to the client to enable both biometrics and fingerprints for the app.
@@ -473,7 +486,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getFingerprintAndBiometricEnabled() {
-        return this._fingerprintAndBiometricEnabled;
+        return this.fingerprintAndBiometricEnabled;
     }
     /**
      * Gets the minimumRequiredCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or app access will be blocked
@@ -481,7 +494,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getMinimumRequiredCompanyPortalVersion() {
-        return this._minimumRequiredCompanyPortalVersion;
+        return this.minimumRequiredCompanyPortalVersion;
     }
     /**
      * Gets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
@@ -489,7 +502,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getMinimumRequiredPatchVersion() {
-        return this._minimumRequiredPatchVersion;
+        return this.minimumRequiredPatchVersion;
     }
     /**
      * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
@@ -497,7 +510,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getMinimumRequiredSdkVersion() {
-        return this._minimumRequiredSdkVersion;
+        return this.minimumRequiredSdkVersion;
     }
     /**
      * Gets the minimumWarningCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or the user will receive a warning
@@ -505,7 +518,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getMinimumWarningCompanyPortalVersion() {
-        return this._minimumWarningCompanyPortalVersion;
+        return this.minimumWarningCompanyPortalVersion;
     }
     /**
      * Gets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
@@ -513,7 +526,15 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getMinimumWarningPatchVersion() {
-        return this._minimumWarningPatchVersion;
+        return this.minimumWarningPatchVersion;
+    }
+    /**
+     * Gets the minimumWarningSdkVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. (iOS only)
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getMinimumWarningSdkVersion() {
+        return this.minimumWarningSdkVersion;
     }
     /**
      * Gets the minimumWipeCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
@@ -521,7 +542,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getMinimumWipeCompanyPortalVersion() {
-        return this._minimumWipeCompanyPortalVersion;
+        return this.minimumWipeCompanyPortalVersion;
     }
     /**
      * Gets the minimumWipePatchVersion property value. Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data. (Android only)
@@ -529,7 +550,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getMinimumWipePatchVersion() {
-        return this._minimumWipePatchVersion;
+        return this.minimumWipePatchVersion;
     }
     /**
      * Gets the minimumWipeSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
@@ -537,7 +558,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public String getMinimumWipeSdkVersion() {
-        return this._minimumWipeSdkVersion;
+        return this.minimumWipeSdkVersion;
     }
     /**
      * Gets the protectInboundDataFromUnknownSources property value. Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps. (iOS Only)
@@ -545,7 +566,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getProtectInboundDataFromUnknownSources() {
-        return this._protectInboundDataFromUnknownSources;
+        return this.protectInboundDataFromUnknownSources;
     }
     /**
      * Gets the requireClass3Biometrics property value. Require user to apply Class 3 Biometrics on their Android device.
@@ -553,31 +574,31 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getRequireClass3Biometrics() {
-        return this._requireClass3Biometrics;
+        return this.requireClass3Biometrics;
     }
     /**
      * Gets the requiredAndroidSafetyNetAppsVerificationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
-     * @return a androidManagedAppSafetyNetAppsVerificationType
+     * @return a AndroidManagedAppSafetyNetAppsVerificationType
      */
     @javax.annotation.Nullable
     public AndroidManagedAppSafetyNetAppsVerificationType getRequiredAndroidSafetyNetAppsVerificationType() {
-        return this._requiredAndroidSafetyNetAppsVerificationType;
+        return this.requiredAndroidSafetyNetAppsVerificationType;
     }
     /**
      * Gets the requiredAndroidSafetyNetDeviceAttestationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
-     * @return a androidManagedAppSafetyNetDeviceAttestationType
+     * @return a AndroidManagedAppSafetyNetDeviceAttestationType
      */
     @javax.annotation.Nullable
     public AndroidManagedAppSafetyNetDeviceAttestationType getRequiredAndroidSafetyNetDeviceAttestationType() {
-        return this._requiredAndroidSafetyNetDeviceAttestationType;
+        return this.requiredAndroidSafetyNetDeviceAttestationType;
     }
     /**
      * Gets the requiredAndroidSafetyNetEvaluationType property value. An admin enforced Android SafetyNet evaluation type requirement on a managed app.
-     * @return a androidManagedAppSafetyNetEvaluationType
+     * @return a AndroidManagedAppSafetyNetEvaluationType
      */
     @javax.annotation.Nullable
     public AndroidManagedAppSafetyNetEvaluationType getRequiredAndroidSafetyNetEvaluationType() {
-        return this._requiredAndroidSafetyNetEvaluationType;
+        return this.requiredAndroidSafetyNetEvaluationType;
     }
     /**
      * Gets the requirePinAfterBiometricChange property value. A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device.
@@ -585,7 +606,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getRequirePinAfterBiometricChange() {
-        return this._requirePinAfterBiometricChange;
+        return this.requirePinAfterBiometricChange;
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether screen capture is blocked. (Android only)
@@ -593,7 +614,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
-        return this._screenCaptureBlocked;
+        return this.screenCaptureBlocked;
     }
     /**
      * Gets the thirdPartyKeyboardsBlocked property value. Defines if third party keyboards are allowed while accessing a managed app. (iOS Only)
@@ -601,7 +622,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Boolean getThirdPartyKeyboardsBlocked() {
-        return this._thirdPartyKeyboardsBlocked;
+        return this.thirdPartyKeyboardsBlocked;
     }
     /**
      * Gets the warnAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning
@@ -609,7 +630,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Integer getWarnAfterCompanyPortalUpdateDeferralInDays() {
-        return this._warnAfterCompanyPortalUpdateDeferralInDays;
+        return this.warnAfterCompanyPortalUpdateDeferralInDays;
     }
     /**
      * Gets the wipeAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped
@@ -617,19 +638,21 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     @javax.annotation.Nullable
     public Integer getWipeAfterCompanyPortalUpdateDeferralInDays() {
-        return this._wipeAfterCompanyPortalUpdateDeferralInDays;
+        return this.wipeAfterCompanyPortalUpdateDeferralInDays;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("allowedAndroidDeviceManufacturers", this.getAllowedAndroidDeviceManufacturers());
         writer.writeCollectionOfPrimitiveValues("allowedAndroidDeviceModels", this.getAllowedAndroidDeviceModels());
         writer.writeStringValue("allowedIosDeviceModels", this.getAllowedIosDeviceModels());
+        writer.writeEnumValue("appActionIfAccountIsClockedOut", this.getAppActionIfAccountIsClockedOut());
         writer.writeEnumValue("appActionIfAndroidDeviceManufacturerNotAllowed", this.getAppActionIfAndroidDeviceManufacturerNotAllowed());
         writer.writeEnumValue("appActionIfAndroidDeviceModelNotAllowed", this.getAppActionIfAndroidDeviceModelNotAllowed());
         writer.writeEnumValue("appActionIfAndroidSafetyNetAppsVerificationFailed", this.getAppActionIfAndroidSafetyNetAppsVerificationFailed());
@@ -667,6 +690,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
         writer.writeStringValue("minimumRequiredSdkVersion", this.getMinimumRequiredSdkVersion());
         writer.writeStringValue("minimumWarningCompanyPortalVersion", this.getMinimumWarningCompanyPortalVersion());
         writer.writeStringValue("minimumWarningPatchVersion", this.getMinimumWarningPatchVersion());
+        writer.writeStringValue("minimumWarningSdkVersion", this.getMinimumWarningSdkVersion());
         writer.writeStringValue("minimumWipeCompanyPortalVersion", this.getMinimumWipeCompanyPortalVersion());
         writer.writeStringValue("minimumWipePatchVersion", this.getMinimumWipePatchVersion());
         writer.writeStringValue("minimumWipeSdkVersion", this.getMinimumWipeSdkVersion());
@@ -686,423 +710,494 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the allowedAndroidDeviceManufacturers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedAndroidDeviceManufacturers(@javax.annotation.Nullable final String value) {
-        this._allowedAndroidDeviceManufacturers = value;
+        this.allowedAndroidDeviceManufacturers = value;
     }
     /**
      * Sets the allowedAndroidDeviceModels property value. List of device models allowed, as a string, for the managed app to work. (Android Only)
      * @param value Value to set for the allowedAndroidDeviceModels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedAndroidDeviceModels(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._allowedAndroidDeviceModels = value;
+        this.allowedAndroidDeviceModels = value;
     }
     /**
      * Sets the allowedIosDeviceModels property value. Semicolon seperated list of device models allowed, as a string, for the managed app to work. (iOS Only)
      * @param value Value to set for the allowedIosDeviceModels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedIosDeviceModels(@javax.annotation.Nullable final String value) {
-        this._allowedIosDeviceModels = value;
+        this.allowedIosDeviceModels = value;
+    }
+    /**
+     * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+     * @param value Value to set for the appActionIfAccountIsClockedOut property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAppActionIfAccountIsClockedOut(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
+        this.appActionIfAccountIsClockedOut = value;
     }
     /**
      * Sets the appActionIfAndroidDeviceManufacturerNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidDeviceManufacturerNotAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidDeviceManufacturerNotAllowed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
-        this._appActionIfAndroidDeviceManufacturerNotAllowed = value;
+        this.appActionIfAndroidDeviceManufacturerNotAllowed = value;
     }
     /**
      * Sets the appActionIfAndroidDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidDeviceModelNotAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidDeviceModelNotAllowed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
-        this._appActionIfAndroidDeviceModelNotAllowed = value;
+        this.appActionIfAndroidDeviceModelNotAllowed = value;
     }
     /**
      * Sets the appActionIfAndroidSafetyNetAppsVerificationFailed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidSafetyNetAppsVerificationFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidSafetyNetAppsVerificationFailed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
-        this._appActionIfAndroidSafetyNetAppsVerificationFailed = value;
+        this.appActionIfAndroidSafetyNetAppsVerificationFailed = value;
     }
     /**
      * Sets the appActionIfAndroidSafetyNetDeviceAttestationFailed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidSafetyNetDeviceAttestationFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidSafetyNetDeviceAttestationFailed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
-        this._appActionIfAndroidSafetyNetDeviceAttestationFailed = value;
+        this.appActionIfAndroidSafetyNetDeviceAttestationFailed = value;
     }
     /**
      * Sets the appActionIfDeviceLockNotSet property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfDeviceLockNotSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDeviceLockNotSet(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
-        this._appActionIfDeviceLockNotSet = value;
+        this.appActionIfDeviceLockNotSet = value;
     }
     /**
      * Sets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanHigh property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDevicePasscodeComplexityLessThanHigh(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
-        this._appActionIfDevicePasscodeComplexityLessThanHigh = value;
+        this.appActionIfDevicePasscodeComplexityLessThanHigh = value;
     }
     /**
      * Sets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanLow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDevicePasscodeComplexityLessThanLow(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
-        this._appActionIfDevicePasscodeComplexityLessThanLow = value;
+        this.appActionIfDevicePasscodeComplexityLessThanLow = value;
     }
     /**
      * Sets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanMedium property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDevicePasscodeComplexityLessThanMedium(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
-        this._appActionIfDevicePasscodeComplexityLessThanMedium = value;
+        this.appActionIfDevicePasscodeComplexityLessThanMedium = value;
     }
     /**
      * Sets the appActionIfIosDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfIosDeviceModelNotAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfIosDeviceModelNotAllowed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
-        this._appActionIfIosDeviceModelNotAllowed = value;
+        this.appActionIfIosDeviceModelNotAllowed = value;
     }
     /**
      * Sets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
      * @param value Value to set for the appDataEncryptionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDataEncryptionType(@javax.annotation.Nullable final ManagedAppDataEncryptionType value) {
-        this._appDataEncryptionType = value;
+        this.appDataEncryptionType = value;
     }
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
-        this._apps = value;
+        this.apps = value;
     }
     /**
      * Sets the biometricAuthenticationBlocked property value. Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True. (Android Only)
      * @param value Value to set for the biometricAuthenticationBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBiometricAuthenticationBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._biometricAuthenticationBlocked = value;
+        this.biometricAuthenticationBlocked = value;
     }
     /**
      * Sets the blockAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or app access will be blocked.
      * @param value Value to set for the blockAfterCompanyPortalUpdateDeferralInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
-        this._blockAfterCompanyPortalUpdateDeferralInDays = value;
+        this.blockAfterCompanyPortalUpdateDeferralInDays = value;
     }
     /**
      * Sets the connectToVpnOnLaunch property value. Whether the app should connect to the configured VPN on launch (Android only).
      * @param value Value to set for the connectToVpnOnLaunch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectToVpnOnLaunch(@javax.annotation.Nullable final Boolean value) {
-        this._connectToVpnOnLaunch = value;
+        this.connectToVpnOnLaunch = value;
     }
     /**
      * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. (Android only)
      * @param value Value to set for the customBrowserDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomBrowserDisplayName(@javax.annotation.Nullable final String value) {
-        this._customBrowserDisplayName = value;
+        this.customBrowserDisplayName = value;
     }
     /**
      * Sets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android. (Android only)
      * @param value Value to set for the customBrowserPackageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomBrowserPackageId(@javax.annotation.Nullable final String value) {
-        this._customBrowserPackageId = value;
+        this.customBrowserPackageId = value;
     }
     /**
      * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. (iOS only)
      * @param value Value to set for the customBrowserProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomBrowserProtocol(@javax.annotation.Nullable final String value) {
-        this._customBrowserProtocol = value;
+        this.customBrowserProtocol = value;
     }
     /**
      * Sets the customDialerAppDisplayName property value. Friendly name of a custom dialer app to click-to-open a phone number on Android.
      * @param value Value to set for the customDialerAppDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDialerAppDisplayName(@javax.annotation.Nullable final String value) {
-        this._customDialerAppDisplayName = value;
+        this.customDialerAppDisplayName = value;
     }
     /**
      * Sets the customDialerAppPackageId property value. PackageId of a custom dialer app to click-to-open a phone number on Android.
      * @param value Value to set for the customDialerAppPackageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDialerAppPackageId(@javax.annotation.Nullable final String value) {
-        this._customDialerAppPackageId = value;
+        this.customDialerAppPackageId = value;
     }
     /**
      * Sets the customDialerAppProtocol property value. Protocol of a custom dialer app to click-to-open a phone number on iOS, for example, skype:.
      * @param value Value to set for the customDialerAppProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDialerAppProtocol(@javax.annotation.Nullable final String value) {
-        this._customDialerAppProtocol = value;
+        this.customDialerAppProtocol = value;
     }
     /**
      * Sets the customSettings property value. A set of string key and string value pairs to be sent to the affected users, unalterned by this service
      * @param value Value to set for the customSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSettings(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._customSettings = value;
+        this.customSettings = value;
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @param value Value to set for the deployedAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
-        this._deployedAppCount = value;
+        this.deployedAppCount = value;
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @param value Value to set for the deploymentSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
-        this._deploymentSummary = value;
+        this.deploymentSummary = value;
     }
     /**
      * Sets the deviceLockRequired property value. Defines if any kind of lock must be required on device. (android only)
      * @param value Value to set for the deviceLockRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceLockRequired(@javax.annotation.Nullable final Boolean value) {
-        this._deviceLockRequired = value;
+        this.deviceLockRequired = value;
     }
     /**
      * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
      * @param value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
+        this.disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
     }
     /**
      * Sets the disableProtectionOfManagedOutboundOpenInData property value. Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps. (iOS Only)
      * @param value Value to set for the disableProtectionOfManagedOutboundOpenInData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableProtectionOfManagedOutboundOpenInData(@javax.annotation.Nullable final Boolean value) {
-        this._disableProtectionOfManagedOutboundOpenInData = value;
+        this.disableProtectionOfManagedOutboundOpenInData = value;
     }
     /**
      * Sets the encryptAppData property value. Indicates whether managed-app data should be encrypted. (Android only)
      * @param value Value to set for the encryptAppData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptAppData(@javax.annotation.Nullable final Boolean value) {
-        this._encryptAppData = value;
+        this.encryptAppData = value;
     }
     /**
      * Sets the exemptedAppPackages property value. Android App packages in this list will be exempt from the policy and will be able to receive data from managed apps. (Android only)
      * @param value Value to set for the exemptedAppPackages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExemptedAppPackages(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._exemptedAppPackages = value;
+        this.exemptedAppPackages = value;
     }
     /**
      * Sets the exemptedAppProtocols property value. iOS Apps in this list will be exempt from the policy and will be able to receive data from managed apps. (iOS Only)
      * @param value Value to set for the exemptedAppProtocols property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExemptedAppProtocols(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._exemptedAppProtocols = value;
+        this.exemptedAppProtocols = value;
     }
     /**
      * Sets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
      * @param value Value to set for the faceIdBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFaceIdBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._faceIdBlocked = value;
+        this.faceIdBlocked = value;
     }
     /**
      * Sets the filterOpenInToOnlyManagedApps property value. Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False. (iOS Only)
      * @param value Value to set for the filterOpenInToOnlyManagedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilterOpenInToOnlyManagedApps(@javax.annotation.Nullable final Boolean value) {
-        this._filterOpenInToOnlyManagedApps = value;
+        this.filterOpenInToOnlyManagedApps = value;
     }
     /**
      * Sets the fingerprintAndBiometricEnabled property value. Indicate to the client to enable both biometrics and fingerprints for the app.
      * @param value Value to set for the fingerprintAndBiometricEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFingerprintAndBiometricEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._fingerprintAndBiometricEnabled = value;
+        this.fingerprintAndBiometricEnabled = value;
     }
     /**
      * Sets the minimumRequiredCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or app access will be blocked
      * @param value Value to set for the minimumRequiredCompanyPortalVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredCompanyPortalVersion(@javax.annotation.Nullable final String value) {
-        this._minimumRequiredCompanyPortalVersion = value;
+        this.minimumRequiredCompanyPortalVersion = value;
     }
     /**
      * Sets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
      * @param value Value to set for the minimumRequiredPatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredPatchVersion(@javax.annotation.Nullable final String value) {
-        this._minimumRequiredPatchVersion = value;
+        this.minimumRequiredPatchVersion = value;
     }
     /**
      * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
      * @param value Value to set for the minimumRequiredSdkVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredSdkVersion(@javax.annotation.Nullable final String value) {
-        this._minimumRequiredSdkVersion = value;
+        this.minimumRequiredSdkVersion = value;
     }
     /**
      * Sets the minimumWarningCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or the user will receive a warning
      * @param value Value to set for the minimumWarningCompanyPortalVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningCompanyPortalVersion(@javax.annotation.Nullable final String value) {
-        this._minimumWarningCompanyPortalVersion = value;
+        this.minimumWarningCompanyPortalVersion = value;
     }
     /**
      * Sets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
      * @param value Value to set for the minimumWarningPatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningPatchVersion(@javax.annotation.Nullable final String value) {
-        this._minimumWarningPatchVersion = value;
+        this.minimumWarningPatchVersion = value;
+    }
+    /**
+     * Sets the minimumWarningSdkVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. (iOS only)
+     * @param value Value to set for the minimumWarningSdkVersion property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMinimumWarningSdkVersion(@javax.annotation.Nullable final String value) {
+        this.minimumWarningSdkVersion = value;
     }
     /**
      * Sets the minimumWipeCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
      * @param value Value to set for the minimumWipeCompanyPortalVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipeCompanyPortalVersion(@javax.annotation.Nullable final String value) {
-        this._minimumWipeCompanyPortalVersion = value;
+        this.minimumWipeCompanyPortalVersion = value;
     }
     /**
      * Sets the minimumWipePatchVersion property value. Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data. (Android only)
      * @param value Value to set for the minimumWipePatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipePatchVersion(@javax.annotation.Nullable final String value) {
-        this._minimumWipePatchVersion = value;
+        this.minimumWipePatchVersion = value;
     }
     /**
      * Sets the minimumWipeSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
      * @param value Value to set for the minimumWipeSdkVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipeSdkVersion(@javax.annotation.Nullable final String value) {
-        this._minimumWipeSdkVersion = value;
+        this.minimumWipeSdkVersion = value;
     }
     /**
      * Sets the protectInboundDataFromUnknownSources property value. Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps. (iOS Only)
      * @param value Value to set for the protectInboundDataFromUnknownSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtectInboundDataFromUnknownSources(@javax.annotation.Nullable final Boolean value) {
-        this._protectInboundDataFromUnknownSources = value;
+        this.protectInboundDataFromUnknownSources = value;
     }
     /**
      * Sets the requireClass3Biometrics property value. Require user to apply Class 3 Biometrics on their Android device.
      * @param value Value to set for the requireClass3Biometrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireClass3Biometrics(@javax.annotation.Nullable final Boolean value) {
-        this._requireClass3Biometrics = value;
+        this.requireClass3Biometrics = value;
     }
     /**
      * Sets the requiredAndroidSafetyNetAppsVerificationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
      * @param value Value to set for the requiredAndroidSafetyNetAppsVerificationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredAndroidSafetyNetAppsVerificationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetAppsVerificationType value) {
-        this._requiredAndroidSafetyNetAppsVerificationType = value;
+        this.requiredAndroidSafetyNetAppsVerificationType = value;
     }
     /**
      * Sets the requiredAndroidSafetyNetDeviceAttestationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
      * @param value Value to set for the requiredAndroidSafetyNetDeviceAttestationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredAndroidSafetyNetDeviceAttestationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetDeviceAttestationType value) {
-        this._requiredAndroidSafetyNetDeviceAttestationType = value;
+        this.requiredAndroidSafetyNetDeviceAttestationType = value;
     }
     /**
      * Sets the requiredAndroidSafetyNetEvaluationType property value. An admin enforced Android SafetyNet evaluation type requirement on a managed app.
      * @param value Value to set for the requiredAndroidSafetyNetEvaluationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredAndroidSafetyNetEvaluationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetEvaluationType value) {
-        this._requiredAndroidSafetyNetEvaluationType = value;
+        this.requiredAndroidSafetyNetEvaluationType = value;
     }
     /**
      * Sets the requirePinAfterBiometricChange property value. A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device.
      * @param value Value to set for the requirePinAfterBiometricChange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequirePinAfterBiometricChange(@javax.annotation.Nullable final Boolean value) {
-        this._requirePinAfterBiometricChange = value;
+        this.requirePinAfterBiometricChange = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether screen capture is blocked. (Android only)
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._screenCaptureBlocked = value;
+        this.screenCaptureBlocked = value;
     }
     /**
      * Sets the thirdPartyKeyboardsBlocked property value. Defines if third party keyboards are allowed while accessing a managed app. (iOS Only)
      * @param value Value to set for the thirdPartyKeyboardsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThirdPartyKeyboardsBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._thirdPartyKeyboardsBlocked = value;
+        this.thirdPartyKeyboardsBlocked = value;
     }
     /**
      * Sets the warnAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning
      * @param value Value to set for the warnAfterCompanyPortalUpdateDeferralInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWarnAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
-        this._warnAfterCompanyPortalUpdateDeferralInDays = value;
+        this.warnAfterCompanyPortalUpdateDeferralInDays = value;
     }
     /**
      * Sets the wipeAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped
      * @param value Value to set for the wipeAfterCompanyPortalUpdateDeferralInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWipeAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
-        this._wipeAfterCompanyPortalUpdateDeferralInDays = value;
+        this.wipeAfterCompanyPortalUpdateDeferralInDays = value;
     }
 }

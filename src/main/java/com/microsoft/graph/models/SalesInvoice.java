@@ -1,105 +1,111 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
-public class SalesInvoice extends Entity implements Parsable {
+import java.util.UUID;
+public class SalesInvoice implements AdditionalDataHolder, Parsable {
+    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    private Map<String, Object> additionalData;
     /** The billingPostalAddress property */
-    private PostalAddressType _billingPostalAddress;
+    private PostalAddressType billingPostalAddress;
     /** The billToCustomerId property */
-    private String _billToCustomerId;
+    private UUID billToCustomerId;
     /** The billToCustomerNumber property */
-    private String _billToCustomerNumber;
+    private String billToCustomerNumber;
     /** The billToName property */
-    private String _billToName;
+    private String billToName;
     /** The currency property */
-    private Currency _currency;
+    private Currency currency;
     /** The currencyCode property */
-    private String _currencyCode;
+    private String currencyCode;
     /** The currencyId property */
-    private String _currencyId;
+    private UUID currencyId;
     /** The customer property */
-    private Customer _customer;
+    private Customer customer;
     /** The customerId property */
-    private String _customerId;
+    private UUID customerId;
     /** The customerName property */
-    private String _customerName;
+    private String customerName;
     /** The customerNumber property */
-    private String _customerNumber;
+    private String customerNumber;
     /** The customerPurchaseOrderReference property */
-    private String _customerPurchaseOrderReference;
+    private String customerPurchaseOrderReference;
     /** The discountAmount property */
-    private BigDecimal _discountAmount;
+    private BigDecimal discountAmount;
     /** The discountAppliedBeforeTax property */
-    private Boolean _discountAppliedBeforeTax;
+    private Boolean discountAppliedBeforeTax;
     /** The dueDate property */
-    private LocalDate _dueDate;
+    private LocalDate dueDate;
     /** The email property */
-    private String _email;
+    private String email;
     /** The externalDocumentNumber property */
-    private String _externalDocumentNumber;
+    private String externalDocumentNumber;
+    /** The id property */
+    private UUID id;
     /** The invoiceDate property */
-    private LocalDate _invoiceDate;
+    private LocalDate invoiceDate;
     /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The number property */
-    private String _number;
+    private String number;
+    /** The OdataType property */
+    private String odataType;
     /** The orderId property */
-    private String _orderId;
+    private UUID orderId;
     /** The orderNumber property */
-    private String _orderNumber;
+    private String orderNumber;
     /** The paymentTerm property */
-    private PaymentTerm _paymentTerm;
+    private PaymentTerm paymentTerm;
     /** The paymentTermsId property */
-    private String _paymentTermsId;
+    private UUID paymentTermsId;
     /** The phoneNumber property */
-    private String _phoneNumber;
+    private String phoneNumber;
     /** The pricesIncludeTax property */
-    private Boolean _pricesIncludeTax;
+    private Boolean pricesIncludeTax;
     /** The salesInvoiceLines property */
-    private java.util.List<SalesInvoiceLine> _salesInvoiceLines;
+    private java.util.List<SalesInvoiceLine> salesInvoiceLines;
     /** The salesperson property */
-    private String _salesperson;
+    private String salesperson;
     /** The sellingPostalAddress property */
-    private PostalAddressType _sellingPostalAddress;
+    private PostalAddressType sellingPostalAddress;
     /** The shipmentMethod property */
-    private ShipmentMethod _shipmentMethod;
+    private ShipmentMethod shipmentMethod;
     /** The shipmentMethodId property */
-    private String _shipmentMethodId;
+    private UUID shipmentMethodId;
     /** The shippingPostalAddress property */
-    private PostalAddressType _shippingPostalAddress;
+    private PostalAddressType shippingPostalAddress;
     /** The shipToContact property */
-    private String _shipToContact;
+    private String shipToContact;
     /** The shipToName property */
-    private String _shipToName;
+    private String shipToName;
     /** The status property */
-    private String _status;
+    private String status;
     /** The totalAmountExcludingTax property */
-    private BigDecimal _totalAmountExcludingTax;
+    private BigDecimal totalAmountExcludingTax;
     /** The totalAmountIncludingTax property */
-    private BigDecimal _totalAmountIncludingTax;
+    private BigDecimal totalAmountIncludingTax;
     /** The totalTaxAmount property */
-    private BigDecimal _totalTaxAmount;
+    private BigDecimal totalTaxAmount;
     /**
-     * Instantiates a new salesInvoice and sets the default values.
+     * Instantiates a new SalesInvoice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SalesInvoice() {
-        super();
-        this.setOdataType("#microsoft.graph.salesInvoice");
+        this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a salesInvoice
+     * @return a SalesInvoice
      */
     @javax.annotation.Nonnull
     public static SalesInvoice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -107,20 +113,28 @@ public class SalesInvoice extends Entity implements Parsable {
         return new SalesInvoice();
     }
     /**
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a Map<String, Object>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        return this.additionalData;
+    }
+    /**
      * Gets the billingPostalAddress property value. The billingPostalAddress property
      * @return a postalAddressType
      */
     @javax.annotation.Nullable
     public PostalAddressType getBillingPostalAddress() {
-        return this._billingPostalAddress;
+        return this.billingPostalAddress;
     }
     /**
      * Gets the billToCustomerId property value. The billToCustomerId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getBillToCustomerId() {
-        return this._billToCustomerId;
+    public UUID getBillToCustomerId() {
+        return this.billToCustomerId;
     }
     /**
      * Gets the billToCustomerNumber property value. The billToCustomerNumber property
@@ -128,7 +142,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBillToCustomerNumber() {
-        return this._billToCustomerNumber;
+        return this.billToCustomerNumber;
     }
     /**
      * Gets the billToName property value. The billToName property
@@ -136,7 +150,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBillToName() {
-        return this._billToName;
+        return this.billToName;
     }
     /**
      * Gets the currency property value. The currency property
@@ -144,7 +158,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Currency getCurrency() {
-        return this._currency;
+        return this.currency;
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
@@ -152,15 +166,15 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCurrencyCode() {
-        return this._currencyCode;
+        return this.currencyCode;
     }
     /**
      * Gets the currencyId property value. The currencyId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getCurrencyId() {
-        return this._currencyId;
+    public UUID getCurrencyId() {
+        return this.currencyId;
     }
     /**
      * Gets the customer property value. The customer property
@@ -168,15 +182,15 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Customer getCustomer() {
-        return this._customer;
+        return this.customer;
     }
     /**
      * Gets the customerId property value. The customerId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getCustomerId() {
-        return this._customerId;
+    public UUID getCustomerId() {
+        return this.customerId;
     }
     /**
      * Gets the customerName property value. The customerName property
@@ -184,7 +198,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomerName() {
-        return this._customerName;
+        return this.customerName;
     }
     /**
      * Gets the customerNumber property value. The customerNumber property
@@ -192,7 +206,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomerNumber() {
-        return this._customerNumber;
+        return this.customerNumber;
     }
     /**
      * Gets the customerPurchaseOrderReference property value. The customerPurchaseOrderReference property
@@ -200,7 +214,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCustomerPurchaseOrderReference() {
-        return this._customerPurchaseOrderReference;
+        return this.customerPurchaseOrderReference;
     }
     /**
      * Gets the discountAmount property value. The discountAmount property
@@ -208,7 +222,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getDiscountAmount() {
-        return this._discountAmount;
+        return this.discountAmount;
     }
     /**
      * Gets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
@@ -216,7 +230,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getDiscountAppliedBeforeTax() {
-        return this._discountAppliedBeforeTax;
+        return this.discountAppliedBeforeTax;
     }
     /**
      * Gets the dueDate property value. The dueDate property
@@ -224,7 +238,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getDueDate() {
-        return this._dueDate;
+        return this.dueDate;
     }
     /**
      * Gets the email property value. The email property
@@ -232,7 +246,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmail() {
-        return this._email;
+        return this.email;
     }
     /**
      * Gets the externalDocumentNumber property value. The externalDocumentNumber property
@@ -240,55 +254,64 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalDocumentNumber() {
-        return this._externalDocumentNumber;
+        return this.externalDocumentNumber;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SalesInvoice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("billingPostalAddress", (n) -> { currentObject.setBillingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
-            this.put("billToCustomerId", (n) -> { currentObject.setBillToCustomerId(n.getStringValue()); });
-            this.put("billToCustomerNumber", (n) -> { currentObject.setBillToCustomerNumber(n.getStringValue()); });
-            this.put("billToName", (n) -> { currentObject.setBillToName(n.getStringValue()); });
-            this.put("currency", (n) -> { currentObject.setCurrency(n.getObjectValue(Currency::createFromDiscriminatorValue)); });
-            this.put("currencyCode", (n) -> { currentObject.setCurrencyCode(n.getStringValue()); });
-            this.put("currencyId", (n) -> { currentObject.setCurrencyId(n.getStringValue()); });
-            this.put("customer", (n) -> { currentObject.setCustomer(n.getObjectValue(Customer::createFromDiscriminatorValue)); });
-            this.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
-            this.put("customerName", (n) -> { currentObject.setCustomerName(n.getStringValue()); });
-            this.put("customerNumber", (n) -> { currentObject.setCustomerNumber(n.getStringValue()); });
-            this.put("customerPurchaseOrderReference", (n) -> { currentObject.setCustomerPurchaseOrderReference(n.getStringValue()); });
-            this.put("discountAmount", (n) -> { currentObject.setDiscountAmount(n.getBigDecimalValue()); });
-            this.put("discountAppliedBeforeTax", (n) -> { currentObject.setDiscountAppliedBeforeTax(n.getBooleanValue()); });
-            this.put("dueDate", (n) -> { currentObject.setDueDate(n.getLocalDateValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("externalDocumentNumber", (n) -> { currentObject.setExternalDocumentNumber(n.getStringValue()); });
-            this.put("invoiceDate", (n) -> { currentObject.setInvoiceDate(n.getLocalDateValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
-            this.put("orderId", (n) -> { currentObject.setOrderId(n.getStringValue()); });
-            this.put("orderNumber", (n) -> { currentObject.setOrderNumber(n.getStringValue()); });
-            this.put("paymentTerm", (n) -> { currentObject.setPaymentTerm(n.getObjectValue(PaymentTerm::createFromDiscriminatorValue)); });
-            this.put("paymentTermsId", (n) -> { currentObject.setPaymentTermsId(n.getStringValue()); });
-            this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
-            this.put("pricesIncludeTax", (n) -> { currentObject.setPricesIncludeTax(n.getBooleanValue()); });
-            this.put("salesInvoiceLines", (n) -> { currentObject.setSalesInvoiceLines(n.getCollectionOfObjectValues(SalesInvoiceLine::createFromDiscriminatorValue)); });
-            this.put("salesperson", (n) -> { currentObject.setSalesperson(n.getStringValue()); });
-            this.put("sellingPostalAddress", (n) -> { currentObject.setSellingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
-            this.put("shipmentMethod", (n) -> { currentObject.setShipmentMethod(n.getObjectValue(ShipmentMethod::createFromDiscriminatorValue)); });
-            this.put("shipmentMethodId", (n) -> { currentObject.setShipmentMethodId(n.getStringValue()); });
-            this.put("shippingPostalAddress", (n) -> { currentObject.setShippingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
-            this.put("shipToContact", (n) -> { currentObject.setShipToContact(n.getStringValue()); });
-            this.put("shipToName", (n) -> { currentObject.setShipToName(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("totalAmountExcludingTax", (n) -> { currentObject.setTotalAmountExcludingTax(n.getBigDecimalValue()); });
-            this.put("totalAmountIncludingTax", (n) -> { currentObject.setTotalAmountIncludingTax(n.getBigDecimalValue()); });
-            this.put("totalTaxAmount", (n) -> { currentObject.setTotalTaxAmount(n.getBigDecimalValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(40);
+        deserializerMap.put("billingPostalAddress", (n) -> { this.setBillingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
+        deserializerMap.put("billToCustomerId", (n) -> { this.setBillToCustomerId(n.getUUIDValue()); });
+        deserializerMap.put("billToCustomerNumber", (n) -> { this.setBillToCustomerNumber(n.getStringValue()); });
+        deserializerMap.put("billToName", (n) -> { this.setBillToName(n.getStringValue()); });
+        deserializerMap.put("currency", (n) -> { this.setCurrency(n.getObjectValue(Currency::createFromDiscriminatorValue)); });
+        deserializerMap.put("currencyCode", (n) -> { this.setCurrencyCode(n.getStringValue()); });
+        deserializerMap.put("currencyId", (n) -> { this.setCurrencyId(n.getUUIDValue()); });
+        deserializerMap.put("customer", (n) -> { this.setCustomer(n.getObjectValue(Customer::createFromDiscriminatorValue)); });
+        deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getUUIDValue()); });
+        deserializerMap.put("customerName", (n) -> { this.setCustomerName(n.getStringValue()); });
+        deserializerMap.put("customerNumber", (n) -> { this.setCustomerNumber(n.getStringValue()); });
+        deserializerMap.put("customerPurchaseOrderReference", (n) -> { this.setCustomerPurchaseOrderReference(n.getStringValue()); });
+        deserializerMap.put("discountAmount", (n) -> { this.setDiscountAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("discountAppliedBeforeTax", (n) -> { this.setDiscountAppliedBeforeTax(n.getBooleanValue()); });
+        deserializerMap.put("dueDate", (n) -> { this.setDueDate(n.getLocalDateValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("externalDocumentNumber", (n) -> { this.setExternalDocumentNumber(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getUUIDValue()); });
+        deserializerMap.put("invoiceDate", (n) -> { this.setInvoiceDate(n.getLocalDateValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("orderId", (n) -> { this.setOrderId(n.getUUIDValue()); });
+        deserializerMap.put("orderNumber", (n) -> { this.setOrderNumber(n.getStringValue()); });
+        deserializerMap.put("paymentTerm", (n) -> { this.setPaymentTerm(n.getObjectValue(PaymentTerm::createFromDiscriminatorValue)); });
+        deserializerMap.put("paymentTermsId", (n) -> { this.setPaymentTermsId(n.getUUIDValue()); });
+        deserializerMap.put("phoneNumber", (n) -> { this.setPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("pricesIncludeTax", (n) -> { this.setPricesIncludeTax(n.getBooleanValue()); });
+        deserializerMap.put("salesInvoiceLines", (n) -> { this.setSalesInvoiceLines(n.getCollectionOfObjectValues(SalesInvoiceLine::createFromDiscriminatorValue)); });
+        deserializerMap.put("salesperson", (n) -> { this.setSalesperson(n.getStringValue()); });
+        deserializerMap.put("sellingPostalAddress", (n) -> { this.setSellingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
+        deserializerMap.put("shipmentMethod", (n) -> { this.setShipmentMethod(n.getObjectValue(ShipmentMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("shipmentMethodId", (n) -> { this.setShipmentMethodId(n.getUUIDValue()); });
+        deserializerMap.put("shippingPostalAddress", (n) -> { this.setShippingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
+        deserializerMap.put("shipToContact", (n) -> { this.setShipToContact(n.getStringValue()); });
+        deserializerMap.put("shipToName", (n) -> { this.setShipToName(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        deserializerMap.put("totalAmountExcludingTax", (n) -> { this.setTotalAmountExcludingTax(n.getBigDecimalValue()); });
+        deserializerMap.put("totalAmountIncludingTax", (n) -> { this.setTotalAmountIncludingTax(n.getBigDecimalValue()); });
+        deserializerMap.put("totalTaxAmount", (n) -> { this.setTotalTaxAmount(n.getBigDecimalValue()); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the id property value. The id property
+     * @return a UUID
+     */
+    @javax.annotation.Nullable
+    public UUID getId() {
+        return this.id;
     }
     /**
      * Gets the invoiceDate property value. The invoiceDate property
@@ -296,7 +319,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getInvoiceDate() {
-        return this._invoiceDate;
+        return this.invoiceDate;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -304,7 +327,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the number property value. The number property
@@ -312,15 +335,23 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNumber() {
-        return this._number;
+        return this.number;
     }
     /**
-     * Gets the orderId property value. The orderId property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOrderId() {
-        return this._orderId;
+    public String getOdataType() {
+        return this.odataType;
+    }
+    /**
+     * Gets the orderId property value. The orderId property
+     * @return a UUID
+     */
+    @javax.annotation.Nullable
+    public UUID getOrderId() {
+        return this.orderId;
     }
     /**
      * Gets the orderNumber property value. The orderNumber property
@@ -328,7 +359,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOrderNumber() {
-        return this._orderNumber;
+        return this.orderNumber;
     }
     /**
      * Gets the paymentTerm property value. The paymentTerm property
@@ -336,15 +367,15 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PaymentTerm getPaymentTerm() {
-        return this._paymentTerm;
+        return this.paymentTerm;
     }
     /**
      * Gets the paymentTermsId property value. The paymentTermsId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getPaymentTermsId() {
-        return this._paymentTermsId;
+    public UUID getPaymentTermsId() {
+        return this.paymentTermsId;
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
@@ -352,7 +383,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPhoneNumber() {
-        return this._phoneNumber;
+        return this.phoneNumber;
     }
     /**
      * Gets the pricesIncludeTax property value. The pricesIncludeTax property
@@ -360,7 +391,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getPricesIncludeTax() {
-        return this._pricesIncludeTax;
+        return this.pricesIncludeTax;
     }
     /**
      * Gets the salesInvoiceLines property value. The salesInvoiceLines property
@@ -368,7 +399,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SalesInvoiceLine> getSalesInvoiceLines() {
-        return this._salesInvoiceLines;
+        return this.salesInvoiceLines;
     }
     /**
      * Gets the salesperson property value. The salesperson property
@@ -376,7 +407,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSalesperson() {
-        return this._salesperson;
+        return this.salesperson;
     }
     /**
      * Gets the sellingPostalAddress property value. The sellingPostalAddress property
@@ -384,7 +415,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PostalAddressType getSellingPostalAddress() {
-        return this._sellingPostalAddress;
+        return this.sellingPostalAddress;
     }
     /**
      * Gets the shipmentMethod property value. The shipmentMethod property
@@ -392,15 +423,15 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ShipmentMethod getShipmentMethod() {
-        return this._shipmentMethod;
+        return this.shipmentMethod;
     }
     /**
      * Gets the shipmentMethodId property value. The shipmentMethodId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getShipmentMethodId() {
-        return this._shipmentMethodId;
+    public UUID getShipmentMethodId() {
+        return this.shipmentMethodId;
     }
     /**
      * Gets the shippingPostalAddress property value. The shippingPostalAddress property
@@ -408,7 +439,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PostalAddressType getShippingPostalAddress() {
-        return this._shippingPostalAddress;
+        return this.shippingPostalAddress;
     }
     /**
      * Gets the shipToContact property value. The shipToContact property
@@ -416,7 +447,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getShipToContact() {
-        return this._shipToContact;
+        return this.shipToContact;
     }
     /**
      * Gets the shipToName property value. The shipToName property
@@ -424,7 +455,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getShipToName() {
-        return this._shipToName;
+        return this.shipToName;
     }
     /**
      * Gets the status property value. The status property
@@ -432,7 +463,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
@@ -440,7 +471,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getTotalAmountExcludingTax() {
-        return this._totalAmountExcludingTax;
+        return this.totalAmountExcludingTax;
     }
     /**
      * Gets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
@@ -448,7 +479,7 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getTotalAmountIncludingTax() {
-        return this._totalAmountIncludingTax;
+        return this.totalAmountIncludingTax;
     }
     /**
      * Gets the totalTaxAmount property value. The totalTaxAmount property
@@ -456,25 +487,25 @@ public class SalesInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getTotalTaxAmount() {
-        return this._totalTaxAmount;
+        return this.totalTaxAmount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        super.serialize(writer);
         writer.writeObjectValue("billingPostalAddress", this.getBillingPostalAddress());
-        writer.writeStringValue("billToCustomerId", this.getBillToCustomerId());
+        writer.writeUUIDValue("billToCustomerId", this.getBillToCustomerId());
         writer.writeStringValue("billToCustomerNumber", this.getBillToCustomerNumber());
         writer.writeStringValue("billToName", this.getBillToName());
         writer.writeObjectValue("currency", this.getCurrency());
         writer.writeStringValue("currencyCode", this.getCurrencyCode());
-        writer.writeStringValue("currencyId", this.getCurrencyId());
+        writer.writeUUIDValue("currencyId", this.getCurrencyId());
         writer.writeObjectValue("customer", this.getCustomer());
-        writer.writeStringValue("customerId", this.getCustomerId());
+        writer.writeUUIDValue("customerId", this.getCustomerId());
         writer.writeStringValue("customerName", this.getCustomerName());
         writer.writeStringValue("customerNumber", this.getCustomerNumber());
         writer.writeStringValue("customerPurchaseOrderReference", this.getCustomerPurchaseOrderReference());
@@ -483,20 +514,22 @@ public class SalesInvoice extends Entity implements Parsable {
         writer.writeLocalDateValue("dueDate", this.getDueDate());
         writer.writeStringValue("email", this.getEmail());
         writer.writeStringValue("externalDocumentNumber", this.getExternalDocumentNumber());
+        writer.writeUUIDValue("id", this.getId());
         writer.writeLocalDateValue("invoiceDate", this.getInvoiceDate());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("number", this.getNumber());
-        writer.writeStringValue("orderId", this.getOrderId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeUUIDValue("orderId", this.getOrderId());
         writer.writeStringValue("orderNumber", this.getOrderNumber());
         writer.writeObjectValue("paymentTerm", this.getPaymentTerm());
-        writer.writeStringValue("paymentTermsId", this.getPaymentTermsId());
+        writer.writeUUIDValue("paymentTermsId", this.getPaymentTermsId());
         writer.writeStringValue("phoneNumber", this.getPhoneNumber());
         writer.writeBooleanValue("pricesIncludeTax", this.getPricesIncludeTax());
         writer.writeCollectionOfObjectValues("salesInvoiceLines", this.getSalesInvoiceLines());
         writer.writeStringValue("salesperson", this.getSalesperson());
         writer.writeObjectValue("sellingPostalAddress", this.getSellingPostalAddress());
         writer.writeObjectValue("shipmentMethod", this.getShipmentMethod());
-        writer.writeStringValue("shipmentMethodId", this.getShipmentMethodId());
+        writer.writeUUIDValue("shipmentMethodId", this.getShipmentMethodId());
         writer.writeObjectValue("shippingPostalAddress", this.getShippingPostalAddress());
         writer.writeStringValue("shipToContact", this.getShipToContact());
         writer.writeStringValue("shipToName", this.getShipToName());
@@ -504,309 +537,375 @@ public class SalesInvoice extends Entity implements Parsable {
         writer.writeBigDecimalValue("totalAmountExcludingTax", this.getTotalAmountExcludingTax());
         writer.writeBigDecimalValue("totalAmountIncludingTax", this.getTotalAmountIncludingTax());
         writer.writeBigDecimalValue("totalTaxAmount", this.getTotalTaxAmount());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+        this.additionalData = value;
     }
     /**
      * Sets the billingPostalAddress property value. The billingPostalAddress property
      * @param value Value to set for the billingPostalAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBillingPostalAddress(@javax.annotation.Nullable final PostalAddressType value) {
-        this._billingPostalAddress = value;
+        this.billingPostalAddress = value;
     }
     /**
      * Sets the billToCustomerId property value. The billToCustomerId property
      * @param value Value to set for the billToCustomerId property.
      * @return a void
      */
-    public void setBillToCustomerId(@javax.annotation.Nullable final String value) {
-        this._billToCustomerId = value;
+    @javax.annotation.Nonnull
+    public void setBillToCustomerId(@javax.annotation.Nullable final UUID value) {
+        this.billToCustomerId = value;
     }
     /**
      * Sets the billToCustomerNumber property value. The billToCustomerNumber property
      * @param value Value to set for the billToCustomerNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBillToCustomerNumber(@javax.annotation.Nullable final String value) {
-        this._billToCustomerNumber = value;
+        this.billToCustomerNumber = value;
     }
     /**
      * Sets the billToName property value. The billToName property
      * @param value Value to set for the billToName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBillToName(@javax.annotation.Nullable final String value) {
-        this._billToName = value;
+        this.billToName = value;
     }
     /**
      * Sets the currency property value. The currency property
      * @param value Value to set for the currency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrency(@javax.annotation.Nullable final Currency value) {
-        this._currency = value;
+        this.currency = value;
     }
     /**
      * Sets the currencyCode property value. The currencyCode property
      * @param value Value to set for the currencyCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrencyCode(@javax.annotation.Nullable final String value) {
-        this._currencyCode = value;
+        this.currencyCode = value;
     }
     /**
      * Sets the currencyId property value. The currencyId property
      * @param value Value to set for the currencyId property.
      * @return a void
      */
-    public void setCurrencyId(@javax.annotation.Nullable final String value) {
-        this._currencyId = value;
+    @javax.annotation.Nonnull
+    public void setCurrencyId(@javax.annotation.Nullable final UUID value) {
+        this.currencyId = value;
     }
     /**
      * Sets the customer property value. The customer property
      * @param value Value to set for the customer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomer(@javax.annotation.Nullable final Customer value) {
-        this._customer = value;
+        this.customer = value;
     }
     /**
      * Sets the customerId property value. The customerId property
      * @param value Value to set for the customerId property.
      * @return a void
      */
-    public void setCustomerId(@javax.annotation.Nullable final String value) {
-        this._customerId = value;
+    @javax.annotation.Nonnull
+    public void setCustomerId(@javax.annotation.Nullable final UUID value) {
+        this.customerId = value;
     }
     /**
      * Sets the customerName property value. The customerName property
      * @param value Value to set for the customerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerName(@javax.annotation.Nullable final String value) {
-        this._customerName = value;
+        this.customerName = value;
     }
     /**
      * Sets the customerNumber property value. The customerNumber property
      * @param value Value to set for the customerNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerNumber(@javax.annotation.Nullable final String value) {
-        this._customerNumber = value;
+        this.customerNumber = value;
     }
     /**
      * Sets the customerPurchaseOrderReference property value. The customerPurchaseOrderReference property
      * @param value Value to set for the customerPurchaseOrderReference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerPurchaseOrderReference(@javax.annotation.Nullable final String value) {
-        this._customerPurchaseOrderReference = value;
+        this.customerPurchaseOrderReference = value;
     }
     /**
      * Sets the discountAmount property value. The discountAmount property
      * @param value Value to set for the discountAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountAmount(@javax.annotation.Nullable final BigDecimal value) {
-        this._discountAmount = value;
+        this.discountAmount = value;
     }
     /**
      * Sets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
      * @param value Value to set for the discountAppliedBeforeTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountAppliedBeforeTax(@javax.annotation.Nullable final Boolean value) {
-        this._discountAppliedBeforeTax = value;
+        this.discountAppliedBeforeTax = value;
     }
     /**
      * Sets the dueDate property value. The dueDate property
      * @param value Value to set for the dueDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDate(@javax.annotation.Nullable final LocalDate value) {
-        this._dueDate = value;
+        this.dueDate = value;
     }
     /**
      * Sets the email property value. The email property
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
-        this._email = value;
+        this.email = value;
     }
     /**
      * Sets the externalDocumentNumber property value. The externalDocumentNumber property
      * @param value Value to set for the externalDocumentNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalDocumentNumber(@javax.annotation.Nullable final String value) {
-        this._externalDocumentNumber = value;
+        this.externalDocumentNumber = value;
+    }
+    /**
+     * Sets the id property value. The id property
+     * @param value Value to set for the id property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setId(@javax.annotation.Nullable final UUID value) {
+        this.id = value;
     }
     /**
      * Sets the invoiceDate property value. The invoiceDate property
      * @param value Value to set for the invoiceDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceDate(@javax.annotation.Nullable final LocalDate value) {
-        this._invoiceDate = value;
+        this.invoiceDate = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final String value) {
-        this._number = value;
+        this.number = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this.odataType = value;
     }
     /**
      * Sets the orderId property value. The orderId property
      * @param value Value to set for the orderId property.
      * @return a void
      */
-    public void setOrderId(@javax.annotation.Nullable final String value) {
-        this._orderId = value;
+    @javax.annotation.Nonnull
+    public void setOrderId(@javax.annotation.Nullable final UUID value) {
+        this.orderId = value;
     }
     /**
      * Sets the orderNumber property value. The orderNumber property
      * @param value Value to set for the orderNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderNumber(@javax.annotation.Nullable final String value) {
-        this._orderNumber = value;
+        this.orderNumber = value;
     }
     /**
      * Sets the paymentTerm property value. The paymentTerm property
      * @param value Value to set for the paymentTerm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPaymentTerm(@javax.annotation.Nullable final PaymentTerm value) {
-        this._paymentTerm = value;
+        this.paymentTerm = value;
     }
     /**
      * Sets the paymentTermsId property value. The paymentTermsId property
      * @param value Value to set for the paymentTermsId property.
      * @return a void
      */
-    public void setPaymentTermsId(@javax.annotation.Nullable final String value) {
-        this._paymentTermsId = value;
+    @javax.annotation.Nonnull
+    public void setPaymentTermsId(@javax.annotation.Nullable final UUID value) {
+        this.paymentTermsId = value;
     }
     /**
      * Sets the phoneNumber property value. The phoneNumber property
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneNumber(@javax.annotation.Nullable final String value) {
-        this._phoneNumber = value;
+        this.phoneNumber = value;
     }
     /**
      * Sets the pricesIncludeTax property value. The pricesIncludeTax property
      * @param value Value to set for the pricesIncludeTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPricesIncludeTax(@javax.annotation.Nullable final Boolean value) {
-        this._pricesIncludeTax = value;
+        this.pricesIncludeTax = value;
     }
     /**
      * Sets the salesInvoiceLines property value. The salesInvoiceLines property
      * @param value Value to set for the salesInvoiceLines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesInvoiceLines(@javax.annotation.Nullable final java.util.List<SalesInvoiceLine> value) {
-        this._salesInvoiceLines = value;
+        this.salesInvoiceLines = value;
     }
     /**
      * Sets the salesperson property value. The salesperson property
      * @param value Value to set for the salesperson property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesperson(@javax.annotation.Nullable final String value) {
-        this._salesperson = value;
+        this.salesperson = value;
     }
     /**
      * Sets the sellingPostalAddress property value. The sellingPostalAddress property
      * @param value Value to set for the sellingPostalAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSellingPostalAddress(@javax.annotation.Nullable final PostalAddressType value) {
-        this._sellingPostalAddress = value;
+        this.sellingPostalAddress = value;
     }
     /**
      * Sets the shipmentMethod property value. The shipmentMethod property
      * @param value Value to set for the shipmentMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShipmentMethod(@javax.annotation.Nullable final ShipmentMethod value) {
-        this._shipmentMethod = value;
+        this.shipmentMethod = value;
     }
     /**
      * Sets the shipmentMethodId property value. The shipmentMethodId property
      * @param value Value to set for the shipmentMethodId property.
      * @return a void
      */
-    public void setShipmentMethodId(@javax.annotation.Nullable final String value) {
-        this._shipmentMethodId = value;
+    @javax.annotation.Nonnull
+    public void setShipmentMethodId(@javax.annotation.Nullable final UUID value) {
+        this.shipmentMethodId = value;
     }
     /**
      * Sets the shippingPostalAddress property value. The shippingPostalAddress property
      * @param value Value to set for the shippingPostalAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShippingPostalAddress(@javax.annotation.Nullable final PostalAddressType value) {
-        this._shippingPostalAddress = value;
+        this.shippingPostalAddress = value;
     }
     /**
      * Sets the shipToContact property value. The shipToContact property
      * @param value Value to set for the shipToContact property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShipToContact(@javax.annotation.Nullable final String value) {
-        this._shipToContact = value;
+        this.shipToContact = value;
     }
     /**
      * Sets the shipToName property value. The shipToName property
      * @param value Value to set for the shipToName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShipToName(@javax.annotation.Nullable final String value) {
-        this._shipToName = value;
+        this.shipToName = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
      * @param value Value to set for the totalAmountExcludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalAmountExcludingTax(@javax.annotation.Nullable final BigDecimal value) {
-        this._totalAmountExcludingTax = value;
+        this.totalAmountExcludingTax = value;
     }
     /**
      * Sets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
      * @param value Value to set for the totalAmountIncludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalAmountIncludingTax(@javax.annotation.Nullable final BigDecimal value) {
-        this._totalAmountIncludingTax = value;
+        this.totalAmountIncludingTax = value;
     }
     /**
      * Sets the totalTaxAmount property value. The totalTaxAmount property
      * @param value Value to set for the totalTaxAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalTaxAmount(@javax.annotation.Nullable final BigDecimal value) {
-        this._totalTaxAmount = value;
+        this.totalTaxAmount = value;
     }
 }

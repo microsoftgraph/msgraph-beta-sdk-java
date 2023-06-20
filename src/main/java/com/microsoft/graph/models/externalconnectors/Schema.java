@@ -4,22 +4,21 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Schema extends Entity implements Parsable {
     /** Must be set to microsoft.graph.externalItem. Required. */
-    private String _baseType;
+    private String baseType;
     /** The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128. */
-    private java.util.List<Property> _properties;
+    private java.util.List<Property> properties;
     /**
      * Instantiates a new Schema and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Schema() {
         super();
-        this.setOdataType("#microsoft.graph.externalConnectors.schema");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,19 +36,18 @@ public class Schema extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBaseType() {
-        return this._baseType;
+        return this.baseType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Schema currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("baseType", (n) -> { currentObject.setBaseType(n.getStringValue()); });
-            this.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(Property::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("baseType", (n) -> { this.setBaseType(n.getStringValue()); });
+        deserializerMap.put("properties", (n) -> { this.setProperties(n.getCollectionOfObjectValues(Property::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the properties property value. The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
@@ -57,13 +55,14 @@ public class Schema extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Property> getProperties() {
-        return this._properties;
+        return this.properties;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,15 +74,17 @@ public class Schema extends Entity implements Parsable {
      * @param value Value to set for the baseType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBaseType(@javax.annotation.Nullable final String value) {
-        this._baseType = value;
+        this.baseType = value;
     }
     /**
      * Sets the properties property value. The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
      * @param value Value to set for the properties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProperties(@javax.annotation.Nullable final java.util.List<Property> value) {
-        this._properties = value;
+        this.properties = value;
     }
 }

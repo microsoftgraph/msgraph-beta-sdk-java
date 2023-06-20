@@ -3,21 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The embedded SIM activation code pool assignment entity assigns a specific embeddedSIMActivationCodePool to an AAD device group. */
+/**
+ * The embedded SIM activation code pool assignment entity assigns a specific embeddedSIMActivationCodePool to an AAD device group.
+ */
 public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements Parsable {
     /** Base type for assignment targets. */
-    private DeviceAndAppManagementAssignmentTarget _target;
+    private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new embeddedSIMActivationCodePoolAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmbeddedSIMActivationCodePoolAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.embeddedSIMActivationCodePoolAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,28 +32,28 @@ public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EmbeddedSIMActivationCodePoolAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the target property value. Base type for assignment targets.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @javax.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this._target;
+        return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,7 +64,8 @@ public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements P
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this._target = value;
+        this.target = value;
     }
 }

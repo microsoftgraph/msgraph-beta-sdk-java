@@ -3,115 +3,115 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /** Indicates whether or not to block clipboard sharing to copy and paste between applications. */
-    private Boolean _appsBlockClipboardSharing;
+    private Boolean appsBlockClipboardSharing;
     /** Indicates whether or not to block copy and paste within applications. */
-    private Boolean _appsBlockCopyPaste;
+    private Boolean appsBlockCopyPaste;
     /** Indicates whether or not to block the YouTube app. */
-    private Boolean _appsBlockYouTube;
+    private Boolean appsBlockYouTube;
     /** List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements. */
-    private java.util.List<AppListItem> _appsHideList;
+    private java.util.List<AppListItem> appsHideList;
     /** List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements. */
-    private java.util.List<AppListItem> _appsInstallAllowList;
+    private java.util.List<AppListItem> appsInstallAllowList;
     /** List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements. */
-    private java.util.List<AppListItem> _appsLaunchBlockList;
+    private java.util.List<AppListItem> appsLaunchBlockList;
     /** Indicates whether or not to block Bluetooth. */
-    private Boolean _bluetoothBlocked;
+    private Boolean bluetoothBlocked;
     /** Indicates whether or not to block the use of the camera. */
-    private Boolean _cameraBlocked;
+    private Boolean cameraBlocked;
     /** Indicates whether or not to block data roaming. */
-    private Boolean _cellularBlockDataRoaming;
+    private Boolean cellularBlockDataRoaming;
     /** Indicates whether or not to block SMS/MMS messaging. */
-    private Boolean _cellularBlockMessaging;
+    private Boolean cellularBlockMessaging;
     /** Indicates whether or not to block voice roaming. */
-    private Boolean _cellularBlockVoiceRoaming;
+    private Boolean cellularBlockVoiceRoaming;
     /** Indicates whether or not to block syncing Wi-Fi tethering. */
-    private Boolean _cellularBlockWiFiTethering;
+    private Boolean cellularBlockWiFiTethering;
     /** Possible values of the compliance app list. */
-    private AppListType _compliantAppListType;
+    private AppListType compliantAppListType;
     /** List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements. */
-    private java.util.List<AppListItem> _compliantAppsList;
+    private java.util.List<AppListItem> compliantAppsList;
     /** Indicates whether or not to block changing date and time while in KNOX Mode. */
-    private Boolean _dateAndTimeBlockChanges;
+    private Boolean dateAndTimeBlockChanges;
     /** Indicates whether or not to allow device sharing mode. */
-    private Boolean _deviceSharingAllowed;
+    private Boolean deviceSharingAllowed;
     /** Indicates whether or not to block diagnostic data submission. */
-    private Boolean _diagnosticDataBlockSubmission;
+    private Boolean diagnosticDataBlockSubmission;
     /** Indicates whether or not to block user performing a factory reset. */
-    private Boolean _factoryResetBlocked;
+    private Boolean factoryResetBlocked;
     /** Indicates whether or not to block Google account auto sync. */
-    private Boolean _googleAccountBlockAutoSync;
+    private Boolean googleAccountBlockAutoSync;
     /** Indicates whether or not to block the Google Play store. */
-    private Boolean _googlePlayStoreBlocked;
+    private Boolean googlePlayStoreBlocked;
     /** A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements. */
-    private java.util.List<AppListItem> _kioskModeApps;
+    private java.util.List<AppListItem> kioskModeApps;
     /** Indicates whether or not to block the screen sleep button while in Kiosk Mode. */
-    private Boolean _kioskModeBlockSleepButton;
+    private Boolean kioskModeBlockSleepButton;
     /** Indicates whether or not to block the volume buttons while in Kiosk Mode. */
-    private Boolean _kioskModeBlockVolumeButtons;
+    private Boolean kioskModeBlockVolumeButtons;
     /** Indicates whether or not to block location services. */
-    private Boolean _locationServicesBlocked;
+    private Boolean locationServicesBlocked;
     /** Indicates whether or not to block Near-Field Communication. */
-    private Boolean _nfcBlocked;
+    private Boolean nfcBlocked;
     /** Indicates whether or not to block fingerprint unlock. */
-    private Boolean _passwordBlockFingerprintUnlock;
+    private Boolean passwordBlockFingerprintUnlock;
     /** Indicates whether or not to block Smart Lock and other trust agents. */
-    private Boolean _passwordBlockTrustAgents;
+    private Boolean passwordBlockTrustAgents;
     /** Number of days before the password expires. Valid values 1 to 365 */
-    private Integer _passwordExpirationDays;
+    private Integer passwordExpirationDays;
     /** Minimum length of passwords. Valid values 4 to 16 */
-    private Integer _passwordMinimumLength;
+    private Integer passwordMinimumLength;
     /** Minutes of inactivity before the screen times out. */
-    private Integer _passwordMinutesOfInactivityBeforeScreenTimeout;
+    private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
     /** Number of previous passwords to block. Valid values 0 to 24 */
-    private Integer _passwordPreviousPasswordBlockCount;
+    private Integer passwordPreviousPasswordBlockCount;
     /** Indicates whether or not to require a password. */
-    private Boolean _passwordRequired;
+    private Boolean passwordRequired;
     /** Android required password type. */
-    private AndroidRequiredPasswordType _passwordRequiredType;
+    private AndroidRequiredPasswordType passwordRequiredType;
     /** Number of sign in failures allowed before factory reset. Valid values 1 to 16 */
-    private Integer _passwordSignInFailureCountBeforeFactoryReset;
+    private Integer passwordSignInFailureCountBeforeFactoryReset;
     /** Indicates whether or not to block powering off the device. */
-    private Boolean _powerOffBlocked;
+    private Boolean powerOffBlocked;
     /** The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. */
-    private AndroidRequiredPasswordComplexity _requiredPasswordComplexity;
+    private AndroidRequiredPasswordComplexity requiredPasswordComplexity;
     /** Indicates whether or not to block screenshots. */
-    private Boolean _screenCaptureBlocked;
+    private Boolean screenCaptureBlocked;
     /** Require the Android Verify apps feature is turned on. */
-    private Boolean _securityRequireVerifyApps;
+    private Boolean securityRequireVerifyApps;
     /** Indicates whether or not to block Google Backup. */
-    private Boolean _storageBlockGoogleBackup;
+    private Boolean storageBlockGoogleBackup;
     /** Indicates whether or not to block removable storage usage. */
-    private Boolean _storageBlockRemovableStorage;
+    private Boolean storageBlockRemovableStorage;
     /** Indicates whether or not to require device encryption. */
-    private Boolean _storageRequireDeviceEncryption;
+    private Boolean storageRequireDeviceEncryption;
     /** Indicates whether or not to require removable storage encryption. */
-    private Boolean _storageRequireRemovableStorageEncryption;
+    private Boolean storageRequireRemovableStorageEncryption;
     /** Indicates whether or not to block the use of the Voice Assistant. */
-    private Boolean _voiceAssistantBlocked;
+    private Boolean voiceAssistantBlocked;
     /** Indicates whether or not to block voice dialing. */
-    private Boolean _voiceDialingBlocked;
+    private Boolean voiceDialingBlocked;
     /** Indicates whether or not to block the web browser's auto fill feature. */
-    private Boolean _webBrowserBlockAutofill;
+    private Boolean webBrowserBlockAutofill;
     /** Indicates whether or not to block the web browser. */
-    private Boolean _webBrowserBlocked;
+    private Boolean webBrowserBlocked;
     /** Indicates whether or not to block JavaScript within the web browser. */
-    private Boolean _webBrowserBlockJavaScript;
+    private Boolean webBrowserBlockJavaScript;
     /** Indicates whether or not to block popups within the web browser. */
-    private Boolean _webBrowserBlockPopups;
+    private Boolean webBrowserBlockPopups;
     /** Web Browser Cookie Settings. */
-    private WebBrowserCookieSettings _webBrowserCookieSettings;
+    private WebBrowserCookieSettings webBrowserCookieSettings;
     /** Indicates whether or not to block syncing Wi-Fi. */
-    private Boolean _wiFiBlocked;
+    private Boolean wiFiBlocked;
     /**
      * Instantiates a new AndroidGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidGeneralDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidGeneralDeviceConfiguration");
@@ -132,7 +132,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getAppsBlockClipboardSharing() {
-        return this._appsBlockClipboardSharing;
+        return this.appsBlockClipboardSharing;
     }
     /**
      * Gets the appsBlockCopyPaste property value. Indicates whether or not to block copy and paste within applications.
@@ -140,7 +140,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getAppsBlockCopyPaste() {
-        return this._appsBlockCopyPaste;
+        return this.appsBlockCopyPaste;
     }
     /**
      * Gets the appsBlockYouTube property value. Indicates whether or not to block the YouTube app.
@@ -148,7 +148,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getAppsBlockYouTube() {
-        return this._appsBlockYouTube;
+        return this.appsBlockYouTube;
     }
     /**
      * Gets the appsHideList property value. List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
@@ -156,7 +156,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getAppsHideList() {
-        return this._appsHideList;
+        return this.appsHideList;
     }
     /**
      * Gets the appsInstallAllowList property value. List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
@@ -164,7 +164,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getAppsInstallAllowList() {
-        return this._appsInstallAllowList;
+        return this.appsInstallAllowList;
     }
     /**
      * Gets the appsLaunchBlockList property value. List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
@@ -172,7 +172,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getAppsLaunchBlockList() {
-        return this._appsLaunchBlockList;
+        return this.appsLaunchBlockList;
     }
     /**
      * Gets the bluetoothBlocked property value. Indicates whether or not to block Bluetooth.
@@ -180,7 +180,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getBluetoothBlocked() {
-        return this._bluetoothBlocked;
+        return this.bluetoothBlocked;
     }
     /**
      * Gets the cameraBlocked property value. Indicates whether or not to block the use of the camera.
@@ -188,7 +188,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getCameraBlocked() {
-        return this._cameraBlocked;
+        return this.cameraBlocked;
     }
     /**
      * Gets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
@@ -196,7 +196,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getCellularBlockDataRoaming() {
-        return this._cellularBlockDataRoaming;
+        return this.cellularBlockDataRoaming;
     }
     /**
      * Gets the cellularBlockMessaging property value. Indicates whether or not to block SMS/MMS messaging.
@@ -204,7 +204,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getCellularBlockMessaging() {
-        return this._cellularBlockMessaging;
+        return this.cellularBlockMessaging;
     }
     /**
      * Gets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
@@ -212,7 +212,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getCellularBlockVoiceRoaming() {
-        return this._cellularBlockVoiceRoaming;
+        return this.cellularBlockVoiceRoaming;
     }
     /**
      * Gets the cellularBlockWiFiTethering property value. Indicates whether or not to block syncing Wi-Fi tethering.
@@ -220,15 +220,15 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getCellularBlockWiFiTethering() {
-        return this._cellularBlockWiFiTethering;
+        return this.cellularBlockWiFiTethering;
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a appListType
+     * @return a AppListType
      */
     @javax.annotation.Nullable
     public AppListType getCompliantAppListType() {
-        return this._compliantAppListType;
+        return this.compliantAppListType;
     }
     /**
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
@@ -236,7 +236,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
-        return this._compliantAppsList;
+        return this.compliantAppsList;
     }
     /**
      * Gets the dateAndTimeBlockChanges property value. Indicates whether or not to block changing date and time while in KNOX Mode.
@@ -244,7 +244,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getDateAndTimeBlockChanges() {
-        return this._dateAndTimeBlockChanges;
+        return this.dateAndTimeBlockChanges;
     }
     /**
      * Gets the deviceSharingAllowed property value. Indicates whether or not to allow device sharing mode.
@@ -252,7 +252,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getDeviceSharingAllowed() {
-        return this._deviceSharingAllowed;
+        return this.deviceSharingAllowed;
     }
     /**
      * Gets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
@@ -260,7 +260,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmission() {
-        return this._diagnosticDataBlockSubmission;
+        return this.diagnosticDataBlockSubmission;
     }
     /**
      * Gets the factoryResetBlocked property value. Indicates whether or not to block user performing a factory reset.
@@ -268,67 +268,66 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getFactoryResetBlocked() {
-        return this._factoryResetBlocked;
+        return this.factoryResetBlocked;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appsBlockClipboardSharing", (n) -> { currentObject.setAppsBlockClipboardSharing(n.getBooleanValue()); });
-            this.put("appsBlockCopyPaste", (n) -> { currentObject.setAppsBlockCopyPaste(n.getBooleanValue()); });
-            this.put("appsBlockYouTube", (n) -> { currentObject.setAppsBlockYouTube(n.getBooleanValue()); });
-            this.put("appsHideList", (n) -> { currentObject.setAppsHideList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("appsInstallAllowList", (n) -> { currentObject.setAppsInstallAllowList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("appsLaunchBlockList", (n) -> { currentObject.setAppsLaunchBlockList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("bluetoothBlocked", (n) -> { currentObject.setBluetoothBlocked(n.getBooleanValue()); });
-            this.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
-            this.put("cellularBlockDataRoaming", (n) -> { currentObject.setCellularBlockDataRoaming(n.getBooleanValue()); });
-            this.put("cellularBlockMessaging", (n) -> { currentObject.setCellularBlockMessaging(n.getBooleanValue()); });
-            this.put("cellularBlockVoiceRoaming", (n) -> { currentObject.setCellularBlockVoiceRoaming(n.getBooleanValue()); });
-            this.put("cellularBlockWiFiTethering", (n) -> { currentObject.setCellularBlockWiFiTethering(n.getBooleanValue()); });
-            this.put("compliantAppListType", (n) -> { currentObject.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
-            this.put("compliantAppsList", (n) -> { currentObject.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("dateAndTimeBlockChanges", (n) -> { currentObject.setDateAndTimeBlockChanges(n.getBooleanValue()); });
-            this.put("deviceSharingAllowed", (n) -> { currentObject.setDeviceSharingAllowed(n.getBooleanValue()); });
-            this.put("diagnosticDataBlockSubmission", (n) -> { currentObject.setDiagnosticDataBlockSubmission(n.getBooleanValue()); });
-            this.put("factoryResetBlocked", (n) -> { currentObject.setFactoryResetBlocked(n.getBooleanValue()); });
-            this.put("googleAccountBlockAutoSync", (n) -> { currentObject.setGoogleAccountBlockAutoSync(n.getBooleanValue()); });
-            this.put("googlePlayStoreBlocked", (n) -> { currentObject.setGooglePlayStoreBlocked(n.getBooleanValue()); });
-            this.put("kioskModeApps", (n) -> { currentObject.setKioskModeApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("kioskModeBlockSleepButton", (n) -> { currentObject.setKioskModeBlockSleepButton(n.getBooleanValue()); });
-            this.put("kioskModeBlockVolumeButtons", (n) -> { currentObject.setKioskModeBlockVolumeButtons(n.getBooleanValue()); });
-            this.put("locationServicesBlocked", (n) -> { currentObject.setLocationServicesBlocked(n.getBooleanValue()); });
-            this.put("nfcBlocked", (n) -> { currentObject.setNfcBlocked(n.getBooleanValue()); });
-            this.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
-            this.put("passwordBlockTrustAgents", (n) -> { currentObject.setPasswordBlockTrustAgents(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidRequiredPasswordType.class)); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("powerOffBlocked", (n) -> { currentObject.setPowerOffBlocked(n.getBooleanValue()); });
-            this.put("requiredPasswordComplexity", (n) -> { currentObject.setRequiredPasswordComplexity(n.getEnumValue(AndroidRequiredPasswordComplexity.class)); });
-            this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
-            this.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
-            this.put("storageBlockGoogleBackup", (n) -> { currentObject.setStorageBlockGoogleBackup(n.getBooleanValue()); });
-            this.put("storageBlockRemovableStorage", (n) -> { currentObject.setStorageBlockRemovableStorage(n.getBooleanValue()); });
-            this.put("storageRequireDeviceEncryption", (n) -> { currentObject.setStorageRequireDeviceEncryption(n.getBooleanValue()); });
-            this.put("storageRequireRemovableStorageEncryption", (n) -> { currentObject.setStorageRequireRemovableStorageEncryption(n.getBooleanValue()); });
-            this.put("voiceAssistantBlocked", (n) -> { currentObject.setVoiceAssistantBlocked(n.getBooleanValue()); });
-            this.put("voiceDialingBlocked", (n) -> { currentObject.setVoiceDialingBlocked(n.getBooleanValue()); });
-            this.put("webBrowserBlockAutofill", (n) -> { currentObject.setWebBrowserBlockAutofill(n.getBooleanValue()); });
-            this.put("webBrowserBlocked", (n) -> { currentObject.setWebBrowserBlocked(n.getBooleanValue()); });
-            this.put("webBrowserBlockJavaScript", (n) -> { currentObject.setWebBrowserBlockJavaScript(n.getBooleanValue()); });
-            this.put("webBrowserBlockPopups", (n) -> { currentObject.setWebBrowserBlockPopups(n.getBooleanValue()); });
-            this.put("webBrowserCookieSettings", (n) -> { currentObject.setWebBrowserCookieSettings(n.getEnumValue(WebBrowserCookieSettings.class)); });
-            this.put("wiFiBlocked", (n) -> { currentObject.setWiFiBlocked(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appsBlockClipboardSharing", (n) -> { this.setAppsBlockClipboardSharing(n.getBooleanValue()); });
+        deserializerMap.put("appsBlockCopyPaste", (n) -> { this.setAppsBlockCopyPaste(n.getBooleanValue()); });
+        deserializerMap.put("appsBlockYouTube", (n) -> { this.setAppsBlockYouTube(n.getBooleanValue()); });
+        deserializerMap.put("appsHideList", (n) -> { this.setAppsHideList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("appsInstallAllowList", (n) -> { this.setAppsInstallAllowList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("appsLaunchBlockList", (n) -> { this.setAppsLaunchBlockList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("bluetoothBlocked", (n) -> { this.setBluetoothBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cameraBlocked", (n) -> { this.setCameraBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockDataRoaming", (n) -> { this.setCellularBlockDataRoaming(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockMessaging", (n) -> { this.setCellularBlockMessaging(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockVoiceRoaming", (n) -> { this.setCellularBlockVoiceRoaming(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockWiFiTethering", (n) -> { this.setCellularBlockWiFiTethering(n.getBooleanValue()); });
+        deserializerMap.put("compliantAppListType", (n) -> { this.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
+        deserializerMap.put("compliantAppsList", (n) -> { this.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("dateAndTimeBlockChanges", (n) -> { this.setDateAndTimeBlockChanges(n.getBooleanValue()); });
+        deserializerMap.put("deviceSharingAllowed", (n) -> { this.setDeviceSharingAllowed(n.getBooleanValue()); });
+        deserializerMap.put("diagnosticDataBlockSubmission", (n) -> { this.setDiagnosticDataBlockSubmission(n.getBooleanValue()); });
+        deserializerMap.put("factoryResetBlocked", (n) -> { this.setFactoryResetBlocked(n.getBooleanValue()); });
+        deserializerMap.put("googleAccountBlockAutoSync", (n) -> { this.setGoogleAccountBlockAutoSync(n.getBooleanValue()); });
+        deserializerMap.put("googlePlayStoreBlocked", (n) -> { this.setGooglePlayStoreBlocked(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeApps", (n) -> { this.setKioskModeApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("kioskModeBlockSleepButton", (n) -> { this.setKioskModeBlockSleepButton(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeBlockVolumeButtons", (n) -> { this.setKioskModeBlockVolumeButtons(n.getBooleanValue()); });
+        deserializerMap.put("locationServicesBlocked", (n) -> { this.setLocationServicesBlocked(n.getBooleanValue()); });
+        deserializerMap.put("nfcBlocked", (n) -> { this.setNfcBlocked(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockFingerprintUnlock", (n) -> { this.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockTrustAgents", (n) -> { this.setPasswordBlockTrustAgents(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidRequiredPasswordType.class)); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { this.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("powerOffBlocked", (n) -> { this.setPowerOffBlocked(n.getBooleanValue()); });
+        deserializerMap.put("requiredPasswordComplexity", (n) -> { this.setRequiredPasswordComplexity(n.getEnumValue(AndroidRequiredPasswordComplexity.class)); });
+        deserializerMap.put("screenCaptureBlocked", (n) -> { this.setScreenCaptureBlocked(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireVerifyApps", (n) -> { this.setSecurityRequireVerifyApps(n.getBooleanValue()); });
+        deserializerMap.put("storageBlockGoogleBackup", (n) -> { this.setStorageBlockGoogleBackup(n.getBooleanValue()); });
+        deserializerMap.put("storageBlockRemovableStorage", (n) -> { this.setStorageBlockRemovableStorage(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireDeviceEncryption", (n) -> { this.setStorageRequireDeviceEncryption(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireRemovableStorageEncryption", (n) -> { this.setStorageRequireRemovableStorageEncryption(n.getBooleanValue()); });
+        deserializerMap.put("voiceAssistantBlocked", (n) -> { this.setVoiceAssistantBlocked(n.getBooleanValue()); });
+        deserializerMap.put("voiceDialingBlocked", (n) -> { this.setVoiceDialingBlocked(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserBlockAutofill", (n) -> { this.setWebBrowserBlockAutofill(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserBlocked", (n) -> { this.setWebBrowserBlocked(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserBlockJavaScript", (n) -> { this.setWebBrowserBlockJavaScript(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserBlockPopups", (n) -> { this.setWebBrowserBlockPopups(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserCookieSettings", (n) -> { this.setWebBrowserCookieSettings(n.getEnumValue(WebBrowserCookieSettings.class)); });
+        deserializerMap.put("wiFiBlocked", (n) -> { this.setWiFiBlocked(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the googleAccountBlockAutoSync property value. Indicates whether or not to block Google account auto sync.
@@ -336,7 +335,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getGoogleAccountBlockAutoSync() {
-        return this._googleAccountBlockAutoSync;
+        return this.googleAccountBlockAutoSync;
     }
     /**
      * Gets the googlePlayStoreBlocked property value. Indicates whether or not to block the Google Play store.
@@ -344,7 +343,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getGooglePlayStoreBlocked() {
-        return this._googlePlayStoreBlocked;
+        return this.googlePlayStoreBlocked;
     }
     /**
      * Gets the kioskModeApps property value. A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
@@ -352,7 +351,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getKioskModeApps() {
-        return this._kioskModeApps;
+        return this.kioskModeApps;
     }
     /**
      * Gets the kioskModeBlockSleepButton property value. Indicates whether or not to block the screen sleep button while in Kiosk Mode.
@@ -360,7 +359,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeBlockSleepButton() {
-        return this._kioskModeBlockSleepButton;
+        return this.kioskModeBlockSleepButton;
     }
     /**
      * Gets the kioskModeBlockVolumeButtons property value. Indicates whether or not to block the volume buttons while in Kiosk Mode.
@@ -368,7 +367,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getKioskModeBlockVolumeButtons() {
-        return this._kioskModeBlockVolumeButtons;
+        return this.kioskModeBlockVolumeButtons;
     }
     /**
      * Gets the locationServicesBlocked property value. Indicates whether or not to block location services.
@@ -376,7 +375,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getLocationServicesBlocked() {
-        return this._locationServicesBlocked;
+        return this.locationServicesBlocked;
     }
     /**
      * Gets the nfcBlocked property value. Indicates whether or not to block Near-Field Communication.
@@ -384,7 +383,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getNfcBlocked() {
-        return this._nfcBlocked;
+        return this.nfcBlocked;
     }
     /**
      * Gets the passwordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
@@ -392,7 +391,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockFingerprintUnlock() {
-        return this._passwordBlockFingerprintUnlock;
+        return this.passwordBlockFingerprintUnlock;
     }
     /**
      * Gets the passwordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents.
@@ -400,7 +399,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockTrustAgents() {
-        return this._passwordBlockTrustAgents;
+        return this.passwordBlockTrustAgents;
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
@@ -408,7 +407,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this._passwordExpirationDays;
+        return this.passwordExpirationDays;
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of passwords. Valid values 4 to 16
@@ -416,7 +415,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this._passwordMinimumLength;
+        return this.passwordMinimumLength;
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
@@ -424,7 +423,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
-        return this._passwordMinutesOfInactivityBeforeScreenTimeout;
+        return this.passwordMinutesOfInactivityBeforeScreenTimeout;
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
@@ -432,7 +431,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this._passwordPreviousPasswordBlockCount;
+        return this.passwordPreviousPasswordBlockCount;
     }
     /**
      * Gets the passwordRequired property value. Indicates whether or not to require a password.
@@ -440,15 +439,15 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getPasswordRequired() {
-        return this._passwordRequired;
+        return this.passwordRequired;
     }
     /**
      * Gets the passwordRequiredType property value. Android required password type.
-     * @return a androidRequiredPasswordType
+     * @return a AndroidRequiredPasswordType
      */
     @javax.annotation.Nullable
     public AndroidRequiredPasswordType getPasswordRequiredType() {
-        return this._passwordRequiredType;
+        return this.passwordRequiredType;
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset. Valid values 1 to 16
@@ -456,7 +455,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
-        return this._passwordSignInFailureCountBeforeFactoryReset;
+        return this.passwordSignInFailureCountBeforeFactoryReset;
     }
     /**
      * Gets the powerOffBlocked property value. Indicates whether or not to block powering off the device.
@@ -464,15 +463,15 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getPowerOffBlocked() {
-        return this._powerOffBlocked;
+        return this.powerOffBlocked;
     }
     /**
      * Gets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
-     * @return a androidRequiredPasswordComplexity
+     * @return a AndroidRequiredPasswordComplexity
      */
     @javax.annotation.Nullable
     public AndroidRequiredPasswordComplexity getRequiredPasswordComplexity() {
-        return this._requiredPasswordComplexity;
+        return this.requiredPasswordComplexity;
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether or not to block screenshots.
@@ -480,7 +479,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
-        return this._screenCaptureBlocked;
+        return this.screenCaptureBlocked;
     }
     /**
      * Gets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
@@ -488,7 +487,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getSecurityRequireVerifyApps() {
-        return this._securityRequireVerifyApps;
+        return this.securityRequireVerifyApps;
     }
     /**
      * Gets the storageBlockGoogleBackup property value. Indicates whether or not to block Google Backup.
@@ -496,7 +495,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getStorageBlockGoogleBackup() {
-        return this._storageBlockGoogleBackup;
+        return this.storageBlockGoogleBackup;
     }
     /**
      * Gets the storageBlockRemovableStorage property value. Indicates whether or not to block removable storage usage.
@@ -504,7 +503,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getStorageBlockRemovableStorage() {
-        return this._storageBlockRemovableStorage;
+        return this.storageBlockRemovableStorage;
     }
     /**
      * Gets the storageRequireDeviceEncryption property value. Indicates whether or not to require device encryption.
@@ -512,7 +511,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getStorageRequireDeviceEncryption() {
-        return this._storageRequireDeviceEncryption;
+        return this.storageRequireDeviceEncryption;
     }
     /**
      * Gets the storageRequireRemovableStorageEncryption property value. Indicates whether or not to require removable storage encryption.
@@ -520,7 +519,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getStorageRequireRemovableStorageEncryption() {
-        return this._storageRequireRemovableStorageEncryption;
+        return this.storageRequireRemovableStorageEncryption;
     }
     /**
      * Gets the voiceAssistantBlocked property value. Indicates whether or not to block the use of the Voice Assistant.
@@ -528,7 +527,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getVoiceAssistantBlocked() {
-        return this._voiceAssistantBlocked;
+        return this.voiceAssistantBlocked;
     }
     /**
      * Gets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
@@ -536,7 +535,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getVoiceDialingBlocked() {
-        return this._voiceDialingBlocked;
+        return this.voiceDialingBlocked;
     }
     /**
      * Gets the webBrowserBlockAutofill property value. Indicates whether or not to block the web browser's auto fill feature.
@@ -544,7 +543,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getWebBrowserBlockAutofill() {
-        return this._webBrowserBlockAutofill;
+        return this.webBrowserBlockAutofill;
     }
     /**
      * Gets the webBrowserBlocked property value. Indicates whether or not to block the web browser.
@@ -552,7 +551,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getWebBrowserBlocked() {
-        return this._webBrowserBlocked;
+        return this.webBrowserBlocked;
     }
     /**
      * Gets the webBrowserBlockJavaScript property value. Indicates whether or not to block JavaScript within the web browser.
@@ -560,7 +559,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getWebBrowserBlockJavaScript() {
-        return this._webBrowserBlockJavaScript;
+        return this.webBrowserBlockJavaScript;
     }
     /**
      * Gets the webBrowserBlockPopups property value. Indicates whether or not to block popups within the web browser.
@@ -568,15 +567,15 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getWebBrowserBlockPopups() {
-        return this._webBrowserBlockPopups;
+        return this.webBrowserBlockPopups;
     }
     /**
      * Gets the webBrowserCookieSettings property value. Web Browser Cookie Settings.
-     * @return a webBrowserCookieSettings
+     * @return a WebBrowserCookieSettings
      */
     @javax.annotation.Nullable
     public WebBrowserCookieSettings getWebBrowserCookieSettings() {
-        return this._webBrowserCookieSettings;
+        return this.webBrowserCookieSettings;
     }
     /**
      * Gets the wiFiBlocked property value. Indicates whether or not to block syncing Wi-Fi.
@@ -584,13 +583,14 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     @javax.annotation.Nullable
     public Boolean getWiFiBlocked() {
-        return this._wiFiBlocked;
+        return this.wiFiBlocked;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -650,399 +650,449 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the appsBlockClipboardSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsBlockClipboardSharing(@javax.annotation.Nullable final Boolean value) {
-        this._appsBlockClipboardSharing = value;
+        this.appsBlockClipboardSharing = value;
     }
     /**
      * Sets the appsBlockCopyPaste property value. Indicates whether or not to block copy and paste within applications.
      * @param value Value to set for the appsBlockCopyPaste property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsBlockCopyPaste(@javax.annotation.Nullable final Boolean value) {
-        this._appsBlockCopyPaste = value;
+        this.appsBlockCopyPaste = value;
     }
     /**
      * Sets the appsBlockYouTube property value. Indicates whether or not to block the YouTube app.
      * @param value Value to set for the appsBlockYouTube property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsBlockYouTube(@javax.annotation.Nullable final Boolean value) {
-        this._appsBlockYouTube = value;
+        this.appsBlockYouTube = value;
     }
     /**
      * Sets the appsHideList property value. List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the appsHideList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsHideList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._appsHideList = value;
+        this.appsHideList = value;
     }
     /**
      * Sets the appsInstallAllowList property value. List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the appsInstallAllowList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsInstallAllowList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._appsInstallAllowList = value;
+        this.appsInstallAllowList = value;
     }
     /**
      * Sets the appsLaunchBlockList property value. List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the appsLaunchBlockList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsLaunchBlockList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._appsLaunchBlockList = value;
+        this.appsLaunchBlockList = value;
     }
     /**
      * Sets the bluetoothBlocked property value. Indicates whether or not to block Bluetooth.
      * @param value Value to set for the bluetoothBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._bluetoothBlocked = value;
+        this.bluetoothBlocked = value;
     }
     /**
      * Sets the cameraBlocked property value. Indicates whether or not to block the use of the camera.
      * @param value Value to set for the cameraBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._cameraBlocked = value;
+        this.cameraBlocked = value;
     }
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
      * @param value Value to set for the cellularBlockDataRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockDataRoaming(@javax.annotation.Nullable final Boolean value) {
-        this._cellularBlockDataRoaming = value;
+        this.cellularBlockDataRoaming = value;
     }
     /**
      * Sets the cellularBlockMessaging property value. Indicates whether or not to block SMS/MMS messaging.
      * @param value Value to set for the cellularBlockMessaging property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockMessaging(@javax.annotation.Nullable final Boolean value) {
-        this._cellularBlockMessaging = value;
+        this.cellularBlockMessaging = value;
     }
     /**
      * Sets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
      * @param value Value to set for the cellularBlockVoiceRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockVoiceRoaming(@javax.annotation.Nullable final Boolean value) {
-        this._cellularBlockVoiceRoaming = value;
+        this.cellularBlockVoiceRoaming = value;
     }
     /**
      * Sets the cellularBlockWiFiTethering property value. Indicates whether or not to block syncing Wi-Fi tethering.
      * @param value Value to set for the cellularBlockWiFiTethering property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockWiFiTethering(@javax.annotation.Nullable final Boolean value) {
-        this._cellularBlockWiFiTethering = value;
+        this.cellularBlockWiFiTethering = value;
     }
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppListType(@javax.annotation.Nullable final AppListType value) {
-        this._compliantAppListType = value;
+        this.compliantAppListType = value;
     }
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      * @param value Value to set for the compliantAppsList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._compliantAppsList = value;
+        this.compliantAppsList = value;
     }
     /**
      * Sets the dateAndTimeBlockChanges property value. Indicates whether or not to block changing date and time while in KNOX Mode.
      * @param value Value to set for the dateAndTimeBlockChanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateAndTimeBlockChanges(@javax.annotation.Nullable final Boolean value) {
-        this._dateAndTimeBlockChanges = value;
+        this.dateAndTimeBlockChanges = value;
     }
     /**
      * Sets the deviceSharingAllowed property value. Indicates whether or not to allow device sharing mode.
      * @param value Value to set for the deviceSharingAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceSharingAllowed(@javax.annotation.Nullable final Boolean value) {
-        this._deviceSharingAllowed = value;
+        this.deviceSharingAllowed = value;
     }
     /**
      * Sets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
      * @param value Value to set for the diagnosticDataBlockSubmission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiagnosticDataBlockSubmission(@javax.annotation.Nullable final Boolean value) {
-        this._diagnosticDataBlockSubmission = value;
+        this.diagnosticDataBlockSubmission = value;
     }
     /**
      * Sets the factoryResetBlocked property value. Indicates whether or not to block user performing a factory reset.
      * @param value Value to set for the factoryResetBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFactoryResetBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._factoryResetBlocked = value;
+        this.factoryResetBlocked = value;
     }
     /**
      * Sets the googleAccountBlockAutoSync property value. Indicates whether or not to block Google account auto sync.
      * @param value Value to set for the googleAccountBlockAutoSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGoogleAccountBlockAutoSync(@javax.annotation.Nullable final Boolean value) {
-        this._googleAccountBlockAutoSync = value;
+        this.googleAccountBlockAutoSync = value;
     }
     /**
      * Sets the googlePlayStoreBlocked property value. Indicates whether or not to block the Google Play store.
      * @param value Value to set for the googlePlayStoreBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGooglePlayStoreBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._googlePlayStoreBlocked = value;
+        this.googlePlayStoreBlocked = value;
     }
     /**
      * Sets the kioskModeApps property value. A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the kioskModeApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._kioskModeApps = value;
+        this.kioskModeApps = value;
     }
     /**
      * Sets the kioskModeBlockSleepButton property value. Indicates whether or not to block the screen sleep button while in Kiosk Mode.
      * @param value Value to set for the kioskModeBlockSleepButton property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBlockSleepButton(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeBlockSleepButton = value;
+        this.kioskModeBlockSleepButton = value;
     }
     /**
      * Sets the kioskModeBlockVolumeButtons property value. Indicates whether or not to block the volume buttons while in Kiosk Mode.
      * @param value Value to set for the kioskModeBlockVolumeButtons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBlockVolumeButtons(@javax.annotation.Nullable final Boolean value) {
-        this._kioskModeBlockVolumeButtons = value;
+        this.kioskModeBlockVolumeButtons = value;
     }
     /**
      * Sets the locationServicesBlocked property value. Indicates whether or not to block location services.
      * @param value Value to set for the locationServicesBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationServicesBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._locationServicesBlocked = value;
+        this.locationServicesBlocked = value;
     }
     /**
      * Sets the nfcBlocked property value. Indicates whether or not to block Near-Field Communication.
      * @param value Value to set for the nfcBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNfcBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._nfcBlocked = value;
+        this.nfcBlocked = value;
     }
     /**
      * Sets the passwordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
      * @param value Value to set for the passwordBlockFingerprintUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockFingerprintUnlock = value;
+        this.passwordBlockFingerprintUnlock = value;
     }
     /**
      * Sets the passwordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents.
      * @param value Value to set for the passwordBlockTrustAgents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockTrustAgents(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockTrustAgents = value;
+        this.passwordBlockTrustAgents = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
-        this._passwordExpirationDays = value;
+        this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords. Valid values 4 to 16
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinimumLength = value;
+        this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
+        this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
-        this._passwordPreviousPasswordBlockCount = value;
+        this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequired property value. Indicates whether or not to require a password.
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
-        this._passwordRequired = value;
+        this.passwordRequired = value;
     }
     /**
      * Sets the passwordRequiredType property value. Android required password type.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidRequiredPasswordType value) {
-        this._passwordRequiredType = value;
+        this.passwordRequiredType = value;
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset. Valid values 1 to 16
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
-        this._passwordSignInFailureCountBeforeFactoryReset = value;
+        this.passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the powerOffBlocked property value. Indicates whether or not to block powering off the device.
      * @param value Value to set for the powerOffBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerOffBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._powerOffBlocked = value;
+        this.powerOffBlocked = value;
     }
     /**
      * Sets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
      * @param value Value to set for the requiredPasswordComplexity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredPasswordComplexity(@javax.annotation.Nullable final AndroidRequiredPasswordComplexity value) {
-        this._requiredPasswordComplexity = value;
+        this.requiredPasswordComplexity = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to block screenshots.
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._screenCaptureBlocked = value;
+        this.screenCaptureBlocked = value;
     }
     /**
      * Sets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
      * @param value Value to set for the securityRequireVerifyApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireVerifyApps(@javax.annotation.Nullable final Boolean value) {
-        this._securityRequireVerifyApps = value;
+        this.securityRequireVerifyApps = value;
     }
     /**
      * Sets the storageBlockGoogleBackup property value. Indicates whether or not to block Google Backup.
      * @param value Value to set for the storageBlockGoogleBackup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageBlockGoogleBackup(@javax.annotation.Nullable final Boolean value) {
-        this._storageBlockGoogleBackup = value;
+        this.storageBlockGoogleBackup = value;
     }
     /**
      * Sets the storageBlockRemovableStorage property value. Indicates whether or not to block removable storage usage.
      * @param value Value to set for the storageBlockRemovableStorage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageBlockRemovableStorage(@javax.annotation.Nullable final Boolean value) {
-        this._storageBlockRemovableStorage = value;
+        this.storageBlockRemovableStorage = value;
     }
     /**
      * Sets the storageRequireDeviceEncryption property value. Indicates whether or not to require device encryption.
      * @param value Value to set for the storageRequireDeviceEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireDeviceEncryption(@javax.annotation.Nullable final Boolean value) {
-        this._storageRequireDeviceEncryption = value;
+        this.storageRequireDeviceEncryption = value;
     }
     /**
      * Sets the storageRequireRemovableStorageEncryption property value. Indicates whether or not to require removable storage encryption.
      * @param value Value to set for the storageRequireRemovableStorageEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireRemovableStorageEncryption(@javax.annotation.Nullable final Boolean value) {
-        this._storageRequireRemovableStorageEncryption = value;
+        this.storageRequireRemovableStorageEncryption = value;
     }
     /**
      * Sets the voiceAssistantBlocked property value. Indicates whether or not to block the use of the Voice Assistant.
      * @param value Value to set for the voiceAssistantBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVoiceAssistantBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._voiceAssistantBlocked = value;
+        this.voiceAssistantBlocked = value;
     }
     /**
      * Sets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
      * @param value Value to set for the voiceDialingBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVoiceDialingBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._voiceDialingBlocked = value;
+        this.voiceDialingBlocked = value;
     }
     /**
      * Sets the webBrowserBlockAutofill property value. Indicates whether or not to block the web browser's auto fill feature.
      * @param value Value to set for the webBrowserBlockAutofill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebBrowserBlockAutofill(@javax.annotation.Nullable final Boolean value) {
-        this._webBrowserBlockAutofill = value;
+        this.webBrowserBlockAutofill = value;
     }
     /**
      * Sets the webBrowserBlocked property value. Indicates whether or not to block the web browser.
      * @param value Value to set for the webBrowserBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebBrowserBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._webBrowserBlocked = value;
+        this.webBrowserBlocked = value;
     }
     /**
      * Sets the webBrowserBlockJavaScript property value. Indicates whether or not to block JavaScript within the web browser.
      * @param value Value to set for the webBrowserBlockJavaScript property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebBrowserBlockJavaScript(@javax.annotation.Nullable final Boolean value) {
-        this._webBrowserBlockJavaScript = value;
+        this.webBrowserBlockJavaScript = value;
     }
     /**
      * Sets the webBrowserBlockPopups property value. Indicates whether or not to block popups within the web browser.
      * @param value Value to set for the webBrowserBlockPopups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebBrowserBlockPopups(@javax.annotation.Nullable final Boolean value) {
-        this._webBrowserBlockPopups = value;
+        this.webBrowserBlockPopups = value;
     }
     /**
      * Sets the webBrowserCookieSettings property value. Web Browser Cookie Settings.
      * @param value Value to set for the webBrowserCookieSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebBrowserCookieSettings(@javax.annotation.Nullable final WebBrowserCookieSettings value) {
-        this._webBrowserCookieSettings = value;
+        this.webBrowserCookieSettings = value;
     }
     /**
      * Sets the wiFiBlocked property value. Indicates whether or not to block syncing Wi-Fi.
      * @param value Value to set for the wiFiBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._wiFiBlocked = value;
+        this.wiFiBlocked = value;
     }
 }

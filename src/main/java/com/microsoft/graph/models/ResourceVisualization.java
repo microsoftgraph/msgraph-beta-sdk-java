@@ -4,38 +4,37 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item. */
-    private String _containerDisplayName;
+    private String containerDisplayName;
     /** Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness. */
-    private String _containerType;
+    private String containerType;
     /** A path leading to the folder in which the item is stored. */
-    private String _containerWebUrl;
+    private String containerWebUrl;
     /** The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported. */
-    private String _mediaType;
+    private String mediaType;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** A URL leading to the preview image for the item. */
-    private String _previewImageUrl;
+    private String previewImageUrl;
     /** A preview text for the item. */
-    private String _previewText;
+    private String previewText;
     /** The item's title text. */
-    private String _title;
+    private String title;
     /** The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types. */
-    private String _type;
+    private String type;
     /**
      * Instantiates a new resourceVisualization and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResourceVisualization() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resourceVisualization");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +52,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the containerDisplayName property value. A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
@@ -61,7 +60,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContainerDisplayName() {
-        return this._containerDisplayName;
+        return this.containerDisplayName;
     }
     /**
      * Gets the containerType property value. Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
@@ -69,7 +68,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContainerType() {
-        return this._containerType;
+        return this.containerType;
     }
     /**
      * Gets the containerWebUrl property value. A path leading to the folder in which the item is stored.
@@ -77,26 +76,25 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getContainerWebUrl() {
-        return this._containerWebUrl;
+        return this.containerWebUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ResourceVisualization currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("containerDisplayName", (n) -> { currentObject.setContainerDisplayName(n.getStringValue()); });
-            this.put("containerType", (n) -> { currentObject.setContainerType(n.getStringValue()); });
-            this.put("containerWebUrl", (n) -> { currentObject.setContainerWebUrl(n.getStringValue()); });
-            this.put("mediaType", (n) -> { currentObject.setMediaType(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("previewImageUrl", (n) -> { currentObject.setPreviewImageUrl(n.getStringValue()); });
-            this.put("previewText", (n) -> { currentObject.setPreviewText(n.getStringValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        deserializerMap.put("containerDisplayName", (n) -> { this.setContainerDisplayName(n.getStringValue()); });
+        deserializerMap.put("containerType", (n) -> { this.setContainerType(n.getStringValue()); });
+        deserializerMap.put("containerWebUrl", (n) -> { this.setContainerWebUrl(n.getStringValue()); });
+        deserializerMap.put("mediaType", (n) -> { this.setMediaType(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("previewImageUrl", (n) -> { this.setPreviewImageUrl(n.getStringValue()); });
+        deserializerMap.put("previewText", (n) -> { this.setPreviewText(n.getStringValue()); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
@@ -104,7 +102,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMediaType() {
-        return this._mediaType;
+        return this.mediaType;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -112,7 +110,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the previewImageUrl property value. A URL leading to the preview image for the item.
@@ -120,7 +118,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPreviewImageUrl() {
-        return this._previewImageUrl;
+        return this.previewImageUrl;
     }
     /**
      * Gets the previewText property value. A preview text for the item.
@@ -128,7 +126,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPreviewText() {
-        return this._previewText;
+        return this.previewText;
     }
     /**
      * Gets the title property value. The item's title text.
@@ -136,7 +134,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTitle() {
-        return this._title;
+        return this.title;
     }
     /**
      * Gets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
@@ -144,13 +142,14 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("containerDisplayName", this.getContainerDisplayName());
@@ -169,79 +168,89 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the containerDisplayName property value. A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
      * @param value Value to set for the containerDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainerDisplayName(@javax.annotation.Nullable final String value) {
-        this._containerDisplayName = value;
+        this.containerDisplayName = value;
     }
     /**
      * Sets the containerType property value. Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
      * @param value Value to set for the containerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainerType(@javax.annotation.Nullable final String value) {
-        this._containerType = value;
+        this.containerType = value;
     }
     /**
      * Sets the containerWebUrl property value. A path leading to the folder in which the item is stored.
      * @param value Value to set for the containerWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainerWebUrl(@javax.annotation.Nullable final String value) {
-        this._containerWebUrl = value;
+        this.containerWebUrl = value;
     }
     /**
      * Sets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
      * @param value Value to set for the mediaType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaType(@javax.annotation.Nullable final String value) {
-        this._mediaType = value;
+        this.mediaType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the previewImageUrl property value. A URL leading to the preview image for the item.
      * @param value Value to set for the previewImageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviewImageUrl(@javax.annotation.Nullable final String value) {
-        this._previewImageUrl = value;
+        this.previewImageUrl = value;
     }
     /**
      * Sets the previewText property value. A preview text for the item.
      * @param value Value to set for the previewText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviewText(@javax.annotation.Nullable final String value) {
-        this._previewText = value;
+        this.previewText = value;
     }
     /**
      * Sets the title property value. The item's title text.
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
-        this._title = value;
+        this.title = value;
     }
     /**
      * Sets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
 }

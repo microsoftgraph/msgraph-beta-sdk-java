@@ -4,29 +4,30 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The security baseline compliance state summary of the security baseline for a device. */
+/**
+ * The security baseline compliance state summary of the security baseline for a device.
+ */
 public class SecurityBaselineDeviceState extends Entity implements Parsable {
     /** Display name of the device */
-    private String _deviceDisplayName;
+    private String deviceDisplayName;
     /** Last modified date time of the policy report */
-    private OffsetDateTime _lastReportedDateTime;
+    private OffsetDateTime lastReportedDateTime;
     /** Intune device id */
-    private String _managedDeviceId;
+    private String managedDeviceId;
     /** Security Baseline Compliance State */
-    private SecurityBaselineComplianceState _state;
+    private SecurityBaselineComplianceState state;
     /** User Principal Name */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new securityBaselineDeviceState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityBaselineDeviceState() {
         super();
-        this.setOdataType("#microsoft.graph.securityBaselineDeviceState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,22 +45,21 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceDisplayName() {
-        return this._deviceDisplayName;
+        return this.deviceDisplayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SecurityBaselineDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
-            this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(SecurityBaselineComplianceState.class)); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceDisplayName", (n) -> { this.setDeviceDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(SecurityBaselineComplianceState.class)); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report
@@ -67,7 +67,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
-        return this._lastReportedDateTime;
+        return this.lastReportedDateTime;
     }
     /**
      * Gets the managedDeviceId property value. Intune device id
@@ -75,15 +75,15 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManagedDeviceId() {
-        return this._managedDeviceId;
+        return this.managedDeviceId;
     }
     /**
      * Gets the state property value. Security Baseline Compliance State
-     * @return a securityBaselineComplianceState
+     * @return a SecurityBaselineComplianceState
      */
     @javax.annotation.Nullable
     public SecurityBaselineComplianceState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
@@ -91,13 +91,14 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,39 +113,44 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
-        this._deviceDisplayName = value;
+        this.deviceDisplayName = value;
     }
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastReportedDateTime = value;
+        this.lastReportedDateTime = value;
     }
     /**
      * Sets the managedDeviceId property value. Intune device id
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
-        this._managedDeviceId = value;
+        this.managedDeviceId = value;
     }
     /**
      * Sets the state property value. Security Baseline Compliance State
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final SecurityBaselineComplianceState value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

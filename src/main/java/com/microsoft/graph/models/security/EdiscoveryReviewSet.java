@@ -3,19 +3,19 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryReviewSet extends DataSet implements Parsable {
     /** Represents files within the review set. */
-    private java.util.List<EdiscoveryFile> _files;
+    private java.util.List<EdiscoveryFile> files;
     /** Represents queries within the review set. */
-    private java.util.List<EdiscoveryReviewSetQuery> _queries;
+    private java.util.List<EdiscoveryReviewSetQuery> queries;
     /**
      * Instantiates a new EdiscoveryReviewSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoveryReviewSet() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryReviewSet");
@@ -32,15 +32,14 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EdiscoveryReviewSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("files", (n) -> { currentObject.setFiles(n.getCollectionOfObjectValues(EdiscoveryFile::createFromDiscriminatorValue)); });
-            this.put("queries", (n) -> { currentObject.setQueries(n.getCollectionOfObjectValues(EdiscoveryReviewSetQuery::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("files", (n) -> { this.setFiles(n.getCollectionOfObjectValues(EdiscoveryFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("queries", (n) -> { this.setQueries(n.getCollectionOfObjectValues(EdiscoveryReviewSetQuery::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the files property value. Represents files within the review set.
@@ -48,7 +47,7 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EdiscoveryFile> getFiles() {
-        return this._files;
+        return this.files;
     }
     /**
      * Gets the queries property value. Represents queries within the review set.
@@ -56,13 +55,14 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EdiscoveryReviewSetQuery> getQueries() {
-        return this._queries;
+        return this.queries;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class EdiscoveryReviewSet extends DataSet implements Parsable {
      * @param value Value to set for the files property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFiles(@javax.annotation.Nullable final java.util.List<EdiscoveryFile> value) {
-        this._files = value;
+        this.files = value;
     }
     /**
      * Sets the queries property value. Represents queries within the review set.
      * @param value Value to set for the queries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueries(@javax.annotation.Nullable final java.util.List<EdiscoveryReviewSetQuery> value) {
-        this._queries = value;
+        this.queries = value;
     }
 }

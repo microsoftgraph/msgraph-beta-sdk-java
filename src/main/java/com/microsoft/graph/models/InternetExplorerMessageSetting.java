@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** What message will be displayed by Edge before switching to Internet Explorer. */
 public enum InternetExplorerMessageSetting implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

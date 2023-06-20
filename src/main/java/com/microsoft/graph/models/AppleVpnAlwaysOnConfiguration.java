@@ -4,43 +4,44 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Always On VPN configuration for MacOS and iOS IKEv2 */
+/**
+ * Always On VPN configuration for MacOS and iOS IKEv2
+ */
 public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic. */
-    private VpnServiceExceptionAction _airPrintExceptionAction;
+    private VpnServiceExceptionAction airPrintExceptionAction;
     /** Specifies whether traffic from all captive network plugins should be allowed outside the vpn */
-    private Boolean _allowAllCaptiveNetworkPlugins;
+    private Boolean allowAllCaptiveNetworkPlugins;
     /** Determines whether traffic from the Websheet app is allowed outside of the VPN */
-    private Boolean _allowCaptiveWebSheet;
+    private Boolean allowCaptiveWebSheet;
     /** Determines whether all, some, or no non-native captive networking apps are allowed */
-    private SpecifiedCaptiveNetworkPlugins _allowedCaptiveNetworkPlugins;
+    private SpecifiedCaptiveNetworkPlugins allowedCaptiveNetworkPlugins;
     /** Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic. */
-    private VpnServiceExceptionAction _cellularExceptionAction;
+    private VpnServiceExceptionAction cellularExceptionAction;
     /** Specifies how often in seconds to send a network address translation keepalive package through the VPN */
-    private Integer _natKeepAliveIntervalInSeconds;
+    private Integer natKeepAliveIntervalInSeconds;
     /** Enable hardware offloading of NAT keepalive signals when the device is asleep */
-    private Boolean _natKeepAliveOffloadEnable;
+    private Boolean natKeepAliveOffloadEnable;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The type of tunnels that will be present to the VPN client for configuration */
-    private VpnTunnelConfigurationType _tunnelConfiguration;
+    private VpnTunnelConfigurationType tunnelConfiguration;
     /** Allow the user to toggle the VPN configuration using the UI */
-    private Boolean _userToggleEnabled;
+    private Boolean userToggleEnabled;
     /** Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic. */
-    private VpnServiceExceptionAction _voicemailExceptionAction;
+    private VpnServiceExceptionAction voicemailExceptionAction;
     /**
      * Instantiates a new appleVpnAlwaysOnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppleVpnAlwaysOnConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.appleVpnAlwaysOnConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +59,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the airPrintExceptionAction property value. Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
@@ -66,7 +67,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public VpnServiceExceptionAction getAirPrintExceptionAction() {
-        return this._airPrintExceptionAction;
+        return this.airPrintExceptionAction;
     }
     /**
      * Gets the allowAllCaptiveNetworkPlugins property value. Specifies whether traffic from all captive network plugins should be allowed outside the vpn
@@ -74,7 +75,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public Boolean getAllowAllCaptiveNetworkPlugins() {
-        return this._allowAllCaptiveNetworkPlugins;
+        return this.allowAllCaptiveNetworkPlugins;
     }
     /**
      * Gets the allowCaptiveWebSheet property value. Determines whether traffic from the Websheet app is allowed outside of the VPN
@@ -82,7 +83,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public Boolean getAllowCaptiveWebSheet() {
-        return this._allowCaptiveWebSheet;
+        return this.allowCaptiveWebSheet;
     }
     /**
      * Gets the allowedCaptiveNetworkPlugins property value. Determines whether all, some, or no non-native captive networking apps are allowed
@@ -90,7 +91,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public SpecifiedCaptiveNetworkPlugins getAllowedCaptiveNetworkPlugins() {
-        return this._allowedCaptiveNetworkPlugins;
+        return this.allowedCaptiveNetworkPlugins;
     }
     /**
      * Gets the cellularExceptionAction property value. Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
@@ -98,28 +99,27 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public VpnServiceExceptionAction getCellularExceptionAction() {
-        return this._cellularExceptionAction;
+        return this.cellularExceptionAction;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AppleVpnAlwaysOnConfiguration currentObject = this;
-        return new HashMap<>(11) {{
-            this.put("airPrintExceptionAction", (n) -> { currentObject.setAirPrintExceptionAction(n.getEnumValue(VpnServiceExceptionAction.class)); });
-            this.put("allowAllCaptiveNetworkPlugins", (n) -> { currentObject.setAllowAllCaptiveNetworkPlugins(n.getBooleanValue()); });
-            this.put("allowCaptiveWebSheet", (n) -> { currentObject.setAllowCaptiveWebSheet(n.getBooleanValue()); });
-            this.put("allowedCaptiveNetworkPlugins", (n) -> { currentObject.setAllowedCaptiveNetworkPlugins(n.getObjectValue(SpecifiedCaptiveNetworkPlugins::createFromDiscriminatorValue)); });
-            this.put("cellularExceptionAction", (n) -> { currentObject.setCellularExceptionAction(n.getEnumValue(VpnServiceExceptionAction.class)); });
-            this.put("natKeepAliveIntervalInSeconds", (n) -> { currentObject.setNatKeepAliveIntervalInSeconds(n.getIntegerValue()); });
-            this.put("natKeepAliveOffloadEnable", (n) -> { currentObject.setNatKeepAliveOffloadEnable(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tunnelConfiguration", (n) -> { currentObject.setTunnelConfiguration(n.getEnumValue(VpnTunnelConfigurationType.class)); });
-            this.put("userToggleEnabled", (n) -> { currentObject.setUserToggleEnabled(n.getBooleanValue()); });
-            this.put("voicemailExceptionAction", (n) -> { currentObject.setVoicemailExceptionAction(n.getEnumValue(VpnServiceExceptionAction.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        deserializerMap.put("airPrintExceptionAction", (n) -> { this.setAirPrintExceptionAction(n.getEnumValue(VpnServiceExceptionAction.class)); });
+        deserializerMap.put("allowAllCaptiveNetworkPlugins", (n) -> { this.setAllowAllCaptiveNetworkPlugins(n.getBooleanValue()); });
+        deserializerMap.put("allowCaptiveWebSheet", (n) -> { this.setAllowCaptiveWebSheet(n.getBooleanValue()); });
+        deserializerMap.put("allowedCaptiveNetworkPlugins", (n) -> { this.setAllowedCaptiveNetworkPlugins(n.getObjectValue(SpecifiedCaptiveNetworkPlugins::createFromDiscriminatorValue)); });
+        deserializerMap.put("cellularExceptionAction", (n) -> { this.setCellularExceptionAction(n.getEnumValue(VpnServiceExceptionAction.class)); });
+        deserializerMap.put("natKeepAliveIntervalInSeconds", (n) -> { this.setNatKeepAliveIntervalInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("natKeepAliveOffloadEnable", (n) -> { this.setNatKeepAliveOffloadEnable(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tunnelConfiguration", (n) -> { this.setTunnelConfiguration(n.getEnumValue(VpnTunnelConfigurationType.class)); });
+        deserializerMap.put("userToggleEnabled", (n) -> { this.setUserToggleEnabled(n.getBooleanValue()); });
+        deserializerMap.put("voicemailExceptionAction", (n) -> { this.setVoicemailExceptionAction(n.getEnumValue(VpnServiceExceptionAction.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the natKeepAliveIntervalInSeconds property value. Specifies how often in seconds to send a network address translation keepalive package through the VPN
@@ -127,7 +127,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public Integer getNatKeepAliveIntervalInSeconds() {
-        return this._natKeepAliveIntervalInSeconds;
+        return this.natKeepAliveIntervalInSeconds;
     }
     /**
      * Gets the natKeepAliveOffloadEnable property value. Enable hardware offloading of NAT keepalive signals when the device is asleep
@@ -135,7 +135,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public Boolean getNatKeepAliveOffloadEnable() {
-        return this._natKeepAliveOffloadEnable;
+        return this.natKeepAliveOffloadEnable;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -143,15 +143,15 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the tunnelConfiguration property value. The type of tunnels that will be present to the VPN client for configuration
-     * @return a vpnTunnelConfigurationType
+     * @return a VpnTunnelConfigurationType
      */
     @javax.annotation.Nullable
     public VpnTunnelConfigurationType getTunnelConfiguration() {
-        return this._tunnelConfiguration;
+        return this.tunnelConfiguration;
     }
     /**
      * Gets the userToggleEnabled property value. Allow the user to toggle the VPN configuration using the UI
@@ -159,7 +159,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public Boolean getUserToggleEnabled() {
-        return this._userToggleEnabled;
+        return this.userToggleEnabled;
     }
     /**
      * Gets the voicemailExceptionAction property value. Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
@@ -167,13 +167,14 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public VpnServiceExceptionAction getVoicemailExceptionAction() {
-        return this._voicemailExceptionAction;
+        return this.voicemailExceptionAction;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("airPrintExceptionAction", this.getAirPrintExceptionAction());
@@ -194,95 +195,107 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the airPrintExceptionAction property value. Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @param value Value to set for the airPrintExceptionAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAirPrintExceptionAction(@javax.annotation.Nullable final VpnServiceExceptionAction value) {
-        this._airPrintExceptionAction = value;
+        this.airPrintExceptionAction = value;
     }
     /**
      * Sets the allowAllCaptiveNetworkPlugins property value. Specifies whether traffic from all captive network plugins should be allowed outside the vpn
      * @param value Value to set for the allowAllCaptiveNetworkPlugins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowAllCaptiveNetworkPlugins(@javax.annotation.Nullable final Boolean value) {
-        this._allowAllCaptiveNetworkPlugins = value;
+        this.allowAllCaptiveNetworkPlugins = value;
     }
     /**
      * Sets the allowCaptiveWebSheet property value. Determines whether traffic from the Websheet app is allowed outside of the VPN
      * @param value Value to set for the allowCaptiveWebSheet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowCaptiveWebSheet(@javax.annotation.Nullable final Boolean value) {
-        this._allowCaptiveWebSheet = value;
+        this.allowCaptiveWebSheet = value;
     }
     /**
      * Sets the allowedCaptiveNetworkPlugins property value. Determines whether all, some, or no non-native captive networking apps are allowed
      * @param value Value to set for the allowedCaptiveNetworkPlugins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedCaptiveNetworkPlugins(@javax.annotation.Nullable final SpecifiedCaptiveNetworkPlugins value) {
-        this._allowedCaptiveNetworkPlugins = value;
+        this.allowedCaptiveNetworkPlugins = value;
     }
     /**
      * Sets the cellularExceptionAction property value. Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @param value Value to set for the cellularExceptionAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularExceptionAction(@javax.annotation.Nullable final VpnServiceExceptionAction value) {
-        this._cellularExceptionAction = value;
+        this.cellularExceptionAction = value;
     }
     /**
      * Sets the natKeepAliveIntervalInSeconds property value. Specifies how often in seconds to send a network address translation keepalive package through the VPN
      * @param value Value to set for the natKeepAliveIntervalInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNatKeepAliveIntervalInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._natKeepAliveIntervalInSeconds = value;
+        this.natKeepAliveIntervalInSeconds = value;
     }
     /**
      * Sets the natKeepAliveOffloadEnable property value. Enable hardware offloading of NAT keepalive signals when the device is asleep
      * @param value Value to set for the natKeepAliveOffloadEnable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNatKeepAliveOffloadEnable(@javax.annotation.Nullable final Boolean value) {
-        this._natKeepAliveOffloadEnable = value;
+        this.natKeepAliveOffloadEnable = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the tunnelConfiguration property value. The type of tunnels that will be present to the VPN client for configuration
      * @param value Value to set for the tunnelConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTunnelConfiguration(@javax.annotation.Nullable final VpnTunnelConfigurationType value) {
-        this._tunnelConfiguration = value;
+        this.tunnelConfiguration = value;
     }
     /**
      * Sets the userToggleEnabled property value. Allow the user to toggle the VPN configuration using the UI
      * @param value Value to set for the userToggleEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserToggleEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._userToggleEnabled = value;
+        this.userToggleEnabled = value;
     }
     /**
      * Sets the voicemailExceptionAction property value. Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @param value Value to set for the voicemailExceptionAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVoicemailExceptionAction(@javax.annotation.Nullable final VpnServiceExceptionAction value) {
-        this._voicemailExceptionAction = value;
+        this.voicemailExceptionAction = value;
     }
 }

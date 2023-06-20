@@ -3,19 +3,19 @@ package com.microsoft.graph.models.identitygovernance;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implements Parsable {
-    /** The offsetInDays property */
-    private Integer _offsetInDays;
+    /** How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date. The value can range between -180 and 180 days. */
+    private Integer offsetInDays;
     /** The timeBasedAttribute property */
-    private WorkflowTriggerTimeBasedAttribute _timeBasedAttribute;
+    private WorkflowTriggerTimeBasedAttribute timeBasedAttribute;
     /**
      * Instantiates a new TimeBasedAttributeTrigger and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TimeBasedAttributeTrigger() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.timeBasedAttributeTrigger");
@@ -32,37 +32,37 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TimeBasedAttributeTrigger currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("offsetInDays", (n) -> { currentObject.setOffsetInDays(n.getIntegerValue()); });
-            this.put("timeBasedAttribute", (n) -> { currentObject.setTimeBasedAttribute(n.getEnumValue(WorkflowTriggerTimeBasedAttribute.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("offsetInDays", (n) -> { this.setOffsetInDays(n.getIntegerValue()); });
+        deserializerMap.put("timeBasedAttribute", (n) -> { this.setTimeBasedAttribute(n.getEnumValue(WorkflowTriggerTimeBasedAttribute.class)); });
+        return deserializerMap;
     }
     /**
-     * Gets the offsetInDays property value. The offsetInDays property
+     * Gets the offsetInDays property value. How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date. The value can range between -180 and 180 days.
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getOffsetInDays() {
-        return this._offsetInDays;
+        return this.offsetInDays;
     }
     /**
      * Gets the timeBasedAttribute property value. The timeBasedAttribute property
-     * @return a workflowTriggerTimeBasedAttribute
+     * @return a WorkflowTriggerTimeBasedAttribute
      */
     @javax.annotation.Nullable
     public WorkflowTriggerTimeBasedAttribute getTimeBasedAttribute() {
-        return this._timeBasedAttribute;
+        return this.timeBasedAttribute;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,19 +70,21 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
         writer.writeEnumValue("timeBasedAttribute", this.getTimeBasedAttribute());
     }
     /**
-     * Sets the offsetInDays property value. The offsetInDays property
+     * Sets the offsetInDays property value. How many days before or after the time-based attribute specified the workflow should trigger. For example, if the attribute is employeeHireDate and offsetInDays is -1, then the workflow should trigger one day before the employee hire date. The value can range between -180 and 180 days.
      * @param value Value to set for the offsetInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffsetInDays(@javax.annotation.Nullable final Integer value) {
-        this._offsetInDays = value;
+        this.offsetInDays = value;
     }
     /**
      * Sets the timeBasedAttribute property value. The timeBasedAttribute property
      * @param value Value to set for the timeBasedAttribute property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeBasedAttribute(@javax.annotation.Nullable final WorkflowTriggerTimeBasedAttribute value) {
-        this._timeBasedAttribute = value;
+        this.timeBasedAttribute = value;
     }
 }

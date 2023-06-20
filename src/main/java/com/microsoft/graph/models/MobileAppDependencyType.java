@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Indicates the dependency type associated with a relationship between two mobile apps. */
 public enum MobileAppDependencyType implements ValuedEnum {
     /** Indicates that the child app should be detected before installing the parent app. */
     Detect("detect"),

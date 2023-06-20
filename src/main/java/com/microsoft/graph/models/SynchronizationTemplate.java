@@ -3,33 +3,32 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+import java.util.UUID;
 public class SynchronizationTemplate extends Entity implements Parsable {
     /** Identifier of the application this template belongs to. */
-    private String _applicationId;
+    private UUID applicationId;
     /** true if this template is recommended to be the default for the application. */
-    private Boolean _default_escaped;
+    private Boolean defaultEscaped;
     /** Description of the template. */
-    private String _description;
+    private String description;
     /** true if this template should appear in the collection of templates available for the application instance (service principal). */
-    private Boolean _discoverable;
+    private Boolean discoverable;
     /** One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template. */
-    private String _factoryTag;
+    private String factoryTag;
     /** Additional extension properties. Unless mentioned explicitly, metadata values should not be changed. */
-    private java.util.List<MetadataEntry> _metadata;
+    private java.util.List<SynchronizationMetadataEntry> metadata;
     /** Default synchronization schema for the jobs based on this template. */
-    private SynchronizationSchema _schema;
+    private SynchronizationSchema schema;
     /**
      * Instantiates a new synchronizationTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationTemplate() {
         super();
-        this.setOdataType("#microsoft.graph.synchronizationTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,11 +42,11 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the applicationId property value. Identifier of the application this template belongs to.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getApplicationId() {
-        return this._applicationId;
+    public UUID getApplicationId() {
+        return this.applicationId;
     }
     /**
      * Gets the default property value. true if this template is recommended to be the default for the application.
@@ -55,7 +54,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getDefault() {
-        return this._default_escaped;
+        return this.defaultEscaped;
     }
     /**
      * Gets the description property value. Description of the template.
@@ -63,7 +62,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
@@ -71,7 +70,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getDiscoverable() {
-        return this._discoverable;
+        return this.discoverable;
     }
     /**
      * Gets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
@@ -79,32 +78,31 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFactoryTag() {
-        return this._factoryTag;
+        return this.factoryTag;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SynchronizationTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
-            this.put("default", (n) -> { currentObject.setDefault(n.getBooleanValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("discoverable", (n) -> { currentObject.setDiscoverable(n.getBooleanValue()); });
-            this.put("factoryTag", (n) -> { currentObject.setFactoryTag(n.getStringValue()); });
-            this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(MetadataEntry::createFromDiscriminatorValue)); });
-            this.put("schema", (n) -> { currentObject.setSchema(n.getObjectValue(SynchronizationSchema::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationId", (n) -> { this.setApplicationId(n.getUUIDValue()); });
+        deserializerMap.put("default", (n) -> { this.setDefault(n.getBooleanValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("discoverable", (n) -> { this.setDiscoverable(n.getBooleanValue()); });
+        deserializerMap.put("factoryTag", (n) -> { this.setFactoryTag(n.getStringValue()); });
+        deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getCollectionOfObjectValues(SynchronizationMetadataEntry::createFromDiscriminatorValue)); });
+        deserializerMap.put("schema", (n) -> { this.setSchema(n.getObjectValue(SynchronizationSchema::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
-     * @return a metadataEntry
+     * @return a synchronizationMetadataEntry
      */
     @javax.annotation.Nullable
-    public java.util.List<MetadataEntry> getMetadata() {
-        return this._metadata;
+    public java.util.List<SynchronizationMetadataEntry> getMetadata() {
+        return this.metadata;
     }
     /**
      * Gets the schema property value. Default synchronization schema for the jobs based on this template.
@@ -112,17 +110,18 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SynchronizationSchema getSchema() {
-        return this._schema;
+        return this.schema;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("applicationId", this.getApplicationId());
+        writer.writeUUIDValue("applicationId", this.getApplicationId());
         writer.writeBooleanValue("default", this.getDefault());
         writer.writeStringValue("description", this.getDescription());
         writer.writeBooleanValue("discoverable", this.getDiscoverable());
@@ -135,55 +134,62 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the applicationId property.
      * @return a void
      */
-    public void setApplicationId(@javax.annotation.Nullable final String value) {
-        this._applicationId = value;
+    @javax.annotation.Nonnull
+    public void setApplicationId(@javax.annotation.Nullable final UUID value) {
+        this.applicationId = value;
     }
     /**
      * Sets the default property value. true if this template is recommended to be the default for the application.
      * @param value Value to set for the default property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefault(@javax.annotation.Nullable final Boolean value) {
-        this._default_escaped = value;
+        this.defaultEscaped = value;
     }
     /**
      * Sets the description property value. Description of the template.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
      * @param value Value to set for the discoverable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscoverable(@javax.annotation.Nullable final Boolean value) {
-        this._discoverable = value;
+        this.discoverable = value;
     }
     /**
      * Sets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
      * @param value Value to set for the factoryTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFactoryTag(@javax.annotation.Nullable final String value) {
-        this._factoryTag = value;
+        this.factoryTag = value;
     }
     /**
      * Sets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @param value Value to set for the metadata property.
      * @return a void
      */
-    public void setMetadata(@javax.annotation.Nullable final java.util.List<MetadataEntry> value) {
-        this._metadata = value;
+    @javax.annotation.Nonnull
+    public void setMetadata(@javax.annotation.Nullable final java.util.List<SynchronizationMetadataEntry> value) {
+        this.metadata = value;
     }
     /**
      * Sets the schema property value. Default synchronization schema for the jobs based on this template.
      * @param value Value to set for the schema property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchema(@javax.annotation.Nullable final SynchronizationSchema value) {
-        this._schema = value;
+        this.schema = value;
     }
 }

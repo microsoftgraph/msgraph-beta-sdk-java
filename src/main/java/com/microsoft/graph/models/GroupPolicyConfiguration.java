@@ -4,35 +4,36 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The group policy configuration entity contains the configured values for one or more group policy definitions. */
+/**
+ * The group policy configuration entity contains the configured values for one or more group policy definitions.
+ */
 public class GroupPolicyConfiguration extends Entity implements Parsable {
     /** The list of group assignments for the configuration. */
-    private java.util.List<GroupPolicyConfigurationAssignment> _assignments;
+    private java.util.List<GroupPolicyConfigurationAssignment> assignments;
     /** The date and time the object was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The list of enabled or disabled group policy definition values for the configuration. */
-    private java.util.List<GroupPolicyDefinitionValue> _definitionValues;
+    private java.util.List<GroupPolicyDefinitionValue> definitionValues;
     /** User provided description for the resource object. */
-    private String _description;
+    private String description;
     /** User provided name for the resource object. */
-    private String _displayName;
+    private String displayName;
     /** The date and time the entity was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Group Policy Configuration Ingestion Type */
-    private GroupPolicyConfigurationIngestionType _policyConfigurationIngestionType;
+    private GroupPolicyConfigurationIngestionType policyConfigurationIngestionType;
     /** The list of scope tags for the configuration. */
-    private java.util.List<String> _roleScopeTagIds;
+    private java.util.List<String> roleScopeTagIds;
     /**
      * Instantiates a new groupPolicyConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.groupPolicyConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +51,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<GroupPolicyConfigurationAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the createdDateTime property value. The date and time the object was created.
@@ -58,7 +59,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the definitionValues property value. The list of enabled or disabled group policy definition values for the configuration.
@@ -66,7 +67,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<GroupPolicyDefinitionValue> getDefinitionValues() {
-        return this._definitionValues;
+        return this.definitionValues;
     }
     /**
      * Gets the description property value. User provided description for the resource object.
@@ -74,7 +75,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. User provided name for the resource object.
@@ -82,25 +83,24 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(GroupPolicyConfigurationAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("definitionValues", (n) -> { currentObject.setDefinitionValues(n.getCollectionOfObjectValues(GroupPolicyDefinitionValue::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("policyConfigurationIngestionType", (n) -> { currentObject.setPolicyConfigurationIngestionType(n.getEnumValue(GroupPolicyConfigurationIngestionType.class)); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(GroupPolicyConfigurationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("definitionValues", (n) -> { this.setDefinitionValues(n.getCollectionOfObjectValues(GroupPolicyDefinitionValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("policyConfigurationIngestionType", (n) -> { this.setPolicyConfigurationIngestionType(n.getEnumValue(GroupPolicyConfigurationIngestionType.class)); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
@@ -108,15 +108,15 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the policyConfigurationIngestionType property value. Group Policy Configuration Ingestion Type
-     * @return a groupPolicyConfigurationIngestionType
+     * @return a GroupPolicyConfigurationIngestionType
      */
     @javax.annotation.Nullable
     public GroupPolicyConfigurationIngestionType getPolicyConfigurationIngestionType() {
-        return this._policyConfigurationIngestionType;
+        return this.policyConfigurationIngestionType;
     }
     /**
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
@@ -124,13 +124,14 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this._roleScopeTagIds;
+        return this.roleScopeTagIds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,63 +149,71 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<GroupPolicyConfigurationAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the object was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the definitionValues property value. The list of enabled or disabled group policy definition values for the configuration.
      * @param value Value to set for the definitionValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionValues(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinitionValue> value) {
-        this._definitionValues = value;
+        this.definitionValues = value;
     }
     /**
      * Sets the description property value. User provided description for the resource object.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. User provided name for the resource object.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the policyConfigurationIngestionType property value. Group Policy Configuration Ingestion Type
      * @param value Value to set for the policyConfigurationIngestionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyConfigurationIngestionType(@javax.annotation.Nullable final GroupPolicyConfigurationIngestionType value) {
-        this._policyConfigurationIngestionType = value;
+        this.policyConfigurationIngestionType = value;
     }
     /**
      * Sets the roleScopeTagIds property value. The list of scope tags for the configuration.
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roleScopeTagIds = value;
+        this.roleScopeTagIds = value;
     }
 }

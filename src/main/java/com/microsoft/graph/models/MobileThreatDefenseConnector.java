@@ -4,55 +4,56 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Entity which represents a connection to Mobile threat defense partner. */
+/**
+ * Entity which represents a connection to Mobile Threat Defense partner.
+ */
 public class MobileThreatDefenseConnector extends Entity implements Parsable {
-    /** For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune */
-    private Boolean _allowPartnerToCollectIOSApplicationMetadata;
-    /** For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about personally installed applications from Intune */
-    private Boolean _allowPartnerToCollectIOSPersonalApplicationMetadata;
-    /** For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant */
-    private Boolean _androidDeviceBlockedOnMissingPartnerData;
-    /** For Android, set whether data from the data sync partner should be used during compliance evaluations */
-    private Boolean _androidEnabled;
-    /** For Android, set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. */
-    private Boolean _androidMobileApplicationManagementEnabled;
-    /** For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant */
-    private Boolean _iosDeviceBlockedOnMissingPartnerData;
-    /** For IOS, get or set whether data from the data sync partner should be used during compliance evaluations */
-    private Boolean _iosEnabled;
-    /** For IOS, get or set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. */
-    private Boolean _iosMobileApplicationManagementEnabled;
-    /** DateTime of last Heartbeat recieved from the Data Sync Partner */
-    private OffsetDateTime _lastHeartbeatDateTime;
-    /** For Mac, get or set whether Intune must receive data from the data sync partner prior to marking a device compliant */
-    private Boolean _macDeviceBlockedOnMissingPartnerData;
-    /** For Mac, get or set whether data from the data sync partner should be used during compliance evaluations */
-    private Boolean _macEnabled;
-    /** When TRUE, configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, configuration profile management via Microsoft Defender for Endpoint is disabled. */
-    private Boolean _microsoftDefenderForEndpointAttachEnabled;
+    /** When TRUE, indicates the Mobile Threat Defense partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE. */
+    private Boolean allowPartnerToCollectIOSApplicationMetadata;
+    /** When TRUE, indicates the Mobile Threat Defense partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE. */
+    private Boolean allowPartnerToCollectIOSPersonalApplicationMetadata;
+    /** For Android, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant */
+    private Boolean androidDeviceBlockedOnMissingPartnerData;
+    /** For Android, set whether data from the Mobile Threat Defense partner should be used during compliance evaluations */
+    private Boolean androidEnabled;
+    /** When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE. */
+    private Boolean androidMobileApplicationManagementEnabled;
+    /** For IOS, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant */
+    private Boolean iosDeviceBlockedOnMissingPartnerData;
+    /** For IOS, get or set whether data from the Mobile Threat Defense partner should be used during compliance evaluations */
+    private Boolean iosEnabled;
+    /** When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE. */
+    private Boolean iosMobileApplicationManagementEnabled;
+    /** DateTime of last Heartbeat recieved from the Mobile Threat Defense partner */
+    private OffsetDateTime lastHeartbeatDateTime;
+    /** For Mac, get or set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant */
+    private Boolean macDeviceBlockedOnMissingPartnerData;
+    /** For Mac, get or set whether data from the Mobile Threat Defense partner should be used during compliance evaluations */
+    private Boolean macEnabled;
+    /** When TRUE, inidicates that configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, inidicates that configuration profile management via Microsoft Defender for Endpoint is disabled. Default value is FALSE. */
+    private Boolean microsoftDefenderForEndpointAttachEnabled;
     /** Partner state of this tenant. */
-    private MobileThreatPartnerTenantState _partnerState;
+    private MobileThreatPartnerTenantState partnerState;
     /** Get or Set days the per tenant tolerance to unresponsiveness for this partner integration */
-    private Integer _partnerUnresponsivenessThresholdInDays;
-    /** Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner */
-    private Boolean _partnerUnsupportedOsVersionBlocked;
-    /** For Windows, set whether Intune must receive data from the data sync partner prior to marking a device compliant */
-    private Boolean _windowsDeviceBlockedOnMissingPartnerData;
-    /** For Windows, get or set whether data from the data sync partner should be used during compliance evaluations */
-    private Boolean _windowsEnabled;
+    private Integer partnerUnresponsivenessThresholdInDays;
+    /** Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Mobile Threat Defense partner */
+    private Boolean partnerUnsupportedOsVersionBlocked;
+    /** When TRUE, inidicates that Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the Mobile Threat Defense partner for Windows. Default value is FALSE. */
+    private Boolean windowsDeviceBlockedOnMissingPartnerData;
+    /** When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during compliance evaluations for Windows. Default value is FALSE. */
+    private Boolean windowsEnabled;
     /** When TRUE, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector for Windows. When FALSE, Intune will not use device risk details sent over this connector during app protection policies calculation for policies with a Device Threat Level configured. Existing devices that are not compliant due to risk levels obtained from this connector will also become compliant. */
-    private Boolean _windowsMobileApplicationManagementEnabled;
+    private Boolean windowsMobileApplicationManagementEnabled;
     /**
      * Instantiates a new mobileThreatDefenseConnector and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileThreatDefenseConnector() {
         super();
-        this.setOdataType("#microsoft.graph.mobileThreatDefenseConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,136 +66,135 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         return new MobileThreatDefenseConnector();
     }
     /**
-     * Gets the allowPartnerToCollectIOSApplicationMetadata property value. For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune
+     * Gets the allowPartnerToCollectIOSApplicationMetadata property value. When TRUE, indicates the Mobile Threat Defense partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getAllowPartnerToCollectIOSApplicationMetadata() {
-        return this._allowPartnerToCollectIOSApplicationMetadata;
+        return this.allowPartnerToCollectIOSApplicationMetadata;
     }
     /**
-     * Gets the allowPartnerToCollectIOSPersonalApplicationMetadata property value. For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about personally installed applications from Intune
+     * Gets the allowPartnerToCollectIOSPersonalApplicationMetadata property value. When TRUE, indicates the Mobile Threat Defense partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getAllowPartnerToCollectIOSPersonalApplicationMetadata() {
-        return this._allowPartnerToCollectIOSPersonalApplicationMetadata;
+        return this.allowPartnerToCollectIOSPersonalApplicationMetadata;
     }
     /**
-     * Gets the androidDeviceBlockedOnMissingPartnerData property value. For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+     * Gets the androidDeviceBlockedOnMissingPartnerData property value. For Android, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getAndroidDeviceBlockedOnMissingPartnerData() {
-        return this._androidDeviceBlockedOnMissingPartnerData;
+        return this.androidDeviceBlockedOnMissingPartnerData;
     }
     /**
-     * Gets the androidEnabled property value. For Android, set whether data from the data sync partner should be used during compliance evaluations
+     * Gets the androidEnabled property value. For Android, set whether data from the Mobile Threat Defense partner should be used during compliance evaluations
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getAndroidEnabled() {
-        return this._androidEnabled;
+        return this.androidEnabled;
     }
     /**
-     * Gets the androidMobileApplicationManagementEnabled property value. For Android, set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+     * Gets the androidMobileApplicationManagementEnabled property value. When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getAndroidMobileApplicationManagementEnabled() {
-        return this._androidMobileApplicationManagementEnabled;
+        return this.androidMobileApplicationManagementEnabled;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileThreatDefenseConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowPartnerToCollectIOSApplicationMetadata", (n) -> { currentObject.setAllowPartnerToCollectIOSApplicationMetadata(n.getBooleanValue()); });
-            this.put("allowPartnerToCollectIOSPersonalApplicationMetadata", (n) -> { currentObject.setAllowPartnerToCollectIOSPersonalApplicationMetadata(n.getBooleanValue()); });
-            this.put("androidDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setAndroidDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
-            this.put("androidEnabled", (n) -> { currentObject.setAndroidEnabled(n.getBooleanValue()); });
-            this.put("androidMobileApplicationManagementEnabled", (n) -> { currentObject.setAndroidMobileApplicationManagementEnabled(n.getBooleanValue()); });
-            this.put("iosDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setIosDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
-            this.put("iosEnabled", (n) -> { currentObject.setIosEnabled(n.getBooleanValue()); });
-            this.put("iosMobileApplicationManagementEnabled", (n) -> { currentObject.setIosMobileApplicationManagementEnabled(n.getBooleanValue()); });
-            this.put("lastHeartbeatDateTime", (n) -> { currentObject.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
-            this.put("macDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setMacDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
-            this.put("macEnabled", (n) -> { currentObject.setMacEnabled(n.getBooleanValue()); });
-            this.put("microsoftDefenderForEndpointAttachEnabled", (n) -> { currentObject.setMicrosoftDefenderForEndpointAttachEnabled(n.getBooleanValue()); });
-            this.put("partnerState", (n) -> { currentObject.setPartnerState(n.getEnumValue(MobileThreatPartnerTenantState.class)); });
-            this.put("partnerUnresponsivenessThresholdInDays", (n) -> { currentObject.setPartnerUnresponsivenessThresholdInDays(n.getIntegerValue()); });
-            this.put("partnerUnsupportedOsVersionBlocked", (n) -> { currentObject.setPartnerUnsupportedOsVersionBlocked(n.getBooleanValue()); });
-            this.put("windowsDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setWindowsDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
-            this.put("windowsEnabled", (n) -> { currentObject.setWindowsEnabled(n.getBooleanValue()); });
-            this.put("windowsMobileApplicationManagementEnabled", (n) -> { currentObject.setWindowsMobileApplicationManagementEnabled(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowPartnerToCollectIOSApplicationMetadata", (n) -> { this.setAllowPartnerToCollectIOSApplicationMetadata(n.getBooleanValue()); });
+        deserializerMap.put("allowPartnerToCollectIOSPersonalApplicationMetadata", (n) -> { this.setAllowPartnerToCollectIOSPersonalApplicationMetadata(n.getBooleanValue()); });
+        deserializerMap.put("androidDeviceBlockedOnMissingPartnerData", (n) -> { this.setAndroidDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
+        deserializerMap.put("androidEnabled", (n) -> { this.setAndroidEnabled(n.getBooleanValue()); });
+        deserializerMap.put("androidMobileApplicationManagementEnabled", (n) -> { this.setAndroidMobileApplicationManagementEnabled(n.getBooleanValue()); });
+        deserializerMap.put("iosDeviceBlockedOnMissingPartnerData", (n) -> { this.setIosDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
+        deserializerMap.put("iosEnabled", (n) -> { this.setIosEnabled(n.getBooleanValue()); });
+        deserializerMap.put("iosMobileApplicationManagementEnabled", (n) -> { this.setIosMobileApplicationManagementEnabled(n.getBooleanValue()); });
+        deserializerMap.put("lastHeartbeatDateTime", (n) -> { this.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("macDeviceBlockedOnMissingPartnerData", (n) -> { this.setMacDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
+        deserializerMap.put("macEnabled", (n) -> { this.setMacEnabled(n.getBooleanValue()); });
+        deserializerMap.put("microsoftDefenderForEndpointAttachEnabled", (n) -> { this.setMicrosoftDefenderForEndpointAttachEnabled(n.getBooleanValue()); });
+        deserializerMap.put("partnerState", (n) -> { this.setPartnerState(n.getEnumValue(MobileThreatPartnerTenantState.class)); });
+        deserializerMap.put("partnerUnresponsivenessThresholdInDays", (n) -> { this.setPartnerUnresponsivenessThresholdInDays(n.getIntegerValue()); });
+        deserializerMap.put("partnerUnsupportedOsVersionBlocked", (n) -> { this.setPartnerUnsupportedOsVersionBlocked(n.getBooleanValue()); });
+        deserializerMap.put("windowsDeviceBlockedOnMissingPartnerData", (n) -> { this.setWindowsDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
+        deserializerMap.put("windowsEnabled", (n) -> { this.setWindowsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("windowsMobileApplicationManagementEnabled", (n) -> { this.setWindowsMobileApplicationManagementEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the iosDeviceBlockedOnMissingPartnerData property value. For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+     * Gets the iosDeviceBlockedOnMissingPartnerData property value. For IOS, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIosDeviceBlockedOnMissingPartnerData() {
-        return this._iosDeviceBlockedOnMissingPartnerData;
+        return this.iosDeviceBlockedOnMissingPartnerData;
     }
     /**
-     * Gets the iosEnabled property value. For IOS, get or set whether data from the data sync partner should be used during compliance evaluations
+     * Gets the iosEnabled property value. For IOS, get or set whether data from the Mobile Threat Defense partner should be used during compliance evaluations
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIosEnabled() {
-        return this._iosEnabled;
+        return this.iosEnabled;
     }
     /**
-     * Gets the iosMobileApplicationManagementEnabled property value. For IOS, get or set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+     * Gets the iosMobileApplicationManagementEnabled property value. When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIosMobileApplicationManagementEnabled() {
-        return this._iosMobileApplicationManagementEnabled;
+        return this.iosMobileApplicationManagementEnabled;
     }
     /**
-     * Gets the lastHeartbeatDateTime property value. DateTime of last Heartbeat recieved from the Data Sync Partner
+     * Gets the lastHeartbeatDateTime property value. DateTime of last Heartbeat recieved from the Mobile Threat Defense partner
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastHeartbeatDateTime() {
-        return this._lastHeartbeatDateTime;
+        return this.lastHeartbeatDateTime;
     }
     /**
-     * Gets the macDeviceBlockedOnMissingPartnerData property value. For Mac, get or set whether Intune must receive data from the data sync partner prior to marking a device compliant
+     * Gets the macDeviceBlockedOnMissingPartnerData property value. For Mac, get or set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getMacDeviceBlockedOnMissingPartnerData() {
-        return this._macDeviceBlockedOnMissingPartnerData;
+        return this.macDeviceBlockedOnMissingPartnerData;
     }
     /**
-     * Gets the macEnabled property value. For Mac, get or set whether data from the data sync partner should be used during compliance evaluations
+     * Gets the macEnabled property value. For Mac, get or set whether data from the Mobile Threat Defense partner should be used during compliance evaluations
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getMacEnabled() {
-        return this._macEnabled;
+        return this.macEnabled;
     }
     /**
-     * Gets the microsoftDefenderForEndpointAttachEnabled property value. When TRUE, configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, configuration profile management via Microsoft Defender for Endpoint is disabled.
+     * Gets the microsoftDefenderForEndpointAttachEnabled property value. When TRUE, inidicates that configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, inidicates that configuration profile management via Microsoft Defender for Endpoint is disabled. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getMicrosoftDefenderForEndpointAttachEnabled() {
-        return this._microsoftDefenderForEndpointAttachEnabled;
+        return this.microsoftDefenderForEndpointAttachEnabled;
     }
     /**
      * Gets the partnerState property value. Partner state of this tenant.
-     * @return a mobileThreatPartnerTenantState
+     * @return a MobileThreatPartnerTenantState
      */
     @javax.annotation.Nullable
     public MobileThreatPartnerTenantState getPartnerState() {
-        return this._partnerState;
+        return this.partnerState;
     }
     /**
      * Gets the partnerUnresponsivenessThresholdInDays property value. Get or Set days the per tenant tolerance to unresponsiveness for this partner integration
@@ -202,31 +202,31 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPartnerUnresponsivenessThresholdInDays() {
-        return this._partnerUnresponsivenessThresholdInDays;
+        return this.partnerUnresponsivenessThresholdInDays;
     }
     /**
-     * Gets the partnerUnsupportedOsVersionBlocked property value. Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner
+     * Gets the partnerUnsupportedOsVersionBlocked property value. Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Mobile Threat Defense partner
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getPartnerUnsupportedOsVersionBlocked() {
-        return this._partnerUnsupportedOsVersionBlocked;
+        return this.partnerUnsupportedOsVersionBlocked;
     }
     /**
-     * Gets the windowsDeviceBlockedOnMissingPartnerData property value. For Windows, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+     * Gets the windowsDeviceBlockedOnMissingPartnerData property value. When TRUE, inidicates that Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the Mobile Threat Defense partner for Windows. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getWindowsDeviceBlockedOnMissingPartnerData() {
-        return this._windowsDeviceBlockedOnMissingPartnerData;
+        return this.windowsDeviceBlockedOnMissingPartnerData;
     }
     /**
-     * Gets the windowsEnabled property value. For Windows, get or set whether data from the data sync partner should be used during compliance evaluations
+     * Gets the windowsEnabled property value. When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during compliance evaluations for Windows. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getWindowsEnabled() {
-        return this._windowsEnabled;
+        return this.windowsEnabled;
     }
     /**
      * Gets the windowsMobileApplicationManagementEnabled property value. When TRUE, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector for Windows. When FALSE, Intune will not use device risk details sent over this connector during app protection policies calculation for policies with a Device Threat Level configured. Existing devices that are not compliant due to risk levels obtained from this connector will also become compliant.
@@ -234,13 +234,14 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getWindowsMobileApplicationManagementEnabled() {
-        return this._windowsMobileApplicationManagementEnabled;
+        return this.windowsMobileApplicationManagementEnabled;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -264,147 +265,165 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         writer.writeBooleanValue("windowsMobileApplicationManagementEnabled", this.getWindowsMobileApplicationManagementEnabled());
     }
     /**
-     * Sets the allowPartnerToCollectIOSApplicationMetadata property value. For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune
+     * Sets the allowPartnerToCollectIOSApplicationMetadata property value. When TRUE, indicates the Mobile Threat Defense partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE.
      * @param value Value to set for the allowPartnerToCollectIOSApplicationMetadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowPartnerToCollectIOSApplicationMetadata(@javax.annotation.Nullable final Boolean value) {
-        this._allowPartnerToCollectIOSApplicationMetadata = value;
+        this.allowPartnerToCollectIOSApplicationMetadata = value;
     }
     /**
-     * Sets the allowPartnerToCollectIOSPersonalApplicationMetadata property value. For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about personally installed applications from Intune
+     * Sets the allowPartnerToCollectIOSPersonalApplicationMetadata property value. When TRUE, indicates the Mobile Threat Defense partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE.
      * @param value Value to set for the allowPartnerToCollectIOSPersonalApplicationMetadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowPartnerToCollectIOSPersonalApplicationMetadata(@javax.annotation.Nullable final Boolean value) {
-        this._allowPartnerToCollectIOSPersonalApplicationMetadata = value;
+        this.allowPartnerToCollectIOSPersonalApplicationMetadata = value;
     }
     /**
-     * Sets the androidDeviceBlockedOnMissingPartnerData property value. For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+     * Sets the androidDeviceBlockedOnMissingPartnerData property value. For Android, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant
      * @param value Value to set for the androidDeviceBlockedOnMissingPartnerData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidDeviceBlockedOnMissingPartnerData(@javax.annotation.Nullable final Boolean value) {
-        this._androidDeviceBlockedOnMissingPartnerData = value;
+        this.androidDeviceBlockedOnMissingPartnerData = value;
     }
     /**
-     * Sets the androidEnabled property value. For Android, set whether data from the data sync partner should be used during compliance evaluations
+     * Sets the androidEnabled property value. For Android, set whether data from the Mobile Threat Defense partner should be used during compliance evaluations
      * @param value Value to set for the androidEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._androidEnabled = value;
+        this.androidEnabled = value;
     }
     /**
-     * Sets the androidMobileApplicationManagementEnabled property value. For Android, set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+     * Sets the androidMobileApplicationManagementEnabled property value. When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
      * @param value Value to set for the androidMobileApplicationManagementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidMobileApplicationManagementEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._androidMobileApplicationManagementEnabled = value;
+        this.androidMobileApplicationManagementEnabled = value;
     }
     /**
-     * Sets the iosDeviceBlockedOnMissingPartnerData property value. For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+     * Sets the iosDeviceBlockedOnMissingPartnerData property value. For IOS, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant
      * @param value Value to set for the iosDeviceBlockedOnMissingPartnerData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosDeviceBlockedOnMissingPartnerData(@javax.annotation.Nullable final Boolean value) {
-        this._iosDeviceBlockedOnMissingPartnerData = value;
+        this.iosDeviceBlockedOnMissingPartnerData = value;
     }
     /**
-     * Sets the iosEnabled property value. For IOS, get or set whether data from the data sync partner should be used during compliance evaluations
+     * Sets the iosEnabled property value. For IOS, get or set whether data from the Mobile Threat Defense partner should be used during compliance evaluations
      * @param value Value to set for the iosEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._iosEnabled = value;
+        this.iosEnabled = value;
     }
     /**
-     * Sets the iosMobileApplicationManagementEnabled property value. For IOS, get or set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+     * Sets the iosMobileApplicationManagementEnabled property value. When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
      * @param value Value to set for the iosMobileApplicationManagementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosMobileApplicationManagementEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._iosMobileApplicationManagementEnabled = value;
+        this.iosMobileApplicationManagementEnabled = value;
     }
     /**
-     * Sets the lastHeartbeatDateTime property value. DateTime of last Heartbeat recieved from the Data Sync Partner
+     * Sets the lastHeartbeatDateTime property value. DateTime of last Heartbeat recieved from the Mobile Threat Defense partner
      * @param value Value to set for the lastHeartbeatDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastHeartbeatDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastHeartbeatDateTime = value;
+        this.lastHeartbeatDateTime = value;
     }
     /**
-     * Sets the macDeviceBlockedOnMissingPartnerData property value. For Mac, get or set whether Intune must receive data from the data sync partner prior to marking a device compliant
+     * Sets the macDeviceBlockedOnMissingPartnerData property value. For Mac, get or set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant
      * @param value Value to set for the macDeviceBlockedOnMissingPartnerData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacDeviceBlockedOnMissingPartnerData(@javax.annotation.Nullable final Boolean value) {
-        this._macDeviceBlockedOnMissingPartnerData = value;
+        this.macDeviceBlockedOnMissingPartnerData = value;
     }
     /**
-     * Sets the macEnabled property value. For Mac, get or set whether data from the data sync partner should be used during compliance evaluations
+     * Sets the macEnabled property value. For Mac, get or set whether data from the Mobile Threat Defense partner should be used during compliance evaluations
      * @param value Value to set for the macEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._macEnabled = value;
+        this.macEnabled = value;
     }
     /**
-     * Sets the microsoftDefenderForEndpointAttachEnabled property value. When TRUE, configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, configuration profile management via Microsoft Defender for Endpoint is disabled.
+     * Sets the microsoftDefenderForEndpointAttachEnabled property value. When TRUE, inidicates that configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, inidicates that configuration profile management via Microsoft Defender for Endpoint is disabled. Default value is FALSE.
      * @param value Value to set for the microsoftDefenderForEndpointAttachEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftDefenderForEndpointAttachEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._microsoftDefenderForEndpointAttachEnabled = value;
+        this.microsoftDefenderForEndpointAttachEnabled = value;
     }
     /**
      * Sets the partnerState property value. Partner state of this tenant.
      * @param value Value to set for the partnerState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerState(@javax.annotation.Nullable final MobileThreatPartnerTenantState value) {
-        this._partnerState = value;
+        this.partnerState = value;
     }
     /**
      * Sets the partnerUnresponsivenessThresholdInDays property value. Get or Set days the per tenant tolerance to unresponsiveness for this partner integration
      * @param value Value to set for the partnerUnresponsivenessThresholdInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerUnresponsivenessThresholdInDays(@javax.annotation.Nullable final Integer value) {
-        this._partnerUnresponsivenessThresholdInDays = value;
+        this.partnerUnresponsivenessThresholdInDays = value;
     }
     /**
-     * Sets the partnerUnsupportedOsVersionBlocked property value. Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner
+     * Sets the partnerUnsupportedOsVersionBlocked property value. Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Mobile Threat Defense partner
      * @param value Value to set for the partnerUnsupportedOsVersionBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerUnsupportedOsVersionBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._partnerUnsupportedOsVersionBlocked = value;
+        this.partnerUnsupportedOsVersionBlocked = value;
     }
     /**
-     * Sets the windowsDeviceBlockedOnMissingPartnerData property value. For Windows, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+     * Sets the windowsDeviceBlockedOnMissingPartnerData property value. When TRUE, inidicates that Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the Mobile Threat Defense partner for Windows. Default value is FALSE.
      * @param value Value to set for the windowsDeviceBlockedOnMissingPartnerData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsDeviceBlockedOnMissingPartnerData(@javax.annotation.Nullable final Boolean value) {
-        this._windowsDeviceBlockedOnMissingPartnerData = value;
+        this.windowsDeviceBlockedOnMissingPartnerData = value;
     }
     /**
-     * Sets the windowsEnabled property value. For Windows, get or set whether data from the data sync partner should be used during compliance evaluations
+     * Sets the windowsEnabled property value. When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during compliance evaluations for Windows. Default value is FALSE.
      * @param value Value to set for the windowsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._windowsEnabled = value;
+        this.windowsEnabled = value;
     }
     /**
      * Sets the windowsMobileApplicationManagementEnabled property value. When TRUE, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector for Windows. When FALSE, Intune will not use device risk details sent over this connector during app protection policies calculation for policies with a Device Threat Level configured. Existing devices that are not compliant due to risk levels obtained from this connector will also become compliant.
      * @param value Value to set for the windowsMobileApplicationManagementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsMobileApplicationManagementEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._windowsMobileApplicationManagementEnabled = value;
+        this.windowsMobileApplicationManagementEnabled = value;
     }
 }

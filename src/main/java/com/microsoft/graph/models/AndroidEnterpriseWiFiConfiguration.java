@@ -3,37 +3,37 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration implements Parsable {
     /** Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential. */
-    private WiFiAuthenticationMethod _authenticationMethod;
+    private WiFiAuthenticationMethod authenticationMethod;
     /** Extensible Authentication Protocol (EAP) Configuration Types. */
-    private AndroidEapType _eapType;
+    private AndroidEapType eapType;
     /** Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection. */
-    private AndroidCertificateProfileBase _identityCertificateForClientAuthentication;
+    private AndroidCertificateProfileBase identityCertificateForClientAuthentication;
     /** Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. */
-    private NonEapAuthenticationMethodForEapTtlsType _innerAuthenticationProtocolForEapTtls;
+    private NonEapAuthenticationMethodForEapTtlsType innerAuthenticationProtocolForEapTtls;
     /** Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo. */
-    private NonEapAuthenticationMethodForPeap _innerAuthenticationProtocolForPeap;
+    private NonEapAuthenticationMethodForPeap innerAuthenticationProtocolForPeap;
     /** Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS or PEAP. The String provided here is used to mask the username of individual users when they attempt to connect to Wi-Fi network. */
-    private String _outerIdentityPrivacyTemporaryValue;
+    private String outerIdentityPrivacyTemporaryValue;
     /** Password format string used to build the password to connect to wifi */
-    private String _passwordFormatString;
+    private String passwordFormatString;
     /** PreSharedKey used to build the password to connect to wifi */
-    private String _preSharedKey;
+    private String preSharedKey;
     /** Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt. */
-    private AndroidTrustedRootCertificate _rootCertificateForServerValidation;
+    private AndroidTrustedRootCertificate rootCertificateForServerValidation;
     /** Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network. */
-    private java.util.List<String> _trustedServerCertificateNames;
+    private java.util.List<String> trustedServerCertificateNames;
     /** Username format string used to build the username to connect to wifi */
-    private String _usernameFormatString;
+    private String usernameFormatString;
     /**
      * Instantiates a new AndroidEnterpriseWiFiConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidEnterpriseWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidEnterpriseWiFiConfiguration");
@@ -54,36 +54,35 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      */
     @javax.annotation.Nullable
     public WiFiAuthenticationMethod getAuthenticationMethod() {
-        return this._authenticationMethod;
+        return this.authenticationMethod;
     }
     /**
      * Gets the eapType property value. Extensible Authentication Protocol (EAP) Configuration Types.
-     * @return a androidEapType
+     * @return a AndroidEapType
      */
     @javax.annotation.Nullable
     public AndroidEapType getEapType() {
-        return this._eapType;
+        return this.eapType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidEnterpriseWiFiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
-            this.put("eapType", (n) -> { currentObject.setEapType(n.getEnumValue(AndroidEapType.class)); });
-            this.put("identityCertificateForClientAuthentication", (n) -> { currentObject.setIdentityCertificateForClientAuthentication(n.getObjectValue(AndroidCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("innerAuthenticationProtocolForEapTtls", (n) -> { currentObject.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType.class)); });
-            this.put("innerAuthenticationProtocolForPeap", (n) -> { currentObject.setInnerAuthenticationProtocolForPeap(n.getEnumValue(NonEapAuthenticationMethodForPeap.class)); });
-            this.put("outerIdentityPrivacyTemporaryValue", (n) -> { currentObject.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
-            this.put("passwordFormatString", (n) -> { currentObject.setPasswordFormatString(n.getStringValue()); });
-            this.put("preSharedKey", (n) -> { currentObject.setPreSharedKey(n.getStringValue()); });
-            this.put("rootCertificateForServerValidation", (n) -> { currentObject.setRootCertificateForServerValidation(n.getObjectValue(AndroidTrustedRootCertificate::createFromDiscriminatorValue)); });
-            this.put("trustedServerCertificateNames", (n) -> { currentObject.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("usernameFormatString", (n) -> { currentObject.setUsernameFormatString(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
+        deserializerMap.put("eapType", (n) -> { this.setEapType(n.getEnumValue(AndroidEapType.class)); });
+        deserializerMap.put("identityCertificateForClientAuthentication", (n) -> { this.setIdentityCertificateForClientAuthentication(n.getObjectValue(AndroidCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("innerAuthenticationProtocolForEapTtls", (n) -> { this.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType.class)); });
+        deserializerMap.put("innerAuthenticationProtocolForPeap", (n) -> { this.setInnerAuthenticationProtocolForPeap(n.getEnumValue(NonEapAuthenticationMethodForPeap.class)); });
+        deserializerMap.put("outerIdentityPrivacyTemporaryValue", (n) -> { this.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
+        deserializerMap.put("passwordFormatString", (n) -> { this.setPasswordFormatString(n.getStringValue()); });
+        deserializerMap.put("preSharedKey", (n) -> { this.setPreSharedKey(n.getStringValue()); });
+        deserializerMap.put("rootCertificateForServerValidation", (n) -> { this.setRootCertificateForServerValidation(n.getObjectValue(AndroidTrustedRootCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("trustedServerCertificateNames", (n) -> { this.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("usernameFormatString", (n) -> { this.setUsernameFormatString(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
@@ -91,7 +90,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      */
     @javax.annotation.Nullable
     public AndroidCertificateProfileBase getIdentityCertificateForClientAuthentication() {
-        return this._identityCertificateForClientAuthentication;
+        return this.identityCertificateForClientAuthentication;
     }
     /**
      * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
@@ -99,7 +98,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      */
     @javax.annotation.Nullable
     public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEapTtls() {
-        return this._innerAuthenticationProtocolForEapTtls;
+        return this.innerAuthenticationProtocolForEapTtls;
     }
     /**
      * Gets the innerAuthenticationProtocolForPeap property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
@@ -107,7 +106,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      */
     @javax.annotation.Nullable
     public NonEapAuthenticationMethodForPeap getInnerAuthenticationProtocolForPeap() {
-        return this._innerAuthenticationProtocolForPeap;
+        return this.innerAuthenticationProtocolForPeap;
     }
     /**
      * Gets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS or PEAP. The String provided here is used to mask the username of individual users when they attempt to connect to Wi-Fi network.
@@ -115,7 +114,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      */
     @javax.annotation.Nullable
     public String getOuterIdentityPrivacyTemporaryValue() {
-        return this._outerIdentityPrivacyTemporaryValue;
+        return this.outerIdentityPrivacyTemporaryValue;
     }
     /**
      * Gets the passwordFormatString property value. Password format string used to build the password to connect to wifi
@@ -123,7 +122,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      */
     @javax.annotation.Nullable
     public String getPasswordFormatString() {
-        return this._passwordFormatString;
+        return this.passwordFormatString;
     }
     /**
      * Gets the preSharedKey property value. PreSharedKey used to build the password to connect to wifi
@@ -131,7 +130,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      */
     @javax.annotation.Nullable
     public String getPreSharedKey() {
-        return this._preSharedKey;
+        return this.preSharedKey;
     }
     /**
      * Gets the rootCertificateForServerValidation property value. Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
@@ -139,7 +138,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      */
     @javax.annotation.Nullable
     public AndroidTrustedRootCertificate getRootCertificateForServerValidation() {
-        return this._rootCertificateForServerValidation;
+        return this.rootCertificateForServerValidation;
     }
     /**
      * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
@@ -147,7 +146,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTrustedServerCertificateNames() {
-        return this._trustedServerCertificateNames;
+        return this.trustedServerCertificateNames;
     }
     /**
      * Gets the usernameFormatString property value. Username format string used to build the username to connect to wifi
@@ -155,13 +154,14 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      */
     @javax.annotation.Nullable
     public String getUsernameFormatString() {
-        return this._usernameFormatString;
+        return this.usernameFormatString;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,87 +182,98 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final WiFiAuthenticationMethod value) {
-        this._authenticationMethod = value;
+        this.authenticationMethod = value;
     }
     /**
      * Sets the eapType property value. Extensible Authentication Protocol (EAP) Configuration Types.
      * @param value Value to set for the eapType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapType(@javax.annotation.Nullable final AndroidEapType value) {
-        this._eapType = value;
+        this.eapType = value;
     }
     /**
      * Sets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final AndroidCertificateProfileBase value) {
-        this._identityCertificateForClientAuthentication = value;
+        this.identityCertificateForClientAuthentication = value;
     }
     /**
      * Sets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInnerAuthenticationProtocolForEapTtls(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
-        this._innerAuthenticationProtocolForEapTtls = value;
+        this.innerAuthenticationProtocolForEapTtls = value;
     }
     /**
      * Sets the innerAuthenticationProtocolForPeap property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForPeap property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInnerAuthenticationProtocolForPeap(@javax.annotation.Nullable final NonEapAuthenticationMethodForPeap value) {
-        this._innerAuthenticationProtocolForPeap = value;
+        this.innerAuthenticationProtocolForPeap = value;
     }
     /**
      * Sets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS or PEAP. The String provided here is used to mask the username of individual users when they attempt to connect to Wi-Fi network.
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
-        this._outerIdentityPrivacyTemporaryValue = value;
+        this.outerIdentityPrivacyTemporaryValue = value;
     }
     /**
      * Sets the passwordFormatString property value. Password format string used to build the password to connect to wifi
      * @param value Value to set for the passwordFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordFormatString(@javax.annotation.Nullable final String value) {
-        this._passwordFormatString = value;
+        this.passwordFormatString = value;
     }
     /**
      * Sets the preSharedKey property value. PreSharedKey used to build the password to connect to wifi
      * @param value Value to set for the preSharedKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreSharedKey(@javax.annotation.Nullable final String value) {
-        this._preSharedKey = value;
+        this.preSharedKey = value;
     }
     /**
      * Sets the rootCertificateForServerValidation property value. Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
      * @param value Value to set for the rootCertificateForServerValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificateForServerValidation(@javax.annotation.Nullable final AndroidTrustedRootCertificate value) {
-        this._rootCertificateForServerValidation = value;
+        this.rootCertificateForServerValidation = value;
     }
     /**
      * Sets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
      * @param value Value to set for the trustedServerCertificateNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._trustedServerCertificateNames = value;
+        this.trustedServerCertificateNames = value;
     }
     /**
      * Sets the usernameFormatString property value. Username format string used to build the username to connect to wifi
      * @param value Value to set for the usernameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameFormatString(@javax.annotation.Nullable final String value) {
-        this._usernameFormatString = value;
+        this.usernameFormatString = value;
     }
 }

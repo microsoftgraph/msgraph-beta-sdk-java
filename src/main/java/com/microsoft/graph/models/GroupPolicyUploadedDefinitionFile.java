@@ -4,27 +4,27 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile implements Parsable {
     /** The contents of the uploaded ADMX file. */
-    private byte[] _content;
+    private byte[] content;
     /** The default language of the uploaded ADMX file. */
-    private String _defaultLanguageCode;
+    private String defaultLanguageCode;
     /** The list of operations on the uploaded ADMX file. */
-    private java.util.List<GroupPolicyOperation> _groupPolicyOperations;
+    private java.util.List<GroupPolicyOperation> groupPolicyOperations;
     /** The list of ADML files associated with the uploaded ADMX file. */
-    private java.util.List<GroupPolicyUploadedLanguageFile> _groupPolicyUploadedLanguageFiles;
+    private java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles;
     /** Type of Group Policy uploaded definition file status. */
-    private GroupPolicyUploadedDefinitionFileStatus _status;
+    private GroupPolicyUploadedDefinitionFileStatus status;
     /** The uploaded time of the uploaded ADMX file. */
-    private OffsetDateTime _uploadDateTime;
+    private OffsetDateTime uploadDateTime;
     /**
      * Instantiates a new GroupPolicyUploadedDefinitionFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyUploadedDefinitionFile() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyUploadedDefinitionFile");
@@ -41,11 +41,11 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     }
     /**
      * Gets the content property value. The contents of the uploaded ADMX file.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getContent() {
-        return this._content;
+        return this.content;
     }
     /**
      * Gets the defaultLanguageCode property value. The default language of the uploaded ADMX file.
@@ -53,23 +53,22 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      */
     @javax.annotation.Nullable
     public String getDefaultLanguageCode() {
-        return this._defaultLanguageCode;
+        return this.defaultLanguageCode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyUploadedDefinitionFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("defaultLanguageCode", (n) -> { currentObject.setDefaultLanguageCode(n.getStringValue()); });
-            this.put("groupPolicyOperations", (n) -> { currentObject.setGroupPolicyOperations(n.getCollectionOfObjectValues(GroupPolicyOperation::createFromDiscriminatorValue)); });
-            this.put("groupPolicyUploadedLanguageFiles", (n) -> { currentObject.setGroupPolicyUploadedLanguageFiles(n.getCollectionOfObjectValues(GroupPolicyUploadedLanguageFile::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(GroupPolicyUploadedDefinitionFileStatus.class)); });
-            this.put("uploadDateTime", (n) -> { currentObject.setUploadDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("defaultLanguageCode", (n) -> { this.setDefaultLanguageCode(n.getStringValue()); });
+        deserializerMap.put("groupPolicyOperations", (n) -> { this.setGroupPolicyOperations(n.getCollectionOfObjectValues(GroupPolicyOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupPolicyUploadedLanguageFiles", (n) -> { this.setGroupPolicyUploadedLanguageFiles(n.getCollectionOfObjectValues(GroupPolicyUploadedLanguageFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(GroupPolicyUploadedDefinitionFileStatus.class)); });
+        deserializerMap.put("uploadDateTime", (n) -> { this.setUploadDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupPolicyOperations property value. The list of operations on the uploaded ADMX file.
@@ -77,7 +76,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      */
     @javax.annotation.Nullable
     public java.util.List<GroupPolicyOperation> getGroupPolicyOperations() {
-        return this._groupPolicyOperations;
+        return this.groupPolicyOperations;
     }
     /**
      * Gets the groupPolicyUploadedLanguageFiles property value. The list of ADML files associated with the uploaded ADMX file.
@@ -85,15 +84,15 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      */
     @javax.annotation.Nullable
     public java.util.List<GroupPolicyUploadedLanguageFile> getGroupPolicyUploadedLanguageFiles() {
-        return this._groupPolicyUploadedLanguageFiles;
+        return this.groupPolicyUploadedLanguageFiles;
     }
     /**
      * Gets the status property value. Type of Group Policy uploaded definition file status.
-     * @return a groupPolicyUploadedDefinitionFileStatus
+     * @return a GroupPolicyUploadedDefinitionFileStatus
      */
     @javax.annotation.Nullable
     public GroupPolicyUploadedDefinitionFileStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the uploadDateTime property value. The uploaded time of the uploaded ADMX file.
@@ -101,13 +100,14 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      */
     @javax.annotation.Nullable
     public OffsetDateTime getUploadDateTime() {
-        return this._uploadDateTime;
+        return this.uploadDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +123,53 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
-        this._content = value;
+        this.content = value;
     }
     /**
      * Sets the defaultLanguageCode property value. The default language of the uploaded ADMX file.
      * @param value Value to set for the defaultLanguageCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLanguageCode(@javax.annotation.Nullable final String value) {
-        this._defaultLanguageCode = value;
+        this.defaultLanguageCode = value;
     }
     /**
      * Sets the groupPolicyOperations property value. The list of operations on the uploaded ADMX file.
      * @param value Value to set for the groupPolicyOperations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyOperations(@javax.annotation.Nullable final java.util.List<GroupPolicyOperation> value) {
-        this._groupPolicyOperations = value;
+        this.groupPolicyOperations = value;
     }
     /**
      * Sets the groupPolicyUploadedLanguageFiles property value. The list of ADML files associated with the uploaded ADMX file.
      * @param value Value to set for the groupPolicyUploadedLanguageFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyUploadedLanguageFiles(@javax.annotation.Nullable final java.util.List<GroupPolicyUploadedLanguageFile> value) {
-        this._groupPolicyUploadedLanguageFiles = value;
+        this.groupPolicyUploadedLanguageFiles = value;
     }
     /**
      * Sets the status property value. Type of Group Policy uploaded definition file status.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final GroupPolicyUploadedDefinitionFileStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the uploadDateTime property value. The uploaded time of the uploaded ADMX file.
      * @param value Value to set for the uploadDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUploadDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._uploadDateTime = value;
+        this.uploadDateTime = value;
     }
 }

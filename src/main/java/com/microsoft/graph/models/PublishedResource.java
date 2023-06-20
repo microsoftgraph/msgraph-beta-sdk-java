@@ -3,27 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class PublishedResource extends Entity implements Parsable {
     /** List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable. */
-    private java.util.List<OnPremisesAgentGroup> _agentGroups;
+    private java.util.List<OnPremisesAgentGroup> agentGroups;
     /** Display Name of the publishedResource. */
-    private String _displayName;
+    private String displayName;
     /** The publishingType property */
-    private OnPremisesPublishingType _publishingType;
+    private OnPremisesPublishingType publishingType;
     /** Name of the publishedResource. */
-    private String _resourceName;
+    private String resourceName;
     /**
      * Instantiates a new publishedResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PublishedResource() {
         super();
-        this.setOdataType("#microsoft.graph.publishedResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +39,7 @@ public class PublishedResource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OnPremisesAgentGroup> getAgentGroups() {
-        return this._agentGroups;
+        return this.agentGroups;
     }
     /**
      * Gets the displayName property value. Display Name of the publishedResource.
@@ -49,29 +47,28 @@ public class PublishedResource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PublishedResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("agentGroups", (n) -> { currentObject.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("publishingType", (n) -> { currentObject.setPublishingType(n.getEnumValue(OnPremisesPublishingType.class)); });
-            this.put("resourceName", (n) -> { currentObject.setResourceName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("agentGroups", (n) -> { this.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("publishingType", (n) -> { this.setPublishingType(n.getEnumValue(OnPremisesPublishingType.class)); });
+        deserializerMap.put("resourceName", (n) -> { this.setResourceName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the publishingType property value. The publishingType property
-     * @return a onPremisesPublishingType
+     * @return a OnPremisesPublishingType
      */
     @javax.annotation.Nullable
     public OnPremisesPublishingType getPublishingType() {
-        return this._publishingType;
+        return this.publishingType;
     }
     /**
      * Gets the resourceName property value. Name of the publishedResource.
@@ -79,13 +76,14 @@ public class PublishedResource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceName() {
-        return this._resourceName;
+        return this.resourceName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,31 +97,35 @@ public class PublishedResource extends Entity implements Parsable {
      * @param value Value to set for the agentGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgentGroups(@javax.annotation.Nullable final java.util.List<OnPremisesAgentGroup> value) {
-        this._agentGroups = value;
+        this.agentGroups = value;
     }
     /**
      * Sets the displayName property value. Display Name of the publishedResource.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the publishingType property value. The publishingType property
      * @param value Value to set for the publishingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingType(@javax.annotation.Nullable final OnPremisesPublishingType value) {
-        this._publishingType = value;
+        this.publishingType = value;
     }
     /**
      * Sets the resourceName property value. Name of the publishedResource.
      * @param value Value to set for the resourceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceName(@javax.annotation.Nullable final String value) {
-        this._resourceName = value;
+        this.resourceName = value;
     }
 }

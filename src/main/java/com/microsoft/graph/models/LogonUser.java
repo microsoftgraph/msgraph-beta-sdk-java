@@ -5,36 +5,35 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LogonUser implements AdditionalDataHolder, Parsable {
     /** Domain of user account used to logon. */
-    private String _accountDomain;
+    private String accountDomain;
     /** Account name of user account used to logon. */
-    private String _accountName;
+    private String accountName;
     /** User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator. */
-    private UserAccountSecurityType _accountType;
+    private UserAccountSecurityType accountType;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _firstSeenDateTime;
+    private OffsetDateTime firstSeenDateTime;
     /** DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _lastSeenDateTime;
+    private OffsetDateTime lastSeenDateTime;
     /** User logon ID. */
-    private String _logonId;
+    private String logonId;
     /** Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service. */
-    private java.util.List<String> _logonTypes;
+    private java.util.List<LogonType> logonTypes;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new logonUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LogonUser() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.logonUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +51,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAccountDomain() {
-        return this._accountDomain;
+        return this.accountDomain;
     }
     /**
      * Gets the accountName property value. Account name of user account used to logon.
@@ -60,7 +59,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAccountName() {
-        return this._accountName;
+        return this.accountName;
     }
     /**
      * Gets the accountType property value. User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
@@ -68,7 +67,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public UserAccountSecurityType getAccountType() {
-        return this._accountType;
+        return this.accountType;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -76,25 +75,24 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LogonUser currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("accountDomain", (n) -> { currentObject.setAccountDomain(n.getStringValue()); });
-            this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
-            this.put("accountType", (n) -> { currentObject.setAccountType(n.getEnumValue(UserAccountSecurityType.class)); });
-            this.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("logonId", (n) -> { currentObject.setLogonId(n.getStringValue()); });
-            this.put("logonTypes", (n) -> { currentObject.setLogonTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        deserializerMap.put("accountDomain", (n) -> { this.setAccountDomain(n.getStringValue()); });
+        deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
+        deserializerMap.put("accountType", (n) -> { this.setAccountType(n.getEnumValue(UserAccountSecurityType.class)); });
+        deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("logonId", (n) -> { this.setLogonId(n.getStringValue()); });
+        deserializerMap.put("logonTypes", (n) -> { this.setLogonTypes(n.getCollectionOfEnumValues(LogonType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the firstSeenDateTime property value. DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -102,7 +100,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this._firstSeenDateTime;
+        return this.firstSeenDateTime;
     }
     /**
      * Gets the lastSeenDateTime property value. DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -110,7 +108,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this._lastSeenDateTime;
+        return this.lastSeenDateTime;
     }
     /**
      * Gets the logonId property value. User logon ID.
@@ -118,15 +116,15 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLogonId() {
-        return this._logonId;
+        return this.logonId;
     }
     /**
      * Gets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return a string
+     * @return a logonType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getLogonTypes() {
-        return this._logonTypes;
+    public java.util.List<LogonType> getLogonTypes() {
+        return this.logonTypes;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -134,13 +132,14 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accountDomain", this.getAccountDomain());
@@ -149,7 +148,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
         writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
         writer.writeStringValue("logonId", this.getLogonId());
-        writer.writeCollectionOfPrimitiveValues("logonTypes", this.getLogonTypes());
+        writer.writeCollectionOfEnumValues("logonTypes", this.getLogonTypes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -158,71 +157,80 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accountDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountDomain(@javax.annotation.Nullable final String value) {
-        this._accountDomain = value;
+        this.accountDomain = value;
     }
     /**
      * Sets the accountName property value. Account name of user account used to logon.
      * @param value Value to set for the accountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountName(@javax.annotation.Nullable final String value) {
-        this._accountName = value;
+        this.accountName = value;
     }
     /**
      * Sets the accountType property value. User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
      * @param value Value to set for the accountType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountType(@javax.annotation.Nullable final UserAccountSecurityType value) {
-        this._accountType = value;
+        this.accountType = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the firstSeenDateTime property value. DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._firstSeenDateTime = value;
+        this.firstSeenDateTime = value;
     }
     /**
      * Sets the lastSeenDateTime property value. DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSeenDateTime = value;
+        this.lastSeenDateTime = value;
     }
     /**
      * Sets the logonId property value. User logon ID.
      * @param value Value to set for the logonId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogonId(@javax.annotation.Nullable final String value) {
-        this._logonId = value;
+        this.logonId = value;
     }
     /**
      * Sets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @param value Value to set for the logonTypes property.
      * @return a void
      */
-    public void setLogonTypes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._logonTypes = value;
+    @javax.annotation.Nonnull
+    public void setLogonTypes(@javax.annotation.Nullable final java.util.List<LogonType> value) {
+        this.logonTypes = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

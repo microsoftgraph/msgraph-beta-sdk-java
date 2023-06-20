@@ -3,22 +3,21 @@ package com.microsoft.graph.models.search;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Acronym extends SearchAnswer implements Parsable {
     /** What the acronym stands for. */
-    private String _standsFor;
+    private String standsFor;
     /** The state property */
-    private AnswerState _state;
+    private AnswerState state;
     /**
      * Instantiates a new Acronym and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Acronym() {
         super();
-        this.setOdataType("#microsoft.graph.search.acronym");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +31,14 @@ public class Acronym extends SearchAnswer implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Acronym currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("standsFor", (n) -> { currentObject.setStandsFor(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AnswerState.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("standsFor", (n) -> { this.setStandsFor(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AnswerState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the standsFor property value. What the acronym stands for.
@@ -48,21 +46,22 @@ public class Acronym extends SearchAnswer implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStandsFor() {
-        return this._standsFor;
+        return this.standsFor;
     }
     /**
      * Gets the state property value. The state property
-     * @return a answerState
+     * @return a AnswerState
      */
     @javax.annotation.Nullable
     public AnswerState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class Acronym extends SearchAnswer implements Parsable {
      * @param value Value to set for the standsFor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStandsFor(@javax.annotation.Nullable final String value) {
-        this._standsFor = value;
+        this.standsFor = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AnswerState value) {
-        this._state = value;
+        this.state = value;
     }
 }

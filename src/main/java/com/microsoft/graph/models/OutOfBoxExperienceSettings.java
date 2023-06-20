@@ -4,35 +4,36 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Out of box experience setting */
+/**
+ * Out of box experience setting
+ */
 public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The deviceUsageType property */
-    private WindowsDeviceUsageType _deviceUsageType;
+    private WindowsDeviceUsageType deviceUsageType;
     /** If set to true, then the user can't start over with different account, on company sign-in */
-    private Boolean _hideEscapeLink;
+    private Boolean hideEscapeLink;
     /** Show or hide EULA to user */
-    private Boolean _hideEULA;
+    private Boolean hideEULA;
     /** Show or hide privacy settings to user */
-    private Boolean _hidePrivacySettings;
+    private Boolean hidePrivacySettings;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** If set, then skip the keyboard selection page if Language and Region are set */
-    private Boolean _skipKeyboardSelectionPage;
+    private Boolean skipKeyboardSelectionPage;
     /** The userType property */
-    private WindowsUserType _userType;
+    private WindowsUserType userType;
     /**
      * Instantiates a new outOfBoxExperienceSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutOfBoxExperienceSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.outOfBoxExperienceSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,32 +51,31 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the deviceUsageType property value. The deviceUsageType property
-     * @return a windowsDeviceUsageType
+     * @return a WindowsDeviceUsageType
      */
     @javax.annotation.Nullable
     public WindowsDeviceUsageType getDeviceUsageType() {
-        return this._deviceUsageType;
+        return this.deviceUsageType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OutOfBoxExperienceSettings currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("deviceUsageType", (n) -> { currentObject.setDeviceUsageType(n.getEnumValue(WindowsDeviceUsageType.class)); });
-            this.put("hideEscapeLink", (n) -> { currentObject.setHideEscapeLink(n.getBooleanValue()); });
-            this.put("hideEULA", (n) -> { currentObject.setHideEULA(n.getBooleanValue()); });
-            this.put("hidePrivacySettings", (n) -> { currentObject.setHidePrivacySettings(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("skipKeyboardSelectionPage", (n) -> { currentObject.setSkipKeyboardSelectionPage(n.getBooleanValue()); });
-            this.put("userType", (n) -> { currentObject.setUserType(n.getEnumValue(WindowsUserType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("deviceUsageType", (n) -> { this.setDeviceUsageType(n.getEnumValue(WindowsDeviceUsageType.class)); });
+        deserializerMap.put("hideEscapeLink", (n) -> { this.setHideEscapeLink(n.getBooleanValue()); });
+        deserializerMap.put("hideEULA", (n) -> { this.setHideEULA(n.getBooleanValue()); });
+        deserializerMap.put("hidePrivacySettings", (n) -> { this.setHidePrivacySettings(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("skipKeyboardSelectionPage", (n) -> { this.setSkipKeyboardSelectionPage(n.getBooleanValue()); });
+        deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(WindowsUserType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the hideEscapeLink property value. If set to true, then the user can't start over with different account, on company sign-in
@@ -83,7 +83,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Boolean getHideEscapeLink() {
-        return this._hideEscapeLink;
+        return this.hideEscapeLink;
     }
     /**
      * Gets the hideEULA property value. Show or hide EULA to user
@@ -91,7 +91,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Boolean getHideEULA() {
-        return this._hideEULA;
+        return this.hideEULA;
     }
     /**
      * Gets the hidePrivacySettings property value. Show or hide privacy settings to user
@@ -99,7 +99,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Boolean getHidePrivacySettings() {
-        return this._hidePrivacySettings;
+        return this.hidePrivacySettings;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,7 +107,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the skipKeyboardSelectionPage property value. If set, then skip the keyboard selection page if Language and Region are set
@@ -115,21 +115,22 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Boolean getSkipKeyboardSelectionPage() {
-        return this._skipKeyboardSelectionPage;
+        return this.skipKeyboardSelectionPage;
     }
     /**
      * Gets the userType property value. The userType property
-     * @return a windowsUserType
+     * @return a WindowsUserType
      */
     @javax.annotation.Nullable
     public WindowsUserType getUserType() {
-        return this._userType;
+        return this.userType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("deviceUsageType", this.getDeviceUsageType());
@@ -146,63 +147,71 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the deviceUsageType property value. The deviceUsageType property
      * @param value Value to set for the deviceUsageType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceUsageType(@javax.annotation.Nullable final WindowsDeviceUsageType value) {
-        this._deviceUsageType = value;
+        this.deviceUsageType = value;
     }
     /**
      * Sets the hideEscapeLink property value. If set to true, then the user can't start over with different account, on company sign-in
      * @param value Value to set for the hideEscapeLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideEscapeLink(@javax.annotation.Nullable final Boolean value) {
-        this._hideEscapeLink = value;
+        this.hideEscapeLink = value;
     }
     /**
      * Sets the hideEULA property value. Show or hide EULA to user
      * @param value Value to set for the hideEULA property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideEULA(@javax.annotation.Nullable final Boolean value) {
-        this._hideEULA = value;
+        this.hideEULA = value;
     }
     /**
      * Sets the hidePrivacySettings property value. Show or hide privacy settings to user
      * @param value Value to set for the hidePrivacySettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHidePrivacySettings(@javax.annotation.Nullable final Boolean value) {
-        this._hidePrivacySettings = value;
+        this.hidePrivacySettings = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the skipKeyboardSelectionPage property value. If set, then skip the keyboard selection page if Language and Region are set
      * @param value Value to set for the skipKeyboardSelectionPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkipKeyboardSelectionPage(@javax.annotation.Nullable final Boolean value) {
-        this._skipKeyboardSelectionPage = value;
+        this.skipKeyboardSelectionPage = value;
     }
     /**
      * Sets the userType property value. The userType property
      * @param value Value to set for the userType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserType(@javax.annotation.Nullable final WindowsUserType value) {
-        this._userType = value;
+        this.userType = value;
     }
 }

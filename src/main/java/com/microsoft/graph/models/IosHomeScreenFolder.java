@@ -3,17 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     /** Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements. */
-    private java.util.List<IosHomeScreenFolderPage> _pages;
+    private java.util.List<IosHomeScreenFolderPage> pages;
     /**
      * Instantiates a new IosHomeScreenFolder and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosHomeScreenFolder() {
         super();
         this.setOdataType("#microsoft.graph.iosHomeScreenFolder");
@@ -30,28 +30,28 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosHomeScreenFolder currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("pages", (n) -> { currentObject.setPages(n.getCollectionOfObjectValues(IosHomeScreenFolderPage::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(IosHomeScreenFolderPage::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the pages property value. Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
-     * @return a iosHomeScreenFolderPage
+     * @return a IosHomeScreenFolderPage
      */
     @javax.annotation.Nullable
     public java.util.List<IosHomeScreenFolderPage> getPages() {
-        return this._pages;
+        return this.pages;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +62,8 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
      * @param value Value to set for the pages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPages(@javax.annotation.Nullable final java.util.List<IosHomeScreenFolderPage> value) {
-        this._pages = value;
+        this.pages = value;
     }
 }

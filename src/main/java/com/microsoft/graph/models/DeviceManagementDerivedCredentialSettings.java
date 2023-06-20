@@ -3,28 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementDerivedCredentialSettings extends Entity implements Parsable {
     /** The display name for the profile. */
-    private String _displayName;
+    private String displayName;
     /** The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal. */
-    private String _helpUrl;
+    private String helpUrl;
     /** Supported values for the derived credential issuer. */
-    private DeviceManagementDerivedCredentialIssuer _issuer;
+    private DeviceManagementDerivedCredentialIssuer issuer;
     /** Supported values for the notification type to use. */
-    private DeviceManagementDerivedCredentialNotificationType _notificationType;
+    private DeviceManagementDerivedCredentialNotificationType notificationType;
     /** The nominal percentage of time before certificate renewal is initiated by the client. */
-    private Integer _renewalThresholdPercentage;
+    private Integer renewalThresholdPercentage;
     /**
      * Instantiates a new deviceManagementDerivedCredentialSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementDerivedCredentialSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,22 +41,21 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementDerivedCredentialSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("helpUrl", (n) -> { currentObject.setHelpUrl(n.getStringValue()); });
-            this.put("issuer", (n) -> { currentObject.setIssuer(n.getEnumValue(DeviceManagementDerivedCredentialIssuer.class)); });
-            this.put("notificationType", (n) -> { currentObject.setNotificationType(n.getEnumValue(DeviceManagementDerivedCredentialNotificationType.class)); });
-            this.put("renewalThresholdPercentage", (n) -> { currentObject.setRenewalThresholdPercentage(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("helpUrl", (n) -> { this.setHelpUrl(n.getStringValue()); });
+        deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getEnumValue(DeviceManagementDerivedCredentialIssuer.class)); });
+        deserializerMap.put("notificationType", (n) -> { this.setNotificationType(n.getEnumValue(DeviceManagementDerivedCredentialNotificationType.class)); });
+        deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the helpUrl property value. The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
@@ -65,23 +63,23 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      */
     @javax.annotation.Nullable
     public String getHelpUrl() {
-        return this._helpUrl;
+        return this.helpUrl;
     }
     /**
      * Gets the issuer property value. Supported values for the derived credential issuer.
-     * @return a deviceManagementDerivedCredentialIssuer
+     * @return a DeviceManagementDerivedCredentialIssuer
      */
     @javax.annotation.Nullable
     public DeviceManagementDerivedCredentialIssuer getIssuer() {
-        return this._issuer;
+        return this.issuer;
     }
     /**
      * Gets the notificationType property value. Supported values for the notification type to use.
-     * @return a deviceManagementDerivedCredentialNotificationType
+     * @return a DeviceManagementDerivedCredentialNotificationType
      */
     @javax.annotation.Nullable
     public DeviceManagementDerivedCredentialNotificationType getNotificationType() {
-        return this._notificationType;
+        return this.notificationType;
     }
     /**
      * Gets the renewalThresholdPercentage property value. The nominal percentage of time before certificate renewal is initiated by the client.
@@ -89,13 +87,14 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      */
     @javax.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
-        return this._renewalThresholdPercentage;
+        return this.renewalThresholdPercentage;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,39 +109,44 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the helpUrl property value. The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
      * @param value Value to set for the helpUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHelpUrl(@javax.annotation.Nullable final String value) {
-        this._helpUrl = value;
+        this.helpUrl = value;
     }
     /**
      * Sets the issuer property value. Supported values for the derived credential issuer.
      * @param value Value to set for the issuer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuer(@javax.annotation.Nullable final DeviceManagementDerivedCredentialIssuer value) {
-        this._issuer = value;
+        this.issuer = value;
     }
     /**
      * Sets the notificationType property value. Supported values for the notification type to use.
      * @param value Value to set for the notificationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationType(@javax.annotation.Nullable final DeviceManagementDerivedCredentialNotificationType value) {
-        this._notificationType = value;
+        this.notificationType = value;
     }
     /**
      * Sets the renewalThresholdPercentage property value. The nominal percentage of time before certificate renewal is initiated by the client.
      * @param value Value to set for the renewalThresholdPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
-        this._renewalThresholdPercentage = value;
+        this.renewalThresholdPercentage = value;
     }
 }

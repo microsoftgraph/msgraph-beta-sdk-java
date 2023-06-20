@@ -3,14 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Supported setting types */
 public enum DeviceManagementConfigurationSettingUsage implements ValuedEnum {
-    /** No setting type specified */
+    /** Default. No setting type specified. */
     None("none"),
-    /** Configuration setting */
+    /** Configuration setting type. */
     Configuration("configuration"),
-    /** Compliance setting */
-    Compliance("compliance");
+    /** Compliance setting type. */
+    Compliance("compliance"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceManagementConfigurationSettingUsage(final String value) {
         this.value = value;
@@ -24,6 +26,7 @@ public enum DeviceManagementConfigurationSettingUsage implements ValuedEnum {
             case "none": return None;
             case "configuration": return Configuration;
             case "compliance": return Compliance;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

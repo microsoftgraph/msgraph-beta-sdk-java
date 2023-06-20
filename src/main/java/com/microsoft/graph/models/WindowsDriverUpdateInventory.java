@@ -4,37 +4,38 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A new entity to represent driver inventories. */
+/**
+ * A new entity to represent driver inventories.
+ */
 public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     /** The number of devices for which this driver is applicable. */
-    private Integer _applicableDeviceCount;
+    private Integer applicableDeviceCount;
     /** An enum type to represent approval status of a driver. */
-    private DriverApprovalStatus _approvalStatus;
+    private DriverApprovalStatus approvalStatus;
     /** An enum type to represent which category a driver belongs to. */
-    private DriverCategory _category;
+    private DriverCategory category;
     /** The date time when a driver should be deployed if approvalStatus is approved. */
-    private OffsetDateTime _deployDateTime;
+    private OffsetDateTime deployDateTime;
     /** The class of the driver. */
-    private String _driverClass;
+    private String driverClass;
     /** The manufacturer of the driver. */
-    private String _manufacturer;
+    private String manufacturer;
     /** The name of the driver. */
-    private String _name;
+    private String name;
     /** The release date time of the driver. */
-    private OffsetDateTime _releaseDateTime;
+    private OffsetDateTime releaseDateTime;
     /** The version of the driver. */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new windowsDriverUpdateInventory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDriverUpdateInventory() {
         super();
-        this.setOdataType("#microsoft.graph.windowsDriverUpdateInventory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,23 +53,23 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getApplicableDeviceCount() {
-        return this._applicableDeviceCount;
+        return this.applicableDeviceCount;
     }
     /**
      * Gets the approvalStatus property value. An enum type to represent approval status of a driver.
-     * @return a driverApprovalStatus
+     * @return a DriverApprovalStatus
      */
     @javax.annotation.Nullable
     public DriverApprovalStatus getApprovalStatus() {
-        return this._approvalStatus;
+        return this.approvalStatus;
     }
     /**
      * Gets the category property value. An enum type to represent which category a driver belongs to.
-     * @return a driverCategory
+     * @return a DriverCategory
      */
     @javax.annotation.Nullable
     public DriverCategory getCategory() {
-        return this._category;
+        return this.category;
     }
     /**
      * Gets the deployDateTime property value. The date time when a driver should be deployed if approvalStatus is approved.
@@ -76,7 +77,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getDeployDateTime() {
-        return this._deployDateTime;
+        return this.deployDateTime;
     }
     /**
      * Gets the driverClass property value. The class of the driver.
@@ -84,26 +85,25 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDriverClass() {
-        return this._driverClass;
+        return this.driverClass;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDriverUpdateInventory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicableDeviceCount", (n) -> { currentObject.setApplicableDeviceCount(n.getIntegerValue()); });
-            this.put("approvalStatus", (n) -> { currentObject.setApprovalStatus(n.getEnumValue(DriverApprovalStatus.class)); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(DriverCategory.class)); });
-            this.put("deployDateTime", (n) -> { currentObject.setDeployDateTime(n.getOffsetDateTimeValue()); });
-            this.put("driverClass", (n) -> { currentObject.setDriverClass(n.getStringValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("releaseDateTime", (n) -> { currentObject.setReleaseDateTime(n.getOffsetDateTimeValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicableDeviceCount", (n) -> { this.setApplicableDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("approvalStatus", (n) -> { this.setApprovalStatus(n.getEnumValue(DriverApprovalStatus.class)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(DriverCategory.class)); });
+        deserializerMap.put("deployDateTime", (n) -> { this.setDeployDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("driverClass", (n) -> { this.setDriverClass(n.getStringValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("releaseDateTime", (n) -> { this.setReleaseDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the manufacturer property value. The manufacturer of the driver.
@@ -111,7 +111,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the name property value. The name of the driver.
@@ -119,7 +119,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the releaseDateTime property value. The release date time of the driver.
@@ -127,7 +127,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getReleaseDateTime() {
-        return this._releaseDateTime;
+        return this.releaseDateTime;
     }
     /**
      * Gets the version property value. The version of the driver.
@@ -135,13 +135,14 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,71 +161,80 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
      * @param value Value to set for the applicableDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicableDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._applicableDeviceCount = value;
+        this.applicableDeviceCount = value;
     }
     /**
      * Sets the approvalStatus property value. An enum type to represent approval status of a driver.
      * @param value Value to set for the approvalStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovalStatus(@javax.annotation.Nullable final DriverApprovalStatus value) {
-        this._approvalStatus = value;
+        this.approvalStatus = value;
     }
     /**
      * Sets the category property value. An enum type to represent which category a driver belongs to.
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final DriverCategory value) {
-        this._category = value;
+        this.category = value;
     }
     /**
      * Sets the deployDateTime property value. The date time when a driver should be deployed if approvalStatus is approved.
      * @param value Value to set for the deployDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._deployDateTime = value;
+        this.deployDateTime = value;
     }
     /**
      * Sets the driverClass property value. The class of the driver.
      * @param value Value to set for the driverClass property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriverClass(@javax.annotation.Nullable final String value) {
-        this._driverClass = value;
+        this.driverClass = value;
     }
     /**
      * Sets the manufacturer property value. The manufacturer of the driver.
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the name property value. The name of the driver.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the releaseDateTime property value. The release date time of the driver.
      * @param value Value to set for the releaseDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReleaseDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._releaseDateTime = value;
+        this.releaseDateTime = value;
     }
     /**
      * Sets the version property value. The version of the driver.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

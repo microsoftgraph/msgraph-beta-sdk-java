@@ -4,29 +4,31 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The user experience analytics metric history.
+ */
 public class UserExperienceAnalyticsMetricHistory extends Entity implements Parsable {
     /** The user experience analytics device id. */
-    private String _deviceId;
+    private String deviceId;
     /** The user experience analytics metric date time. */
-    private OffsetDateTime _metricDateTime;
+    private OffsetDateTime metricDateTime;
     /** The user experience analytics metric type. */
-    private String _metricType;
+    private String metricType;
     /**
-     * Instantiates a new UserExperienceAnalyticsMetricHistory and sets the default values.
+     * Instantiates a new userExperienceAnalyticsMetricHistory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsMetricHistory() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsMetricHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsMetricHistory
+     * @return a userExperienceAnalyticsMetricHistory
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsMetricHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -39,20 +41,19 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsMetricHistory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("metricDateTime", (n) -> { currentObject.setMetricDateTime(n.getOffsetDateTimeValue()); });
-            this.put("metricType", (n) -> { currentObject.setMetricType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("metricDateTime", (n) -> { this.setMetricDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("metricType", (n) -> { this.setMetricType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the metricDateTime property value. The user experience analytics metric date time.
@@ -60,7 +61,7 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
      */
     @javax.annotation.Nullable
     public OffsetDateTime getMetricDateTime() {
-        return this._metricDateTime;
+        return this.metricDateTime;
     }
     /**
      * Gets the metricType property value. The user experience analytics metric type.
@@ -68,13 +69,14 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
      */
     @javax.annotation.Nullable
     public String getMetricType() {
-        return this._metricType;
+        return this.metricType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,23 +89,26 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements Pars
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the metricDateTime property value. The user experience analytics metric date time.
      * @param value Value to set for the metricDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetricDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._metricDateTime = value;
+        this.metricDateTime = value;
     }
     /**
      * Sets the metricType property value. The user experience analytics metric type.
      * @param value Value to set for the metricType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetricType(@javax.annotation.Nullable final String value) {
-        this._metricType = value;
+        this.metricType = value;
     }
 }

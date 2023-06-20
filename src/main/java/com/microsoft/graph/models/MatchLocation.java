@@ -4,31 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MatchLocation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The length property */
-    private Integer _length;
+    private Integer length;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The offset property */
-    private Integer _offset;
+    private Integer offset;
     /**
-     * Instantiates a new matchLocation and sets the default values.
+     * Instantiates a new MatchLocation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MatchLocation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.matchLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a matchLocation
+     * @return a MatchLocation
      */
     @javax.annotation.Nonnull
     public static MatchLocation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -41,20 +40,19 @@ public class MatchLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MatchLocation currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("length", (n) -> { currentObject.setLength(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("offset", (n) -> { currentObject.setOffset(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("length", (n) -> { this.setLength(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("offset", (n) -> { this.setOffset(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the length property value. The length property
@@ -62,7 +60,7 @@ public class MatchLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getLength() {
-        return this._length;
+        return this.length;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -70,7 +68,7 @@ public class MatchLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the offset property value. The offset property
@@ -78,13 +76,14 @@ public class MatchLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getOffset() {
-        return this._offset;
+        return this.offset;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("length", this.getLength());
@@ -97,31 +96,35 @@ public class MatchLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the length property value. The length property
      * @param value Value to set for the length property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLength(@javax.annotation.Nullable final Integer value) {
-        this._length = value;
+        this.length = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the offset property value. The offset property
      * @param value Value to set for the offset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffset(@javax.annotation.Nullable final Integer value) {
-        this._offset = value;
+        this.offset = value;
     }
 }

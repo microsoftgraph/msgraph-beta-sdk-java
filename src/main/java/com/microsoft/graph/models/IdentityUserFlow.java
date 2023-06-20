@@ -1,26 +1,23 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.B2cIdentityUserFlow;
-import com.microsoft.graph.models.B2xIdentityUserFlow;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityUserFlow extends Entity implements Parsable {
     /** The userFlowType property */
-    private UserFlowType _userFlowType;
+    private UserFlowType userFlowType;
     /** The userFlowTypeVersion property */
-    private Float _userFlowTypeVersion;
+    private Float userFlowTypeVersion;
     /**
      * Instantiates a new identityUserFlow and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdentityUserFlow() {
         super();
-        this.setOdataType("#microsoft.graph.identityUserFlow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,23 +39,22 @@ public class IdentityUserFlow extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IdentityUserFlow currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("userFlowType", (n) -> { currentObject.setUserFlowType(n.getEnumValue(UserFlowType.class)); });
-            this.put("userFlowTypeVersion", (n) -> { currentObject.setUserFlowTypeVersion(n.getFloatValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userFlowType", (n) -> { this.setUserFlowType(n.getEnumValue(UserFlowType.class)); });
+        deserializerMap.put("userFlowTypeVersion", (n) -> { this.setUserFlowTypeVersion(n.getFloatValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the userFlowType property value. The userFlowType property
-     * @return a userFlowType
+     * @return a UserFlowType
      */
     @javax.annotation.Nullable
     public UserFlowType getUserFlowType() {
-        return this._userFlowType;
+        return this.userFlowType;
     }
     /**
      * Gets the userFlowTypeVersion property value. The userFlowTypeVersion property
@@ -66,13 +62,14 @@ public class IdentityUserFlow extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Float getUserFlowTypeVersion() {
-        return this._userFlowTypeVersion;
+        return this.userFlowTypeVersion;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -84,15 +81,17 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * @param value Value to set for the userFlowType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserFlowType(@javax.annotation.Nullable final UserFlowType value) {
-        this._userFlowType = value;
+        this.userFlowType = value;
     }
     /**
      * Sets the userFlowTypeVersion property value. The userFlowTypeVersion property
      * @param value Value to set for the userFlowTypeVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserFlowTypeVersion(@javax.annotation.Nullable final Float value) {
-        this._userFlowTypeVersion = value;
+        this.userFlowTypeVersion = value;
     }
 }

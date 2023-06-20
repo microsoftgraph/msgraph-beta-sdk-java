@@ -5,37 +5,36 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign. */
-    private String _browser;
+    private String browser;
     /** Date and time of the simulation event by a user in an attack simulation and training campaign. */
-    private OffsetDateTime _eventDateTime;
+    private OffsetDateTime eventDateTime;
     /** Name of the simulation event by a user in an attack simulation and training campaign. */
-    private String _eventName;
+    private String eventName;
     /** IP address from where the simulation event was initiated by a user in an attack simulation and training campaign. */
-    private String _ipAddress;
+    private String ipAddress;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign. */
-    private String _osPlatformDeviceDetails;
+    private String osPlatformDeviceDetails;
     /**
-     * Instantiates a new userSimulationEventInfo and sets the default values.
+     * Instantiates a new UserSimulationEventInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserSimulationEventInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userSimulationEventInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userSimulationEventInfo
+     * @return a UserSimulationEventInfo
      */
     @javax.annotation.Nonnull
     public static UserSimulationEventInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +47,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the browser property value. Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
@@ -56,7 +55,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getBrowser() {
-        return this._browser;
+        return this.browser;
     }
     /**
      * Gets the eventDateTime property value. Date and time of the simulation event by a user in an attack simulation and training campaign.
@@ -64,7 +63,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this._eventDateTime;
+        return this.eventDateTime;
     }
     /**
      * Gets the eventName property value. Name of the simulation event by a user in an attack simulation and training campaign.
@@ -72,23 +71,22 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getEventName() {
-        return this._eventName;
+        return this.eventName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserSimulationEventInfo currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
-            this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
-            this.put("eventName", (n) -> { currentObject.setEventName(n.getStringValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("osPlatformDeviceDetails", (n) -> { currentObject.setOsPlatformDeviceDetails(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("browser", (n) -> { this.setBrowser(n.getStringValue()); });
+        deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("eventName", (n) -> { this.setEventName(n.getStringValue()); });
+        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("osPlatformDeviceDetails", (n) -> { this.setOsPlatformDeviceDetails(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddress property value. IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
@@ -96,7 +94,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getIpAddress() {
-        return this._ipAddress;
+        return this.ipAddress;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -104,7 +102,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the osPlatformDeviceDetails property value. The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
@@ -112,13 +110,14 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOsPlatformDeviceDetails() {
-        return this._osPlatformDeviceDetails;
+        return this.osPlatformDeviceDetails;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("browser", this.getBrowser());
@@ -134,55 +133,62 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the browser property value. Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
      * @param value Value to set for the browser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowser(@javax.annotation.Nullable final String value) {
-        this._browser = value;
+        this.browser = value;
     }
     /**
      * Sets the eventDateTime property value. Date and time of the simulation event by a user in an attack simulation and training campaign.
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._eventDateTime = value;
+        this.eventDateTime = value;
     }
     /**
      * Sets the eventName property value. Name of the simulation event by a user in an attack simulation and training campaign.
      * @param value Value to set for the eventName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventName(@javax.annotation.Nullable final String value) {
-        this._eventName = value;
+        this.eventName = value;
     }
     /**
      * Sets the ipAddress property value. IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
-        this._ipAddress = value;
+        this.ipAddress = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the osPlatformDeviceDetails property value. The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
      * @param value Value to set for the osPlatformDeviceDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsPlatformDeviceDetails(@javax.annotation.Nullable final String value) {
-        this._osPlatformDeviceDetails = value;
+        this.osPlatformDeviceDetails = value;
     }
 }

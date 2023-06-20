@@ -5,22 +5,21 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the startHoldMusic method. */
 public class StartHoldMusicPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The clientContext property */
-    private String _clientContext;
+    private String clientContext;
     /** The customPrompt property */
-    private Prompt _customPrompt;
+    private Prompt customPrompt;
     /**
      * Instantiates a new startHoldMusicPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public StartHoldMusicPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -40,7 +39,7 @@ public class StartHoldMusicPostRequestBody implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the clientContext property value. The clientContext property
@@ -48,7 +47,7 @@ public class StartHoldMusicPostRequestBody implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getClientContext() {
-        return this._clientContext;
+        return this.clientContext;
     }
     /**
      * Gets the customPrompt property value. The customPrompt property
@@ -56,25 +55,25 @@ public class StartHoldMusicPostRequestBody implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public Prompt getCustomPrompt() {
-        return this._customPrompt;
+        return this.customPrompt;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final StartHoldMusicPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
-            this.put("customPrompt", (n) -> { currentObject.setCustomPrompt(n.getObjectValue(Prompt::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("clientContext", (n) -> { this.setClientContext(n.getStringValue()); });
+        deserializerMap.put("customPrompt", (n) -> { this.setCustomPrompt(n.getObjectValue(Prompt::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("clientContext", this.getClientContext());
@@ -86,23 +85,26 @@ public class StartHoldMusicPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the clientContext property value. The clientContext property
      * @param value Value to set for the clientContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
-        this._clientContext = value;
+        this.clientContext = value;
     }
     /**
      * Sets the customPrompt property value. The customPrompt property
      * @param value Value to set for the customPrompt property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomPrompt(@javax.annotation.Nullable final Prompt value) {
-        this._customPrompt = value;
+        this.customPrompt = value;
     }
 }

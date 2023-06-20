@@ -1,33 +1,31 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidWorkProfileGmailEasConfiguration;
-import com.microsoft.graph.models.AndroidWorkProfileNineWorkEasConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration implements Parsable {
     /** Exchange Active Sync authentication method. */
-    private EasAuthenticationMethod _authenticationMethod;
+    private EasAuthenticationMethod authenticationMethod;
     /** Possible values for email sync duration. */
-    private EmailSyncDuration _durationOfEmailToSync;
+    private EmailSyncDuration durationOfEmailToSync;
     /** Possible values for username source or email source. */
-    private UserEmailSource _emailAddressSource;
+    private UserEmailSource emailAddressSource;
     /** Exchange location (URL) that the mail app connects to. */
-    private String _hostName;
+    private String hostName;
     /** Identity certificate. */
-    private AndroidWorkProfileCertificateProfileBase _identityCertificate;
+    private AndroidWorkProfileCertificateProfileBase identityCertificate;
     /** Indicates whether or not to use SSL. */
-    private Boolean _requireSsl;
+    private Boolean requireSsl;
     /** Android username source. */
-    private AndroidUsernameSource _usernameSource;
+    private AndroidUsernameSource usernameSource;
     /**
      * Instantiates a new AndroidWorkProfileEasEmailProfileBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidWorkProfileEasEmailProfileBase() {
         super();
         this.setOdataType("#microsoft.graph.androidWorkProfileEasEmailProfileBase");
@@ -52,44 +50,43 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     }
     /**
      * Gets the authenticationMethod property value. Exchange Active Sync authentication method.
-     * @return a easAuthenticationMethod
+     * @return a EasAuthenticationMethod
      */
     @javax.annotation.Nullable
     public EasAuthenticationMethod getAuthenticationMethod() {
-        return this._authenticationMethod;
+        return this.authenticationMethod;
     }
     /**
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
-     * @return a emailSyncDuration
+     * @return a EmailSyncDuration
      */
     @javax.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
-        return this._durationOfEmailToSync;
+        return this.durationOfEmailToSync;
     }
     /**
      * Gets the emailAddressSource property value. Possible values for username source or email source.
-     * @return a userEmailSource
+     * @return a UserEmailSource
      */
     @javax.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
-        return this._emailAddressSource;
+        return this.emailAddressSource;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidWorkProfileEasEmailProfileBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod.class)); });
-            this.put("durationOfEmailToSync", (n) -> { currentObject.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
-            this.put("emailAddressSource", (n) -> { currentObject.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
-            this.put("hostName", (n) -> { currentObject.setHostName(n.getStringValue()); });
-            this.put("identityCertificate", (n) -> { currentObject.setIdentityCertificate(n.getObjectValue(AndroidWorkProfileCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("requireSsl", (n) -> { currentObject.setRequireSsl(n.getBooleanValue()); });
-            this.put("usernameSource", (n) -> { currentObject.setUsernameSource(n.getEnumValue(AndroidUsernameSource.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod.class)); });
+        deserializerMap.put("durationOfEmailToSync", (n) -> { this.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
+        deserializerMap.put("emailAddressSource", (n) -> { this.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
+        deserializerMap.put("hostName", (n) -> { this.setHostName(n.getStringValue()); });
+        deserializerMap.put("identityCertificate", (n) -> { this.setIdentityCertificate(n.getObjectValue(AndroidWorkProfileCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("requireSsl", (n) -> { this.setRequireSsl(n.getBooleanValue()); });
+        deserializerMap.put("usernameSource", (n) -> { this.setUsernameSource(n.getEnumValue(AndroidUsernameSource.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the hostName property value. Exchange location (URL) that the mail app connects to.
@@ -97,7 +94,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      */
     @javax.annotation.Nullable
     public String getHostName() {
-        return this._hostName;
+        return this.hostName;
     }
     /**
      * Gets the identityCertificate property value. Identity certificate.
@@ -105,7 +102,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileCertificateProfileBase getIdentityCertificate() {
-        return this._identityCertificate;
+        return this.identityCertificate;
     }
     /**
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
@@ -113,21 +110,22 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      */
     @javax.annotation.Nullable
     public Boolean getRequireSsl() {
-        return this._requireSsl;
+        return this.requireSsl;
     }
     /**
      * Gets the usernameSource property value. Android username source.
-     * @return a androidUsernameSource
+     * @return a AndroidUsernameSource
      */
     @javax.annotation.Nullable
     public AndroidUsernameSource getUsernameSource() {
-        return this._usernameSource;
+        return this.usernameSource;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -144,55 +142,62 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final EasAuthenticationMethod value) {
-        this._authenticationMethod = value;
+        this.authenticationMethod = value;
     }
     /**
      * Sets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationOfEmailToSync(@javax.annotation.Nullable final EmailSyncDuration value) {
-        this._durationOfEmailToSync = value;
+        this.durationOfEmailToSync = value;
     }
     /**
      * Sets the emailAddressSource property value. Possible values for username source or email source.
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddressSource(@javax.annotation.Nullable final UserEmailSource value) {
-        this._emailAddressSource = value;
+        this.emailAddressSource = value;
     }
     /**
      * Sets the hostName property value. Exchange location (URL) that the mail app connects to.
      * @param value Value to set for the hostName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostName(@javax.annotation.Nullable final String value) {
-        this._hostName = value;
+        this.hostName = value;
     }
     /**
      * Sets the identityCertificate property value. Identity certificate.
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final AndroidWorkProfileCertificateProfileBase value) {
-        this._identityCertificate = value;
+        this.identityCertificate = value;
     }
     /**
      * Sets the requireSsl property value. Indicates whether or not to use SSL.
      * @param value Value to set for the requireSsl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireSsl(@javax.annotation.Nullable final Boolean value) {
-        this._requireSsl = value;
+        this.requireSsl = value;
     }
     /**
      * Sets the usernameSource property value. Android username source.
      * @param value Value to set for the usernameSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameSource(@javax.annotation.Nullable final AndroidUsernameSource value) {
-        this._usernameSource = value;
+        this.usernameSource = value;
     }
 }

@@ -3,34 +3,33 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEvent implements Parsable {
     /** Azure AD device identifier. */
-    private String _deviceId;
+    private String deviceId;
     /** Possible ways of adding a mobile device to management. */
-    private DeviceEnrollmentType _enrollmentType;
+    private DeviceEnrollmentType enrollmentType;
     /** Top level failure categories for enrollment. */
-    private DeviceEnrollmentFailureReason _failureCategory;
+    private DeviceEnrollmentFailureReason failureCategory;
     /** Detailed failure reason. */
-    private String _failureReason;
+    private String failureReason;
     /** Device identifier created or collected by Intune. */
-    private String _managedDeviceIdentifier;
+    private String managedDeviceIdentifier;
     /** Operating System. */
-    private String _operatingSystem;
+    private String operatingSystem;
     /** OS Version. */
-    private String _osVersion;
+    private String osVersion;
     /** Identifier for the user that tried to enroll the device. */
-    private String _userId;
+    private String userId;
     /**
      * Instantiates a new EnrollmentTroubleshootingEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EnrollmentTroubleshootingEvent() {
         super();
-        this.setOdataType("#microsoft.graph.enrollmentTroubleshootingEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,23 +47,23 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the enrollmentType property value. Possible ways of adding a mobile device to management.
-     * @return a deviceEnrollmentType
+     * @return a DeviceEnrollmentType
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentType getEnrollmentType() {
-        return this._enrollmentType;
+        return this.enrollmentType;
     }
     /**
      * Gets the failureCategory property value. Top level failure categories for enrollment.
-     * @return a deviceEnrollmentFailureReason
+     * @return a DeviceEnrollmentFailureReason
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentFailureReason getFailureCategory() {
-        return this._failureCategory;
+        return this.failureCategory;
     }
     /**
      * Gets the failureReason property value. Detailed failure reason.
@@ -72,25 +71,24 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      */
     @javax.annotation.Nullable
     public String getFailureReason() {
-        return this._failureReason;
+        return this.failureReason;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EnrollmentTroubleshootingEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("enrollmentType", (n) -> { currentObject.setEnrollmentType(n.getEnumValue(DeviceEnrollmentType.class)); });
-            this.put("failureCategory", (n) -> { currentObject.setFailureCategory(n.getEnumValue(DeviceEnrollmentFailureReason.class)); });
-            this.put("failureReason", (n) -> { currentObject.setFailureReason(n.getStringValue()); });
-            this.put("managedDeviceIdentifier", (n) -> { currentObject.setManagedDeviceIdentifier(n.getStringValue()); });
-            this.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("enrollmentType", (n) -> { this.setEnrollmentType(n.getEnumValue(DeviceEnrollmentType.class)); });
+        deserializerMap.put("failureCategory", (n) -> { this.setFailureCategory(n.getEnumValue(DeviceEnrollmentFailureReason.class)); });
+        deserializerMap.put("failureReason", (n) -> { this.setFailureReason(n.getStringValue()); });
+        deserializerMap.put("managedDeviceIdentifier", (n) -> { this.setManagedDeviceIdentifier(n.getStringValue()); });
+        deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
@@ -98,7 +96,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      */
     @javax.annotation.Nullable
     public String getManagedDeviceIdentifier() {
-        return this._managedDeviceIdentifier;
+        return this.managedDeviceIdentifier;
     }
     /**
      * Gets the operatingSystem property value. Operating System.
@@ -106,7 +104,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      */
     @javax.annotation.Nullable
     public String getOperatingSystem() {
-        return this._operatingSystem;
+        return this.operatingSystem;
     }
     /**
      * Gets the osVersion property value. OS Version.
@@ -114,7 +112,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      */
     @javax.annotation.Nullable
     public String getOsVersion() {
-        return this._osVersion;
+        return this.osVersion;
     }
     /**
      * Gets the userId property value. Identifier for the user that tried to enroll the device.
@@ -122,13 +120,14 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +145,71 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the enrollmentType property value. Possible ways of adding a mobile device to management.
      * @param value Value to set for the enrollmentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentType(@javax.annotation.Nullable final DeviceEnrollmentType value) {
-        this._enrollmentType = value;
+        this.enrollmentType = value;
     }
     /**
      * Sets the failureCategory property value. Top level failure categories for enrollment.
      * @param value Value to set for the failureCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailureCategory(@javax.annotation.Nullable final DeviceEnrollmentFailureReason value) {
-        this._failureCategory = value;
+        this.failureCategory = value;
     }
     /**
      * Sets the failureReason property value. Detailed failure reason.
      * @param value Value to set for the failureReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailureReason(@javax.annotation.Nullable final String value) {
-        this._failureReason = value;
+        this.failureReason = value;
     }
     /**
      * Sets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
      * @param value Value to set for the managedDeviceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceIdentifier(@javax.annotation.Nullable final String value) {
-        this._managedDeviceIdentifier = value;
+        this.managedDeviceIdentifier = value;
     }
     /**
      * Sets the operatingSystem property value. Operating System.
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystem(@javax.annotation.Nullable final String value) {
-        this._operatingSystem = value;
+        this.operatingSystem = value;
     }
     /**
      * Sets the osVersion property value. OS Version.
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
-        this._osVersion = value;
+        this.osVersion = value;
     }
     /**
      * Sets the userId property value. Identifier for the user that tried to enroll the device.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

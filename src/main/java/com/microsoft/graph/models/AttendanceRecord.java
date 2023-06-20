@@ -3,31 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class AttendanceRecord extends Entity implements Parsable {
     /** List of time periods between joining and leaving a meeting. */
-    private java.util.List<AttendanceInterval> _attendanceIntervals;
-    /** Email address of the user associated with this atttendance record. */
-    private String _emailAddress;
-    /** Identity of the user associated with this atttendance record. */
-    private Identity _identity;
+    private java.util.List<AttendanceInterval> attendanceIntervals;
+    /** Email address of the user associated with this attendance record. */
+    private String emailAddress;
+    /** Identity of the user associated with this attendance record. The specific type will be one of the following derived types of identity, depending on the type of the user: communicationsUserIdentity, azureCommunicationServicesUserIdentity. */
+    private Identity identity;
     /** Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting. */
-    private String _registrantId;
+    private String registrantId;
     /** Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer. */
-    private String _role;
+    private String role;
     /** Total duration of the attendances in seconds. */
-    private Integer _totalAttendanceInSeconds;
+    private Integer totalAttendanceInSeconds;
     /**
      * Instantiates a new attendanceRecord and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttendanceRecord() {
         super();
-        this.setOdataType("#microsoft.graph.attendanceRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,39 +43,38 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AttendanceInterval> getAttendanceIntervals() {
-        return this._attendanceIntervals;
+        return this.attendanceIntervals;
     }
     /**
-     * Gets the emailAddress property value. Email address of the user associated with this atttendance record.
+     * Gets the emailAddress property value. Email address of the user associated with this attendance record.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getEmailAddress() {
-        return this._emailAddress;
+        return this.emailAddress;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AttendanceRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("attendanceIntervals", (n) -> { currentObject.setAttendanceIntervals(n.getCollectionOfObjectValues(AttendanceInterval::createFromDiscriminatorValue)); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
-            this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("registrantId", (n) -> { currentObject.setRegistrantId(n.getStringValue()); });
-            this.put("role", (n) -> { currentObject.setRole(n.getStringValue()); });
-            this.put("totalAttendanceInSeconds", (n) -> { currentObject.setTotalAttendanceInSeconds(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attendanceIntervals", (n) -> { this.setAttendanceIntervals(n.getCollectionOfObjectValues(AttendanceInterval::createFromDiscriminatorValue)); });
+        deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("registrantId", (n) -> { this.setRegistrantId(n.getStringValue()); });
+        deserializerMap.put("role", (n) -> { this.setRole(n.getStringValue()); });
+        deserializerMap.put("totalAttendanceInSeconds", (n) -> { this.setTotalAttendanceInSeconds(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the identity property value. Identity of the user associated with this atttendance record.
+     * Gets the identity property value. Identity of the user associated with this attendance record. The specific type will be one of the following derived types of identity, depending on the type of the user: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
      * @return a identity
      */
     @javax.annotation.Nullable
     public Identity getIdentity() {
-        return this._identity;
+        return this.identity;
     }
     /**
      * Gets the registrantId property value. Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting.
@@ -85,7 +82,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRegistrantId() {
-        return this._registrantId;
+        return this.registrantId;
     }
     /**
      * Gets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
@@ -93,7 +90,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRole() {
-        return this._role;
+        return this.role;
     }
     /**
      * Gets the totalAttendanceInSeconds property value. Total duration of the attendances in seconds.
@@ -101,13 +98,14 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTotalAttendanceInSeconds() {
-        return this._totalAttendanceInSeconds;
+        return this.totalAttendanceInSeconds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +121,53 @@ public class AttendanceRecord extends Entity implements Parsable {
      * @param value Value to set for the attendanceIntervals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttendanceIntervals(@javax.annotation.Nullable final java.util.List<AttendanceInterval> value) {
-        this._attendanceIntervals = value;
+        this.attendanceIntervals = value;
     }
     /**
-     * Sets the emailAddress property value. Email address of the user associated with this atttendance record.
+     * Sets the emailAddress property value. Email address of the user associated with this attendance record.
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
-        this._emailAddress = value;
+        this.emailAddress = value;
     }
     /**
-     * Sets the identity property value. Identity of the user associated with this atttendance record.
+     * Sets the identity property value. Identity of the user associated with this attendance record. The specific type will be one of the following derived types of identity, depending on the type of the user: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
      * @param value Value to set for the identity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentity(@javax.annotation.Nullable final Identity value) {
-        this._identity = value;
+        this.identity = value;
     }
     /**
      * Sets the registrantId property value. Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting.
      * @param value Value to set for the registrantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistrantId(@javax.annotation.Nullable final String value) {
-        this._registrantId = value;
+        this.registrantId = value;
     }
     /**
      * Sets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final String value) {
-        this._role = value;
+        this.role = value;
     }
     /**
      * Sets the totalAttendanceInSeconds property value. Total duration of the attendances in seconds.
      * @param value Value to set for the totalAttendanceInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalAttendanceInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._totalAttendanceInSeconds = value;
+        this.totalAttendanceInSeconds = value;
     }
 }

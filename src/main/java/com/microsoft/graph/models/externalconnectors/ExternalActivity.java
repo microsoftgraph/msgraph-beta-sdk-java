@@ -1,34 +1,32 @@
 package com.microsoft.graph.models.externalconnectors;
 
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.models.externalconnectors.ExternalActivityResult;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalActivity extends Entity implements Parsable {
     /** Represents an identity used to identify who is responsible for the activity. */
-    private Identity _performedBy;
-    /** When the particular activity occurred. */
-    private OffsetDateTime _startDateTime;
+    private Identity performedBy;
+    /** The date and time when the particular activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    private OffsetDateTime startDateTime;
     /** The type property */
-    private ExternalActivityType _type;
+    private ExternalActivityType type;
     /**
-     * Instantiates a new ExternalActivity and sets the default values.
+     * Instantiates a new externalActivity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExternalActivity() {
         super();
-        this.setOdataType("#microsoft.graph.externalConnectors.externalActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExternalActivity
+     * @return a externalActivity
      */
     @javax.annotation.Nonnull
     public static ExternalActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -44,16 +42,15 @@ public class ExternalActivity extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExternalActivity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("performedBy", (n) -> { currentObject.setPerformedBy(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(ExternalActivityType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("performedBy", (n) -> { this.setPerformedBy(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ExternalActivityType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the performedBy property value. Represents an identity used to identify who is responsible for the activity.
@@ -61,29 +58,30 @@ public class ExternalActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getPerformedBy() {
-        return this._performedBy;
+        return this.performedBy;
     }
     /**
-     * Gets the startDateTime property value. When the particular activity occurred.
+     * Gets the startDateTime property value. The date and time when the particular activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the type property value. The type property
-     * @return a externalActivityType
+     * @return a ExternalActivityType
      */
     @javax.annotation.Nullable
     public ExternalActivityType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -96,23 +94,26 @@ public class ExternalActivity extends Entity implements Parsable {
      * @param value Value to set for the performedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPerformedBy(@javax.annotation.Nullable final Identity value) {
-        this._performedBy = value;
+        this.performedBy = value;
     }
     /**
-     * Sets the startDateTime property value. When the particular activity occurred.
+     * Sets the startDateTime property value. The date and time when the particular activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final ExternalActivityType value) {
-        this._type = value;
+        this.type = value;
     }
 }

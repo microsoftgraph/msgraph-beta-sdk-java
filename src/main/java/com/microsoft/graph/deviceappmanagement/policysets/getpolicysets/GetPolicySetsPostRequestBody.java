@@ -4,20 +4,19 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getPolicySets method. */
 public class GetPolicySetsPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The policySetIds property */
-    private java.util.List<String> _policySetIds;
+    private java.util.List<String> policySetIds;
     /**
      * Instantiates a new getPolicySetsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetPolicySetsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,18 +36,17 @@ public class GetPolicySetsPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GetPolicySetsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("policySetIds", (n) -> { currentObject.setPolicySetIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("policySetIds", (n) -> { this.setPolicySetIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the policySetIds property value. The policySetIds property
@@ -56,13 +54,14 @@ public class GetPolicySetsPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<String> getPolicySetIds() {
-        return this._policySetIds;
+        return this.policySetIds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("policySetIds", this.getPolicySetIds());
@@ -73,15 +72,17 @@ public class GetPolicySetsPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the policySetIds property value. The policySetIds property
      * @param value Value to set for the policySetIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicySetIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._policySetIds = value;
+        this.policySetIds = value;
     }
 }

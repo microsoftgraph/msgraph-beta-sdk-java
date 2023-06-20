@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemPhone extends ItemFacet implements Parsable {
     /** Friendly name the user has assigned this phone number. */
-    private String _displayName;
+    private String displayName;
     /** Phone number provided by the user. */
-    private String _number;
+    private String number;
     /** The type property */
-    private PhoneType _type;
+    private PhoneType type;
     /**
      * Instantiates a new ItemPhone and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemPhone() {
         super();
         this.setOdataType("#microsoft.graph.itemPhone");
@@ -38,20 +38,19 @@ public class ItemPhone extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ItemPhone currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PhoneType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PhoneType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the number property value. Phone number provided by the user.
@@ -59,21 +58,22 @@ public class ItemPhone extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNumber() {
-        return this._number;
+        return this.number;
     }
     /**
      * Gets the type property value. The type property
-     * @return a phoneType
+     * @return a PhoneType
      */
     @javax.annotation.Nullable
     public PhoneType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the number property value. Phone number provided by the user.
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final String value) {
-        this._number = value;
+        this.number = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final PhoneType value) {
-        this._type = value;
+        this.type = value;
     }
 }

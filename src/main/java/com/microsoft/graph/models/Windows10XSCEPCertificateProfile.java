@@ -3,41 +3,42 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile implements Parsable {
     /** CertificateStore types */
-    private CertificateStore _certificateStore;
+    private CertificateStore certificateStore;
     /** Certificate Validity Period Options. */
-    private CertificateValidityPeriodScale _certificateValidityPeriodScale;
+    private CertificateValidityPeriodScale certificateValidityPeriodScale;
     /** Value for the Certificate Validity Period */
-    private Integer _certificateValidityPeriodValue;
+    private Integer certificateValidityPeriodValue;
     /** Extended Key Usage (EKU) settings. */
-    private java.util.List<ExtendedKeyUsage> _extendedKeyUsages;
+    private java.util.List<ExtendedKeyUsage> extendedKeyUsages;
     /** SCEP Hash Algorithm. */
-    private java.util.List<String> _hashAlgorithm;
+    private java.util.List<HashAlgorithms> hashAlgorithm;
     /** Key Size Options. */
-    private KeySize _keySize;
+    private KeySize keySize;
     /** Key Storage Provider (KSP) Import Options. */
-    private KeyStorageProviderOption _keyStorageProvider;
+    private KeyStorageProviderOption keyStorageProvider;
     /** Key Usage Options. */
-    private KeyUsages _keyUsage;
+    private KeyUsages keyUsage;
     /** Certificate renewal threshold percentage */
-    private Integer _renewalThresholdPercentage;
+    private Integer renewalThresholdPercentage;
     /** Trusted Root Certificate ID */
-    private String _rootCertificateId;
+    private UUID rootCertificateId;
     /** SCEP Server Url(s). */
-    private java.util.List<String> _scepServerUrls;
+    private java.util.List<String> scepServerUrls;
     /** Custom AAD Attributes. */
-    private java.util.List<Windows10XCustomSubjectAlternativeName> _subjectAlternativeNameFormats;
+    private java.util.List<Windows10XCustomSubjectAlternativeName> subjectAlternativeNameFormats;
     /** Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US */
-    private String _subjectNameFormatString;
+    private String subjectNameFormatString;
     /**
      * Instantiates a new Windows10XSCEPCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10XSCEPCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windows10XSCEPCertificateProfile");
@@ -54,19 +55,19 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the certificateStore property value. CertificateStore types
-     * @return a certificateStore
+     * @return a CertificateStore
      */
     @javax.annotation.Nullable
     public CertificateStore getCertificateStore() {
-        return this._certificateStore;
+        return this.certificateStore;
     }
     /**
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
-     * @return a certificateValidityPeriodScale
+     * @return a CertificateValidityPeriodScale
      */
     @javax.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
-        return this._certificateValidityPeriodScale;
+        return this.certificateValidityPeriodScale;
     }
     /**
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period
@@ -74,70 +75,69 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      */
     @javax.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
-        return this._certificateValidityPeriodValue;
+        return this.certificateValidityPeriodValue;
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings.
-     * @return a extendedKeyUsage
+     * @return a ExtendedKeyUsage
      */
     @javax.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
-        return this._extendedKeyUsages;
+        return this.extendedKeyUsages;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10XSCEPCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
-            this.put("certificateValidityPeriodScale", (n) -> { currentObject.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
-            this.put("certificateValidityPeriodValue", (n) -> { currentObject.setCertificateValidityPeriodValue(n.getIntegerValue()); });
-            this.put("extendedKeyUsages", (n) -> { currentObject.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
-            this.put("hashAlgorithm", (n) -> { currentObject.setHashAlgorithm(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("keySize", (n) -> { currentObject.setKeySize(n.getEnumValue(KeySize.class)); });
-            this.put("keyStorageProvider", (n) -> { currentObject.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
-            this.put("keyUsage", (n) -> { currentObject.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
-            this.put("renewalThresholdPercentage", (n) -> { currentObject.setRenewalThresholdPercentage(n.getIntegerValue()); });
-            this.put("rootCertificateId", (n) -> { currentObject.setRootCertificateId(n.getStringValue()); });
-            this.put("scepServerUrls", (n) -> { currentObject.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("subjectAlternativeNameFormats", (n) -> { currentObject.setSubjectAlternativeNameFormats(n.getCollectionOfObjectValues(Windows10XCustomSubjectAlternativeName::createFromDiscriminatorValue)); });
-            this.put("subjectNameFormatString", (n) -> { currentObject.setSubjectNameFormatString(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
+        deserializerMap.put("certificateValidityPeriodScale", (n) -> { this.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
+        deserializerMap.put("certificateValidityPeriodValue", (n) -> { this.setCertificateValidityPeriodValue(n.getIntegerValue()); });
+        deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
+        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getCollectionOfEnumValues(HashAlgorithms.class)); });
+        deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize.class)); });
+        deserializerMap.put("keyStorageProvider", (n) -> { this.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
+        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
+        deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
+        deserializerMap.put("rootCertificateId", (n) -> { this.setRootCertificateId(n.getUUIDValue()); });
+        deserializerMap.put("scepServerUrls", (n) -> { this.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("subjectAlternativeNameFormats", (n) -> { this.setSubjectAlternativeNameFormats(n.getCollectionOfObjectValues(Windows10XCustomSubjectAlternativeName::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjectNameFormatString", (n) -> { this.setSubjectNameFormatString(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hashAlgorithm property value. SCEP Hash Algorithm.
-     * @return a string
+     * @return a HashAlgorithms
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getHashAlgorithm() {
-        return this._hashAlgorithm;
+    public java.util.List<HashAlgorithms> getHashAlgorithm() {
+        return this.hashAlgorithm;
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a keySize
+     * @return a KeySize
      */
     @javax.annotation.Nullable
     public KeySize getKeySize() {
-        return this._keySize;
+        return this.keySize;
     }
     /**
      * Gets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
-     * @return a keyStorageProviderOption
+     * @return a KeyStorageProviderOption
      */
     @javax.annotation.Nullable
     public KeyStorageProviderOption getKeyStorageProvider() {
-        return this._keyStorageProvider;
+        return this.keyStorageProvider;
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a keyUsages
+     * @return a KeyUsages
      */
     @javax.annotation.Nullable
     public KeyUsages getKeyUsage() {
-        return this._keyUsage;
+        return this.keyUsage;
     }
     /**
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage
@@ -145,15 +145,15 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      */
     @javax.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
-        return this._renewalThresholdPercentage;
+        return this.renewalThresholdPercentage;
     }
     /**
      * Gets the rootCertificateId property value. Trusted Root Certificate ID
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getRootCertificateId() {
-        return this._rootCertificateId;
+    public UUID getRootCertificateId() {
+        return this.rootCertificateId;
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s).
@@ -161,7 +161,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      */
     @javax.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
-        return this._scepServerUrls;
+        return this.scepServerUrls;
     }
     /**
      * Gets the subjectAlternativeNameFormats property value. Custom AAD Attributes.
@@ -169,7 +169,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      */
     @javax.annotation.Nullable
     public java.util.List<Windows10XCustomSubjectAlternativeName> getSubjectAlternativeNameFormats() {
-        return this._subjectAlternativeNameFormats;
+        return this.subjectAlternativeNameFormats;
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -177,13 +177,14 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      */
     @javax.annotation.Nullable
     public String getSubjectNameFormatString() {
-        return this._subjectNameFormatString;
+        return this.subjectNameFormatString;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -191,12 +192,12 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         writer.writeEnumValue("certificateValidityPeriodScale", this.getCertificateValidityPeriodScale());
         writer.writeIntegerValue("certificateValidityPeriodValue", this.getCertificateValidityPeriodValue());
         writer.writeCollectionOfObjectValues("extendedKeyUsages", this.getExtendedKeyUsages());
-        writer.writeCollectionOfPrimitiveValues("hashAlgorithm", this.getHashAlgorithm());
+        writer.writeCollectionOfEnumValues("hashAlgorithm", this.getHashAlgorithm());
         writer.writeEnumValue("keySize", this.getKeySize());
         writer.writeEnumValue("keyStorageProvider", this.getKeyStorageProvider());
         writer.writeEnumValue("keyUsage", this.getKeyUsage());
         writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
-        writer.writeStringValue("rootCertificateId", this.getRootCertificateId());
+        writer.writeUUIDValue("rootCertificateId", this.getRootCertificateId());
         writer.writeCollectionOfPrimitiveValues("scepServerUrls", this.getScepServerUrls());
         writer.writeCollectionOfObjectValues("subjectAlternativeNameFormats", this.getSubjectAlternativeNameFormats());
         writer.writeStringValue("subjectNameFormatString", this.getSubjectNameFormatString());
@@ -206,103 +207,116 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the certificateStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateStore(@javax.annotation.Nullable final CertificateStore value) {
-        this._certificateStore = value;
+        this.certificateStore = value;
     }
     /**
      * Sets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateValidityPeriodScale(@javax.annotation.Nullable final CertificateValidityPeriodScale value) {
-        this._certificateValidityPeriodScale = value;
+        this.certificateValidityPeriodScale = value;
     }
     /**
      * Sets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period
      * @param value Value to set for the certificateValidityPeriodValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateValidityPeriodValue(@javax.annotation.Nullable final Integer value) {
-        this._certificateValidityPeriodValue = value;
+        this.certificateValidityPeriodValue = value;
     }
     /**
      * Sets the extendedKeyUsages property value. Extended Key Usage (EKU) settings.
      * @param value Value to set for the extendedKeyUsages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtendedKeyUsages(@javax.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
-        this._extendedKeyUsages = value;
+        this.extendedKeyUsages = value;
     }
     /**
      * Sets the hashAlgorithm property value. SCEP Hash Algorithm.
      * @param value Value to set for the hashAlgorithm property.
      * @return a void
      */
-    public void setHashAlgorithm(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._hashAlgorithm = value;
+    @javax.annotation.Nonnull
+    public void setHashAlgorithm(@javax.annotation.Nullable final java.util.List<HashAlgorithms> value) {
+        this.hashAlgorithm = value;
     }
     /**
      * Sets the keySize property value. Key Size Options.
      * @param value Value to set for the keySize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeySize(@javax.annotation.Nullable final KeySize value) {
-        this._keySize = value;
+        this.keySize = value;
     }
     /**
      * Sets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @param value Value to set for the keyStorageProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyStorageProvider(@javax.annotation.Nullable final KeyStorageProviderOption value) {
-        this._keyStorageProvider = value;
+        this.keyStorageProvider = value;
     }
     /**
      * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyUsage(@javax.annotation.Nullable final KeyUsages value) {
-        this._keyUsage = value;
+        this.keyUsage = value;
     }
     /**
      * Sets the renewalThresholdPercentage property value. Certificate renewal threshold percentage
      * @param value Value to set for the renewalThresholdPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
-        this._renewalThresholdPercentage = value;
+        this.renewalThresholdPercentage = value;
     }
     /**
      * Sets the rootCertificateId property value. Trusted Root Certificate ID
      * @param value Value to set for the rootCertificateId property.
      * @return a void
      */
-    public void setRootCertificateId(@javax.annotation.Nullable final String value) {
-        this._rootCertificateId = value;
+    @javax.annotation.Nonnull
+    public void setRootCertificateId(@javax.annotation.Nullable final UUID value) {
+        this.rootCertificateId = value;
     }
     /**
      * Sets the scepServerUrls property value. SCEP Server Url(s).
      * @param value Value to set for the scepServerUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScepServerUrls(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._scepServerUrls = value;
+        this.scepServerUrls = value;
     }
     /**
      * Sets the subjectAlternativeNameFormats property value. Custom AAD Attributes.
      * @param value Value to set for the subjectAlternativeNameFormats property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormats(@javax.annotation.Nullable final java.util.List<Windows10XCustomSubjectAlternativeName> value) {
-        this._subjectAlternativeNameFormats = value;
+        this.subjectAlternativeNameFormats = value;
     }
     /**
      * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
-        this._subjectNameFormatString = value;
+        this.subjectNameFormatString = value;
     }
 }

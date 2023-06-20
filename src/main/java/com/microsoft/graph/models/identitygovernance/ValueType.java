@@ -3,11 +3,10 @@ package com.microsoft.graph.models.identitygovernance;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum ValueType implements ValuedEnum {
-    Enum_escaped("enum_escaped"),
+    EnumEscaped("enum"),
     String("string"),
-    Int_escaped("int_escaped"),
+    IntEscaped("int"),
     Bool("bool"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -20,9 +19,9 @@ public enum ValueType implements ValuedEnum {
     public static ValueType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "enum": return Enum_escaped;
+            case "enum": return EnumEscaped;
             case "string": return String;
-            case "int": return Int_escaped;
+            case "int": return IntEscaped;
             case "bool": return Bool;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;

@@ -3,25 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class PrintTaskDefinition extends Entity implements Parsable {
     /** The createdBy property */
-    private AppIdentity _createdBy;
+    private AppIdentity createdBy;
     /** The name of the printTaskDefinition. */
-    private String _displayName;
+    private String displayName;
     /** A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only. */
-    private java.util.List<PrintTask> _tasks;
+    private java.util.List<PrintTask> tasks;
     /**
      * Instantiates a new printTaskDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrintTaskDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.printTaskDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,11 +33,11 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a appIdentity
+     * @return a AppIdentity
      */
     @javax.annotation.Nullable
     public AppIdentity getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the displayName property value. The name of the printTaskDefinition.
@@ -47,20 +45,19 @@ public class PrintTaskDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrintTaskDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(AppIdentity::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(PrintTask::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(AppIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PrintTask::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the tasks property value. A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
@@ -68,13 +65,14 @@ public class PrintTaskDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintTask> getTasks() {
-        return this._tasks;
+        return this.tasks;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,23 +85,26 @@ public class PrintTaskDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final AppIdentity value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the displayName property value. The name of the printTaskDefinition.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the tasks property value. A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<PrintTask> value) {
-        this._tasks = value;
+        this.tasks = value;
     }
 }

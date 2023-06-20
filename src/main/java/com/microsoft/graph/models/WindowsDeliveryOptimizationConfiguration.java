@@ -3,49 +3,49 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration implements Parsable {
     /** Specifies number of seconds to delay an HTTP source in a background download that is allowed to use peer-to-peer. Valid values 0 to 4294967295 */
-    private Long _backgroundDownloadFromHttpDelayInSeconds;
+    private Long backgroundDownloadFromHttpDelayInSeconds;
     /** Specifies foreground and background bandwidth usage using percentages, absolutes, or hours. */
-    private DeliveryOptimizationBandwidth _bandwidthMode;
+    private DeliveryOptimizationBandwidth bandwidthMode;
     /** Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000. */
-    private Integer _cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds;
-    /** Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​ */
-    private Integer _cacheServerForegroundDownloadFallbackToHttpDelayInSeconds;
+    private Integer cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds;
+    /** Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000. */
+    private Integer cacheServerForegroundDownloadFallbackToHttpDelayInSeconds;
     /** Specifies cache servers host names. */
-    private java.util.List<String> _cacheServerHostNames;
+    private java.util.List<String> cacheServerHostNames;
     /** Delivery optimization mode for peer distribution */
-    private WindowsDeliveryOptimizationMode _deliveryOptimizationMode;
+    private WindowsDeliveryOptimizationMode deliveryOptimizationMode;
     /** Specifies number of seconds to delay an HTTP source in a foreground download that is allowed to use peer-to-peer (0-86400). Valid values 0 to 86400 */
-    private Long _foregroundDownloadFromHttpDelayInSeconds;
+    private Long foregroundDownloadFromHttpDelayInSeconds;
     /** Specifies to restrict peer selection to a specfic source. */
-    private DeliveryOptimizationGroupIdSource _groupIdSource;
+    private DeliveryOptimizationGroupIdSource groupIdSource;
     /** Specifies the maximum time in days that each file is held in the Delivery Optimization cache after downloading successfully (0-3650). Valid values 0 to 3650 */
-    private Integer _maximumCacheAgeInDays;
+    private Integer maximumCacheAgeInDays;
     /** Specifies the maximum cache size that Delivery Optimization either as a percentage or in GB. */
-    private DeliveryOptimizationMaxCacheSize _maximumCacheSize;
+    private DeliveryOptimizationMaxCacheSize maximumCacheSize;
     /** Specifies the minimum battery percentage to allow the device to upload data (0-100). Valid values 0 to 100 */
-    private Integer _minimumBatteryPercentageAllowedToUpload;
+    private Integer minimumBatteryPercentageAllowedToUpload;
     /** Specifies the minimum disk size in GB to use Peer Caching (1-100000). Valid values 1 to 100000 */
-    private Integer _minimumDiskSizeAllowedToPeerInGigabytes;
+    private Integer minimumDiskSizeAllowedToPeerInGigabytes;
     /** Specifies the minimum content file size in MB enabled to use Peer Caching (1-100000). Valid values 1 to 100000 */
-    private Integer _minimumFileSizeToCacheInMegabytes;
+    private Integer minimumFileSizeToCacheInMegabytes;
     /** Specifies the minimum RAM size in GB to use Peer Caching (1-100000). Valid values 1 to 100000 */
-    private Integer _minimumRamAllowedToPeerInGigabytes;
+    private Integer minimumRamAllowedToPeerInGigabytes;
     /** Specifies the drive that Delivery Optimization should use for its cache. */
-    private String _modifyCacheLocation;
+    private String modifyCacheLocation;
     /** Values to restrict peer selection by. */
-    private DeliveryOptimizationRestrictPeerSelectionByOptions _restrictPeerSelectionBy;
+    private DeliveryOptimizationRestrictPeerSelectionByOptions restrictPeerSelectionBy;
     /** Possible values of a property */
-    private Enablement _vpnPeerCaching;
+    private Enablement vpnPeerCaching;
     /**
      * Instantiates a new WindowsDeliveryOptimizationConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDeliveryOptimizationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsDeliveryOptimizationConfiguration");
@@ -66,7 +66,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Long getBackgroundDownloadFromHttpDelayInSeconds() {
-        return this._backgroundDownloadFromHttpDelayInSeconds;
+        return this.backgroundDownloadFromHttpDelayInSeconds;
     }
     /**
      * Gets the bandwidthMode property value. Specifies foreground and background bandwidth usage using percentages, absolutes, or hours.
@@ -74,7 +74,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeliveryOptimizationBandwidth getBandwidthMode() {
-        return this._bandwidthMode;
+        return this.bandwidthMode;
     }
     /**
      * Gets the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000.
@@ -82,15 +82,15 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds() {
-        return this._cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds;
+        return this.cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds;
     }
     /**
-     * Gets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​
+     * Gets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getCacheServerForegroundDownloadFallbackToHttpDelayInSeconds() {
-        return this._cacheServerForegroundDownloadFallbackToHttpDelayInSeconds;
+        return this.cacheServerForegroundDownloadFallbackToHttpDelayInSeconds;
     }
     /**
      * Gets the cacheServerHostNames property value. Specifies cache servers host names.
@@ -98,42 +98,41 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getCacheServerHostNames() {
-        return this._cacheServerHostNames;
+        return this.cacheServerHostNames;
     }
     /**
      * Gets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
-     * @return a windowsDeliveryOptimizationMode
+     * @return a WindowsDeliveryOptimizationMode
      */
     @javax.annotation.Nullable
     public WindowsDeliveryOptimizationMode getDeliveryOptimizationMode() {
-        return this._deliveryOptimizationMode;
+        return this.deliveryOptimizationMode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDeliveryOptimizationConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("backgroundDownloadFromHttpDelayInSeconds", (n) -> { currentObject.setBackgroundDownloadFromHttpDelayInSeconds(n.getLongValue()); });
-            this.put("bandwidthMode", (n) -> { currentObject.setBandwidthMode(n.getObjectValue(DeliveryOptimizationBandwidth::createFromDiscriminatorValue)); });
-            this.put("cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds", (n) -> { currentObject.setCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds(n.getIntegerValue()); });
-            this.put("cacheServerForegroundDownloadFallbackToHttpDelayInSeconds", (n) -> { currentObject.setCacheServerForegroundDownloadFallbackToHttpDelayInSeconds(n.getIntegerValue()); });
-            this.put("cacheServerHostNames", (n) -> { currentObject.setCacheServerHostNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("deliveryOptimizationMode", (n) -> { currentObject.setDeliveryOptimizationMode(n.getEnumValue(WindowsDeliveryOptimizationMode.class)); });
-            this.put("foregroundDownloadFromHttpDelayInSeconds", (n) -> { currentObject.setForegroundDownloadFromHttpDelayInSeconds(n.getLongValue()); });
-            this.put("groupIdSource", (n) -> { currentObject.setGroupIdSource(n.getObjectValue(DeliveryOptimizationGroupIdSource::createFromDiscriminatorValue)); });
-            this.put("maximumCacheAgeInDays", (n) -> { currentObject.setMaximumCacheAgeInDays(n.getIntegerValue()); });
-            this.put("maximumCacheSize", (n) -> { currentObject.setMaximumCacheSize(n.getObjectValue(DeliveryOptimizationMaxCacheSize::createFromDiscriminatorValue)); });
-            this.put("minimumBatteryPercentageAllowedToUpload", (n) -> { currentObject.setMinimumBatteryPercentageAllowedToUpload(n.getIntegerValue()); });
-            this.put("minimumDiskSizeAllowedToPeerInGigabytes", (n) -> { currentObject.setMinimumDiskSizeAllowedToPeerInGigabytes(n.getIntegerValue()); });
-            this.put("minimumFileSizeToCacheInMegabytes", (n) -> { currentObject.setMinimumFileSizeToCacheInMegabytes(n.getIntegerValue()); });
-            this.put("minimumRamAllowedToPeerInGigabytes", (n) -> { currentObject.setMinimumRamAllowedToPeerInGigabytes(n.getIntegerValue()); });
-            this.put("modifyCacheLocation", (n) -> { currentObject.setModifyCacheLocation(n.getStringValue()); });
-            this.put("restrictPeerSelectionBy", (n) -> { currentObject.setRestrictPeerSelectionBy(n.getEnumValue(DeliveryOptimizationRestrictPeerSelectionByOptions.class)); });
-            this.put("vpnPeerCaching", (n) -> { currentObject.setVpnPeerCaching(n.getEnumValue(Enablement.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("backgroundDownloadFromHttpDelayInSeconds", (n) -> { this.setBackgroundDownloadFromHttpDelayInSeconds(n.getLongValue()); });
+        deserializerMap.put("bandwidthMode", (n) -> { this.setBandwidthMode(n.getObjectValue(DeliveryOptimizationBandwidth::createFromDiscriminatorValue)); });
+        deserializerMap.put("cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds", (n) -> { this.setCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("cacheServerForegroundDownloadFallbackToHttpDelayInSeconds", (n) -> { this.setCacheServerForegroundDownloadFallbackToHttpDelayInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("cacheServerHostNames", (n) -> { this.setCacheServerHostNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("deliveryOptimizationMode", (n) -> { this.setDeliveryOptimizationMode(n.getEnumValue(WindowsDeliveryOptimizationMode.class)); });
+        deserializerMap.put("foregroundDownloadFromHttpDelayInSeconds", (n) -> { this.setForegroundDownloadFromHttpDelayInSeconds(n.getLongValue()); });
+        deserializerMap.put("groupIdSource", (n) -> { this.setGroupIdSource(n.getObjectValue(DeliveryOptimizationGroupIdSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("maximumCacheAgeInDays", (n) -> { this.setMaximumCacheAgeInDays(n.getIntegerValue()); });
+        deserializerMap.put("maximumCacheSize", (n) -> { this.setMaximumCacheSize(n.getObjectValue(DeliveryOptimizationMaxCacheSize::createFromDiscriminatorValue)); });
+        deserializerMap.put("minimumBatteryPercentageAllowedToUpload", (n) -> { this.setMinimumBatteryPercentageAllowedToUpload(n.getIntegerValue()); });
+        deserializerMap.put("minimumDiskSizeAllowedToPeerInGigabytes", (n) -> { this.setMinimumDiskSizeAllowedToPeerInGigabytes(n.getIntegerValue()); });
+        deserializerMap.put("minimumFileSizeToCacheInMegabytes", (n) -> { this.setMinimumFileSizeToCacheInMegabytes(n.getIntegerValue()); });
+        deserializerMap.put("minimumRamAllowedToPeerInGigabytes", (n) -> { this.setMinimumRamAllowedToPeerInGigabytes(n.getIntegerValue()); });
+        deserializerMap.put("modifyCacheLocation", (n) -> { this.setModifyCacheLocation(n.getStringValue()); });
+        deserializerMap.put("restrictPeerSelectionBy", (n) -> { this.setRestrictPeerSelectionBy(n.getEnumValue(DeliveryOptimizationRestrictPeerSelectionByOptions.class)); });
+        deserializerMap.put("vpnPeerCaching", (n) -> { this.setVpnPeerCaching(n.getEnumValue(Enablement.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the foregroundDownloadFromHttpDelayInSeconds property value. Specifies number of seconds to delay an HTTP source in a foreground download that is allowed to use peer-to-peer (0-86400). Valid values 0 to 86400
@@ -141,7 +140,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Long getForegroundDownloadFromHttpDelayInSeconds() {
-        return this._foregroundDownloadFromHttpDelayInSeconds;
+        return this.foregroundDownloadFromHttpDelayInSeconds;
     }
     /**
      * Gets the groupIdSource property value. Specifies to restrict peer selection to a specfic source.
@@ -149,7 +148,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeliveryOptimizationGroupIdSource getGroupIdSource() {
-        return this._groupIdSource;
+        return this.groupIdSource;
     }
     /**
      * Gets the maximumCacheAgeInDays property value. Specifies the maximum time in days that each file is held in the Delivery Optimization cache after downloading successfully (0-3650). Valid values 0 to 3650
@@ -157,7 +156,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getMaximumCacheAgeInDays() {
-        return this._maximumCacheAgeInDays;
+        return this.maximumCacheAgeInDays;
     }
     /**
      * Gets the maximumCacheSize property value. Specifies the maximum cache size that Delivery Optimization either as a percentage or in GB.
@@ -165,7 +164,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeliveryOptimizationMaxCacheSize getMaximumCacheSize() {
-        return this._maximumCacheSize;
+        return this.maximumCacheSize;
     }
     /**
      * Gets the minimumBatteryPercentageAllowedToUpload property value. Specifies the minimum battery percentage to allow the device to upload data (0-100). Valid values 0 to 100
@@ -173,7 +172,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getMinimumBatteryPercentageAllowedToUpload() {
-        return this._minimumBatteryPercentageAllowedToUpload;
+        return this.minimumBatteryPercentageAllowedToUpload;
     }
     /**
      * Gets the minimumDiskSizeAllowedToPeerInGigabytes property value. Specifies the minimum disk size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
@@ -181,7 +180,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getMinimumDiskSizeAllowedToPeerInGigabytes() {
-        return this._minimumDiskSizeAllowedToPeerInGigabytes;
+        return this.minimumDiskSizeAllowedToPeerInGigabytes;
     }
     /**
      * Gets the minimumFileSizeToCacheInMegabytes property value. Specifies the minimum content file size in MB enabled to use Peer Caching (1-100000). Valid values 1 to 100000
@@ -189,7 +188,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getMinimumFileSizeToCacheInMegabytes() {
-        return this._minimumFileSizeToCacheInMegabytes;
+        return this.minimumFileSizeToCacheInMegabytes;
     }
     /**
      * Gets the minimumRamAllowedToPeerInGigabytes property value. Specifies the minimum RAM size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
@@ -197,7 +196,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getMinimumRamAllowedToPeerInGigabytes() {
-        return this._minimumRamAllowedToPeerInGigabytes;
+        return this.minimumRamAllowedToPeerInGigabytes;
     }
     /**
      * Gets the modifyCacheLocation property value. Specifies the drive that Delivery Optimization should use for its cache.
@@ -205,29 +204,30 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getModifyCacheLocation() {
-        return this._modifyCacheLocation;
+        return this.modifyCacheLocation;
     }
     /**
      * Gets the restrictPeerSelectionBy property value. Values to restrict peer selection by.
-     * @return a deliveryOptimizationRestrictPeerSelectionByOptions
+     * @return a DeliveryOptimizationRestrictPeerSelectionByOptions
      */
     @javax.annotation.Nullable
     public DeliveryOptimizationRestrictPeerSelectionByOptions getRestrictPeerSelectionBy() {
-        return this._restrictPeerSelectionBy;
+        return this.restrictPeerSelectionBy;
     }
     /**
      * Gets the vpnPeerCaching property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @javax.annotation.Nullable
     public Enablement getVpnPeerCaching() {
-        return this._vpnPeerCaching;
+        return this.vpnPeerCaching;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -254,135 +254,152 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
      * @param value Value to set for the backgroundDownloadFromHttpDelayInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundDownloadFromHttpDelayInSeconds(@javax.annotation.Nullable final Long value) {
-        this._backgroundDownloadFromHttpDelayInSeconds = value;
+        this.backgroundDownloadFromHttpDelayInSeconds = value;
     }
     /**
      * Sets the bandwidthMode property value. Specifies foreground and background bandwidth usage using percentages, absolutes, or hours.
      * @param value Value to set for the bandwidthMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBandwidthMode(@javax.annotation.Nullable final DeliveryOptimizationBandwidth value) {
-        this._bandwidthMode = value;
+        this.bandwidthMode = value;
     }
     /**
      * Sets the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000.
      * @param value Value to set for the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds = value;
+        this.cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds = value;
     }
     /**
-     * Sets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​
+     * Sets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.
      * @param value Value to set for the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheServerForegroundDownloadFallbackToHttpDelayInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._cacheServerForegroundDownloadFallbackToHttpDelayInSeconds = value;
+        this.cacheServerForegroundDownloadFallbackToHttpDelayInSeconds = value;
     }
     /**
      * Sets the cacheServerHostNames property value. Specifies cache servers host names.
      * @param value Value to set for the cacheServerHostNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheServerHostNames(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._cacheServerHostNames = value;
+        this.cacheServerHostNames = value;
     }
     /**
      * Sets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      * @param value Value to set for the deliveryOptimizationMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeliveryOptimizationMode(@javax.annotation.Nullable final WindowsDeliveryOptimizationMode value) {
-        this._deliveryOptimizationMode = value;
+        this.deliveryOptimizationMode = value;
     }
     /**
      * Sets the foregroundDownloadFromHttpDelayInSeconds property value. Specifies number of seconds to delay an HTTP source in a foreground download that is allowed to use peer-to-peer (0-86400). Valid values 0 to 86400
      * @param value Value to set for the foregroundDownloadFromHttpDelayInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setForegroundDownloadFromHttpDelayInSeconds(@javax.annotation.Nullable final Long value) {
-        this._foregroundDownloadFromHttpDelayInSeconds = value;
+        this.foregroundDownloadFromHttpDelayInSeconds = value;
     }
     /**
      * Sets the groupIdSource property value. Specifies to restrict peer selection to a specfic source.
      * @param value Value to set for the groupIdSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupIdSource(@javax.annotation.Nullable final DeliveryOptimizationGroupIdSource value) {
-        this._groupIdSource = value;
+        this.groupIdSource = value;
     }
     /**
      * Sets the maximumCacheAgeInDays property value. Specifies the maximum time in days that each file is held in the Delivery Optimization cache after downloading successfully (0-3650). Valid values 0 to 3650
      * @param value Value to set for the maximumCacheAgeInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumCacheAgeInDays(@javax.annotation.Nullable final Integer value) {
-        this._maximumCacheAgeInDays = value;
+        this.maximumCacheAgeInDays = value;
     }
     /**
      * Sets the maximumCacheSize property value. Specifies the maximum cache size that Delivery Optimization either as a percentage or in GB.
      * @param value Value to set for the maximumCacheSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumCacheSize(@javax.annotation.Nullable final DeliveryOptimizationMaxCacheSize value) {
-        this._maximumCacheSize = value;
+        this.maximumCacheSize = value;
     }
     /**
      * Sets the minimumBatteryPercentageAllowedToUpload property value. Specifies the minimum battery percentage to allow the device to upload data (0-100). Valid values 0 to 100
      * @param value Value to set for the minimumBatteryPercentageAllowedToUpload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumBatteryPercentageAllowedToUpload(@javax.annotation.Nullable final Integer value) {
-        this._minimumBatteryPercentageAllowedToUpload = value;
+        this.minimumBatteryPercentageAllowedToUpload = value;
     }
     /**
      * Sets the minimumDiskSizeAllowedToPeerInGigabytes property value. Specifies the minimum disk size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
      * @param value Value to set for the minimumDiskSizeAllowedToPeerInGigabytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumDiskSizeAllowedToPeerInGigabytes(@javax.annotation.Nullable final Integer value) {
-        this._minimumDiskSizeAllowedToPeerInGigabytes = value;
+        this.minimumDiskSizeAllowedToPeerInGigabytes = value;
     }
     /**
      * Sets the minimumFileSizeToCacheInMegabytes property value. Specifies the minimum content file size in MB enabled to use Peer Caching (1-100000). Valid values 1 to 100000
      * @param value Value to set for the minimumFileSizeToCacheInMegabytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumFileSizeToCacheInMegabytes(@javax.annotation.Nullable final Integer value) {
-        this._minimumFileSizeToCacheInMegabytes = value;
+        this.minimumFileSizeToCacheInMegabytes = value;
     }
     /**
      * Sets the minimumRamAllowedToPeerInGigabytes property value. Specifies the minimum RAM size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
      * @param value Value to set for the minimumRamAllowedToPeerInGigabytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRamAllowedToPeerInGigabytes(@javax.annotation.Nullable final Integer value) {
-        this._minimumRamAllowedToPeerInGigabytes = value;
+        this.minimumRamAllowedToPeerInGigabytes = value;
     }
     /**
      * Sets the modifyCacheLocation property value. Specifies the drive that Delivery Optimization should use for its cache.
      * @param value Value to set for the modifyCacheLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifyCacheLocation(@javax.annotation.Nullable final String value) {
-        this._modifyCacheLocation = value;
+        this.modifyCacheLocation = value;
     }
     /**
      * Sets the restrictPeerSelectionBy property value. Values to restrict peer selection by.
      * @param value Value to set for the restrictPeerSelectionBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestrictPeerSelectionBy(@javax.annotation.Nullable final DeliveryOptimizationRestrictPeerSelectionByOptions value) {
-        this._restrictPeerSelectionBy = value;
+        this.restrictPeerSelectionBy = value;
     }
     /**
      * Sets the vpnPeerCaching property value. Possible values of a property
      * @param value Value to set for the vpnPeerCaching property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVpnPeerCaching(@javax.annotation.Nullable final Enablement value) {
-        this._vpnPeerCaching = value;
+        this.vpnPeerCaching = value;
     }
 }
