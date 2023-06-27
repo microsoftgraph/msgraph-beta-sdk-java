@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The App Reliability Score.
-     * The user experience analytics device app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Indicates a score calculated from application health data to indicate when a device is having problems running one or more applications. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "appReliabilityScore", alternate = {"AppReliabilityScore"})
     @Expose
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The Battery Health Score.
-     * The user experience analytics device battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "batteryHealthScore", alternate = {"BatteryHealthScore"})
     @Expose
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The Device Name.
-     * The user experience analytics device name.
+     * The name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The Endpoint Analytics Score.
-     * The user experience analytics device score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "endpointAnalyticsScore", alternate = {"EndpointAnalyticsScore"})
     @Expose
@@ -64,7 +64,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+     * The health status of the device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The Manufacturer.
-     * The user experience analytics device manufacturer.
+     * The manufacturer name of the device. Examples: Microsoft Corporation, HP, Lenovo. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The Model.
-     * The user experience analytics device model.
+     * The model name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "model", alternate = {"Model"})
     @Expose
@@ -91,7 +91,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The Startup Performance Score.
-     * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "startupPerformanceScore", alternate = {"StartupPerformanceScore"})
     @Expose
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The Work From Anywhere Score.
-     * The user experience analytics device work From anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "workFromAnywhereScore", alternate = {"WorkFromAnywhereScore"})
     @Expose

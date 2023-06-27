@@ -32,7 +32,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
 
     /**
      * The Default Value.
-     * Default setting value for this setting.
+     * Default setting value for this setting
      */
     @SerializedName(value = "defaultValue", alternate = {"DefaultValue"})
     @Expose
@@ -41,7 +41,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
 
     /**
      * The Depended On By.
-     * list of child settings that depend on this setting.
+     * list of child settings that depend on this setting
      */
     @SerializedName(value = "dependedOnBy", alternate = {"DependedOnBy"})
     @Expose
@@ -50,7 +50,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
 
     /**
      * The Dependent On.
-     * list of parent settings this setting is dependent on.
+     * list of parent settings this setting is dependent on
      */
     @SerializedName(value = "dependentOn", alternate = {"DependentOn"})
     @Expose
@@ -59,7 +59,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
 
     /**
      * The Value Definition.
-     * Definition of the value for this setting.
+     * Definition of the value for this setting
      */
     @SerializedName(value = "valueDefinition", alternate = {"ValueDefinition"})
     @Expose

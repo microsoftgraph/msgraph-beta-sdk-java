@@ -226,6 +226,16 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     public com.microsoft.graph.requests.ExternalIdentitiesPolicyRequestBuilder externalIdentitiesPolicy() {
         return new com.microsoft.graph.requests.ExternalIdentitiesPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("externalIdentitiesPolicy"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for FederatedTokenValidationPolicy
+     *
+     * @return the FederatedTokenValidationPolicyRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.FederatedTokenValidationPolicyRequestBuilder federatedTokenValidationPolicy() {
+        return new com.microsoft.graph.requests.FederatedTokenValidationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("federatedTokenValidationPolicy"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the HomeRealmDiscoveryPolicy collection
      *

@@ -27,7 +27,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
 
     /**
      * The Activation Count.
-     * 
+     * The length of sequential activation of the same role.
      */
     @SerializedName(value = "activationCount", alternate = {"ActivationCount"})
     @Expose
@@ -36,7 +36,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
 
     /**
      * The Assignee Display Name.
-     * 
+     * Display name of the subject that the incident applies to.
      */
     @SerializedName(value = "assigneeDisplayName", alternate = {"AssigneeDisplayName"})
     @Expose
@@ -45,7 +45,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
 
     /**
      * The Assignee Id.
-     * 
+     * The identifier of the subject that the incident applies to.
      */
     @SerializedName(value = "assigneeId", alternate = {"AssigneeId"})
     @Expose
@@ -54,7 +54,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
 
     /**
      * The Assignee User Principal Name.
-     * 
+     * User principal name of the subject that the incident applies to. Applies to user principals.
      */
     @SerializedName(value = "assigneeUserPrincipalName", alternate = {"AssigneeUserPrincipalName"})
     @Expose
@@ -63,7 +63,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
 
     /**
      * The Role Definition Id.
-     * 
+     * The identifier for the directory role definition that's in scope of this incident.
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -72,7 +72,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
 
     /**
      * The Role Display Name.
-     * 
+     * The display name for the directory role.
      */
     @SerializedName(value = "roleDisplayName", alternate = {"RoleDisplayName"})
     @Expose
@@ -81,7 +81,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
 
     /**
      * The Role Template Id.
-     * 
+     * The globally unique identifier for the directory role.
      */
     @SerializedName(value = "roleTemplateId", alternate = {"RoleTemplateId"})
     @Expose
@@ -90,7 +90,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
 
     /**
      * The Sequence End Date Time.
-     * 
+     * End date time of the sequential activation event.
      */
     @SerializedName(value = "sequenceEndDateTime", alternate = {"SequenceEndDateTime"})
     @Expose
@@ -99,7 +99,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
 
     /**
      * The Sequence Start Date Time.
-     * 
+     * Start date time of the sequential activation event.
      */
     @SerializedName(value = "sequenceStartDateTime", alternate = {"SequenceStartDateTime"})
     @Expose

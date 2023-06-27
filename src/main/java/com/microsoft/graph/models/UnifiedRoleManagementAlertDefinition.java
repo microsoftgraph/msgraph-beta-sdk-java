@@ -28,7 +28,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The Description.
-     * 
+     * The description of the alert.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -37,7 +37,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The Display Name.
-     * 
+     * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The How To Prevent.
-     * 
+     * Long-form text that indicates the ways to prevent the alert from being triggered in your tenant.
      */
     @SerializedName(value = "howToPrevent", alternate = {"HowToPrevent"})
     @Expose
@@ -55,7 +55,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The Is Configurable.
-     * 
+     * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
      */
     @SerializedName(value = "isConfigurable", alternate = {"IsConfigurable"})
     @Expose
@@ -64,7 +64,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The Is Remediatable.
-     * 
+     * true if the alert can be remediated, and false otherwise.
      */
     @SerializedName(value = "isRemediatable", alternate = {"IsRemediatable"})
     @Expose
@@ -73,7 +73,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The Mitigation Steps.
-     * 
+     * The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
      */
     @SerializedName(value = "mitigationSteps", alternate = {"MitigationSteps"})
     @Expose
@@ -82,7 +82,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The Scope Id.
-     * 
+     * The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
      */
     @SerializedName(value = "scopeId", alternate = {"ScopeId"})
     @Expose
@@ -91,7 +91,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The Scope Type.
-     * 
+     * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD Roles.
      */
     @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose
@@ -100,7 +100,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The Security Impact.
-     * 
+     * Security impact of the alert. For example, it could be information leaks or unauthorized access.
      */
     @SerializedName(value = "securityImpact", alternate = {"SecurityImpact"})
     @Expose
@@ -109,7 +109,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The Severity Level.
-     * 
+     * Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
      */
     @SerializedName(value = "severityLevel", alternate = {"SeverityLevel"})
     @Expose

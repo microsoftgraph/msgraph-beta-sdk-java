@@ -229,7 +229,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the Cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed, restoring.
+     * The status of the Cloud PC. The possible values are: notProvisioned, provisioning, provisioned, inGracePeriod, deprovisioning, failed, provisionedWithWarnings, resizing, pendingProvision, restoring, and unknownFutureValue. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: movingRegion.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

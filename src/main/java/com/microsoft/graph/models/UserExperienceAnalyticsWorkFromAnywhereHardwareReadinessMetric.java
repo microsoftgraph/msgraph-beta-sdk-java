@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
 
     /**
      * The Os Check Failed Percentage.
-     * The percentage of devices for which OS check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The percentage of devices for which OS check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "osCheckFailedPercentage", alternate = {"OsCheckFailedPercentage"})
     @Expose
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
 
     /**
      * The Processor64Bit Check Failed Percentage.
-     * The percentage of devices for which processor hardware 64-bit architecture check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The percentage of devices for which processor hardware 64-bit architecture check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "processor64BitCheckFailedPercentage", alternate = {"Processor64BitCheckFailedPercentage"})
     @Expose
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
 
     /**
      * The Processor Core Count Check Failed Percentage.
-     * The percentage of devices for which processor hardware core count check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The percentage of devices for which processor hardware core count check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "processorCoreCountCheckFailedPercentage", alternate = {"ProcessorCoreCountCheckFailedPercentage"})
     @Expose
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
 
     /**
      * The Processor Family Check Failed Percentage.
-     * The percentage of devices for which processor hardware family check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The percentage of devices for which processor hardware family check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "processorFamilyCheckFailedPercentage", alternate = {"ProcessorFamilyCheckFailedPercentage"})
     @Expose
@@ -63,7 +63,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
 
     /**
      * The Processor Speed Check Failed Percentage.
-     * The percentage of devices for which processor hardware speed check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The percentage of devices for which processor hardware speed check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "processorSpeedCheckFailedPercentage", alternate = {"ProcessorSpeedCheckFailedPercentage"})
     @Expose
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
 
     /**
      * The Ram Check Failed Percentage.
-     * The percentage of devices for which RAM hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The percentage of devices for which RAM hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "ramCheckFailedPercentage", alternate = {"RamCheckFailedPercentage"})
     @Expose
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
 
     /**
      * The Secure Boot Check Failed Percentage.
-     * The percentage of devices for which secure boot hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The percentage of devices for which secure boot hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "secureBootCheckFailedPercentage", alternate = {"SecureBootCheckFailedPercentage"})
     @Expose
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
 
     /**
      * The Storage Check Failed Percentage.
-     * The percentage of devices for which storage hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The percentage of devices for which storage hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "storageCheckFailedPercentage", alternate = {"StorageCheckFailedPercentage"})
     @Expose
@@ -99,7 +99,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
 
     /**
      * The Total Device Count.
-     * The count of total devices in an organization. Valid values -2147483648 to 2147483647
+     * The count of total devices in an organization. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "totalDeviceCount", alternate = {"TotalDeviceCount"})
     @Expose
@@ -108,7 +108,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
 
     /**
      * The Tpm Check Failed Percentage.
-     * The percentage of devices for which Trusted Platform Module (TPM) hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The percentage of devices for which Trusted Platform Module (TPM) hardware check has failed. Valid values 0 to 100. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "tpmCheckFailedPercentage", alternate = {"TpmCheckFailedPercentage"})
     @Expose
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric exte
 
     /**
      * The Upgrade Eligible Device Count.
-     * The count of devices in an organization eligible for windows upgrade. Valid values -2147483648 to 2147483647
+     * The count of devices in an organization eligible for windows upgrade. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "upgradeEligibleDeviceCount", alternate = {"UpgradeEligibleDeviceCount"})
     @Expose
