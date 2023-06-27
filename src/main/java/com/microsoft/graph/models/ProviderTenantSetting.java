@@ -4,28 +4,37 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProviderTenantSetting extends Entity implements Parsable {
-    /** The azureTenantId property */
-    private String _azureTenantId;
-    /** The enabled property */
-    private Boolean _enabled;
-    /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** The provider property */
-    private String _provider;
-    /** The vendor property */
-    private String _vendor;
+    /**
+     * The azureTenantId property
+     */
+    private String azureTenantId;
+    /**
+     * The enabled property
+     */
+    private Boolean enabled;
+    /**
+     * The lastModifiedDateTime property
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * The provider property
+     */
+    private String provider;
+    /**
+     * The vendor property
+     */
+    private String vendor;
     /**
      * Instantiates a new ProviderTenantSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProviderTenantSetting() {
         super();
-        this.setOdataType("#microsoft.graph.providerTenantSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,7 +52,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureTenantId() {
-        return this._azureTenantId;
+        return this.azureTenantId;
     }
     /**
      * Gets the enabled property value. The enabled property
@@ -51,22 +60,21 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getEnabled() {
-        return this._enabled;
+        return this.enabled;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProviderTenantSetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("provider", (n) -> { currentObject.setProvider(n.getStringValue()); });
-            this.put("vendor", (n) -> { currentObject.setVendor(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("provider", (n) -> { this.setProvider(n.getStringValue()); });
+        deserializerMap.put("vendor", (n) -> { this.setVendor(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -74,7 +82,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the provider property value. The provider property
@@ -82,7 +90,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getProvider() {
-        return this._provider;
+        return this.provider;
     }
     /**
      * Gets the vendor property value. The vendor property
@@ -90,13 +98,14 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVendor() {
-        return this._vendor;
+        return this.vendor;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,39 +120,44 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
-        this._azureTenantId = value;
+        this.azureTenantId = value;
     }
     /**
      * Sets the enabled property value. The enabled property
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._enabled = value;
+        this.enabled = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the provider property value. The provider property
      * @param value Value to set for the provider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvider(@javax.annotation.Nullable final String value) {
-        this._provider = value;
+        this.provider = value;
     }
     /**
      * Sets the vendor property value. The vendor property
      * @param value Value to set for the vendor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendor(@javax.annotation.Nullable final String value) {
-        this._vendor = value;
+        this.vendor = value;
     }
 }

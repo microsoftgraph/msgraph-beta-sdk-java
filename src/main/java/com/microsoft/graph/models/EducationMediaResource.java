@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationMediaResource extends EducationResource implements Parsable {
-    /** Location of the file on shared point folder. Required */
-    private String _fileUrl;
+    /**
+     * Location of the file on shared point folder. Required
+     */
+    private String fileUrl;
     /**
      * Instantiates a new EducationMediaResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationMediaResource() {
         super();
         this.setOdataType("#microsoft.graph.educationMediaResource");
@@ -30,14 +32,13 @@ public class EducationMediaResource extends EducationResource implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationMediaResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("fileUrl", (n) -> { currentObject.setFileUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fileUrl", (n) -> { this.setFileUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileUrl property value. Location of the file on shared point folder. Required
@@ -45,13 +46,14 @@ public class EducationMediaResource extends EducationResource implements Parsabl
      */
     @javax.annotation.Nullable
     public String getFileUrl() {
-        return this._fileUrl;
+        return this.fileUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class EducationMediaResource extends EducationResource implements Parsabl
      * @param value Value to set for the fileUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileUrl(@javax.annotation.Nullable final String value) {
-        this._fileUrl = value;
+        this.fileUrl = value;
     }
 }

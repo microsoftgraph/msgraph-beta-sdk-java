@@ -4,27 +4,39 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterShare extends PrinterBase implements Parsable {
-    /** If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties. */
-    private Boolean _allowAllUsers;
-    /** The groups whose users have access to print using the printer. */
-    private java.util.List<Group> _allowedGroups;
-    /** The users who have access to print using the printer. */
-    private java.util.List<User> _allowedUsers;
-    /** The DateTimeOffset when the printer share was created. Read-only. */
-    private OffsetDateTime _createdDateTime;
-    /** The printer that this printer share is related to. */
-    private Printer _printer;
-    /** The viewPoint property */
-    private PrinterShareViewpoint _viewPoint;
+    /**
+     * If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
+     */
+    private Boolean allowAllUsers;
+    /**
+     * The groups whose users have access to print using the printer.
+     */
+    private java.util.List<Group> allowedGroups;
+    /**
+     * The users who have access to print using the printer.
+     */
+    private java.util.List<User> allowedUsers;
+    /**
+     * The DateTimeOffset when the printer share was created. Read-only.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The printer that this printer share is related to.
+     */
+    private Printer printer;
+    /**
+     * Additional data for a printer share as viewed by the signed-in user.
+     */
+    private PrinterShareViewpoint viewPoint;
     /**
      * Instantiates a new PrinterShare and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrinterShare() {
         super();
         this.setOdataType("#microsoft.graph.printerShare");
@@ -45,7 +57,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAllowAllUsers() {
-        return this._allowAllUsers;
+        return this.allowAllUsers;
     }
     /**
      * Gets the allowedGroups property value. The groups whose users have access to print using the printer.
@@ -53,7 +65,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Group> getAllowedGroups() {
-        return this._allowedGroups;
+        return this.allowedGroups;
     }
     /**
      * Gets the allowedUsers property value. The users who have access to print using the printer.
@@ -61,7 +73,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<User> getAllowedUsers() {
-        return this._allowedUsers;
+        return this.allowedUsers;
     }
     /**
      * Gets the createdDateTime property value. The DateTimeOffset when the printer share was created. Read-only.
@@ -69,23 +81,22 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrinterShare currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowAllUsers", (n) -> { currentObject.setAllowAllUsers(n.getBooleanValue()); });
-            this.put("allowedGroups", (n) -> { currentObject.setAllowedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
-            this.put("allowedUsers", (n) -> { currentObject.setAllowedUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("printer", (n) -> { currentObject.setPrinter(n.getObjectValue(Printer::createFromDiscriminatorValue)); });
-            this.put("viewPoint", (n) -> { currentObject.setViewPoint(n.getObjectValue(PrinterShareViewpoint::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowAllUsers", (n) -> { this.setAllowAllUsers(n.getBooleanValue()); });
+        deserializerMap.put("allowedGroups", (n) -> { this.setAllowedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("allowedUsers", (n) -> { this.setAllowedUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("printer", (n) -> { this.setPrinter(n.getObjectValue(Printer::createFromDiscriminatorValue)); });
+        deserializerMap.put("viewPoint", (n) -> { this.setViewPoint(n.getObjectValue(PrinterShareViewpoint::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the printer property value. The printer that this printer share is related to.
@@ -93,21 +104,22 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nullable
     public Printer getPrinter() {
-        return this._printer;
+        return this.printer;
     }
     /**
-     * Gets the viewPoint property value. The viewPoint property
+     * Gets the viewPoint property value. Additional data for a printer share as viewed by the signed-in user.
      * @return a printerShareViewpoint
      */
     @javax.annotation.Nullable
     public PrinterShareViewpoint getViewPoint() {
-        return this._viewPoint;
+        return this.viewPoint;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +135,53 @@ public class PrinterShare extends PrinterBase implements Parsable {
      * @param value Value to set for the allowAllUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowAllUsers(@javax.annotation.Nullable final Boolean value) {
-        this._allowAllUsers = value;
+        this.allowAllUsers = value;
     }
     /**
      * Sets the allowedGroups property value. The groups whose users have access to print using the printer.
      * @param value Value to set for the allowedGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
-        this._allowedGroups = value;
+        this.allowedGroups = value;
     }
     /**
      * Sets the allowedUsers property value. The users who have access to print using the printer.
      * @param value Value to set for the allowedUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedUsers(@javax.annotation.Nullable final java.util.List<User> value) {
-        this._allowedUsers = value;
+        this.allowedUsers = value;
     }
     /**
      * Sets the createdDateTime property value. The DateTimeOffset when the printer share was created. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the printer property value. The printer that this printer share is related to.
      * @param value Value to set for the printer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinter(@javax.annotation.Nullable final Printer value) {
-        this._printer = value;
+        this.printer = value;
     }
     /**
-     * Sets the viewPoint property value. The viewPoint property
+     * Sets the viewPoint property value. Additional data for a printer share as viewed by the signed-in user.
      * @param value Value to set for the viewPoint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setViewPoint(@javax.annotation.Nullable final PrinterShareViewpoint value) {
-        this._viewPoint = value;
+        this.viewPoint = value;
     }
 }

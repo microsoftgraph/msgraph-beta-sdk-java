@@ -3,32 +3,45 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RegionalAndLanguageSettings extends Entity implements Parsable {
-    /** Prioritized list of languages the user reads and authors in.Returned by default. Not nullable. */
-    private java.util.List<LocaleInfo> _authoringLanguages;
-    /** The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable. */
-    private LocaleInfo _defaultDisplayLanguage;
-    /** The locale that drives the default date, time, and calendar formatting.Returned by default. */
-    private LocaleInfo _defaultRegionalFormat;
-    /** The language a user expected to use as input for text to speech scenarios.Returned by default. */
-    private LocaleInfo _defaultSpeechInputLanguage;
-    /** The language a user expects to have documents, emails, and messages translated into.Returned by default. */
-    private LocaleInfo _defaultTranslationLanguage;
-    /** Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default. */
-    private RegionalFormatOverrides _regionalFormatOverrides;
-    /** The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable. */
-    private TranslationPreferences _translationPreferences;
+    /**
+     * Prioritized list of languages the user reads and authors in.Returned by default. Not nullable.
+     */
+    private java.util.List<LocaleInfo> authoringLanguages;
+    /**
+     * The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
+     */
+    private LocaleInfo defaultDisplayLanguage;
+    /**
+     * The locale that drives the default date, time, and calendar formatting.Returned by default.
+     */
+    private LocaleInfo defaultRegionalFormat;
+    /**
+     * The language a user expected to use as input for text to speech scenarios.Returned by default.
+     */
+    private LocaleInfo defaultSpeechInputLanguage;
+    /**
+     * The language a user expects to have documents, emails, and messages translated into.Returned by default.
+     */
+    private LocaleInfo defaultTranslationLanguage;
+    /**
+     * Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
+     */
+    private RegionalFormatOverrides regionalFormatOverrides;
+    /**
+     * The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
+     */
+    private TranslationPreferences translationPreferences;
     /**
      * Instantiates a new regionalAndLanguageSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RegionalAndLanguageSettings() {
         super();
-        this.setOdataType("#microsoft.graph.regionalAndLanguageSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +59,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<LocaleInfo> getAuthoringLanguages() {
-        return this._authoringLanguages;
+        return this.authoringLanguages;
     }
     /**
      * Gets the defaultDisplayLanguage property value. The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
@@ -54,7 +67,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocaleInfo getDefaultDisplayLanguage() {
-        return this._defaultDisplayLanguage;
+        return this.defaultDisplayLanguage;
     }
     /**
      * Gets the defaultRegionalFormat property value. The locale that drives the default date, time, and calendar formatting.Returned by default.
@@ -62,7 +75,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocaleInfo getDefaultRegionalFormat() {
-        return this._defaultRegionalFormat;
+        return this.defaultRegionalFormat;
     }
     /**
      * Gets the defaultSpeechInputLanguage property value. The language a user expected to use as input for text to speech scenarios.Returned by default.
@@ -70,7 +83,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocaleInfo getDefaultSpeechInputLanguage() {
-        return this._defaultSpeechInputLanguage;
+        return this.defaultSpeechInputLanguage;
     }
     /**
      * Gets the defaultTranslationLanguage property value. The language a user expects to have documents, emails, and messages translated into.Returned by default.
@@ -78,24 +91,23 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocaleInfo getDefaultTranslationLanguage() {
-        return this._defaultTranslationLanguage;
+        return this.defaultTranslationLanguage;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RegionalAndLanguageSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authoringLanguages", (n) -> { currentObject.setAuthoringLanguages(n.getCollectionOfObjectValues(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("defaultDisplayLanguage", (n) -> { currentObject.setDefaultDisplayLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("defaultRegionalFormat", (n) -> { currentObject.setDefaultRegionalFormat(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("defaultSpeechInputLanguage", (n) -> { currentObject.setDefaultSpeechInputLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("defaultTranslationLanguage", (n) -> { currentObject.setDefaultTranslationLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("regionalFormatOverrides", (n) -> { currentObject.setRegionalFormatOverrides(n.getObjectValue(RegionalFormatOverrides::createFromDiscriminatorValue)); });
-            this.put("translationPreferences", (n) -> { currentObject.setTranslationPreferences(n.getObjectValue(TranslationPreferences::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authoringLanguages", (n) -> { this.setAuthoringLanguages(n.getCollectionOfObjectValues(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultDisplayLanguage", (n) -> { this.setDefaultDisplayLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultRegionalFormat", (n) -> { this.setDefaultRegionalFormat(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultSpeechInputLanguage", (n) -> { this.setDefaultSpeechInputLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultTranslationLanguage", (n) -> { this.setDefaultTranslationLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("regionalFormatOverrides", (n) -> { this.setRegionalFormatOverrides(n.getObjectValue(RegionalFormatOverrides::createFromDiscriminatorValue)); });
+        deserializerMap.put("translationPreferences", (n) -> { this.setTranslationPreferences(n.getObjectValue(TranslationPreferences::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the regionalFormatOverrides property value. Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
@@ -103,7 +115,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RegionalFormatOverrides getRegionalFormatOverrides() {
-        return this._regionalFormatOverrides;
+        return this.regionalFormatOverrides;
     }
     /**
      * Gets the translationPreferences property value. The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
@@ -111,13 +123,14 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TranslationPreferences getTranslationPreferences() {
-        return this._translationPreferences;
+        return this.translationPreferences;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,55 +147,62 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      * @param value Value to set for the authoringLanguages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthoringLanguages(@javax.annotation.Nullable final java.util.List<LocaleInfo> value) {
-        this._authoringLanguages = value;
+        this.authoringLanguages = value;
     }
     /**
      * Sets the defaultDisplayLanguage property value. The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
      * @param value Value to set for the defaultDisplayLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultDisplayLanguage(@javax.annotation.Nullable final LocaleInfo value) {
-        this._defaultDisplayLanguage = value;
+        this.defaultDisplayLanguage = value;
     }
     /**
      * Sets the defaultRegionalFormat property value. The locale that drives the default date, time, and calendar formatting.Returned by default.
      * @param value Value to set for the defaultRegionalFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultRegionalFormat(@javax.annotation.Nullable final LocaleInfo value) {
-        this._defaultRegionalFormat = value;
+        this.defaultRegionalFormat = value;
     }
     /**
      * Sets the defaultSpeechInputLanguage property value. The language a user expected to use as input for text to speech scenarios.Returned by default.
      * @param value Value to set for the defaultSpeechInputLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultSpeechInputLanguage(@javax.annotation.Nullable final LocaleInfo value) {
-        this._defaultSpeechInputLanguage = value;
+        this.defaultSpeechInputLanguage = value;
     }
     /**
      * Sets the defaultTranslationLanguage property value. The language a user expects to have documents, emails, and messages translated into.Returned by default.
      * @param value Value to set for the defaultTranslationLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultTranslationLanguage(@javax.annotation.Nullable final LocaleInfo value) {
-        this._defaultTranslationLanguage = value;
+        this.defaultTranslationLanguage = value;
     }
     /**
      * Sets the regionalFormatOverrides property value. Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
      * @param value Value to set for the regionalFormatOverrides property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegionalFormatOverrides(@javax.annotation.Nullable final RegionalFormatOverrides value) {
-        this._regionalFormatOverrides = value;
+        this.regionalFormatOverrides = value;
     }
     /**
      * Sets the translationPreferences property value. The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
      * @param value Value to set for the translationPreferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTranslationPreferences(@javax.annotation.Nullable final TranslationPreferences value) {
-        this._translationPreferences = value;
+        this.translationPreferences = value;
     }
 }

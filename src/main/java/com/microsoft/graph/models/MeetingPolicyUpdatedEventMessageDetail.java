@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Initiator of the event. */
-    private IdentitySet _initiator;
-    /** Represents whether the meeting chat is enabled or not. */
-    private Boolean _meetingChatEnabled;
-    /** Unique identifier of the meeting chat. */
-    private String _meetingChatId;
+    /**
+     * Initiator of the event.
+     */
+    private IdentitySet initiator;
+    /**
+     * Represents whether the meeting chat is enabled or not.
+     */
+    private Boolean meetingChatEnabled;
+    /**
+     * Unique identifier of the meeting chat.
+     */
+    private String meetingChatId;
     /**
      * Instantiates a new MeetingPolicyUpdatedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingPolicyUpdatedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.meetingPolicyUpdatedEventMessageDetail");
@@ -34,16 +40,15 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MeetingPolicyUpdatedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("meetingChatEnabled", (n) -> { currentObject.setMeetingChatEnabled(n.getBooleanValue()); });
-            this.put("meetingChatId", (n) -> { currentObject.setMeetingChatId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingChatEnabled", (n) -> { this.setMeetingChatEnabled(n.getBooleanValue()); });
+        deserializerMap.put("meetingChatId", (n) -> { this.setMeetingChatId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. Initiator of the event.
@@ -51,7 +56,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Gets the meetingChatEnabled property value. Represents whether the meeting chat is enabled or not.
@@ -59,7 +64,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @javax.annotation.Nullable
     public Boolean getMeetingChatEnabled() {
-        return this._meetingChatEnabled;
+        return this.meetingChatEnabled;
     }
     /**
      * Gets the meetingChatId property value. Unique identifier of the meeting chat.
@@ -67,13 +72,14 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     @javax.annotation.Nullable
     public String getMeetingChatId() {
-        return this._meetingChatId;
+        return this.meetingChatId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
     /**
      * Sets the meetingChatEnabled property value. Represents whether the meeting chat is enabled or not.
      * @param value Value to set for the meetingChatEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingChatEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._meetingChatEnabled = value;
+        this.meetingChatEnabled = value;
     }
     /**
      * Sets the meetingChatId property value. Unique identifier of the meeting chat.
      * @param value Value to set for the meetingChatId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingChatId(@javax.annotation.Nullable final String value) {
-        this._meetingChatId = value;
+        this.meetingChatId = value;
     }
 }

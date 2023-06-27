@@ -3,24 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RbacApplicationMultiple extends Entity implements Parsable {
-    /** The resourceNamespaces property */
-    private java.util.List<UnifiedRbacResourceNamespace> _resourceNamespaces;
-    /** The roleAssignments property */
-    private java.util.List<UnifiedRoleAssignmentMultiple> _roleAssignments;
-    /** The roleDefinitions property */
-    private java.util.List<UnifiedRoleDefinition> _roleDefinitions;
+    /**
+     * The resourceNamespaces property
+     */
+    private java.util.List<UnifiedRbacResourceNamespace> resourceNamespaces;
+    /**
+     * The roleAssignments property
+     */
+    private java.util.List<UnifiedRoleAssignmentMultiple> roleAssignments;
+    /**
+     * The roleDefinitions property
+     */
+    private java.util.List<UnifiedRoleDefinition> roleDefinitions;
     /**
      * Instantiates a new RbacApplicationMultiple and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RbacApplicationMultiple() {
         super();
-        this.setOdataType("#microsoft.graph.rbacApplicationMultiple");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,16 +39,15 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RbacApplicationMultiple currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("resourceNamespaces", (n) -> { currentObject.setResourceNamespaces(n.getCollectionOfObjectValues(UnifiedRbacResourceNamespace::createFromDiscriminatorValue)); });
-            this.put("roleAssignments", (n) -> { currentObject.setRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignmentMultiple::createFromDiscriminatorValue)); });
-            this.put("roleDefinitions", (n) -> { currentObject.setRoleDefinitions(n.getCollectionOfObjectValues(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("resourceNamespaces", (n) -> { this.setResourceNamespaces(n.getCollectionOfObjectValues(UnifiedRbacResourceNamespace::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignments", (n) -> { this.setRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignmentMultiple::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleDefinitions", (n) -> { this.setRoleDefinitions(n.getCollectionOfObjectValues(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the resourceNamespaces property value. The resourceNamespaces property
@@ -51,7 +55,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRbacResourceNamespace> getResourceNamespaces() {
-        return this._resourceNamespaces;
+        return this.resourceNamespaces;
     }
     /**
      * Gets the roleAssignments property value. The roleAssignments property
@@ -59,7 +63,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentMultiple> getRoleAssignments() {
-        return this._roleAssignments;
+        return this.roleAssignments;
     }
     /**
      * Gets the roleDefinitions property value. The roleDefinitions property
@@ -67,13 +71,14 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getRoleDefinitions() {
-        return this._roleDefinitions;
+        return this.roleDefinitions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +91,26 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      * @param value Value to set for the resourceNamespaces property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceNamespaces(@javax.annotation.Nullable final java.util.List<UnifiedRbacResourceNamespace> value) {
-        this._resourceNamespaces = value;
+        this.resourceNamespaces = value;
     }
     /**
      * Sets the roleAssignments property value. The roleAssignments property
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentMultiple> value) {
-        this._roleAssignments = value;
+        this.roleAssignments = value;
     }
     /**
      * Sets the roleDefinitions property value. The roleDefinitions property
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
-        this._roleDefinitions = value;
+        this.roleDefinitions = value;
     }
 }

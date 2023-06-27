@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate extends DeviceManagementConfigurationIntegerSettingValueDefaultTemplate implements Parsable {
-    /** Default Constant Value. Valid values -2147483648 to 2147483647 */
-    private Integer _constantValue;
+    /**
+     * Default Constant Value. Valid values -2147483648 to 2147483647
+     */
+    private Integer constantValue;
     /**
      * Instantiates a new DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate");
@@ -34,24 +36,24 @@ public class DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemp
      */
     @javax.annotation.Nullable
     public Integer getConstantValue() {
-        return this._constantValue;
+        return this.constantValue;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("constantValue", (n) -> { currentObject.setConstantValue(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("constantValue", (n) -> { this.setConstantValue(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemp
      * @param value Value to set for the constantValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConstantValue(@javax.annotation.Nullable final Integer value) {
-        this._constantValue = value;
+        this.constantValue = value;
     }
 }

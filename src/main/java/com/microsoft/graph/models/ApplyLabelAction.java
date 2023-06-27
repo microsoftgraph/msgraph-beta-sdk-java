@@ -3,23 +3,32 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class ApplyLabelAction extends InformationProtectionAction implements Parsable {
-    /** The collection of specific actions that should be taken by the consuming application to label the document. See  informationProtectionAction for the full list. */
-    private java.util.List<InformationProtectionAction> _actions;
-    /** The actionSource property */
-    private ActionSource _actionSource;
-    /** Object that describes the details of the label to apply. */
-    private LabelDetails _label;
-    /** If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label. */
-    private java.util.List<String> _responsibleSensitiveTypeIds;
+    /**
+     * The collection of specific actions that should be taken by the consuming application to label the document. See  informationProtectionAction for the full list.
+     */
+    private java.util.List<InformationProtectionAction> actions;
+    /**
+     * The actionSource property
+     */
+    private ActionSource actionSource;
+    /**
+     * Object that describes the details of the label to apply.
+     */
+    private LabelDetails label;
+    /**
+     * If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
+     */
+    private java.util.List<UUID> responsibleSensitiveTypeIds;
     /**
      * Instantiates a new ApplyLabelAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ApplyLabelAction() {
         super();
         this.setOdataType("#microsoft.graph.applyLabelAction");
@@ -40,29 +49,28 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
      */
     @javax.annotation.Nullable
     public java.util.List<InformationProtectionAction> getActions() {
-        return this._actions;
+        return this.actions;
     }
     /**
      * Gets the actionSource property value. The actionSource property
-     * @return a actionSource
+     * @return a ActionSource
      */
     @javax.annotation.Nullable
     public ActionSource getActionSource() {
-        return this._actionSource;
+        return this.actionSource;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ApplyLabelAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actions", (n) -> { currentObject.setActions(n.getCollectionOfObjectValues(InformationProtectionAction::createFromDiscriminatorValue)); });
-            this.put("actionSource", (n) -> { currentObject.setActionSource(n.getEnumValue(ActionSource.class)); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getObjectValue(LabelDetails::createFromDiscriminatorValue)); });
-            this.put("responsibleSensitiveTypeIds", (n) -> { currentObject.setResponsibleSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actions", (n) -> { this.setActions(n.getCollectionOfObjectValues(InformationProtectionAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("actionSource", (n) -> { this.setActionSource(n.getEnumValue(ActionSource.class)); });
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getObjectValue(LabelDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("responsibleSensitiveTypeIds", (n) -> { this.setResponsibleSensitiveTypeIds(n.getCollectionOfPrimitiveValues(UUID.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the label property value. Object that describes the details of the label to apply.
@@ -70,21 +78,22 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
      */
     @javax.annotation.Nullable
     public LabelDetails getLabel() {
-        return this._label;
+        return this.label;
     }
     /**
      * Gets the responsibleSensitiveTypeIds property value. If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getResponsibleSensitiveTypeIds() {
-        return this._responsibleSensitiveTypeIds;
+    public java.util.List<UUID> getResponsibleSensitiveTypeIds() {
+        return this.responsibleSensitiveTypeIds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,31 +107,35 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
      * @param value Value to set for the actions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActions(@javax.annotation.Nullable final java.util.List<InformationProtectionAction> value) {
-        this._actions = value;
+        this.actions = value;
     }
     /**
      * Sets the actionSource property value. The actionSource property
      * @param value Value to set for the actionSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionSource(@javax.annotation.Nullable final ActionSource value) {
-        this._actionSource = value;
+        this.actionSource = value;
     }
     /**
      * Sets the label property value. Object that describes the details of the label to apply.
      * @param value Value to set for the label property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabel(@javax.annotation.Nullable final LabelDetails value) {
-        this._label = value;
+        this.label = value;
     }
     /**
      * Sets the responsibleSensitiveTypeIds property value. If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
      * @param value Value to set for the responsibleSensitiveTypeIds property.
      * @return a void
      */
-    public void setResponsibleSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._responsibleSensitiveTypeIds = value;
+    @javax.annotation.Nonnull
+    public void setResponsibleSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<UUID> value) {
+        this.responsibleSensitiveTypeIds = value;
     }
 }

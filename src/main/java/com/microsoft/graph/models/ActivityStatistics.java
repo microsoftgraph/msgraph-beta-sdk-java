@@ -1,38 +1,41 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.CallActivityStatistics;
-import com.microsoft.graph.models.ChatActivityStatistics;
-import com.microsoft.graph.models.EmailActivityStatistics;
-import com.microsoft.graph.models.FocusActivityStatistics;
-import com.microsoft.graph.models.MeetingActivityStatistics;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of activityStatistics entities. */
 public class ActivityStatistics extends Entity implements Parsable {
-    /** The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting. */
-    private AnalyticsActivityType _activity;
-    /** Total hours spent on the activity. The value is represented in ISO 8601 format for durations. */
-    private Period _duration;
-    /** Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format. */
-    private LocalDate _endDate;
-    /** Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format. */
-    private LocalDate _startDate;
-    /** The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.' */
-    private String _timeZoneUsed;
+    /**
+     * The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting.
+     */
+    private AnalyticsActivityType activity;
+    /**
+     * Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
+     */
+    private Period duration;
+    /**
+     * Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
+     */
+    private LocalDate endDate;
+    /**
+     * Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
+     */
+    private LocalDate startDate;
+    /**
+     * The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
+     */
+    private String timeZoneUsed;
     /**
      * Instantiates a new activityStatistics and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ActivityStatistics() {
         super();
-        this.setOdataType("#microsoft.graph.activityStatistics");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +64,7 @@ public class ActivityStatistics extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AnalyticsActivityType getActivity() {
-        return this._activity;
+        return this.activity;
     }
     /**
      * Gets the duration property value. Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
@@ -69,7 +72,7 @@ public class ActivityStatistics extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Period getDuration() {
-        return this._duration;
+        return this.duration;
     }
     /**
      * Gets the endDate property value. Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
@@ -77,22 +80,21 @@ public class ActivityStatistics extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getEndDate() {
-        return this._endDate;
+        return this.endDate;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ActivityStatistics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getEnumValue(AnalyticsActivityType.class)); });
-            this.put("duration", (n) -> { currentObject.setDuration(n.getPeriodValue()); });
-            this.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
-            this.put("startDate", (n) -> { currentObject.setStartDate(n.getLocalDateValue()); });
-            this.put("timeZoneUsed", (n) -> { currentObject.setTimeZoneUsed(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(AnalyticsActivityType.class)); });
+        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodValue()); });
+        deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getLocalDateValue()); });
+        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getLocalDateValue()); });
+        deserializerMap.put("timeZoneUsed", (n) -> { this.setTimeZoneUsed(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the startDate property value. Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
@@ -100,7 +102,7 @@ public class ActivityStatistics extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getStartDate() {
-        return this._startDate;
+        return this.startDate;
     }
     /**
      * Gets the timeZoneUsed property value. The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
@@ -108,13 +110,14 @@ public class ActivityStatistics extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTimeZoneUsed() {
-        return this._timeZoneUsed;
+        return this.timeZoneUsed;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -129,39 +132,44 @@ public class ActivityStatistics extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final AnalyticsActivityType value) {
-        this._activity = value;
+        this.activity = value;
     }
     /**
      * Sets the duration property value. Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
      * @param value Value to set for the duration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDuration(@javax.annotation.Nullable final Period value) {
-        this._duration = value;
+        this.duration = value;
     }
     /**
      * Sets the endDate property value. Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
      * @param value Value to set for the endDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDate(@javax.annotation.Nullable final LocalDate value) {
-        this._endDate = value;
+        this.endDate = value;
     }
     /**
      * Sets the startDate property value. Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
      * @param value Value to set for the startDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDate(@javax.annotation.Nullable final LocalDate value) {
-        this._startDate = value;
+        this.startDate = value;
     }
     /**
      * Sets the timeZoneUsed property value. The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
      * @param value Value to set for the timeZoneUsed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeZoneUsed(@javax.annotation.Nullable final String value) {
-        this._timeZoneUsed = value;
+        this.timeZoneUsed = value;
     }
 }

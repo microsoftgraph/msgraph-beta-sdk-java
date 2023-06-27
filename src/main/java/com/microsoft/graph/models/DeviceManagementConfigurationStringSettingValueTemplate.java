@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementConfigurationStringSettingValueTemplate extends DeviceManagementConfigurationSimpleSettingValueTemplate implements Parsable {
-    /** String Setting Value Default Template. */
-    private DeviceManagementConfigurationStringSettingValueDefaultTemplate _defaultValue;
+    /**
+     * String Setting Value Default Template.
+     */
+    private DeviceManagementConfigurationStringSettingValueDefaultTemplate defaultValue;
     /**
      * Instantiates a new DeviceManagementConfigurationStringSettingValueTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationStringSettingValueTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationStringSettingValueTemplate");
@@ -34,24 +36,24 @@ public class DeviceManagementConfigurationStringSettingValueTemplate extends Dev
      */
     @javax.annotation.Nullable
     public DeviceManagementConfigurationStringSettingValueDefaultTemplate getDefaultValue() {
-        return this._defaultValue;
+        return this.defaultValue;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationStringSettingValueTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationStringSettingValueDefaultTemplate::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationStringSettingValueDefaultTemplate::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class DeviceManagementConfigurationStringSettingValueTemplate extends Dev
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final DeviceManagementConfigurationStringSettingValueDefaultTemplate value) {
-        this._defaultValue = value;
+        this.defaultValue = value;
     }
 }

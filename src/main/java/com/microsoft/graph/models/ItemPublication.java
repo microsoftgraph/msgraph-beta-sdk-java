@@ -4,27 +4,39 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemPublication extends ItemFacet implements Parsable {
-    /** Description of the publication. */
-    private String _description;
-    /** Title of the publication. */
-    private String _displayName;
-    /** The date that the publication was published. */
-    private LocalDate _publishedDate;
-    /** Publication or publisher for the publication. */
-    private String _publisher;
-    /** URL referencing a thumbnail of the publication. */
-    private String _thumbnailUrl;
-    /** URL referencing the publication. */
-    private String _webUrl;
+    /**
+     * Description of the publication.
+     */
+    private String description;
+    /**
+     * Title of the publication.
+     */
+    private String displayName;
+    /**
+     * The date that the publication was published.
+     */
+    private LocalDate publishedDate;
+    /**
+     * Publication or publisher for the publication.
+     */
+    private String publisher;
+    /**
+     * URL referencing a thumbnail of the publication.
+     */
+    private String thumbnailUrl;
+    /**
+     * URL referencing the publication.
+     */
+    private String webUrl;
     /**
      * Instantiates a new ItemPublication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemPublication() {
         super();
         this.setOdataType("#microsoft.graph.itemPublication");
@@ -45,7 +57,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Title of the publication.
@@ -53,23 +65,22 @@ public class ItemPublication extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ItemPublication currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("publishedDate", (n) -> { currentObject.setPublishedDate(n.getLocalDateValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("publishedDate", (n) -> { this.setPublishedDate(n.getLocalDateValue()); });
+        deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("thumbnailUrl", (n) -> { this.setThumbnailUrl(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the publishedDate property value. The date that the publication was published.
@@ -77,7 +88,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getPublishedDate() {
-        return this._publishedDate;
+        return this.publishedDate;
     }
     /**
      * Gets the publisher property value. Publication or publisher for the publication.
@@ -85,7 +96,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPublisher() {
-        return this._publisher;
+        return this.publisher;
     }
     /**
      * Gets the thumbnailUrl property value. URL referencing a thumbnail of the publication.
@@ -93,7 +104,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getThumbnailUrl() {
-        return this._thumbnailUrl;
+        return this.thumbnailUrl;
     }
     /**
      * Gets the webUrl property value. URL referencing the publication.
@@ -101,13 +112,14 @@ public class ItemPublication extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +135,53 @@ public class ItemPublication extends ItemFacet implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Title of the publication.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the publishedDate property value. The date that the publication was published.
      * @param value Value to set for the publishedDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedDate(@javax.annotation.Nullable final LocalDate value) {
-        this._publishedDate = value;
+        this.publishedDate = value;
     }
     /**
      * Sets the publisher property value. Publication or publisher for the publication.
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
-        this._publisher = value;
+        this.publisher = value;
     }
     /**
      * Sets the thumbnailUrl property value. URL referencing a thumbnail of the publication.
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
-        this._thumbnailUrl = value;
+        this.thumbnailUrl = value;
     }
     /**
      * Sets the webUrl property value. URL referencing the publication.
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

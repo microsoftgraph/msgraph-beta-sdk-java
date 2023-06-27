@@ -4,20 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the restoreCloudPc method. */
 public class RestoreCloudPcPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The cloudPcSnapshotId property */
-    private String _cloudPcSnapshotId;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The cloudPcSnapshotId property
+     */
+    private String cloudPcSnapshotId;
     /**
      * Instantiates a new restoreCloudPcPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RestoreCloudPcPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,7 +40,7 @@ public class RestoreCloudPcPostRequestBody implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the cloudPcSnapshotId property value. The cloudPcSnapshotId property
@@ -45,24 +48,24 @@ public class RestoreCloudPcPostRequestBody implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getCloudPcSnapshotId() {
-        return this._cloudPcSnapshotId;
+        return this.cloudPcSnapshotId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RestoreCloudPcPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("cloudPcSnapshotId", (n) -> { currentObject.setCloudPcSnapshotId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("cloudPcSnapshotId", (n) -> { this.setCloudPcSnapshotId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("cloudPcSnapshotId", this.getCloudPcSnapshotId());
@@ -73,15 +76,17 @@ public class RestoreCloudPcPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the cloudPcSnapshotId property value. The cloudPcSnapshotId property
      * @param value Value to set for the cloudPcSnapshotId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcSnapshotId(@javax.annotation.Nullable final String value) {
-        this._cloudPcSnapshotId = value;
+        this.cloudPcSnapshotId = value;
     }
 }

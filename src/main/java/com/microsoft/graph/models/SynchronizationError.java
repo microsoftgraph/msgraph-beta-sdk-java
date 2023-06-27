@@ -4,28 +4,37 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SynchronizationError implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The code property */
-    private String _code;
-    /** The message property */
-    private String _message;
-    /** The OdataType property */
-    private String _odataType;
-    /** The tenantActionable property */
-    private Boolean _tenantActionable;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The error code. For example, AzureDirectoryB2BManagementPolicyCheckFailure.
+     */
+    private String code;
+    /**
+     * The error message. For example, Policy permitting auto-redemption of invitations not configured.
+     */
+    private String message;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The action to take to resolve the error. For example, false.
+     */
+    private Boolean tenantActionable;
     /**
      * Instantiates a new synchronizationError and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.synchronizationError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,37 +52,36 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
-     * Gets the code property value. The code property
+     * Gets the code property value. The error code. For example, AzureDirectoryB2BManagementPolicyCheckFailure.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getCode() {
-        return this._code;
+        return this.code;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SynchronizationError currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tenantActionable", (n) -> { currentObject.setTenantActionable(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tenantActionable", (n) -> { this.setTenantActionable(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the message property value. The message property
+     * Gets the message property value. The error message. For example, Policy permitting auto-redemption of invitations not configured.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getMessage() {
-        return this._message;
+        return this.message;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -81,21 +89,22 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the tenantActionable property value. The tenantActionable property
+     * Gets the tenantActionable property value. The action to take to resolve the error. For example, false.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getTenantActionable() {
-        return this._tenantActionable;
+        return this.tenantActionable;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("code", this.getCode());
@@ -109,39 +118,44 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
-     * Sets the code property value. The code property
+     * Sets the code property value. The error code. For example, AzureDirectoryB2BManagementPolicyCheckFailure.
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
-        this._code = value;
+        this.code = value;
     }
     /**
-     * Sets the message property value. The message property
+     * Sets the message property value. The error message. For example, Policy permitting auto-redemption of invitations not configured.
      * @param value Value to set for the message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
-        this._message = value;
+        this.message = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the tenantActionable property value. The tenantActionable property
+     * Sets the tenantActionable property value. The action to take to resolve the error. For example, false.
      * @param value Value to set for the tenantActionable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantActionable(@javax.annotation.Nullable final Boolean value) {
-        this._tenantActionable = value;
+        this.tenantActionable = value;
     }
 }

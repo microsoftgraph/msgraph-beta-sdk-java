@@ -4,28 +4,37 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The identifier for the management action. Required. Read-only. */
-    private String _managementActionId;
-    /** The identifier for the management template. Required. Read-only. */
-    private String _managementTemplateId;
-    /** The managementTemplateVersion property */
-    private Integer _managementTemplateVersion;
-    /** The OdataType property */
-    private String _odataType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The identifier for the management action. Required. Read-only.
+     */
+    private String managementActionId;
+    /**
+     * The identifier for the management template. Required. Read-only.
+     */
+    private String managementTemplateId;
+    /**
+     * The managementTemplateVersion property
+     */
+    private Integer managementTemplateVersion;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
     /**
      * Instantiates a new managementActionInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagementActionInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.managedTenants.managementActionInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,21 +52,20 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagementActionInfo currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("managementActionId", (n) -> { currentObject.setManagementActionId(n.getStringValue()); });
-            this.put("managementTemplateId", (n) -> { currentObject.setManagementTemplateId(n.getStringValue()); });
-            this.put("managementTemplateVersion", (n) -> { currentObject.setManagementTemplateVersion(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("managementActionId", (n) -> { this.setManagementActionId(n.getStringValue()); });
+        deserializerMap.put("managementTemplateId", (n) -> { this.setManagementTemplateId(n.getStringValue()); });
+        deserializerMap.put("managementTemplateVersion", (n) -> { this.setManagementTemplateVersion(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managementActionId property value. The identifier for the management action. Required. Read-only.
@@ -65,7 +73,7 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getManagementActionId() {
-        return this._managementActionId;
+        return this.managementActionId;
     }
     /**
      * Gets the managementTemplateId property value. The identifier for the management template. Required. Read-only.
@@ -73,7 +81,7 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getManagementTemplateId() {
-        return this._managementTemplateId;
+        return this.managementTemplateId;
     }
     /**
      * Gets the managementTemplateVersion property value. The managementTemplateVersion property
@@ -81,7 +89,7 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getManagementTemplateVersion() {
-        return this._managementTemplateVersion;
+        return this.managementTemplateVersion;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -89,13 +97,14 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("managementActionId", this.getManagementActionId());
@@ -109,39 +118,44 @@ public class ManagementActionInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the managementActionId property value. The identifier for the management action. Required. Read-only.
      * @param value Value to set for the managementActionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementActionId(@javax.annotation.Nullable final String value) {
-        this._managementActionId = value;
+        this.managementActionId = value;
     }
     /**
      * Sets the managementTemplateId property value. The identifier for the management template. Required. Read-only.
      * @param value Value to set for the managementTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementTemplateId(@javax.annotation.Nullable final String value) {
-        this._managementTemplateId = value;
+        this.managementTemplateId = value;
     }
     /**
      * Sets the managementTemplateVersion property value. The managementTemplateVersion property
      * @param value Value to set for the managementTemplateVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementTemplateVersion(@javax.annotation.Nullable final Integer value) {
-        this._managementTemplateVersion = value;
+        this.managementTemplateVersion = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

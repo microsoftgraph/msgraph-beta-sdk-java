@@ -3,34 +3,49 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity implements Parsable {
-    /** User experience analytics device startup process summarized count. */
-    private Long _deviceCount;
-    /** User experience analytics device startup process median impact in milliseconds. */
-    private Integer _medianImpactInMs;
-    /** User experience analytics device startup process median impact in milliseconds. */
-    private Long _medianImpactInMs2;
-    /** User experience analytics device startup process name. */
-    private String _processName;
-    /** The user experience analytics device startup process product name. */
-    private String _productName;
-    /** The User experience analytics device startup process publisher. */
-    private String _publisher;
-    /** User experience analytics device startup process total impact in milliseconds. */
-    private Integer _totalImpactInMs;
-    /** User experience analytics device startup process total impact in milliseconds. */
-    private Long _totalImpactInMs2;
+    /**
+     * The count of devices which initiated this process on startup. Supports: $filter, $select, $OrderBy. Read-only.
+     */
+    private Long deviceCount;
+    /**
+     * The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
+     */
+    private Long medianImpactInMs;
+    /**
+     * The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
+     */
+    private Long medianImpactInMs2;
+    /**
+     * The name of the startup process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
+     */
+    private String processName;
+    /**
+     * The product name of the startup process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
+     */
+    private String productName;
+    /**
+     * The publisher of the startup process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
+     */
+    private String publisher;
+    /**
+     * The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
+     */
+    private Long totalImpactInMs;
+    /**
+     * The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
+     */
+    private Long totalImpactInMs2;
     /**
      * Instantiates a new UserExperienceAnalyticsDeviceStartupProcessPerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupProcessPerformance() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsDeviceStartupProcessPerformance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,166 +58,174 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
         return new UserExperienceAnalyticsDeviceStartupProcessPerformance();
     }
     /**
-     * Gets the deviceCount property value. User experience analytics device startup process summarized count.
+     * Gets the deviceCount property value. The count of devices which initiated this process on startup. Supports: $filter, $select, $OrderBy. Read-only.
      * @return a int64
      */
     @javax.annotation.Nullable
     public Long getDeviceCount() {
-        return this._deviceCount;
+        return this.deviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsDeviceStartupProcessPerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getLongValue()); });
-            this.put("medianImpactInMs", (n) -> { currentObject.setMedianImpactInMs(n.getIntegerValue()); });
-            this.put("medianImpactInMs2", (n) -> { currentObject.setMedianImpactInMs2(n.getLongValue()); });
-            this.put("processName", (n) -> { currentObject.setProcessName(n.getStringValue()); });
-            this.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("totalImpactInMs", (n) -> { currentObject.setTotalImpactInMs(n.getIntegerValue()); });
-            this.put("totalImpactInMs2", (n) -> { currentObject.setTotalImpactInMs2(n.getLongValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getLongValue()); });
+        deserializerMap.put("medianImpactInMs", (n) -> { this.setMedianImpactInMs(n.getLongValue()); });
+        deserializerMap.put("medianImpactInMs2", (n) -> { this.setMedianImpactInMs2(n.getLongValue()); });
+        deserializerMap.put("processName", (n) -> { this.setProcessName(n.getStringValue()); });
+        deserializerMap.put("productName", (n) -> { this.setProductName(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("totalImpactInMs", (n) -> { this.setTotalImpactInMs(n.getLongValue()); });
+        deserializerMap.put("totalImpactInMs2", (n) -> { this.setTotalImpactInMs2(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the medianImpactInMs property value. User experience analytics device startup process median impact in milliseconds.
-     * @return a integer
+     * Gets the medianImpactInMs property value. The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
+     * @return a int64
      */
     @javax.annotation.Nullable
-    public Integer getMedianImpactInMs() {
-        return this._medianImpactInMs;
+    public Long getMedianImpactInMs() {
+        return this.medianImpactInMs;
     }
     /**
-     * Gets the medianImpactInMs2 property value. User experience analytics device startup process median impact in milliseconds.
+     * Gets the medianImpactInMs2 property value. The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
      * @return a int64
      */
     @javax.annotation.Nullable
     public Long getMedianImpactInMs2() {
-        return this._medianImpactInMs2;
+        return this.medianImpactInMs2;
     }
     /**
-     * Gets the processName property value. User experience analytics device startup process name.
+     * Gets the processName property value. The name of the startup process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getProcessName() {
-        return this._processName;
+        return this.processName;
     }
     /**
-     * Gets the productName property value. The user experience analytics device startup process product name.
+     * Gets the productName property value. The product name of the startup process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getProductName() {
-        return this._productName;
+        return this.productName;
     }
     /**
-     * Gets the publisher property value. The User experience analytics device startup process publisher.
+     * Gets the publisher property value. The publisher of the startup process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getPublisher() {
-        return this._publisher;
+        return this.publisher;
     }
     /**
-     * Gets the totalImpactInMs property value. User experience analytics device startup process total impact in milliseconds.
-     * @return a integer
+     * Gets the totalImpactInMs property value. The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
+     * @return a int64
      */
     @javax.annotation.Nullable
-    public Integer getTotalImpactInMs() {
-        return this._totalImpactInMs;
+    public Long getTotalImpactInMs() {
+        return this.totalImpactInMs;
     }
     /**
-     * Gets the totalImpactInMs2 property value. User experience analytics device startup process total impact in milliseconds.
+     * Gets the totalImpactInMs2 property value. The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
      * @return a int64
      */
     @javax.annotation.Nullable
     public Long getTotalImpactInMs2() {
-        return this._totalImpactInMs2;
+        return this.totalImpactInMs2;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeLongValue("deviceCount", this.getDeviceCount());
-        writer.writeIntegerValue("medianImpactInMs", this.getMedianImpactInMs());
+        writer.writeLongValue("medianImpactInMs", this.getMedianImpactInMs());
         writer.writeLongValue("medianImpactInMs2", this.getMedianImpactInMs2());
         writer.writeStringValue("processName", this.getProcessName());
         writer.writeStringValue("productName", this.getProductName());
         writer.writeStringValue("publisher", this.getPublisher());
-        writer.writeIntegerValue("totalImpactInMs", this.getTotalImpactInMs());
+        writer.writeLongValue("totalImpactInMs", this.getTotalImpactInMs());
         writer.writeLongValue("totalImpactInMs2", this.getTotalImpactInMs2());
     }
     /**
-     * Sets the deviceCount property value. User experience analytics device startup process summarized count.
+     * Sets the deviceCount property value. The count of devices which initiated this process on startup. Supports: $filter, $select, $OrderBy. Read-only.
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Long value) {
-        this._deviceCount = value;
+        this.deviceCount = value;
     }
     /**
-     * Sets the medianImpactInMs property value. User experience analytics device startup process median impact in milliseconds.
+     * Sets the medianImpactInMs property value. The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
      * @param value Value to set for the medianImpactInMs property.
      * @return a void
      */
-    public void setMedianImpactInMs(@javax.annotation.Nullable final Integer value) {
-        this._medianImpactInMs = value;
+    @javax.annotation.Nonnull
+    public void setMedianImpactInMs(@javax.annotation.Nullable final Long value) {
+        this.medianImpactInMs = value;
     }
     /**
-     * Sets the medianImpactInMs2 property value. User experience analytics device startup process median impact in milliseconds.
+     * Sets the medianImpactInMs2 property value. The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
      * @param value Value to set for the medianImpactInMs2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMedianImpactInMs2(@javax.annotation.Nullable final Long value) {
-        this._medianImpactInMs2 = value;
+        this.medianImpactInMs2 = value;
     }
     /**
-     * Sets the processName property value. User experience analytics device startup process name.
+     * Sets the processName property value. The name of the startup process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the processName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessName(@javax.annotation.Nullable final String value) {
-        this._processName = value;
+        this.processName = value;
     }
     /**
-     * Sets the productName property value. The user experience analytics device startup process product name.
+     * Sets the productName property value. The product name of the startup process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the productName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductName(@javax.annotation.Nullable final String value) {
-        this._productName = value;
+        this.productName = value;
     }
     /**
-     * Sets the publisher property value. The User experience analytics device startup process publisher.
+     * Sets the publisher property value. The publisher of the startup process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
-        this._publisher = value;
+        this.publisher = value;
     }
     /**
-     * Sets the totalImpactInMs property value. User experience analytics device startup process total impact in milliseconds.
+     * Sets the totalImpactInMs property value. The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
      * @param value Value to set for the totalImpactInMs property.
      * @return a void
      */
-    public void setTotalImpactInMs(@javax.annotation.Nullable final Integer value) {
-        this._totalImpactInMs = value;
+    @javax.annotation.Nonnull
+    public void setTotalImpactInMs(@javax.annotation.Nullable final Long value) {
+        this.totalImpactInMs = value;
     }
     /**
-     * Sets the totalImpactInMs2 property value. User experience analytics device startup process total impact in milliseconds.
+     * Sets the totalImpactInMs2 property value. The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
      * @param value Value to set for the totalImpactInMs2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalImpactInMs2(@javax.annotation.Nullable final Long value) {
-        this._totalImpactInMs2 = value;
+        this.totalImpactInMs2 = value;
     }
 }

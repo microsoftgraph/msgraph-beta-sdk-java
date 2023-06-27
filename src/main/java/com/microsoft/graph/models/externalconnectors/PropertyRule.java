@@ -5,30 +5,41 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PropertyRule implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The OdataType property */
-    private String _odataType;
-    /** The operation property */
-    private RuleOperation _operation;
-    /** The property from the externalItem schema. Required. */
-    private String _property;
-    /** A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required. */
-    private java.util.List<String> _values;
-    /** The valuesJoinedBy property */
-    private BinaryOperator _valuesJoinedBy;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The operation property
+     */
+    private RuleOperation operation;
+    /**
+     * The property from the externalItem schema. Required.
+     */
+    private String property;
+    /**
+     * A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required.
+     */
+    private java.util.List<String> values;
+    /**
+     * The valuesJoinedBy property
+     */
+    private BinaryOperator valuesJoinedBy;
     /**
      * Instantiates a new propertyRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PropertyRule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.externalConnectors.propertyRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,22 +57,21 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PropertyRule currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operation", (n) -> { currentObject.setOperation(n.getEnumValue(RuleOperation.class)); });
-            this.put("property", (n) -> { currentObject.setProperty(n.getStringValue()); });
-            this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("valuesJoinedBy", (n) -> { currentObject.setValuesJoinedBy(n.getEnumValue(BinaryOperator.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operation", (n) -> { this.setOperation(n.getEnumValue(RuleOperation.class)); });
+        deserializerMap.put("property", (n) -> { this.setProperty(n.getStringValue()); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("valuesJoinedBy", (n) -> { this.setValuesJoinedBy(n.getEnumValue(BinaryOperator.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -69,15 +79,15 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the operation property value. The operation property
-     * @return a ruleOperation
+     * @return a RuleOperation
      */
     @javax.annotation.Nullable
     public RuleOperation getOperation() {
-        return this._operation;
+        return this.operation;
     }
     /**
      * Gets the property property value. The property from the externalItem schema. Required.
@@ -85,7 +95,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getProperty() {
-        return this._property;
+        return this.property;
     }
     /**
      * Gets the values property value. A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required.
@@ -93,21 +103,22 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getValues() {
-        return this._values;
+        return this.values;
     }
     /**
      * Gets the valuesJoinedBy property value. The valuesJoinedBy property
-     * @return a binaryOperator
+     * @return a BinaryOperator
      */
     @javax.annotation.Nullable
     public BinaryOperator getValuesJoinedBy() {
-        return this._valuesJoinedBy;
+        return this.valuesJoinedBy;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -122,47 +133,53 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the operation property value. The operation property
      * @param value Value to set for the operation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperation(@javax.annotation.Nullable final RuleOperation value) {
-        this._operation = value;
+        this.operation = value;
     }
     /**
      * Sets the property property value. The property from the externalItem schema. Required.
      * @param value Value to set for the property property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProperty(@javax.annotation.Nullable final String value) {
-        this._property = value;
+        this.property = value;
     }
     /**
      * Sets the values property value. A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required.
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._values = value;
+        this.values = value;
     }
     /**
      * Sets the valuesJoinedBy property value. The valuesJoinedBy property
      * @param value Value to set for the valuesJoinedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValuesJoinedBy(@javax.annotation.Nullable final BinaryOperator value) {
-        this._valuesJoinedBy = value;
+        this.valuesJoinedBy = value;
     }
 }

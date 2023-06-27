@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentation implements Parsable {
-    /** Localized default string displayed in the text box. The default value is empty. */
-    private String _defaultValue;
-    /** An unsigned integer that specifies the maximum number of text characters. Default value is 1023. */
-    private Long _maxLength;
-    /** Requirement to enter a value in the text box. Default value is false. */
-    private Boolean _required;
+    /**
+     * Localized default string displayed in the text box. The default value is empty.
+     */
+    private String defaultValue;
+    /**
+     * An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
+     */
+    private Long maxLength;
+    /**
+     * Requirement to enter a value in the text box. Default value is false.
+     */
+    private Boolean required;
     /**
      * Instantiates a new GroupPolicyPresentationTextBox and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationTextBox() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationTextBox");
@@ -38,20 +44,19 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
      */
     @javax.annotation.Nullable
     public String getDefaultValue() {
-        return this._defaultValue;
+        return this.defaultValue;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationTextBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
-            this.put("maxLength", (n) -> { currentObject.setMaxLength(n.getLongValue()); });
-            this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getStringValue()); });
+        deserializerMap.put("maxLength", (n) -> { this.setMaxLength(n.getLongValue()); });
+        deserializerMap.put("required", (n) -> { this.setRequired(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maxLength property value. An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
@@ -59,7 +64,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
      */
     @javax.annotation.Nullable
     public Long getMaxLength() {
-        return this._maxLength;
+        return this.maxLength;
     }
     /**
      * Gets the required property value. Requirement to enter a value in the text box. Default value is false.
@@ -67,13 +72,14 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
      */
     @javax.annotation.Nullable
     public Boolean getRequired() {
-        return this._required;
+        return this.required;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final String value) {
-        this._defaultValue = value;
+        this.defaultValue = value;
     }
     /**
      * Sets the maxLength property value. An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
      * @param value Value to set for the maxLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxLength(@javax.annotation.Nullable final Long value) {
-        this._maxLength = value;
+        this.maxLength = value;
     }
     /**
      * Sets the required property value. Requirement to enter a value in the text box. Default value is false.
      * @param value Value to set for the required property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequired(@javax.annotation.Nullable final Boolean value) {
-        this._required = value;
+        this.required = value;
     }
 }

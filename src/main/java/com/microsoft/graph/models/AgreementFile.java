@@ -3,20 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AgreementFile extends AgreementFileProperties implements Parsable {
-    /** The localized version of the terms of use agreement files attached to the agreement. */
-    private java.util.List<AgreementFileLocalization> _localizations;
+    /**
+     * The localized version of the terms of use agreement files attached to the agreement.
+     */
+    private java.util.List<AgreementFileLocalization> localizations;
     /**
      * Instantiates a new AgreementFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AgreementFile() {
         super();
-        this.setOdataType("#microsoft.graph.agreementFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +31,13 @@ public class AgreementFile extends AgreementFileProperties implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AgreementFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("localizations", (n) -> { currentObject.setLocalizations(n.getCollectionOfObjectValues(AgreementFileLocalization::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("localizations", (n) -> { this.setLocalizations(n.getCollectionOfObjectValues(AgreementFileLocalization::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the localizations property value. The localized version of the terms of use agreement files attached to the agreement.
@@ -45,13 +45,14 @@ public class AgreementFile extends AgreementFileProperties implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AgreementFileLocalization> getLocalizations() {
-        return this._localizations;
+        return this.localizations;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +63,8 @@ public class AgreementFile extends AgreementFileProperties implements Parsable {
      * @param value Value to set for the localizations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalizations(@javax.annotation.Nullable final java.util.List<AgreementFileLocalization> value) {
-        this._localizations = value;
+        this.localizations = value;
     }
 }

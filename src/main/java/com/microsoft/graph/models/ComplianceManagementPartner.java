@@ -4,41 +4,56 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Compliance management partner for all platforms */
+/**
+ * Compliance management partner for all platforms
+ */
 public class ComplianceManagementPartner extends Entity implements Parsable {
-    /** User groups which enroll Android devices through partner. */
-    private java.util.List<ComplianceManagementPartnerAssignment> _androidEnrollmentAssignments;
-    /** Partner onboarded for Android devices. */
-    private Boolean _androidOnboarded;
-    /** Partner display name */
-    private String _displayName;
-    /** User groups which enroll ios devices through partner. */
-    private java.util.List<ComplianceManagementPartnerAssignment> _iosEnrollmentAssignments;
-    /** Partner onboarded for ios devices. */
-    private Boolean _iosOnboarded;
-    /** Timestamp of last heartbeat after admin onboarded to the compliance management partner */
-    private OffsetDateTime _lastHeartbeatDateTime;
-    /** User groups which enroll Mac devices through partner. */
-    private java.util.List<ComplianceManagementPartnerAssignment> _macOsEnrollmentAssignments;
-    /** Partner onboarded for Mac devices. */
-    private Boolean _macOsOnboarded;
-    /** Partner state of this tenant. */
-    private DeviceManagementPartnerTenantState _partnerState;
-    /** User groups which enroll Windows devices through partner. */
-    private java.util.List<ComplianceManagementPartnerAssignment> _windowsEnrollmentAssignments;
-    /** Partner onboarded for Windows devices. */
-    private Boolean _windowsOnboarded;
+    /**
+     * User groups which enroll Android devices through partner.
+     */
+    private java.util.List<ComplianceManagementPartnerAssignment> androidEnrollmentAssignments;
+    /**
+     * Partner onboarded for Android devices.
+     */
+    private Boolean androidOnboarded;
+    /**
+     * Partner display name
+     */
+    private String displayName;
+    /**
+     * User groups which enroll ios devices through partner.
+     */
+    private java.util.List<ComplianceManagementPartnerAssignment> iosEnrollmentAssignments;
+    /**
+     * Partner onboarded for ios devices.
+     */
+    private Boolean iosOnboarded;
+    /**
+     * Timestamp of last heartbeat after admin onboarded to the compliance management partner
+     */
+    private OffsetDateTime lastHeartbeatDateTime;
+    /**
+     * User groups which enroll Mac devices through partner.
+     */
+    private java.util.List<ComplianceManagementPartnerAssignment> macOsEnrollmentAssignments;
+    /**
+     * Partner onboarded for Mac devices.
+     */
+    private Boolean macOsOnboarded;
+    /**
+     * Partner state of this tenant.
+     */
+    private DeviceManagementPartnerTenantState partnerState;
     /**
      * Instantiates a new complianceManagementPartner and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ComplianceManagementPartner() {
         super();
-        this.setOdataType("#microsoft.graph.complianceManagementPartner");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,7 +71,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getAndroidEnrollmentAssignments() {
-        return this._androidEnrollmentAssignments;
+        return this.androidEnrollmentAssignments;
     }
     /**
      * Gets the androidOnboarded property value. Partner onboarded for Android devices.
@@ -64,7 +79,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAndroidOnboarded() {
-        return this._androidOnboarded;
+        return this.androidOnboarded;
     }
     /**
      * Gets the displayName property value. Partner display name
@@ -72,28 +87,25 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ComplianceManagementPartner currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("androidEnrollmentAssignments", (n) -> { currentObject.setAndroidEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
-            this.put("androidOnboarded", (n) -> { currentObject.setAndroidOnboarded(n.getBooleanValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("iosEnrollmentAssignments", (n) -> { currentObject.setIosEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
-            this.put("iosOnboarded", (n) -> { currentObject.setIosOnboarded(n.getBooleanValue()); });
-            this.put("lastHeartbeatDateTime", (n) -> { currentObject.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
-            this.put("macOsEnrollmentAssignments", (n) -> { currentObject.setMacOsEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
-            this.put("macOsOnboarded", (n) -> { currentObject.setMacOsOnboarded(n.getBooleanValue()); });
-            this.put("partnerState", (n) -> { currentObject.setPartnerState(n.getEnumValue(DeviceManagementPartnerTenantState.class)); });
-            this.put("windowsEnrollmentAssignments", (n) -> { currentObject.setWindowsEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
-            this.put("windowsOnboarded", (n) -> { currentObject.setWindowsOnboarded(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("androidEnrollmentAssignments", (n) -> { this.setAndroidEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("androidOnboarded", (n) -> { this.setAndroidOnboarded(n.getBooleanValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("iosEnrollmentAssignments", (n) -> { this.setIosEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("iosOnboarded", (n) -> { this.setIosOnboarded(n.getBooleanValue()); });
+        deserializerMap.put("lastHeartbeatDateTime", (n) -> { this.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("macOsEnrollmentAssignments", (n) -> { this.setMacOsEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("macOsOnboarded", (n) -> { this.setMacOsOnboarded(n.getBooleanValue()); });
+        deserializerMap.put("partnerState", (n) -> { this.setPartnerState(n.getEnumValue(DeviceManagementPartnerTenantState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the iosEnrollmentAssignments property value. User groups which enroll ios devices through partner.
@@ -101,7 +113,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getIosEnrollmentAssignments() {
-        return this._iosEnrollmentAssignments;
+        return this.iosEnrollmentAssignments;
     }
     /**
      * Gets the iosOnboarded property value. Partner onboarded for ios devices.
@@ -109,7 +121,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIosOnboarded() {
-        return this._iosOnboarded;
+        return this.iosOnboarded;
     }
     /**
      * Gets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin onboarded to the compliance management partner
@@ -117,7 +129,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastHeartbeatDateTime() {
-        return this._lastHeartbeatDateTime;
+        return this.lastHeartbeatDateTime;
     }
     /**
      * Gets the macOsEnrollmentAssignments property value. User groups which enroll Mac devices through partner.
@@ -125,7 +137,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ComplianceManagementPartnerAssignment> getMacOsEnrollmentAssignments() {
-        return this._macOsEnrollmentAssignments;
+        return this.macOsEnrollmentAssignments;
     }
     /**
      * Gets the macOsOnboarded property value. Partner onboarded for Mac devices.
@@ -133,37 +145,22 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getMacOsOnboarded() {
-        return this._macOsOnboarded;
+        return this.macOsOnboarded;
     }
     /**
      * Gets the partnerState property value. Partner state of this tenant.
-     * @return a deviceManagementPartnerTenantState
+     * @return a DeviceManagementPartnerTenantState
      */
     @javax.annotation.Nullable
     public DeviceManagementPartnerTenantState getPartnerState() {
-        return this._partnerState;
-    }
-    /**
-     * Gets the windowsEnrollmentAssignments property value. User groups which enroll Windows devices through partner.
-     * @return a complianceManagementPartnerAssignment
-     */
-    @javax.annotation.Nullable
-    public java.util.List<ComplianceManagementPartnerAssignment> getWindowsEnrollmentAssignments() {
-        return this._windowsEnrollmentAssignments;
-    }
-    /**
-     * Gets the windowsOnboarded property value. Partner onboarded for Windows devices.
-     * @return a boolean
-     */
-    @javax.annotation.Nullable
-    public Boolean getWindowsOnboarded() {
-        return this._windowsOnboarded;
+        return this.partnerState;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -176,95 +173,86 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("macOsEnrollmentAssignments", this.getMacOsEnrollmentAssignments());
         writer.writeBooleanValue("macOsOnboarded", this.getMacOsOnboarded());
         writer.writeEnumValue("partnerState", this.getPartnerState());
-        writer.writeCollectionOfObjectValues("windowsEnrollmentAssignments", this.getWindowsEnrollmentAssignments());
-        writer.writeBooleanValue("windowsOnboarded", this.getWindowsOnboarded());
     }
     /**
      * Sets the androidEnrollmentAssignments property value. User groups which enroll Android devices through partner.
      * @param value Value to set for the androidEnrollmentAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidEnrollmentAssignments(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
-        this._androidEnrollmentAssignments = value;
+        this.androidEnrollmentAssignments = value;
     }
     /**
      * Sets the androidOnboarded property value. Partner onboarded for Android devices.
      * @param value Value to set for the androidOnboarded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidOnboarded(@javax.annotation.Nullable final Boolean value) {
-        this._androidOnboarded = value;
+        this.androidOnboarded = value;
     }
     /**
      * Sets the displayName property value. Partner display name
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the iosEnrollmentAssignments property value. User groups which enroll ios devices through partner.
      * @param value Value to set for the iosEnrollmentAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosEnrollmentAssignments(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
-        this._iosEnrollmentAssignments = value;
+        this.iosEnrollmentAssignments = value;
     }
     /**
      * Sets the iosOnboarded property value. Partner onboarded for ios devices.
      * @param value Value to set for the iosOnboarded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosOnboarded(@javax.annotation.Nullable final Boolean value) {
-        this._iosOnboarded = value;
+        this.iosOnboarded = value;
     }
     /**
      * Sets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin onboarded to the compliance management partner
      * @param value Value to set for the lastHeartbeatDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastHeartbeatDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastHeartbeatDateTime = value;
+        this.lastHeartbeatDateTime = value;
     }
     /**
      * Sets the macOsEnrollmentAssignments property value. User groups which enroll Mac devices through partner.
      * @param value Value to set for the macOsEnrollmentAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOsEnrollmentAssignments(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
-        this._macOsEnrollmentAssignments = value;
+        this.macOsEnrollmentAssignments = value;
     }
     /**
      * Sets the macOsOnboarded property value. Partner onboarded for Mac devices.
      * @param value Value to set for the macOsOnboarded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOsOnboarded(@javax.annotation.Nullable final Boolean value) {
-        this._macOsOnboarded = value;
+        this.macOsOnboarded = value;
     }
     /**
      * Sets the partnerState property value. Partner state of this tenant.
      * @param value Value to set for the partnerState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerState(@javax.annotation.Nullable final DeviceManagementPartnerTenantState value) {
-        this._partnerState = value;
-    }
-    /**
-     * Sets the windowsEnrollmentAssignments property value. User groups which enroll Windows devices through partner.
-     * @param value Value to set for the windowsEnrollmentAssignments property.
-     * @return a void
-     */
-    public void setWindowsEnrollmentAssignments(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
-        this._windowsEnrollmentAssignments = value;
-    }
-    /**
-     * Sets the windowsOnboarded property value. Partner onboarded for Windows devices.
-     * @param value Value to set for the windowsOnboarded property.
-     * @return a void
-     */
-    public void setWindowsOnboarded(@javax.annotation.Nullable final Boolean value) {
-        this._windowsOnboarded = value;
+        this.partnerState = value;
     }
 }

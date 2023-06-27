@@ -3,22 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppTroubleshootingHistoryItem implements Parsable {
-    /** Error code for the failure, empty if no failure. */
-    private String _errorCode;
-    /** Indicates the type of execution status of the device management script. */
-    private RunState _runState;
+    /**
+     * Error code for the failure, empty if no failure.
+     */
+    private String errorCode;
+    /**
+     * Indicates the type of execution status of the device management script.
+     */
+    private RunState runState;
     /**
      * Instantiates a new MobileAppTroubleshootingAppPolicyCreationHistory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppTroubleshootingAppPolicyCreationHistory() {
         super();
-        this.setOdataType("#microsoft.graph.mobileAppTroubleshootingAppPolicyCreationHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,33 +39,33 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
      */
     @javax.annotation.Nullable
     public String getErrorCode() {
-        return this._errorCode;
+        return this.errorCode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileAppTroubleshootingAppPolicyCreationHistory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
-            this.put("runState", (n) -> { currentObject.setRunState(n.getEnumValue(RunState.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getStringValue()); });
+        deserializerMap.put("runState", (n) -> { this.setRunState(n.getEnumValue(RunState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the runState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @javax.annotation.Nullable
     public RunState getRunState() {
-        return this._runState;
+        return this.runState;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +77,17 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final String value) {
-        this._errorCode = value;
+        this.errorCode = value;
     }
     /**
      * Sets the runState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the runState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunState(@javax.annotation.Nullable final RunState value) {
-        this._runState = value;
+        this.runState = value;
     }
 }

@@ -3,23 +3,31 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OpenShift extends ChangeTrackedEntity implements Parsable {
-    /** An unpublished open shift. */
-    private OpenShiftItem _draftOpenShift;
-    /** The isStagedForDeletion property */
-    private Boolean _isStagedForDeletion;
-    /** ID for the scheduling group that the open shift belongs to. */
-    private String _schedulingGroupId;
-    /** A published open shift. */
-    private OpenShiftItem _sharedOpenShift;
+    /**
+     * An unpublished open shift.
+     */
+    private OpenShiftItem draftOpenShift;
+    /**
+     * The isStagedForDeletion property
+     */
+    private Boolean isStagedForDeletion;
+    /**
+     * ID for the scheduling group that the open shift belongs to.
+     */
+    private String schedulingGroupId;
+    /**
+     * A published open shift.
+     */
+    private OpenShiftItem sharedOpenShift;
     /**
      * Instantiates a new OpenShift and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OpenShift() {
         super();
         this.setOdataType("#microsoft.graph.openShift");
@@ -40,21 +48,20 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public OpenShiftItem getDraftOpenShift() {
-        return this._draftOpenShift;
+        return this.draftOpenShift;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OpenShift currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("draftOpenShift", (n) -> { currentObject.setDraftOpenShift(n.getObjectValue(OpenShiftItem::createFromDiscriminatorValue)); });
-            this.put("isStagedForDeletion", (n) -> { currentObject.setIsStagedForDeletion(n.getBooleanValue()); });
-            this.put("schedulingGroupId", (n) -> { currentObject.setSchedulingGroupId(n.getStringValue()); });
-            this.put("sharedOpenShift", (n) -> { currentObject.setSharedOpenShift(n.getObjectValue(OpenShiftItem::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("draftOpenShift", (n) -> { this.setDraftOpenShift(n.getObjectValue(OpenShiftItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isStagedForDeletion", (n) -> { this.setIsStagedForDeletion(n.getBooleanValue()); });
+        deserializerMap.put("schedulingGroupId", (n) -> { this.setSchedulingGroupId(n.getStringValue()); });
+        deserializerMap.put("sharedOpenShift", (n) -> { this.setSharedOpenShift(n.getObjectValue(OpenShiftItem::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isStagedForDeletion property value. The isStagedForDeletion property
@@ -62,7 +69,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsStagedForDeletion() {
-        return this._isStagedForDeletion;
+        return this.isStagedForDeletion;
     }
     /**
      * Gets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
@@ -70,7 +77,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSchedulingGroupId() {
-        return this._schedulingGroupId;
+        return this.schedulingGroupId;
     }
     /**
      * Gets the sharedOpenShift property value. A published open shift.
@@ -78,13 +85,14 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public OpenShiftItem getSharedOpenShift() {
-        return this._sharedOpenShift;
+        return this.sharedOpenShift;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,31 +106,35 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the draftOpenShift property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDraftOpenShift(@javax.annotation.Nullable final OpenShiftItem value) {
-        this._draftOpenShift = value;
+        this.draftOpenShift = value;
     }
     /**
      * Sets the isStagedForDeletion property value. The isStagedForDeletion property
      * @param value Value to set for the isStagedForDeletion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsStagedForDeletion(@javax.annotation.Nullable final Boolean value) {
-        this._isStagedForDeletion = value;
+        this.isStagedForDeletion = value;
     }
     /**
      * Sets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
      * @param value Value to set for the schedulingGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedulingGroupId(@javax.annotation.Nullable final String value) {
-        this._schedulingGroupId = value;
+        this.schedulingGroupId = value;
     }
     /**
      * Sets the sharedOpenShift property value. A published open shift.
      * @param value Value to set for the sharedOpenShift property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedOpenShift(@javax.annotation.Nullable final OpenShiftItem value) {
-        this._sharedOpenShift = value;
+        this.sharedOpenShift = value;
     }
 }

@@ -4,28 +4,37 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RemoteAssistancePartner extends Entity implements Parsable {
-    /** Display name of the partner. */
-    private String _displayName;
-    /** Timestamp of the last request sent to Intune by the TEM partner. */
-    private OffsetDateTime _lastConnectionDateTime;
-    /** When the OnboardingStatus is Onboarding, This is the date time when the onboarding request expires. */
-    private OffsetDateTime _onboardingRequestExpiryDateTime;
-    /** The current TeamViewer connector status */
-    private RemoteAssistanceOnboardingStatus _onboardingStatus;
-    /** URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service. */
-    private String _onboardingUrl;
+    /**
+     * Display name of the partner.
+     */
+    private String displayName;
+    /**
+     * Timestamp of the last request sent to Intune by the TEM partner.
+     */
+    private OffsetDateTime lastConnectionDateTime;
+    /**
+     * When the OnboardingStatus is Onboarding, This is the date time when the onboarding request expires.
+     */
+    private OffsetDateTime onboardingRequestExpiryDateTime;
+    /**
+     * The current TeamViewer connector status
+     */
+    private RemoteAssistanceOnboardingStatus onboardingStatus;
+    /**
+     * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
+     */
+    private String onboardingUrl;
     /**
      * Instantiates a new RemoteAssistancePartner and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemoteAssistancePartner() {
         super();
-        this.setOdataType("#microsoft.graph.remoteAssistancePartner");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,22 +52,21 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RemoteAssistancePartner currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastConnectionDateTime", (n) -> { currentObject.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("onboardingRequestExpiryDateTime", (n) -> { currentObject.setOnboardingRequestExpiryDateTime(n.getOffsetDateTimeValue()); });
-            this.put("onboardingStatus", (n) -> { currentObject.setOnboardingStatus(n.getEnumValue(RemoteAssistanceOnboardingStatus.class)); });
-            this.put("onboardingUrl", (n) -> { currentObject.setOnboardingUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastConnectionDateTime", (n) -> { this.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onboardingRequestExpiryDateTime", (n) -> { this.setOnboardingRequestExpiryDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(RemoteAssistanceOnboardingStatus.class)); });
+        deserializerMap.put("onboardingUrl", (n) -> { this.setOnboardingUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
@@ -66,7 +74,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
-        return this._lastConnectionDateTime;
+        return this.lastConnectionDateTime;
     }
     /**
      * Gets the onboardingRequestExpiryDateTime property value. When the OnboardingStatus is Onboarding, This is the date time when the onboarding request expires.
@@ -74,15 +82,15 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getOnboardingRequestExpiryDateTime() {
-        return this._onboardingRequestExpiryDateTime;
+        return this.onboardingRequestExpiryDateTime;
     }
     /**
      * Gets the onboardingStatus property value. The current TeamViewer connector status
-     * @return a remoteAssistanceOnboardingStatus
+     * @return a RemoteAssistanceOnboardingStatus
      */
     @javax.annotation.Nullable
     public RemoteAssistanceOnboardingStatus getOnboardingStatus() {
-        return this._onboardingStatus;
+        return this.onboardingStatus;
     }
     /**
      * Gets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
@@ -90,13 +98,14 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOnboardingUrl() {
-        return this._onboardingUrl;
+        return this.onboardingUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,39 +120,44 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
      * @param value Value to set for the lastConnectionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastConnectionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastConnectionDateTime = value;
+        this.lastConnectionDateTime = value;
     }
     /**
      * Sets the onboardingRequestExpiryDateTime property value. When the OnboardingStatus is Onboarding, This is the date time when the onboarding request expires.
      * @param value Value to set for the onboardingRequestExpiryDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnboardingRequestExpiryDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._onboardingRequestExpiryDateTime = value;
+        this.onboardingRequestExpiryDateTime = value;
     }
     /**
      * Sets the onboardingStatus property value. The current TeamViewer connector status
      * @param value Value to set for the onboardingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnboardingStatus(@javax.annotation.Nullable final RemoteAssistanceOnboardingStatus value) {
-        this._onboardingStatus = value;
+        this.onboardingStatus = value;
     }
     /**
      * Sets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
      * @param value Value to set for the onboardingUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnboardingUrl(@javax.annotation.Nullable final String value) {
-        this._onboardingUrl = value;
+        this.onboardingUrl = value;
     }
 }

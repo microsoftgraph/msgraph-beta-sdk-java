@@ -3,25 +3,35 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsable {
-    /** Edition Upgrade License File Content. */
-    private String _license;
-    /** Edition Upgrade License type */
-    private EditionUpgradeLicenseType _licenseType;
-    /** Edition Upgrade Product Key. */
-    private String _productKey;
-    /** Windows 10 Edition type. */
-    private Windows10EditionType _targetEdition;
-    /** The possible options to configure S mode unlock */
-    private WindowsSModeConfiguration _windowsSMode;
+    /**
+     * Edition Upgrade License File Content.
+     */
+    private String license;
+    /**
+     * Edition Upgrade License type
+     */
+    private EditionUpgradeLicenseType licenseType;
+    /**
+     * Edition Upgrade Product Key.
+     */
+    private String productKey;
+    /**
+     * Windows 10 Edition type.
+     */
+    private Windows10EditionType targetEdition;
+    /**
+     * The possible options to configure S mode unlock
+     */
+    private WindowsSModeConfiguration windowsSMode;
     /**
      * Instantiates a new EditionUpgradeConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EditionUpgradeConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.editionUpgradeConfiguration");
@@ -38,18 +48,17 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EditionUpgradeConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("license", (n) -> { currentObject.setLicense(n.getStringValue()); });
-            this.put("licenseType", (n) -> { currentObject.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType.class)); });
-            this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
-            this.put("targetEdition", (n) -> { currentObject.setTargetEdition(n.getEnumValue(Windows10EditionType.class)); });
-            this.put("windowsSMode", (n) -> { currentObject.setWindowsSMode(n.getEnumValue(WindowsSModeConfiguration.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("license", (n) -> { this.setLicense(n.getStringValue()); });
+        deserializerMap.put("licenseType", (n) -> { this.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType.class)); });
+        deserializerMap.put("productKey", (n) -> { this.setProductKey(n.getStringValue()); });
+        deserializerMap.put("targetEdition", (n) -> { this.setTargetEdition(n.getEnumValue(Windows10EditionType.class)); });
+        deserializerMap.put("windowsSMode", (n) -> { this.setWindowsSMode(n.getEnumValue(WindowsSModeConfiguration.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the license property value. Edition Upgrade License File Content.
@@ -57,15 +66,15 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nullable
     public String getLicense() {
-        return this._license;
+        return this.license;
     }
     /**
      * Gets the licenseType property value. Edition Upgrade License type
-     * @return a editionUpgradeLicenseType
+     * @return a EditionUpgradeLicenseType
      */
     @javax.annotation.Nullable
     public EditionUpgradeLicenseType getLicenseType() {
-        return this._licenseType;
+        return this.licenseType;
     }
     /**
      * Gets the productKey property value. Edition Upgrade Product Key.
@@ -73,29 +82,30 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nullable
     public String getProductKey() {
-        return this._productKey;
+        return this.productKey;
     }
     /**
      * Gets the targetEdition property value. Windows 10 Edition type.
-     * @return a windows10EditionType
+     * @return a Windows10EditionType
      */
     @javax.annotation.Nullable
     public Windows10EditionType getTargetEdition() {
-        return this._targetEdition;
+        return this.targetEdition;
     }
     /**
      * Gets the windowsSMode property value. The possible options to configure S mode unlock
-     * @return a windowsSModeConfiguration
+     * @return a WindowsSModeConfiguration
      */
     @javax.annotation.Nullable
     public WindowsSModeConfiguration getWindowsSMode() {
-        return this._windowsSMode;
+        return this.windowsSMode;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,39 +120,44 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the license property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicense(@javax.annotation.Nullable final String value) {
-        this._license = value;
+        this.license = value;
     }
     /**
      * Sets the licenseType property value. Edition Upgrade License type
      * @param value Value to set for the licenseType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenseType(@javax.annotation.Nullable final EditionUpgradeLicenseType value) {
-        this._licenseType = value;
+        this.licenseType = value;
     }
     /**
      * Sets the productKey property value. Edition Upgrade Product Key.
      * @param value Value to set for the productKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductKey(@javax.annotation.Nullable final String value) {
-        this._productKey = value;
+        this.productKey = value;
     }
     /**
      * Sets the targetEdition property value. Windows 10 Edition type.
      * @param value Value to set for the targetEdition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetEdition(@javax.annotation.Nullable final Windows10EditionType value) {
-        this._targetEdition = value;
+        this.targetEdition = value;
     }
     /**
      * Sets the windowsSMode property value. The possible options to configure S mode unlock
      * @param value Value to set for the windowsSMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSMode(@javax.annotation.Nullable final WindowsSModeConfiguration value) {
-        this._windowsSMode = value;
+        this.windowsSMode = value;
     }
 }

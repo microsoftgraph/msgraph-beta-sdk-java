@@ -1,26 +1,25 @@
 package com.microsoft.graph.devicemanagement.virtualendpoint.snapshots.getstorageaccountswithsubscriptionid;
 
+import com.microsoft.graph.models.BaseCollectionPaginationCountResponse;
 import com.microsoft.graph.models.CloudPcForensicStorageAccount;
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getStorageAccounts method. */
-public class GetStorageAccountsWithSubscriptionIdResponse implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The value property */
-    private java.util.List<CloudPcForensicStorageAccount> _value;
+public class GetStorageAccountsWithSubscriptionIdResponse extends BaseCollectionPaginationCountResponse implements Parsable {
+    /**
+     * The value property
+     */
+    private java.util.List<CloudPcForensicStorageAccount> value;
     /**
      * Instantiates a new getStorageAccountsWithSubscriptionIdResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetStorageAccountsWithSubscriptionIdResponse() {
-        this.setAdditionalData(new HashMap<>());
+        super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,23 +32,14 @@ public class GetStorageAccountsWithSubscriptionIdResponse implements AdditionalD
         return new GetStorageAccountsWithSubscriptionIdResponse();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
-     */
-    @javax.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
-    }
-    /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GetStorageAccountsWithSubscriptionIdResponse currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(CloudPcForensicStorageAccount::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(CloudPcForensicStorageAccount::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property
@@ -57,32 +47,26 @@ public class GetStorageAccountsWithSubscriptionIdResponse implements AdditionalD
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcForensicStorageAccount> getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        super.serialize(writer);
         writer.writeCollectionOfObjectValues("value", this.getValue());
-        writer.writeAdditionalData(this.getAdditionalData());
-    }
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     * @return a void
-     */
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
     }
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<CloudPcForensicStorageAccount> value) {
-        this._value = value;
+        this.value = value;
     }
 }

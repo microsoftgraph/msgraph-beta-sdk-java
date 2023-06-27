@@ -4,29 +4,40 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** iOS URL bookmark */
+/**
+ * iOS URL bookmark
+ */
 public class IosBookmark implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The folder into which the bookmark should be added in Safari */
-    private String _bookmarkFolder;
-    /** The display name of the bookmark */
-    private String _displayName;
-    /** The OdataType property */
-    private String _odataType;
-    /** URL allowed to access */
-    private String _url;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The folder into which the bookmark should be added in Safari
+     */
+    private String bookmarkFolder;
+    /**
+     * The display name of the bookmark
+     */
+    private String displayName;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * URL allowed to access
+     */
+    private String url;
     /**
      * Instantiates a new iosBookmark and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosBookmark() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.iosBookmark");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +55,7 @@ public class IosBookmark implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the bookmarkFolder property value. The folder into which the bookmark should be added in Safari
@@ -52,7 +63,7 @@ public class IosBookmark implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getBookmarkFolder() {
-        return this._bookmarkFolder;
+        return this.bookmarkFolder;
     }
     /**
      * Gets the displayName property value. The display name of the bookmark
@@ -60,21 +71,20 @@ public class IosBookmark implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosBookmark currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("bookmarkFolder", (n) -> { currentObject.setBookmarkFolder(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("bookmarkFolder", (n) -> { this.setBookmarkFolder(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -82,7 +92,7 @@ public class IosBookmark implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the url property value. URL allowed to access
@@ -90,13 +100,14 @@ public class IosBookmark implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUrl() {
-        return this._url;
+        return this.url;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("bookmarkFolder", this.getBookmarkFolder());
@@ -110,39 +121,44 @@ public class IosBookmark implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the bookmarkFolder property value. The folder into which the bookmark should be added in Safari
      * @param value Value to set for the bookmarkFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBookmarkFolder(@javax.annotation.Nullable final String value) {
-        this._bookmarkFolder = value;
+        this.bookmarkFolder = value;
     }
     /**
      * Sets the displayName property value. The display name of the bookmark
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the url property value. URL allowed to access
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
-        this._url = value;
+        this.url = value;
     }
 }

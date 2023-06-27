@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable {
-    /** The phone number to text or call for authentication. Phone numbers use the format '+<country code> <number>x<extension>', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format. */
-    private String _phoneNumber;
-    /** The type of this phone. Possible values are: mobile, alternateMobile, or office. */
-    private AuthenticationPhoneType _phoneType;
-    /** Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue. */
-    private AuthenticationMethodSignInState _smsSignInState;
+    /**
+     * The phone number to text or call for authentication. Phone numbers use the format '+<country code> <number>x<extension>', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
+     */
+    private String phoneNumber;
+    /**
+     * The type of this phone. Possible values are: mobile, alternateMobile, or office.
+     */
+    private AuthenticationPhoneType phoneType;
+    /**
+     * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
+     */
+    private AuthenticationMethodSignInState smsSignInState;
     /**
      * Instantiates a new PhoneAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PhoneAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.phoneAuthenticationMethod");
@@ -34,16 +40,15 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PhoneAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
-            this.put("phoneType", (n) -> { currentObject.setPhoneType(n.getEnumValue(AuthenticationPhoneType.class)); });
-            this.put("smsSignInState", (n) -> { currentObject.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("phoneNumber", (n) -> { this.setPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("phoneType", (n) -> { this.setPhoneType(n.getEnumValue(AuthenticationPhoneType.class)); });
+        deserializerMap.put("smsSignInState", (n) -> { this.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the phoneNumber property value. The phone number to text or call for authentication. Phone numbers use the format '+<country code> <number>x<extension>', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
@@ -51,7 +56,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public String getPhoneNumber() {
-        return this._phoneNumber;
+        return this.phoneNumber;
     }
     /**
      * Gets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
@@ -59,7 +64,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public AuthenticationPhoneType getPhoneType() {
-        return this._phoneType;
+        return this.phoneType;
     }
     /**
      * Gets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
@@ -67,13 +72,14 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public AuthenticationMethodSignInState getSmsSignInState() {
-        return this._smsSignInState;
+        return this.smsSignInState;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneNumber(@javax.annotation.Nullable final String value) {
-        this._phoneNumber = value;
+        this.phoneNumber = value;
     }
     /**
      * Sets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
      * @param value Value to set for the phoneType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneType(@javax.annotation.Nullable final AuthenticationPhoneType value) {
-        this._phoneType = value;
+        this.phoneType = value;
     }
     /**
      * Sets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
      * @param value Value to set for the smsSignInState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmsSignInState(@javax.annotation.Nullable final AuthenticationMethodSignInState value) {
-        this._smsSignInState = value;
+        this.smsSignInState = value;
     }
 }

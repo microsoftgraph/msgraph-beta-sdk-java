@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessReviewInstanceDecisionItemTarget implements Parsable {
-    /** The appId for the service principal entity being reviewed. */
-    private String _appId;
-    /** The display name of the service principal whose access is being reviewed. */
-    private String _servicePrincipalDisplayName;
-    /** The servicePrincipalId property */
-    private String _servicePrincipalId;
+    /**
+     * The appId for the service principal entity being reviewed.
+     */
+    private String appId;
+    /**
+     * The display name of the service principal whose access is being reviewed.
+     */
+    private String servicePrincipalDisplayName;
+    /**
+     * The servicePrincipalId property
+     */
+    private String servicePrincipalId;
     /**
      * Instantiates a new AccessReviewInstanceDecisionItemServicePrincipalTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItemServicePrincipalTarget() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalTarget");
@@ -38,20 +44,19 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
      */
     @javax.annotation.Nullable
     public String getAppId() {
-        return this._appId;
+        return this.appId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewInstanceDecisionItemServicePrincipalTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("servicePrincipalDisplayName", (n) -> { currentObject.setServicePrincipalDisplayName(n.getStringValue()); });
-            this.put("servicePrincipalId", (n) -> { currentObject.setServicePrincipalId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalDisplayName", (n) -> { this.setServicePrincipalDisplayName(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the servicePrincipalDisplayName property value. The display name of the service principal whose access is being reviewed.
@@ -59,7 +64,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
      */
     @javax.annotation.Nullable
     public String getServicePrincipalDisplayName() {
-        return this._servicePrincipalDisplayName;
+        return this.servicePrincipalDisplayName;
     }
     /**
      * Gets the servicePrincipalId property value. The servicePrincipalId property
@@ -67,13 +72,14 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
      */
     @javax.annotation.Nullable
     public String getServicePrincipalId() {
-        return this._servicePrincipalId;
+        return this.servicePrincipalId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
-        this._appId = value;
+        this.appId = value;
     }
     /**
      * Sets the servicePrincipalDisplayName property value. The display name of the service principal whose access is being reviewed.
      * @param value Value to set for the servicePrincipalDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalDisplayName(@javax.annotation.Nullable final String value) {
-        this._servicePrincipalDisplayName = value;
+        this.servicePrincipalDisplayName = value;
     }
     /**
      * Sets the servicePrincipalId property value. The servicePrincipalId property
      * @param value Value to set for the servicePrincipalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalId(@javax.annotation.Nullable final String value) {
-        this._servicePrincipalId = value;
+        this.servicePrincipalId = value;
     }
 }

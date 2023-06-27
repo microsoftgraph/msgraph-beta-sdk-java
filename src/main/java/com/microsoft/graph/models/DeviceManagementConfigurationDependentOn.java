@@ -4,26 +4,33 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementConfigurationDependentOn implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Identifier of parent setting/ parent setting option dependent on */
-    private String _dependentOn;
-    /** The OdataType property */
-    private String _odataType;
-    /** Identifier of parent setting/ parent setting id dependent on */
-    private String _parentSettingId;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Identifier of parent setting/ parent setting option dependent on
+     */
+    private String dependentOn;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Identifier of parent setting/ parent setting id dependent on
+     */
+    private String parentSettingId;
     /**
      * Instantiates a new deviceManagementConfigurationDependentOn and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationDependentOn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationDependentOn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +48,7 @@ public class DeviceManagementConfigurationDependentOn implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the dependentOn property value. Identifier of parent setting/ parent setting option dependent on
@@ -49,20 +56,19 @@ public class DeviceManagementConfigurationDependentOn implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public String getDependentOn() {
-        return this._dependentOn;
+        return this.dependentOn;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationDependentOn currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("dependentOn", (n) -> { currentObject.setDependentOn(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("parentSettingId", (n) -> { currentObject.setParentSettingId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("dependentOn", (n) -> { this.setDependentOn(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("parentSettingId", (n) -> { this.setParentSettingId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -70,7 +76,7 @@ public class DeviceManagementConfigurationDependentOn implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the parentSettingId property value. Identifier of parent setting/ parent setting id dependent on
@@ -78,13 +84,14 @@ public class DeviceManagementConfigurationDependentOn implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public String getParentSettingId() {
-        return this._parentSettingId;
+        return this.parentSettingId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("dependentOn", this.getDependentOn());
@@ -97,31 +104,35 @@ public class DeviceManagementConfigurationDependentOn implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the dependentOn property value. Identifier of parent setting/ parent setting option dependent on
      * @param value Value to set for the dependentOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependentOn(@javax.annotation.Nullable final String value) {
-        this._dependentOn = value;
+        this.dependentOn = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the parentSettingId property value. Identifier of parent setting/ parent setting id dependent on
      * @param value Value to set for the parentSettingId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentSettingId(@javax.annotation.Nullable final String value) {
-        this._parentSettingId = value;
+        this.parentSettingId = value;
     }
 }

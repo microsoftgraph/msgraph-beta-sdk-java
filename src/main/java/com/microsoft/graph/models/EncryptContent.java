@@ -1,21 +1,21 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.EncryptWithTemplate;
-import com.microsoft.graph.models.EncryptWithUserDefinedRights;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EncryptContent extends LabelActionBase implements Parsable {
-    /** The encryptWith property */
-    private EncryptWith _encryptWith;
+    /**
+     * The encryptWith property
+     */
+    private EncryptWith encryptWith;
     /**
      * Instantiates a new EncryptContent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EncryptContent() {
         super();
         this.setOdataType("#microsoft.graph.encryptContent");
@@ -44,24 +44,24 @@ public class EncryptContent extends LabelActionBase implements Parsable {
      */
     @javax.annotation.Nullable
     public EncryptWith getEncryptWith() {
-        return this._encryptWith;
+        return this.encryptWith;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EncryptContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("encryptWith", (n) -> { currentObject.setEncryptWith(n.getEnumValue(EncryptWith.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("encryptWith", (n) -> { this.setEncryptWith(n.getEnumValue(EncryptWith.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -72,7 +72,8 @@ public class EncryptContent extends LabelActionBase implements Parsable {
      * @param value Value to set for the encryptWith property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptWith(@javax.annotation.Nullable final EncryptWith value) {
-        this._encryptWith = value;
+        this.encryptWith = value;
     }
 }

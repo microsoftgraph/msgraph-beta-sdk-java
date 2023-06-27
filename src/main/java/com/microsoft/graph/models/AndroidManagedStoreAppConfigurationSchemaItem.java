@@ -4,45 +4,72 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Single configuration item inside an Android application's custom configuration schema. */
+/**
+ * Single configuration item inside an Android application's custom configuration schema.
+ */
 public class AndroidManagedStoreAppConfigurationSchemaItem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Data type for a configuration item inside an Android application's custom configuration schema */
-    private AndroidManagedStoreAppConfigurationSchemaItemDataType _dataType;
-    /** Default value for boolean type items, if specified by the app developer */
-    private Boolean _defaultBoolValue;
-    /** Default value for integer type items, if specified by the app developer */
-    private Integer _defaultIntValue;
-    /** Default value for string array type items, if specified by the app developer */
-    private java.util.List<String> _defaultStringArrayValue;
-    /** Default value for string type items, if specified by the app developer */
-    private String _defaultStringValue;
-    /** Description of what the item controls within the application */
-    private String _description;
-    /** Human readable name */
-    private String _displayName;
-    /** Unique index the application uses to maintain nested schema items */
-    private Integer _index;
-    /** The OdataType property */
-    private String _odataType;
-    /** Index of parent schema item to track nested schema items */
-    private Integer _parentIndex;
-    /** Unique key the application uses to identify the item */
-    private String _schemaItemKey;
-    /** List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only) */
-    private java.util.List<KeyValuePair> _selections;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Data type for a configuration item inside an Android application's custom configuration schema
+     */
+    private AndroidManagedStoreAppConfigurationSchemaItemDataType dataType;
+    /**
+     * Default value for boolean type items, if specified by the app developer
+     */
+    private Boolean defaultBoolValue;
+    /**
+     * Default value for integer type items, if specified by the app developer
+     */
+    private Integer defaultIntValue;
+    /**
+     * Default value for string array type items, if specified by the app developer
+     */
+    private java.util.List<String> defaultStringArrayValue;
+    /**
+     * Default value for string type items, if specified by the app developer
+     */
+    private String defaultStringValue;
+    /**
+     * Description of what the item controls within the application
+     */
+    private String description;
+    /**
+     * Human readable name
+     */
+    private String displayName;
+    /**
+     * Unique index the application uses to maintain nested schema items
+     */
+    private Integer index;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Index of parent schema item to track nested schema items
+     */
+    private Integer parentIndex;
+    /**
+     * Unique key the application uses to identify the item
+     */
+    private String schemaItemKey;
+    /**
+     * List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only)
+     */
+    private java.util.List<KeyValuePair> selections;
     /**
      * Instantiates a new androidManagedStoreAppConfigurationSchemaItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedStoreAppConfigurationSchemaItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.androidManagedStoreAppConfigurationSchemaItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,15 +87,15 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the dataType property value. Data type for a configuration item inside an Android application's custom configuration schema
-     * @return a androidManagedStoreAppConfigurationSchemaItemDataType
+     * @return a AndroidManagedStoreAppConfigurationSchemaItemDataType
      */
     @javax.annotation.Nullable
     public AndroidManagedStoreAppConfigurationSchemaItemDataType getDataType() {
-        return this._dataType;
+        return this.dataType;
     }
     /**
      * Gets the defaultBoolValue property value. Default value for boolean type items, if specified by the app developer
@@ -76,7 +103,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nullable
     public Boolean getDefaultBoolValue() {
-        return this._defaultBoolValue;
+        return this.defaultBoolValue;
     }
     /**
      * Gets the defaultIntValue property value. Default value for integer type items, if specified by the app developer
@@ -84,7 +111,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nullable
     public Integer getDefaultIntValue() {
-        return this._defaultIntValue;
+        return this.defaultIntValue;
     }
     /**
      * Gets the defaultStringArrayValue property value. Default value for string array type items, if specified by the app developer
@@ -92,7 +119,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefaultStringArrayValue() {
-        return this._defaultStringArrayValue;
+        return this.defaultStringArrayValue;
     }
     /**
      * Gets the defaultStringValue property value. Default value for string type items, if specified by the app developer
@@ -100,7 +127,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nullable
     public String getDefaultStringValue() {
-        return this._defaultStringValue;
+        return this.defaultStringValue;
     }
     /**
      * Gets the description property value. Description of what the item controls within the application
@@ -108,7 +135,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Human readable name
@@ -116,29 +143,28 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidManagedStoreAppConfigurationSchemaItem currentObject = this;
-        return new HashMap<>(12) {{
-            this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(AndroidManagedStoreAppConfigurationSchemaItemDataType.class)); });
-            this.put("defaultBoolValue", (n) -> { currentObject.setDefaultBoolValue(n.getBooleanValue()); });
-            this.put("defaultIntValue", (n) -> { currentObject.setDefaultIntValue(n.getIntegerValue()); });
-            this.put("defaultStringArrayValue", (n) -> { currentObject.setDefaultStringArrayValue(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defaultStringValue", (n) -> { currentObject.setDefaultStringValue(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("index", (n) -> { currentObject.setIndex(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("parentIndex", (n) -> { currentObject.setParentIndex(n.getIntegerValue()); });
-            this.put("schemaItemKey", (n) -> { currentObject.setSchemaItemKey(n.getStringValue()); });
-            this.put("selections", (n) -> { currentObject.setSelections(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        deserializerMap.put("dataType", (n) -> { this.setDataType(n.getEnumValue(AndroidManagedStoreAppConfigurationSchemaItemDataType.class)); });
+        deserializerMap.put("defaultBoolValue", (n) -> { this.setDefaultBoolValue(n.getBooleanValue()); });
+        deserializerMap.put("defaultIntValue", (n) -> { this.setDefaultIntValue(n.getIntegerValue()); });
+        deserializerMap.put("defaultStringArrayValue", (n) -> { this.setDefaultStringArrayValue(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defaultStringValue", (n) -> { this.setDefaultStringValue(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("index", (n) -> { this.setIndex(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("parentIndex", (n) -> { this.setParentIndex(n.getIntegerValue()); });
+        deserializerMap.put("schemaItemKey", (n) -> { this.setSchemaItemKey(n.getStringValue()); });
+        deserializerMap.put("selections", (n) -> { this.setSelections(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the index property value. Unique index the application uses to maintain nested schema items
@@ -146,7 +172,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nullable
     public Integer getIndex() {
-        return this._index;
+        return this.index;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -154,7 +180,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the parentIndex property value. Index of parent schema item to track nested schema items
@@ -162,7 +188,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nullable
     public Integer getParentIndex() {
-        return this._parentIndex;
+        return this.parentIndex;
     }
     /**
      * Gets the schemaItemKey property value. Unique key the application uses to identify the item
@@ -170,7 +196,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nullable
     public String getSchemaItemKey() {
-        return this._schemaItemKey;
+        return this.schemaItemKey;
     }
     /**
      * Gets the selections property value. List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only)
@@ -178,13 +204,14 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getSelections() {
-        return this._selections;
+        return this.selections;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("dataType", this.getDataType());
@@ -206,103 +233,116 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the dataType property value. Data type for a configuration item inside an Android application's custom configuration schema
      * @param value Value to set for the dataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataType(@javax.annotation.Nullable final AndroidManagedStoreAppConfigurationSchemaItemDataType value) {
-        this._dataType = value;
+        this.dataType = value;
     }
     /**
      * Sets the defaultBoolValue property value. Default value for boolean type items, if specified by the app developer
      * @param value Value to set for the defaultBoolValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultBoolValue(@javax.annotation.Nullable final Boolean value) {
-        this._defaultBoolValue = value;
+        this.defaultBoolValue = value;
     }
     /**
      * Sets the defaultIntValue property value. Default value for integer type items, if specified by the app developer
      * @param value Value to set for the defaultIntValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultIntValue(@javax.annotation.Nullable final Integer value) {
-        this._defaultIntValue = value;
+        this.defaultIntValue = value;
     }
     /**
      * Sets the defaultStringArrayValue property value. Default value for string array type items, if specified by the app developer
      * @param value Value to set for the defaultStringArrayValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultStringArrayValue(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._defaultStringArrayValue = value;
+        this.defaultStringArrayValue = value;
     }
     /**
      * Sets the defaultStringValue property value. Default value for string type items, if specified by the app developer
      * @param value Value to set for the defaultStringValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultStringValue(@javax.annotation.Nullable final String value) {
-        this._defaultStringValue = value;
+        this.defaultStringValue = value;
     }
     /**
      * Sets the description property value. Description of what the item controls within the application
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Human readable name
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the index property value. Unique index the application uses to maintain nested schema items
      * @param value Value to set for the index property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndex(@javax.annotation.Nullable final Integer value) {
-        this._index = value;
+        this.index = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the parentIndex property value. Index of parent schema item to track nested schema items
      * @param value Value to set for the parentIndex property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentIndex(@javax.annotation.Nullable final Integer value) {
-        this._parentIndex = value;
+        this.parentIndex = value;
     }
     /**
      * Sets the schemaItemKey property value. Unique key the application uses to identify the item
      * @param value Value to set for the schemaItemKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchemaItemKey(@javax.annotation.Nullable final String value) {
-        this._schemaItemKey = value;
+        this.schemaItemKey = value;
     }
     /**
      * Sets the selections property value. List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only)
      * @param value Value to set for the selections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelections(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._selections = value;
+        this.selections = value;
     }
 }

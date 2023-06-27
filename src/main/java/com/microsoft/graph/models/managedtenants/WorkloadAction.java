@@ -4,41 +4,58 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkloadAction implements AdditionalDataHolder, Parsable {
-    /** The unique identifier for the workload action. Required. Read-only. */
-    private String _actionId;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The category for the workload action. Possible values are: automated, manual, unknownFutureValue. Optional. Read-only. */
-    private WorkloadActionCategory _category;
-    /** The description for the workload action. Optional. Read-only. */
-    private String _description;
-    /** The display name for the workload action. Optional. Read-only. */
-    private String _displayName;
-    /** The licenses property */
-    private java.util.List<String> _licenses;
-    /** The OdataType property */
-    private String _odataType;
-    /** The service associated with workload action. Optional. Read-only. */
-    private String _service;
-    /** The collection of settings associated with the workload action. Optional. Read-only. */
-    private java.util.List<Setting> _settings;
     /**
-     * Instantiates a new workloadAction and sets the default values.
+     * The unique identifier for the workload action. Required. Read-only.
+     */
+    private String actionId;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The category for the workload action. Possible values are: automated, manual, unknownFutureValue. Optional. Read-only.
+     */
+    private WorkloadActionCategory category;
+    /**
+     * The description for the workload action. Optional. Read-only.
+     */
+    private String description;
+    /**
+     * The display name for the workload action. Optional. Read-only.
+     */
+    private String displayName;
+    /**
+     * The licenses property
+     */
+    private java.util.List<String> licenses;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The service associated with workload action. Optional. Read-only.
+     */
+    private String service;
+    /**
+     * The collection of settings associated with the workload action. Optional. Read-only.
+     */
+    private java.util.List<Setting> settings;
+    /**
+     * Instantiates a new WorkloadAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkloadAction() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.managedTenants.workloadAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workloadAction
+     * @return a WorkloadAction
      */
     @javax.annotation.Nonnull
     public static WorkloadAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +68,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getActionId() {
-        return this._actionId;
+        return this.actionId;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -59,7 +76,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the category property value. The category for the workload action. Possible values are: automated, manual, unknownFutureValue. Optional. Read-only.
@@ -67,7 +84,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public WorkloadActionCategory getCategory() {
-        return this._category;
+        return this.category;
     }
     /**
      * Gets the description property value. The description for the workload action. Optional. Read-only.
@@ -75,7 +92,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name for the workload action. Optional. Read-only.
@@ -83,25 +100,24 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkloadAction currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("actionId", (n) -> { currentObject.setActionId(n.getStringValue()); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(WorkloadActionCategory.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("licenses", (n) -> { currentObject.setLicenses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(Setting::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        deserializerMap.put("actionId", (n) -> { this.setActionId(n.getStringValue()); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(WorkloadActionCategory.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("licenses", (n) -> { this.setLicenses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getCollectionOfObjectValues(Setting::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the licenses property value. The licenses property
@@ -109,7 +125,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getLicenses() {
-        return this._licenses;
+        return this.licenses;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -117,7 +133,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the service property value. The service associated with workload action. Optional. Read-only.
@@ -125,7 +141,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getService() {
-        return this._service;
+        return this.service;
     }
     /**
      * Gets the settings property value. The collection of settings associated with the workload action. Optional. Read-only.
@@ -133,13 +149,14 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Setting> getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("actionId", this.getActionId());
@@ -157,71 +174,80 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionId(@javax.annotation.Nullable final String value) {
-        this._actionId = value;
+        this.actionId = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the category property value. The category for the workload action. Possible values are: automated, manual, unknownFutureValue. Optional. Read-only.
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final WorkloadActionCategory value) {
-        this._category = value;
+        this.category = value;
     }
     /**
      * Sets the description property value. The description for the workload action. Optional. Read-only.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name for the workload action. Optional. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the licenses property value. The licenses property
      * @param value Value to set for the licenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenses(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._licenses = value;
+        this.licenses = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the service property value. The service associated with workload action. Optional. Read-only.
      * @param value Value to set for the service property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
-        this._service = value;
+        this.service = value;
     }
     /**
      * Sets the settings property value. The collection of settings associated with the workload action. Optional. Read-only.
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final java.util.List<Setting> value) {
-        this._settings = value;
+        this.settings = value;
     }
 }

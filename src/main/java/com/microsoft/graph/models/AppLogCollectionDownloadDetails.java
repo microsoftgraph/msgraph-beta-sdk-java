@@ -4,28 +4,37 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The appLogDecryptionAlgorithm property */
-    private AppLogDecryptionAlgorithm _appLogDecryptionAlgorithm;
-    /** DecryptionKey as string */
-    private String _decryptionKey;
-    /** Download SAS Url for completed AppLogUploadRequest */
-    private String _downloadUrl;
-    /** The OdataType property */
-    private String _odataType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The appLogDecryptionAlgorithm property
+     */
+    private AppLogDecryptionAlgorithm appLogDecryptionAlgorithm;
+    /**
+     * Decryption key that used to decrypt the log.
+     */
+    private String decryptionKey;
+    /**
+     * Download SAS (Shared Access Signature) Url for completed app log request.
+     */
+    private String downloadUrl;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
     /**
      * Instantiates a new appLogCollectionDownloadDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppLogCollectionDownloadDetails() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.appLogCollectionDownloadDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,45 +52,44 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the appLogDecryptionAlgorithm property value. The appLogDecryptionAlgorithm property
-     * @return a appLogDecryptionAlgorithm
+     * @return a AppLogDecryptionAlgorithm
      */
     @javax.annotation.Nullable
     public AppLogDecryptionAlgorithm getAppLogDecryptionAlgorithm() {
-        return this._appLogDecryptionAlgorithm;
+        return this.appLogDecryptionAlgorithm;
     }
     /**
-     * Gets the decryptionKey property value. DecryptionKey as string
+     * Gets the decryptionKey property value. Decryption key that used to decrypt the log.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getDecryptionKey() {
-        return this._decryptionKey;
+        return this.decryptionKey;
     }
     /**
-     * Gets the downloadUrl property value. Download SAS Url for completed AppLogUploadRequest
+     * Gets the downloadUrl property value. Download SAS (Shared Access Signature) Url for completed app log request.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getDownloadUrl() {
-        return this._downloadUrl;
+        return this.downloadUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AppLogCollectionDownloadDetails currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("appLogDecryptionAlgorithm", (n) -> { currentObject.setAppLogDecryptionAlgorithm(n.getEnumValue(AppLogDecryptionAlgorithm.class)); });
-            this.put("decryptionKey", (n) -> { currentObject.setDecryptionKey(n.getStringValue()); });
-            this.put("downloadUrl", (n) -> { currentObject.setDownloadUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("appLogDecryptionAlgorithm", (n) -> { this.setAppLogDecryptionAlgorithm(n.getEnumValue(AppLogDecryptionAlgorithm.class)); });
+        deserializerMap.put("decryptionKey", (n) -> { this.setDecryptionKey(n.getStringValue()); });
+        deserializerMap.put("downloadUrl", (n) -> { this.setDownloadUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -89,13 +97,14 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("appLogDecryptionAlgorithm", this.getAppLogDecryptionAlgorithm());
@@ -109,39 +118,44 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the appLogDecryptionAlgorithm property value. The appLogDecryptionAlgorithm property
      * @param value Value to set for the appLogDecryptionAlgorithm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppLogDecryptionAlgorithm(@javax.annotation.Nullable final AppLogDecryptionAlgorithm value) {
-        this._appLogDecryptionAlgorithm = value;
+        this.appLogDecryptionAlgorithm = value;
     }
     /**
-     * Sets the decryptionKey property value. DecryptionKey as string
+     * Sets the decryptionKey property value. Decryption key that used to decrypt the log.
      * @param value Value to set for the decryptionKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecryptionKey(@javax.annotation.Nullable final String value) {
-        this._decryptionKey = value;
+        this.decryptionKey = value;
     }
     /**
-     * Sets the downloadUrl property value. Download SAS Url for completed AppLogUploadRequest
+     * Sets the downloadUrl property value. Download SAS (Shared Access Signature) Url for completed app log request.
      * @param value Value to set for the downloadUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDownloadUrl(@javax.annotation.Nullable final String value) {
-        this._downloadUrl = value;
+        this.downloadUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

@@ -3,23 +3,31 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidStoreApp extends MobileApp implements Parsable {
-    /** The Identity Name. */
-    private String _appIdentifier;
-    /** The Android app store URL. */
-    private String _appStoreUrl;
-    /** The value for the minimum applicable operating system. */
-    private AndroidMinimumOperatingSystem _minimumSupportedOperatingSystem;
-    /** The package identifier. */
-    private String _packageId;
+    /**
+     * The Identity Name.
+     */
+    private String appIdentifier;
+    /**
+     * The Android app store URL.
+     */
+    private String appStoreUrl;
+    /**
+     * The value for the minimum applicable operating system.
+     */
+    private AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
+    /**
+     * The package identifier.
+     */
+    private String packageId;
     /**
      * Instantiates a new AndroidStoreApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidStoreApp() {
         super();
         this.setOdataType("#microsoft.graph.androidStoreApp");
@@ -40,7 +48,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppIdentifier() {
-        return this._appIdentifier;
+        return this.appIdentifier;
     }
     /**
      * Gets the appStoreUrl property value. The Android app store URL.
@@ -48,21 +56,20 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppStoreUrl() {
-        return this._appStoreUrl;
+        return this.appStoreUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidStoreApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appIdentifier", (n) -> { currentObject.setAppIdentifier(n.getStringValue()); });
-            this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
-            this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appIdentifier", (n) -> { this.setAppIdentifier(n.getStringValue()); });
+        deserializerMap.put("appStoreUrl", (n) -> { this.setAppStoreUrl(n.getStringValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
@@ -70,7 +77,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this._minimumSupportedOperatingSystem;
+        return this.minimumSupportedOperatingSystem;
     }
     /**
      * Gets the packageId property value. The package identifier.
@@ -78,13 +85,14 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPackageId() {
-        return this._packageId;
+        return this.packageId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,31 +106,35 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the appIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppIdentifier(@javax.annotation.Nullable final String value) {
-        this._appIdentifier = value;
+        this.appIdentifier = value;
     }
     /**
      * Sets the appStoreUrl property value. The Android app store URL.
      * @param value Value to set for the appStoreUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
-        this._appStoreUrl = value;
+        this.appStoreUrl = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final AndroidMinimumOperatingSystem value) {
-        this._minimumSupportedOperatingSystem = value;
+        this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the packageId property value. The package identifier.
      * @param value Value to set for the packageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
-        this._packageId = value;
+        this.packageId = value;
     }
 }

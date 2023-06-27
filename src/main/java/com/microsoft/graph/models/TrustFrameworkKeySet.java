@@ -3,20 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TrustFrameworkKeySet extends Entity implements Parsable {
-    /** A collection of the keys. */
-    private java.util.List<TrustFrameworkKey> _keys;
+    /**
+     * A collection of the keys.
+     */
+    private java.util.List<TrustFrameworkKey> keys;
     /**
      * Instantiates a new TrustFrameworkKeySet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TrustFrameworkKeySet() {
         super();
-        this.setOdataType("#microsoft.graph.trustFrameworkKeySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +31,13 @@ public class TrustFrameworkKeySet extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TrustFrameworkKeySet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("keys", (n) -> { currentObject.setKeys(n.getCollectionOfObjectValues(TrustFrameworkKey::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("keys", (n) -> { this.setKeys(n.getCollectionOfObjectValues(TrustFrameworkKey::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the keys property value. A collection of the keys.
@@ -45,13 +45,14 @@ public class TrustFrameworkKeySet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TrustFrameworkKey> getKeys() {
-        return this._keys;
+        return this.keys;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +63,8 @@ public class TrustFrameworkKeySet extends Entity implements Parsable {
      * @param value Value to set for the keys property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeys(@javax.annotation.Nullable final java.util.List<TrustFrameworkKey> value) {
-        this._keys = value;
+        this.keys = value;
     }
 }

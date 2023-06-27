@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Available health states for the Device Health API
+ */
 public enum ManagedDevicePartnerReportedHealthState implements ValuedEnum {
     /** Device health state is not yet reported */
     Unknown("unknown"),

@@ -3,31 +3,47 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
-    /** The application instance associated with this action. */
-    private Identity _applicationInstance;
-    /** An identity the participant would like to present itself as to the other participants in the call. */
-    private Identity _assertedIdentity;
-    /** The Azure Communication Services user associated with this action. */
-    private Identity _azureCommunicationServicesUser;
-    /** The encrypted user associated with this action. */
-    private Identity _encrypted;
-    /** Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. */
-    private EndpointType _endpointType;
-    /** The guest user associated with this action. */
-    private Identity _guest;
-    /** The Skype for Business On-Premises user associated with this action. */
-    private Identity _onPremises;
-    /** Inherited from identitySet. The phone user associated with this action. */
-    private Identity _phone;
+    /**
+     * The application instance associated with this action.
+     */
+    private Identity applicationInstance;
+    /**
+     * An identity the participant would like to present itself as to the other participants in the call.
+     */
+    private Identity assertedIdentity;
+    /**
+     * The Azure Communication Services user associated with this action.
+     */
+    private Identity azureCommunicationServicesUser;
+    /**
+     * The encrypted user associated with this action.
+     */
+    private Identity encrypted;
+    /**
+     * Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
+     */
+    private EndpointType endpointType;
+    /**
+     * The guest user associated with this action.
+     */
+    private Identity guest;
+    /**
+     * The Skype for Business On-Premises user associated with this action.
+     */
+    private Identity onPremises;
+    /**
+     * Inherited from identitySet. The phone user associated with this action.
+     */
+    private Identity phone;
     /**
      * Instantiates a new CommunicationsIdentitySet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CommunicationsIdentitySet() {
         super();
         this.setOdataType("#microsoft.graph.communicationsIdentitySet");
@@ -48,7 +64,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getApplicationInstance() {
-        return this._applicationInstance;
+        return this.applicationInstance;
     }
     /**
      * Gets the assertedIdentity property value. An identity the participant would like to present itself as to the other participants in the call.
@@ -56,7 +72,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getAssertedIdentity() {
-        return this._assertedIdentity;
+        return this.assertedIdentity;
     }
     /**
      * Gets the azureCommunicationServicesUser property value. The Azure Communication Services user associated with this action.
@@ -64,7 +80,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getAzureCommunicationServicesUser() {
-        return this._azureCommunicationServicesUser;
+        return this.azureCommunicationServicesUser;
     }
     /**
      * Gets the encrypted property value. The encrypted user associated with this action.
@@ -72,7 +88,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getEncrypted() {
-        return this._encrypted;
+        return this.encrypted;
     }
     /**
      * Gets the endpointType property value. Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
@@ -80,25 +96,24 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      */
     @javax.annotation.Nullable
     public EndpointType getEndpointType() {
-        return this._endpointType;
+        return this.endpointType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CommunicationsIdentitySet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationInstance", (n) -> { currentObject.setApplicationInstance(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("assertedIdentity", (n) -> { currentObject.setAssertedIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("azureCommunicationServicesUser", (n) -> { currentObject.setAzureCommunicationServicesUser(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("encrypted", (n) -> { currentObject.setEncrypted(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("endpointType", (n) -> { currentObject.setEndpointType(n.getEnumValue(EndpointType.class)); });
-            this.put("guest", (n) -> { currentObject.setGuest(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("onPremises", (n) -> { currentObject.setOnPremises(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("phone", (n) -> { currentObject.setPhone(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationInstance", (n) -> { this.setApplicationInstance(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("assertedIdentity", (n) -> { this.setAssertedIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("azureCommunicationServicesUser", (n) -> { this.setAzureCommunicationServicesUser(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("encrypted", (n) -> { this.setEncrypted(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(EndpointType.class)); });
+        deserializerMap.put("guest", (n) -> { this.setGuest(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremises", (n) -> { this.setOnPremises(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("phone", (n) -> { this.setPhone(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the guest property value. The guest user associated with this action.
@@ -106,7 +121,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getGuest() {
-        return this._guest;
+        return this.guest;
     }
     /**
      * Gets the onPremises property value. The Skype for Business On-Premises user associated with this action.
@@ -114,7 +129,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getOnPremises() {
-        return this._onPremises;
+        return this.onPremises;
     }
     /**
      * Gets the phone property value. Inherited from identitySet. The phone user associated with this action.
@@ -122,13 +137,14 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      */
     @javax.annotation.Nullable
     public Identity getPhone() {
-        return this._phone;
+        return this.phone;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +162,71 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the applicationInstance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationInstance(@javax.annotation.Nullable final Identity value) {
-        this._applicationInstance = value;
+        this.applicationInstance = value;
     }
     /**
      * Sets the assertedIdentity property value. An identity the participant would like to present itself as to the other participants in the call.
      * @param value Value to set for the assertedIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssertedIdentity(@javax.annotation.Nullable final Identity value) {
-        this._assertedIdentity = value;
+        this.assertedIdentity = value;
     }
     /**
      * Sets the azureCommunicationServicesUser property value. The Azure Communication Services user associated with this action.
      * @param value Value to set for the azureCommunicationServicesUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureCommunicationServicesUser(@javax.annotation.Nullable final Identity value) {
-        this._azureCommunicationServicesUser = value;
+        this.azureCommunicationServicesUser = value;
     }
     /**
      * Sets the encrypted property value. The encrypted user associated with this action.
      * @param value Value to set for the encrypted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncrypted(@javax.annotation.Nullable final Identity value) {
-        this._encrypted = value;
+        this.encrypted = value;
     }
     /**
      * Sets the endpointType property value. Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      * @param value Value to set for the endpointType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointType(@javax.annotation.Nullable final EndpointType value) {
-        this._endpointType = value;
+        this.endpointType = value;
     }
     /**
      * Sets the guest property value. The guest user associated with this action.
      * @param value Value to set for the guest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGuest(@javax.annotation.Nullable final Identity value) {
-        this._guest = value;
+        this.guest = value;
     }
     /**
      * Sets the onPremises property value. The Skype for Business On-Premises user associated with this action.
      * @param value Value to set for the onPremises property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremises(@javax.annotation.Nullable final Identity value) {
-        this._onPremises = value;
+        this.onPremises = value;
     }
     /**
      * Sets the phone property value. Inherited from identitySet. The phone user associated with this action.
      * @param value Value to set for the phone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhone(@javax.annotation.Nullable final Identity value) {
-        this._phone = value;
+        this.phone = value;
     }
 }

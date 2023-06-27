@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementConfigurationGroupSettingInstanceTemplate extends DeviceManagementConfigurationSettingInstanceTemplate implements Parsable {
-    /** Group Setting Value Template */
-    private DeviceManagementConfigurationGroupSettingValueTemplate _groupSettingValueTemplate;
+    /**
+     * Group Setting Value Template
+     */
+    private DeviceManagementConfigurationGroupSettingValueTemplate groupSettingValueTemplate;
     /**
      * Instantiates a new DeviceManagementConfigurationGroupSettingInstanceTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingInstanceTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationGroupSettingInstanceTemplate");
@@ -30,28 +32,28 @@ public class DeviceManagementConfigurationGroupSettingInstanceTemplate extends D
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationGroupSettingInstanceTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("groupSettingValueTemplate", (n) -> { currentObject.setGroupSettingValueTemplate(n.getObjectValue(DeviceManagementConfigurationGroupSettingValueTemplate::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("groupSettingValueTemplate", (n) -> { this.setGroupSettingValueTemplate(n.getObjectValue(DeviceManagementConfigurationGroupSettingValueTemplate::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the groupSettingValueTemplate property value. Group Setting Value Template
-     * @return a deviceManagementConfigurationGroupSettingValueTemplate
+     * @return a DeviceManagementConfigurationGroupSettingValueTemplate
      */
     @javax.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingValueTemplate getGroupSettingValueTemplate() {
-        return this._groupSettingValueTemplate;
+        return this.groupSettingValueTemplate;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class DeviceManagementConfigurationGroupSettingInstanceTemplate extends D
      * @param value Value to set for the groupSettingValueTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupSettingValueTemplate(@javax.annotation.Nullable final DeviceManagementConfigurationGroupSettingValueTemplate value) {
-        this._groupSettingValueTemplate = value;
+        this.groupSettingValueTemplate = value;
     }
 }

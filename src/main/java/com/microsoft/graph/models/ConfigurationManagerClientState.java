@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Configuration manager client state
+ */
 public enum ConfigurationManagerClientState implements ValuedEnum {
     /** Configuration manager agent is older than 1806 or not installed or this device has not checked into Intune for over 30 days. */
     Unknown("unknown"),

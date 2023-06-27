@@ -3,22 +3,33 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttackSimulationRoot extends Entity implements Parsable {
-    /** Represents simulation automations created to run on a tenant. */
-    private java.util.List<SimulationAutomation> _simulationAutomations;
-    /** Represents an attack simulation training campaign in a tenant. */
-    private java.util.List<Simulation> _simulations;
+    /**
+     * Represents an attack simulation training operation.
+     */
+    private java.util.List<AttackSimulationOperation> operations;
+    /**
+     * Represents an attack simulation training campaign payload in a tenant.
+     */
+    private java.util.List<Payload> payloads;
+    /**
+     * Represents simulation automation created to run on a tenant.
+     */
+    private java.util.List<SimulationAutomation> simulationAutomations;
+    /**
+     * Represents an attack simulation training campaign in a tenant.
+     */
+    private java.util.List<Simulation> simulations;
     /**
      * Instantiates a new AttackSimulationRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttackSimulationRoot() {
         super();
-        this.setOdataType("#microsoft.graph.attackSimulationRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,23 +43,40 @@ public class AttackSimulationRoot extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AttackSimulationRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("simulationAutomations", (n) -> { currentObject.setSimulationAutomations(n.getCollectionOfObjectValues(SimulationAutomation::createFromDiscriminatorValue)); });
-            this.put("simulations", (n) -> { currentObject.setSimulations(n.getCollectionOfObjectValues(Simulation::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(AttackSimulationOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("payloads", (n) -> { this.setPayloads(n.getCollectionOfObjectValues(Payload::createFromDiscriminatorValue)); });
+        deserializerMap.put("simulationAutomations", (n) -> { this.setSimulationAutomations(n.getCollectionOfObjectValues(SimulationAutomation::createFromDiscriminatorValue)); });
+        deserializerMap.put("simulations", (n) -> { this.setSimulations(n.getCollectionOfObjectValues(Simulation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
-     * Gets the simulationAutomations property value. Represents simulation automations created to run on a tenant.
+     * Gets the operations property value. Represents an attack simulation training operation.
+     * @return a attackSimulationOperation
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AttackSimulationOperation> getOperations() {
+        return this.operations;
+    }
+    /**
+     * Gets the payloads property value. Represents an attack simulation training campaign payload in a tenant.
+     * @return a payload
+     */
+    @javax.annotation.Nullable
+    public java.util.List<Payload> getPayloads() {
+        return this.payloads;
+    }
+    /**
+     * Gets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
      * @return a simulationAutomation
      */
     @javax.annotation.Nullable
     public java.util.List<SimulationAutomation> getSimulationAutomations() {
-        return this._simulationAutomations;
+        return this.simulationAutomations;
     }
     /**
      * Gets the simulations property value. Represents an attack simulation training campaign in a tenant.
@@ -56,33 +84,56 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Simulation> getSimulations() {
-        return this._simulations;
+        return this.simulations;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("operations", this.getOperations());
+        writer.writeCollectionOfObjectValues("payloads", this.getPayloads());
         writer.writeCollectionOfObjectValues("simulationAutomations", this.getSimulationAutomations());
         writer.writeCollectionOfObjectValues("simulations", this.getSimulations());
     }
     /**
-     * Sets the simulationAutomations property value. Represents simulation automations created to run on a tenant.
+     * Sets the operations property value. Represents an attack simulation training operation.
+     * @param value Value to set for the operations property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOperations(@javax.annotation.Nullable final java.util.List<AttackSimulationOperation> value) {
+        this.operations = value;
+    }
+    /**
+     * Sets the payloads property value. Represents an attack simulation training campaign payload in a tenant.
+     * @param value Value to set for the payloads property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPayloads(@javax.annotation.Nullable final java.util.List<Payload> value) {
+        this.payloads = value;
+    }
+    /**
+     * Sets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
      * @param value Value to set for the simulationAutomations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimulationAutomations(@javax.annotation.Nullable final java.util.List<SimulationAutomation> value) {
-        this._simulationAutomations = value;
+        this.simulationAutomations = value;
     }
     /**
      * Sets the simulations property value. Represents an attack simulation training campaign in a tenant.
      * @param value Value to set for the simulations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimulations(@javax.annotation.Nullable final java.util.List<Simulation> value) {
-        this._simulations = value;
+        this.simulations = value;
     }
 }

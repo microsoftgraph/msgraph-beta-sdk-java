@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationFeedbackOutcome extends EducationOutcome implements Parsable {
-    /** Teacher's written feedback to the student. */
-    private EducationFeedback _feedback;
-    /** A copy of the feedback property that is made when the grade is released to the student. */
-    private EducationFeedback _publishedFeedback;
+    /**
+     * Teacher's written feedback to the student.
+     */
+    private EducationFeedback feedback;
+    /**
+     * A copy of the feedback property that is made when the grade is released to the student.
+     */
+    private EducationFeedback publishedFeedback;
     /**
      * Instantiates a new EducationFeedbackOutcome and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationFeedbackOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationFeedbackOutcome");
@@ -36,19 +40,18 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      */
     @javax.annotation.Nullable
     public EducationFeedback getFeedback() {
-        return this._feedback;
+        return this.feedback;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationFeedbackOutcome currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
-            this.put("publishedFeedback", (n) -> { currentObject.setPublishedFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
+        deserializerMap.put("publishedFeedback", (n) -> { this.setPublishedFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the publishedFeedback property value. A copy of the feedback property that is made when the grade is released to the student.
@@ -56,13 +59,14 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      */
     @javax.annotation.Nullable
     public EducationFeedback getPublishedFeedback() {
-        return this._publishedFeedback;
+        return this.publishedFeedback;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * @param value Value to set for the feedback property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeedback(@javax.annotation.Nullable final EducationFeedback value) {
-        this._feedback = value;
+        this.feedback = value;
     }
     /**
      * Sets the publishedFeedback property value. A copy of the feedback property that is made when the grade is released to the student.
      * @param value Value to set for the publishedFeedback property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedFeedback(@javax.annotation.Nullable final EducationFeedback value) {
-        this._publishedFeedback = value;
+        this.publishedFeedback = value;
     }
 }

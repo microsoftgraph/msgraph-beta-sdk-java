@@ -4,19 +4,23 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MessagePinnedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Date and time when the event occurred. */
-    private OffsetDateTime _eventDateTime;
-    /** Initiator of the event. */
-    private IdentitySet _initiator;
+    /**
+     * Date and time when the event occurred.
+     */
+    private OffsetDateTime eventDateTime;
+    /**
+     * Initiator of the event.
+     */
+    private IdentitySet initiator;
     /**
      * Instantiates a new MessagePinnedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MessagePinnedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.messagePinnedEventMessageDetail");
@@ -37,19 +41,18 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this._eventDateTime;
+        return this.eventDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MessagePinnedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. Initiator of the event.
@@ -57,13 +60,14 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,15 +79,17 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._eventDateTime = value;
+        this.eventDateTime = value;
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
 }

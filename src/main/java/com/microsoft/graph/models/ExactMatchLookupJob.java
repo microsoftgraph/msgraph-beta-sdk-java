@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
-    /** The matchingRows property */
-    private java.util.List<LookupResultRow> _matchingRows;
-    /** The state property */
-    private String _state;
+    /**
+     * The matchingRows property
+     */
+    private java.util.List<LookupResultRow> matchingRows;
+    /**
+     * The state property
+     */
+    private String state;
     /**
      * Instantiates a new ExactMatchLookupJob and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExactMatchLookupJob() {
         super();
         this.setOdataType("#microsoft.graph.exactMatchLookupJob");
@@ -32,15 +36,14 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExactMatchLookupJob currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("matchingRows", (n) -> { currentObject.setMatchingRows(n.getCollectionOfObjectValues(LookupResultRow::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("matchingRows", (n) -> { this.setMatchingRows(n.getCollectionOfObjectValues(LookupResultRow::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the matchingRows property value. The matchingRows property
@@ -48,7 +51,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<LookupResultRow> getMatchingRows() {
-        return this._matchingRows;
+        return this.matchingRows;
     }
     /**
      * Gets the state property value. The state property
@@ -56,13 +59,14 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      */
     @javax.annotation.Nullable
     public String getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      * @param value Value to set for the matchingRows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatchingRows(@javax.annotation.Nullable final java.util.List<LookupResultRow> value) {
-        this._matchingRows = value;
+        this.matchingRows = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
-        this._state = value;
+        this.state = value;
     }
 }

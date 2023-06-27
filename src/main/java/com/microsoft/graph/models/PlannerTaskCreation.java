@@ -4,24 +4,33 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The OdataType property */
-    private String _odataType;
-    /** Information about the publication process that created this task. null value indicates that the task was not created by a publication process. */
-    private PlannerTeamsPublicationInfo _teamsPublicationInfo;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Specifies what kind of creation source the task is created with. The possible values are: external, publication and unknownFutureValue.
+     */
+    private PlannerCreationSourceKind creationSourceKind;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Information about the publication process that created this task. This field is deprecated and clients should move to using the new inheritance model.
+     */
+    private PlannerTeamsPublicationInfo teamsPublicationInfo;
     /**
      * Instantiates a new plannerTaskCreation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerTaskCreation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.plannerTaskCreation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,6 +40,14 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static PlannerTaskCreation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.plannerExternalTaskSource": return new PlannerExternalTaskSource();
+                case "#microsoft.graph.plannerTeamsPublicationInfo": return new PlannerTeamsPublicationInfo();
+            }
+        }
         return new PlannerTaskCreation();
     }
     /**
@@ -39,19 +56,27 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
+    }
+    /**
+     * Gets the creationSourceKind property value. Specifies what kind of creation source the task is created with. The possible values are: external, publication and unknownFutureValue.
+     * @return a plannerCreationSourceKind
+     */
+    @javax.annotation.Nullable
+    public PlannerCreationSourceKind getCreationSourceKind() {
+        return this.creationSourceKind;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerTaskCreation currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("teamsPublicationInfo", (n) -> { currentObject.setTeamsPublicationInfo(n.getObjectValue(PlannerTeamsPublicationInfo::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("creationSourceKind", (n) -> { this.setCreationSourceKind(n.getEnumValue(PlannerCreationSourceKind.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("teamsPublicationInfo", (n) -> { this.setTeamsPublicationInfo(n.getObjectValue(PlannerTeamsPublicationInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -59,23 +84,25 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the teamsPublicationInfo property value. Information about the publication process that created this task. null value indicates that the task was not created by a publication process.
+     * Gets the teamsPublicationInfo property value. Information about the publication process that created this task. This field is deprecated and clients should move to using the new inheritance model.
      * @return a plannerTeamsPublicationInfo
      */
     @javax.annotation.Nullable
     public PlannerTeamsPublicationInfo getTeamsPublicationInfo() {
-        return this._teamsPublicationInfo;
+        return this.teamsPublicationInfo;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("creationSourceKind", this.getCreationSourceKind());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("teamsPublicationInfo", this.getTeamsPublicationInfo());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -85,23 +112,35 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
+    }
+    /**
+     * Sets the creationSourceKind property value. Specifies what kind of creation source the task is created with. The possible values are: external, publication and unknownFutureValue.
+     * @param value Value to set for the creationSourceKind property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCreationSourceKind(@javax.annotation.Nullable final PlannerCreationSourceKind value) {
+        this.creationSourceKind = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the teamsPublicationInfo property value. Information about the publication process that created this task. null value indicates that the task was not created by a publication process.
+     * Sets the teamsPublicationInfo property value. Information about the publication process that created this task. This field is deprecated and clients should move to using the new inheritance model.
      * @param value Value to set for the teamsPublicationInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsPublicationInfo(@javax.annotation.Nullable final PlannerTeamsPublicationInfo value) {
-        this._teamsPublicationInfo = value;
+        this.teamsPublicationInfo = value;
     }
 }

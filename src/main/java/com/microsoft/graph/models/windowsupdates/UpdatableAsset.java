@@ -1,24 +1,20 @@
 package com.microsoft.graph.models.windowsupdates;
 
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.models.windowsupdates.AzureADDevice;
-import com.microsoft.graph.models.windowsupdates.UpdatableAssetGroup;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class UpdatableAsset extends Entity implements Parsable {
     /**
      * Instantiates a new updatableAsset and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdatableAsset() {
         super();
-        this.setOdataType("#microsoft.graph.windowsUpdates.updatableAsset");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,19 +36,19 @@ public class UpdatableAsset extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdatableAsset currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

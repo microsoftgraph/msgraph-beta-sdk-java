@@ -4,25 +4,39 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable {
-    /** The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In. */
-    private OffsetDateTime _createdDateTime;
-    /** The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In. */
-    private Device _device;
-    /** Tags containing app metadata. */
-    private String _deviceTag;
-    /** The name of the device on which this app is registered. */
-    private String _displayName;
-    /** Numerical version of this instance of the Authenticator app. */
-    private String _phoneAppVersion;
+    /**
+     * The app that the user has registered to use to approve push notifications. The possible values are: microsoftAuthenticator, outlookMobile, unknownFutureValue.
+     */
+    private MicrosoftAuthenticatorAuthenticationMethodClientAppName clientAppName;
+    /**
+     * The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+     */
+    private Device device;
+    /**
+     * Tags containing app metadata.
+     */
+    private String deviceTag;
+    /**
+     * The name of the device on which this app is registered.
+     */
+    private String displayName;
+    /**
+     * Numerical version of this instance of the Authenticator app.
+     */
+    private String phoneAppVersion;
     /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.microsoftAuthenticatorAuthenticationMethod");
@@ -38,12 +52,20 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
         return new MicrosoftAuthenticatorAuthenticationMethod();
     }
     /**
+     * Gets the clientAppName property value. The app that the user has registered to use to approve push notifications. The possible values are: microsoftAuthenticator, outlookMobile, unknownFutureValue.
+     * @return a microsoftAuthenticatorAuthenticationMethodClientAppName
+     */
+    @javax.annotation.Nullable
+    public MicrosoftAuthenticatorAuthenticationMethodClientAppName getClientAppName() {
+        return this.clientAppName;
+    }
+    /**
      * Gets the createdDateTime property value. The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
@@ -51,7 +73,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      */
     @javax.annotation.Nullable
     public Device getDevice() {
-        return this._device;
+        return this.device;
     }
     /**
      * Gets the deviceTag property value. Tags containing app metadata.
@@ -59,7 +81,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      */
     @javax.annotation.Nullable
     public String getDeviceTag() {
-        return this._deviceTag;
+        return this.deviceTag;
     }
     /**
      * Gets the displayName property value. The name of the device on which this app is registered.
@@ -67,22 +89,22 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MicrosoftAuthenticatorAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
-            this.put("deviceTag", (n) -> { currentObject.setDeviceTag(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("phoneAppVersion", (n) -> { currentObject.setPhoneAppVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("clientAppName", (n) -> { this.setClientAppName(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMethodClientAppName.class)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("device", (n) -> { this.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceTag", (n) -> { this.setDeviceTag(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("phoneAppVersion", (n) -> { this.setPhoneAppVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the phoneAppVersion property value. Numerical version of this instance of the Authenticator app.
@@ -90,16 +112,18 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      */
     @javax.annotation.Nullable
     public String getPhoneAppVersion() {
-        return this._phoneAppVersion;
+        return this.phoneAppVersion;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("clientAppName", this.getClientAppName());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("device", this.getDevice());
         writer.writeStringValue("deviceTag", this.getDeviceTag());
@@ -107,43 +131,57 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
         writer.writeStringValue("phoneAppVersion", this.getPhoneAppVersion());
     }
     /**
+     * Sets the clientAppName property value. The app that the user has registered to use to approve push notifications. The possible values are: microsoftAuthenticator, outlookMobile, unknownFutureValue.
+     * @param value Value to set for the clientAppName property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setClientAppName(@javax.annotation.Nullable final MicrosoftAuthenticatorAuthenticationMethodClientAppName value) {
+        this.clientAppName = value;
+    }
+    /**
      * Sets the createdDateTime property value. The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
      * @param value Value to set for the device property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevice(@javax.annotation.Nullable final Device value) {
-        this._device = value;
+        this.device = value;
     }
     /**
      * Sets the deviceTag property value. Tags containing app metadata.
      * @param value Value to set for the deviceTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceTag(@javax.annotation.Nullable final String value) {
-        this._deviceTag = value;
+        this.deviceTag = value;
     }
     /**
      * Sets the displayName property value. The name of the device on which this app is registered.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the phoneAppVersion property value. Numerical version of this instance of the Authenticator app.
      * @param value Value to set for the phoneAppVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneAppVersion(@javax.annotation.Nullable final String value) {
-        this._phoneAppVersion = value;
+        this.phoneAppVersion = value;
     }
 }

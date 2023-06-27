@@ -4,28 +4,37 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RecordingInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The participant who initiated the recording. */
-    private ParticipantInfo _initiatedBy;
-    /** The identities of recording initiator. */
-    private IdentitySet _initiator;
-    /** The OdataType property */
-    private String _odataType;
-    /** The recordingStatus property */
-    private RecordingStatus _recordingStatus;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The participant who initiated the recording.
+     */
+    private ParticipantInfo initiatedBy;
+    /**
+     * The identities of recording initiator.
+     */
+    private IdentitySet initiator;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The recordingStatus property
+     */
+    private RecordingStatus recordingStatus;
     /**
      * Instantiates a new recordingInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RecordingInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recordingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,21 +52,20 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RecordingInfo currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recordingStatus", (n) -> { currentObject.setRecordingStatus(n.getEnumValue(RecordingStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recordingStatus", (n) -> { this.setRecordingStatus(n.getEnumValue(RecordingStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the initiatedBy property value. The participant who initiated the recording.
@@ -65,7 +73,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ParticipantInfo getInitiatedBy() {
-        return this._initiatedBy;
+        return this.initiatedBy;
     }
     /**
      * Gets the initiator property value. The identities of recording initiator.
@@ -73,7 +81,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -81,21 +89,22 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the recordingStatus property value. The recordingStatus property
-     * @return a recordingStatus
+     * @return a RecordingStatus
      */
     @javax.annotation.Nullable
     public RecordingStatus getRecordingStatus() {
-        return this._recordingStatus;
+        return this.recordingStatus;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("initiatedBy", this.getInitiatedBy());
@@ -109,39 +118,44 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the initiatedBy property value. The participant who initiated the recording.
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedBy(@javax.annotation.Nullable final ParticipantInfo value) {
-        this._initiatedBy = value;
+        this.initiatedBy = value;
     }
     /**
      * Sets the initiator property value. The identities of recording initiator.
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the recordingStatus property value. The recordingStatus property
      * @param value Value to set for the recordingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordingStatus(@javax.annotation.Nullable final RecordingStatus value) {
-        this._recordingStatus = value;
+        this.recordingStatus = value;
     }
 }

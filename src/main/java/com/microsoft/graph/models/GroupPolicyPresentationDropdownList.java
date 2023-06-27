@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPresentation implements Parsable {
-    /** Localized string value identifying the default choice of the list of items. */
-    private GroupPolicyPresentationDropdownListItem _defaultItem;
-    /** Represents a set of localized display names and their associated values. */
-    private java.util.List<GroupPolicyPresentationDropdownListItem> _items;
-    /** Requirement to enter a value in the parameter box. The default value is false. */
-    private Boolean _required;
+    /**
+     * Localized string value identifying the default choice of the list of items.
+     */
+    private GroupPolicyPresentationDropdownListItem defaultItem;
+    /**
+     * Represents a set of localized display names and their associated values.
+     */
+    private java.util.List<GroupPolicyPresentationDropdownListItem> items;
+    /**
+     * Requirement to enter a value in the parameter box. The default value is false.
+     */
+    private Boolean required;
     /**
      * Instantiates a new GroupPolicyPresentationDropdownList and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationDropdownList() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationDropdownList");
@@ -38,20 +44,19 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
      */
     @javax.annotation.Nullable
     public GroupPolicyPresentationDropdownListItem getDefaultItem() {
-        return this._defaultItem;
+        return this.defaultItem;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationDropdownList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultItem", (n) -> { currentObject.setDefaultItem(n.getObjectValue(GroupPolicyPresentationDropdownListItem::createFromDiscriminatorValue)); });
-            this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(GroupPolicyPresentationDropdownListItem::createFromDiscriminatorValue)); });
-            this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultItem", (n) -> { this.setDefaultItem(n.getObjectValue(GroupPolicyPresentationDropdownListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(GroupPolicyPresentationDropdownListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("required", (n) -> { this.setRequired(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the items property value. Represents a set of localized display names and their associated values.
@@ -59,7 +64,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
      */
     @javax.annotation.Nullable
     public java.util.List<GroupPolicyPresentationDropdownListItem> getItems() {
-        return this._items;
+        return this.items;
     }
     /**
      * Gets the required property value. Requirement to enter a value in the parameter box. The default value is false.
@@ -67,13 +72,14 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
      */
     @javax.annotation.Nullable
     public Boolean getRequired() {
-        return this._required;
+        return this.required;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
      * @param value Value to set for the defaultItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultItem(@javax.annotation.Nullable final GroupPolicyPresentationDropdownListItem value) {
-        this._defaultItem = value;
+        this.defaultItem = value;
     }
     /**
      * Sets the items property value. Represents a set of localized display names and their associated values.
      * @param value Value to set for the items property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<GroupPolicyPresentationDropdownListItem> value) {
-        this._items = value;
+        this.items = value;
     }
     /**
      * Sets the required property value. Requirement to enter a value in the parameter box. The default value is false.
      * @param value Value to set for the required property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequired(@javax.annotation.Nullable final Boolean value) {
-        this._required = value;
+        this.required = value;
     }
 }

@@ -4,32 +4,38 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class TenantCustomizedInformation extends Entity implements Parsable {
-    /** The collection of contacts for the managed tenant. Optional. */
-    private java.util.List<TenantContactInformation> _contacts;
-    /** The display name for the managed tenant. Required. Read-only. */
-    private String _displayName;
-    /** The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only. */
-    private String _tenantId;
-    /** The website for the managed tenant. Required. */
-    private String _website;
     /**
-     * Instantiates a new tenantCustomizedInformation and sets the default values.
+     * The collection of contacts for the managed tenant. Optional.
+     */
+    private java.util.List<TenantContactInformation> contacts;
+    /**
+     * The display name for the managed tenant. Required. Read-only.
+     */
+    private String displayName;
+    /**
+     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     */
+    private String tenantId;
+    /**
+     * The website for the managed tenant. Required.
+     */
+    private String website;
+    /**
+     * Instantiates a new TenantCustomizedInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantCustomizedInformation() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.tenantCustomizedInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantCustomizedInformation
+     * @return a TenantCustomizedInformation
      */
     @javax.annotation.Nonnull
     public static TenantCustomizedInformation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +48,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TenantContactInformation> getContacts() {
-        return this._contacts;
+        return this.contacts;
     }
     /**
      * Gets the displayName property value. The display name for the managed tenant. Required. Read-only.
@@ -50,21 +56,20 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TenantCustomizedInformation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contacts", (n) -> { currentObject.setContacts(n.getCollectionOfObjectValues(TenantContactInformation::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("website", (n) -> { currentObject.setWebsite(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contacts", (n) -> { this.setContacts(n.getCollectionOfObjectValues(TenantContactInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("website", (n) -> { this.setWebsite(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -72,7 +77,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Gets the website property value. The website for the managed tenant. Required.
@@ -80,13 +85,14 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebsite() {
-        return this._website;
+        return this.website;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,31 +106,35 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param value Value to set for the contacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContacts(@javax.annotation.Nullable final java.util.List<TenantContactInformation> value) {
-        this._contacts = value;
+        this.contacts = value;
     }
     /**
      * Sets the displayName property value. The display name for the managed tenant. Required. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
     /**
      * Sets the website property value. The website for the managed tenant. Required.
      * @param value Value to set for the website property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebsite(@javax.annotation.Nullable final String value) {
-        this._website = value;
+        this.website = value;
     }
 }

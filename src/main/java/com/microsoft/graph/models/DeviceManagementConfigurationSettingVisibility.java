@@ -3,14 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Supported setting types
+ */
 public enum DeviceManagementConfigurationSettingVisibility implements ValuedEnum {
-    /** Not visible */
+    /** Default. Not visible. */
     None("none"),
-    /** Visible to setting catalog UX */
+    /** Visible to setting catalog policy type. */
     SettingsCatalog("settingsCatalog"),
-    /** Visible to template */
-    Template("template");
+    /** Visible to template policy type. */
+    Template("template"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceManagementConfigurationSettingVisibility(final String value) {
         this.value = value;
@@ -24,6 +28,7 @@ public enum DeviceManagementConfigurationSettingVisibility implements ValuedEnum
             case "none": return None;
             case "settingsCatalog": return SettingsCatalog;
             case "template": return Template;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

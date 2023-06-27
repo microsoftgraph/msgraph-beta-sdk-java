@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements Parsable {
-    /** Not yet documented */
-    private String _userPrincipalName;
+    /**
+     * Not yet documented
+     */
+    private String userPrincipalName;
     /**
      * Instantiates a new WindowsDeviceAzureADAccount and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDeviceAzureADAccount() {
         super();
         this.setOdataType("#microsoft.graph.windowsDeviceAzureADAccount");
@@ -30,14 +32,13 @@ public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDeviceAzureADAccount currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the userPrincipalName property value. Not yet documented
@@ -45,13 +46,14 @@ public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

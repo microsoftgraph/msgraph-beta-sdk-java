@@ -1,20 +1,21 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.CrossTenantAccessPolicy;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Parsable {
-    /** The definition property */
-    private java.util.List<String> _definition;
+    /**
+     * The definition property
+     */
+    private java.util.List<String> definition;
     /**
      * Instantiates a new TenantRelationshipAccessPolicyBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantRelationshipAccessPolicyBase() {
         super();
         this.setOdataType("#microsoft.graph.tenantRelationshipAccessPolicyBase");
@@ -42,24 +43,24 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefinition() {
-        return this._definition;
+        return this.definition;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TenantRelationshipAccessPolicyBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("definition", (n) -> { currentObject.setDefinition(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("definition", (n) -> { this.setDefinition(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,7 +71,8 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
      * @param value Value to set for the definition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinition(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._definition = value;
+        this.definition = value;
     }
 }

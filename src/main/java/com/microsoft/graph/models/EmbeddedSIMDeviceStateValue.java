@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Describes the various states for an embedded SIM activation code.
+ */
 public enum EmbeddedSIMDeviceStateValue implements ValuedEnum {
     /** Designates that the embedded SIM activation code is free and available to be assigned to a device. */
     NotEvaluated("notEvaluated"),

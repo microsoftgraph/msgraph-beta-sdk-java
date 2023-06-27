@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * State of lost mode, indicating if lost mode is enabled or disabled
+ */
 public enum LostModeState implements ValuedEnum {
     /** Lost mode is disabled. */
     Disabled("disabled"),

@@ -3,20 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationEventsPolicy extends Entity implements Parsable {
-    /** A list of applicable actions to be taken on sign-up. */
-    private java.util.List<AuthenticationListener> _onSignupStart;
+    /**
+     * A list of applicable actions to be taken on sign-up.
+     */
+    private java.util.List<AuthenticationListener> onSignupStart;
     /**
      * Instantiates a new AuthenticationEventsPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationEventsPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationEventsPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +31,13 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationEventsPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("onSignupStart", (n) -> { currentObject.setOnSignupStart(n.getCollectionOfObjectValues(AuthenticationListener::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("onSignupStart", (n) -> { this.setOnSignupStart(n.getCollectionOfObjectValues(AuthenticationListener::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the onSignupStart property value. A list of applicable actions to be taken on sign-up.
@@ -45,13 +45,14 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationListener> getOnSignupStart() {
-        return this._onSignupStart;
+        return this.onSignupStart;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +63,8 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
      * @param value Value to set for the onSignupStart property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnSignupStart(@javax.annotation.Nullable final java.util.List<AuthenticationListener> value) {
-        this._onSignupStart = value;
+        this.onSignupStart = value;
     }
 }

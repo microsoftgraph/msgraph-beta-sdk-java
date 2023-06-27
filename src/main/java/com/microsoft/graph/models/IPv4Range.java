@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IPv4Range extends IpRange implements Parsable {
-    /** Lower address. */
-    private String _lowerAddress;
-    /** Upper address. */
-    private String _upperAddress;
+    /**
+     * Lower address.
+     */
+    private String lowerAddress;
+    /**
+     * Upper address.
+     */
+    private String upperAddress;
     /**
      * Instantiates a new IPv4Range and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IPv4Range() {
         super();
         this.setOdataType("#microsoft.graph.iPv4Range");
@@ -32,15 +36,14 @@ public class IPv4Range extends IpRange implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IPv4Range currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("lowerAddress", (n) -> { currentObject.setLowerAddress(n.getStringValue()); });
-            this.put("upperAddress", (n) -> { currentObject.setUpperAddress(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lowerAddress", (n) -> { this.setLowerAddress(n.getStringValue()); });
+        deserializerMap.put("upperAddress", (n) -> { this.setUpperAddress(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lowerAddress property value. Lower address.
@@ -48,7 +51,7 @@ public class IPv4Range extends IpRange implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLowerAddress() {
-        return this._lowerAddress;
+        return this.lowerAddress;
     }
     /**
      * Gets the upperAddress property value. Upper address.
@@ -56,13 +59,14 @@ public class IPv4Range extends IpRange implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUpperAddress() {
-        return this._upperAddress;
+        return this.upperAddress;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class IPv4Range extends IpRange implements Parsable {
      * @param value Value to set for the lowerAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLowerAddress(@javax.annotation.Nullable final String value) {
-        this._lowerAddress = value;
+        this.lowerAddress = value;
     }
     /**
      * Sets the upperAddress property value. Upper address.
      * @param value Value to set for the upperAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpperAddress(@javax.annotation.Nullable final String value) {
-        this._upperAddress = value;
+        this.upperAddress = value;
     }
 }

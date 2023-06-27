@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * An enum representing possible values for required password unlock.
+ */
 public enum AndroidDeviceOwnerRequiredPasswordUnlock implements ValuedEnum {
     /** Timeout period before strong authentication is required is set to the device's default. */
     DeviceDefault("deviceDefault"),

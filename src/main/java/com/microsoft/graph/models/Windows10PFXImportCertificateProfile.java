@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10PFXImportCertificateProfile extends DeviceConfiguration implements Parsable {
-    /** Key Storage Provider (KSP) Import Options. */
-    private KeyStorageProviderOption _keyStorageProvider;
+    /**
+     * Key Storage Provider (KSP) Import Options.
+     */
+    private KeyStorageProviderOption keyStorageProvider;
     /**
      * Instantiates a new Windows10PFXImportCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10PFXImportCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windows10PFXImportCertificateProfile");
@@ -30,28 +32,28 @@ public class Windows10PFXImportCertificateProfile extends DeviceConfiguration im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10PFXImportCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("keyStorageProvider", (n) -> { currentObject.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("keyStorageProvider", (n) -> { this.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
-     * @return a keyStorageProviderOption
+     * @return a KeyStorageProviderOption
      */
     @javax.annotation.Nullable
     public KeyStorageProviderOption getKeyStorageProvider() {
-        return this._keyStorageProvider;
+        return this.keyStorageProvider;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class Windows10PFXImportCertificateProfile extends DeviceConfiguration im
      * @param value Value to set for the keyStorageProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyStorageProvider(@javax.annotation.Nullable final KeyStorageProviderOption value) {
-        this._keyStorageProvider = value;
+        this.keyStorageProvider = value;
     }
 }

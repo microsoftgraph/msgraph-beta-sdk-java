@@ -6,43 +6,65 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class RetentionEvent extends Entity implements Parsable {
-    /** The user who created the retentionEvent. */
-    private IdentitySet _createdBy;
-    /** The date time when the retentionEvent was created. */
-    private OffsetDateTime _createdDateTime;
-    /** Optional information about the event. */
-    private String _description;
-    /** Name of the event. */
-    private String _displayName;
-    /** The eventPropagationResults property */
-    private java.util.List<EventPropagationResult> _eventPropagationResults;
-    /** Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event. */
-    private java.util.List<EventQuery> _eventQueries;
-    /** The eventStatus property */
-    private RetentionEventStatus _eventStatus;
-    /** Optional time when the event should be triggered. */
-    private OffsetDateTime _eventTriggerDateTime;
-    /** The user who last modified the retentionEvent. */
-    private IdentitySet _lastModifiedBy;
-    /** The latest date time when the retentionEvent was modified. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** Last time the status of the event was updated. */
-    private OffsetDateTime _lastStatusUpdateDateTime;
-    /** Specifies the event that will start the retention period for labels that use this event type when an event is created. */
-    private RetentionEventType _retentionEventType;
+    /**
+     * The user who created the retentionEvent.
+     */
+    private IdentitySet createdBy;
+    /**
+     * The date time when the retentionEvent was created.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * Optional information about the event.
+     */
+    private String description;
+    /**
+     * Name of the event.
+     */
+    private String displayName;
+    /**
+     * The eventPropagationResults property
+     */
+    private java.util.List<EventPropagationResult> eventPropagationResults;
+    /**
+     * Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event.
+     */
+    private java.util.List<EventQuery> eventQueries;
+    /**
+     * The eventStatus property
+     */
+    private RetentionEventStatus eventStatus;
+    /**
+     * Optional time when the event should be triggered.
+     */
+    private OffsetDateTime eventTriggerDateTime;
+    /**
+     * The user who last modified the retentionEvent.
+     */
+    private IdentitySet lastModifiedBy;
+    /**
+     * The latest date time when the retentionEvent was modified.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * Last time the status of the event was updated.
+     */
+    private OffsetDateTime lastStatusUpdateDateTime;
+    /**
+     * Specifies the event that will start the retention period for labels that use this event type when an event is created.
+     */
+    private RetentionEventType retentionEventType;
     /**
      * Instantiates a new retentionEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RetentionEvent() {
         super();
-        this.setOdataType("#microsoft.graph.security.retentionEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,7 +82,7 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The date time when the retentionEvent was created.
@@ -68,7 +90,7 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. Optional information about the event.
@@ -76,7 +98,7 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Name of the event.
@@ -84,7 +106,7 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the eventPropagationResults property value. The eventPropagationResults property
@@ -92,7 +114,7 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EventPropagationResult> getEventPropagationResults() {
-        return this._eventPropagationResults;
+        return this.eventPropagationResults;
     }
     /**
      * Gets the eventQueries property value. Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event.
@@ -100,7 +122,7 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EventQuery> getEventQueries() {
-        return this._eventQueries;
+        return this.eventQueries;
     }
     /**
      * Gets the eventStatus property value. The eventStatus property
@@ -108,7 +130,7 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RetentionEventStatus getEventStatus() {
-        return this._eventStatus;
+        return this.eventStatus;
     }
     /**
      * Gets the eventTriggerDateTime property value. Optional time when the event should be triggered.
@@ -116,29 +138,28 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEventTriggerDateTime() {
-        return this._eventTriggerDateTime;
+        return this.eventTriggerDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RetentionEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("eventPropagationResults", (n) -> { currentObject.setEventPropagationResults(n.getCollectionOfObjectValues(EventPropagationResult::createFromDiscriminatorValue)); });
-            this.put("eventQueries", (n) -> { currentObject.setEventQueries(n.getCollectionOfObjectValues(EventQuery::createFromDiscriminatorValue)); });
-            this.put("eventStatus", (n) -> { currentObject.setEventStatus(n.getObjectValue(RetentionEventStatus::createFromDiscriminatorValue)); });
-            this.put("eventTriggerDateTime", (n) -> { currentObject.setEventTriggerDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastStatusUpdateDateTime", (n) -> { currentObject.setLastStatusUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("retentionEventType", (n) -> { currentObject.setRetentionEventType(n.getObjectValue(RetentionEventType::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("eventPropagationResults", (n) -> { this.setEventPropagationResults(n.getCollectionOfObjectValues(EventPropagationResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("eventQueries", (n) -> { this.setEventQueries(n.getCollectionOfObjectValues(EventQuery::createFromDiscriminatorValue)); });
+        deserializerMap.put("eventStatus", (n) -> { this.setEventStatus(n.getObjectValue(RetentionEventStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("eventTriggerDateTime", (n) -> { this.setEventTriggerDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastStatusUpdateDateTime", (n) -> { this.setLastStatusUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("retentionEventType", (n) -> { this.setRetentionEventType(n.getObjectValue(RetentionEventType::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the retentionEvent.
@@ -146,7 +167,7 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedDateTime property value. The latest date time when the retentionEvent was modified.
@@ -154,7 +175,7 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the lastStatusUpdateDateTime property value. Last time the status of the event was updated.
@@ -162,7 +183,7 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastStatusUpdateDateTime() {
-        return this._lastStatusUpdateDateTime;
+        return this.lastStatusUpdateDateTime;
     }
     /**
      * Gets the retentionEventType property value. Specifies the event that will start the retention period for labels that use this event type when an event is created.
@@ -170,13 +191,14 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RetentionEventType getRetentionEventType() {
-        return this._retentionEventType;
+        return this.retentionEventType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -198,95 +220,107 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date time when the retentionEvent was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Optional information about the event.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Name of the event.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the eventPropagationResults property value. The eventPropagationResults property
      * @param value Value to set for the eventPropagationResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventPropagationResults(@javax.annotation.Nullable final java.util.List<EventPropagationResult> value) {
-        this._eventPropagationResults = value;
+        this.eventPropagationResults = value;
     }
     /**
      * Sets the eventQueries property value. Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event.
      * @param value Value to set for the eventQueries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventQueries(@javax.annotation.Nullable final java.util.List<EventQuery> value) {
-        this._eventQueries = value;
+        this.eventQueries = value;
     }
     /**
      * Sets the eventStatus property value. The eventStatus property
      * @param value Value to set for the eventStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventStatus(@javax.annotation.Nullable final RetentionEventStatus value) {
-        this._eventStatus = value;
+        this.eventStatus = value;
     }
     /**
      * Sets the eventTriggerDateTime property value. Optional time when the event should be triggered.
      * @param value Value to set for the eventTriggerDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventTriggerDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._eventTriggerDateTime = value;
+        this.eventTriggerDateTime = value;
     }
     /**
      * Sets the lastModifiedBy property value. The user who last modified the retentionEvent.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The latest date time when the retentionEvent was modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the lastStatusUpdateDateTime property value. Last time the status of the event was updated.
      * @param value Value to set for the lastStatusUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastStatusUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastStatusUpdateDateTime = value;
+        this.lastStatusUpdateDateTime = value;
     }
     /**
      * Sets the retentionEventType property value. Specifies the event that will start the retention period for labels that use this event type when an event is created.
      * @param value Value to set for the retentionEventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRetentionEventType(@javax.annotation.Nullable final RetentionEventType value) {
-        this._retentionEventType = value;
+        this.retentionEventType = value;
     }
 }

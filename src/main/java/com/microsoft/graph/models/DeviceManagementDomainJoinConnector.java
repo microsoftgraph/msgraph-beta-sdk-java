@@ -4,26 +4,33 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementDomainJoinConnector extends Entity implements Parsable {
-    /** The connector display name. */
-    private String _displayName;
-    /** Last time connector contacted Intune. */
-    private OffsetDateTime _lastConnectionDateTime;
-    /** The ODJ request states. */
-    private DeviceManagementDomainJoinConnectorState _state;
-    /** The version of the connector. */
-    private String _version;
+    /**
+     * The connector display name.
+     */
+    private String displayName;
+    /**
+     * Last time connector contacted Intune.
+     */
+    private OffsetDateTime lastConnectionDateTime;
+    /**
+     * The ODJ request states.
+     */
+    private DeviceManagementDomainJoinConnectorState state;
+    /**
+     * The version of the connector.
+     */
+    private String version;
     /**
      * Instantiates a new DeviceManagementDomainJoinConnector and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementDomainJoinConnector() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementDomainJoinConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,21 +48,20 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementDomainJoinConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastConnectionDateTime", (n) -> { currentObject.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(DeviceManagementDomainJoinConnectorState.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastConnectionDateTime", (n) -> { this.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(DeviceManagementDomainJoinConnectorState.class)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastConnectionDateTime property value. Last time connector contacted Intune.
@@ -63,15 +69,15 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
-        return this._lastConnectionDateTime;
+        return this.lastConnectionDateTime;
     }
     /**
      * Gets the state property value. The ODJ request states.
-     * @return a deviceManagementDomainJoinConnectorState
+     * @return a DeviceManagementDomainJoinConnectorState
      */
     @javax.annotation.Nullable
     public DeviceManagementDomainJoinConnectorState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the version property value. The version of the connector.
@@ -79,13 +85,14 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,31 +106,35 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastConnectionDateTime property value. Last time connector contacted Intune.
      * @param value Value to set for the lastConnectionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastConnectionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastConnectionDateTime = value;
+        this.lastConnectionDateTime = value;
     }
     /**
      * Sets the state property value. The ODJ request states.
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final DeviceManagementDomainJoinConnectorState value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the version property value. The version of the connector.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

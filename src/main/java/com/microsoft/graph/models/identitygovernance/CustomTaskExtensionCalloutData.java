@@ -5,23 +5,31 @@ import com.microsoft.graph.models.User;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CustomTaskExtensionCalloutData extends CustomExtensionData implements Parsable {
-    /** The subject property */
-    private User _subject;
-    /** The task property */
-    private Task _task;
-    /** The taskProcessingresult property */
-    private TaskProcessingResult _taskProcessingresult;
-    /** The workflow property */
-    private Workflow _workflow;
+    /**
+     * The subject property
+     */
+    private User subject;
+    /**
+     * The task property
+     */
+    private Task task;
+    /**
+     * The taskProcessingresult property
+     */
+    private TaskProcessingResult taskProcessingresult;
+    /**
+     * The workflow property
+     */
+    private Workflow workflow;
     /**
      * Instantiates a new CustomTaskExtensionCalloutData and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomTaskExtensionCalloutData() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.customTaskExtensionCalloutData");
@@ -38,17 +46,16 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CustomTaskExtensionCalloutData currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("subject", (n) -> { currentObject.setSubject(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("task", (n) -> { currentObject.setTask(n.getObjectValue(Task::createFromDiscriminatorValue)); });
-            this.put("taskProcessingresult", (n) -> { currentObject.setTaskProcessingresult(n.getObjectValue(TaskProcessingResult::createFromDiscriminatorValue)); });
-            this.put("workflow", (n) -> { currentObject.setWorkflow(n.getObjectValue(Workflow::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("task", (n) -> { this.setTask(n.getObjectValue(Task::createFromDiscriminatorValue)); });
+        deserializerMap.put("taskProcessingresult", (n) -> { this.setTaskProcessingresult(n.getObjectValue(TaskProcessingResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("workflow", (n) -> { this.setWorkflow(n.getObjectValue(Workflow::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the subject property value. The subject property
@@ -56,7 +63,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      */
     @javax.annotation.Nullable
     public User getSubject() {
-        return this._subject;
+        return this.subject;
     }
     /**
      * Gets the task property value. The task property
@@ -64,7 +71,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      */
     @javax.annotation.Nullable
     public Task getTask() {
-        return this._task;
+        return this.task;
     }
     /**
      * Gets the taskProcessingresult property value. The taskProcessingresult property
@@ -72,7 +79,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      */
     @javax.annotation.Nullable
     public TaskProcessingResult getTaskProcessingresult() {
-        return this._taskProcessingresult;
+        return this.taskProcessingresult;
     }
     /**
      * Gets the workflow property value. The workflow property
@@ -80,13 +87,14 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      */
     @javax.annotation.Nullable
     public Workflow getWorkflow() {
-        return this._workflow;
+        return this.workflow;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,31 +108,35 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final User value) {
-        this._subject = value;
+        this.subject = value;
     }
     /**
      * Sets the task property value. The task property
      * @param value Value to set for the task property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTask(@javax.annotation.Nullable final Task value) {
-        this._task = value;
+        this.task = value;
     }
     /**
      * Sets the taskProcessingresult property value. The taskProcessingresult property
      * @param value Value to set for the taskProcessingresult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskProcessingresult(@javax.annotation.Nullable final TaskProcessingResult value) {
-        this._taskProcessingresult = value;
+        this.taskProcessingresult = value;
     }
     /**
      * Sets the workflow property value. The workflow property
      * @param value Value to set for the workflow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkflow(@javax.annotation.Nullable final Workflow value) {
-        this._workflow = value;
+        this.workflow = value;
     }
 }

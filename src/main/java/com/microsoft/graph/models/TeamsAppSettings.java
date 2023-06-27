@@ -3,20 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsAppSettings extends Entity implements Parsable {
-    /** Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. If true, Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. If false, the installation of any Teams app that requires resource-specific permissions in a chat or a meeting will be blocked. */
-    private Boolean _isChatResourceSpecificConsentEnabled;
+    /**
+     * Indicates whether users are allowed to request access to the unavailable Teams apps.
+     */
+    private Boolean allowUserRequestsForAppAccess;
+    /**
+     * Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. If true, Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. If false, the installation of any Teams app that requires resource-specific permissions in a chat or a meeting will be blocked.
+     */
+    private Boolean isChatResourceSpecificConsentEnabled;
+    /**
+     * The isUserPersonalScopeResourceSpecificConsentEnabled property
+     */
+    private Boolean isUserPersonalScopeResourceSpecificConsentEnabled;
     /**
      * Instantiates a new TeamsAppSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsAppSettings() {
         super();
-        this.setOdataType("#microsoft.graph.teamsAppSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -29,15 +38,24 @@ public class TeamsAppSettings extends Entity implements Parsable {
         return new TeamsAppSettings();
     }
     /**
+     * Gets the allowUserRequestsForAppAccess property value. Indicates whether users are allowed to request access to the unavailable Teams apps.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getAllowUserRequestsForAppAccess() {
+        return this.allowUserRequestsForAppAccess;
+    }
+    /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamsAppSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isChatResourceSpecificConsentEnabled", (n) -> { currentObject.setIsChatResourceSpecificConsentEnabled(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowUserRequestsForAppAccess", (n) -> { this.setAllowUserRequestsForAppAccess(n.getBooleanValue()); });
+        deserializerMap.put("isChatResourceSpecificConsentEnabled", (n) -> { this.setIsChatResourceSpecificConsentEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isUserPersonalScopeResourceSpecificConsentEnabled", (n) -> { this.setIsUserPersonalScopeResourceSpecificConsentEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isChatResourceSpecificConsentEnabled property value. Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. If true, Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. If false, the installation of any Teams app that requires resource-specific permissions in a chat or a meeting will be blocked.
@@ -45,24 +63,54 @@ public class TeamsAppSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsChatResourceSpecificConsentEnabled() {
-        return this._isChatResourceSpecificConsentEnabled;
+        return this.isChatResourceSpecificConsentEnabled;
+    }
+    /**
+     * Gets the isUserPersonalScopeResourceSpecificConsentEnabled property value. The isUserPersonalScopeResourceSpecificConsentEnabled property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsUserPersonalScopeResourceSpecificConsentEnabled() {
+        return this.isUserPersonalScopeResourceSpecificConsentEnabled;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeBooleanValue("allowUserRequestsForAppAccess", this.getAllowUserRequestsForAppAccess());
         writer.writeBooleanValue("isChatResourceSpecificConsentEnabled", this.getIsChatResourceSpecificConsentEnabled());
+        writer.writeBooleanValue("isUserPersonalScopeResourceSpecificConsentEnabled", this.getIsUserPersonalScopeResourceSpecificConsentEnabled());
+    }
+    /**
+     * Sets the allowUserRequestsForAppAccess property value. Indicates whether users are allowed to request access to the unavailable Teams apps.
+     * @param value Value to set for the allowUserRequestsForAppAccess property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAllowUserRequestsForAppAccess(@javax.annotation.Nullable final Boolean value) {
+        this.allowUserRequestsForAppAccess = value;
     }
     /**
      * Sets the isChatResourceSpecificConsentEnabled property value. Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. If true, Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. If false, the installation of any Teams app that requires resource-specific permissions in a chat or a meeting will be blocked.
      * @param value Value to set for the isChatResourceSpecificConsentEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsChatResourceSpecificConsentEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isChatResourceSpecificConsentEnabled = value;
+        this.isChatResourceSpecificConsentEnabled = value;
+    }
+    /**
+     * Sets the isUserPersonalScopeResourceSpecificConsentEnabled property value. The isUserPersonalScopeResourceSpecificConsentEnabled property
+     * @param value Value to set for the isUserPersonalScopeResourceSpecificConsentEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsUserPersonalScopeResourceSpecificConsentEnabled(@javax.annotation.Nullable final Boolean value) {
+        this.isUserPersonalScopeResourceSpecificConsentEnabled = value;
     }
 }

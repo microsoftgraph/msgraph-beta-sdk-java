@@ -5,20 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the updateRelationships method. */
 public class UpdateRelationshipsPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The relationships property */
-    private java.util.List<MobileAppRelationship> _relationships;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The relationships property
+     */
+    private java.util.List<MobileAppRelationship> relationships;
     /**
      * Instantiates a new updateRelationshipsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateRelationshipsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,18 +41,17 @@ public class UpdateRelationshipsPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdateRelationshipsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("relationships", (n) -> { currentObject.setRelationships(n.getCollectionOfObjectValues(MobileAppRelationship::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("relationships", (n) -> { this.setRelationships(n.getCollectionOfObjectValues(MobileAppRelationship::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the relationships property value. The relationships property
@@ -57,13 +59,14 @@ public class UpdateRelationshipsPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public java.util.List<MobileAppRelationship> getRelationships() {
-        return this._relationships;
+        return this.relationships;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("relationships", this.getRelationships());
@@ -74,15 +77,17 @@ public class UpdateRelationshipsPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the relationships property value. The relationships property
      * @param value Value to set for the relationships property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelationships(@javax.annotation.Nullable final java.util.List<MobileAppRelationship> value) {
-        this._relationships = value;
+        this.relationships = value;
     }
 }

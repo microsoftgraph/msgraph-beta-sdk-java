@@ -3,27 +3,36 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Unsupported Group Policy Extension. */
+/**
+ * Unsupported Group Policy Extension.
+ */
 public class UnsupportedGroupPolicyExtension extends Entity implements Parsable {
-    /** ExtensionType of the unsupported extension. */
-    private String _extensionType;
-    /** Namespace Url of the unsupported extension. */
-    private String _namespaceUrl;
-    /** Node name of the unsupported extension. */
-    private String _nodeName;
-    /** Scope of the group policy setting. */
-    private GroupPolicySettingScope _settingScope;
+    /**
+     * ExtensionType of the unsupported extension.
+     */
+    private String extensionType;
+    /**
+     * Namespace Url of the unsupported extension.
+     */
+    private String namespaceUrl;
+    /**
+     * Node name of the unsupported extension.
+     */
+    private String nodeName;
+    /**
+     * Scope of the group policy setting.
+     */
+    private GroupPolicySettingScope settingScope;
     /**
      * Instantiates a new unsupportedGroupPolicyExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnsupportedGroupPolicyExtension() {
         super();
-        this.setOdataType("#microsoft.graph.unsupportedGroupPolicyExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,21 +50,20 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getExtensionType() {
-        return this._extensionType;
+        return this.extensionType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnsupportedGroupPolicyExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("extensionType", (n) -> { currentObject.setExtensionType(n.getStringValue()); });
-            this.put("namespaceUrl", (n) -> { currentObject.setNamespaceUrl(n.getStringValue()); });
-            this.put("nodeName", (n) -> { currentObject.setNodeName(n.getStringValue()); });
-            this.put("settingScope", (n) -> { currentObject.setSettingScope(n.getEnumValue(GroupPolicySettingScope.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("extensionType", (n) -> { this.setExtensionType(n.getStringValue()); });
+        deserializerMap.put("namespaceUrl", (n) -> { this.setNamespaceUrl(n.getStringValue()); });
+        deserializerMap.put("nodeName", (n) -> { this.setNodeName(n.getStringValue()); });
+        deserializerMap.put("settingScope", (n) -> { this.setSettingScope(n.getEnumValue(GroupPolicySettingScope.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the namespaceUrl property value. Namespace Url of the unsupported extension.
@@ -63,7 +71,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getNamespaceUrl() {
-        return this._namespaceUrl;
+        return this.namespaceUrl;
     }
     /**
      * Gets the nodeName property value. Node name of the unsupported extension.
@@ -71,21 +79,22 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getNodeName() {
-        return this._nodeName;
+        return this.nodeName;
     }
     /**
      * Gets the settingScope property value. Scope of the group policy setting.
-     * @return a groupPolicySettingScope
+     * @return a GroupPolicySettingScope
      */
     @javax.annotation.Nullable
     public GroupPolicySettingScope getSettingScope() {
-        return this._settingScope;
+        return this.settingScope;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,31 +108,35 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * @param value Value to set for the extensionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionType(@javax.annotation.Nullable final String value) {
-        this._extensionType = value;
+        this.extensionType = value;
     }
     /**
      * Sets the namespaceUrl property value. Namespace Url of the unsupported extension.
      * @param value Value to set for the namespaceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNamespaceUrl(@javax.annotation.Nullable final String value) {
-        this._namespaceUrl = value;
+        this.namespaceUrl = value;
     }
     /**
      * Sets the nodeName property value. Node name of the unsupported extension.
      * @param value Value to set for the nodeName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNodeName(@javax.annotation.Nullable final String value) {
-        this._nodeName = value;
+        this.nodeName = value;
     }
     /**
      * Sets the settingScope property value. Scope of the group policy setting.
      * @param value Value to set for the settingScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingScope(@javax.annotation.Nullable final GroupPolicySettingScope value) {
-        this._settingScope = value;
+        this.settingScope = value;
     }
 }

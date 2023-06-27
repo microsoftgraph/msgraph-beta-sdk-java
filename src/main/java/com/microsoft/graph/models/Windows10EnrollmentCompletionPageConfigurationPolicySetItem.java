@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends PolicySetItem implements Parsable {
-    /** Priority of the Windows10EnrollmentCompletionPageConfigurationPolicySetItem. */
-    private Integer _priority;
+    /**
+     * Priority of the Windows10EnrollmentCompletionPageConfigurationPolicySetItem.
+     */
+    private Integer priority;
     /**
      * Instantiates a new Windows10EnrollmentCompletionPageConfigurationPolicySetItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10EnrollmentCompletionPageConfigurationPolicySetItem() {
         super();
         this.setOdataType("#microsoft.graph.windows10EnrollmentCompletionPageConfigurationPolicySetItem");
@@ -30,14 +32,13 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10EnrollmentCompletionPageConfigurationPolicySetItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the priority property value. Priority of the Windows10EnrollmentCompletionPageConfigurationPolicySetItem.
@@ -45,13 +46,14 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends
      */
     @javax.annotation.Nullable
     public Integer getPriority() {
-        return this._priority;
+        return this.priority;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
-        this._priority = value;
+        this.priority = value;
     }
 }

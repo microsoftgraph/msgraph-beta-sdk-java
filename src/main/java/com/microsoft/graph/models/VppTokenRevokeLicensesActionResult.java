@@ -3,24 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult implements Parsable {
-    /** Possible types of reasons for an Apple Volume Purchase Program token action failure. */
-    private VppTokenActionFailureReason _actionFailureReason;
-    /** A count of the number of licenses that failed to revoke. */
-    private Integer _failedLicensesCount;
-    /** A count of the number of licenses that were attempted to revoke. */
-    private Integer _totalLicensesCount;
+    /**
+     * Possible types of reasons for an Apple Volume Purchase Program token action failure.
+     */
+    private VppTokenActionFailureReason actionFailureReason;
+    /**
+     * A count of the number of licenses that failed to revoke.
+     */
+    private Integer failedLicensesCount;
+    /**
+     * A count of the number of licenses that were attempted to revoke.
+     */
+    private Integer totalLicensesCount;
     /**
      * Instantiates a new VppTokenRevokeLicensesActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VppTokenRevokeLicensesActionResult() {
         super();
-        this.setOdataType("#microsoft.graph.vppTokenRevokeLicensesActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,11 +39,11 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     }
     /**
      * Gets the actionFailureReason property value. Possible types of reasons for an Apple Volume Purchase Program token action failure.
-     * @return a vppTokenActionFailureReason
+     * @return a VppTokenActionFailureReason
      */
     @javax.annotation.Nullable
     public VppTokenActionFailureReason getActionFailureReason() {
-        return this._actionFailureReason;
+        return this.actionFailureReason;
     }
     /**
      * Gets the failedLicensesCount property value. A count of the number of licenses that failed to revoke.
@@ -46,20 +51,19 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      */
     @javax.annotation.Nullable
     public Integer getFailedLicensesCount() {
-        return this._failedLicensesCount;
+        return this.failedLicensesCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VppTokenRevokeLicensesActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actionFailureReason", (n) -> { currentObject.setActionFailureReason(n.getEnumValue(VppTokenActionFailureReason.class)); });
-            this.put("failedLicensesCount", (n) -> { currentObject.setFailedLicensesCount(n.getIntegerValue()); });
-            this.put("totalLicensesCount", (n) -> { currentObject.setTotalLicensesCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionFailureReason", (n) -> { this.setActionFailureReason(n.getEnumValue(VppTokenActionFailureReason.class)); });
+        deserializerMap.put("failedLicensesCount", (n) -> { this.setFailedLicensesCount(n.getIntegerValue()); });
+        deserializerMap.put("totalLicensesCount", (n) -> { this.setTotalLicensesCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the totalLicensesCount property value. A count of the number of licenses that were attempted to revoke.
@@ -67,13 +71,14 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      */
     @javax.annotation.Nullable
     public Integer getTotalLicensesCount() {
-        return this._totalLicensesCount;
+        return this.totalLicensesCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +91,26 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      * @param value Value to set for the actionFailureReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionFailureReason(@javax.annotation.Nullable final VppTokenActionFailureReason value) {
-        this._actionFailureReason = value;
+        this.actionFailureReason = value;
     }
     /**
      * Sets the failedLicensesCount property value. A count of the number of licenses that failed to revoke.
      * @param value Value to set for the failedLicensesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedLicensesCount(@javax.annotation.Nullable final Integer value) {
-        this._failedLicensesCount = value;
+        this.failedLicensesCount = value;
     }
     /**
      * Sets the totalLicensesCount property value. A count of the number of licenses that were attempted to revoke.
      * @param value Value to set for the totalLicensesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalLicensesCount(@javax.annotation.Nullable final Integer value) {
-        this._totalLicensesCount = value;
+        this.totalLicensesCount = value;
     }
 }

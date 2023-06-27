@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable {
-    /** This references an Intune App that will be target to the same assignments as Kiosk configuration */
-    private String _appId;
-    /** This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode */
-    private String _appUserModelId;
-    /** This references an contained App from an Intune App */
-    private String _containedAppId;
+    /**
+     * This references an Intune App that will be target to the same assignments as Kiosk configuration
+     */
+    private String appId;
+    /**
+     * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
+     */
+    private String appUserModelId;
+    /**
+     * This references an contained App from an Intune App
+     */
+    private String containedAppId;
     /**
      * Instantiates a new WindowsKioskUWPApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskUWPApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskUWPApp");
@@ -38,7 +44,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
      */
     @javax.annotation.Nullable
     public String getAppId() {
-        return this._appId;
+        return this.appId;
     }
     /**
      * Gets the appUserModelId property value. This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
@@ -46,7 +52,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
      */
     @javax.annotation.Nullable
     public String getAppUserModelId() {
-        return this._appUserModelId;
+        return this.appUserModelId;
     }
     /**
      * Gets the containedAppId property value. This references an contained App from an Intune App
@@ -54,26 +60,26 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
      */
     @javax.annotation.Nullable
     public String getContainedAppId() {
-        return this._containedAppId;
+        return this.containedAppId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsKioskUWPApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("appUserModelId", (n) -> { currentObject.setAppUserModelId(n.getStringValue()); });
-            this.put("containedAppId", (n) -> { currentObject.setContainedAppId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("appUserModelId", (n) -> { this.setAppUserModelId(n.getStringValue()); });
+        deserializerMap.put("containedAppId", (n) -> { this.setContainedAppId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
-        this._appId = value;
+        this.appId = value;
     }
     /**
      * Sets the appUserModelId property value. This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
      * @param value Value to set for the appUserModelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppUserModelId(@javax.annotation.Nullable final String value) {
-        this._appUserModelId = value;
+        this.appUserModelId = value;
     }
     /**
      * Sets the containedAppId property value. This references an contained App from an Intune App
      * @param value Value to set for the containedAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainedAppId(@javax.annotation.Nullable final String value) {
-        this._containedAppId = value;
+        this.containedAppId = value;
     }
 }

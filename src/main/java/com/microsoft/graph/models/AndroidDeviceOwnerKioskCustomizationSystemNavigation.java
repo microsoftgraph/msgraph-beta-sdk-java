@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * An enum representing possible values for kiosk customization system navigation.
+ */
 public enum AndroidDeviceOwnerKioskCustomizationSystemNavigation implements ValuedEnum {
     /** Not configured; this value defaults to NAVIGATION_DISABLED. */
     NotConfigured("notConfigured"),

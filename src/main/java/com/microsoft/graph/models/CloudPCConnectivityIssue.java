@@ -4,30 +4,41 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPCConnectivityIssue extends Entity implements Parsable {
-    /** The Intune DeviceId of the device the connection is associated with. */
-    private String _deviceId;
-    /** The error code of the connectivity issue. */
-    private String _errorCode;
-    /** The time that the connection initiated. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. */
-    private OffsetDateTime _errorDateTime;
-    /** The detailed description of what went wrong. */
-    private String _errorDescription;
-    /** The recommended action to fix the corresponding error. */
-    private String _recommendedAction;
-    /** The unique id of user who initialize the connection. */
-    private String _userId;
+    /**
+     * The Intune DeviceId of the device the connection is associated with.
+     */
+    private String deviceId;
+    /**
+     * The error code of the connectivity issue.
+     */
+    private String errorCode;
+    /**
+     * The time that the connection initiated. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time.
+     */
+    private OffsetDateTime errorDateTime;
+    /**
+     * The detailed description of what went wrong.
+     */
+    private String errorDescription;
+    /**
+     * The recommended action to fix the corresponding error.
+     */
+    private String recommendedAction;
+    /**
+     * The unique id of user who initialize the connection.
+     */
+    private String userId;
     /**
      * Instantiates a new CloudPCConnectivityIssue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPCConnectivityIssue() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPCConnectivityIssue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +56,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the errorCode property value. The error code of the connectivity issue.
@@ -53,7 +64,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getErrorCode() {
-        return this._errorCode;
+        return this.errorCode;
     }
     /**
      * Gets the errorDateTime property value. The time that the connection initiated. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time.
@@ -61,7 +72,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getErrorDateTime() {
-        return this._errorDateTime;
+        return this.errorDateTime;
     }
     /**
      * Gets the errorDescription property value. The detailed description of what went wrong.
@@ -69,23 +80,22 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getErrorDescription() {
-        return this._errorDescription;
+        return this.errorDescription;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPCConnectivityIssue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
-            this.put("errorDateTime", (n) -> { currentObject.setErrorDateTime(n.getOffsetDateTimeValue()); });
-            this.put("errorDescription", (n) -> { currentObject.setErrorDescription(n.getStringValue()); });
-            this.put("recommendedAction", (n) -> { currentObject.setRecommendedAction(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getStringValue()); });
+        deserializerMap.put("errorDateTime", (n) -> { this.setErrorDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("errorDescription", (n) -> { this.setErrorDescription(n.getStringValue()); });
+        deserializerMap.put("recommendedAction", (n) -> { this.setRecommendedAction(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the recommendedAction property value. The recommended action to fix the corresponding error.
@@ -93,7 +103,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRecommendedAction() {
-        return this._recommendedAction;
+        return this.recommendedAction;
     }
     /**
      * Gets the userId property value. The unique id of user who initialize the connection.
@@ -101,13 +111,14 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +134,53 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the errorCode property value. The error code of the connectivity issue.
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final String value) {
-        this._errorCode = value;
+        this.errorCode = value;
     }
     /**
      * Sets the errorDateTime property value. The time that the connection initiated. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time.
      * @param value Value to set for the errorDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._errorDateTime = value;
+        this.errorDateTime = value;
     }
     /**
      * Sets the errorDescription property value. The detailed description of what went wrong.
      * @param value Value to set for the errorDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDescription(@javax.annotation.Nullable final String value) {
-        this._errorDescription = value;
+        this.errorDescription = value;
     }
     /**
      * Sets the recommendedAction property value. The recommended action to fix the corresponding error.
      * @param value Value to set for the recommendedAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedAction(@javax.annotation.Nullable final String value) {
-        this._recommendedAction = value;
+        this.recommendedAction = value;
     }
     /**
      * Sets the userId property value. The unique id of user who initialize the connection.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

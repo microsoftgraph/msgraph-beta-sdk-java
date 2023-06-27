@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OmaSettingInteger extends OmaSetting implements Parsable {
-    /** By setting to true, the CSP (configuration service provider) specified in the OMA-URI will perform a get, instead of set */
-    private Boolean _isReadOnly;
-    /** Value. */
-    private Integer _value;
+    /**
+     * By setting to true, the CSP (configuration service provider) specified in the OMA-URI will perform a get, instead of set
+     */
+    private Boolean isReadOnly;
+    /**
+     * Value.
+     */
+    private Integer value;
     /**
      * Instantiates a new OmaSettingInteger and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OmaSettingInteger() {
         super();
         this.setOdataType("#microsoft.graph.omaSettingInteger");
@@ -32,15 +36,14 @@ public class OmaSettingInteger extends OmaSetting implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OmaSettingInteger currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isReadOnly", (n) -> { currentObject.setIsReadOnly(n.getBooleanValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isReadOnly", (n) -> { this.setIsReadOnly(n.getBooleanValue()); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isReadOnly property value. By setting to true, the CSP (configuration service provider) specified in the OMA-URI will perform a get, instead of set
@@ -48,7 +51,7 @@ public class OmaSettingInteger extends OmaSetting implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsReadOnly() {
-        return this._isReadOnly;
+        return this.isReadOnly;
     }
     /**
      * Gets the value property value. Value.
@@ -56,13 +59,14 @@ public class OmaSettingInteger extends OmaSetting implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class OmaSettingInteger extends OmaSetting implements Parsable {
      * @param value Value to set for the isReadOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsReadOnly(@javax.annotation.Nullable final Boolean value) {
-        this._isReadOnly = value;
+        this.isReadOnly = value;
     }
     /**
      * Sets the value property value. Value.
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Integer value) {
-        this._value = value;
+        this.value = value;
     }
 }

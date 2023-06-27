@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementConfigurationReferenceSettingValue extends DeviceManagementConfigurationStringSettingValue implements Parsable {
-    /** A note that admin can use to put some contextual information */
-    private String _note;
+    /**
+     * A note that admin can use to put some contextual information
+     */
+    private String note;
     /**
      * Instantiates a new DeviceManagementConfigurationReferenceSettingValue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationReferenceSettingValue() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationReferenceSettingValue");
@@ -30,14 +32,13 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationReferenceSettingValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("note", (n) -> { currentObject.setNote(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("note", (n) -> { this.setNote(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the note property value. A note that admin can use to put some contextual information
@@ -45,13 +46,14 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
      */
     @javax.annotation.Nullable
     public String getNote() {
-        return this._note;
+        return this.note;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
      * @param value Value to set for the note property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNote(@javax.annotation.Nullable final String value) {
-        this._note = value;
+        this.note = value;
     }
 }

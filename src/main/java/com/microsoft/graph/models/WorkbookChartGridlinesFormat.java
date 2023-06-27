@@ -3,20 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
-    /** Represents chart line formatting. Read-only. */
-    private WorkbookChartLineFormat _line;
+    /**
+     * Represents chart line formatting. Read-only.
+     */
+    private WorkbookChartLineFormat line;
     /**
      * Instantiates a new workbookChartGridlinesFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartGridlinesFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartGridlinesFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +31,13 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartGridlinesFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("line", (n) -> { currentObject.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("line", (n) -> { this.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the line property value. Represents chart line formatting. Read-only.
@@ -45,13 +45,14 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartLineFormat getLine() {
-        return this._line;
+        return this.line;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +63,8 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
      * @param value Value to set for the line property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLine(@javax.annotation.Nullable final WorkbookChartLineFormat value) {
-        this._line = value;
+        this.line = value;
     }
 }

@@ -3,22 +3,25 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsable {
-    /** eDiscovery review set to which items matching source collection query gets added. */
-    private EdiscoveryReviewSet _reviewSet;
-    /** eDiscovery search that gets added to review set. */
-    private EdiscoverySearch _search;
+    /**
+     * eDiscovery review set to which items matching source collection query gets added.
+     */
+    private EdiscoveryReviewSet reviewSet;
+    /**
+     * eDiscovery search that gets added to review set.
+     */
+    private EdiscoverySearch search;
     /**
      * Instantiates a new EdiscoveryAddToReviewSetOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoveryAddToReviewSetOperation() {
         super();
-        this.setOdataType("#microsoft.graph.security.ediscoveryAddToReviewSetOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +35,14 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EdiscoveryAddToReviewSetOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("reviewSet", (n) -> { currentObject.setReviewSet(n.getObjectValue(EdiscoveryReviewSet::createFromDiscriminatorValue)); });
-            this.put("search", (n) -> { currentObject.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("reviewSet", (n) -> { this.setReviewSet(n.getObjectValue(EdiscoveryReviewSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("search", (n) -> { this.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the reviewSet property value. eDiscovery review set to which items matching source collection query gets added.
@@ -48,7 +50,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      */
     @javax.annotation.Nullable
     public EdiscoveryReviewSet getReviewSet() {
-        return this._reviewSet;
+        return this.reviewSet;
     }
     /**
      * Gets the search property value. eDiscovery search that gets added to review set.
@@ -56,13 +58,14 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      */
     @javax.annotation.Nullable
     public EdiscoverySearch getSearch() {
-        return this._search;
+        return this.search;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +77,17 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * @param value Value to set for the reviewSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewSet(@javax.annotation.Nullable final EdiscoveryReviewSet value) {
-        this._reviewSet = value;
+        this.reviewSet = value;
     }
     /**
      * Sets the search property value. eDiscovery search that gets added to review set.
      * @param value Value to set for the search property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearch(@javax.annotation.Nullable final EdiscoverySearch value) {
-        this._search = value;
+        this.search = value;
     }
 }

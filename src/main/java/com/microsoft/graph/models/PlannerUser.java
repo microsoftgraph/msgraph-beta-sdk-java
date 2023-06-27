@@ -3,34 +3,49 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerUser extends PlannerDelta implements Parsable {
-    /** The all property */
-    private java.util.List<PlannerDelta> _all;
-    /** A collection containing the references to the plans that the user has marked as favorites. */
-    private PlannerFavoritePlanReferenceCollection _favoritePlanReferences;
-    /** Read-only. Nullable. Returns the plannerPlans that the user marked as favorites. */
-    private java.util.List<PlannerPlan> _favoritePlans;
-    /** The plans property */
-    private java.util.List<PlannerPlan> _plans;
-    /** A collection containing references to the plans that were viewed recently by the user in apps that support recent plans. */
-    private PlannerRecentPlanReferenceCollection _recentPlanReferences;
-    /** Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans. */
-    private java.util.List<PlannerPlan> _recentPlans;
-    /** Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member. */
-    private java.util.List<PlannerPlan> _rosterPlans;
-    /** Read-only. Nullable. Returns the plannerTasks assigned to the user. */
-    private java.util.List<PlannerTask> _tasks;
+    /**
+     * The all property
+     */
+    private java.util.List<PlannerDelta> all;
+    /**
+     * A collection that contains the references to the plans that the user has marked as favorites.
+     */
+    private PlannerFavoritePlanReferenceCollection favoritePlanReferences;
+    /**
+     * Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
+     */
+    private java.util.List<PlannerPlan> favoritePlans;
+    /**
+     * The plans property
+     */
+    private java.util.List<PlannerPlan> plans;
+    /**
+     * A collection that contains references to the plans that were viewed recently by the user in apps that support recent plans.
+     */
+    private PlannerRecentPlanReferenceCollection recentPlanReferences;
+    /**
+     * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
+     */
+    private java.util.List<PlannerPlan> recentPlans;
+    /**
+     * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
+     */
+    private java.util.List<PlannerPlan> rosterPlans;
+    /**
+     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     */
+    private java.util.List<PlannerTask> tasks;
     /**
      * Instantiates a new PlannerUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerUser() {
         super();
-        this.setOdataType("#microsoft.graph.plannerUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,15 +63,15 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PlannerDelta> getAll() {
-        return this._all;
+        return this.all;
     }
     /**
-     * Gets the favoritePlanReferences property value. A collection containing the references to the plans that the user has marked as favorites.
+     * Gets the favoritePlanReferences property value. A collection that contains the references to the plans that the user has marked as favorites.
      * @return a plannerFavoritePlanReferenceCollection
      */
     @javax.annotation.Nullable
     public PlannerFavoritePlanReferenceCollection getFavoritePlanReferences() {
-        return this._favoritePlanReferences;
+        return this.favoritePlanReferences;
     }
     /**
      * Gets the favoritePlans property value. Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
@@ -64,25 +79,24 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PlannerPlan> getFavoritePlans() {
-        return this._favoritePlans;
+        return this.favoritePlans;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("all", (n) -> { currentObject.setAll(n.getCollectionOfObjectValues(PlannerDelta::createFromDiscriminatorValue)); });
-            this.put("favoritePlanReferences", (n) -> { currentObject.setFavoritePlanReferences(n.getObjectValue(PlannerFavoritePlanReferenceCollection::createFromDiscriminatorValue)); });
-            this.put("favoritePlans", (n) -> { currentObject.setFavoritePlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
-            this.put("plans", (n) -> { currentObject.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
-            this.put("recentPlanReferences", (n) -> { currentObject.setRecentPlanReferences(n.getObjectValue(PlannerRecentPlanReferenceCollection::createFromDiscriminatorValue)); });
-            this.put("recentPlans", (n) -> { currentObject.setRecentPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
-            this.put("rosterPlans", (n) -> { currentObject.setRosterPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("all", (n) -> { this.setAll(n.getCollectionOfObjectValues(PlannerDelta::createFromDiscriminatorValue)); });
+        deserializerMap.put("favoritePlanReferences", (n) -> { this.setFavoritePlanReferences(n.getObjectValue(PlannerFavoritePlanReferenceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("favoritePlans", (n) -> { this.setFavoritePlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("plans", (n) -> { this.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("recentPlanReferences", (n) -> { this.setRecentPlanReferences(n.getObjectValue(PlannerRecentPlanReferenceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("recentPlans", (n) -> { this.setRecentPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("rosterPlans", (n) -> { this.setRosterPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the plans property value. The plans property
@@ -90,15 +104,15 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
-        return this._plans;
+        return this.plans;
     }
     /**
-     * Gets the recentPlanReferences property value. A collection containing references to the plans that were viewed recently by the user in apps that support recent plans.
+     * Gets the recentPlanReferences property value. A collection that contains references to the plans that were viewed recently by the user in apps that support recent plans.
      * @return a plannerRecentPlanReferenceCollection
      */
     @javax.annotation.Nullable
     public PlannerRecentPlanReferenceCollection getRecentPlanReferences() {
-        return this._recentPlanReferences;
+        return this.recentPlanReferences;
     }
     /**
      * Gets the recentPlans property value. Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
@@ -106,7 +120,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PlannerPlan> getRecentPlans() {
-        return this._recentPlans;
+        return this.recentPlans;
     }
     /**
      * Gets the rosterPlans property value. Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
@@ -114,7 +128,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PlannerPlan> getRosterPlans() {
-        return this._rosterPlans;
+        return this.rosterPlans;
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
@@ -122,13 +136,14 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {
-        return this._tasks;
+        return this.tasks;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +161,71 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      * @param value Value to set for the all property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAll(@javax.annotation.Nullable final java.util.List<PlannerDelta> value) {
-        this._all = value;
+        this.all = value;
     }
     /**
-     * Sets the favoritePlanReferences property value. A collection containing the references to the plans that the user has marked as favorites.
+     * Sets the favoritePlanReferences property value. A collection that contains the references to the plans that the user has marked as favorites.
      * @param value Value to set for the favoritePlanReferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFavoritePlanReferences(@javax.annotation.Nullable final PlannerFavoritePlanReferenceCollection value) {
-        this._favoritePlanReferences = value;
+        this.favoritePlanReferences = value;
     }
     /**
      * Sets the favoritePlans property value. Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
      * @param value Value to set for the favoritePlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFavoritePlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
-        this._favoritePlans = value;
+        this.favoritePlans = value;
     }
     /**
      * Sets the plans property value. The plans property
      * @param value Value to set for the plans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
-        this._plans = value;
+        this.plans = value;
     }
     /**
-     * Sets the recentPlanReferences property value. A collection containing references to the plans that were viewed recently by the user in apps that support recent plans.
+     * Sets the recentPlanReferences property value. A collection that contains references to the plans that were viewed recently by the user in apps that support recent plans.
      * @param value Value to set for the recentPlanReferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecentPlanReferences(@javax.annotation.Nullable final PlannerRecentPlanReferenceCollection value) {
-        this._recentPlanReferences = value;
+        this.recentPlanReferences = value;
     }
     /**
      * Sets the recentPlans property value. Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
      * @param value Value to set for the recentPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecentPlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
-        this._recentPlans = value;
+        this.recentPlans = value;
     }
     /**
      * Sets the rosterPlans property value. Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
      * @param value Value to set for the rosterPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRosterPlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
-        this._rosterPlans = value;
+        this.rosterPlans = value;
     }
     /**
      * Sets the tasks property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<PlannerTask> value) {
-        this._tasks = value;
+        this.tasks = value;
     }
 }

@@ -3,40 +3,61 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RbacApplication extends Entity implements Parsable {
-    /** The resourceNamespaces property */
-    private java.util.List<UnifiedRbacResourceNamespace> _resourceNamespaces;
-    /** The roleAssignmentApprovals property */
-    private java.util.List<Approval> _roleAssignmentApprovals;
-    /** The roleAssignments property */
-    private java.util.List<UnifiedRoleAssignment> _roleAssignments;
-    /** The roleAssignmentScheduleInstances property */
-    private java.util.List<UnifiedRoleAssignmentScheduleInstance> _roleAssignmentScheduleInstances;
-    /** The roleAssignmentScheduleRequests property */
-    private java.util.List<UnifiedRoleAssignmentScheduleRequest> _roleAssignmentScheduleRequests;
-    /** The roleAssignmentSchedules property */
-    private java.util.List<UnifiedRoleAssignmentSchedule> _roleAssignmentSchedules;
-    /** The roleDefinitions property */
-    private java.util.List<UnifiedRoleDefinition> _roleDefinitions;
-    /** The roleEligibilityScheduleInstances property */
-    private java.util.List<UnifiedRoleEligibilityScheduleInstance> _roleEligibilityScheduleInstances;
-    /** The roleEligibilityScheduleRequests property */
-    private java.util.List<UnifiedRoleEligibilityScheduleRequest> _roleEligibilityScheduleRequests;
-    /** The roleEligibilitySchedules property */
-    private java.util.List<UnifiedRoleEligibilitySchedule> _roleEligibilitySchedules;
-    /** The transitiveRoleAssignments property */
-    private java.util.List<UnifiedRoleAssignment> _transitiveRoleAssignments;
+    /**
+     * The resourceNamespaces property
+     */
+    private java.util.List<UnifiedRbacResourceNamespace> resourceNamespaces;
+    /**
+     * The roleAssignmentApprovals property
+     */
+    private java.util.List<Approval> roleAssignmentApprovals;
+    /**
+     * The roleAssignments property
+     */
+    private java.util.List<UnifiedRoleAssignment> roleAssignments;
+    /**
+     * The roleAssignmentScheduleInstances property
+     */
+    private java.util.List<UnifiedRoleAssignmentScheduleInstance> roleAssignmentScheduleInstances;
+    /**
+     * The roleAssignmentScheduleRequests property
+     */
+    private java.util.List<UnifiedRoleAssignmentScheduleRequest> roleAssignmentScheduleRequests;
+    /**
+     * The roleAssignmentSchedules property
+     */
+    private java.util.List<UnifiedRoleAssignmentSchedule> roleAssignmentSchedules;
+    /**
+     * The roleDefinitions property
+     */
+    private java.util.List<UnifiedRoleDefinition> roleDefinitions;
+    /**
+     * The roleEligibilityScheduleInstances property
+     */
+    private java.util.List<UnifiedRoleEligibilityScheduleInstance> roleEligibilityScheduleInstances;
+    /**
+     * The roleEligibilityScheduleRequests property
+     */
+    private java.util.List<UnifiedRoleEligibilityScheduleRequest> roleEligibilityScheduleRequests;
+    /**
+     * The roleEligibilitySchedules property
+     */
+    private java.util.List<UnifiedRoleEligibilitySchedule> roleEligibilitySchedules;
+    /**
+     * The transitiveRoleAssignments property
+     */
+    private java.util.List<UnifiedRoleAssignment> transitiveRoleAssignments;
     /**
      * Instantiates a new RbacApplication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RbacApplication() {
         super();
-        this.setOdataType("#microsoft.graph.rbacApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,24 +71,23 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RbacApplication currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("resourceNamespaces", (n) -> { currentObject.setResourceNamespaces(n.getCollectionOfObjectValues(UnifiedRbacResourceNamespace::createFromDiscriminatorValue)); });
-            this.put("roleAssignmentApprovals", (n) -> { currentObject.setRoleAssignmentApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
-            this.put("roleAssignments", (n) -> { currentObject.setRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignment::createFromDiscriminatorValue)); });
-            this.put("roleAssignmentScheduleInstances", (n) -> { currentObject.setRoleAssignmentScheduleInstances(n.getCollectionOfObjectValues(UnifiedRoleAssignmentScheduleInstance::createFromDiscriminatorValue)); });
-            this.put("roleAssignmentScheduleRequests", (n) -> { currentObject.setRoleAssignmentScheduleRequests(n.getCollectionOfObjectValues(UnifiedRoleAssignmentScheduleRequest::createFromDiscriminatorValue)); });
-            this.put("roleAssignmentSchedules", (n) -> { currentObject.setRoleAssignmentSchedules(n.getCollectionOfObjectValues(UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue)); });
-            this.put("roleDefinitions", (n) -> { currentObject.setRoleDefinitions(n.getCollectionOfObjectValues(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
-            this.put("roleEligibilityScheduleInstances", (n) -> { currentObject.setRoleEligibilityScheduleInstances(n.getCollectionOfObjectValues(UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue)); });
-            this.put("roleEligibilityScheduleRequests", (n) -> { currentObject.setRoleEligibilityScheduleRequests(n.getCollectionOfObjectValues(UnifiedRoleEligibilityScheduleRequest::createFromDiscriminatorValue)); });
-            this.put("roleEligibilitySchedules", (n) -> { currentObject.setRoleEligibilitySchedules(n.getCollectionOfObjectValues(UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue)); });
-            this.put("transitiveRoleAssignments", (n) -> { currentObject.setTransitiveRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignment::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("resourceNamespaces", (n) -> { this.setResourceNamespaces(n.getCollectionOfObjectValues(UnifiedRbacResourceNamespace::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignmentApprovals", (n) -> { this.setRoleAssignmentApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignments", (n) -> { this.setRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignmentScheduleInstances", (n) -> { this.setRoleAssignmentScheduleInstances(n.getCollectionOfObjectValues(UnifiedRoleAssignmentScheduleInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignmentScheduleRequests", (n) -> { this.setRoleAssignmentScheduleRequests(n.getCollectionOfObjectValues(UnifiedRoleAssignmentScheduleRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignmentSchedules", (n) -> { this.setRoleAssignmentSchedules(n.getCollectionOfObjectValues(UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleDefinitions", (n) -> { this.setRoleDefinitions(n.getCollectionOfObjectValues(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleEligibilityScheduleInstances", (n) -> { this.setRoleEligibilityScheduleInstances(n.getCollectionOfObjectValues(UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleEligibilityScheduleRequests", (n) -> { this.setRoleEligibilityScheduleRequests(n.getCollectionOfObjectValues(UnifiedRoleEligibilityScheduleRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleEligibilitySchedules", (n) -> { this.setRoleEligibilitySchedules(n.getCollectionOfObjectValues(UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("transitiveRoleAssignments", (n) -> { this.setTransitiveRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignment::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the resourceNamespaces property value. The resourceNamespaces property
@@ -75,7 +95,7 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRbacResourceNamespace> getResourceNamespaces() {
-        return this._resourceNamespaces;
+        return this.resourceNamespaces;
     }
     /**
      * Gets the roleAssignmentApprovals property value. The roleAssignmentApprovals property
@@ -83,7 +103,7 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Approval> getRoleAssignmentApprovals() {
-        return this._roleAssignmentApprovals;
+        return this.roleAssignmentApprovals;
     }
     /**
      * Gets the roleAssignments property value. The roleAssignments property
@@ -91,7 +111,7 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleAssignment> getRoleAssignments() {
-        return this._roleAssignments;
+        return this.roleAssignments;
     }
     /**
      * Gets the roleAssignmentScheduleInstances property value. The roleAssignmentScheduleInstances property
@@ -99,7 +119,7 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentScheduleInstance> getRoleAssignmentScheduleInstances() {
-        return this._roleAssignmentScheduleInstances;
+        return this.roleAssignmentScheduleInstances;
     }
     /**
      * Gets the roleAssignmentScheduleRequests property value. The roleAssignmentScheduleRequests property
@@ -107,7 +127,7 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentScheduleRequest> getRoleAssignmentScheduleRequests() {
-        return this._roleAssignmentScheduleRequests;
+        return this.roleAssignmentScheduleRequests;
     }
     /**
      * Gets the roleAssignmentSchedules property value. The roleAssignmentSchedules property
@@ -115,7 +135,7 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentSchedule> getRoleAssignmentSchedules() {
-        return this._roleAssignmentSchedules;
+        return this.roleAssignmentSchedules;
     }
     /**
      * Gets the roleDefinitions property value. The roleDefinitions property
@@ -123,7 +143,7 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getRoleDefinitions() {
-        return this._roleDefinitions;
+        return this.roleDefinitions;
     }
     /**
      * Gets the roleEligibilityScheduleInstances property value. The roleEligibilityScheduleInstances property
@@ -131,7 +151,7 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilityScheduleInstance> getRoleEligibilityScheduleInstances() {
-        return this._roleEligibilityScheduleInstances;
+        return this.roleEligibilityScheduleInstances;
     }
     /**
      * Gets the roleEligibilityScheduleRequests property value. The roleEligibilityScheduleRequests property
@@ -139,7 +159,7 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilityScheduleRequest> getRoleEligibilityScheduleRequests() {
-        return this._roleEligibilityScheduleRequests;
+        return this.roleEligibilityScheduleRequests;
     }
     /**
      * Gets the roleEligibilitySchedules property value. The roleEligibilitySchedules property
@@ -147,7 +167,7 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilitySchedule> getRoleEligibilitySchedules() {
-        return this._roleEligibilitySchedules;
+        return this.roleEligibilitySchedules;
     }
     /**
      * Gets the transitiveRoleAssignments property value. The transitiveRoleAssignments property
@@ -155,13 +175,14 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRoleAssignment> getTransitiveRoleAssignments() {
-        return this._transitiveRoleAssignments;
+        return this.transitiveRoleAssignments;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,87 +203,98 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the resourceNamespaces property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceNamespaces(@javax.annotation.Nullable final java.util.List<UnifiedRbacResourceNamespace> value) {
-        this._resourceNamespaces = value;
+        this.resourceNamespaces = value;
     }
     /**
      * Sets the roleAssignmentApprovals property value. The roleAssignmentApprovals property
      * @param value Value to set for the roleAssignmentApprovals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentApprovals(@javax.annotation.Nullable final java.util.List<Approval> value) {
-        this._roleAssignmentApprovals = value;
+        this.roleAssignmentApprovals = value;
     }
     /**
      * Sets the roleAssignments property value. The roleAssignments property
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignment> value) {
-        this._roleAssignments = value;
+        this.roleAssignments = value;
     }
     /**
      * Sets the roleAssignmentScheduleInstances property value. The roleAssignmentScheduleInstances property
      * @param value Value to set for the roleAssignmentScheduleInstances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentScheduleInstances(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleInstance> value) {
-        this._roleAssignmentScheduleInstances = value;
+        this.roleAssignmentScheduleInstances = value;
     }
     /**
      * Sets the roleAssignmentScheduleRequests property value. The roleAssignmentScheduleRequests property
      * @param value Value to set for the roleAssignmentScheduleRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentScheduleRequests(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleRequest> value) {
-        this._roleAssignmentScheduleRequests = value;
+        this.roleAssignmentScheduleRequests = value;
     }
     /**
      * Sets the roleAssignmentSchedules property value. The roleAssignmentSchedules property
      * @param value Value to set for the roleAssignmentSchedules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentSchedules(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentSchedule> value) {
-        this._roleAssignmentSchedules = value;
+        this.roleAssignmentSchedules = value;
     }
     /**
      * Sets the roleDefinitions property value. The roleDefinitions property
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
-        this._roleDefinitions = value;
+        this.roleDefinitions = value;
     }
     /**
      * Sets the roleEligibilityScheduleInstances property value. The roleEligibilityScheduleInstances property
      * @param value Value to set for the roleEligibilityScheduleInstances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleEligibilityScheduleInstances(@javax.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleInstance> value) {
-        this._roleEligibilityScheduleInstances = value;
+        this.roleEligibilityScheduleInstances = value;
     }
     /**
      * Sets the roleEligibilityScheduleRequests property value. The roleEligibilityScheduleRequests property
      * @param value Value to set for the roleEligibilityScheduleRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleEligibilityScheduleRequests(@javax.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleRequest> value) {
-        this._roleEligibilityScheduleRequests = value;
+        this.roleEligibilityScheduleRequests = value;
     }
     /**
      * Sets the roleEligibilitySchedules property value. The roleEligibilitySchedules property
      * @param value Value to set for the roleEligibilitySchedules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleEligibilitySchedules(@javax.annotation.Nullable final java.util.List<UnifiedRoleEligibilitySchedule> value) {
-        this._roleEligibilitySchedules = value;
+        this.roleEligibilitySchedules = value;
     }
     /**
      * Sets the transitiveRoleAssignments property value. The transitiveRoleAssignments property
      * @param value Value to set for the transitiveRoleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveRoleAssignments(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignment> value) {
-        this._transitiveRoleAssignments = value;
+        this.transitiveRoleAssignments = value;
     }
 }

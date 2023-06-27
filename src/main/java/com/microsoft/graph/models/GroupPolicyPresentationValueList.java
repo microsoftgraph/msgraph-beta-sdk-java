@@ -3,20 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupPolicyPresentationValueList extends GroupPolicyPresentationValue implements Parsable {
-    /** A list of pairs for the associated presentation. */
-    private java.util.List<KeyValuePair> _values;
+    /**
+     * A list of pairs for the associated presentation.
+     */
+    private java.util.List<KeyValuePair> values;
     /**
      * Instantiates a new GroupPolicyPresentationValueList and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationValueList() {
         super();
-        this.setOdataType("#microsoft.graph.groupPolicyPresentationValueList");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +31,13 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationValueList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("values", (n) -> { this.setValues(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the values property value. A list of pairs for the associated presentation.
@@ -45,13 +45,14 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getValues() {
-        return this._values;
+        return this.values;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +63,8 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._values = value;
+        this.values = value;
     }
 }

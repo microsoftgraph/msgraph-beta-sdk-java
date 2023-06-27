@@ -3,7 +3,6 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the evaluateApplication method. */
 public enum AssignmentMethod implements ValuedEnum {
     Standard("standard"),
     Privileged("privileged"),

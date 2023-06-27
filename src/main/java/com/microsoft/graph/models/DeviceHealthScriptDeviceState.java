@@ -4,43 +4,68 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for device run state of the device health script. */
+/**
+ * Contains properties for device run state of the device health script.
+ */
 public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
-    /** A list of the assignment filter ids used for health script applicability evaluation */
-    private java.util.List<String> _assignmentFilterIds;
-    /** Indicates the type of execution status of the device management script. */
-    private RunState _detectionState;
-    /** The next timestamp of when the device health script is expected to execute */
-    private OffsetDateTime _expectedStateUpdateDateTime;
-    /** The last timestamp of when the device health script executed */
-    private OffsetDateTime _lastStateUpdateDateTime;
-    /** The last time that Intune Managment Extension synced with Intune */
-    private OffsetDateTime _lastSyncDateTime;
-    /** The managed device on which the device health script executed */
-    private ManagedDevice _managedDevice;
-    /** Error from the detection script after remediation */
-    private String _postRemediationDetectionScriptError;
-    /** Detection script output after remediation */
-    private String _postRemediationDetectionScriptOutput;
-    /** Error from the detection script before remediation */
-    private String _preRemediationDetectionScriptError;
-    /** Output of the detection script before remediation */
-    private String _preRemediationDetectionScriptOutput;
-    /** Error output of the remediation script */
-    private String _remediationScriptError;
-    /** Indicates the type of execution status of the device management script. */
-    private RemediationState _remediationState;
+    /**
+     * A list of the assignment filter ids used for health script applicability evaluation
+     */
+    private java.util.List<String> assignmentFilterIds;
+    /**
+     * Indicates the type of execution status of the device management script.
+     */
+    private RunState detectionState;
+    /**
+     * The next timestamp of when the device health script is expected to execute
+     */
+    private OffsetDateTime expectedStateUpdateDateTime;
+    /**
+     * The last timestamp of when the device health script executed
+     */
+    private OffsetDateTime lastStateUpdateDateTime;
+    /**
+     * The last time that Intune Managment Extension synced with Intune
+     */
+    private OffsetDateTime lastSyncDateTime;
+    /**
+     * The managed device on which the device health script executed
+     */
+    private ManagedDevice managedDevice;
+    /**
+     * Error from the detection script after remediation
+     */
+    private String postRemediationDetectionScriptError;
+    /**
+     * Detection script output after remediation
+     */
+    private String postRemediationDetectionScriptOutput;
+    /**
+     * Error from the detection script before remediation
+     */
+    private String preRemediationDetectionScriptError;
+    /**
+     * Output of the detection script before remediation
+     */
+    private String preRemediationDetectionScriptOutput;
+    /**
+     * Error output of the remediation script
+     */
+    private String remediationScriptError;
+    /**
+     * Indicates the type of execution status of the device management script.
+     */
+    private RemediationState remediationState;
     /**
      * Instantiates a new deviceHealthScriptDeviceState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptDeviceState() {
         super();
-        this.setOdataType("#microsoft.graph.deviceHealthScriptDeviceState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,15 +83,15 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAssignmentFilterIds() {
-        return this._assignmentFilterIds;
+        return this.assignmentFilterIds;
     }
     /**
      * Gets the detectionState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @javax.annotation.Nullable
     public RunState getDetectionState() {
-        return this._detectionState;
+        return this.detectionState;
     }
     /**
      * Gets the expectedStateUpdateDateTime property value. The next timestamp of when the device health script is expected to execute
@@ -74,29 +99,28 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpectedStateUpdateDateTime() {
-        return this._expectedStateUpdateDateTime;
+        return this.expectedStateUpdateDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceHealthScriptDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignmentFilterIds", (n) -> { currentObject.setAssignmentFilterIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("detectionState", (n) -> { currentObject.setDetectionState(n.getEnumValue(RunState.class)); });
-            this.put("expectedStateUpdateDateTime", (n) -> { currentObject.setExpectedStateUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastStateUpdateDateTime", (n) -> { currentObject.setLastStateUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managedDevice", (n) -> { currentObject.setManagedDevice(n.getObjectValue(ManagedDevice::createFromDiscriminatorValue)); });
-            this.put("postRemediationDetectionScriptError", (n) -> { currentObject.setPostRemediationDetectionScriptError(n.getStringValue()); });
-            this.put("postRemediationDetectionScriptOutput", (n) -> { currentObject.setPostRemediationDetectionScriptOutput(n.getStringValue()); });
-            this.put("preRemediationDetectionScriptError", (n) -> { currentObject.setPreRemediationDetectionScriptError(n.getStringValue()); });
-            this.put("preRemediationDetectionScriptOutput", (n) -> { currentObject.setPreRemediationDetectionScriptOutput(n.getStringValue()); });
-            this.put("remediationScriptError", (n) -> { currentObject.setRemediationScriptError(n.getStringValue()); });
-            this.put("remediationState", (n) -> { currentObject.setRemediationState(n.getEnumValue(RemediationState.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignmentFilterIds", (n) -> { this.setAssignmentFilterIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("detectionState", (n) -> { this.setDetectionState(n.getEnumValue(RunState.class)); });
+        deserializerMap.put("expectedStateUpdateDateTime", (n) -> { this.setExpectedStateUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastStateUpdateDateTime", (n) -> { this.setLastStateUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedDevice", (n) -> { this.setManagedDevice(n.getObjectValue(ManagedDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("postRemediationDetectionScriptError", (n) -> { this.setPostRemediationDetectionScriptError(n.getStringValue()); });
+        deserializerMap.put("postRemediationDetectionScriptOutput", (n) -> { this.setPostRemediationDetectionScriptOutput(n.getStringValue()); });
+        deserializerMap.put("preRemediationDetectionScriptError", (n) -> { this.setPreRemediationDetectionScriptError(n.getStringValue()); });
+        deserializerMap.put("preRemediationDetectionScriptOutput", (n) -> { this.setPreRemediationDetectionScriptOutput(n.getStringValue()); });
+        deserializerMap.put("remediationScriptError", (n) -> { this.setRemediationScriptError(n.getStringValue()); });
+        deserializerMap.put("remediationState", (n) -> { this.setRemediationState(n.getEnumValue(RemediationState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastStateUpdateDateTime property value. The last timestamp of when the device health script executed
@@ -104,7 +128,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastStateUpdateDateTime() {
-        return this._lastStateUpdateDateTime;
+        return this.lastStateUpdateDateTime;
     }
     /**
      * Gets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
@@ -112,7 +136,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this._lastSyncDateTime;
+        return this.lastSyncDateTime;
     }
     /**
      * Gets the managedDevice property value. The managed device on which the device health script executed
@@ -120,7 +144,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ManagedDevice getManagedDevice() {
-        return this._managedDevice;
+        return this.managedDevice;
     }
     /**
      * Gets the postRemediationDetectionScriptError property value. Error from the detection script after remediation
@@ -128,7 +152,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPostRemediationDetectionScriptError() {
-        return this._postRemediationDetectionScriptError;
+        return this.postRemediationDetectionScriptError;
     }
     /**
      * Gets the postRemediationDetectionScriptOutput property value. Detection script output after remediation
@@ -136,7 +160,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPostRemediationDetectionScriptOutput() {
-        return this._postRemediationDetectionScriptOutput;
+        return this.postRemediationDetectionScriptOutput;
     }
     /**
      * Gets the preRemediationDetectionScriptError property value. Error from the detection script before remediation
@@ -144,7 +168,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPreRemediationDetectionScriptError() {
-        return this._preRemediationDetectionScriptError;
+        return this.preRemediationDetectionScriptError;
     }
     /**
      * Gets the preRemediationDetectionScriptOutput property value. Output of the detection script before remediation
@@ -152,7 +176,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPreRemediationDetectionScriptOutput() {
-        return this._preRemediationDetectionScriptOutput;
+        return this.preRemediationDetectionScriptOutput;
     }
     /**
      * Gets the remediationScriptError property value. Error output of the remediation script
@@ -160,21 +184,22 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRemediationScriptError() {
-        return this._remediationScriptError;
+        return this.remediationScriptError;
     }
     /**
      * Gets the remediationState property value. Indicates the type of execution status of the device management script.
-     * @return a remediationState
+     * @return a RemediationState
      */
     @javax.annotation.Nullable
     public RemediationState getRemediationState() {
-        return this._remediationState;
+        return this.remediationState;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -196,95 +221,107 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the assignmentFilterIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._assignmentFilterIds = value;
+        this.assignmentFilterIds = value;
     }
     /**
      * Sets the detectionState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the detectionState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionState(@javax.annotation.Nullable final RunState value) {
-        this._detectionState = value;
+        this.detectionState = value;
     }
     /**
      * Sets the expectedStateUpdateDateTime property value. The next timestamp of when the device health script is expected to execute
      * @param value Value to set for the expectedStateUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpectedStateUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expectedStateUpdateDateTime = value;
+        this.expectedStateUpdateDateTime = value;
     }
     /**
      * Sets the lastStateUpdateDateTime property value. The last timestamp of when the device health script executed
      * @param value Value to set for the lastStateUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastStateUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastStateUpdateDateTime = value;
+        this.lastStateUpdateDateTime = value;
     }
     /**
      * Sets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSyncDateTime = value;
+        this.lastSyncDateTime = value;
     }
     /**
      * Sets the managedDevice property value. The managed device on which the device health script executed
      * @param value Value to set for the managedDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevice(@javax.annotation.Nullable final ManagedDevice value) {
-        this._managedDevice = value;
+        this.managedDevice = value;
     }
     /**
      * Sets the postRemediationDetectionScriptError property value. Error from the detection script after remediation
      * @param value Value to set for the postRemediationDetectionScriptError property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostRemediationDetectionScriptError(@javax.annotation.Nullable final String value) {
-        this._postRemediationDetectionScriptError = value;
+        this.postRemediationDetectionScriptError = value;
     }
     /**
      * Sets the postRemediationDetectionScriptOutput property value. Detection script output after remediation
      * @param value Value to set for the postRemediationDetectionScriptOutput property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostRemediationDetectionScriptOutput(@javax.annotation.Nullable final String value) {
-        this._postRemediationDetectionScriptOutput = value;
+        this.postRemediationDetectionScriptOutput = value;
     }
     /**
      * Sets the preRemediationDetectionScriptError property value. Error from the detection script before remediation
      * @param value Value to set for the preRemediationDetectionScriptError property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreRemediationDetectionScriptError(@javax.annotation.Nullable final String value) {
-        this._preRemediationDetectionScriptError = value;
+        this.preRemediationDetectionScriptError = value;
     }
     /**
      * Sets the preRemediationDetectionScriptOutput property value. Output of the detection script before remediation
      * @param value Value to set for the preRemediationDetectionScriptOutput property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreRemediationDetectionScriptOutput(@javax.annotation.Nullable final String value) {
-        this._preRemediationDetectionScriptOutput = value;
+        this.preRemediationDetectionScriptOutput = value;
     }
     /**
      * Sets the remediationScriptError property value. Error output of the remediation script
      * @param value Value to set for the remediationScriptError property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediationScriptError(@javax.annotation.Nullable final String value) {
-        this._remediationScriptError = value;
+        this.remediationScriptError = value;
     }
     /**
      * Sets the remediationState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the remediationState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediationState(@javax.annotation.Nullable final RemediationState value) {
-        this._remediationState = value;
+        this.remediationState = value;
     }
 }

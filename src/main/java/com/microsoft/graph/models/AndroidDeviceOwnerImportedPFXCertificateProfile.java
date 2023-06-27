@@ -3,23 +3,31 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDeviceOwnerCertificateProfileBase implements Parsable {
-    /** Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue. */
-    private AndroidDeviceOwnerCertificateAccessType _certificateAccessType;
-    /** PFX Import Options. */
-    private IntendedPurpose _intendedPurpose;
-    /** Certificate state for devices. This collection can contain a maximum of 2147483647 elements. */
-    private java.util.List<ManagedDeviceCertificateState> _managedDeviceCertificateStates;
-    /** Certificate access information. This collection can contain a maximum of 50 elements. */
-    private java.util.List<AndroidDeviceOwnerSilentCertificateAccess> _silentCertificateAccessDetails;
+    /**
+     * Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
+     */
+    private AndroidDeviceOwnerCertificateAccessType certificateAccessType;
+    /**
+     * PFX Import Options.
+     */
+    private IntendedPurpose intendedPurpose;
+    /**
+     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
+     */
+    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
+    /**
+     * Certificate access information. This collection can contain a maximum of 50 elements.
+     */
+    private java.util.List<AndroidDeviceOwnerSilentCertificateAccess> silentCertificateAccessDetails;
     /**
      * Instantiates a new AndroidDeviceOwnerImportedPFXCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerImportedPFXCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerImportedPFXCertificateProfile");
@@ -40,29 +48,28 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
      */
     @javax.annotation.Nullable
     public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
-        return this._certificateAccessType;
+        return this.certificateAccessType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidDeviceOwnerImportedPFXCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificateAccessType", (n) -> { currentObject.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
-            this.put("intendedPurpose", (n) -> { currentObject.setIntendedPurpose(n.getEnumValue(IntendedPurpose.class)); });
-            this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
-            this.put("silentCertificateAccessDetails", (n) -> { currentObject.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
+        deserializerMap.put("intendedPurpose", (n) -> { this.setIntendedPurpose(n.getEnumValue(IntendedPurpose.class)); });
+        deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
+        deserializerMap.put("silentCertificateAccessDetails", (n) -> { this.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the intendedPurpose property value. PFX Import Options.
-     * @return a intendedPurpose
+     * @return a IntendedPurpose
      */
     @javax.annotation.Nullable
     public IntendedPurpose getIntendedPurpose() {
-        return this._intendedPurpose;
+        return this.intendedPurpose;
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
@@ -70,7 +77,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this._managedDeviceCertificateStates;
+        return this.managedDeviceCertificateStates;
     }
     /**
      * Gets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
@@ -78,13 +85,14 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
      */
     @javax.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> getSilentCertificateAccessDetails() {
-        return this._silentCertificateAccessDetails;
+        return this.silentCertificateAccessDetails;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,31 +106,35 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
      * @param value Value to set for the certificateAccessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateAccessType(@javax.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
-        this._certificateAccessType = value;
+        this.certificateAccessType = value;
     }
     /**
      * Sets the intendedPurpose property value. PFX Import Options.
      * @param value Value to set for the intendedPurpose property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntendedPurpose(@javax.annotation.Nullable final IntendedPurpose value) {
-        this._intendedPurpose = value;
+        this.intendedPurpose = value;
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this._managedDeviceCertificateStates = value;
+        this.managedDeviceCertificateStates = value;
     }
     /**
      * Sets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
      * @param value Value to set for the silentCertificateAccessDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSilentCertificateAccessDetails(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerSilentCertificateAccess> value) {
-        this._silentCertificateAccessDetails = value;
+        this.silentCertificateAccessDetails = value;
     }
 }

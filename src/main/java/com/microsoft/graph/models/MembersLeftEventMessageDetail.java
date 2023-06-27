@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MembersLeftEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Initiator of the event. */
-    private IdentitySet _initiator;
-    /** List of members who left the chat. */
-    private java.util.List<TeamworkUserIdentity> _members;
+    /**
+     * Initiator of the event.
+     */
+    private IdentitySet initiator;
+    /**
+     * List of members who left the chat.
+     */
+    private java.util.List<TeamworkUserIdentity> members;
     /**
      * Instantiates a new MembersLeftEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MembersLeftEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.membersLeftEventMessageDetail");
@@ -32,15 +36,14 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MembersLeftEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(TeamworkUserIdentity::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(TeamworkUserIdentity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. Initiator of the event.
@@ -48,7 +51,7 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Gets the members property value. List of members who left the chat.
@@ -56,13 +59,14 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
      */
     @javax.annotation.Nullable
     public java.util.List<TeamworkUserIdentity> getMembers() {
-        return this._members;
+        return this.members;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
     /**
      * Sets the members property value. List of members who left the chat.
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<TeamworkUserIdentity> value) {
-        this._members = value;
+        this.members = value;
     }
 }

@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RequestorManager extends UserSet implements Parsable {
-    /** The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor's manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2. */
-    private Integer _managerLevel;
+    /**
+     * The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor's manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2.
+     */
+    private Integer managerLevel;
     /**
      * Instantiates a new RequestorManager and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RequestorManager() {
         super();
         this.setOdataType("#microsoft.graph.requestorManager");
@@ -30,14 +32,13 @@ public class RequestorManager extends UserSet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RequestorManager currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("managerLevel", (n) -> { currentObject.setManagerLevel(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("managerLevel", (n) -> { this.setManagerLevel(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managerLevel property value. The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor's manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2.
@@ -45,13 +46,14 @@ public class RequestorManager extends UserSet implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getManagerLevel() {
-        return this._managerLevel;
+        return this.managerLevel;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class RequestorManager extends UserSet implements Parsable {
      * @param value Value to set for the managerLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagerLevel(@javax.annotation.Nullable final Integer value) {
-        this._managerLevel = value;
+        this.managerLevel = value;
     }
 }

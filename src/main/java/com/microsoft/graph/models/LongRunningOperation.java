@@ -1,33 +1,42 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.RichLongRunningOperation;
+import com.microsoft.graph.models.industrydata.FileValidateOperation;
+import com.microsoft.graph.models.industrydata.ValidateOperation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class LongRunningOperation extends Entity implements Parsable {
-    /** The createdDateTime property */
-    private OffsetDateTime _createdDateTime;
-    /** The lastActionDateTime property */
-    private OffsetDateTime _lastActionDateTime;
-    /** The resourceLocation property */
-    private String _resourceLocation;
-    /** The status property */
-    private LongRunningOperationStatus _status;
-    /** The statusDetail property */
-    private String _statusDetail;
+    /**
+     * The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime lastActionDateTime;
+    /**
+     * URI of the resource that the operation is performed on.
+     */
+    private String resourceLocation;
+    /**
+     * The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
+     */
+    private LongRunningOperationStatus status;
+    /**
+     * Details about the status of the operation.
+     */
+    private String statusDetail;
     /**
      * Instantiates a new longRunningOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LongRunningOperation() {
         super();
-        this.setOdataType("#microsoft.graph.longRunningOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,71 +50,74 @@ public class LongRunningOperation extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.attackSimulationOperation": return new AttackSimulationOperation();
+                case "#microsoft.graph.industryData.fileValidateOperation": return new FileValidateOperation();
+                case "#microsoft.graph.industryData.validateOperation": return new ValidateOperation();
                 case "#microsoft.graph.richLongRunningOperation": return new RichLongRunningOperation();
             }
         }
         return new LongRunningOperation();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LongRunningOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("resourceLocation", (n) -> { currentObject.setResourceLocation(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(LongRunningOperationStatus.class)); });
-            this.put("statusDetail", (n) -> { currentObject.setStatusDetail(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("resourceLocation", (n) -> { this.setResourceLocation(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LongRunningOperationStatus.class)); });
+        deserializerMap.put("statusDetail", (n) -> { this.setStatusDetail(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the lastActionDateTime property value. The lastActionDateTime property
+     * Gets the lastActionDateTime property value. The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this._lastActionDateTime;
+        return this.lastActionDateTime;
     }
     /**
-     * Gets the resourceLocation property value. The resourceLocation property
+     * Gets the resourceLocation property value. URI of the resource that the operation is performed on.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getResourceLocation() {
-        return this._resourceLocation;
+        return this.resourceLocation;
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      * @return a longRunningOperationStatus
      */
     @javax.annotation.Nullable
     public LongRunningOperationStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
-     * Gets the statusDetail property value. The statusDetail property
+     * Gets the statusDetail property value. Details about the status of the operation.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getStatusDetail() {
-        return this._statusDetail;
+        return this.statusDetail;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -116,43 +128,48 @@ public class LongRunningOperation extends Entity implements Parsable {
         writer.writeStringValue("statusDetail", this.getStatusDetail());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
-     * Sets the lastActionDateTime property value. The lastActionDateTime property
+     * Sets the lastActionDateTime property value. The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastActionDateTime = value;
+        this.lastActionDateTime = value;
     }
     /**
-     * Sets the resourceLocation property value. The resourceLocation property
+     * Sets the resourceLocation property value. URI of the resource that the operation is performed on.
      * @param value Value to set for the resourceLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceLocation(@javax.annotation.Nullable final String value) {
-        this._resourceLocation = value;
+        this.resourceLocation = value;
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final LongRunningOperationStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
-     * Sets the statusDetail property value. The statusDetail property
+     * Sets the statusDetail property value. Details about the status of the operation.
      * @param value Value to set for the statusDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatusDetail(@javax.annotation.Nullable final String value) {
-        this._statusDetail = value;
+        this.statusDetail = value;
     }
 }

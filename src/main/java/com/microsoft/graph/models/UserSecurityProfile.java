@@ -4,38 +4,57 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserSecurityProfile extends Entity implements Parsable {
-    /** The accounts property */
-    private java.util.List<UserAccount> _accounts;
-    /** The azureSubscriptionId property */
-    private String _azureSubscriptionId;
-    /** The azureTenantId property */
-    private String _azureTenantId;
-    /** The createdDateTime property */
-    private OffsetDateTime _createdDateTime;
-    /** The displayName property */
-    private String _displayName;
-    /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** The riskScore property */
-    private String _riskScore;
-    /** The tags property */
-    private java.util.List<String> _tags;
-    /** The userPrincipalName property */
-    private String _userPrincipalName;
-    /** The vendorInformation property */
-    private SecurityVendorInformation _vendorInformation;
+    /**
+     * The accounts property
+     */
+    private java.util.List<UserAccount> accounts;
+    /**
+     * The azureSubscriptionId property
+     */
+    private String azureSubscriptionId;
+    /**
+     * The azureTenantId property
+     */
+    private String azureTenantId;
+    /**
+     * The createdDateTime property
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The displayName property
+     */
+    private String displayName;
+    /**
+     * The lastModifiedDateTime property
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * The riskScore property
+     */
+    private String riskScore;
+    /**
+     * The tags property
+     */
+    private java.util.List<String> tags;
+    /**
+     * The userPrincipalName property
+     */
+    private String userPrincipalName;
+    /**
+     * The vendorInformation property
+     */
+    private SecurityVendorInformation vendorInformation;
     /**
      * Instantiates a new UserSecurityProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserSecurityProfile() {
         super();
-        this.setOdataType("#microsoft.graph.userSecurityProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +72,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UserAccount> getAccounts() {
-        return this._accounts;
+        return this.accounts;
     }
     /**
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
@@ -61,7 +80,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureSubscriptionId() {
-        return this._azureSubscriptionId;
+        return this.azureSubscriptionId;
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
@@ -69,7 +88,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureTenantId() {
-        return this._azureTenantId;
+        return this.azureTenantId;
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -77,7 +96,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -85,27 +104,26 @@ public class UserSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserSecurityProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accounts", (n) -> { currentObject.setAccounts(n.getCollectionOfObjectValues(UserAccount::createFromDiscriminatorValue)); });
-            this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accounts", (n) -> { this.setAccounts(n.getCollectionOfObjectValues(UserAccount::createFromDiscriminatorValue)); });
+        deserializerMap.put("azureSubscriptionId", (n) -> { this.setAzureSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("vendorInformation", (n) -> { this.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -113,7 +131,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the riskScore property value. The riskScore property
@@ -121,7 +139,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRiskScore() {
-        return this._riskScore;
+        return this.riskScore;
     }
     /**
      * Gets the tags property value. The tags property
@@ -129,7 +147,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this._tags;
+        return this.tags;
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName property
@@ -137,7 +155,7 @@ public class UserSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
@@ -145,13 +163,14 @@ public class UserSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
-        return this._vendorInformation;
+        return this.vendorInformation;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,79 +190,89 @@ public class UserSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the accounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccounts(@javax.annotation.Nullable final java.util.List<UserAccount> value) {
-        this._accounts = value;
+        this.accounts = value;
     }
     /**
      * Sets the azureSubscriptionId property value. The azureSubscriptionId property
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
-        this._azureSubscriptionId = value;
+        this.azureSubscriptionId = value;
     }
     /**
      * Sets the azureTenantId property value. The azureTenantId property
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
-        this._azureTenantId = value;
+        this.azureTenantId = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the riskScore property value. The riskScore property
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
-        this._riskScore = value;
+        this.riskScore = value;
     }
     /**
      * Sets the tags property value. The tags property
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._tags = value;
+        this.tags = value;
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName property
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
     /**
      * Sets the vendorInformation property value. The vendorInformation property
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
-        this._vendorInformation = value;
+        this.vendorInformation = value;
     }
 }

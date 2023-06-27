@@ -3,9 +3,11 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Allow(Not Configured) or prevent(Block) the syncing of Microsoft Edge Browser settings. Option to prevent syncing across devices, but allow user override.
+ */
 public enum BrowserSyncSetting implements ValuedEnum {
-    /** Default – Allow syncing of browser settings across devices. */
+    /** Default  Allow syncing of browser settings across devices. */
     NotConfigured("notConfigured"),
     /** Prevent syncing of browser settings across user devices, allow user override of setting. */
     BlockedWithUserOverride("blockedWithUserOverride"),

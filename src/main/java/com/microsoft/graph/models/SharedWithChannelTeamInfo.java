@@ -3,22 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
-    /** A collection of team members who have access to the shared channel. */
-    private java.util.List<ConversationMember> _allowedMembers;
-    /** Indicates whether the team is the host of the channel. */
-    private Boolean _isHostTeam;
+    /**
+     * A collection of team members who have access to the shared channel.
+     */
+    private java.util.List<ConversationMember> allowedMembers;
+    /**
+     * Indicates whether the team is the host of the channel.
+     */
+    private Boolean isHostTeam;
     /**
      * Instantiates a new SharedWithChannelTeamInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharedWithChannelTeamInfo() {
         super();
-        this.setOdataType("#microsoft.graph.sharedWithChannelTeamInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,19 +39,18 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ConversationMember> getAllowedMembers() {
-        return this._allowedMembers;
+        return this.allowedMembers;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharedWithChannelTeamInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedMembers", (n) -> { currentObject.setAllowedMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
-            this.put("isHostTeam", (n) -> { currentObject.setIsHostTeam(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedMembers", (n) -> { this.setAllowedMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("isHostTeam", (n) -> { this.setIsHostTeam(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isHostTeam property value. Indicates whether the team is the host of the channel.
@@ -56,13 +58,14 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsHostTeam() {
-        return this._isHostTeam;
+        return this.isHostTeam;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +77,17 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * @param value Value to set for the allowedMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedMembers(@javax.annotation.Nullable final java.util.List<ConversationMember> value) {
-        this._allowedMembers = value;
+        this.allowedMembers = value;
     }
     /**
      * Sets the isHostTeam property value. Indicates whether the team is the host of the channel.
      * @param value Value to set for the isHostTeam property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHostTeam(@javax.annotation.Nullable final Boolean value) {
-        this._isHostTeam = value;
+        this.isHostTeam = value;
     }
 }

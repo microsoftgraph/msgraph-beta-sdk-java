@@ -3,25 +3,35 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
-    /** KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank. */
-    private String _contentQuery;
-    /** Lists any errors that happened while placing the hold. */
-    private java.util.List<String> _errors;
-    /** Indicates whether the hold is enabled and actively holding content. */
-    private Boolean _isEnabled;
-    /** Data sources that represent SharePoint sites. */
-    private java.util.List<SiteSource> _siteSources;
-    /** Data sources that represent Exchange mailboxes. */
-    private java.util.List<UserSource> _userSources;
+    /**
+     * KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
+     */
+    private String contentQuery;
+    /**
+     * Lists any errors that happened while placing the hold.
+     */
+    private java.util.List<String> errors;
+    /**
+     * Indicates whether the hold is enabled and actively holding content.
+     */
+    private Boolean isEnabled;
+    /**
+     * Data sources that represent SharePoint sites.
+     */
+    private java.util.List<SiteSource> siteSources;
+    /**
+     * Data sources that represent Exchange mailboxes.
+     */
+    private java.util.List<UserSource> userSources;
     /**
      * Instantiates a new EdiscoveryHoldPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoveryHoldPolicy() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryHoldPolicy");
@@ -42,7 +52,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContentQuery() {
-        return this._contentQuery;
+        return this.contentQuery;
     }
     /**
      * Gets the errors property value. Lists any errors that happened while placing the hold.
@@ -50,22 +60,21 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getErrors() {
-        return this._errors;
+        return this.errors;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EdiscoveryHoldPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });
-            this.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("siteSources", (n) -> { currentObject.setSiteSources(n.getCollectionOfObjectValues(SiteSource::createFromDiscriminatorValue)); });
-            this.put("userSources", (n) -> { currentObject.setUserSources(n.getCollectionOfObjectValues(UserSource::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentQuery", (n) -> { this.setContentQuery(n.getStringValue()); });
+        deserializerMap.put("errors", (n) -> { this.setErrors(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("siteSources", (n) -> { this.setSiteSources(n.getCollectionOfObjectValues(SiteSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("userSources", (n) -> { this.setUserSources(n.getCollectionOfObjectValues(UserSource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
@@ -73,7 +82,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this._isEnabled;
+        return this.isEnabled;
     }
     /**
      * Gets the siteSources property value. Data sources that represent SharePoint sites.
@@ -81,7 +90,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SiteSource> getSiteSources() {
-        return this._siteSources;
+        return this.siteSources;
     }
     /**
      * Gets the userSources property value. Data sources that represent Exchange mailboxes.
@@ -89,13 +98,14 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UserSource> getUserSources() {
-        return this._userSources;
+        return this.userSources;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,39 +120,44 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the contentQuery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentQuery(@javax.annotation.Nullable final String value) {
-        this._contentQuery = value;
+        this.contentQuery = value;
     }
     /**
      * Sets the errors property value. Lists any errors that happened while placing the hold.
      * @param value Value to set for the errors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrors(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._errors = value;
+        this.errors = value;
     }
     /**
      * Sets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabled = value;
+        this.isEnabled = value;
     }
     /**
      * Sets the siteSources property value. Data sources that represent SharePoint sites.
      * @param value Value to set for the siteSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteSources(@javax.annotation.Nullable final java.util.List<SiteSource> value) {
-        this._siteSources = value;
+        this.siteSources = value;
     }
     /**
      * Sets the userSources property value. Data sources that represent Exchange mailboxes.
      * @param value Value to set for the userSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserSources(@javax.annotation.Nullable final java.util.List<UserSource> value) {
-        this._userSources = value;
+        this.userSources = value;
     }
 }

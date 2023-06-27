@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Possible values for site security level.
+ */
 public enum SiteSecurityLevel implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

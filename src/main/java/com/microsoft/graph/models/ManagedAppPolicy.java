@@ -1,45 +1,47 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidManagedAppProtection;
-import com.microsoft.graph.models.DefaultManagedAppProtection;
-import com.microsoft.graph.models.IosManagedAppProtection;
-import com.microsoft.graph.models.ManagedAppConfiguration;
-import com.microsoft.graph.models.ManagedAppProtection;
-import com.microsoft.graph.models.MdmWindowsInformationProtectionPolicy;
-import com.microsoft.graph.models.TargetedManagedAppConfiguration;
-import com.microsoft.graph.models.TargetedManagedAppProtection;
-import com.microsoft.graph.models.WindowsInformationProtection;
-import com.microsoft.graph.models.WindowsInformationProtectionPolicy;
-import com.microsoft.graph.models.WindowsManagedAppProtection;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The ManagedAppPolicy resource represents a base type for platform specific policies. */
+/**
+ * The ManagedAppPolicy resource represents a base type for platform specific policies.
+ */
 public class ManagedAppPolicy extends Entity implements Parsable {
-    /** The date and time the policy was created. */
-    private OffsetDateTime _createdDateTime;
-    /** The policy's description. */
-    private String _description;
-    /** Policy display name. */
-    private String _displayName;
-    /** Last time the policy was modified. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** List of Scope Tags for this Entity instance. */
-    private java.util.List<String> _roleScopeTagIds;
-    /** Version of the entity. */
-    private String _version;
+    /**
+     * The date and time the policy was created.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The policy's description.
+     */
+    private String description;
+    /**
+     * Policy display name.
+     */
+    private String displayName;
+    /**
+     * Last time the policy was modified.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * List of Scope Tags for this Entity instance.
+     */
+    private java.util.List<String> roleScopeTagIds;
+    /**
+     * Version of the entity.
+     */
+    private String version;
     /**
      * Instantiates a new managedAppPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAppPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.managedAppPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,7 +76,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. The policy's description.
@@ -82,7 +84,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Policy display name.
@@ -90,23 +92,22 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedAppPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. Last time the policy was modified.
@@ -114,7 +115,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
@@ -122,7 +123,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this._roleScopeTagIds;
+        return this.roleScopeTagIds;
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -130,13 +131,14 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -152,47 +154,53 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The policy's description.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Policy display name.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last time the policy was modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roleScopeTagIds = value;
+        this.roleScopeTagIds = value;
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

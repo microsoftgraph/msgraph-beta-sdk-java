@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Supported platform types.
+ */
 public enum DevicePlatformType implements ValuedEnum {
     /** Android. */
     Android("android"),
@@ -24,7 +26,13 @@ public enum DevicePlatformType implements ValuedEnum {
     /** Unknown. */
     Unknown("unknown"),
     /** Android AOSP. */
-    AndroidAOSP("androidAOSP");
+    AndroidAOSP("androidAOSP"),
+    /** Indicates Mobile Application Management (MAM) for android devices. */
+    AndroidMobileApplicationManagement("androidMobileApplicationManagement"),
+    /** Indicates Mobile Application Management (MAM) for iOS devices */
+    IOSMobileApplicationManagement("iOSMobileApplicationManagement"),
+    /** Evolvable enumeration sentinel value. Do not use */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DevicePlatformType(final String value) {
         this.value = value;
@@ -45,6 +53,9 @@ public enum DevicePlatformType implements ValuedEnum {
             case "androidWorkProfile": return AndroidWorkProfile;
             case "unknown": return Unknown;
             case "androidAOSP": return AndroidAOSP;
+            case "androidMobileApplicationManagement": return AndroidMobileApplicationManagement;
+            case "iOSMobileApplicationManagement": return IOSMobileApplicationManagement;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

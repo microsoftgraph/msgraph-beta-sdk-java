@@ -4,41 +4,61 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity implements Parsable {
-    /** The associated group assignments for this WindowsDefenderApplicationControl supplemental policy. */
-    private java.util.List<WindowsDefenderApplicationControlSupplementalPolicyAssignment> _assignments;
-    /** The WindowsDefenderApplicationControl supplemental policy content in byte array format. */
-    private byte[] _content;
-    /** The WindowsDefenderApplicationControl supplemental policy content's file name. */
-    private String _contentFileName;
-    /** The date and time when the WindowsDefenderApplicationControl supplemental policy was uploaded. */
-    private OffsetDateTime _creationDateTime;
-    /** WindowsDefenderApplicationControl supplemental policy deployment summary. */
-    private WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary _deploySummary;
-    /** The description of WindowsDefenderApplicationControl supplemental policy. */
-    private String _description;
-    /** The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy. */
-    private java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> _deviceStatuses;
-    /** The display name of WindowsDefenderApplicationControl supplemental policy. */
-    private String _displayName;
-    /** The date and time when the WindowsDefenderApplicationControl supplemental policy was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** List of Scope Tags for this WindowsDefenderApplicationControl supplemental policy entity. */
-    private java.util.List<String> _roleScopeTagIds;
-    /** The WindowsDefenderApplicationControl supplemental policy's version. */
-    private String _version;
+    /**
+     * The associated group assignments for this WindowsDefenderApplicationControl supplemental policy.
+     */
+    private java.util.List<WindowsDefenderApplicationControlSupplementalPolicyAssignment> assignments;
+    /**
+     * The WindowsDefenderApplicationControl supplemental policy content in byte array format.
+     */
+    private byte[] content;
+    /**
+     * The WindowsDefenderApplicationControl supplemental policy content's file name.
+     */
+    private String contentFileName;
+    /**
+     * The date and time when the WindowsDefenderApplicationControl supplemental policy was uploaded.
+     */
+    private OffsetDateTime creationDateTime;
+    /**
+     * WindowsDefenderApplicationControl supplemental policy deployment summary.
+     */
+    private WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary deploySummary;
+    /**
+     * The description of WindowsDefenderApplicationControl supplemental policy.
+     */
+    private String description;
+    /**
+     * The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
+     */
+    private java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> deviceStatuses;
+    /**
+     * The display name of WindowsDefenderApplicationControl supplemental policy.
+     */
+    private String displayName;
+    /**
+     * The date and time when the WindowsDefenderApplicationControl supplemental policy was last modified.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * List of Scope Tags for this WindowsDefenderApplicationControl supplemental policy entity.
+     */
+    private java.util.List<String> roleScopeTagIds;
+    /**
+     * The WindowsDefenderApplicationControl supplemental policy's version.
+     */
+    private String version;
     /**
      * Instantiates a new windowsDefenderApplicationControlSupplementalPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.windowsDefenderApplicationControlSupplementalPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,15 +76,15 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsDefenderApplicationControlSupplementalPolicyAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the content property value. The WindowsDefenderApplicationControl supplemental policy content in byte array format.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getContent() {
-        return this._content;
+        return this.content;
     }
     /**
      * Gets the contentFileName property value. The WindowsDefenderApplicationControl supplemental policy content's file name.
@@ -72,7 +92,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      */
     @javax.annotation.Nullable
     public String getContentFileName() {
-        return this._contentFileName;
+        return this.contentFileName;
     }
     /**
      * Gets the creationDateTime property value. The date and time when the WindowsDefenderApplicationControl supplemental policy was uploaded.
@@ -80,7 +100,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
-        return this._creationDateTime;
+        return this.creationDateTime;
     }
     /**
      * Gets the deploySummary property value. WindowsDefenderApplicationControl supplemental policy deployment summary.
@@ -88,7 +108,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      */
     @javax.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary getDeploySummary() {
-        return this._deploySummary;
+        return this.deploySummary;
     }
     /**
      * Gets the description property value. The description of WindowsDefenderApplicationControl supplemental policy.
@@ -96,7 +116,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the deviceStatuses property value. The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
@@ -104,7 +124,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> getDeviceStatuses() {
-        return this._deviceStatuses;
+        return this.deviceStatuses;
     }
     /**
      * Gets the displayName property value. The display name of WindowsDefenderApplicationControl supplemental policy.
@@ -112,28 +132,27 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDefenderApplicationControlSupplementalPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyAssignment::createFromDiscriminatorValue)); });
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("contentFileName", (n) -> { currentObject.setContentFileName(n.getStringValue()); });
-            this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deploySummary", (n) -> { currentObject.setDeploySummary(n.getObjectValue(WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceStatuses", (n) -> { currentObject.setDeviceStatuses(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("contentFileName", (n) -> { this.setContentFileName(n.getStringValue()); });
+        deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deploySummary", (n) -> { this.setDeploySummary(n.getObjectValue(WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceStatuses", (n) -> { this.setDeviceStatuses(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the WindowsDefenderApplicationControl supplemental policy was last modified.
@@ -141,7 +160,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this WindowsDefenderApplicationControl supplemental policy entity.
@@ -149,7 +168,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this._roleScopeTagIds;
+        return this.roleScopeTagIds;
     }
     /**
      * Gets the version property value. The WindowsDefenderApplicationControl supplemental policy's version.
@@ -157,13 +176,14 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -184,87 +204,98 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<WindowsDefenderApplicationControlSupplementalPolicyAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the content property value. The WindowsDefenderApplicationControl supplemental policy content in byte array format.
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
-        this._content = value;
+        this.content = value;
     }
     /**
      * Sets the contentFileName property value. The WindowsDefenderApplicationControl supplemental policy content's file name.
      * @param value Value to set for the contentFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentFileName(@javax.annotation.Nullable final String value) {
-        this._contentFileName = value;
+        this.contentFileName = value;
     }
     /**
      * Sets the creationDateTime property value. The date and time when the WindowsDefenderApplicationControl supplemental policy was uploaded.
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._creationDateTime = value;
+        this.creationDateTime = value;
     }
     /**
      * Sets the deploySummary property value. WindowsDefenderApplicationControl supplemental policy deployment summary.
      * @param value Value to set for the deploySummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploySummary(@javax.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary value) {
-        this._deploySummary = value;
+        this.deploySummary = value;
     }
     /**
      * Sets the description property value. The description of WindowsDefenderApplicationControl supplemental policy.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the deviceStatuses property value. The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
      * @param value Value to set for the deviceStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> value) {
-        this._deviceStatuses = value;
+        this.deviceStatuses = value;
     }
     /**
      * Sets the displayName property value. The display name of WindowsDefenderApplicationControl supplemental policy.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the WindowsDefenderApplicationControl supplemental policy was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this WindowsDefenderApplicationControl supplemental policy entity.
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roleScopeTagIds = value;
+        this.roleScopeTagIds = value;
     }
     /**
      * Sets the version property value. The WindowsDefenderApplicationControl supplemental policy's version.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

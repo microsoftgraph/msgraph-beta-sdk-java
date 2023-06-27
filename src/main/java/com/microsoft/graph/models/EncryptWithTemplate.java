@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EncryptWithTemplate extends EncryptContent implements Parsable {
-    /** The availableForEncryption property */
-    private Boolean _availableForEncryption;
-    /** The templateId property */
-    private String _templateId;
+    /**
+     * The availableForEncryption property
+     */
+    private Boolean availableForEncryption;
+    /**
+     * The templateId property
+     */
+    private String templateId;
     /**
      * Instantiates a new EncryptWithTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EncryptWithTemplate() {
         super();
         this.setOdataType("#microsoft.graph.encryptWithTemplate");
@@ -36,19 +40,18 @@ public class EncryptWithTemplate extends EncryptContent implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAvailableForEncryption() {
-        return this._availableForEncryption;
+        return this.availableForEncryption;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EncryptWithTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("availableForEncryption", (n) -> { currentObject.setAvailableForEncryption(n.getBooleanValue()); });
-            this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("availableForEncryption", (n) -> { this.setAvailableForEncryption(n.getBooleanValue()); });
+        deserializerMap.put("templateId", (n) -> { this.setTemplateId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the templateId property value. The templateId property
@@ -56,13 +59,14 @@ public class EncryptWithTemplate extends EncryptContent implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTemplateId() {
-        return this._templateId;
+        return this.templateId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class EncryptWithTemplate extends EncryptContent implements Parsable {
      * @param value Value to set for the availableForEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailableForEncryption(@javax.annotation.Nullable final Boolean value) {
-        this._availableForEncryption = value;
+        this.availableForEncryption = value;
     }
     /**
      * Sets the templateId property value. The templateId property
      * @param value Value to set for the templateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateId(@javax.annotation.Nullable final String value) {
-        this._templateId = value;
+        this.templateId = value;
     }
 }

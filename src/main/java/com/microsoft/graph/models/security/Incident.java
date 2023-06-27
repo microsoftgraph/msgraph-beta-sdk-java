@@ -5,47 +5,89 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class Incident extends Entity implements Parsable {
-    /** The list of related alerts. Supports $expand. */
-    private java.util.List<Alert> _alerts;
-    /** Owner of the incident, or null if no owner is assigned. Free editable text. */
-    private String _assignedTo;
-    /** The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue. */
-    private AlertClassification _classification;
-    /** Array of comments created by the Security Operations (SecOps) team when the incident is managed. */
-    private java.util.List<AlertComment> _comments;
-    /** Time when the incident was first created. */
-    private OffsetDateTime _createdDateTime;
-    /** Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue. */
-    private AlertDetermination _determination;
-    /** The incident name. */
-    private String _displayName;
-    /** The URL for the incident page in the Microsoft 365 Defender portal. */
-    private String _incidentWebUrl;
-    /** Time when the incident was last updated. */
-    private OffsetDateTime _lastUpdateDateTime;
-    /** Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected. */
-    private String _redirectIncidentId;
-    /** The severity property */
-    private AlertSeverity _severity;
-    /** The status property */
-    private IncidentStatus _status;
-    /** Array of custom tags associated with an incident. */
-    private java.util.List<String> _tags;
-    /** The Azure Active Directory tenant in which the alert was created. */
-    private String _tenantId;
+    /**
+     * The list of related alerts. Supports $expand.
+     */
+    private java.util.List<Alert> alerts;
+    /**
+     * Owner of the incident, or null if no owner is assigned. Free editable text.
+     */
+    private String assignedTo;
+    /**
+     * The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
+     */
+    private AlertClassification classification;
+    /**
+     * Array of comments created by the Security Operations (SecOps) team when the incident is managed.
+     */
+    private java.util.List<AlertComment> comments;
+    /**
+     * Time when the incident was first created.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * Array of custom tags associated with an incident.
+     */
+    private java.util.List<String> customTags;
+    /**
+     * The description property
+     */
+    private String description;
+    /**
+     * Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
+     */
+    private AlertDetermination determination;
+    /**
+     * The incident name.
+     */
+    private String displayName;
+    /**
+     * The URL for the incident page in the Microsoft 365 Defender portal.
+     */
+    private String incidentWebUrl;
+    /**
+     * Time when the incident was last updated.
+     */
+    private OffsetDateTime lastUpdateDateTime;
+    /**
+     * The recommendedActions property
+     */
+    private String recommendedActions;
+    /**
+     * The recommendedHuntingQueries property
+     */
+    private java.util.List<RecommendedHuntingQuery> recommendedHuntingQueries;
+    /**
+     * Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
+     */
+    private String redirectIncidentId;
+    /**
+     * The severity property
+     */
+    private AlertSeverity severity;
+    /**
+     * The status property
+     */
+    private IncidentStatus status;
+    /**
+     * The systemTags property
+     */
+    private java.util.List<String> systemTags;
+    /**
+     * The Azure Active Directory tenant in which the alert was created.
+     */
+    private String tenantId;
     /**
      * Instantiates a new incident and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Incident() {
         super();
-        this.setOdataType("#microsoft.graph.security.incident");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,7 +105,7 @@ public class Incident extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Alert> getAlerts() {
-        return this._alerts;
+        return this.alerts;
     }
     /**
      * Gets the assignedTo property value. Owner of the incident, or null if no owner is assigned. Free editable text.
@@ -71,7 +113,7 @@ public class Incident extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAssignedTo() {
-        return this._assignedTo;
+        return this.assignedTo;
     }
     /**
      * Gets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
@@ -79,7 +121,7 @@ public class Incident extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AlertClassification getClassification() {
-        return this._classification;
+        return this.classification;
     }
     /**
      * Gets the comments property value. Array of comments created by the Security Operations (SecOps) team when the incident is managed.
@@ -87,7 +129,7 @@ public class Incident extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AlertComment> getComments() {
-        return this._comments;
+        return this.comments;
     }
     /**
      * Gets the createdDateTime property value. Time when the incident was first created.
@@ -95,7 +137,23 @@ public class Incident extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
+    }
+    /**
+     * Gets the customTags property value. Array of custom tags associated with an incident.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getCustomTags() {
+        return this.customTags;
+    }
+    /**
+     * Gets the description property value. The description property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDescription() {
+        return this.description;
     }
     /**
      * Gets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
@@ -103,7 +161,7 @@ public class Incident extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AlertDetermination getDetermination() {
-        return this._determination;
+        return this.determination;
     }
     /**
      * Gets the displayName property value. The incident name.
@@ -111,31 +169,34 @@ public class Incident extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Incident currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("alerts", (n) -> { currentObject.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
-            this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
-            this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(AlertClassification.class)); });
-            this.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfObjectValues(AlertComment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("determination", (n) -> { currentObject.setDetermination(n.getEnumValue(AlertDetermination.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("incidentWebUrl", (n) -> { currentObject.setIncidentWebUrl(n.getStringValue()); });
-            this.put("lastUpdateDateTime", (n) -> { currentObject.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("redirectIncidentId", (n) -> { currentObject.setRedirectIncidentId(n.getStringValue()); });
-            this.put("severity", (n) -> { currentObject.setSeverity(n.getEnumValue(AlertSeverity.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(IncidentStatus.class)); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(AlertClassification.class)); });
+        deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfObjectValues(AlertComment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customTags", (n) -> { this.setCustomTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("determination", (n) -> { this.setDetermination(n.getEnumValue(AlertDetermination.class)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("incidentWebUrl", (n) -> { this.setIncidentWebUrl(n.getStringValue()); });
+        deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("recommendedActions", (n) -> { this.setRecommendedActions(n.getStringValue()); });
+        deserializerMap.put("recommendedHuntingQueries", (n) -> { this.setRecommendedHuntingQueries(n.getCollectionOfObjectValues(RecommendedHuntingQuery::createFromDiscriminatorValue)); });
+        deserializerMap.put("redirectIncidentId", (n) -> { this.setRedirectIncidentId(n.getStringValue()); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(IncidentStatus.class)); });
+        deserializerMap.put("systemTags", (n) -> { this.setSystemTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the incidentWebUrl property value. The URL for the incident page in the Microsoft 365 Defender portal.
@@ -143,7 +204,7 @@ public class Incident extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIncidentWebUrl() {
-        return this._incidentWebUrl;
+        return this.incidentWebUrl;
     }
     /**
      * Gets the lastUpdateDateTime property value. Time when the incident was last updated.
@@ -151,7 +212,23 @@ public class Incident extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
-        return this._lastUpdateDateTime;
+        return this.lastUpdateDateTime;
+    }
+    /**
+     * Gets the recommendedActions property value. The recommendedActions property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getRecommendedActions() {
+        return this.recommendedActions;
+    }
+    /**
+     * Gets the recommendedHuntingQueries property value. The recommendedHuntingQueries property
+     * @return a recommendedHuntingQuery
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RecommendedHuntingQuery> getRecommendedHuntingQueries() {
+        return this.recommendedHuntingQueries;
     }
     /**
      * Gets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
@@ -159,31 +236,31 @@ public class Incident extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRedirectIncidentId() {
-        return this._redirectIncidentId;
+        return this.redirectIncidentId;
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a alertSeverity
+     * @return a AlertSeverity
      */
     @javax.annotation.Nullable
     public AlertSeverity getSeverity() {
-        return this._severity;
+        return this.severity;
     }
     /**
      * Gets the status property value. The status property
-     * @return a incidentStatus
+     * @return a IncidentStatus
      */
     @javax.annotation.Nullable
     public IncidentStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
-     * Gets the tags property value. Array of custom tags associated with an incident.
+     * Gets the systemTags property value. The systemTags property
      * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getTags() {
-        return this._tags;
+    public java.util.List<String> getSystemTags() {
+        return this.systemTags;
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant in which the alert was created.
@@ -191,13 +268,14 @@ public class Incident extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -206,14 +284,18 @@ public class Incident extends Entity implements Parsable {
         writer.writeEnumValue("classification", this.getClassification());
         writer.writeCollectionOfObjectValues("comments", this.getComments());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeCollectionOfPrimitiveValues("customTags", this.getCustomTags());
+        writer.writeStringValue("description", this.getDescription());
         writer.writeEnumValue("determination", this.getDetermination());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("incidentWebUrl", this.getIncidentWebUrl());
         writer.writeOffsetDateTimeValue("lastUpdateDateTime", this.getLastUpdateDateTime());
+        writer.writeStringValue("recommendedActions", this.getRecommendedActions());
+        writer.writeCollectionOfObjectValues("recommendedHuntingQueries", this.getRecommendedHuntingQueries());
         writer.writeStringValue("redirectIncidentId", this.getRedirectIncidentId());
         writer.writeEnumValue("severity", this.getSeverity());
         writer.writeEnumValue("status", this.getStatus());
-        writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
+        writer.writeCollectionOfPrimitiveValues("systemTags", this.getSystemTags());
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
@@ -221,111 +303,161 @@ public class Incident extends Entity implements Parsable {
      * @param value Value to set for the alerts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlerts(@javax.annotation.Nullable final java.util.List<Alert> value) {
-        this._alerts = value;
+        this.alerts = value;
     }
     /**
      * Sets the assignedTo property value. Owner of the incident, or null if no owner is assigned. Free editable text.
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final String value) {
-        this._assignedTo = value;
+        this.assignedTo = value;
     }
     /**
      * Sets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @param value Value to set for the classification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassification(@javax.annotation.Nullable final AlertClassification value) {
-        this._classification = value;
+        this.classification = value;
     }
     /**
      * Sets the comments property value. Array of comments created by the Security Operations (SecOps) team when the incident is managed.
      * @param value Value to set for the comments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComments(@javax.annotation.Nullable final java.util.List<AlertComment> value) {
-        this._comments = value;
+        this.comments = value;
     }
     /**
      * Sets the createdDateTime property value. Time when the incident was first created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
+    }
+    /**
+     * Sets the customTags property value. Array of custom tags associated with an incident.
+     * @param value Value to set for the customTags property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomTags(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.customTags = value;
+    }
+    /**
+     * Sets the description property value. The description property
+     * @param value Value to set for the description property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDescription(@javax.annotation.Nullable final String value) {
+        this.description = value;
     }
     /**
      * Sets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @param value Value to set for the determination property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetermination(@javax.annotation.Nullable final AlertDetermination value) {
-        this._determination = value;
+        this.determination = value;
     }
     /**
      * Sets the displayName property value. The incident name.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the incidentWebUrl property value. The URL for the incident page in the Microsoft 365 Defender portal.
      * @param value Value to set for the incidentWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncidentWebUrl(@javax.annotation.Nullable final String value) {
-        this._incidentWebUrl = value;
+        this.incidentWebUrl = value;
     }
     /**
      * Sets the lastUpdateDateTime property value. Time when the incident was last updated.
      * @param value Value to set for the lastUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastUpdateDateTime = value;
+        this.lastUpdateDateTime = value;
+    }
+    /**
+     * Sets the recommendedActions property value. The recommendedActions property
+     * @param value Value to set for the recommendedActions property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRecommendedActions(@javax.annotation.Nullable final String value) {
+        this.recommendedActions = value;
+    }
+    /**
+     * Sets the recommendedHuntingQueries property value. The recommendedHuntingQueries property
+     * @param value Value to set for the recommendedHuntingQueries property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRecommendedHuntingQueries(@javax.annotation.Nullable final java.util.List<RecommendedHuntingQuery> value) {
+        this.recommendedHuntingQueries = value;
     }
     /**
      * Sets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
      * @param value Value to set for the redirectIncidentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRedirectIncidentId(@javax.annotation.Nullable final String value) {
-        this._redirectIncidentId = value;
+        this.redirectIncidentId = value;
     }
     /**
      * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeverity(@javax.annotation.Nullable final AlertSeverity value) {
-        this._severity = value;
+        this.severity = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final IncidentStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
-     * Sets the tags property value. Array of custom tags associated with an incident.
-     * @param value Value to set for the tags property.
+     * Sets the systemTags property value. The systemTags property
+     * @param value Value to set for the systemTags property.
      * @return a void
      */
-    public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._tags = value;
+    @javax.annotation.Nonnull
+    public void setSystemTags(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.systemTags = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant in which the alert was created.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
 }

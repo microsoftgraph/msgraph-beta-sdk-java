@@ -4,33 +4,45 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class UserCredentialUsageDetails extends Entity implements Parsable {
-    /** The authMethod property */
-    private UsageAuthMethod _authMethod;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _eventDateTime;
-    /** Provides the failure reason for the corresponding reset or registration workflow. */
-    private String _failureReason;
-    /** The feature property */
-    private FeatureType _feature;
-    /** Indicates success or failure of the workflow. */
-    private Boolean _isSuccess;
-    /** User name of the user performing the reset or registration workflow. */
-    private String _userDisplayName;
-    /** User principal name of the user performing the reset or registration workflow. */
-    private String _userPrincipalName;
+    /**
+     * The authMethod property
+     */
+    private UsageAuthMethod authMethod;
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime eventDateTime;
+    /**
+     * Provides the failure reason for the corresponding reset or registration workflow.
+     */
+    private String failureReason;
+    /**
+     * The feature property
+     */
+    private FeatureType feature;
+    /**
+     * Indicates success or failure of the workflow.
+     */
+    private Boolean isSuccess;
+    /**
+     * User name of the user performing the reset or registration workflow.
+     */
+    private String userDisplayName;
+    /**
+     * User principal name of the user performing the reset or registration workflow.
+     */
+    private String userPrincipalName;
     /**
      * Instantiates a new userCredentialUsageDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserCredentialUsageDetails() {
         super();
-        this.setOdataType("#microsoft.graph.userCredentialUsageDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,11 +56,11 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the authMethod property value. The authMethod property
-     * @return a usageAuthMethod
+     * @return a UsageAuthMethod
      */
     @javax.annotation.Nullable
     public UsageAuthMethod getAuthMethod() {
-        return this._authMethod;
+        return this.authMethod;
     }
     /**
      * Gets the eventDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -56,7 +68,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this._eventDateTime;
+        return this.eventDateTime;
     }
     /**
      * Gets the failureReason property value. Provides the failure reason for the corresponding reset or registration workflow.
@@ -64,32 +76,31 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFailureReason() {
-        return this._failureReason;
+        return this.failureReason;
     }
     /**
      * Gets the feature property value. The feature property
-     * @return a featureType
+     * @return a FeatureType
      */
     @javax.annotation.Nullable
     public FeatureType getFeature() {
-        return this._feature;
+        return this.feature;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserCredentialUsageDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authMethod", (n) -> { currentObject.setAuthMethod(n.getEnumValue(UsageAuthMethod.class)); });
-            this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
-            this.put("failureReason", (n) -> { currentObject.setFailureReason(n.getStringValue()); });
-            this.put("feature", (n) -> { currentObject.setFeature(n.getEnumValue(FeatureType.class)); });
-            this.put("isSuccess", (n) -> { currentObject.setIsSuccess(n.getBooleanValue()); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authMethod", (n) -> { this.setAuthMethod(n.getEnumValue(UsageAuthMethod.class)); });
+        deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("failureReason", (n) -> { this.setFailureReason(n.getStringValue()); });
+        deserializerMap.put("feature", (n) -> { this.setFeature(n.getEnumValue(FeatureType.class)); });
+        deserializerMap.put("isSuccess", (n) -> { this.setIsSuccess(n.getBooleanValue()); });
+        deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isSuccess property value. Indicates success or failure of the workflow.
@@ -97,7 +108,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsSuccess() {
-        return this._isSuccess;
+        return this.isSuccess;
     }
     /**
      * Gets the userDisplayName property value. User name of the user performing the reset or registration workflow.
@@ -105,7 +116,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserDisplayName() {
-        return this._userDisplayName;
+        return this.userDisplayName;
     }
     /**
      * Gets the userPrincipalName property value. User principal name of the user performing the reset or registration workflow.
@@ -113,13 +124,14 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,55 +148,62 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      * @param value Value to set for the authMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthMethod(@javax.annotation.Nullable final UsageAuthMethod value) {
-        this._authMethod = value;
+        this.authMethod = value;
     }
     /**
      * Sets the eventDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._eventDateTime = value;
+        this.eventDateTime = value;
     }
     /**
      * Sets the failureReason property value. Provides the failure reason for the corresponding reset or registration workflow.
      * @param value Value to set for the failureReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailureReason(@javax.annotation.Nullable final String value) {
-        this._failureReason = value;
+        this.failureReason = value;
     }
     /**
      * Sets the feature property value. The feature property
      * @param value Value to set for the feature property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeature(@javax.annotation.Nullable final FeatureType value) {
-        this._feature = value;
+        this.feature = value;
     }
     /**
      * Sets the isSuccess property value. Indicates success or failure of the workflow.
      * @param value Value to set for the isSuccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSuccess(@javax.annotation.Nullable final Boolean value) {
-        this._isSuccess = value;
+        this.isSuccess = value;
     }
     /**
      * Sets the userDisplayName property value. User name of the user performing the reset or registration workflow.
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
-        this._userDisplayName = value;
+        this.userDisplayName = value;
     }
     /**
      * Sets the userPrincipalName property value. User principal name of the user performing the reset or registration workflow.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

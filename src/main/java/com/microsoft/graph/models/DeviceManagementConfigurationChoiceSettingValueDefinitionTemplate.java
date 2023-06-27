@@ -4,25 +4,32 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Choice Setting Value Definition Template */
+/**
+ * Choice Setting Value Definition Template
+ */
 public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Choice Setting Allowed Options */
-    private java.util.List<DeviceManagementConfigurationOptionDefinitionTemplate> _allowedOptions;
-    /** The OdataType property */
-    private String _odataType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Choice Setting Allowed Options
+     */
+    private java.util.List<DeviceManagementConfigurationOptionDefinitionTemplate> allowedOptions;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
     /**
      * Instantiates a new deviceManagementConfigurationChoiceSettingValueDefinitionTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingValueDefinitionTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,27 +47,26 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowedOptions property value. Choice Setting Allowed Options
-     * @return a deviceManagementConfigurationOptionDefinitionTemplate
+     * @return a DeviceManagementConfigurationOptionDefinitionTemplate
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationOptionDefinitionTemplate> getAllowedOptions() {
-        return this._allowedOptions;
+        return this.allowedOptions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("allowedOptions", (n) -> { currentObject.setAllowedOptions(n.getCollectionOfObjectValues(DeviceManagementConfigurationOptionDefinitionTemplate::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("allowedOptions", (n) -> { this.setAllowedOptions(n.getCollectionOfObjectValues(DeviceManagementConfigurationOptionDefinitionTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -68,13 +74,14 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("allowedOptions", this.getAllowedOptions());
@@ -86,23 +93,26 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowedOptions property value. Choice Setting Allowed Options
      * @param value Value to set for the allowedOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedOptions(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationOptionDefinitionTemplate> value) {
-        this._allowedOptions = value;
+        this.allowedOptions = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementSettingAppConstraint extends DeviceManagementConstraint implements Parsable {
-    /** Acceptable app types to allow for this setting */
-    private java.util.List<String> _supportedTypes;
+    /**
+     * Acceptable app types to allow for this setting
+     */
+    private java.util.List<String> supportedTypes;
     /**
      * Instantiates a new DeviceManagementSettingAppConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingAppConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingAppConstraint");
@@ -30,14 +32,13 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementSettingAppConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("supportedTypes", (n) -> { currentObject.setSupportedTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("supportedTypes", (n) -> { this.setSupportedTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the supportedTypes property value. Acceptable app types to allow for this setting
@@ -45,13 +46,14 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSupportedTypes() {
-        return this._supportedTypes;
+        return this.supportedTypes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
      * @param value Value to set for the supportedTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedTypes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._supportedTypes = value;
+        this.supportedTypes = value;
     }
 }
