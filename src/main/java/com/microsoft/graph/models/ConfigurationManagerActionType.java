@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the triggerConfigurationManagerAction method. */
+/**
+ * Action type on Configuration Manager client
+ */
 public enum ConfigurationManagerActionType implements ValuedEnum {
     /** Refresh machine policy on Configuration Manager client */
     RefreshMachinePolicy("refreshMachinePolicy"),

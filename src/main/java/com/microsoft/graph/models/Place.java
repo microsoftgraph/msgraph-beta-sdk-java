@@ -1,31 +1,35 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Room;
-import com.microsoft.graph.models.RoomList;
-import com.microsoft.graph.models.Workspace;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Place extends Entity implements Parsable {
-    /** The street address of the place. */
-    private PhysicalAddress _address;
-    /** The name associated with the place. */
-    private String _displayName;
-    /** Specifies the place location in latitude, longitude and (optionally) altitude coordinates. */
-    private OutlookGeoCoordinates _geoCoordinates;
-    /** The phone number of the place. */
-    private String _phone;
+    /**
+     * The street address of the place.
+     */
+    private PhysicalAddress address;
+    /**
+     * The name associated with the place.
+     */
+    private String displayName;
+    /**
+     * Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
+     */
+    private OutlookGeoCoordinates geoCoordinates;
+    /**
+     * The phone number of the place.
+     */
+    private String phone;
     /**
      * Instantiates a new Place and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Place() {
         super();
-        this.setOdataType("#microsoft.graph.place");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +56,7 @@ public class Place extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PhysicalAddress getAddress() {
-        return this._address;
+        return this.address;
     }
     /**
      * Gets the displayName property value. The name associated with the place.
@@ -60,21 +64,20 @@ public class Place extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Place currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("geoCoordinates", (n) -> { currentObject.setGeoCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
-            this.put("phone", (n) -> { currentObject.setPhone(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("geoCoordinates", (n) -> { this.setGeoCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
+        deserializerMap.put("phone", (n) -> { this.setPhone(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
@@ -82,7 +85,7 @@ public class Place extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OutlookGeoCoordinates getGeoCoordinates() {
-        return this._geoCoordinates;
+        return this.geoCoordinates;
     }
     /**
      * Gets the phone property value. The phone number of the place.
@@ -90,13 +93,14 @@ public class Place extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPhone() {
-        return this._phone;
+        return this.phone;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,31 +114,35 @@ public class Place extends Entity implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final PhysicalAddress value) {
-        this._address = value;
+        this.address = value;
     }
     /**
      * Sets the displayName property value. The name associated with the place.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
      * @param value Value to set for the geoCoordinates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGeoCoordinates(@javax.annotation.Nullable final OutlookGeoCoordinates value) {
-        this._geoCoordinates = value;
+        this.geoCoordinates = value;
     }
     /**
      * Sets the phone property value. The phone number of the place.
      * @param value Value to set for the phone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhone(@javax.annotation.Nullable final String value) {
-        this._phone = value;
+        this.phone = value;
     }
 }

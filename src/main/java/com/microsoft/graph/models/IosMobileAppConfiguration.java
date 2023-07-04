@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable {
-    /** mdm app configuration Base64 binary. */
-    private byte[] _encodedSettingXml;
-    /** app configuration setting items. */
-    private java.util.List<AppConfigurationSettingItem> _settings;
+    /**
+     * mdm app configuration Base64 binary.
+     */
+    private byte[] encodedSettingXml;
+    /**
+     * app configuration setting items.
+     */
+    private java.util.List<AppConfigurationSettingItem> settings;
     /**
      * Instantiates a new IosMobileAppConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosMobileAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosMobileAppConfiguration");
@@ -32,23 +36,22 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     }
     /**
      * Gets the encodedSettingXml property value. mdm app configuration Base64 binary.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getEncodedSettingXml() {
-        return this._encodedSettingXml;
+        return this.encodedSettingXml;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosMobileAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("encodedSettingXml", (n) -> { currentObject.setEncodedSettingXml(n.getByteArrayValue()); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(AppConfigurationSettingItem::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("encodedSettingXml", (n) -> { this.setEncodedSettingXml(n.getByteArrayValue()); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getCollectionOfObjectValues(AppConfigurationSettingItem::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the settings property value. app configuration setting items.
@@ -56,13 +59,14 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      */
     @javax.annotation.Nullable
     public java.util.List<AppConfigurationSettingItem> getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * @param value Value to set for the encodedSettingXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncodedSettingXml(@javax.annotation.Nullable final byte[] value) {
-        this._encodedSettingXml = value;
+        this.encodedSettingXml = value;
     }
     /**
      * Sets the settings property value. app configuration setting items.
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final java.util.List<AppConfigurationSettingItem> value) {
-        this._settings = value;
+        this.settings = value;
     }
 }

@@ -4,35 +4,52 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Describes the embedded SIM activation code deployment state in relation to a device. */
+/**
+ * Describes the embedded SIM activation code deployment state in relation to a device.
+ */
 public class EmbeddedSIMDeviceState extends Entity implements Parsable {
-    /** The time the embedded SIM device status was created. Generated service side. */
-    private OffsetDateTime _createdDateTime;
-    /** Device name to which the subscription was provisioned e.g. DESKTOP-JOE */
-    private String _deviceName;
-    /** The time the embedded SIM device last checked in. Updated service side. */
-    private OffsetDateTime _lastSyncDateTime;
-    /** The time the embedded SIM device status was last modified. Updated service side. */
-    private OffsetDateTime _modifiedDateTime;
-    /** Describes the various states for an embedded SIM activation code. */
-    private EmbeddedSIMDeviceStateValue _state;
-    /** String description of the provisioning state. */
-    private String _stateDetails;
-    /** The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed. */
-    private String _universalIntegratedCircuitCardIdentifier;
-    /** Username which the subscription was provisioned to e.g. joe@contoso.com */
-    private String _userName;
+    /**
+     * The time the embedded SIM device status was created. Generated service side.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
+     */
+    private String deviceName;
+    /**
+     * The time the embedded SIM device last checked in. Updated service side.
+     */
+    private OffsetDateTime lastSyncDateTime;
+    /**
+     * The time the embedded SIM device status was last modified. Updated service side.
+     */
+    private OffsetDateTime modifiedDateTime;
+    /**
+     * Describes the various states for an embedded SIM activation code.
+     */
+    private EmbeddedSIMDeviceStateValue state;
+    /**
+     * String description of the provisioning state.
+     */
+    private String stateDetails;
+    /**
+     * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
+     */
+    private String universalIntegratedCircuitCardIdentifier;
+    /**
+     * Username which the subscription was provisioned to e.g. joe@contoso.com
+     */
+    private String userName;
     /**
      * Instantiates a new embeddedSIMDeviceState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmbeddedSIMDeviceState() {
         super();
-        this.setOdataType("#microsoft.graph.embeddedSIMDeviceState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +67,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the deviceName property value. Device name to which the subscription was provisioned e.g. DESKTOP-JOE
@@ -58,25 +75,24 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EmbeddedSIMDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(EmbeddedSIMDeviceStateValue.class)); });
-            this.put("stateDetails", (n) -> { currentObject.setStateDetails(n.getStringValue()); });
-            this.put("universalIntegratedCircuitCardIdentifier", (n) -> { currentObject.setUniversalIntegratedCircuitCardIdentifier(n.getStringValue()); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(EmbeddedSIMDeviceStateValue.class)); });
+        deserializerMap.put("stateDetails", (n) -> { this.setStateDetails(n.getStringValue()); });
+        deserializerMap.put("universalIntegratedCircuitCardIdentifier", (n) -> { this.setUniversalIntegratedCircuitCardIdentifier(n.getStringValue()); });
+        deserializerMap.put("userName", (n) -> { this.setUserName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastSyncDateTime property value. The time the embedded SIM device last checked in. Updated service side.
@@ -84,7 +100,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this._lastSyncDateTime;
+        return this.lastSyncDateTime;
     }
     /**
      * Gets the modifiedDateTime property value. The time the embedded SIM device status was last modified. Updated service side.
@@ -92,15 +108,15 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this._modifiedDateTime;
+        return this.modifiedDateTime;
     }
     /**
      * Gets the state property value. Describes the various states for an embedded SIM activation code.
-     * @return a embeddedSIMDeviceStateValue
+     * @return a EmbeddedSIMDeviceStateValue
      */
     @javax.annotation.Nullable
     public EmbeddedSIMDeviceStateValue getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the stateDetails property value. String description of the provisioning state.
@@ -108,7 +124,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStateDetails() {
-        return this._stateDetails;
+        return this.stateDetails;
     }
     /**
      * Gets the universalIntegratedCircuitCardIdentifier property value. The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
@@ -116,7 +132,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUniversalIntegratedCircuitCardIdentifier() {
-        return this._universalIntegratedCircuitCardIdentifier;
+        return this.universalIntegratedCircuitCardIdentifier;
     }
     /**
      * Gets the userName property value. Username which the subscription was provisioned to e.g. joe@contoso.com
@@ -124,13 +140,14 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserName() {
-        return this._userName;
+        return this.userName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,63 +165,71 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the deviceName property value. Device name to which the subscription was provisioned e.g. DESKTOP-JOE
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the lastSyncDateTime property value. The time the embedded SIM device last checked in. Updated service side.
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSyncDateTime = value;
+        this.lastSyncDateTime = value;
     }
     /**
      * Sets the modifiedDateTime property value. The time the embedded SIM device status was last modified. Updated service side.
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._modifiedDateTime = value;
+        this.modifiedDateTime = value;
     }
     /**
      * Sets the state property value. Describes the various states for an embedded SIM activation code.
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final EmbeddedSIMDeviceStateValue value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the stateDetails property value. String description of the provisioning state.
      * @param value Value to set for the stateDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStateDetails(@javax.annotation.Nullable final String value) {
-        this._stateDetails = value;
+        this.stateDetails = value;
     }
     /**
      * Sets the universalIntegratedCircuitCardIdentifier property value. The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
      * @param value Value to set for the universalIntegratedCircuitCardIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniversalIntegratedCircuitCardIdentifier(@javax.annotation.Nullable final String value) {
-        this._universalIntegratedCircuitCardIdentifier = value;
+        this.universalIntegratedCircuitCardIdentifier = value;
     }
     /**
      * Sets the userName property value. Username which the subscription was provisioned to e.g. joe@contoso.com
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
-        this._userName = value;
+        this.userName = value;
     }
 }

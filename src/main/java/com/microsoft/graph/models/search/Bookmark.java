@@ -1,43 +1,65 @@
 package com.microsoft.graph.models.search;
 
+import com.microsoft.graph.models.DevicePlatformType;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Bookmark extends SearchAnswer implements Parsable {
-    /** Timestamp of when the bookmark will stop to appear as a search result. Set as null for always available. */
-    private OffsetDateTime _availabilityEndDateTime;
-    /** Timestamp of when the bookmark will start to appear as a search result. Set as null for always available. */
-    private OffsetDateTime _availabilityStartDateTime;
-    /** Categories commonly used to describe this bookmark. For example, IT and HR. */
-    private java.util.List<String> _categories;
-    /** List of security groups able to view this bookmark. */
-    private java.util.List<String> _groupIds;
-    /** True if this bookmark was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only. */
-    private Boolean _isSuggested;
-    /** Keywords that trigger this bookmark to appear in search results. */
-    private AnswerKeyword _keywords;
-    /** A list of language names that are geographically specific and that this bookmark can be viewed in. Each language tag value follows the pattern {language}-{region}. As an example, en-us is English as used in the United States. See supported language tags for the list of possible values. */
-    private java.util.List<String> _languageTags;
-    /** List of devices and operating systems able to view this bookmark. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP. */
-    private java.util.List<String> _platforms;
-    /** List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks, such as to enter vacation time or to report expenses on the search results page. */
-    private java.util.List<String> _powerAppIds;
-    /** The state property */
-    private AnswerState _state;
-    /** Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations. */
-    private java.util.List<AnswerVariant> _targetedVariations;
+    /**
+     * Timestamp of when the bookmark will stop to appear as a search result. Set as null for always available.
+     */
+    private OffsetDateTime availabilityEndDateTime;
+    /**
+     * Timestamp of when the bookmark will start to appear as a search result. Set as null for always available.
+     */
+    private OffsetDateTime availabilityStartDateTime;
+    /**
+     * Categories commonly used to describe this bookmark. For example, IT and HR.
+     */
+    private java.util.List<String> categories;
+    /**
+     * List of security groups able to view this bookmark.
+     */
+    private java.util.List<String> groupIds;
+    /**
+     * True if this bookmark was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
+     */
+    private Boolean isSuggested;
+    /**
+     * Keywords that trigger this bookmark to appear in search results.
+     */
+    private AnswerKeyword keywords;
+    /**
+     * A list of language names that are geographically specific and that this bookmark can be viewed in. Each language tag value follows the pattern {language}-{region}. As an example, en-us is English as used in the United States. See supported language tags for the list of possible values.
+     */
+    private java.util.List<String> languageTags;
+    /**
+     * List of devices and operating systems able to view this bookmark. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP.
+     */
+    private java.util.List<DevicePlatformType> platforms;
+    /**
+     * List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks, such as to enter vacation time or to report expenses on the search results page.
+     */
+    private java.util.List<String> powerAppIds;
+    /**
+     * The state property
+     */
+    private AnswerState state;
+    /**
+     * Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
+     */
+    private java.util.List<AnswerVariant> targetedVariations;
     /**
      * Instantiates a new Bookmark and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Bookmark() {
         super();
-        this.setOdataType("#microsoft.graph.search.bookmark");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,7 +77,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getAvailabilityEndDateTime() {
-        return this._availabilityEndDateTime;
+        return this.availabilityEndDateTime;
     }
     /**
      * Gets the availabilityStartDateTime property value. Timestamp of when the bookmark will start to appear as a search result. Set as null for always available.
@@ -63,7 +85,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getAvailabilityStartDateTime() {
-        return this._availabilityStartDateTime;
+        return this.availabilityStartDateTime;
     }
     /**
      * Gets the categories property value. Categories commonly used to describe this bookmark. For example, IT and HR.
@@ -71,28 +93,27 @@ public class Bookmark extends SearchAnswer implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getCategories() {
-        return this._categories;
+        return this.categories;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Bookmark currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("availabilityEndDateTime", (n) -> { currentObject.setAvailabilityEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("availabilityStartDateTime", (n) -> { currentObject.setAvailabilityStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("groupIds", (n) -> { currentObject.setGroupIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isSuggested", (n) -> { currentObject.setIsSuggested(n.getBooleanValue()); });
-            this.put("keywords", (n) -> { currentObject.setKeywords(n.getObjectValue(AnswerKeyword::createFromDiscriminatorValue)); });
-            this.put("languageTags", (n) -> { currentObject.setLanguageTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("platforms", (n) -> { currentObject.setPlatforms(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("powerAppIds", (n) -> { currentObject.setPowerAppIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AnswerState.class)); });
-            this.put("targetedVariations", (n) -> { currentObject.setTargetedVariations(n.getCollectionOfObjectValues(AnswerVariant::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("availabilityEndDateTime", (n) -> { this.setAvailabilityEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("availabilityStartDateTime", (n) -> { this.setAvailabilityStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("groupIds", (n) -> { this.setGroupIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isSuggested", (n) -> { this.setIsSuggested(n.getBooleanValue()); });
+        deserializerMap.put("keywords", (n) -> { this.setKeywords(n.getObjectValue(AnswerKeyword::createFromDiscriminatorValue)); });
+        deserializerMap.put("languageTags", (n) -> { this.setLanguageTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("platforms", (n) -> { this.setPlatforms(n.getCollectionOfEnumValues(DevicePlatformType.class)); });
+        deserializerMap.put("powerAppIds", (n) -> { this.setPowerAppIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AnswerState.class)); });
+        deserializerMap.put("targetedVariations", (n) -> { this.setTargetedVariations(n.getCollectionOfObjectValues(AnswerVariant::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the groupIds property value. List of security groups able to view this bookmark.
@@ -100,7 +121,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getGroupIds() {
-        return this._groupIds;
+        return this.groupIds;
     }
     /**
      * Gets the isSuggested property value. True if this bookmark was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
@@ -108,7 +129,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsSuggested() {
-        return this._isSuggested;
+        return this.isSuggested;
     }
     /**
      * Gets the keywords property value. Keywords that trigger this bookmark to appear in search results.
@@ -116,7 +137,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      */
     @javax.annotation.Nullable
     public AnswerKeyword getKeywords() {
-        return this._keywords;
+        return this.keywords;
     }
     /**
      * Gets the languageTags property value. A list of language names that are geographically specific and that this bookmark can be viewed in. Each language tag value follows the pattern {language}-{region}. As an example, en-us is English as used in the United States. See supported language tags for the list of possible values.
@@ -124,15 +145,15 @@ public class Bookmark extends SearchAnswer implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getLanguageTags() {
-        return this._languageTags;
+        return this.languageTags;
     }
     /**
      * Gets the platforms property value. List of devices and operating systems able to view this bookmark. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP.
-     * @return a string
+     * @return a DevicePlatformType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getPlatforms() {
-        return this._platforms;
+    public java.util.List<DevicePlatformType> getPlatforms() {
+        return this.platforms;
     }
     /**
      * Gets the powerAppIds property value. List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks, such as to enter vacation time or to report expenses on the search results page.
@@ -140,15 +161,15 @@ public class Bookmark extends SearchAnswer implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getPowerAppIds() {
-        return this._powerAppIds;
+        return this.powerAppIds;
     }
     /**
      * Gets the state property value. The state property
-     * @return a answerState
+     * @return a AnswerState
      */
     @javax.annotation.Nullable
     public AnswerState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the targetedVariations property value. Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
@@ -156,13 +177,14 @@ public class Bookmark extends SearchAnswer implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AnswerVariant> getTargetedVariations() {
-        return this._targetedVariations;
+        return this.targetedVariations;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -173,7 +195,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         writer.writeBooleanValue("isSuggested", this.getIsSuggested());
         writer.writeObjectValue("keywords", this.getKeywords());
         writer.writeCollectionOfPrimitiveValues("languageTags", this.getLanguageTags());
-        writer.writeCollectionOfPrimitiveValues("platforms", this.getPlatforms());
+        writer.writeCollectionOfEnumValues("platforms", this.getPlatforms());
         writer.writeCollectionOfPrimitiveValues("powerAppIds", this.getPowerAppIds());
         writer.writeEnumValue("state", this.getState());
         writer.writeCollectionOfObjectValues("targetedVariations", this.getTargetedVariations());
@@ -183,87 +205,98 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the availabilityEndDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailabilityEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._availabilityEndDateTime = value;
+        this.availabilityEndDateTime = value;
     }
     /**
      * Sets the availabilityStartDateTime property value. Timestamp of when the bookmark will start to appear as a search result. Set as null for always available.
      * @param value Value to set for the availabilityStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailabilityStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._availabilityStartDateTime = value;
+        this.availabilityStartDateTime = value;
     }
     /**
      * Sets the categories property value. Categories commonly used to describe this bookmark. For example, IT and HR.
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._categories = value;
+        this.categories = value;
     }
     /**
      * Sets the groupIds property value. List of security groups able to view this bookmark.
      * @param value Value to set for the groupIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._groupIds = value;
+        this.groupIds = value;
     }
     /**
      * Sets the isSuggested property value. True if this bookmark was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
      * @param value Value to set for the isSuggested property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSuggested(@javax.annotation.Nullable final Boolean value) {
-        this._isSuggested = value;
+        this.isSuggested = value;
     }
     /**
      * Sets the keywords property value. Keywords that trigger this bookmark to appear in search results.
      * @param value Value to set for the keywords property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeywords(@javax.annotation.Nullable final AnswerKeyword value) {
-        this._keywords = value;
+        this.keywords = value;
     }
     /**
      * Sets the languageTags property value. A list of language names that are geographically specific and that this bookmark can be viewed in. Each language tag value follows the pattern {language}-{region}. As an example, en-us is English as used in the United States. See supported language tags for the list of possible values.
      * @param value Value to set for the languageTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageTags(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._languageTags = value;
+        this.languageTags = value;
     }
     /**
      * Sets the platforms property value. List of devices and operating systems able to view this bookmark. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP.
      * @param value Value to set for the platforms property.
      * @return a void
      */
-    public void setPlatforms(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._platforms = value;
+    @javax.annotation.Nonnull
+    public void setPlatforms(@javax.annotation.Nullable final java.util.List<DevicePlatformType> value) {
+        this.platforms = value;
     }
     /**
      * Sets the powerAppIds property value. List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks, such as to enter vacation time or to report expenses on the search results page.
      * @param value Value to set for the powerAppIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerAppIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._powerAppIds = value;
+        this.powerAppIds = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AnswerState value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the targetedVariations property value. Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
      * @param value Value to set for the targetedVariations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedVariations(@javax.annotation.Nullable final java.util.List<AnswerVariant> value) {
-        this._targetedVariations = value;
+        this.targetedVariations = value;
     }
 }

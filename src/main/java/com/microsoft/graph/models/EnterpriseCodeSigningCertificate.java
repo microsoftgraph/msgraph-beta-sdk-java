@@ -4,39 +4,54 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EnterpriseCodeSigningCertificate extends Entity implements Parsable {
-    /** The Windows Enterprise Code-Signing Certificate in the raw data format. */
-    private byte[] _content;
-    /** The Cert Expiration Date. */
-    private OffsetDateTime _expirationDateTime;
-    /** The Issuer value for the cert. */
-    private String _issuer;
-    /** The Issuer Name for the cert. */
-    private String _issuerName;
-    /** The status property */
-    private CertificateStatus _status;
-    /** The Subject Value for the cert. */
-    private String _subject;
-    /** The Subject Name for the cert. */
-    private String _subjectName;
-    /** The date time of CodeSigning Cert when it is uploaded. */
-    private OffsetDateTime _uploadDateTime;
     /**
-     * Instantiates a new EnterpriseCodeSigningCertificate and sets the default values.
+     * The Windows Enterprise Code-Signing Certificate in the raw data format. Set to null once certificate has been uploaded and other properties have been populated.
+     */
+    private byte[] content;
+    /**
+     * The cert expiration date and time (using ISO 8601 format, in UTC time). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
+     */
+    private OffsetDateTime expirationDateTime;
+    /**
+     * The issuer value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
+     */
+    private String issuer;
+    /**
+     * The issuer name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
+     */
+    private String issuerName;
+    /**
+     * The status property
+     */
+    private CertificateStatus status;
+    /**
+     * The subject value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
+     */
+    private String subject;
+    /**
+     * The subject name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
+     */
+    private String subjectName;
+    /**
+     * The date time of CodeSigning Cert when it is uploaded (using ISO 8601 format, in UTC time). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
+     */
+    private OffsetDateTime uploadDateTime;
+    /**
+     * Instantiates a new enterpriseCodeSigningCertificate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EnterpriseCodeSigningCertificate() {
         super();
-        this.setOdataType("#microsoft.graph.enterpriseCodeSigningCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EnterpriseCodeSigningCertificate
+     * @return a enterpriseCodeSigningCertificate
      */
     @javax.annotation.Nonnull
     public static EnterpriseCodeSigningCertificate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -44,92 +59,92 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
         return new EnterpriseCodeSigningCertificate();
     }
     /**
-     * Gets the content property value. The Windows Enterprise Code-Signing Certificate in the raw data format.
-     * @return a binary
+     * Gets the content property value. The Windows Enterprise Code-Signing Certificate in the raw data format. Set to null once certificate has been uploaded and other properties have been populated.
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getContent() {
-        return this._content;
+        return this.content;
     }
     /**
-     * Gets the expirationDateTime property value. The Cert Expiration Date.
+     * Gets the expirationDateTime property value. The cert expiration date and time (using ISO 8601 format, in UTC time). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EnterpriseCodeSigningCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("issuer", (n) -> { currentObject.setIssuer(n.getStringValue()); });
-            this.put("issuerName", (n) -> { currentObject.setIssuerName(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CertificateStatus.class)); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-            this.put("subjectName", (n) -> { currentObject.setSubjectName(n.getStringValue()); });
-            this.put("uploadDateTime", (n) -> { currentObject.setUploadDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getStringValue()); });
+        deserializerMap.put("issuerName", (n) -> { this.setIssuerName(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CertificateStatus.class)); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        deserializerMap.put("subjectName", (n) -> { this.setSubjectName(n.getStringValue()); });
+        deserializerMap.put("uploadDateTime", (n) -> { this.setUploadDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the issuer property value. The Issuer value for the cert.
+     * Gets the issuer property value. The issuer value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getIssuer() {
-        return this._issuer;
+        return this.issuer;
     }
     /**
-     * Gets the issuerName property value. The Issuer Name for the cert.
+     * Gets the issuerName property value. The issuer name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getIssuerName() {
-        return this._issuerName;
+        return this.issuerName;
     }
     /**
      * Gets the status property value. The status property
-     * @return a certificateStatus
+     * @return a CertificateStatus
      */
     @javax.annotation.Nullable
     public CertificateStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
-     * Gets the subject property value. The Subject Value for the cert.
+     * Gets the subject property value. The subject value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getSubject() {
-        return this._subject;
+        return this.subject;
     }
     /**
-     * Gets the subjectName property value. The Subject Name for the cert.
+     * Gets the subjectName property value. The subject name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getSubjectName() {
-        return this._subjectName;
+        return this.subjectName;
     }
     /**
-     * Gets the uploadDateTime property value. The date time of CodeSigning Cert when it is uploaded.
+     * Gets the uploadDateTime property value. The date time of CodeSigning Cert when it is uploaded (using ISO 8601 format, in UTC time). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getUploadDateTime() {
-        return this._uploadDateTime;
+        return this.uploadDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -143,67 +158,75 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
         writer.writeOffsetDateTimeValue("uploadDateTime", this.getUploadDateTime());
     }
     /**
-     * Sets the content property value. The Windows Enterprise Code-Signing Certificate in the raw data format.
+     * Sets the content property value. The Windows Enterprise Code-Signing Certificate in the raw data format. Set to null once certificate has been uploaded and other properties have been populated.
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
-        this._content = value;
+        this.content = value;
     }
     /**
-     * Sets the expirationDateTime property value. The Cert Expiration Date.
+     * Sets the expirationDateTime property value. The cert expiration date and time (using ISO 8601 format, in UTC time). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
-     * Sets the issuer property value. The Issuer value for the cert.
+     * Sets the issuer property value. The issuer value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @param value Value to set for the issuer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuer(@javax.annotation.Nullable final String value) {
-        this._issuer = value;
+        this.issuer = value;
     }
     /**
-     * Sets the issuerName property value. The Issuer Name for the cert.
+     * Sets the issuerName property value. The issuer name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @param value Value to set for the issuerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuerName(@javax.annotation.Nullable final String value) {
-        this._issuerName = value;
+        this.issuerName = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CertificateStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
-     * Sets the subject property value. The Subject Value for the cert.
+     * Sets the subject property value. The subject value for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
-        this._subject = value;
+        this.subject = value;
     }
     /**
-     * Sets the subjectName property value. The Subject Name for the cert.
+     * Sets the subjectName property value. The subject name for the cert. This might contain information such as country (C), state or province (S), locality (L), common name of the cert (CN), organization (O), and organizational unit (OU). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @param value Value to set for the subjectName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectName(@javax.annotation.Nullable final String value) {
-        this._subjectName = value;
+        this.subjectName = value;
     }
     /**
-     * Sets the uploadDateTime property value. The date time of CodeSigning Cert when it is uploaded.
+     * Sets the uploadDateTime property value. The date time of CodeSigning Cert when it is uploaded (using ISO 8601 format, in UTC time). Uploading a valid cert file through the Intune admin console will automatically populate this value in the HTTP response. Supports: $filter, $select, $top, $OrderBy, $skip. $Search is not supported.
      * @param value Value to set for the uploadDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUploadDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._uploadDateTime = value;
+        this.uploadDateTime = value;
     }
 }

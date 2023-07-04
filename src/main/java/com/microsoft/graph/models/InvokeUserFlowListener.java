@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InvokeUserFlowListener extends AuthenticationListener implements Parsable {
-    /** The user flow that is invoked when this action executes. */
-    private B2xIdentityUserFlow _userFlow;
+    /**
+     * The user flow that is invoked when this action executes.
+     */
+    private B2xIdentityUserFlow userFlow;
     /**
      * Instantiates a new InvokeUserFlowListener and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InvokeUserFlowListener() {
         super();
         this.setOdataType("#microsoft.graph.invokeUserFlowListener");
@@ -30,14 +32,13 @@ public class InvokeUserFlowListener extends AuthenticationListener implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InvokeUserFlowListener currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("userFlow", (n) -> { currentObject.setUserFlow(n.getObjectValue(B2xIdentityUserFlow::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userFlow", (n) -> { this.setUserFlow(n.getObjectValue(B2xIdentityUserFlow::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the userFlow property value. The user flow that is invoked when this action executes.
@@ -45,13 +46,14 @@ public class InvokeUserFlowListener extends AuthenticationListener implements Pa
      */
     @javax.annotation.Nullable
     public B2xIdentityUserFlow getUserFlow() {
-        return this._userFlow;
+        return this.userFlow;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class InvokeUserFlowListener extends AuthenticationListener implements Pa
      * @param value Value to set for the userFlow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserFlow(@javax.annotation.Nullable final B2xIdentityUserFlow value) {
-        this._userFlow = value;
+        this.userFlow = value;
     }
 }

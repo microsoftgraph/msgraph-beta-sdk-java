@@ -1,22 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Windows81SCEPCertificateProfile;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows81CertificateProfileBase extends WindowsCertificateProfileBase implements Parsable {
-    /** Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements. */
-    private java.util.List<CustomSubjectAlternativeName> _customSubjectAlternativeNames;
-    /** Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements. */
-    private java.util.List<ExtendedKeyUsage> _extendedKeyUsages;
+    /**
+     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
+     */
+    private java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
+    /**
+     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
+     */
+    private java.util.List<ExtendedKeyUsage> extendedKeyUsages;
     /**
      * Instantiates a new Windows81CertificateProfileBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows81CertificateProfileBase() {
         super();
         this.setOdataType("#microsoft.graph.windows81CertificateProfileBase");
@@ -44,33 +47,33 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
      */
     @javax.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
-        return this._customSubjectAlternativeNames;
+        return this.customSubjectAlternativeNames;
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     * @return a extendedKeyUsage
+     * @return a ExtendedKeyUsage
      */
     @javax.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
-        return this._extendedKeyUsages;
+        return this.extendedKeyUsages;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows81CertificateProfileBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("customSubjectAlternativeNames", (n) -> { currentObject.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
-            this.put("extendedKeyUsages", (n) -> { currentObject.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
+        deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -82,15 +85,17 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
      * @param value Value to set for the customSubjectAlternativeNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSubjectAlternativeNames(@javax.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
-        this._customSubjectAlternativeNames = value;
+        this.customSubjectAlternativeNames = value;
     }
     /**
      * Sets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the extendedKeyUsages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtendedKeyUsages(@javax.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
-        this._extendedKeyUsages = value;
+        this.extendedKeyUsages = value;
     }
 }

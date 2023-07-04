@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration extends DeviceConfiguration implements Parsable {
-    /** Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue. */
-    private AndroidDeviceOwnerCertificateAccessType _certificateAccessType;
-    /** Tenant level settings for the Derived Credentials to be used for authentication. */
-    private DeviceManagementDerivedCredentialSettings _derivedCredentialSettings;
-    /** Certificate access information. This collection can contain a maximum of 50 elements. */
-    private java.util.List<AndroidDeviceOwnerSilentCertificateAccess> _silentCertificateAccessDetails;
+    /**
+     * Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
+     */
+    private AndroidDeviceOwnerCertificateAccessType certificateAccessType;
+    /**
+     * Tenant level settings for the Derived Credentials to be used for authentication.
+     */
+    private DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
+    /**
+     * Certificate access information. This collection can contain a maximum of 50 elements.
+     */
+    private java.util.List<AndroidDeviceOwnerSilentCertificateAccess> silentCertificateAccessDetails;
     /**
      * Instantiates a new AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerDerivedCredentialAuthenticationConfiguration");
@@ -38,7 +44,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
      */
     @javax.annotation.Nullable
     public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
-        return this._certificateAccessType;
+        return this.certificateAccessType;
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
@@ -46,20 +52,19 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
      */
     @javax.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
-        return this._derivedCredentialSettings;
+        return this.derivedCredentialSettings;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificateAccessType", (n) -> { currentObject.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
-            this.put("derivedCredentialSettings", (n) -> { currentObject.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
-            this.put("silentCertificateAccessDetails", (n) -> { currentObject.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
+        deserializerMap.put("derivedCredentialSettings", (n) -> { this.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("silentCertificateAccessDetails", (n) -> { this.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
@@ -67,13 +72,14 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
      */
     @javax.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> getSilentCertificateAccessDetails() {
-        return this._silentCertificateAccessDetails;
+        return this.silentCertificateAccessDetails;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
      * @param value Value to set for the certificateAccessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateAccessType(@javax.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
-        this._certificateAccessType = value;
+        this.certificateAccessType = value;
     }
     /**
      * Sets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
-        this._derivedCredentialSettings = value;
+        this.derivedCredentialSettings = value;
     }
     /**
      * Sets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
      * @param value Value to set for the silentCertificateAccessDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSilentCertificateAccessDetails(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerSilentCertificateAccess> value) {
-        this._silentCertificateAccessDetails = value;
+        this.silentCertificateAccessDetails = value;
     }
 }

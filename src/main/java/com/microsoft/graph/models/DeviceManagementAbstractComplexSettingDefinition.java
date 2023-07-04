@@ -3,20 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementAbstractComplexSettingDefinition extends DeviceManagementSettingDefinition implements Parsable {
-    /** List of definition IDs for all possible implementations of this abstract complex setting */
-    private java.util.List<String> _implementations;
+    /**
+     * List of definition IDs for all possible implementations of this abstract complex setting
+     */
+    private java.util.List<String> implementations;
     /**
      * Instantiates a new DeviceManagementAbstractComplexSettingDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementAbstractComplexSettingDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementAbstractComplexSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +31,13 @@ public class DeviceManagementAbstractComplexSettingDefinition extends DeviceMana
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementAbstractComplexSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("implementations", (n) -> { currentObject.setImplementations(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("implementations", (n) -> { this.setImplementations(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the implementations property value. List of definition IDs for all possible implementations of this abstract complex setting
@@ -45,13 +45,14 @@ public class DeviceManagementAbstractComplexSettingDefinition extends DeviceMana
      */
     @javax.annotation.Nullable
     public java.util.List<String> getImplementations() {
-        return this._implementations;
+        return this.implementations;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +63,8 @@ public class DeviceManagementAbstractComplexSettingDefinition extends DeviceMana
      * @param value Value to set for the implementations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImplementations(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._implementations = value;
+        this.implementations = value;
     }
 }

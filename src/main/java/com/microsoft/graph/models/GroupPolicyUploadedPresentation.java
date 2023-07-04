@@ -1,18 +1,8 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.GroupPolicyPresentationCheckBox;
-import com.microsoft.graph.models.GroupPolicyPresentationComboBox;
-import com.microsoft.graph.models.GroupPolicyPresentationDecimalTextBox;
-import com.microsoft.graph.models.GroupPolicyPresentationDropdownList;
-import com.microsoft.graph.models.GroupPolicyPresentationListBox;
-import com.microsoft.graph.models.GroupPolicyPresentationLongDecimalTextBox;
-import com.microsoft.graph.models.GroupPolicyPresentationMultiTextBox;
-import com.microsoft.graph.models.GroupPolicyPresentationText;
-import com.microsoft.graph.models.GroupPolicyPresentationTextBox;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -21,6 +11,7 @@ public class GroupPolicyUploadedPresentation extends GroupPolicyPresentation imp
      * Instantiates a new GroupPolicyUploadedPresentation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyUploadedPresentation() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyUploadedPresentation");
@@ -52,19 +43,19 @@ public class GroupPolicyUploadedPresentation extends GroupPolicyPresentation imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyUploadedPresentation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

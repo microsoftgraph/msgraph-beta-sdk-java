@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Contains properties for detection operator.
+ */
 public enum Win32LobAppDetectionOperator implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

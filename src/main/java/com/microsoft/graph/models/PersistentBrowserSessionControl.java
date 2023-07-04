@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PersistentBrowserSessionControl extends ConditionalAccessSessionControl implements Parsable {
-    /** Possible values are: always, never. */
-    private PersistentBrowserSessionMode _mode;
+    /**
+     * Possible values are: always, never.
+     */
+    private PersistentBrowserSessionMode mode;
     /**
      * Instantiates a new PersistentBrowserSessionControl and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PersistentBrowserSessionControl() {
         super();
         this.setOdataType("#microsoft.graph.persistentBrowserSessionControl");
@@ -30,14 +32,13 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PersistentBrowserSessionControl currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("mode", (n) -> { currentObject.setMode(n.getEnumValue(PersistentBrowserSessionMode.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(PersistentBrowserSessionMode.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the mode property value. Possible values are: always, never.
@@ -45,13 +46,14 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
      */
     @javax.annotation.Nullable
     public PersistentBrowserSessionMode getMode() {
-        return this._mode;
+        return this.mode;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
      * @param value Value to set for the mode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMode(@javax.annotation.Nullable final PersistentBrowserSessionMode value) {
-        this._mode = value;
+        this.mode = value;
     }
 }

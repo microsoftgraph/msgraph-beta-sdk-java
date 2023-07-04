@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Group Policy Configuration Ingestion Type
+ */
 public enum GroupPolicyConfigurationIngestionType implements ValuedEnum {
     /** Unknown policy configuration ingestion type */
     Unknown("unknown"),

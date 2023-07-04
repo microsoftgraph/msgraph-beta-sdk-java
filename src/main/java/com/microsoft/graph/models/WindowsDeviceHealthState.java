@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Computer endpoint protection state
+ */
 public enum WindowsDeviceHealthState implements ValuedEnum {
     /** Computer is clean and no action is required */
     Clean("clean"),

@@ -1,26 +1,30 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.IosVppEBookAssignment;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties used to assign a eBook to a group. */
+/**
+ * Contains properties used to assign a eBook to a group.
+ */
 public class ManagedEBookAssignment extends Entity implements Parsable {
-    /** Possible values for the install intent chosen by the admin. */
-    private InstallIntent _installIntent;
-    /** The assignment target for eBook. */
-    private DeviceAndAppManagementAssignmentTarget _target;
+    /**
+     * Possible values for the install intent chosen by the admin.
+     */
+    private InstallIntent installIntent;
+    /**
+     * The assignment target for eBook.
+     */
+    private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new managedEBookAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedEBookAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.managedEBookAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,23 +45,22 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedEBookAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("installIntent", (n) -> { currentObject.setInstallIntent(n.getEnumValue(InstallIntent.class)); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("installIntent", (n) -> { this.setInstallIntent(n.getEnumValue(InstallIntent.class)); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the installIntent property value. Possible values for the install intent chosen by the admin.
-     * @return a installIntent
+     * @return a InstallIntent
      */
     @javax.annotation.Nullable
     public InstallIntent getInstallIntent() {
-        return this._installIntent;
+        return this.installIntent;
     }
     /**
      * Gets the target property value. The assignment target for eBook.
@@ -65,13 +68,14 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this._target;
+        return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -83,15 +87,17 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * @param value Value to set for the installIntent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallIntent(@javax.annotation.Nullable final InstallIntent value) {
-        this._installIntent = value;
+        this.installIntent = value;
     }
     /**
      * Sets the target property value. The assignment target for eBook.
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this._target = value;
+        this.target = value;
     }
 }

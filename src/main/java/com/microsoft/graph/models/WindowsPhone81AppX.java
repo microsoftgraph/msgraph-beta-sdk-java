@@ -1,34 +1,49 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.WindowsPhone81AppXBundle;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
-    /** Contains properties for Windows architecture. */
-    private WindowsArchitecture _applicableArchitectures;
-    /** The Identity Name. */
-    private String _identityName;
-    /** The Identity Publisher Hash. */
-    private String _identityPublisherHash;
-    /** The Identity Resource Identifier. */
-    private String _identityResourceIdentifier;
-    /** The identity version. */
-    private String _identityVersion;
-    /** The minimum operating system required for a Windows mobile app. */
-    private WindowsMinimumOperatingSystem _minimumSupportedOperatingSystem;
-    /** The Phone Product Identifier. */
-    private String _phoneProductIdentifier;
-    /** The Phone Publisher Id. */
-    private String _phonePublisherId;
+    /**
+     * Contains properties for Windows architecture.
+     */
+    private WindowsArchitecture applicableArchitectures;
+    /**
+     * The Identity Name.
+     */
+    private String identityName;
+    /**
+     * The Identity Publisher Hash.
+     */
+    private String identityPublisherHash;
+    /**
+     * The Identity Resource Identifier.
+     */
+    private String identityResourceIdentifier;
+    /**
+     * The identity version.
+     */
+    private String identityVersion;
+    /**
+     * The minimum operating system required for a Windows mobile app.
+     */
+    private WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
+    /**
+     * The Phone Product Identifier.
+     */
+    private String phoneProductIdentifier;
+    /**
+     * The Phone Publisher Id.
+     */
+    private String phonePublisherId;
     /**
      * Instantiates a new WindowsPhone81AppX and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPhone81AppX() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81AppX");
@@ -52,29 +67,28 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
-     * @return a windowsArchitecture
+     * @return a WindowsArchitecture
      */
     @javax.annotation.Nullable
     public WindowsArchitecture getApplicableArchitectures() {
-        return this._applicableArchitectures;
+        return this.applicableArchitectures;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsPhone81AppX currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicableArchitectures", (n) -> { currentObject.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
-            this.put("identityName", (n) -> { currentObject.setIdentityName(n.getStringValue()); });
-            this.put("identityPublisherHash", (n) -> { currentObject.setIdentityPublisherHash(n.getStringValue()); });
-            this.put("identityResourceIdentifier", (n) -> { currentObject.setIdentityResourceIdentifier(n.getStringValue()); });
-            this.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(WindowsMinimumOperatingSystem::createFromDiscriminatorValue)); });
-            this.put("phoneProductIdentifier", (n) -> { currentObject.setPhoneProductIdentifier(n.getStringValue()); });
-            this.put("phonePublisherId", (n) -> { currentObject.setPhonePublisherId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
+        deserializerMap.put("identityName", (n) -> { this.setIdentityName(n.getStringValue()); });
+        deserializerMap.put("identityPublisherHash", (n) -> { this.setIdentityPublisherHash(n.getStringValue()); });
+        deserializerMap.put("identityResourceIdentifier", (n) -> { this.setIdentityResourceIdentifier(n.getStringValue()); });
+        deserializerMap.put("identityVersion", (n) -> { this.setIdentityVersion(n.getStringValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(WindowsMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("phoneProductIdentifier", (n) -> { this.setPhoneProductIdentifier(n.getStringValue()); });
+        deserializerMap.put("phonePublisherId", (n) -> { this.setPhonePublisherId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identityName property value. The Identity Name.
@@ -82,7 +96,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIdentityName() {
-        return this._identityName;
+        return this.identityName;
     }
     /**
      * Gets the identityPublisherHash property value. The Identity Publisher Hash.
@@ -90,7 +104,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIdentityPublisherHash() {
-        return this._identityPublisherHash;
+        return this.identityPublisherHash;
     }
     /**
      * Gets the identityResourceIdentifier property value. The Identity Resource Identifier.
@@ -98,7 +112,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIdentityResourceIdentifier() {
-        return this._identityResourceIdentifier;
+        return this.identityResourceIdentifier;
     }
     /**
      * Gets the identityVersion property value. The identity version.
@@ -106,15 +120,15 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIdentityVersion() {
-        return this._identityVersion;
+        return this.identityVersion;
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
-     * @return a windowsMinimumOperatingSystem
+     * @return a WindowsMinimumOperatingSystem
      */
     @javax.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this._minimumSupportedOperatingSystem;
+        return this.minimumSupportedOperatingSystem;
     }
     /**
      * Gets the phoneProductIdentifier property value. The Phone Product Identifier.
@@ -122,7 +136,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPhoneProductIdentifier() {
-        return this._phoneProductIdentifier;
+        return this.phoneProductIdentifier;
     }
     /**
      * Gets the phonePublisherId property value. The Phone Publisher Id.
@@ -130,13 +144,14 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPhonePublisherId() {
-        return this._phonePublisherId;
+        return this.phonePublisherId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -154,63 +169,71 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
      * @param value Value to set for the applicableArchitectures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicableArchitectures(@javax.annotation.Nullable final WindowsArchitecture value) {
-        this._applicableArchitectures = value;
+        this.applicableArchitectures = value;
     }
     /**
      * Sets the identityName property value. The Identity Name.
      * @param value Value to set for the identityName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityName(@javax.annotation.Nullable final String value) {
-        this._identityName = value;
+        this.identityName = value;
     }
     /**
      * Sets the identityPublisherHash property value. The Identity Publisher Hash.
      * @param value Value to set for the identityPublisherHash property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityPublisherHash(@javax.annotation.Nullable final String value) {
-        this._identityPublisherHash = value;
+        this.identityPublisherHash = value;
     }
     /**
      * Sets the identityResourceIdentifier property value. The Identity Resource Identifier.
      * @param value Value to set for the identityResourceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityResourceIdentifier(@javax.annotation.Nullable final String value) {
-        this._identityResourceIdentifier = value;
+        this.identityResourceIdentifier = value;
     }
     /**
      * Sets the identityVersion property value. The identity version.
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityVersion(@javax.annotation.Nullable final String value) {
-        this._identityVersion = value;
+        this.identityVersion = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final WindowsMinimumOperatingSystem value) {
-        this._minimumSupportedOperatingSystem = value;
+        this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the phoneProductIdentifier property value. The Phone Product Identifier.
      * @param value Value to set for the phoneProductIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneProductIdentifier(@javax.annotation.Nullable final String value) {
-        this._phoneProductIdentifier = value;
+        this.phoneProductIdentifier = value;
     }
     /**
      * Sets the phonePublisherId property value. The Phone Publisher Id.
      * @param value Value to set for the phonePublisherId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhonePublisherId(@javax.annotation.Nullable final String value) {
-        this._phonePublisherId = value;
+        this.phonePublisherId = value;
     }
 }

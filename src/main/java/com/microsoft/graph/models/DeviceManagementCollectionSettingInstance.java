@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementCollectionSettingInstance extends DeviceManagementSettingInstance implements Parsable {
-    /** The collection of values */
-    private java.util.List<DeviceManagementSettingInstance> _value;
+    /**
+     * The collection of values
+     */
+    private java.util.List<DeviceManagementSettingInstance> value;
     /**
      * Instantiates a new DeviceManagementCollectionSettingInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementCollectionSettingInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementCollectionSettingInstance");
@@ -30,14 +32,13 @@ public class DeviceManagementCollectionSettingInstance extends DeviceManagementS
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementCollectionSettingInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The collection of values
@@ -45,13 +46,14 @@ public class DeviceManagementCollectionSettingInstance extends DeviceManagementS
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class DeviceManagementCollectionSettingInstance extends DeviceManagementS
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
-        this._value = value;
+        this.value = value;
     }
 }

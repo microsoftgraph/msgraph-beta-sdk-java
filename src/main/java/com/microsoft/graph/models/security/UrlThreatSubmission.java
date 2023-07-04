@@ -3,17 +3,19 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
-    /** Denotes the webUrl that needs to be submitted. */
-    private String _webUrl;
+    /**
+     * Denotes the webUrl that needs to be submitted.
+     */
+    private String webUrl;
     /**
      * Instantiates a new UrlThreatSubmission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UrlThreatSubmission() {
         super();
         this.setOdataType("#microsoft.graph.security.urlThreatSubmission");
@@ -30,14 +32,13 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UrlThreatSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the webUrl property value. Denotes the webUrl that needs to be submitted.
@@ -45,13 +46,14 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class UrlThreatSubmission extends ThreatSubmission implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

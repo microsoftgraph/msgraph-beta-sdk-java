@@ -4,22 +4,28 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the moveDevicesToOU method. */
+import java.util.UUID;
 public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The deviceIds property */
-    private java.util.List<String> _deviceIds;
-    /** The organizationalUnitPath property */
-    private String _organizationalUnitPath;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The deviceIds property
+     */
+    private java.util.List<UUID> deviceIds;
+    /**
+     * The organizationalUnitPath property
+     */
+    private String organizationalUnitPath;
     /**
      * Instantiates a new moveDevicesToOUPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MoveDevicesToOUPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -39,27 +45,26 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the deviceIds property value. The deviceIds property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getDeviceIds() {
-        return this._deviceIds;
+    public java.util.List<UUID> getDeviceIds() {
+        return this.deviceIds;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MoveDevicesToOUPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("deviceIds", (n) -> { currentObject.setDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("organizationalUnitPath", (n) -> { currentObject.setOrganizationalUnitPath(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("deviceIds", (n) -> { this.setDeviceIds(n.getCollectionOfPrimitiveValues(UUID.class)); });
+        deserializerMap.put("organizationalUnitPath", (n) -> { this.setOrganizationalUnitPath(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the organizationalUnitPath property value. The organizationalUnitPath property
@@ -67,13 +72,14 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public String getOrganizationalUnitPath() {
-        return this._organizationalUnitPath;
+        return this.organizationalUnitPath;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("deviceIds", this.getDeviceIds());
@@ -85,23 +91,26 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the deviceIds property value. The deviceIds property
      * @param value Value to set for the deviceIds property.
      * @return a void
      */
-    public void setDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._deviceIds = value;
+    @javax.annotation.Nonnull
+    public void setDeviceIds(@javax.annotation.Nullable final java.util.List<UUID> value) {
+        this.deviceIds = value;
     }
     /**
      * Sets the organizationalUnitPath property value. The organizationalUnitPath property
      * @param value Value to set for the organizationalUnitPath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizationalUnitPath(@javax.annotation.Nullable final String value) {
-        this._organizationalUnitPath = value;
+        this.organizationalUnitPath = value;
     }
 }

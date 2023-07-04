@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Possible statuses associated with a generated report
+ */
 public enum DeviceManagementReportStatus implements ValuedEnum {
     /** Report generation status is unknown */
     Unknown("unknown"),

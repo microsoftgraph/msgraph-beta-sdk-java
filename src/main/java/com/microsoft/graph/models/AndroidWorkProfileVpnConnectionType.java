@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Android Work Profile VPN connection type.
+ */
 public enum AndroidWorkProfileVpnConnectionType implements ValuedEnum {
     /** Cisco AnyConnect. */
     CiscoAnyConnect("ciscoAnyConnect"),

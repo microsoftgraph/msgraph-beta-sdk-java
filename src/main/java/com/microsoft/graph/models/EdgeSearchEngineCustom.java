@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable {
-    /** Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine. */
-    private String _edgeSearchEngineOpenSearchXmlUrl;
+    /**
+     * Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
+     */
+    private String edgeSearchEngineOpenSearchXmlUrl;
     /**
      * Instantiates a new EdgeSearchEngineCustom and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdgeSearchEngineCustom() {
         super();
         this.setOdataType("#microsoft.graph.edgeSearchEngineCustom");
@@ -34,24 +36,24 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
      */
     @javax.annotation.Nullable
     public String getEdgeSearchEngineOpenSearchXmlUrl() {
-        return this._edgeSearchEngineOpenSearchXmlUrl;
+        return this.edgeSearchEngineOpenSearchXmlUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EdgeSearchEngineCustom currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("edgeSearchEngineOpenSearchXmlUrl", (n) -> { currentObject.setEdgeSearchEngineOpenSearchXmlUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("edgeSearchEngineOpenSearchXmlUrl", (n) -> { this.setEdgeSearchEngineOpenSearchXmlUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
      * @param value Value to set for the edgeSearchEngineOpenSearchXmlUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeSearchEngineOpenSearchXmlUrl(@javax.annotation.Nullable final String value) {
-        this._edgeSearchEngineOpenSearchXmlUrl = value;
+        this.edgeSearchEngineOpenSearchXmlUrl = value;
     }
 }

@@ -5,31 +5,38 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkConnection implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Indicates whether a component/peripheral is connected/disconnected or its state is unknown. The possible values are: unknown, connected, disconnected, unknownFutureValue. */
-    private TeamworkConnectionStatus _connectionStatus;
-    /** Time at which the state was last changed. For example, indicates connected since when the state is connected and disconnected since when the state is disconnected. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** The OdataType property */
-    private String _odataType;
     /**
-     * Instantiates a new teamworkConnection and sets the default values.
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Indicates whether a component/peripheral is connected/disconnected or its state is unknown. The possible values are: unknown, connected, disconnected, unknownFutureValue.
+     */
+    private TeamworkConnectionStatus connectionStatus;
+    /**
+     * Time at which the state was last changed. For example, indicates connected since when the state is connected and disconnected since when the state is disconnected.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Instantiates a new TeamworkConnection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkConnection() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkConnection
+     * @return a TeamworkConnection
      */
     @javax.annotation.Nonnull
     public static TeamworkConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +49,7 @@ public class TeamworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the connectionStatus property value. Indicates whether a component/peripheral is connected/disconnected or its state is unknown. The possible values are: unknown, connected, disconnected, unknownFutureValue.
@@ -50,20 +57,19 @@ public class TeamworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public TeamworkConnectionStatus getConnectionStatus() {
-        return this._connectionStatus;
+        return this.connectionStatus;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkConnection currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("connectionStatus", (n) -> { currentObject.setConnectionStatus(n.getEnumValue(TeamworkConnectionStatus.class)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("connectionStatus", (n) -> { this.setConnectionStatus(n.getEnumValue(TeamworkConnectionStatus.class)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. Time at which the state was last changed. For example, indicates connected since when the state is connected and disconnected since when the state is disconnected.
@@ -71,7 +77,7 @@ public class TeamworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -79,13 +85,14 @@ public class TeamworkConnection implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("connectionStatus", this.getConnectionStatus());
@@ -98,31 +105,35 @@ public class TeamworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the connectionStatus property value. Indicates whether a component/peripheral is connected/disconnected or its state is unknown. The possible values are: unknown, connected, disconnected, unknownFutureValue.
      * @param value Value to set for the connectionStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionStatus(@javax.annotation.Nullable final TeamworkConnectionStatus value) {
-        this._connectionStatus = value;
+        this.connectionStatus = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Time at which the state was last changed. For example, indicates connected since when the state is connected and disconnected since when the state is disconnected.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

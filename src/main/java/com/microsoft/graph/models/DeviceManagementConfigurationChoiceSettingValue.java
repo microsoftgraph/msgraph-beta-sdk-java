@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManagementConfigurationSettingValue implements Parsable {
-    /** Child settings. */
-    private java.util.List<DeviceManagementConfigurationSettingInstance> _children;
-    /** Choice setting value: an OptionDefinition ItemId. */
-    private String _value;
+    /**
+     * Child settings.
+     */
+    private java.util.List<DeviceManagementConfigurationSettingInstance> children;
+    /**
+     * Choice setting value: an OptionDefinition ItemId.
+     */
+    private String value;
     /**
      * Instantiates a new DeviceManagementConfigurationChoiceSettingValue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValue() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingValue");
@@ -36,19 +40,18 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingInstance> getChildren() {
-        return this._children;
+        return this.children;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationChoiceSettingValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstance::createFromDiscriminatorValue)); });
-            this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. Choice setting value: an OptionDefinition ItemId.
@@ -56,13 +59,14 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
      */
     @javax.annotation.Nullable
     public String getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
      * @param value Value to set for the children property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildren(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingInstance> value) {
-        this._children = value;
+        this.children = value;
     }
     /**
      * Sets the value property value. Choice setting value: an OptionDefinition ItemId.
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
-        this._value = value;
+        this.value = value;
     }
 }

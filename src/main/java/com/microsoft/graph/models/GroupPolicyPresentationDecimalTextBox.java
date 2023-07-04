@@ -3,27 +3,39 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPresentation implements Parsable {
-    /** An unsigned integer that specifies the initial value for the decimal text box. The default value is 1. */
-    private Long _defaultValue;
-    /** An unsigned integer that specifies the maximum allowed value. The default value is 9999. */
-    private Long _maxValue;
-    /** An unsigned integer that specifies the minimum allowed value. The default value is 0. */
-    private Long _minValue;
-    /** Requirement to enter a value in the parameter box. The default value is false. */
-    private Boolean _required;
-    /** If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true. */
-    private Boolean _spin;
-    /** An unsigned integer that specifies the increment of change for the spin control. The default value is 1. */
-    private Long _spinStep;
+    /**
+     * An unsigned integer that specifies the initial value for the decimal text box. The default value is 1.
+     */
+    private Long defaultValue;
+    /**
+     * An unsigned integer that specifies the maximum allowed value. The default value is 9999.
+     */
+    private Long maxValue;
+    /**
+     * An unsigned integer that specifies the minimum allowed value. The default value is 0.
+     */
+    private Long minValue;
+    /**
+     * Requirement to enter a value in the parameter box. The default value is false.
+     */
+    private Boolean required;
+    /**
+     * If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true.
+     */
+    private Boolean spin;
+    /**
+     * An unsigned integer that specifies the increment of change for the spin control. The default value is 1.
+     */
+    private Long spinStep;
     /**
      * Instantiates a new GroupPolicyPresentationDecimalTextBox and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationDecimalTextBox() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationDecimalTextBox");
@@ -44,23 +56,22 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPr
      */
     @javax.annotation.Nullable
     public Long getDefaultValue() {
-        return this._defaultValue;
+        return this.defaultValue;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationDecimalTextBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getLongValue()); });
-            this.put("maxValue", (n) -> { currentObject.setMaxValue(n.getLongValue()); });
-            this.put("minValue", (n) -> { currentObject.setMinValue(n.getLongValue()); });
-            this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
-            this.put("spin", (n) -> { currentObject.setSpin(n.getBooleanValue()); });
-            this.put("spinStep", (n) -> { currentObject.setSpinStep(n.getLongValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getLongValue()); });
+        deserializerMap.put("maxValue", (n) -> { this.setMaxValue(n.getLongValue()); });
+        deserializerMap.put("minValue", (n) -> { this.setMinValue(n.getLongValue()); });
+        deserializerMap.put("required", (n) -> { this.setRequired(n.getBooleanValue()); });
+        deserializerMap.put("spin", (n) -> { this.setSpin(n.getBooleanValue()); });
+        deserializerMap.put("spinStep", (n) -> { this.setSpinStep(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maxValue property value. An unsigned integer that specifies the maximum allowed value. The default value is 9999.
@@ -68,7 +79,7 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPr
      */
     @javax.annotation.Nullable
     public Long getMaxValue() {
-        return this._maxValue;
+        return this.maxValue;
     }
     /**
      * Gets the minValue property value. An unsigned integer that specifies the minimum allowed value. The default value is 0.
@@ -76,7 +87,7 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPr
      */
     @javax.annotation.Nullable
     public Long getMinValue() {
-        return this._minValue;
+        return this.minValue;
     }
     /**
      * Gets the required property value. Requirement to enter a value in the parameter box. The default value is false.
@@ -84,7 +95,7 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPr
      */
     @javax.annotation.Nullable
     public Boolean getRequired() {
-        return this._required;
+        return this.required;
     }
     /**
      * Gets the spin property value. If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true.
@@ -92,7 +103,7 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPr
      */
     @javax.annotation.Nullable
     public Boolean getSpin() {
-        return this._spin;
+        return this.spin;
     }
     /**
      * Gets the spinStep property value. An unsigned integer that specifies the increment of change for the spin control. The default value is 1.
@@ -100,13 +111,14 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPr
      */
     @javax.annotation.Nullable
     public Long getSpinStep() {
-        return this._spinStep;
+        return this.spinStep;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,47 +134,53 @@ public class GroupPolicyPresentationDecimalTextBox extends GroupPolicyUploadedPr
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final Long value) {
-        this._defaultValue = value;
+        this.defaultValue = value;
     }
     /**
      * Sets the maxValue property value. An unsigned integer that specifies the maximum allowed value. The default value is 9999.
      * @param value Value to set for the maxValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxValue(@javax.annotation.Nullable final Long value) {
-        this._maxValue = value;
+        this.maxValue = value;
     }
     /**
      * Sets the minValue property value. An unsigned integer that specifies the minimum allowed value. The default value is 0.
      * @param value Value to set for the minValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinValue(@javax.annotation.Nullable final Long value) {
-        this._minValue = value;
+        this.minValue = value;
     }
     /**
      * Sets the required property value. Requirement to enter a value in the parameter box. The default value is false.
      * @param value Value to set for the required property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequired(@javax.annotation.Nullable final Boolean value) {
-        this._required = value;
+        this.required = value;
     }
     /**
      * Sets the spin property value. If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true.
      * @param value Value to set for the spin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpin(@javax.annotation.Nullable final Boolean value) {
-        this._spin = value;
+        this.spin = value;
     }
     /**
      * Sets the spinStep property value. An unsigned integer that specifies the increment of change for the spin control. The default value is 1.
      * @param value Value to set for the spinStep property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpinStep(@javax.annotation.Nullable final Long value) {
-        this._spinStep = value;
+        this.spinStep = value;
     }
 }

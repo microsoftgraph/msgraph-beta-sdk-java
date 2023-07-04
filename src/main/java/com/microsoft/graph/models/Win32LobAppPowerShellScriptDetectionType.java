@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Contains all supported Powershell Script output detection type.
+ */
 public enum Win32LobAppPowerShellScriptDetectionType implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),
@@ -14,11 +16,11 @@ public enum Win32LobAppPowerShellScriptDetectionType implements ValuedEnum {
     /** Output data type is integer. */
     Integer("integer"),
     /** Output data type is float. */
-    Float_escaped("float_escaped"),
+    FloatEscaped("float"),
     /** Output data type is version. */
     Version("version"),
     /** Output data type is boolean. */
-    Boolean_escaped("boolean_escaped");
+    BooleanEscaped("boolean");
     public final String value;
     Win32LobAppPowerShellScriptDetectionType(final String value) {
         this.value = value;
@@ -33,9 +35,9 @@ public enum Win32LobAppPowerShellScriptDetectionType implements ValuedEnum {
             case "string": return String;
             case "dateTime": return DateTime;
             case "integer": return Integer;
-            case "float": return Float_escaped;
+            case "float": return FloatEscaped;
             case "version": return Version;
-            case "boolean": return Boolean_escaped;
+            case "boolean": return BooleanEscaped;
             default: return null;
         }
     }

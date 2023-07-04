@@ -1,24 +1,26 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DeviceHealthScriptDailySchedule;
-import com.microsoft.graph.models.DeviceHealthScriptRunOnceSchedule;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedule implements Parsable {
-    /** At what time the script is scheduled to run. This collection can contain a maximum of 20 elements. */
-    private LocalTime _time;
-    /** Indicate if the time is Utc or client local time. */
-    private Boolean _useUtc;
+    /**
+     * At what time the script is scheduled to run. This collection can contain a maximum of 20 elements.
+     */
+    private LocalTime time;
+    /**
+     * Indicate if the time is Utc or client local time.
+     */
+    private Boolean useUtc;
     /**
      * Instantiates a new DeviceHealthScriptTimeSchedule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptTimeSchedule() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScriptTimeSchedule");
@@ -43,15 +45,14 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceHealthScriptTimeSchedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("time", (n) -> { currentObject.setTime(n.getLocalTimeValue()); });
-            this.put("useUtc", (n) -> { currentObject.setUseUtc(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("time", (n) -> { this.setTime(n.getLocalTimeValue()); });
+        deserializerMap.put("useUtc", (n) -> { this.setUseUtc(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the time property value. At what time the script is scheduled to run. This collection can contain a maximum of 20 elements.
@@ -59,7 +60,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
      */
     @javax.annotation.Nullable
     public LocalTime getTime() {
-        return this._time;
+        return this.time;
     }
     /**
      * Gets the useUtc property value. Indicate if the time is Utc or client local time.
@@ -67,13 +68,14 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
      */
     @javax.annotation.Nullable
     public Boolean getUseUtc() {
-        return this._useUtc;
+        return this.useUtc;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -85,15 +87,17 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
      * @param value Value to set for the time property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTime(@javax.annotation.Nullable final LocalTime value) {
-        this._time = value;
+        this.time = value;
     }
     /**
      * Sets the useUtc property value. Indicate if the time is Utc or client local time.
      * @param value Value to set for the useUtc property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseUtc(@javax.annotation.Nullable final Boolean value) {
-        this._useUtc = value;
+        this.useUtc = value;
     }
 }

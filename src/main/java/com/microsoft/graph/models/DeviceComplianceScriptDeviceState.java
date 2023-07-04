@@ -4,33 +4,48 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for device run state of the device compliance script. */
+/**
+ * Contains properties for device run state of the device compliance script.
+ */
 public class DeviceComplianceScriptDeviceState extends Entity implements Parsable {
-    /** Indicates the type of execution status of the device management script. */
-    private RunState _detectionState;
-    /** The next timestamp of when the device compliance script is expected to execute */
-    private OffsetDateTime _expectedStateUpdateDateTime;
-    /** The last timestamp of when the device compliance script executed */
-    private OffsetDateTime _lastStateUpdateDateTime;
-    /** The last time that Intune Managment Extension synced with Intune */
-    private OffsetDateTime _lastSyncDateTime;
-    /** The managed device on which the device compliance script executed */
-    private ManagedDevice _managedDevice;
-    /** Error from the detection script */
-    private String _scriptError;
-    /** Output of the detection script */
-    private String _scriptOutput;
+    /**
+     * Indicates the type of execution status of the device management script.
+     */
+    private RunState detectionState;
+    /**
+     * The next timestamp of when the device compliance script is expected to execute
+     */
+    private OffsetDateTime expectedStateUpdateDateTime;
+    /**
+     * The last timestamp of when the device compliance script executed
+     */
+    private OffsetDateTime lastStateUpdateDateTime;
+    /**
+     * The last time that Intune Managment Extension synced with Intune
+     */
+    private OffsetDateTime lastSyncDateTime;
+    /**
+     * The managed device on which the device compliance script executed
+     */
+    private ManagedDevice managedDevice;
+    /**
+     * Error from the detection script
+     */
+    private String scriptError;
+    /**
+     * Output of the detection script
+     */
+    private String scriptOutput;
     /**
      * Instantiates a new deviceComplianceScriptDeviceState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceComplianceScriptDeviceState() {
         super();
-        this.setOdataType("#microsoft.graph.deviceComplianceScriptDeviceState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,11 +59,11 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the detectionState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @javax.annotation.Nullable
     public RunState getDetectionState() {
-        return this._detectionState;
+        return this.detectionState;
     }
     /**
      * Gets the expectedStateUpdateDateTime property value. The next timestamp of when the device compliance script is expected to execute
@@ -56,24 +71,23 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpectedStateUpdateDateTime() {
-        return this._expectedStateUpdateDateTime;
+        return this.expectedStateUpdateDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceComplianceScriptDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("detectionState", (n) -> { currentObject.setDetectionState(n.getEnumValue(RunState.class)); });
-            this.put("expectedStateUpdateDateTime", (n) -> { currentObject.setExpectedStateUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastStateUpdateDateTime", (n) -> { currentObject.setLastStateUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managedDevice", (n) -> { currentObject.setManagedDevice(n.getObjectValue(ManagedDevice::createFromDiscriminatorValue)); });
-            this.put("scriptError", (n) -> { currentObject.setScriptError(n.getStringValue()); });
-            this.put("scriptOutput", (n) -> { currentObject.setScriptOutput(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("detectionState", (n) -> { this.setDetectionState(n.getEnumValue(RunState.class)); });
+        deserializerMap.put("expectedStateUpdateDateTime", (n) -> { this.setExpectedStateUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastStateUpdateDateTime", (n) -> { this.setLastStateUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedDevice", (n) -> { this.setManagedDevice(n.getObjectValue(ManagedDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("scriptError", (n) -> { this.setScriptError(n.getStringValue()); });
+        deserializerMap.put("scriptOutput", (n) -> { this.setScriptOutput(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastStateUpdateDateTime property value. The last timestamp of when the device compliance script executed
@@ -81,7 +95,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastStateUpdateDateTime() {
-        return this._lastStateUpdateDateTime;
+        return this.lastStateUpdateDateTime;
     }
     /**
      * Gets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
@@ -89,7 +103,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this._lastSyncDateTime;
+        return this.lastSyncDateTime;
     }
     /**
      * Gets the managedDevice property value. The managed device on which the device compliance script executed
@@ -97,7 +111,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public ManagedDevice getManagedDevice() {
-        return this._managedDevice;
+        return this.managedDevice;
     }
     /**
      * Gets the scriptError property value. Error from the detection script
@@ -105,7 +119,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getScriptError() {
-        return this._scriptError;
+        return this.scriptError;
     }
     /**
      * Gets the scriptOutput property value. Output of the detection script
@@ -113,13 +127,14 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getScriptOutput() {
-        return this._scriptOutput;
+        return this.scriptOutput;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,55 +151,62 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the detectionState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionState(@javax.annotation.Nullable final RunState value) {
-        this._detectionState = value;
+        this.detectionState = value;
     }
     /**
      * Sets the expectedStateUpdateDateTime property value. The next timestamp of when the device compliance script is expected to execute
      * @param value Value to set for the expectedStateUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpectedStateUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expectedStateUpdateDateTime = value;
+        this.expectedStateUpdateDateTime = value;
     }
     /**
      * Sets the lastStateUpdateDateTime property value. The last timestamp of when the device compliance script executed
      * @param value Value to set for the lastStateUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastStateUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastStateUpdateDateTime = value;
+        this.lastStateUpdateDateTime = value;
     }
     /**
      * Sets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSyncDateTime = value;
+        this.lastSyncDateTime = value;
     }
     /**
      * Sets the managedDevice property value. The managed device on which the device compliance script executed
      * @param value Value to set for the managedDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevice(@javax.annotation.Nullable final ManagedDevice value) {
-        this._managedDevice = value;
+        this.managedDevice = value;
     }
     /**
      * Sets the scriptError property value. Error from the detection script
      * @param value Value to set for the scriptError property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScriptError(@javax.annotation.Nullable final String value) {
-        this._scriptError = value;
+        this.scriptError = value;
     }
     /**
      * Sets the scriptOutput property value. Output of the detection script
      * @param value Value to set for the scriptOutput property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScriptOutput(@javax.annotation.Nullable final String value) {
-        this._scriptOutput = value;
+        this.scriptOutput = value;
     }
 }

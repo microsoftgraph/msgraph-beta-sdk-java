@@ -5,44 +5,65 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represent result summary for assignment filter evaluation */
+/**
+ * Represent result summary for assignment filter evaluation
+ */
 public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The admin defined name for assignment filter. */
-    private String _assignmentFilterDisplayName;
-    /** Unique identifier for the assignment filter object */
-    private String _assignmentFilterId;
-    /** The time the assignment filter was last modified. */
-    private OffsetDateTime _assignmentFilterLastModifiedDateTime;
-    /** Supported platform types. */
-    private DevicePlatformType _assignmentFilterPlatform;
-    /** Represents type of the assignment filter. */
-    private DeviceAndAppManagementAssignmentFilterType _assignmentFilterType;
-    /** A collection of filter types and their corresponding evaluation results. */
-    private java.util.List<AssignmentFilterTypeAndEvaluationResult> _assignmentFilterTypeAndEvaluationResults;
-    /** The time assignment filter was evaluated. */
-    private OffsetDateTime _evaluationDateTime;
-    /** Supported evaluation results for filter. */
-    private AssignmentFilterEvaluationResult _evaluationResult;
-    /** The OdataType property */
-    private String _odataType;
     /**
-     * Instantiates a new assignmentFilterEvaluationSummary and sets the default values.
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The admin defined name for assignment filter.
+     */
+    private String assignmentFilterDisplayName;
+    /**
+     * Unique identifier for the assignment filter object
+     */
+    private String assignmentFilterId;
+    /**
+     * The time the assignment filter was last modified.
+     */
+    private OffsetDateTime assignmentFilterLastModifiedDateTime;
+    /**
+     * Supported platform types.
+     */
+    private DevicePlatformType assignmentFilterPlatform;
+    /**
+     * Represents type of the assignment filter.
+     */
+    private DeviceAndAppManagementAssignmentFilterType assignmentFilterType;
+    /**
+     * A collection of filter types and their corresponding evaluation results.
+     */
+    private java.util.List<AssignmentFilterTypeAndEvaluationResult> assignmentFilterTypeAndEvaluationResults;
+    /**
+     * The time assignment filter was evaluated.
+     */
+    private OffsetDateTime evaluationDateTime;
+    /**
+     * Supported evaluation results for filter.
+     */
+    private AssignmentFilterEvaluationResult evaluationResult;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Instantiates a new AssignmentFilterEvaluationSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignmentFilterEvaluationSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.assignmentFilterEvaluationSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a assignmentFilterEvaluationSummary
+     * @return a AssignmentFilterEvaluationSummary
      */
     @javax.annotation.Nonnull
     public static AssignmentFilterEvaluationSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +76,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the assignmentFilterDisplayName property value. The admin defined name for assignment filter.
@@ -63,7 +84,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public String getAssignmentFilterDisplayName() {
-        return this._assignmentFilterDisplayName;
+        return this.assignmentFilterDisplayName;
     }
     /**
      * Gets the assignmentFilterId property value. Unique identifier for the assignment filter object
@@ -71,7 +92,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public String getAssignmentFilterId() {
-        return this._assignmentFilterId;
+        return this.assignmentFilterId;
     }
     /**
      * Gets the assignmentFilterLastModifiedDateTime property value. The time the assignment filter was last modified.
@@ -79,23 +100,23 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getAssignmentFilterLastModifiedDateTime() {
-        return this._assignmentFilterLastModifiedDateTime;
+        return this.assignmentFilterLastModifiedDateTime;
     }
     /**
      * Gets the assignmentFilterPlatform property value. Supported platform types.
-     * @return a devicePlatformType
+     * @return a DevicePlatformType
      */
     @javax.annotation.Nullable
     public DevicePlatformType getAssignmentFilterPlatform() {
-        return this._assignmentFilterPlatform;
+        return this.assignmentFilterPlatform;
     }
     /**
      * Gets the assignmentFilterType property value. Represents type of the assignment filter.
-     * @return a deviceAndAppManagementAssignmentFilterType
+     * @return a DeviceAndAppManagementAssignmentFilterType
      */
     @javax.annotation.Nullable
     public DeviceAndAppManagementAssignmentFilterType getAssignmentFilterType() {
-        return this._assignmentFilterType;
+        return this.assignmentFilterType;
     }
     /**
      * Gets the assignmentFilterTypeAndEvaluationResults property value. A collection of filter types and their corresponding evaluation results.
@@ -103,7 +124,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public java.util.List<AssignmentFilterTypeAndEvaluationResult> getAssignmentFilterTypeAndEvaluationResults() {
-        return this._assignmentFilterTypeAndEvaluationResults;
+        return this.assignmentFilterTypeAndEvaluationResults;
     }
     /**
      * Gets the evaluationDateTime property value. The time assignment filter was evaluated.
@@ -111,34 +132,33 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEvaluationDateTime() {
-        return this._evaluationDateTime;
+        return this.evaluationDateTime;
     }
     /**
      * Gets the evaluationResult property value. Supported evaluation results for filter.
-     * @return a assignmentFilterEvaluationResult
+     * @return a AssignmentFilterEvaluationResult
      */
     @javax.annotation.Nullable
     public AssignmentFilterEvaluationResult getEvaluationResult() {
-        return this._evaluationResult;
+        return this.evaluationResult;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AssignmentFilterEvaluationSummary currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("assignmentFilterDisplayName", (n) -> { currentObject.setAssignmentFilterDisplayName(n.getStringValue()); });
-            this.put("assignmentFilterId", (n) -> { currentObject.setAssignmentFilterId(n.getStringValue()); });
-            this.put("assignmentFilterLastModifiedDateTime", (n) -> { currentObject.setAssignmentFilterLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("assignmentFilterPlatform", (n) -> { currentObject.setAssignmentFilterPlatform(n.getEnumValue(DevicePlatformType.class)); });
-            this.put("assignmentFilterType", (n) -> { currentObject.setAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
-            this.put("assignmentFilterTypeAndEvaluationResults", (n) -> { currentObject.setAssignmentFilterTypeAndEvaluationResults(n.getCollectionOfObjectValues(AssignmentFilterTypeAndEvaluationResult::createFromDiscriminatorValue)); });
-            this.put("evaluationDateTime", (n) -> { currentObject.setEvaluationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("evaluationResult", (n) -> { currentObject.setEvaluationResult(n.getEnumValue(AssignmentFilterEvaluationResult.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        deserializerMap.put("assignmentFilterDisplayName", (n) -> { this.setAssignmentFilterDisplayName(n.getStringValue()); });
+        deserializerMap.put("assignmentFilterId", (n) -> { this.setAssignmentFilterId(n.getStringValue()); });
+        deserializerMap.put("assignmentFilterLastModifiedDateTime", (n) -> { this.setAssignmentFilterLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("assignmentFilterPlatform", (n) -> { this.setAssignmentFilterPlatform(n.getEnumValue(DevicePlatformType.class)); });
+        deserializerMap.put("assignmentFilterType", (n) -> { this.setAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
+        deserializerMap.put("assignmentFilterTypeAndEvaluationResults", (n) -> { this.setAssignmentFilterTypeAndEvaluationResults(n.getCollectionOfObjectValues(AssignmentFilterTypeAndEvaluationResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("evaluationDateTime", (n) -> { this.setEvaluationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("evaluationResult", (n) -> { this.setEvaluationResult(n.getEnumValue(AssignmentFilterEvaluationResult.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -146,13 +166,14 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("assignmentFilterDisplayName", this.getAssignmentFilterDisplayName());
@@ -171,79 +192,89 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the assignmentFilterDisplayName property value. The admin defined name for assignment filter.
      * @param value Value to set for the assignmentFilterDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterDisplayName(@javax.annotation.Nullable final String value) {
-        this._assignmentFilterDisplayName = value;
+        this.assignmentFilterDisplayName = value;
     }
     /**
      * Sets the assignmentFilterId property value. Unique identifier for the assignment filter object
      * @param value Value to set for the assignmentFilterId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterId(@javax.annotation.Nullable final String value) {
-        this._assignmentFilterId = value;
+        this.assignmentFilterId = value;
     }
     /**
      * Sets the assignmentFilterLastModifiedDateTime property value. The time the assignment filter was last modified.
      * @param value Value to set for the assignmentFilterLastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._assignmentFilterLastModifiedDateTime = value;
+        this.assignmentFilterLastModifiedDateTime = value;
     }
     /**
      * Sets the assignmentFilterPlatform property value. Supported platform types.
      * @param value Value to set for the assignmentFilterPlatform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterPlatform(@javax.annotation.Nullable final DevicePlatformType value) {
-        this._assignmentFilterPlatform = value;
+        this.assignmentFilterPlatform = value;
     }
     /**
      * Sets the assignmentFilterType property value. Represents type of the assignment filter.
      * @param value Value to set for the assignmentFilterType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterType(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentFilterType value) {
-        this._assignmentFilterType = value;
+        this.assignmentFilterType = value;
     }
     /**
      * Sets the assignmentFilterTypeAndEvaluationResults property value. A collection of filter types and their corresponding evaluation results.
      * @param value Value to set for the assignmentFilterTypeAndEvaluationResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterTypeAndEvaluationResults(@javax.annotation.Nullable final java.util.List<AssignmentFilterTypeAndEvaluationResult> value) {
-        this._assignmentFilterTypeAndEvaluationResults = value;
+        this.assignmentFilterTypeAndEvaluationResults = value;
     }
     /**
      * Sets the evaluationDateTime property value. The time assignment filter was evaluated.
      * @param value Value to set for the evaluationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._evaluationDateTime = value;
+        this.evaluationDateTime = value;
     }
     /**
      * Sets the evaluationResult property value. Supported evaluation results for filter.
      * @param value Value to set for the evaluationResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluationResult(@javax.annotation.Nullable final AssignmentFilterEvaluationResult value) {
-        this._evaluationResult = value;
+        this.evaluationResult = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

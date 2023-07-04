@@ -3,26 +3,35 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsable {
-    /** ID of the service principal of the Azure AD app that has been granted access. Read-only. */
-    private String _clientAppId;
-    /** ID of the Azure AD app that has been granted access. Read-only. */
-    private String _clientId;
-    /** The name of the resource-specific permission. Read-only. */
-    private String _permission;
-    /** The type of permission. Possible values are: Application, Delegated. Read-only. */
-    private String _permissionType;
-    /** ID of the Azure AD app that is hosting the resource. Read-only. */
-    private String _resourceAppId;
+    /**
+     * ID of the service principal of the Azure AD app that has been granted access. Read-only.
+     */
+    private String clientAppId;
+    /**
+     * ID of the Azure AD app that has been granted access. Read-only.
+     */
+    private String clientId;
+    /**
+     * The name of the resource-specific permission. Read-only.
+     */
+    private String permission;
+    /**
+     * The type of permission. Possible values are: Application, Delegated. Read-only.
+     */
+    private String permissionType;
+    /**
+     * ID of the Azure AD app that is hosting the resource. Read-only.
+     */
+    private String resourceAppId;
     /**
      * Instantiates a new resourceSpecificPermissionGrant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResourceSpecificPermissionGrant() {
         super();
         this.setOdataType("#microsoft.graph.resourceSpecificPermissionGrant");
@@ -43,7 +52,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      */
     @javax.annotation.Nullable
     public String getClientAppId() {
-        return this._clientAppId;
+        return this.clientAppId;
     }
     /**
      * Gets the clientId property value. ID of the Azure AD app that has been granted access. Read-only.
@@ -51,22 +60,21 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      */
     @javax.annotation.Nullable
     public String getClientId() {
-        return this._clientId;
+        return this.clientId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ResourceSpecificPermissionGrant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("clientAppId", (n) -> { currentObject.setClientAppId(n.getStringValue()); });
-            this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
-            this.put("permission", (n) -> { currentObject.setPermission(n.getStringValue()); });
-            this.put("permissionType", (n) -> { currentObject.setPermissionType(n.getStringValue()); });
-            this.put("resourceAppId", (n) -> { currentObject.setResourceAppId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("clientAppId", (n) -> { this.setClientAppId(n.getStringValue()); });
+        deserializerMap.put("clientId", (n) -> { this.setClientId(n.getStringValue()); });
+        deserializerMap.put("permission", (n) -> { this.setPermission(n.getStringValue()); });
+        deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getStringValue()); });
+        deserializerMap.put("resourceAppId", (n) -> { this.setResourceAppId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the permission property value. The name of the resource-specific permission. Read-only.
@@ -74,7 +82,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      */
     @javax.annotation.Nullable
     public String getPermission() {
-        return this._permission;
+        return this.permission;
     }
     /**
      * Gets the permissionType property value. The type of permission. Possible values are: Application, Delegated. Read-only.
@@ -82,7 +90,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      */
     @javax.annotation.Nullable
     public String getPermissionType() {
-        return this._permissionType;
+        return this.permissionType;
     }
     /**
      * Gets the resourceAppId property value. ID of the Azure AD app that is hosting the resource. Read-only.
@@ -90,13 +98,14 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      */
     @javax.annotation.Nullable
     public String getResourceAppId() {
-        return this._resourceAppId;
+        return this.resourceAppId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,39 +120,44 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param value Value to set for the clientAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientAppId(@javax.annotation.Nullable final String value) {
-        this._clientAppId = value;
+        this.clientAppId = value;
     }
     /**
      * Sets the clientId property value. ID of the Azure AD app that has been granted access. Read-only.
      * @param value Value to set for the clientId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientId(@javax.annotation.Nullable final String value) {
-        this._clientId = value;
+        this.clientId = value;
     }
     /**
      * Sets the permission property value. The name of the resource-specific permission. Read-only.
      * @param value Value to set for the permission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermission(@javax.annotation.Nullable final String value) {
-        this._permission = value;
+        this.permission = value;
     }
     /**
      * Sets the permissionType property value. The type of permission. Possible values are: Application, Delegated. Read-only.
      * @param value Value to set for the permissionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionType(@javax.annotation.Nullable final String value) {
-        this._permissionType = value;
+        this.permissionType = value;
     }
     /**
      * Sets the resourceAppId property value. ID of the Azure AD app that is hosting the resource. Read-only.
      * @param value Value to set for the resourceAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceAppId(@javax.annotation.Nullable final String value) {
-        this._resourceAppId = value;
+        this.resourceAppId = value;
     }
 }

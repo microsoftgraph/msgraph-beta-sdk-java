@@ -3,22 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileClassificationRequest extends Entity implements Parsable {
-    /** The file property */
-    private byte[] _file;
-    /** The sensitiveTypeIds property */
-    private java.util.List<String> _sensitiveTypeIds;
+    /**
+     * The file property
+     */
+    private byte[] file;
+    /**
+     * The sensitiveTypeIds property
+     */
+    private java.util.List<String> sensitiveTypeIds;
     /**
      * Instantiates a new FileClassificationRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileClassificationRequest() {
         super();
-        this.setOdataType("#microsoft.graph.fileClassificationRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,23 +35,22 @@ public class FileClassificationRequest extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FileClassificationRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("file", (n) -> { currentObject.setFile(n.getByteArrayValue()); });
-            this.put("sensitiveTypeIds", (n) -> { currentObject.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("file", (n) -> { this.setFile(n.getByteArrayValue()); });
+        deserializerMap.put("sensitiveTypeIds", (n) -> { this.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the file property value. The file property
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getFile() {
-        return this._file;
+        return this.file;
     }
     /**
      * Gets the sensitiveTypeIds property value. The sensitiveTypeIds property
@@ -56,13 +58,14 @@ public class FileClassificationRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSensitiveTypeIds() {
-        return this._sensitiveTypeIds;
+        return this.sensitiveTypeIds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +77,17 @@ public class FileClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the file property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFile(@javax.annotation.Nullable final byte[] value) {
-        this._file = value;
+        this.file = value;
     }
     /**
      * Sets the sensitiveTypeIds property value. The sensitiveTypeIds property
      * @param value Value to set for the sensitiveTypeIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._sensitiveTypeIds = value;
+        this.sensitiveTypeIds = value;
     }
 }

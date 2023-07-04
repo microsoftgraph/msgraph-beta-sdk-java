@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnum {
     DnsCheckFqdnNotFound("dnsCheckFqdnNotFound"),
     DnsCheckNameWithInvalidCharacter("dnsCheckNameWithInvalidCharacter"),
@@ -56,12 +55,19 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
     PermissionCheckNoResourceGroupOwnerRole("permissionCheckNoResourceGroupOwnerRole"),
     PermissionCheckNoVNetContributorRole("permissionCheckNoVNetContributorRole"),
     PermissionCheckNoResourceGroupNetworkContributorRole("permissionCheckNoResourceGroupNetworkContributorRole"),
+    PermissionCheckNoWindows365NetworkUserRole("permissionCheckNoWindows365NetworkUserRole"),
+    PermissionCheckNoWindows365NetworkInterfaceContributorRole("permissionCheckNoWindows365NetworkInterfaceContributorRole"),
     PermissionCheckTransientServiceError("permissionCheckTransientServiceError"),
     PermissionCheckUnknownError("permissionCheckUnknownError"),
+    UdpConnectivityCheckStunUrlNotAllowListed("udpConnectivityCheckStunUrlNotAllowListed"),
+    UdpConnectivityCheckTurnUrlNotAllowListed("udpConnectivityCheckTurnUrlNotAllowListed"),
+    UdpConnectivityCheckUrlsNotAllowListed("udpConnectivityCheckUrlsNotAllowListed"),
+    UdpConnectivityCheckUnknownError("udpConnectivityCheckUnknownError"),
     InternalServerErrorDeploymentCanceled("internalServerErrorDeploymentCanceled"),
     InternalServerErrorAllocateResourceFailed("internalServerErrorAllocateResourceFailed"),
     InternalServerErrorVMDeploymentTimeout("internalServerErrorVMDeploymentTimeout"),
     InternalServerErrorUnableToRunDscScript("internalServerErrorUnableToRunDscScript"),
+    SsoCheckKerberosConfigurationError("ssoCheckKerberosConfigurationError"),
     InternalServerUnknownError("internalServerUnknownError"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -125,12 +131,19 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
             case "permissionCheckNoResourceGroupOwnerRole": return PermissionCheckNoResourceGroupOwnerRole;
             case "permissionCheckNoVNetContributorRole": return PermissionCheckNoVNetContributorRole;
             case "permissionCheckNoResourceGroupNetworkContributorRole": return PermissionCheckNoResourceGroupNetworkContributorRole;
+            case "permissionCheckNoWindows365NetworkUserRole": return PermissionCheckNoWindows365NetworkUserRole;
+            case "permissionCheckNoWindows365NetworkInterfaceContributorRole": return PermissionCheckNoWindows365NetworkInterfaceContributorRole;
             case "permissionCheckTransientServiceError": return PermissionCheckTransientServiceError;
             case "permissionCheckUnknownError": return PermissionCheckUnknownError;
+            case "udpConnectivityCheckStunUrlNotAllowListed": return UdpConnectivityCheckStunUrlNotAllowListed;
+            case "udpConnectivityCheckTurnUrlNotAllowListed": return UdpConnectivityCheckTurnUrlNotAllowListed;
+            case "udpConnectivityCheckUrlsNotAllowListed": return UdpConnectivityCheckUrlsNotAllowListed;
+            case "udpConnectivityCheckUnknownError": return UdpConnectivityCheckUnknownError;
             case "internalServerErrorDeploymentCanceled": return InternalServerErrorDeploymentCanceled;
             case "internalServerErrorAllocateResourceFailed": return InternalServerErrorAllocateResourceFailed;
             case "internalServerErrorVMDeploymentTimeout": return InternalServerErrorVMDeploymentTimeout;
             case "internalServerErrorUnableToRunDscScript": return InternalServerErrorUnableToRunDscScript;
+            case "ssoCheckKerberosConfigurationError": return SsoCheckKerberosConfigurationError;
             case "internalServerUnknownError": return InternalServerUnknownError;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;

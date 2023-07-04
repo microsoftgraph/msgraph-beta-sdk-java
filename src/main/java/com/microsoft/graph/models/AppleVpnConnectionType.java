@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Apple VPN connection type.
+ */
 public enum AppleVpnConnectionType implements ValuedEnum {
     /** Cisco AnyConnect. */
     CiscoAnyConnect("ciscoAnyConnect"),

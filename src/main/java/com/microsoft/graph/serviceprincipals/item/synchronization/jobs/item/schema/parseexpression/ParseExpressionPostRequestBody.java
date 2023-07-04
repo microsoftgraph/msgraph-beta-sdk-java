@@ -6,24 +6,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the parseExpression method. */
 public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The expression property */
-    private String _expression;
-    /** The targetAttributeDefinition property */
-    private AttributeDefinition _targetAttributeDefinition;
-    /** The testInputObject property */
-    private ExpressionInputObject _testInputObject;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The expression property
+     */
+    private String expression;
+    /**
+     * The targetAttributeDefinition property
+     */
+    private AttributeDefinition targetAttributeDefinition;
+    /**
+     * The testInputObject property
+     */
+    private ExpressionInputObject testInputObject;
     /**
      * Instantiates a new parseExpressionPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ParseExpressionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -43,7 +50,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the expression property value. The expression property
@@ -51,20 +58,19 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public String getExpression() {
-        return this._expression;
+        return this.expression;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ParseExpressionPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("expression", (n) -> { currentObject.setExpression(n.getStringValue()); });
-            this.put("targetAttributeDefinition", (n) -> { currentObject.setTargetAttributeDefinition(n.getObjectValue(AttributeDefinition::createFromDiscriminatorValue)); });
-            this.put("testInputObject", (n) -> { currentObject.setTestInputObject(n.getObjectValue(ExpressionInputObject::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("expression", (n) -> { this.setExpression(n.getStringValue()); });
+        deserializerMap.put("targetAttributeDefinition", (n) -> { this.setTargetAttributeDefinition(n.getObjectValue(AttributeDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("testInputObject", (n) -> { this.setTestInputObject(n.getObjectValue(ExpressionInputObject::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the targetAttributeDefinition property value. The targetAttributeDefinition property
@@ -72,7 +78,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public AttributeDefinition getTargetAttributeDefinition() {
-        return this._targetAttributeDefinition;
+        return this.targetAttributeDefinition;
     }
     /**
      * Gets the testInputObject property value. The testInputObject property
@@ -80,13 +86,14 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public ExpressionInputObject getTestInputObject() {
-        return this._testInputObject;
+        return this.testInputObject;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("expression", this.getExpression());
@@ -99,31 +106,35 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the expression property value. The expression property
      * @param value Value to set for the expression property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpression(@javax.annotation.Nullable final String value) {
-        this._expression = value;
+        this.expression = value;
     }
     /**
      * Sets the targetAttributeDefinition property value. The targetAttributeDefinition property
      * @param value Value to set for the targetAttributeDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetAttributeDefinition(@javax.annotation.Nullable final AttributeDefinition value) {
-        this._targetAttributeDefinition = value;
+        this.targetAttributeDefinition = value;
     }
     /**
      * Sets the testInputObject property value. The testInputObject property
      * @param value Value to set for the testInputObject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTestInputObject(@javax.annotation.Nullable final ExpressionInputObject value) {
-        this._testInputObject = value;
+        this.testInputObject = value;
     }
 }

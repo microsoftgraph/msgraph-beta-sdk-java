@@ -3,31 +3,47 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProfileBase implements Parsable {
-    /** Hash Algorithm Options. */
-    private HashAlgorithms _hashAlgorithm;
-    /** Key Size Options. */
-    private KeySize _keySize;
-    /** Key Usage Options. */
-    private KeyUsages _keyUsage;
-    /** Certificate state for devices. This collection can contain a maximum of 2147483647 elements. */
-    private java.util.List<ManagedDeviceCertificateState> _managedDeviceCertificateStates;
-    /** Trusted Root Certificate. */
-    private WindowsPhone81TrustedRootCertificate _rootCertificate;
-    /** SCEP Server Url(s). */
-    private java.util.List<String> _scepServerUrls;
-    /** Custom String that defines the AAD Attribute. */
-    private String _subjectAlternativeNameFormatString;
-    /** Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US */
-    private String _subjectNameFormatString;
+    /**
+     * Hash Algorithm Options.
+     */
+    private HashAlgorithms hashAlgorithm;
+    /**
+     * Key Size Options.
+     */
+    private KeySize keySize;
+    /**
+     * Key Usage Options.
+     */
+    private KeyUsages keyUsage;
+    /**
+     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
+     */
+    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
+    /**
+     * Trusted Root Certificate.
+     */
+    private WindowsPhone81TrustedRootCertificate rootCertificate;
+    /**
+     * SCEP Server Url(s).
+     */
+    private java.util.List<String> scepServerUrls;
+    /**
+     * Custom String that defines the AAD Attribute.
+     */
+    private String subjectAlternativeNameFormatString;
+    /**
+     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
+     */
+    private String subjectNameFormatString;
     /**
      * Instantiates a new WindowsPhone81SCEPCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPhone81SCEPCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81SCEPCertificateProfile");
@@ -44,45 +60,44 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsPhone81SCEPCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("hashAlgorithm", (n) -> { currentObject.setHashAlgorithm(n.getEnumValue(HashAlgorithms.class)); });
-            this.put("keySize", (n) -> { currentObject.setKeySize(n.getEnumValue(KeySize.class)); });
-            this.put("keyUsage", (n) -> { currentObject.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
-            this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
-            this.put("rootCertificate", (n) -> { currentObject.setRootCertificate(n.getObjectValue(WindowsPhone81TrustedRootCertificate::createFromDiscriminatorValue)); });
-            this.put("scepServerUrls", (n) -> { currentObject.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("subjectAlternativeNameFormatString", (n) -> { currentObject.setSubjectAlternativeNameFormatString(n.getStringValue()); });
-            this.put("subjectNameFormatString", (n) -> { currentObject.setSubjectNameFormatString(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumValue(HashAlgorithms.class)); });
+        deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize.class)); });
+        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
+        deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
+        deserializerMap.put("rootCertificate", (n) -> { this.setRootCertificate(n.getObjectValue(WindowsPhone81TrustedRootCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("scepServerUrls", (n) -> { this.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("subjectAlternativeNameFormatString", (n) -> { this.setSubjectAlternativeNameFormatString(n.getStringValue()); });
+        deserializerMap.put("subjectNameFormatString", (n) -> { this.setSubjectNameFormatString(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hashAlgorithm property value. Hash Algorithm Options.
-     * @return a hashAlgorithms
+     * @return a HashAlgorithms
      */
     @javax.annotation.Nullable
     public HashAlgorithms getHashAlgorithm() {
-        return this._hashAlgorithm;
+        return this.hashAlgorithm;
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a keySize
+     * @return a KeySize
      */
     @javax.annotation.Nullable
     public KeySize getKeySize() {
-        return this._keySize;
+        return this.keySize;
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a keyUsages
+     * @return a KeyUsages
      */
     @javax.annotation.Nullable
     public KeyUsages getKeyUsage() {
-        return this._keyUsage;
+        return this.keyUsage;
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
@@ -90,7 +105,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this._managedDeviceCertificateStates;
+        return this.managedDeviceCertificateStates;
     }
     /**
      * Gets the rootCertificate property value. Trusted Root Certificate.
@@ -98,7 +113,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      */
     @javax.annotation.Nullable
     public WindowsPhone81TrustedRootCertificate getRootCertificate() {
-        return this._rootCertificate;
+        return this.rootCertificate;
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s).
@@ -106,7 +121,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      */
     @javax.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
-        return this._scepServerUrls;
+        return this.scepServerUrls;
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
@@ -114,7 +129,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      */
     @javax.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this._subjectAlternativeNameFormatString;
+        return this.subjectAlternativeNameFormatString;
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -122,13 +137,14 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      */
     @javax.annotation.Nullable
     public String getSubjectNameFormatString() {
-        return this._subjectNameFormatString;
+        return this.subjectNameFormatString;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +162,71 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * @param value Value to set for the hashAlgorithm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHashAlgorithm(@javax.annotation.Nullable final HashAlgorithms value) {
-        this._hashAlgorithm = value;
+        this.hashAlgorithm = value;
     }
     /**
      * Sets the keySize property value. Key Size Options.
      * @param value Value to set for the keySize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeySize(@javax.annotation.Nullable final KeySize value) {
-        this._keySize = value;
+        this.keySize = value;
     }
     /**
      * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyUsage(@javax.annotation.Nullable final KeyUsages value) {
-        this._keyUsage = value;
+        this.keyUsage = value;
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this._managedDeviceCertificateStates = value;
+        this.managedDeviceCertificateStates = value;
     }
     /**
      * Sets the rootCertificate property value. Trusted Root Certificate.
      * @param value Value to set for the rootCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificate(@javax.annotation.Nullable final WindowsPhone81TrustedRootCertificate value) {
-        this._rootCertificate = value;
+        this.rootCertificate = value;
     }
     /**
      * Sets the scepServerUrls property value. SCEP Server Url(s).
      * @param value Value to set for the scepServerUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScepServerUrls(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._scepServerUrls = value;
+        this.scepServerUrls = value;
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
-        this._subjectAlternativeNameFormatString = value;
+        this.subjectAlternativeNameFormatString = value;
     }
     /**
      * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
-        this._subjectNameFormatString = value;
+        this.subjectNameFormatString = value;
     }
 }

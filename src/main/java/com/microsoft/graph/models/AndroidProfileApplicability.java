@@ -3,9 +3,11 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Android profile applicability
+ */
 public enum AndroidProfileApplicability implements ValuedEnum {
-    Default_escaped("default_escaped"),
+    DefaultEscaped("default"),
     AndroidWorkProfile("androidWorkProfile"),
     AndroidDeviceOwner("androidDeviceOwner");
     public final String value;
@@ -18,7 +20,7 @@ public enum AndroidProfileApplicability implements ValuedEnum {
     public static AndroidProfileApplicability forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return Default_escaped;
+            case "default": return DefaultEscaped;
             case "androidWorkProfile": return AndroidWorkProfile;
             case "androidDeviceOwner": return AndroidDeviceOwner;
             default: return null;

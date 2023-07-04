@@ -4,30 +4,41 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DriveItemUploadableProperties implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Provides a user-visible description of the item. Read-write. Only on OneDrive Personal. */
-    private String _description;
-    /** Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal. */
-    private Long _fileSize;
-    /** File system information on client. Read-write. */
-    private FileSystemInfo _fileSystemInfo;
-    /** The name of the item (filename and extension). Read-write. */
-    private String _name;
-    /** The OdataType property */
-    private String _odataType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
+     */
+    private String description;
+    /**
+     * Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
+     */
+    private Long fileSize;
+    /**
+     * File system information on client. Read-write.
+     */
+    private FileSystemInfo fileSystemInfo;
+    /**
+     * The name of the item (filename and extension). Read-write.
+     */
+    private String name;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
     /**
      * Instantiates a new driveItemUploadableProperties and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DriveItemUploadableProperties() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.driveItemUploadableProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +56,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the description property value. Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
@@ -53,22 +64,21 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DriveItemUploadableProperties currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("fileSize", (n) -> { currentObject.setFileSize(n.getLongValue()); });
-            this.put("fileSystemInfo", (n) -> { currentObject.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("fileSize", (n) -> { this.setFileSize(n.getLongValue()); });
+        deserializerMap.put("fileSystemInfo", (n) -> { this.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileSize property value. Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
@@ -76,7 +86,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public Long getFileSize() {
-        return this._fileSize;
+        return this.fileSize;
     }
     /**
      * Gets the fileSystemInfo property value. File system information on client. Read-write.
@@ -84,7 +94,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public FileSystemInfo getFileSystemInfo() {
-        return this._fileSystemInfo;
+        return this.fileSystemInfo;
     }
     /**
      * Gets the name property value. The name of the item (filename and extension). Read-write.
@@ -92,7 +102,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -100,13 +110,14 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -121,47 +132,53 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the description property value. Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the fileSize property value. Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
      * @param value Value to set for the fileSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileSize(@javax.annotation.Nullable final Long value) {
-        this._fileSize = value;
+        this.fileSize = value;
     }
     /**
      * Sets the fileSystemInfo property value. File system information on client. Read-write.
      * @param value Value to set for the fileSystemInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileSystemInfo(@javax.annotation.Nullable final FileSystemInfo value) {
-        this._fileSystemInfo = value;
+        this.fileSystemInfo = value;
     }
     /**
      * Sets the name property value. The name of the item (filename and extension). Read-write.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

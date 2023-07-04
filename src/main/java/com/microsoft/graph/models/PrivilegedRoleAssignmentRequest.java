@@ -4,42 +4,65 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable {
-    /** The state of the assignment. The value can be Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users. */
-    private String _assignmentState;
-    /** The duration of a role assignment. */
-    private String _duration;
-    /** The reason for the role assignment. */
-    private String _reason;
-    /** Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _requestedDateTime;
-    /** The id of the role. */
-    private String _roleId;
-    /** The roleInfo object of the role assignment request. */
-    private PrivilegedRole _roleInfo;
-    /** The schedule object of the role assignment request. */
-    private GovernanceSchedule _schedule;
-    /** Read-only.The status of the role assignment request. The value can be NotStarted,Completed,RequestedApproval,Scheduled,Approved,ApprovalDenied,ApprovalAborted,Cancelling,Cancelled,Revoked,RequestExpired. */
-    private String _status;
-    /** The ticketNumber for the role assignment. */
-    private String _ticketNumber;
-    /** The ticketSystem for the role assignment. */
-    private String _ticketSystem;
-    /** Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators add users to roles;UserAdd: Users add role assignments. */
-    private String _type;
-    /** The id of the user. */
-    private String _userId;
+    /**
+     * The assignmentState property
+     */
+    private String assignmentState;
+    /**
+     * The duration property
+     */
+    private String duration;
+    /**
+     * The reason property
+     */
+    private String reason;
+    /**
+     * The requestedDateTime property
+     */
+    private OffsetDateTime requestedDateTime;
+    /**
+     * The roleId property
+     */
+    private String roleId;
+    /**
+     * The roleInfo property
+     */
+    private PrivilegedRole roleInfo;
+    /**
+     * The schedule property
+     */
+    private GovernanceSchedule schedule;
+    /**
+     * The status property
+     */
+    private String status;
+    /**
+     * The ticketNumber property
+     */
+    private String ticketNumber;
+    /**
+     * The ticketSystem property
+     */
+    private String ticketSystem;
+    /**
+     * The type property
+     */
+    private String type;
+    /**
+     * The userId property
+     */
+    private String userId;
     /**
      * Instantiates a new privilegedRoleAssignmentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivilegedRoleAssignmentRequest() {
         super();
-        this.setOdataType("#microsoft.graph.privilegedRoleAssignmentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,128 +75,128 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
         return new PrivilegedRoleAssignmentRequest();
     }
     /**
-     * Gets the assignmentState property value. The state of the assignment. The value can be Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
+     * Gets the assignmentState property value. The assignmentState property
      * @return a string
      */
     @javax.annotation.Nullable
     public String getAssignmentState() {
-        return this._assignmentState;
+        return this.assignmentState;
     }
     /**
-     * Gets the duration property value. The duration of a role assignment.
+     * Gets the duration property value. The duration property
      * @return a string
      */
     @javax.annotation.Nullable
     public String getDuration() {
-        return this._duration;
+        return this.duration;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrivilegedRoleAssignmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignmentState", (n) -> { currentObject.setAssignmentState(n.getStringValue()); });
-            this.put("duration", (n) -> { currentObject.setDuration(n.getStringValue()); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
-            this.put("requestedDateTime", (n) -> { currentObject.setRequestedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleId", (n) -> { currentObject.setRoleId(n.getStringValue()); });
-            this.put("roleInfo", (n) -> { currentObject.setRoleInfo(n.getObjectValue(PrivilegedRole::createFromDiscriminatorValue)); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(GovernanceSchedule::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("ticketNumber", (n) -> { currentObject.setTicketNumber(n.getStringValue()); });
-            this.put("ticketSystem", (n) -> { currentObject.setTicketSystem(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignmentState", (n) -> { this.setAssignmentState(n.getStringValue()); });
+        deserializerMap.put("duration", (n) -> { this.setDuration(n.getStringValue()); });
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getStringValue()); });
+        deserializerMap.put("requestedDateTime", (n) -> { this.setRequestedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleId", (n) -> { this.setRoleId(n.getStringValue()); });
+        deserializerMap.put("roleInfo", (n) -> { this.setRoleInfo(n.getObjectValue(PrivilegedRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(GovernanceSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        deserializerMap.put("ticketNumber", (n) -> { this.setTicketNumber(n.getStringValue()); });
+        deserializerMap.put("ticketSystem", (n) -> { this.setTicketSystem(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the reason property value. The reason for the role assignment.
+     * Gets the reason property value. The reason property
      * @return a string
      */
     @javax.annotation.Nullable
     public String getReason() {
-        return this._reason;
+        return this.reason;
     }
     /**
-     * Gets the requestedDateTime property value. Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the requestedDateTime property value. The requestedDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRequestedDateTime() {
-        return this._requestedDateTime;
+        return this.requestedDateTime;
     }
     /**
-     * Gets the roleId property value. The id of the role.
+     * Gets the roleId property value. The roleId property
      * @return a string
      */
     @javax.annotation.Nullable
     public String getRoleId() {
-        return this._roleId;
+        return this.roleId;
     }
     /**
-     * Gets the roleInfo property value. The roleInfo object of the role assignment request.
+     * Gets the roleInfo property value. The roleInfo property
      * @return a privilegedRole
      */
     @javax.annotation.Nullable
     public PrivilegedRole getRoleInfo() {
-        return this._roleInfo;
+        return this.roleInfo;
     }
     /**
-     * Gets the schedule property value. The schedule object of the role assignment request.
+     * Gets the schedule property value. The schedule property
      * @return a governanceSchedule
      */
     @javax.annotation.Nullable
     public GovernanceSchedule getSchedule() {
-        return this._schedule;
+        return this.schedule;
     }
     /**
-     * Gets the status property value. Read-only.The status of the role assignment request. The value can be NotStarted,Completed,RequestedApproval,Scheduled,Approved,ApprovalDenied,ApprovalAborted,Cancelling,Cancelled,Revoked,RequestExpired.
+     * Gets the status property value. The status property
      * @return a string
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
-     * Gets the ticketNumber property value. The ticketNumber for the role assignment.
+     * Gets the ticketNumber property value. The ticketNumber property
      * @return a string
      */
     @javax.annotation.Nullable
     public String getTicketNumber() {
-        return this._ticketNumber;
+        return this.ticketNumber;
     }
     /**
-     * Gets the ticketSystem property value. The ticketSystem for the role assignment.
+     * Gets the ticketSystem property value. The ticketSystem property
      * @return a string
      */
     @javax.annotation.Nullable
     public String getTicketSystem() {
-        return this._ticketSystem;
+        return this.ticketSystem;
     }
     /**
-     * Gets the type property value. Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators add users to roles;UserAdd: Users add role assignments.
+     * Gets the type property value. The type property
      * @return a string
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
-     * Gets the userId property value. The id of the user.
+     * Gets the userId property value. The userId property
      * @return a string
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -191,99 +214,111 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the assignmentState property value. The state of the assignment. The value can be Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
+     * Sets the assignmentState property value. The assignmentState property
      * @param value Value to set for the assignmentState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentState(@javax.annotation.Nullable final String value) {
-        this._assignmentState = value;
+        this.assignmentState = value;
     }
     /**
-     * Sets the duration property value. The duration of a role assignment.
+     * Sets the duration property value. The duration property
      * @param value Value to set for the duration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDuration(@javax.annotation.Nullable final String value) {
-        this._duration = value;
+        this.duration = value;
     }
     /**
-     * Sets the reason property value. The reason for the role assignment.
+     * Sets the reason property value. The reason property
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
-        this._reason = value;
+        this.reason = value;
     }
     /**
-     * Sets the requestedDateTime property value. Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the requestedDateTime property value. The requestedDateTime property
      * @param value Value to set for the requestedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._requestedDateTime = value;
+        this.requestedDateTime = value;
     }
     /**
-     * Sets the roleId property value. The id of the role.
+     * Sets the roleId property value. The roleId property
      * @param value Value to set for the roleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleId(@javax.annotation.Nullable final String value) {
-        this._roleId = value;
+        this.roleId = value;
     }
     /**
-     * Sets the roleInfo property value. The roleInfo object of the role assignment request.
+     * Sets the roleInfo property value. The roleInfo property
      * @param value Value to set for the roleInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleInfo(@javax.annotation.Nullable final PrivilegedRole value) {
-        this._roleInfo = value;
+        this.roleInfo = value;
     }
     /**
-     * Sets the schedule property value. The schedule object of the role assignment request.
+     * Sets the schedule property value. The schedule property
      * @param value Value to set for the schedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final GovernanceSchedule value) {
-        this._schedule = value;
+        this.schedule = value;
     }
     /**
-     * Sets the status property value. Read-only.The status of the role assignment request. The value can be NotStarted,Completed,RequestedApproval,Scheduled,Approved,ApprovalDenied,ApprovalAborted,Cancelling,Cancelled,Revoked,RequestExpired.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
     /**
-     * Sets the ticketNumber property value. The ticketNumber for the role assignment.
+     * Sets the ticketNumber property value. The ticketNumber property
      * @param value Value to set for the ticketNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTicketNumber(@javax.annotation.Nullable final String value) {
-        this._ticketNumber = value;
+        this.ticketNumber = value;
     }
     /**
-     * Sets the ticketSystem property value. The ticketSystem for the role assignment.
+     * Sets the ticketSystem property value. The ticketSystem property
      * @param value Value to set for the ticketSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTicketSystem(@javax.annotation.Nullable final String value) {
-        this._ticketSystem = value;
+        this.ticketSystem = value;
     }
     /**
-     * Sets the type property value. Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators add users to roles;UserAdd: Users add role assignments.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
     /**
-     * Sets the userId property value. The id of the user.
+     * Sets the userId property value. The userId property
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

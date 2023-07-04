@@ -3,27 +3,39 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AddWatermarkAction extends InformationProtectionAction implements Parsable {
-    /** Color of the font to use for the watermark. */
-    private String _fontColor;
-    /** Name of the font to use for the watermark. */
-    private String _fontName;
-    /** Font size to use for the watermark. */
-    private Integer _fontSize;
-    /** The layout property */
-    private WatermarkLayout _layout;
-    /** The contents of the watermark itself. */
-    private String _text;
-    /** The name of the UI element where the watermark should be placed. */
-    private String _uiElementName;
+    /**
+     * Color of the font to use for the watermark.
+     */
+    private String fontColor;
+    /**
+     * Name of the font to use for the watermark.
+     */
+    private String fontName;
+    /**
+     * Font size to use for the watermark.
+     */
+    private Integer fontSize;
+    /**
+     * The layout property
+     */
+    private WatermarkLayout layout;
+    /**
+     * The contents of the watermark itself.
+     */
+    private String text;
+    /**
+     * The name of the UI element where the watermark should be placed.
+     */
+    private String uiElementName;
     /**
      * Instantiates a new AddWatermarkAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddWatermarkAction() {
         super();
         this.setOdataType("#microsoft.graph.security.addWatermarkAction");
@@ -40,19 +52,18 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AddWatermarkAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("fontColor", (n) -> { currentObject.setFontColor(n.getStringValue()); });
-            this.put("fontName", (n) -> { currentObject.setFontName(n.getStringValue()); });
-            this.put("fontSize", (n) -> { currentObject.setFontSize(n.getIntegerValue()); });
-            this.put("layout", (n) -> { currentObject.setLayout(n.getEnumValue(WatermarkLayout.class)); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-            this.put("uiElementName", (n) -> { currentObject.setUiElementName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fontColor", (n) -> { this.setFontColor(n.getStringValue()); });
+        deserializerMap.put("fontName", (n) -> { this.setFontName(n.getStringValue()); });
+        deserializerMap.put("fontSize", (n) -> { this.setFontSize(n.getIntegerValue()); });
+        deserializerMap.put("layout", (n) -> { this.setLayout(n.getEnumValue(WatermarkLayout.class)); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
+        deserializerMap.put("uiElementName", (n) -> { this.setUiElementName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fontColor property value. Color of the font to use for the watermark.
@@ -60,7 +71,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      */
     @javax.annotation.Nullable
     public String getFontColor() {
-        return this._fontColor;
+        return this.fontColor;
     }
     /**
      * Gets the fontName property value. Name of the font to use for the watermark.
@@ -68,7 +79,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      */
     @javax.annotation.Nullable
     public String getFontName() {
-        return this._fontName;
+        return this.fontName;
     }
     /**
      * Gets the fontSize property value. Font size to use for the watermark.
@@ -76,15 +87,15 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      */
     @javax.annotation.Nullable
     public Integer getFontSize() {
-        return this._fontSize;
+        return this.fontSize;
     }
     /**
      * Gets the layout property value. The layout property
-     * @return a watermarkLayout
+     * @return a WatermarkLayout
      */
     @javax.annotation.Nullable
     public WatermarkLayout getLayout() {
-        return this._layout;
+        return this.layout;
     }
     /**
      * Gets the text property value. The contents of the watermark itself.
@@ -92,7 +103,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      */
     @javax.annotation.Nullable
     public String getText() {
-        return this._text;
+        return this.text;
     }
     /**
      * Gets the uiElementName property value. The name of the UI element where the watermark should be placed.
@@ -100,13 +111,14 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      */
     @javax.annotation.Nullable
     public String getUiElementName() {
-        return this._uiElementName;
+        return this.uiElementName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,47 +134,53 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      * @param value Value to set for the fontColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFontColor(@javax.annotation.Nullable final String value) {
-        this._fontColor = value;
+        this.fontColor = value;
     }
     /**
      * Sets the fontName property value. Name of the font to use for the watermark.
      * @param value Value to set for the fontName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFontName(@javax.annotation.Nullable final String value) {
-        this._fontName = value;
+        this.fontName = value;
     }
     /**
      * Sets the fontSize property value. Font size to use for the watermark.
      * @param value Value to set for the fontSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFontSize(@javax.annotation.Nullable final Integer value) {
-        this._fontSize = value;
+        this.fontSize = value;
     }
     /**
      * Sets the layout property value. The layout property
      * @param value Value to set for the layout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLayout(@javax.annotation.Nullable final WatermarkLayout value) {
-        this._layout = value;
+        this.layout = value;
     }
     /**
      * Sets the text property value. The contents of the watermark itself.
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
-        this._text = value;
+        this.text = value;
     }
     /**
      * Sets the uiElementName property value. The name of the UI element where the watermark should be placed.
      * @param value Value to set for the uiElementName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUiElementName(@javax.annotation.Nullable final String value) {
-        this._uiElementName = value;
+        this.uiElementName = value;
     }
 }

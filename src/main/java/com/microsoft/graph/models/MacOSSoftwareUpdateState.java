@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * MacOS Software Update State
+ */
 public enum MacOSSoftwareUpdateState implements ValuedEnum {
     /** The software update successfully installed */
     Success("success"),

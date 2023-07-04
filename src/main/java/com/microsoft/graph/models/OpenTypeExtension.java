@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OpenTypeExtension extends Extension implements Parsable {
-    /** A unique text identifier for an open type data extension. Required. */
-    private String _extensionName;
+    /**
+     * A unique text identifier for an open type data extension. Required.
+     */
+    private String extensionName;
     /**
      * Instantiates a new OpenTypeExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OpenTypeExtension() {
         super();
         this.setOdataType("#microsoft.graph.openTypeExtension");
@@ -34,24 +36,24 @@ public class OpenTypeExtension extends Extension implements Parsable {
      */
     @javax.annotation.Nullable
     public String getExtensionName() {
-        return this._extensionName;
+        return this.extensionName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OpenTypeExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("extensionName", (n) -> { currentObject.setExtensionName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("extensionName", (n) -> { this.setExtensionName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class OpenTypeExtension extends Extension implements Parsable {
      * @param value Value to set for the extensionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionName(@javax.annotation.Nullable final String value) {
-        this._extensionName = value;
+        this.extensionName = value;
     }
 }

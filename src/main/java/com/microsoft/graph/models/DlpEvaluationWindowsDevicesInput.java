@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput implements Parsable {
-    /** The contentProperties property */
-    private ContentProperties _contentProperties;
-    /** The sharedBy property */
-    private String _sharedBy;
+    /**
+     * The contentProperties property
+     */
+    private ContentProperties contentProperties;
+    /**
+     * The sharedBy property
+     */
+    private String sharedBy;
     /**
      * Instantiates a new DlpEvaluationWindowsDevicesInput and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DlpEvaluationWindowsDevicesInput() {
         super();
         this.setOdataType("#microsoft.graph.dlpEvaluationWindowsDevicesInput");
@@ -36,19 +40,18 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      */
     @javax.annotation.Nullable
     public ContentProperties getContentProperties() {
-        return this._contentProperties;
+        return this.contentProperties;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DlpEvaluationWindowsDevicesInput currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contentProperties", (n) -> { currentObject.setContentProperties(n.getObjectValue(ContentProperties::createFromDiscriminatorValue)); });
-            this.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentProperties", (n) -> { this.setContentProperties(n.getObjectValue(ContentProperties::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedBy", (n) -> { this.setSharedBy(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the sharedBy property value. The sharedBy property
@@ -56,13 +59,14 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      */
     @javax.annotation.Nullable
     public String getSharedBy() {
-        return this._sharedBy;
+        return this.sharedBy;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * @param value Value to set for the contentProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentProperties(@javax.annotation.Nullable final ContentProperties value) {
-        this._contentProperties = value;
+        this.contentProperties = value;
     }
     /**
      * Sets the sharedBy property value. The sharedBy property
      * @param value Value to set for the sharedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedBy(@javax.annotation.Nullable final String value) {
-        this._sharedBy = value;
+        this.sharedBy = value;
     }
 }

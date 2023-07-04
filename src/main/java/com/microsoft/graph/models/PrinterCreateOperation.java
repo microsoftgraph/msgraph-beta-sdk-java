@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterCreateOperation extends PrintOperation implements Parsable {
-    /** The signed certificate created during the registration process. Read-only. */
-    private String _certificate;
-    /** The printer property */
-    private Printer _printer;
+    /**
+     * The signed certificate created during the registration process. Read-only.
+     */
+    private String certificate;
+    /**
+     * The printer property
+     */
+    private Printer printer;
     /**
      * Instantiates a new PrinterCreateOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrinterCreateOperation() {
         super();
         this.setOdataType("#microsoft.graph.printerCreateOperation");
@@ -36,19 +40,18 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCertificate() {
-        return this._certificate;
+        return this.certificate;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrinterCreateOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificate", (n) -> { currentObject.setCertificate(n.getStringValue()); });
-            this.put("printer", (n) -> { currentObject.setPrinter(n.getObjectValue(Printer::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificate", (n) -> { this.setCertificate(n.getStringValue()); });
+        deserializerMap.put("printer", (n) -> { this.setPrinter(n.getObjectValue(Printer::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the printer property value. The printer property
@@ -56,13 +59,14 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      */
     @javax.annotation.Nullable
     public Printer getPrinter() {
-        return this._printer;
+        return this.printer;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      * @param value Value to set for the certificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificate(@javax.annotation.Nullable final String value) {
-        this._certificate = value;
+        this.certificate = value;
     }
     /**
      * Sets the printer property value. The printer property
      * @param value Value to set for the printer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinter(@javax.annotation.Nullable final Printer value) {
-        this._printer = value;
+        this.printer = value;
     }
 }

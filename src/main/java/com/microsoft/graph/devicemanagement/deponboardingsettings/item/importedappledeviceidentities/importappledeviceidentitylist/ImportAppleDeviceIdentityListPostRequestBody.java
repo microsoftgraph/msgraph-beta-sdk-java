@@ -5,22 +5,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the importAppleDeviceIdentityList method. */
 public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The importedAppleDeviceIdentities property */
-    private java.util.List<ImportedAppleDeviceIdentity> _importedAppleDeviceIdentities;
-    /** The overwriteImportedDeviceIdentities property */
-    private Boolean _overwriteImportedDeviceIdentities;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The importedAppleDeviceIdentities property
+     */
+    private java.util.List<ImportedAppleDeviceIdentity> importedAppleDeviceIdentities;
+    /**
+     * The overwriteImportedDeviceIdentities property
+     */
+    private Boolean overwriteImportedDeviceIdentities;
     /**
      * Instantiates a new importAppleDeviceIdentityListPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImportAppleDeviceIdentityListPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -40,19 +45,18 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ImportAppleDeviceIdentityListPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("importedAppleDeviceIdentities", (n) -> { currentObject.setImportedAppleDeviceIdentities(n.getCollectionOfObjectValues(ImportedAppleDeviceIdentity::createFromDiscriminatorValue)); });
-            this.put("overwriteImportedDeviceIdentities", (n) -> { currentObject.setOverwriteImportedDeviceIdentities(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("importedAppleDeviceIdentities", (n) -> { this.setImportedAppleDeviceIdentities(n.getCollectionOfObjectValues(ImportedAppleDeviceIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("overwriteImportedDeviceIdentities", (n) -> { this.setOverwriteImportedDeviceIdentities(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the importedAppleDeviceIdentities property value. The importedAppleDeviceIdentities property
@@ -60,7 +64,7 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      */
     @javax.annotation.Nullable
     public java.util.List<ImportedAppleDeviceIdentity> getImportedAppleDeviceIdentities() {
-        return this._importedAppleDeviceIdentities;
+        return this.importedAppleDeviceIdentities;
     }
     /**
      * Gets the overwriteImportedDeviceIdentities property value. The overwriteImportedDeviceIdentities property
@@ -68,13 +72,14 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      */
     @javax.annotation.Nullable
     public Boolean getOverwriteImportedDeviceIdentities() {
-        return this._overwriteImportedDeviceIdentities;
+        return this.overwriteImportedDeviceIdentities;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("importedAppleDeviceIdentities", this.getImportedAppleDeviceIdentities());
@@ -86,23 +91,26 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the importedAppleDeviceIdentities property value. The importedAppleDeviceIdentities property
      * @param value Value to set for the importedAppleDeviceIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportedAppleDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedAppleDeviceIdentity> value) {
-        this._importedAppleDeviceIdentities = value;
+        this.importedAppleDeviceIdentities = value;
     }
     /**
      * Sets the overwriteImportedDeviceIdentities property value. The overwriteImportedDeviceIdentities property
      * @param value Value to set for the overwriteImportedDeviceIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOverwriteImportedDeviceIdentities(@javax.annotation.Nullable final Boolean value) {
-        this._overwriteImportedDeviceIdentities = value;
+        this.overwriteImportedDeviceIdentities = value;
     }
 }

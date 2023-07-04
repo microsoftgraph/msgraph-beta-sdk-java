@@ -1,24 +1,23 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidDeviceComplianceLocalActionLockDevice;
-import com.microsoft.graph.models.AndroidDeviceComplianceLocalActionLockDeviceWithPasscode;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidDeviceComplianceLocalActionBase extends Entity implements Parsable {
-    /** Number of minutes to wait till a local action is enforced. Valid values 0 to 2147483647 */
-    private Integer _gracePeriodInMinutes;
+    /**
+     * Number of minutes to wait till a local action is enforced. Valid values 0 to 2147483647
+     */
+    private Integer gracePeriodInMinutes;
     /**
      * Instantiates a new AndroidDeviceComplianceLocalActionBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceComplianceLocalActionBase() {
         super();
-        this.setOdataType("#microsoft.graph.androidDeviceComplianceLocalActionBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,14 +39,13 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidDeviceComplianceLocalActionBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("gracePeriodInMinutes", (n) -> { currentObject.setGracePeriodInMinutes(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("gracePeriodInMinutes", (n) -> { this.setGracePeriodInMinutes(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the gracePeriodInMinutes property value. Number of minutes to wait till a local action is enforced. Valid values 0 to 2147483647
@@ -55,13 +53,14 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public Integer getGracePeriodInMinutes() {
-        return this._gracePeriodInMinutes;
+        return this.gracePeriodInMinutes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -72,7 +71,8 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
      * @param value Value to set for the gracePeriodInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGracePeriodInMinutes(@javax.annotation.Nullable final Integer value) {
-        this._gracePeriodInMinutes = value;
+        this.gracePeriodInMinutes = value;
     }
 }

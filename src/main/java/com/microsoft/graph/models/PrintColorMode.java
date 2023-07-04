@@ -3,12 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum PrintColorMode implements ValuedEnum {
     BlackAndWhite("blackAndWhite"),
     Grayscale("grayscale"),
     Color("color"),
-    Auto("auto");
+    Auto("auto"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     PrintColorMode(final String value) {
         this.value = value;
@@ -23,6 +23,7 @@ public enum PrintColorMode implements ValuedEnum {
             case "grayscale": return Grayscale;
             case "color": return Color;
             case "auto": return Auto;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

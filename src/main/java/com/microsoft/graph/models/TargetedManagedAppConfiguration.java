@@ -3,27 +3,43 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements Parsable {
-    /** Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps */
-    private TargetedManagedAppGroupType _appGroupType;
-    /** List of apps to which the policy is deployed. */
-    private java.util.List<ManagedMobileApp> _apps;
-    /** Navigation property to list of inclusion and exclusion groups to which the policy is deployed. */
-    private java.util.List<TargetedManagedAppPolicyAssignment> _assignments;
-    /** Count of apps to which the current policy is deployed. */
-    private Integer _deployedAppCount;
-    /** Navigation property to deployment summary of the configuration. */
-    private ManagedAppPolicyDeploymentSummary _deploymentSummary;
-    /** Indicates if the policy is deployed to any inclusion groups or not. */
-    private Boolean _isAssigned;
+    /**
+     * Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
+     */
+    private TargetedManagedAppGroupType appGroupType;
+    /**
+     * List of apps to which the policy is deployed.
+     */
+    private java.util.List<ManagedMobileApp> apps;
+    /**
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
+     */
+    private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
+    /**
+     * Count of apps to which the current policy is deployed.
+     */
+    private Integer deployedAppCount;
+    /**
+     * Navigation property to deployment summary of the configuration.
+     */
+    private ManagedAppPolicyDeploymentSummary deploymentSummary;
+    /**
+     * Indicates if the policy is deployed to any inclusion groups or not.
+     */
+    private Boolean isAssigned;
+    /**
+     * Management levels for apps
+     */
+    private AppManagementLevel targetedAppManagementLevels;
     /**
      * Instantiates a new TargetedManagedAppConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TargetedManagedAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.targetedManagedAppConfiguration");
@@ -40,11 +56,11 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     }
     /**
      * Gets the appGroupType property value. Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
-     * @return a targetedManagedAppGroupType
+     * @return a TargetedManagedAppGroupType
      */
     @javax.annotation.Nullable
     public TargetedManagedAppGroupType getAppGroupType() {
-        return this._appGroupType;
+        return this.appGroupType;
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
@@ -52,7 +68,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
-        return this._apps;
+        return this.apps;
     }
     /**
      * Gets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
@@ -60,7 +76,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @javax.annotation.Nullable
     public java.util.List<TargetedManagedAppPolicyAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
@@ -68,7 +84,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @javax.annotation.Nullable
     public Integer getDeployedAppCount() {
-        return this._deployedAppCount;
+        return this.deployedAppCount;
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
@@ -76,23 +92,23 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @javax.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
-        return this._deploymentSummary;
+        return this.deploymentSummary;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TargetedManagedAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appGroupType", (n) -> { currentObject.setAppGroupType(n.getEnumValue(TargetedManagedAppGroupType.class)); });
-            this.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
-            this.put("deployedAppCount", (n) -> { currentObject.setDeployedAppCount(n.getIntegerValue()); });
-            this.put("deploymentSummary", (n) -> { currentObject.setDeploymentSummary(n.getObjectValue(ManagedAppPolicyDeploymentSummary::createFromDiscriminatorValue)); });
-            this.put("isAssigned", (n) -> { currentObject.setIsAssigned(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appGroupType", (n) -> { this.setAppGroupType(n.getEnumValue(TargetedManagedAppGroupType.class)); });
+        deserializerMap.put("apps", (n) -> { this.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("deployedAppCount", (n) -> { this.setDeployedAppCount(n.getIntegerValue()); });
+        deserializerMap.put("deploymentSummary", (n) -> { this.setDeploymentSummary(n.getObjectValue(ManagedAppPolicyDeploymentSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("isAssigned", (n) -> { this.setIsAssigned(n.getBooleanValue()); });
+        deserializerMap.put("targetedAppManagementLevels", (n) -> { this.setTargetedAppManagementLevels(n.getEnumValue(AppManagementLevel.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
@@ -100,13 +116,22 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     @javax.annotation.Nullable
     public Boolean getIsAssigned() {
-        return this._isAssigned;
+        return this.isAssigned;
+    }
+    /**
+     * Gets the targetedAppManagementLevels property value. Management levels for apps
+     * @return a AppManagementLevel
+     */
+    @javax.annotation.Nullable
+    public AppManagementLevel getTargetedAppManagementLevels() {
+        return this.targetedAppManagementLevels;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -116,53 +141,69 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
         writer.writeIntegerValue("deployedAppCount", this.getDeployedAppCount());
         writer.writeObjectValue("deploymentSummary", this.getDeploymentSummary());
         writer.writeBooleanValue("isAssigned", this.getIsAssigned());
+        writer.writeEnumValue("targetedAppManagementLevels", this.getTargetedAppManagementLevels());
     }
     /**
      * Sets the appGroupType property value. Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
      * @param value Value to set for the appGroupType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppGroupType(@javax.annotation.Nullable final TargetedManagedAppGroupType value) {
-        this._appGroupType = value;
+        this.appGroupType = value;
     }
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
-        this._apps = value;
+        this.apps = value;
     }
     /**
      * Sets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @param value Value to set for the deployedAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
-        this._deployedAppCount = value;
+        this.deployedAppCount = value;
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @param value Value to set for the deploymentSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
-        this._deploymentSummary = value;
+        this.deploymentSummary = value;
     }
     /**
      * Sets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
      * @param value Value to set for the isAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAssigned(@javax.annotation.Nullable final Boolean value) {
-        this._isAssigned = value;
+        this.isAssigned = value;
+    }
+    /**
+     * Sets the targetedAppManagementLevels property value. Management levels for apps
+     * @param value Value to set for the targetedAppManagementLevels property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTargetedAppManagementLevels(@javax.annotation.Nullable final AppManagementLevel value) {
+        this.targetedAppManagementLevels = value;
     }
 }

@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupPolicyPresentationCheckBox extends GroupPolicyUploadedPresentation implements Parsable {
-    /** Default value for the check box. The default value is false. */
-    private Boolean _defaultChecked;
+    /**
+     * Default value for the check box. The default value is false.
+     */
+    private Boolean defaultChecked;
     /**
      * Instantiates a new GroupPolicyPresentationCheckBox and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationCheckBox() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationCheckBox");
@@ -34,24 +36,24 @@ public class GroupPolicyPresentationCheckBox extends GroupPolicyUploadedPresenta
      */
     @javax.annotation.Nullable
     public Boolean getDefaultChecked() {
-        return this._defaultChecked;
+        return this.defaultChecked;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationCheckBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultChecked", (n) -> { currentObject.setDefaultChecked(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultChecked", (n) -> { this.setDefaultChecked(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class GroupPolicyPresentationCheckBox extends GroupPolicyUploadedPresenta
      * @param value Value to set for the defaultChecked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultChecked(@javax.annotation.Nullable final Boolean value) {
-        this._defaultChecked = value;
+        this.defaultChecked = value;
     }
 }

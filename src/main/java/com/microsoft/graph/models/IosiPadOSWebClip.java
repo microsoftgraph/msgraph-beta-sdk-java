@@ -3,19 +3,39 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosiPadOSWebClip extends MobileApp implements Parsable {
-    /** The web app URL. */
-    private String _appUrl;
-    /** Whether or not to use managed browser. When true, the app will be required to be opened in an Intune-protected browser. When false, the app will not be required to be opened in an Intune-protected browser. */
-    private Boolean _useManagedBrowser;
+    /**
+     * Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
+     */
+    private String appUrl;
+    /**
+     * Whether or not to open the web clip as a full-screen web app. Defaults to false. If TRUE, opens the web clip as a full-screen web app. If FALSE, the web clip opens inside of another app, such as Safari or the app specified with targetApplicationBundleIdentifier.
+     */
+    private Boolean fullScreenEnabled;
+    /**
+     * Whether or not a full screen web clip can navigate to an external web site without showing the Safari UI. Defaults to false. If FALSE, the Safari UI appears when navigating away. If TRUE, the Safari UI will not be shown.
+     */
+    private Boolean ignoreManifestScope;
+    /**
+     * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+     */
+    private Boolean preComposedIconEnabled;
+    /**
+     * Specifies the application bundle identifier which opens the URL. Available in iOS 14 and later.
+     */
+    private String targetApplicationBundleIdentifier;
+    /**
+     * Whether or not to use managed browser. When TRUE, the app will be required to be opened in Microsoft Edge. When FALSE, the app will not be required to be opened in Microsoft Edge. By default, this property is set to FALSE.
+     */
+    private Boolean useManagedBrowser;
     /**
      * Instantiates a new IosiPadOSWebClip and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosiPadOSWebClip() {
         super();
         this.setOdataType("#microsoft.graph.iosiPadOSWebClip");
@@ -31,58 +51,136 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
         return new IosiPadOSWebClip();
     }
     /**
-     * Gets the appUrl property value. The web app URL.
+     * Gets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
      * @return a string
      */
     @javax.annotation.Nullable
     public String getAppUrl() {
-        return this._appUrl;
+        return this.appUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosiPadOSWebClip currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appUrl", (n) -> { currentObject.setAppUrl(n.getStringValue()); });
-            this.put("useManagedBrowser", (n) -> { currentObject.setUseManagedBrowser(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appUrl", (n) -> { this.setAppUrl(n.getStringValue()); });
+        deserializerMap.put("fullScreenEnabled", (n) -> { this.setFullScreenEnabled(n.getBooleanValue()); });
+        deserializerMap.put("ignoreManifestScope", (n) -> { this.setIgnoreManifestScope(n.getBooleanValue()); });
+        deserializerMap.put("preComposedIconEnabled", (n) -> { this.setPreComposedIconEnabled(n.getBooleanValue()); });
+        deserializerMap.put("targetApplicationBundleIdentifier", (n) -> { this.setTargetApplicationBundleIdentifier(n.getStringValue()); });
+        deserializerMap.put("useManagedBrowser", (n) -> { this.setUseManagedBrowser(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the useManagedBrowser property value. Whether or not to use managed browser. When true, the app will be required to be opened in an Intune-protected browser. When false, the app will not be required to be opened in an Intune-protected browser.
+     * Gets the fullScreenEnabled property value. Whether or not to open the web clip as a full-screen web app. Defaults to false. If TRUE, opens the web clip as a full-screen web app. If FALSE, the web clip opens inside of another app, such as Safari or the app specified with targetApplicationBundleIdentifier.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getFullScreenEnabled() {
+        return this.fullScreenEnabled;
+    }
+    /**
+     * Gets the ignoreManifestScope property value. Whether or not a full screen web clip can navigate to an external web site without showing the Safari UI. Defaults to false. If FALSE, the Safari UI appears when navigating away. If TRUE, the Safari UI will not be shown.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIgnoreManifestScope() {
+        return this.ignoreManifestScope;
+    }
+    /**
+     * Gets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getPreComposedIconEnabled() {
+        return this.preComposedIconEnabled;
+    }
+    /**
+     * Gets the targetApplicationBundleIdentifier property value. Specifies the application bundle identifier which opens the URL. Available in iOS 14 and later.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getTargetApplicationBundleIdentifier() {
+        return this.targetApplicationBundleIdentifier;
+    }
+    /**
+     * Gets the useManagedBrowser property value. Whether or not to use managed browser. When TRUE, the app will be required to be opened in Microsoft Edge. When FALSE, the app will not be required to be opened in Microsoft Edge. By default, this property is set to FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getUseManagedBrowser() {
-        return this._useManagedBrowser;
+        return this.useManagedBrowser;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appUrl", this.getAppUrl());
+        writer.writeBooleanValue("fullScreenEnabled", this.getFullScreenEnabled());
+        writer.writeBooleanValue("ignoreManifestScope", this.getIgnoreManifestScope());
+        writer.writeBooleanValue("preComposedIconEnabled", this.getPreComposedIconEnabled());
+        writer.writeStringValue("targetApplicationBundleIdentifier", this.getTargetApplicationBundleIdentifier());
         writer.writeBooleanValue("useManagedBrowser", this.getUseManagedBrowser());
     }
     /**
-     * Sets the appUrl property value. The web app URL.
+     * Sets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
      * @param value Value to set for the appUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppUrl(@javax.annotation.Nullable final String value) {
-        this._appUrl = value;
+        this.appUrl = value;
     }
     /**
-     * Sets the useManagedBrowser property value. Whether or not to use managed browser. When true, the app will be required to be opened in an Intune-protected browser. When false, the app will not be required to be opened in an Intune-protected browser.
+     * Sets the fullScreenEnabled property value. Whether or not to open the web clip as a full-screen web app. Defaults to false. If TRUE, opens the web clip as a full-screen web app. If FALSE, the web clip opens inside of another app, such as Safari or the app specified with targetApplicationBundleIdentifier.
+     * @param value Value to set for the fullScreenEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setFullScreenEnabled(@javax.annotation.Nullable final Boolean value) {
+        this.fullScreenEnabled = value;
+    }
+    /**
+     * Sets the ignoreManifestScope property value. Whether or not a full screen web clip can navigate to an external web site without showing the Safari UI. Defaults to false. If FALSE, the Safari UI appears when navigating away. If TRUE, the Safari UI will not be shown.
+     * @param value Value to set for the ignoreManifestScope property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIgnoreManifestScope(@javax.annotation.Nullable final Boolean value) {
+        this.ignoreManifestScope = value;
+    }
+    /**
+     * Sets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+     * @param value Value to set for the preComposedIconEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPreComposedIconEnabled(@javax.annotation.Nullable final Boolean value) {
+        this.preComposedIconEnabled = value;
+    }
+    /**
+     * Sets the targetApplicationBundleIdentifier property value. Specifies the application bundle identifier which opens the URL. Available in iOS 14 and later.
+     * @param value Value to set for the targetApplicationBundleIdentifier property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTargetApplicationBundleIdentifier(@javax.annotation.Nullable final String value) {
+        this.targetApplicationBundleIdentifier = value;
+    }
+    /**
+     * Sets the useManagedBrowser property value. Whether or not to use managed browser. When TRUE, the app will be required to be opened in Microsoft Edge. When FALSE, the app will not be required to be opened in Microsoft Edge. By default, this property is set to FALSE.
      * @param value Value to set for the useManagedBrowser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseManagedBrowser(@javax.annotation.Nullable final Boolean value) {
-        this._useManagedBrowser = value;
+        this.useManagedBrowser = value;
     }
 }

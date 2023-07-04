@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
-    /** The Android AppStoreUrl. */
-    private String _appStoreUrl;
-    /** Contains properties for the minimum operating system required for an Android mobile app. */
-    private AndroidMinimumOperatingSystem _minimumSupportedOperatingSystem;
-    /** The app's package ID. */
-    private String _packageId;
+    /**
+     * The Android AppStoreUrl.
+     */
+    private String appStoreUrl;
+    /**
+     * Contains properties for the minimum operating system required for an Android mobile app.
+     */
+    private AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
+    /**
+     * The app's package ID.
+     */
+    private String packageId;
     /**
      * Instantiates a new ManagedAndroidStoreApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAndroidStoreApp() {
         super();
         this.setOdataType("#microsoft.graph.managedAndroidStoreApp");
@@ -38,28 +44,27 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppStoreUrl() {
-        return this._appStoreUrl;
+        return this.appStoreUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedAndroidStoreApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
-            this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appStoreUrl", (n) -> { this.setAppStoreUrl(n.getStringValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. Contains properties for the minimum operating system required for an Android mobile app.
-     * @return a androidMinimumOperatingSystem
+     * @return a AndroidMinimumOperatingSystem
      */
     @javax.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this._minimumSupportedOperatingSystem;
+        return this.minimumSupportedOperatingSystem;
     }
     /**
      * Gets the packageId property value. The app's package ID.
@@ -67,13 +72,14 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPackageId() {
-        return this._packageId;
+        return this.packageId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      * @param value Value to set for the appStoreUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
-        this._appStoreUrl = value;
+        this.appStoreUrl = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. Contains properties for the minimum operating system required for an Android mobile app.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final AndroidMinimumOperatingSystem value) {
-        this._minimumSupportedOperatingSystem = value;
+        this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the packageId property value. The app's package ID.
      * @param value Value to set for the packageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
-        this._packageId = value;
+        this.packageId = value;
     }
 }

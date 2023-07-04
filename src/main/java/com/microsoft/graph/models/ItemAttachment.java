@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemAttachment extends Attachment implements Parsable {
-    /** The attached contact, message or event. Navigation property. */
-    private OutlookItem _item;
+    /**
+     * The attached contact, message or event. Navigation property.
+     */
+    private OutlookItem item;
     /**
      * Instantiates a new ItemAttachment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemAttachment() {
         super();
         this.setOdataType("#microsoft.graph.itemAttachment");
@@ -30,14 +32,13 @@ public class ItemAttachment extends Attachment implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ItemAttachment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("item", (n) -> { currentObject.setItem(n.getObjectValue(OutlookItem::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("item", (n) -> { this.setItem(n.getObjectValue(OutlookItem::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the item property value. The attached contact, message or event. Navigation property.
@@ -45,13 +46,14 @@ public class ItemAttachment extends Attachment implements Parsable {
      */
     @javax.annotation.Nullable
     public OutlookItem getItem() {
-        return this._item;
+        return this.item;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class ItemAttachment extends Attachment implements Parsable {
      * @param value Value to set for the item property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItem(@javax.annotation.Nullable final OutlookItem value) {
-        this._item = value;
+        this.item = value;
     }
 }

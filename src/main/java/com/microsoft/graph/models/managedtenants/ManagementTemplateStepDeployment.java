@@ -5,35 +5,49 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ManagementTemplateStepDeployment extends Entity implements Parsable {
-    /** The createdByUserId property */
-    private String _createdByUserId;
-    /** The createdDateTime property */
-    private OffsetDateTime _createdDateTime;
-    /** The error property */
-    private GraphAPIErrorDetails _error;
-    /** The lastActionByUserId property */
-    private String _lastActionByUserId;
-    /** The lastActionDateTime property */
-    private OffsetDateTime _lastActionDateTime;
-    /** The status property */
-    private ManagementTemplateDeploymentStatus _status;
-    /** The templateStepVersion property */
-    private ManagementTemplateStepVersion _templateStepVersion;
-    /** The tenantId property */
-    private String _tenantId;
+    /**
+     * The createdByUserId property
+     */
+    private String createdByUserId;
+    /**
+     * The createdDateTime property
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The error property
+     */
+    private GraphAPIErrorDetails error;
+    /**
+     * The lastActionByUserId property
+     */
+    private String lastActionByUserId;
+    /**
+     * The lastActionDateTime property
+     */
+    private OffsetDateTime lastActionDateTime;
+    /**
+     * The status property
+     */
+    private ManagementTemplateDeploymentStatus status;
+    /**
+     * The templateStepVersion property
+     */
+    private ManagementTemplateStepVersion templateStepVersion;
+    /**
+     * The tenantId property
+     */
+    private String tenantId;
     /**
      * Instantiates a new managementTemplateStepDeployment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagementTemplateStepDeployment() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.managementTemplateStepDeployment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +65,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCreatedByUserId() {
-        return this._createdByUserId;
+        return this.createdByUserId;
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -59,7 +73,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the error property value. The error property
@@ -67,25 +81,24 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public GraphAPIErrorDetails getError() {
-        return this._error;
+        return this.error;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagementTemplateStepDeployment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdByUserId", (n) -> { currentObject.setCreatedByUserId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(GraphAPIErrorDetails::createFromDiscriminatorValue)); });
-            this.put("lastActionByUserId", (n) -> { currentObject.setLastActionByUserId(n.getStringValue()); });
-            this.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ManagementTemplateDeploymentStatus.class)); });
-            this.put("templateStepVersion", (n) -> { currentObject.setTemplateStepVersion(n.getObjectValue(ManagementTemplateStepVersion::createFromDiscriminatorValue)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdByUserId", (n) -> { this.setCreatedByUserId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(GraphAPIErrorDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastActionByUserId", (n) -> { this.setLastActionByUserId(n.getStringValue()); });
+        deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ManagementTemplateDeploymentStatus.class)); });
+        deserializerMap.put("templateStepVersion", (n) -> { this.setTemplateStepVersion(n.getObjectValue(ManagementTemplateStepVersion::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
@@ -93,7 +106,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getLastActionByUserId() {
-        return this._lastActionByUserId;
+        return this.lastActionByUserId;
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
@@ -101,15 +114,15 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this._lastActionDateTime;
+        return this.lastActionDateTime;
     }
     /**
      * Gets the status property value. The status property
-     * @return a managementTemplateDeploymentStatus
+     * @return a ManagementTemplateDeploymentStatus
      */
     @javax.annotation.Nullable
     public ManagementTemplateDeploymentStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the templateStepVersion property value. The templateStepVersion property
@@ -117,7 +130,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public ManagementTemplateStepVersion getTemplateStepVersion() {
-        return this._templateStepVersion;
+        return this.templateStepVersion;
     }
     /**
      * Gets the tenantId property value. The tenantId property
@@ -125,13 +138,14 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -149,63 +163,71 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      * @param value Value to set for the createdByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
-        this._createdByUserId = value;
+        this.createdByUserId = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the error property value. The error property
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final GraphAPIErrorDetails value) {
-        this._error = value;
+        this.error = value;
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
-        this._lastActionByUserId = value;
+        this.lastActionByUserId = value;
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastActionDateTime = value;
+        this.lastActionDateTime = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ManagementTemplateDeploymentStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the templateStepVersion property value. The templateStepVersion property
      * @param value Value to set for the templateStepVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateStepVersion(@javax.annotation.Nullable final ManagementTemplateStepVersion value) {
-        this._templateStepVersion = value;
+        this.templateStepVersion = value;
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
 }

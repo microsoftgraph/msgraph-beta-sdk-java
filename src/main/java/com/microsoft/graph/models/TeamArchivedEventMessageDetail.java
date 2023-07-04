@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamArchivedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Initiator of the event. */
-    private IdentitySet _initiator;
-    /** Unique identifier of the team. */
-    private String _teamId;
+    /**
+     * Initiator of the event.
+     */
+    private IdentitySet initiator;
+    /**
+     * Unique identifier of the team.
+     */
+    private String teamId;
     /**
      * Instantiates a new TeamArchivedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamArchivedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamArchivedEventMessageDetail");
@@ -32,15 +36,14 @@ public class TeamArchivedEventMessageDetail extends EventMessageDetail implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamArchivedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamId", (n) -> { this.setTeamId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. Initiator of the event.
@@ -48,7 +51,7 @@ public class TeamArchivedEventMessageDetail extends EventMessageDetail implement
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Gets the teamId property value. Unique identifier of the team.
@@ -56,13 +59,14 @@ public class TeamArchivedEventMessageDetail extends EventMessageDetail implement
      */
     @javax.annotation.Nullable
     public String getTeamId() {
-        return this._teamId;
+        return this.teamId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class TeamArchivedEventMessageDetail extends EventMessageDetail implement
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
     /**
      * Sets the teamId property value. Unique identifier of the team.
      * @param value Value to set for the teamId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamId(@javax.annotation.Nullable final String value) {
-        this._teamId = value;
+        this.teamId = value;
     }
 }

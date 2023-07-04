@@ -3,13 +3,15 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Recovery key types for macOS FileVault
+ */
 public enum MacOSFileVaultRecoveryKeyTypes implements ValuedEnum {
     /** Device default value, no intent. */
     NotConfigured("notConfigured"),
-    /** An institutional recovery key is like a “master” recovery key that can be used to unlock any device whose password has been lost. */
+    /** An institutional recovery key is like a master recovery key that can be used to unlock any device whose password has been lost. */
     InstitutionalRecoveryKey("institutionalRecoveryKey"),
-    /** A personal recovery key is a unique code that can be used to unlock the user’s device, even if the password to the device is lost. */
+    /** A personal recovery key is a unique code that can be used to unlock the users device, even if the password to the device is lost. */
     PersonalRecoveryKey("personalRecoveryKey");
     public final String value;
     MacOSFileVaultRecoveryKeyTypes(final String value) {

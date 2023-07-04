@@ -4,17 +4,19 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CallActivityStatistics extends ActivityStatistics implements Parsable {
-    /** Time spent on calls outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations. */
-    private Period _afterHours;
+    /**
+     * Time spent on calls outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
+     */
+    private Period afterHours;
     /**
      * Instantiates a new CallActivityStatistics and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CallActivityStatistics() {
         super();
         this.setOdataType("#microsoft.graph.callActivityStatistics");
@@ -35,24 +37,24 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
      */
     @javax.annotation.Nullable
     public Period getAfterHours() {
-        return this._afterHours;
+        return this.afterHours;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CallActivityStatistics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("afterHours", (n) -> { currentObject.setAfterHours(n.getPeriodValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("afterHours", (n) -> { this.setAfterHours(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,7 +65,8 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
      * @param value Value to set for the afterHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAfterHours(@javax.annotation.Nullable final Period value) {
-        this._afterHours = value;
+        this.afterHours = value;
     }
 }

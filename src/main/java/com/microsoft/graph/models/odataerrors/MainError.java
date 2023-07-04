@@ -4,27 +4,39 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MainError implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The code property */
-    private String _code;
-    /** The details property */
-    private java.util.List<ErrorDetails> _details;
-    /** The innererror property */
-    private InnerError _innererror;
-    /** The message property */
-    private String _message;
-    /** The target property */
-    private String _target;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The code property
+     */
+    private String code;
+    /**
+     * The details property
+     */
+    private java.util.List<ErrorDetails> details;
+    /**
+     * The innerError property
+     */
+    private InnerError innerError;
+    /**
+     * The message property
+     */
+    private String message;
+    /**
+     * The target property
+     */
+    private String target;
     /**
      * Instantiates a new MainError and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MainError() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -44,7 +56,7 @@ public class MainError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the code property value. The code property
@@ -52,7 +64,7 @@ public class MainError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCode() {
-        return this._code;
+        return this.code;
     }
     /**
      * Gets the details property value. The details property
@@ -60,30 +72,29 @@ public class MainError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ErrorDetails> getDetails() {
-        return this._details;
+        return this.details;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MainError currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(ErrorDetails::createFromDiscriminatorValue)); });
-            this.put("innererror", (n) -> { currentObject.setInnererror(n.getObjectValue(InnerError::createFromDiscriminatorValue)); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfObjectValues(ErrorDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("innerError", (n) -> { this.setInnerError(n.getObjectValue(InnerError::createFromDiscriminatorValue)); });
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the innererror property value. The innererror property
+     * Gets the innerError property value. The innerError property
      * @return a InnerError
      */
     @javax.annotation.Nullable
-    public InnerError getInnererror() {
-        return this._innererror;
+    public InnerError getInnerError() {
+        return this.innerError;
     }
     /**
      * Gets the message property value. The message property
@@ -91,7 +102,7 @@ public class MainError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMessage() {
-        return this._message;
+        return this.message;
     }
     /**
      * Gets the target property value. The target property
@@ -99,18 +110,19 @@ public class MainError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTarget() {
-        return this._target;
+        return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("code", this.getCode());
         writer.writeCollectionOfObjectValues("details", this.getDetails());
-        writer.writeObjectValue("innererror", this.getInnererror());
+        writer.writeObjectValue("innerError", this.getInnerError());
         writer.writeStringValue("message", this.getMessage());
         writer.writeStringValue("target", this.getTarget());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -120,47 +132,53 @@ public class MainError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the code property value. The code property
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
-        this._code = value;
+        this.code = value;
     }
     /**
      * Sets the details property value. The details property
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final java.util.List<ErrorDetails> value) {
-        this._details = value;
+        this.details = value;
     }
     /**
-     * Sets the innererror property value. The innererror property
-     * @param value Value to set for the innererror property.
+     * Sets the innerError property value. The innerError property
+     * @param value Value to set for the innerError property.
      * @return a void
      */
-    public void setInnererror(@javax.annotation.Nullable final InnerError value) {
-        this._innererror = value;
+    @javax.annotation.Nonnull
+    public void setInnerError(@javax.annotation.Nullable final InnerError value) {
+        this.innerError = value;
     }
     /**
      * Sets the message property value. The message property
      * @param value Value to set for the message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
-        this._message = value;
+        this.message = value;
     }
     /**
      * Sets the target property value. The target property
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final String value) {
-        this._target = value;
+        this.target = value;
     }
 }

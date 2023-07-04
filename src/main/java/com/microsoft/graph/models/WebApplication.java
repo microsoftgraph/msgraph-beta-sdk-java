@@ -4,34 +4,49 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WebApplication implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Home page or landing page of the application. */
-    private String _homePageUrl;
-    /** Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow. */
-    private ImplicitGrantSettings _implicitGrantSettings;
-    /** Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols. */
-    private String _logoutUrl;
-    /** The oauth2AllowImplicitFlow property */
-    private Boolean _oauth2AllowImplicitFlow;
-    /** The OdataType property */
-    private String _odataType;
-    /** Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. */
-    private java.util.List<String> _redirectUris;
-    /** Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML. */
-    private java.util.List<RedirectUriSettings> _redirectUriSettings;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Home page or landing page of the application.
+     */
+    private String homePageUrl;
+    /**
+     * Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
+     */
+    private ImplicitGrantSettings implicitGrantSettings;
+    /**
+     * Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
+     */
+    private String logoutUrl;
+    /**
+     * The oauth2AllowImplicitFlow property
+     */
+    private Boolean oauth2AllowImplicitFlow;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+     */
+    private java.util.List<String> redirectUris;
+    /**
+     * Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML.
+     */
+    private java.util.List<RedirectUriSettings> redirectUriSettings;
     /**
      * Instantiates a new webApplication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WebApplication() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.webApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,24 +64,23 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WebApplication currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
-            this.put("implicitGrantSettings", (n) -> { currentObject.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
-            this.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
-            this.put("oauth2AllowImplicitFlow", (n) -> { currentObject.setOauth2AllowImplicitFlow(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("redirectUris", (n) -> { currentObject.setRedirectUris(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("redirectUriSettings", (n) -> { currentObject.setRedirectUriSettings(n.getCollectionOfObjectValues(RedirectUriSettings::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("homePageUrl", (n) -> { this.setHomePageUrl(n.getStringValue()); });
+        deserializerMap.put("implicitGrantSettings", (n) -> { this.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("logoutUrl", (n) -> { this.setLogoutUrl(n.getStringValue()); });
+        deserializerMap.put("oauth2AllowImplicitFlow", (n) -> { this.setOauth2AllowImplicitFlow(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("redirectUris", (n) -> { this.setRedirectUris(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("redirectUriSettings", (n) -> { this.setRedirectUriSettings(n.getCollectionOfObjectValues(RedirectUriSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the homePageUrl property value. Home page or landing page of the application.
@@ -74,7 +88,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getHomePageUrl() {
-        return this._homePageUrl;
+        return this.homePageUrl;
     }
     /**
      * Gets the implicitGrantSettings property value. Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
@@ -82,7 +96,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ImplicitGrantSettings getImplicitGrantSettings() {
-        return this._implicitGrantSettings;
+        return this.implicitGrantSettings;
     }
     /**
      * Gets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
@@ -90,7 +104,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLogoutUrl() {
-        return this._logoutUrl;
+        return this.logoutUrl;
     }
     /**
      * Gets the oauth2AllowImplicitFlow property value. The oauth2AllowImplicitFlow property
@@ -98,7 +112,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getOauth2AllowImplicitFlow() {
-        return this._oauth2AllowImplicitFlow;
+        return this.oauth2AllowImplicitFlow;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -106,7 +120,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the redirectUris property value. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
@@ -114,21 +128,22 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRedirectUris() {
-        return this._redirectUris;
+        return this.redirectUris;
     }
     /**
      * Gets the redirectUriSettings property value. Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML.
-     * @return a redirectUriSettings
+     * @return a RedirectUriSettings
      */
     @javax.annotation.Nullable
     public java.util.List<RedirectUriSettings> getRedirectUriSettings() {
-        return this._redirectUriSettings;
+        return this.redirectUriSettings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("homePageUrl", this.getHomePageUrl());
@@ -145,63 +160,71 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the homePageUrl property value. Home page or landing page of the application.
      * @param value Value to set for the homePageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomePageUrl(@javax.annotation.Nullable final String value) {
-        this._homePageUrl = value;
+        this.homePageUrl = value;
     }
     /**
      * Sets the implicitGrantSettings property value. Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
      * @param value Value to set for the implicitGrantSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImplicitGrantSettings(@javax.annotation.Nullable final ImplicitGrantSettings value) {
-        this._implicitGrantSettings = value;
+        this.implicitGrantSettings = value;
     }
     /**
      * Sets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
      * @param value Value to set for the logoutUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoutUrl(@javax.annotation.Nullable final String value) {
-        this._logoutUrl = value;
+        this.logoutUrl = value;
     }
     /**
      * Sets the oauth2AllowImplicitFlow property value. The oauth2AllowImplicitFlow property
      * @param value Value to set for the oauth2AllowImplicitFlow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOauth2AllowImplicitFlow(@javax.annotation.Nullable final Boolean value) {
-        this._oauth2AllowImplicitFlow = value;
+        this.oauth2AllowImplicitFlow = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the redirectUris property value. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      * @param value Value to set for the redirectUris property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRedirectUris(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._redirectUris = value;
+        this.redirectUris = value;
     }
     /**
      * Sets the redirectUriSettings property value. Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML.
      * @param value Value to set for the redirectUriSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRedirectUriSettings(@javax.annotation.Nullable final java.util.List<RedirectUriSettings> value) {
-        this._redirectUriSettings = value;
+        this.redirectUriSettings = value;
     }
 }

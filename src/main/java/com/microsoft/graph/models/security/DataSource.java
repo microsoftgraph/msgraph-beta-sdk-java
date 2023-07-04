@@ -2,34 +2,37 @@ package com.microsoft.graph.models.security;
 
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.models.IdentitySet;
-import com.microsoft.graph.models.security.SiteSource;
-import com.microsoft.graph.models.security.UnifiedGroupSource;
-import com.microsoft.graph.models.security.UserSource;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class DataSource extends Entity implements Parsable {
-    /** The user who created the dataSource. */
-    private IdentitySet _createdBy;
-    /** The date and time the dataSource was created. */
-    private OffsetDateTime _createdDateTime;
-    /** The display name of the dataSource. This will be the name of the SharePoint site. */
-    private String _displayName;
-    /** The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial */
-    private DataSourceHoldStatus _holdStatus;
+    /**
+     * The user who created the dataSource.
+     */
+    private IdentitySet createdBy;
+    /**
+     * The date and time the dataSource was created.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The display name of the dataSource. This will be the name of the SharePoint site.
+     */
+    private String displayName;
+    /**
+     * The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
+     */
+    private DataSourceHoldStatus holdStatus;
     /**
      * Instantiates a new dataSource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DataSource() {
         super();
-        this.setOdataType("#microsoft.graph.security.dataSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,7 +59,7 @@ public class DataSource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The date and time the dataSource was created.
@@ -64,7 +67,7 @@ public class DataSource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
@@ -72,21 +75,20 @@ public class DataSource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DataSource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("holdStatus", (n) -> { currentObject.setHoldStatus(n.getEnumValue(DataSourceHoldStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("holdStatus", (n) -> { this.setHoldStatus(n.getEnumValue(DataSourceHoldStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
@@ -94,13 +96,14 @@ public class DataSource extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DataSourceHoldStatus getHoldStatus() {
-        return this._holdStatus;
+        return this.holdStatus;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -114,31 +117,35 @@ public class DataSource extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the dataSource was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
      * @param value Value to set for the holdStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHoldStatus(@javax.annotation.Nullable final DataSourceHoldStatus value) {
-        this._holdStatus = value;
+        this.holdStatus = value;
     }
 }

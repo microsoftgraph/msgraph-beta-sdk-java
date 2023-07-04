@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessProfileBase implements Parsable {
-    /** File name to display in UI. */
-    private String _certFileName;
-    /** Possible values for the Certificate Destination Store. */
-    private CertificateDestinationStore _destinationStore;
-    /** Trusted Root Certificate */
-    private byte[] _trustedRootCertificate;
+    /**
+     * File name to display in UI.
+     */
+    private String certFileName;
+    /**
+     * Possible values for the Certificate Destination Store.
+     */
+    private CertificateDestinationStore destinationStore;
+    /**
+     * Trusted Root Certificate
+     */
+    private byte[] trustedRootCertificate;
     /**
      * Instantiates a new Windows10XTrustedRootCertificate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10XTrustedRootCertificate() {
         super();
         this.setOdataType("#microsoft.graph.windows10XTrustedRootCertificate");
@@ -38,42 +44,42 @@ public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAc
      */
     @javax.annotation.Nullable
     public String getCertFileName() {
-        return this._certFileName;
+        return this.certFileName;
     }
     /**
      * Gets the destinationStore property value. Possible values for the Certificate Destination Store.
-     * @return a certificateDestinationStore
+     * @return a CertificateDestinationStore
      */
     @javax.annotation.Nullable
     public CertificateDestinationStore getDestinationStore() {
-        return this._destinationStore;
+        return this.destinationStore;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10XTrustedRootCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certFileName", (n) -> { currentObject.setCertFileName(n.getStringValue()); });
-            this.put("destinationStore", (n) -> { currentObject.setDestinationStore(n.getEnumValue(CertificateDestinationStore.class)); });
-            this.put("trustedRootCertificate", (n) -> { currentObject.setTrustedRootCertificate(n.getByteArrayValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certFileName", (n) -> { this.setCertFileName(n.getStringValue()); });
+        deserializerMap.put("destinationStore", (n) -> { this.setDestinationStore(n.getEnumValue(CertificateDestinationStore.class)); });
+        deserializerMap.put("trustedRootCertificate", (n) -> { this.setTrustedRootCertificate(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the trustedRootCertificate property value. Trusted Root Certificate
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getTrustedRootCertificate() {
-        return this._trustedRootCertificate;
+        return this.trustedRootCertificate;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAc
      * @param value Value to set for the certFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertFileName(@javax.annotation.Nullable final String value) {
-        this._certFileName = value;
+        this.certFileName = value;
     }
     /**
      * Sets the destinationStore property value. Possible values for the Certificate Destination Store.
      * @param value Value to set for the destinationStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationStore(@javax.annotation.Nullable final CertificateDestinationStore value) {
-        this._destinationStore = value;
+        this.destinationStore = value;
     }
     /**
      * Sets the trustedRootCertificate property value. Trusted Root Certificate
      * @param value Value to set for the trustedRootCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedRootCertificate(@javax.annotation.Nullable final byte[] value) {
-        this._trustedRootCertificate = value;
+        this.trustedRootCertificate = value;
     }
 }

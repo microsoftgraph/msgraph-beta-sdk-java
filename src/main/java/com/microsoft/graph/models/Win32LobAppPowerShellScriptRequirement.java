@@ -3,27 +3,39 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement implements Parsable {
-    /** Contains all supported Powershell Script output detection type. */
-    private Win32LobAppPowerShellScriptDetectionType _detectionType;
-    /** The unique display name for this rule */
-    private String _displayName;
-    /** A value indicating whether signature check is enforced */
-    private Boolean _enforceSignatureCheck;
-    /** A value indicating whether this script should run as 32-bit */
-    private Boolean _runAs32Bit;
-    /** Indicates the type of execution context the app runs in. */
-    private RunAsAccountType _runAsAccount;
-    /** The base64 encoded script content to detect Win32 Line of Business (LoB) app */
-    private String _scriptContent;
+    /**
+     * Contains all supported Powershell Script output detection type.
+     */
+    private Win32LobAppPowerShellScriptDetectionType detectionType;
+    /**
+     * The unique display name for this rule
+     */
+    private String displayName;
+    /**
+     * A value indicating whether signature check is enforced
+     */
+    private Boolean enforceSignatureCheck;
+    /**
+     * A value indicating whether this script should run as 32-bit
+     */
+    private Boolean runAs32Bit;
+    /**
+     * Indicates the type of execution context the app runs in.
+     */
+    private RunAsAccountType runAsAccount;
+    /**
+     * The base64 encoded script content to detect Win32 Line of Business (LoB) app
+     */
+    private String scriptContent;
     /**
      * Instantiates a new Win32LobAppPowerShellScriptRequirement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppPowerShellScriptRequirement() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppPowerShellScriptRequirement");
@@ -40,11 +52,11 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     }
     /**
      * Gets the detectionType property value. Contains all supported Powershell Script output detection type.
-     * @return a win32LobAppPowerShellScriptDetectionType
+     * @return a Win32LobAppPowerShellScriptDetectionType
      */
     @javax.annotation.Nullable
     public Win32LobAppPowerShellScriptDetectionType getDetectionType() {
-        return this._detectionType;
+        return this.detectionType;
     }
     /**
      * Gets the displayName property value. The unique display name for this rule
@@ -52,7 +64,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the enforceSignatureCheck property value. A value indicating whether signature check is enforced
@@ -60,23 +72,22 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      */
     @javax.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
-        return this._enforceSignatureCheck;
+        return this.enforceSignatureCheck;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Win32LobAppPowerShellScriptRequirement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getEnumValue(Win32LobAppPowerShellScriptDetectionType.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });
-            this.put("runAs32Bit", (n) -> { currentObject.setRunAs32Bit(n.getBooleanValue()); });
-            this.put("runAsAccount", (n) -> { currentObject.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
-            this.put("scriptContent", (n) -> { currentObject.setScriptContent(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("detectionType", (n) -> { this.setDetectionType(n.getEnumValue(Win32LobAppPowerShellScriptDetectionType.class)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enforceSignatureCheck", (n) -> { this.setEnforceSignatureCheck(n.getBooleanValue()); });
+        deserializerMap.put("runAs32Bit", (n) -> { this.setRunAs32Bit(n.getBooleanValue()); });
+        deserializerMap.put("runAsAccount", (n) -> { this.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
+        deserializerMap.put("scriptContent", (n) -> { this.setScriptContent(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the runAs32Bit property value. A value indicating whether this script should run as 32-bit
@@ -84,15 +95,15 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      */
     @javax.annotation.Nullable
     public Boolean getRunAs32Bit() {
-        return this._runAs32Bit;
+        return this.runAs32Bit;
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
-     * @return a runAsAccountType
+     * @return a RunAsAccountType
      */
     @javax.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
-        return this._runAsAccount;
+        return this.runAsAccount;
     }
     /**
      * Gets the scriptContent property value. The base64 encoded script content to detect Win32 Line of Business (LoB) app
@@ -100,13 +111,14 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      */
     @javax.annotation.Nullable
     public String getScriptContent() {
-        return this._scriptContent;
+        return this.scriptContent;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,47 +134,53 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * @param value Value to set for the detectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionType(@javax.annotation.Nullable final Win32LobAppPowerShellScriptDetectionType value) {
-        this._detectionType = value;
+        this.detectionType = value;
     }
     /**
      * Sets the displayName property value. The unique display name for this rule
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the enforceSignatureCheck property value. A value indicating whether signature check is enforced
      * @param value Value to set for the enforceSignatureCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforceSignatureCheck(@javax.annotation.Nullable final Boolean value) {
-        this._enforceSignatureCheck = value;
+        this.enforceSignatureCheck = value;
     }
     /**
      * Sets the runAs32Bit property value. A value indicating whether this script should run as 32-bit
      * @param value Value to set for the runAs32Bit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAs32Bit(@javax.annotation.Nullable final Boolean value) {
-        this._runAs32Bit = value;
+        this.runAs32Bit = value;
     }
     /**
      * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAsAccount(@javax.annotation.Nullable final RunAsAccountType value) {
-        this._runAsAccount = value;
+        this.runAsAccount = value;
     }
     /**
      * Sets the scriptContent property value. The base64 encoded script content to detect Win32 Line of Business (LoB) app
      * @param value Value to set for the scriptContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScriptContent(@javax.annotation.Nullable final String value) {
-        this._scriptContent = value;
+        this.scriptContent = value;
     }
 }

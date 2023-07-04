@@ -3,23 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Supported platform types.
+ */
 public enum DeviceManagementConfigurationPlatforms implements ValuedEnum {
-    /** None. */
+    /** Default. No platform type specified. */
     None("none"),
-    /** Android. */
+    /** Settings for Android platform. */
     Android("android"),
-    /** iOS. */
+    /** Settings for iOS platform. */
     IOS("iOS"),
-    /** MacOS. */
+    /** Settings for MacOS platform. */
     MacOS("macOS"),
     /** Windows 10 X. */
     Windows10X("windows10X"),
-    /** Windows 10. */
+    /** Settings for Windows 10 platform. */
     Windows10("windows10"),
-    /** Linux. */
+    /** Settings for Linux platform. */
     Linux("linux"),
-    /** Sentinel member for cases where the client cannot handle the new enum values. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceManagementConfigurationPlatforms(final String value) {

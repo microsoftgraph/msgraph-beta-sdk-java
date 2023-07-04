@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * The ODJ request states.
+ */
 public enum DeviceManagementDomainJoinConnectorState implements ValuedEnum {
     /** Connector is actively pinging Intune. */
     Active("active"),

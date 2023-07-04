@@ -3,29 +3,40 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Security baseline state for a device. */
+/**
+ * Security baseline state for a device.
+ */
 public class SecurityBaselineState extends Entity implements Parsable {
-    /** The display name of the security baseline */
-    private String _displayName;
-    /** The security baseline template id */
-    private String _securityBaselineTemplateId;
-    /** The security baseline state for different settings for a device */
-    private java.util.List<SecurityBaselineSettingState> _settingStates;
-    /** Security Baseline Compliance State */
-    private SecurityBaselineComplianceState _state;
-    /** User Principal Name */
-    private String _userPrincipalName;
+    /**
+     * The display name of the security baseline
+     */
+    private String displayName;
+    /**
+     * The security baseline template id
+     */
+    private String securityBaselineTemplateId;
+    /**
+     * The security baseline state for different settings for a device
+     */
+    private java.util.List<SecurityBaselineSettingState> settingStates;
+    /**
+     * Security Baseline Compliance State
+     */
+    private SecurityBaselineComplianceState state;
+    /**
+     * User Principal Name
+     */
+    private String userPrincipalName;
     /**
      * Instantiates a new securityBaselineState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityBaselineState() {
         super();
-        this.setOdataType("#microsoft.graph.securityBaselineState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,22 +54,21 @@ public class SecurityBaselineState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SecurityBaselineState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("securityBaselineTemplateId", (n) -> { currentObject.setSecurityBaselineTemplateId(n.getStringValue()); });
-            this.put("settingStates", (n) -> { currentObject.setSettingStates(n.getCollectionOfObjectValues(SecurityBaselineSettingState::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(SecurityBaselineComplianceState.class)); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("securityBaselineTemplateId", (n) -> { this.setSecurityBaselineTemplateId(n.getStringValue()); });
+        deserializerMap.put("settingStates", (n) -> { this.setSettingStates(n.getCollectionOfObjectValues(SecurityBaselineSettingState::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(SecurityBaselineComplianceState.class)); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the securityBaselineTemplateId property value. The security baseline template id
@@ -66,7 +76,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSecurityBaselineTemplateId() {
-        return this._securityBaselineTemplateId;
+        return this.securityBaselineTemplateId;
     }
     /**
      * Gets the settingStates property value. The security baseline state for different settings for a device
@@ -74,15 +84,15 @@ public class SecurityBaselineState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SecurityBaselineSettingState> getSettingStates() {
-        return this._settingStates;
+        return this.settingStates;
     }
     /**
      * Gets the state property value. Security Baseline Compliance State
-     * @return a securityBaselineComplianceState
+     * @return a SecurityBaselineComplianceState
      */
     @javax.annotation.Nullable
     public SecurityBaselineComplianceState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
@@ -90,13 +100,14 @@ public class SecurityBaselineState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,39 +122,44 @@ public class SecurityBaselineState extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the securityBaselineTemplateId property value. The security baseline template id
      * @param value Value to set for the securityBaselineTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityBaselineTemplateId(@javax.annotation.Nullable final String value) {
-        this._securityBaselineTemplateId = value;
+        this.securityBaselineTemplateId = value;
     }
     /**
      * Sets the settingStates property value. The security baseline state for different settings for a device
      * @param value Value to set for the settingStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingStates(@javax.annotation.Nullable final java.util.List<SecurityBaselineSettingState> value) {
-        this._settingStates = value;
+        this.settingStates = value;
     }
     /**
      * Sets the state property value. Security Baseline Compliance State
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final SecurityBaselineComplianceState value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

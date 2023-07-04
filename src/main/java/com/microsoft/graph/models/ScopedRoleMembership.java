@@ -3,25 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class ScopedRoleMembership extends Entity implements Parsable {
-    /** Unique identifier for the administrative unit that the directory role is scoped to */
-    private String _administrativeUnitId;
-    /** Unique identifier for the directory role that the member is in. */
-    private String _roleId;
-    /** The roleMemberInfo property */
-    private Identity _roleMemberInfo;
+    /**
+     * Unique identifier for the administrative unit that the directory role is scoped to
+     */
+    private String administrativeUnitId;
+    /**
+     * Unique identifier for the directory role that the member is in.
+     */
+    private String roleId;
+    /**
+     * The roleMemberInfo property
+     */
+    private Identity roleMemberInfo;
     /**
      * Instantiates a new scopedRoleMembership and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ScopedRoleMembership() {
         super();
-        this.setOdataType("#microsoft.graph.scopedRoleMembership");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,20 +43,19 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAdministrativeUnitId() {
-        return this._administrativeUnitId;
+        return this.administrativeUnitId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ScopedRoleMembership currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("administrativeUnitId", (n) -> { currentObject.setAdministrativeUnitId(n.getStringValue()); });
-            this.put("roleId", (n) -> { currentObject.setRoleId(n.getStringValue()); });
-            this.put("roleMemberInfo", (n) -> { currentObject.setRoleMemberInfo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("administrativeUnitId", (n) -> { this.setAdministrativeUnitId(n.getStringValue()); });
+        deserializerMap.put("roleId", (n) -> { this.setRoleId(n.getStringValue()); });
+        deserializerMap.put("roleMemberInfo", (n) -> { this.setRoleMemberInfo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the roleId property value. Unique identifier for the directory role that the member is in.
@@ -60,21 +63,22 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRoleId() {
-        return this._roleId;
+        return this.roleId;
     }
     /**
      * Gets the roleMemberInfo property value. The roleMemberInfo property
-     * @return a identity
+     * @return a Identity
      */
     @javax.annotation.Nullable
     public Identity getRoleMemberInfo() {
-        return this._roleMemberInfo;
+        return this.roleMemberInfo;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,23 +91,26 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      * @param value Value to set for the administrativeUnitId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdministrativeUnitId(@javax.annotation.Nullable final String value) {
-        this._administrativeUnitId = value;
+        this.administrativeUnitId = value;
     }
     /**
      * Sets the roleId property value. Unique identifier for the directory role that the member is in.
      * @param value Value to set for the roleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleId(@javax.annotation.Nullable final String value) {
-        this._roleId = value;
+        this.roleId = value;
     }
     /**
      * Sets the roleMemberInfo property value. The roleMemberInfo property
      * @param value Value to set for the roleMemberInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleMemberInfo(@javax.annotation.Nullable final Identity value) {
-        this._roleMemberInfo = value;
+        this.roleMemberInfo = value;
     }
 }

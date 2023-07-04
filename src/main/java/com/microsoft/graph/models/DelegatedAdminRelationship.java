@@ -5,42 +5,65 @@ import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DelegatedAdminRelationship extends Entity implements Parsable {
-    /** The access assignments associated with the delegated admin relationship. */
-    private java.util.List<DelegatedAdminAccessAssignment> _accessAssignments;
-    /** The accessDetails property */
-    private DelegatedAdminAccessDetails _accessDetails;
-    /** The date and time in ISO 8601 format and in UTC time when the relationship became active. Read-only. */
-    private OffsetDateTime _activatedDateTime;
-    /** The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only. */
-    private OffsetDateTime _createdDateTime;
-    /** The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer. */
-    private DelegatedAdminRelationshipCustomerParticipant _customer;
-    /** The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer. */
-    private String _displayName;
-    /** The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer. */
-    private Period _duration;
-    /** The date and time in ISO 8601 format and in UTC time when the status of relationship changes to either terminated or expired. Calculated as endDateTime = activatedDateTime + duration. Read-only. */
-    private OffsetDateTime _endDateTime;
-    /** The date and time in ISO 8601 format and in UTC time when the relationship was last modified. Read-only. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** The long running operations associated with the delegated admin relationship. */
-    private java.util.List<DelegatedAdminRelationshipOperation> _operations;
-    /** The requests associated with the delegated admin relationship. */
-    private java.util.List<DelegatedAdminRelationshipRequest> _requests;
-    /** The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy. */
-    private DelegatedAdminRelationshipStatus _status;
+    /**
+     * The access assignments associated with the delegated admin relationship.
+     */
+    private java.util.List<DelegatedAdminAccessAssignment> accessAssignments;
+    /**
+     * The accessDetails property
+     */
+    private DelegatedAdminAccessDetails accessDetails;
+    /**
+     * The date and time in ISO 8601 format and in UTC time when the relationship became active. Read-only.
+     */
+    private OffsetDateTime activatedDateTime;
+    /**
+     * The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
+     */
+    private DelegatedAdminRelationshipCustomerParticipant customer;
+    /**
+     * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     */
+    private String displayName;
+    /**
+     * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
+     */
+    private Period duration;
+    /**
+     * The date and time in ISO 8601 format and in UTC time when the status of relationship changes to either terminated or expired. Calculated as endDateTime = activatedDateTime + duration. Read-only.
+     */
+    private OffsetDateTime endDateTime;
+    /**
+     * The date and time in ISO 8601 format and in UTC time when the relationship was last modified. Read-only.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * The long running operations associated with the delegated admin relationship.
+     */
+    private java.util.List<DelegatedAdminRelationshipOperation> operations;
+    /**
+     * The requests associated with the delegated admin relationship.
+     */
+    private java.util.List<DelegatedAdminRelationshipRequest> requests;
+    /**
+     * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
+     */
+    private DelegatedAdminRelationshipStatus status;
     /**
      * Instantiates a new DelegatedAdminRelationship and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedAdminRelationship() {
         super();
-        this.setOdataType("#microsoft.graph.delegatedAdminRelationship");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,15 +81,15 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DelegatedAdminAccessAssignment> getAccessAssignments() {
-        return this._accessAssignments;
+        return this.accessAssignments;
     }
     /**
      * Gets the accessDetails property value. The accessDetails property
-     * @return a delegatedAdminAccessDetails
+     * @return a DelegatedAdminAccessDetails
      */
     @javax.annotation.Nullable
     public DelegatedAdminAccessDetails getAccessDetails() {
-        return this._accessDetails;
+        return this.accessDetails;
     }
     /**
      * Gets the activatedDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship became active. Read-only.
@@ -74,7 +97,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getActivatedDateTime() {
-        return this._activatedDateTime;
+        return this.activatedDateTime;
     }
     /**
      * Gets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
@@ -82,7 +105,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
@@ -90,7 +113,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DelegatedAdminRelationshipCustomerParticipant getCustomer() {
-        return this._customer;
+        return this.customer;
     }
     /**
      * Gets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
@@ -98,7 +121,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
@@ -106,7 +129,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Period getDuration() {
-        return this._duration;
+        return this.duration;
     }
     /**
      * Gets the endDateTime property value. The date and time in ISO 8601 format and in UTC time when the status of relationship changes to either terminated or expired. Calculated as endDateTime = activatedDateTime + duration. Read-only.
@@ -114,29 +137,28 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DelegatedAdminRelationship currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessAssignments", (n) -> { currentObject.setAccessAssignments(n.getCollectionOfObjectValues(DelegatedAdminAccessAssignment::createFromDiscriminatorValue)); });
-            this.put("accessDetails", (n) -> { currentObject.setAccessDetails(n.getObjectValue(DelegatedAdminAccessDetails::createFromDiscriminatorValue)); });
-            this.put("activatedDateTime", (n) -> { currentObject.setActivatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("customer", (n) -> { currentObject.setCustomer(n.getObjectValue(DelegatedAdminRelationshipCustomerParticipant::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("duration", (n) -> { currentObject.setDuration(n.getPeriodValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(DelegatedAdminRelationshipOperation::createFromDiscriminatorValue)); });
-            this.put("requests", (n) -> { currentObject.setRequests(n.getCollectionOfObjectValues(DelegatedAdminRelationshipRequest::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DelegatedAdminRelationshipStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessAssignments", (n) -> { this.setAccessAssignments(n.getCollectionOfObjectValues(DelegatedAdminAccessAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessDetails", (n) -> { this.setAccessDetails(n.getObjectValue(DelegatedAdminAccessDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("activatedDateTime", (n) -> { this.setActivatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customer", (n) -> { this.setCustomer(n.getObjectValue(DelegatedAdminRelationshipCustomerParticipant::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodValue()); });
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(DelegatedAdminRelationshipOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("requests", (n) -> { this.setRequests(n.getCollectionOfObjectValues(DelegatedAdminRelationshipRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DelegatedAdminRelationshipStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship was last modified. Read-only.
@@ -144,7 +166,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the operations property value. The long running operations associated with the delegated admin relationship.
@@ -152,7 +174,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DelegatedAdminRelationshipOperation> getOperations() {
-        return this._operations;
+        return this.operations;
     }
     /**
      * Gets the requests property value. The requests associated with the delegated admin relationship.
@@ -160,7 +182,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DelegatedAdminRelationshipRequest> getRequests() {
-        return this._requests;
+        return this.requests;
     }
     /**
      * Gets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
@@ -168,13 +190,14 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DelegatedAdminRelationshipStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -196,95 +219,107 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      * @param value Value to set for the accessAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessAssignments(@javax.annotation.Nullable final java.util.List<DelegatedAdminAccessAssignment> value) {
-        this._accessAssignments = value;
+        this.accessAssignments = value;
     }
     /**
      * Sets the accessDetails property value. The accessDetails property
      * @param value Value to set for the accessDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessDetails(@javax.annotation.Nullable final DelegatedAdminAccessDetails value) {
-        this._accessDetails = value;
+        this.accessDetails = value;
     }
     /**
      * Sets the activatedDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship became active. Read-only.
      * @param value Value to set for the activatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._activatedDateTime = value;
+        this.activatedDateTime = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
      * @param value Value to set for the customer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomer(@javax.annotation.Nullable final DelegatedAdminRelationshipCustomerParticipant value) {
-        this._customer = value;
+        this.customer = value;
     }
     /**
      * Sets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
      * @param value Value to set for the duration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDuration(@javax.annotation.Nullable final Period value) {
-        this._duration = value;
+        this.duration = value;
     }
     /**
      * Sets the endDateTime property value. The date and time in ISO 8601 format and in UTC time when the status of relationship changes to either terminated or expired. Calculated as endDateTime = activatedDateTime + duration. Read-only.
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time in ISO 8601 format and in UTC time when the relationship was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the operations property value. The long running operations associated with the delegated admin relationship.
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<DelegatedAdminRelationshipOperation> value) {
-        this._operations = value;
+        this.operations = value;
     }
     /**
      * Sets the requests property value. The requests associated with the delegated admin relationship.
      * @param value Value to set for the requests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequests(@javax.annotation.Nullable final java.util.List<DelegatedAdminRelationshipRequest> value) {
-        this._requests = value;
+        this.requests = value;
     }
     /**
      * Sets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DelegatedAdminRelationshipStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

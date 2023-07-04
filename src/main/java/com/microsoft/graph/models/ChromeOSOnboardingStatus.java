@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the connect method. */
+/**
+ * The onboarding status of the tenant.
+ */
 public enum ChromeOSOnboardingStatus implements ValuedEnum {
     /** Unknown */
     Unknown("unknown"),

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * VPN connection types.
+ */
 public enum Windows10VpnConnectionType implements ValuedEnum {
     /** Pulse Secure. */
     PulseSecure("pulseSecure"),

@@ -3,20 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExactMatchDataStore extends ExactMatchDataStoreBase implements Parsable {
-    /** The sessions property */
-    private java.util.List<ExactMatchSession> _sessions;
+    /**
+     * The sessions property
+     */
+    private java.util.List<ExactMatchSession> sessions;
     /**
      * Instantiates a new ExactMatchDataStore and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExactMatchDataStore() {
         super();
-        this.setOdataType("#microsoft.graph.exactMatchDataStore");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +31,13 @@ public class ExactMatchDataStore extends ExactMatchDataStoreBase implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExactMatchDataStore currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("sessions", (n) -> { currentObject.setSessions(n.getCollectionOfObjectValues(ExactMatchSession::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(ExactMatchSession::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the sessions property value. The sessions property
@@ -45,13 +45,14 @@ public class ExactMatchDataStore extends ExactMatchDataStoreBase implements Pars
      */
     @javax.annotation.Nullable
     public java.util.List<ExactMatchSession> getSessions() {
-        return this._sessions;
+        return this.sessions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +63,8 @@ public class ExactMatchDataStore extends ExactMatchDataStoreBase implements Pars
      * @param value Value to set for the sessions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessions(@javax.annotation.Nullable final java.util.List<ExactMatchSession> value) {
-        this._sessions = value;
+        this.sessions = value;
     }
 }

@@ -3,22 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ParticipantLeftNotification extends Entity implements Parsable {
-    /** The call property */
-    private Call _call;
-    /** ID of the participant under the policy who has left the meeting. */
-    private String _participantId;
+    /**
+     * The call property
+     */
+    private Call call;
+    /**
+     * ID of the participant under the policy who has left the meeting.
+     */
+    private String participantId;
     /**
      * Instantiates a new ParticipantLeftNotification and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ParticipantLeftNotification() {
         super();
-        this.setOdataType("#microsoft.graph.participantLeftNotification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,19 +39,18 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Call getCall() {
-        return this._call;
+        return this.call;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ParticipantLeftNotification currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("call", (n) -> { currentObject.setCall(n.getObjectValue(Call::createFromDiscriminatorValue)); });
-            this.put("participantId", (n) -> { currentObject.setParticipantId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("call", (n) -> { this.setCall(n.getObjectValue(Call::createFromDiscriminatorValue)); });
+        deserializerMap.put("participantId", (n) -> { this.setParticipantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the participantId property value. ID of the participant under the policy who has left the meeting.
@@ -56,13 +58,14 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getParticipantId() {
-        return this._participantId;
+        return this.participantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +77,17 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      * @param value Value to set for the call property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCall(@javax.annotation.Nullable final Call value) {
-        this._call = value;
+        this.call = value;
     }
     /**
      * Sets the participantId property value. ID of the participant under the policy who has left the meeting.
      * @param value Value to set for the participantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipantId(@javax.annotation.Nullable final String value) {
-        this._participantId = value;
+        this.participantId = value;
     }
 }

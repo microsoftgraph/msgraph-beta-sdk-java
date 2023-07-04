@@ -3,30 +3,49 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcServicePlan extends Entity implements Parsable {
-    /** The name for the service plan. Read-only. */
-    private String _displayName;
-    /** The size of the RAM in GB. Read-only. */
-    private Integer _ramInGB;
-    /** The size of the OS Disk in GB. Read-only. */
-    private Integer _storageInGB;
-    /** The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only. */
-    private CloudPcServicePlanType _type;
-    /** The size of the user profile disk in GB. Read-only. */
-    private Integer _userProfileInGB;
-    /** The number of vCPUs. Read-only. */
-    private Integer _vCpuCount;
+    /**
+     * The name for the service plan. Read-only.
+     */
+    private String displayName;
+    /**
+     * Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
+     */
+    private CloudPcProvisioningType provisioningType;
+    /**
+     * The size of the RAM in GB. Read-only.
+     */
+    private Integer ramInGB;
+    /**
+     * The size of the OS Disk in GB. Read-only.
+     */
+    private Integer storageInGB;
+    /**
+     * The supportedSolution property
+     */
+    private CloudPcManagementService supportedSolution;
+    /**
+     * The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
+     */
+    private CloudPcServicePlanType type;
+    /**
+     * The size of the user profile disk in GB. Read-only.
+     */
+    private Integer userProfileInGB;
+    /**
+     * The number of vCPUs. Read-only.
+     */
+    private Integer vCpuCount;
     /**
      * Instantiates a new CloudPcServicePlan and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcServicePlan() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcServicePlan");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,23 +63,32 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcServicePlan currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("ramInGB", (n) -> { currentObject.setRamInGB(n.getIntegerValue()); });
-            this.put("storageInGB", (n) -> { currentObject.setStorageInGB(n.getIntegerValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(CloudPcServicePlanType.class)); });
-            this.put("userProfileInGB", (n) -> { currentObject.setUserProfileInGB(n.getIntegerValue()); });
-            this.put("vCpuCount", (n) -> { currentObject.setVCpuCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType.class)); });
+        deserializerMap.put("ramInGB", (n) -> { this.setRamInGB(n.getIntegerValue()); });
+        deserializerMap.put("storageInGB", (n) -> { this.setStorageInGB(n.getIntegerValue()); });
+        deserializerMap.put("supportedSolution", (n) -> { this.setSupportedSolution(n.getEnumValue(CloudPcManagementService.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CloudPcServicePlanType.class)); });
+        deserializerMap.put("userProfileInGB", (n) -> { this.setUserProfileInGB(n.getIntegerValue()); });
+        deserializerMap.put("vCpuCount", (n) -> { this.setVCpuCount(n.getIntegerValue()); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
+     * @return a cloudPcProvisioningType
+     */
+    @javax.annotation.Nullable
+    public CloudPcProvisioningType getProvisioningType() {
+        return this.provisioningType;
     }
     /**
      * Gets the ramInGB property value. The size of the RAM in GB. Read-only.
@@ -68,7 +96,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getRamInGB() {
-        return this._ramInGB;
+        return this.ramInGB;
     }
     /**
      * Gets the storageInGB property value. The size of the OS Disk in GB. Read-only.
@@ -76,7 +104,15 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getStorageInGB() {
-        return this._storageInGB;
+        return this.storageInGB;
+    }
+    /**
+     * Gets the supportedSolution property value. The supportedSolution property
+     * @return a CloudPcManagementService
+     */
+    @javax.annotation.Nullable
+    public CloudPcManagementService getSupportedSolution() {
+        return this.supportedSolution;
     }
     /**
      * Gets the type property value. The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
@@ -84,7 +120,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CloudPcServicePlanType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Gets the userProfileInGB property value. The size of the user profile disk in GB. Read-only.
@@ -92,7 +128,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getUserProfileInGB() {
-        return this._userProfileInGB;
+        return this.userProfileInGB;
     }
     /**
      * Gets the vCpuCount property value. The number of vCPUs. Read-only.
@@ -100,19 +136,22 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getVCpuCount() {
-        return this._vCpuCount;
+        return this.vCpuCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("provisioningType", this.getProvisioningType());
         writer.writeIntegerValue("ramInGB", this.getRamInGB());
         writer.writeIntegerValue("storageInGB", this.getStorageInGB());
+        writer.writeEnumValue("supportedSolution", this.getSupportedSolution());
         writer.writeEnumValue("type", this.getType());
         writer.writeIntegerValue("userProfileInGB", this.getUserProfileInGB());
         writer.writeIntegerValue("vCpuCount", this.getVCpuCount());
@@ -122,47 +161,71 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
+    }
+    /**
+     * Sets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
+     * @param value Value to set for the provisioningType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setProvisioningType(@javax.annotation.Nullable final CloudPcProvisioningType value) {
+        this.provisioningType = value;
     }
     /**
      * Sets the ramInGB property value. The size of the RAM in GB. Read-only.
      * @param value Value to set for the ramInGB property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRamInGB(@javax.annotation.Nullable final Integer value) {
-        this._ramInGB = value;
+        this.ramInGB = value;
     }
     /**
      * Sets the storageInGB property value. The size of the OS Disk in GB. Read-only.
      * @param value Value to set for the storageInGB property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageInGB(@javax.annotation.Nullable final Integer value) {
-        this._storageInGB = value;
+        this.storageInGB = value;
+    }
+    /**
+     * Sets the supportedSolution property value. The supportedSolution property
+     * @param value Value to set for the supportedSolution property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSupportedSolution(@javax.annotation.Nullable final CloudPcManagementService value) {
+        this.supportedSolution = value;
     }
     /**
      * Sets the type property value. The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final CloudPcServicePlanType value) {
-        this._type = value;
+        this.type = value;
     }
     /**
      * Sets the userProfileInGB property value. The size of the user profile disk in GB. Read-only.
      * @param value Value to set for the userProfileInGB property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserProfileInGB(@javax.annotation.Nullable final Integer value) {
-        this._userProfileInGB = value;
+        this.userProfileInGB = value;
     }
     /**
      * Sets the vCpuCount property value. The number of vCPUs. Read-only.
      * @param value Value to set for the vCpuCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVCpuCount(@javax.annotation.Nullable final Integer value) {
-        this._vCpuCount = value;
+        this.vCpuCount = value;
     }
 }

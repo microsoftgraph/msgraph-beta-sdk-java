@@ -4,26 +4,33 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewNotificationRecipientItem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Determines the recipient of the notification email. */
-    private AccessReviewNotificationRecipientScope _notificationRecipientScope;
-    /** Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients which sends review completion notifications to the recipients. */
-    private String _notificationTemplateType;
-    /** The OdataType property */
-    private String _odataType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Determines the recipient of the notification email.
+     */
+    private AccessReviewNotificationRecipientScope notificationRecipientScope;
+    /**
+     * Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients which sends review completion notifications to the recipients.
+     */
+    private String notificationTemplateType;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
     /**
      * Instantiates a new accessReviewNotificationRecipientItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewNotificationRecipientItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewNotificationRecipientItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,20 +48,19 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewNotificationRecipientItem currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("notificationRecipientScope", (n) -> { currentObject.setNotificationRecipientScope(n.getObjectValue(AccessReviewNotificationRecipientScope::createFromDiscriminatorValue)); });
-            this.put("notificationTemplateType", (n) -> { currentObject.setNotificationTemplateType(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("notificationRecipientScope", (n) -> { this.setNotificationRecipientScope(n.getObjectValue(AccessReviewNotificationRecipientScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("notificationTemplateType", (n) -> { this.setNotificationTemplateType(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notificationRecipientScope property value. Determines the recipient of the notification email.
@@ -62,7 +68,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public AccessReviewNotificationRecipientScope getNotificationRecipientScope() {
-        return this._notificationRecipientScope;
+        return this.notificationRecipientScope;
     }
     /**
      * Gets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients which sends review completion notifications to the recipients.
@@ -70,7 +76,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getNotificationTemplateType() {
-        return this._notificationTemplateType;
+        return this.notificationTemplateType;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -78,13 +84,14 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("notificationRecipientScope", this.getNotificationRecipientScope());
@@ -97,31 +104,35 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the notificationRecipientScope property value. Determines the recipient of the notification email.
      * @param value Value to set for the notificationRecipientScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationRecipientScope(@javax.annotation.Nullable final AccessReviewNotificationRecipientScope value) {
-        this._notificationRecipientScope = value;
+        this.notificationRecipientScope = value;
     }
     /**
      * Sets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients which sends review completion notifications to the recipients.
      * @param value Value to set for the notificationTemplateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationTemplateType(@javax.annotation.Nullable final String value) {
-        this._notificationTemplateType = value;
+        this.notificationTemplateType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

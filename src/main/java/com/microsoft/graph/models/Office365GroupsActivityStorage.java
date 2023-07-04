@@ -4,28 +4,37 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Office365GroupsActivityStorage extends Entity implements Parsable {
-    /** The storage used in group mailbox. */
-    private Long _mailboxStorageUsedInBytes;
-    /** The snapshot date for Exchange and SharePoint used storage. */
-    private LocalDate _reportDate;
-    /** The number of days the report covers. */
-    private String _reportPeriod;
-    /** The latest date of the content. */
-    private LocalDate _reportRefreshDate;
-    /** The storage used in SharePoint document library. */
-    private Long _siteStorageUsedInBytes;
+    /**
+     * The storage used in group mailbox.
+     */
+    private Long mailboxStorageUsedInBytes;
+    /**
+     * The snapshot date for Exchange and SharePoint used storage.
+     */
+    private LocalDate reportDate;
+    /**
+     * The number of days the report covers.
+     */
+    private String reportPeriod;
+    /**
+     * The latest date of the content.
+     */
+    private LocalDate reportRefreshDate;
+    /**
+     * The storage used in SharePoint document library.
+     */
+    private Long siteStorageUsedInBytes;
     /**
      * Instantiates a new Office365GroupsActivityStorage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Office365GroupsActivityStorage() {
         super();
-        this.setOdataType("#microsoft.graph.office365GroupsActivityStorage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,18 +48,17 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Office365GroupsActivityStorage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("mailboxStorageUsedInBytes", (n) -> { currentObject.setMailboxStorageUsedInBytes(n.getLongValue()); });
-            this.put("reportDate", (n) -> { currentObject.setReportDate(n.getLocalDateValue()); });
-            this.put("reportPeriod", (n) -> { currentObject.setReportPeriod(n.getStringValue()); });
-            this.put("reportRefreshDate", (n) -> { currentObject.setReportRefreshDate(n.getLocalDateValue()); });
-            this.put("siteStorageUsedInBytes", (n) -> { currentObject.setSiteStorageUsedInBytes(n.getLongValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("mailboxStorageUsedInBytes", (n) -> { this.setMailboxStorageUsedInBytes(n.getLongValue()); });
+        deserializerMap.put("reportDate", (n) -> { this.setReportDate(n.getLocalDateValue()); });
+        deserializerMap.put("reportPeriod", (n) -> { this.setReportPeriod(n.getStringValue()); });
+        deserializerMap.put("reportRefreshDate", (n) -> { this.setReportRefreshDate(n.getLocalDateValue()); });
+        deserializerMap.put("siteStorageUsedInBytes", (n) -> { this.setSiteStorageUsedInBytes(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mailboxStorageUsedInBytes property value. The storage used in group mailbox.
@@ -58,7 +66,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getMailboxStorageUsedInBytes() {
-        return this._mailboxStorageUsedInBytes;
+        return this.mailboxStorageUsedInBytes;
     }
     /**
      * Gets the reportDate property value. The snapshot date for Exchange and SharePoint used storage.
@@ -66,7 +74,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getReportDate() {
-        return this._reportDate;
+        return this.reportDate;
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
@@ -74,7 +82,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getReportPeriod() {
-        return this._reportPeriod;
+        return this.reportPeriod;
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
@@ -82,7 +90,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getReportRefreshDate() {
-        return this._reportRefreshDate;
+        return this.reportRefreshDate;
     }
     /**
      * Gets the siteStorageUsedInBytes property value. The storage used in SharePoint document library.
@@ -90,13 +98,14 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getSiteStorageUsedInBytes() {
-        return this._siteStorageUsedInBytes;
+        return this.siteStorageUsedInBytes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,39 +120,44 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * @param value Value to set for the mailboxStorageUsedInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxStorageUsedInBytes(@javax.annotation.Nullable final Long value) {
-        this._mailboxStorageUsedInBytes = value;
+        this.mailboxStorageUsedInBytes = value;
     }
     /**
      * Sets the reportDate property value. The snapshot date for Exchange and SharePoint used storage.
      * @param value Value to set for the reportDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportDate(@javax.annotation.Nullable final LocalDate value) {
-        this._reportDate = value;
+        this.reportDate = value;
     }
     /**
      * Sets the reportPeriod property value. The number of days the report covers.
      * @param value Value to set for the reportPeriod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportPeriod(@javax.annotation.Nullable final String value) {
-        this._reportPeriod = value;
+        this.reportPeriod = value;
     }
     /**
      * Sets the reportRefreshDate property value. The latest date of the content.
      * @param value Value to set for the reportRefreshDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportRefreshDate(@javax.annotation.Nullable final LocalDate value) {
-        this._reportRefreshDate = value;
+        this.reportRefreshDate = value;
     }
     /**
      * Sets the siteStorageUsedInBytes property value. The storage used in SharePoint document library.
      * @param value Value to set for the siteStorageUsedInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteStorageUsedInBytes(@javax.annotation.Nullable final Long value) {
-        this._siteStorageUsedInBytes = value;
+        this.siteStorageUsedInBytes = value;
     }
 }

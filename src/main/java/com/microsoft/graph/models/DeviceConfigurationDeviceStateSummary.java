@@ -3,32 +3,45 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceConfigurationDeviceStateSummary extends Entity implements Parsable {
-    /** Number of compliant devices */
-    private Integer _compliantDeviceCount;
-    /** Number of conflict devices */
-    private Integer _conflictDeviceCount;
-    /** Number of error devices */
-    private Integer _errorDeviceCount;
-    /** Number of NonCompliant devices */
-    private Integer _nonCompliantDeviceCount;
-    /** Number of not applicable devices */
-    private Integer _notApplicableDeviceCount;
-    /** Number of remediated devices */
-    private Integer _remediatedDeviceCount;
-    /** Number of unknown devices */
-    private Integer _unknownDeviceCount;
+    /**
+     * Number of compliant devices
+     */
+    private Integer compliantDeviceCount;
+    /**
+     * Number of conflict devices
+     */
+    private Integer conflictDeviceCount;
+    /**
+     * Number of error devices
+     */
+    private Integer errorDeviceCount;
+    /**
+     * Number of NonCompliant devices
+     */
+    private Integer nonCompliantDeviceCount;
+    /**
+     * Number of not applicable devices
+     */
+    private Integer notApplicableDeviceCount;
+    /**
+     * Number of remediated devices
+     */
+    private Integer remediatedDeviceCount;
+    /**
+     * Number of unknown devices
+     */
+    private Integer unknownDeviceCount;
     /**
      * Instantiates a new deviceConfigurationDeviceStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfigurationDeviceStateSummary() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationDeviceStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +59,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      */
     @javax.annotation.Nullable
     public Integer getCompliantDeviceCount() {
-        return this._compliantDeviceCount;
+        return this.compliantDeviceCount;
     }
     /**
      * Gets the conflictDeviceCount property value. Number of conflict devices
@@ -54,7 +67,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      */
     @javax.annotation.Nullable
     public Integer getConflictDeviceCount() {
-        return this._conflictDeviceCount;
+        return this.conflictDeviceCount;
     }
     /**
      * Gets the errorDeviceCount property value. Number of error devices
@@ -62,24 +75,23 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      */
     @javax.annotation.Nullable
     public Integer getErrorDeviceCount() {
-        return this._errorDeviceCount;
+        return this.errorDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceConfigurationDeviceStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("conflictDeviceCount", (n) -> { currentObject.setConflictDeviceCount(n.getIntegerValue()); });
-            this.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
-            this.put("nonCompliantDeviceCount", (n) -> { currentObject.setNonCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("notApplicableDeviceCount", (n) -> { currentObject.setNotApplicableDeviceCount(n.getIntegerValue()); });
-            this.put("remediatedDeviceCount", (n) -> { currentObject.setRemediatedDeviceCount(n.getIntegerValue()); });
-            this.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("compliantDeviceCount", (n) -> { this.setCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("conflictDeviceCount", (n) -> { this.setConflictDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("errorDeviceCount", (n) -> { this.setErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("nonCompliantDeviceCount", (n) -> { this.setNonCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("notApplicableDeviceCount", (n) -> { this.setNotApplicableDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("remediatedDeviceCount", (n) -> { this.setRemediatedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("unknownDeviceCount", (n) -> { this.setUnknownDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Number of NonCompliant devices
@@ -87,7 +99,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      */
     @javax.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
-        return this._nonCompliantDeviceCount;
+        return this.nonCompliantDeviceCount;
     }
     /**
      * Gets the notApplicableDeviceCount property value. Number of not applicable devices
@@ -95,7 +107,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      */
     @javax.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
-        return this._notApplicableDeviceCount;
+        return this.notApplicableDeviceCount;
     }
     /**
      * Gets the remediatedDeviceCount property value. Number of remediated devices
@@ -103,7 +115,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      */
     @javax.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
-        return this._remediatedDeviceCount;
+        return this.remediatedDeviceCount;
     }
     /**
      * Gets the unknownDeviceCount property value. Number of unknown devices
@@ -111,13 +123,14 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      */
     @javax.annotation.Nullable
     public Integer getUnknownDeviceCount() {
-        return this._unknownDeviceCount;
+        return this.unknownDeviceCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,55 +147,62 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._compliantDeviceCount = value;
+        this.compliantDeviceCount = value;
     }
     /**
      * Sets the conflictDeviceCount property value. Number of conflict devices
      * @param value Value to set for the conflictDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._conflictDeviceCount = value;
+        this.conflictDeviceCount = value;
     }
     /**
      * Sets the errorDeviceCount property value. Number of error devices
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._errorDeviceCount = value;
+        this.errorDeviceCount = value;
     }
     /**
      * Sets the nonCompliantDeviceCount property value. Number of NonCompliant devices
      * @param value Value to set for the nonCompliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNonCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._nonCompliantDeviceCount = value;
+        this.nonCompliantDeviceCount = value;
     }
     /**
      * Sets the notApplicableDeviceCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._notApplicableDeviceCount = value;
+        this.notApplicableDeviceCount = value;
     }
     /**
      * Sets the remediatedDeviceCount property value. Number of remediated devices
      * @param value Value to set for the remediatedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediatedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._remediatedDeviceCount = value;
+        this.remediatedDeviceCount = value;
     }
     /**
      * Sets the unknownDeviceCount property value. Number of unknown devices
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._unknownDeviceCount = value;
+        this.unknownDeviceCount = value;
     }
 }

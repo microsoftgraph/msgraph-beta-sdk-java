@@ -3,22 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxisFormat extends Entity implements Parsable {
-    /** Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only. */
-    private WorkbookChartFont _font;
-    /** Represents chart line formatting. Read-only. */
-    private WorkbookChartLineFormat _line;
+    /**
+     * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
+     */
+    private WorkbookChartFont font;
+    /**
+     * Represents chart line formatting. Read-only.
+     */
+    private WorkbookChartLineFormat line;
     /**
      * Instantiates a new workbookChartAxisFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartAxisFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAxisFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +35,14 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartAxisFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("font", (n) -> { currentObject.setFont(n.getObjectValue(WorkbookChartFont::createFromDiscriminatorValue)); });
-            this.put("line", (n) -> { currentObject.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("font", (n) -> { this.setFont(n.getObjectValue(WorkbookChartFont::createFromDiscriminatorValue)); });
+        deserializerMap.put("line", (n) -> { this.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
@@ -48,7 +50,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartFont getFont() {
-        return this._font;
+        return this.font;
     }
     /**
      * Gets the line property value. Represents chart line formatting. Read-only.
@@ -56,13 +58,14 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartLineFormat getLine() {
-        return this._line;
+        return this.line;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +77,17 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
      * @param value Value to set for the font property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFont(@javax.annotation.Nullable final WorkbookChartFont value) {
-        this._font = value;
+        this.font = value;
     }
     /**
      * Sets the line property value. Represents chart line formatting. Read-only.
      * @param value Value to set for the line property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLine(@javax.annotation.Nullable final WorkbookChartLineFormat value) {
-        this._line = value;
+        this.line = value;
     }
 }

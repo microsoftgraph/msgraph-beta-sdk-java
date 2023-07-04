@@ -4,24 +4,29 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MessageEvent extends Entity implements Parsable {
-    /** The dateTime property */
-    private OffsetDateTime _dateTime;
-    /** The description property */
-    private String _description;
-    /** The eventType property */
-    private MessageEventType _eventType;
+    /**
+     * The dateTime property
+     */
+    private OffsetDateTime dateTime;
+    /**
+     * The description property
+     */
+    private String description;
+    /**
+     * The eventType property
+     */
+    private MessageEventType eventType;
     /**
      * Instantiates a new MessageEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MessageEvent() {
         super();
-        this.setOdataType("#microsoft.graph.messageEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +44,7 @@ public class MessageEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getDateTime() {
-        return this._dateTime;
+        return this.dateTime;
     }
     /**
      * Gets the description property value. The description property
@@ -47,34 +52,34 @@ public class MessageEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the eventType property value. The eventType property
-     * @return a messageEventType
+     * @return a MessageEventType
      */
     @javax.annotation.Nullable
     public MessageEventType getEventType() {
-        return this._eventType;
+        return this.eventType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MessageEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("dateTime", (n) -> { currentObject.setDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("eventType", (n) -> { currentObject.setEventType(n.getEnumValue(MessageEventType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("dateTime", (n) -> { this.setDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("eventType", (n) -> { this.setEventType(n.getEnumValue(MessageEventType.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,23 +92,26 @@ public class MessageEvent extends Entity implements Parsable {
      * @param value Value to set for the dateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._dateTime = value;
+        this.dateTime = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the eventType property value. The eventType property
      * @param value Value to set for the eventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventType(@javax.annotation.Nullable final MessageEventType value) {
-        this._eventType = value;
+        this.eventType = value;
     }
 }

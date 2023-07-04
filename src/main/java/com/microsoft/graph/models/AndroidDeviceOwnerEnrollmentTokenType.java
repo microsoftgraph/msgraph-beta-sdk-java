@@ -3,10 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * The enrollment token type for an enrollment profile.
+ */
 public enum AndroidDeviceOwnerEnrollmentTokenType implements ValuedEnum {
     /** Default token type. */
-    Default_escaped("default_escaped"),
+    DefaultEscaped("default"),
     /** Token type for Azure AD shared dedicated device enrollment. It applies to CorporateOwnedDedicatedDevice enrollment mode only. */
     CorporateOwnedDedicatedDeviceWithAzureADSharedMode("corporateOwnedDedicatedDeviceWithAzureADSharedMode");
     public final String value;
@@ -19,7 +21,7 @@ public enum AndroidDeviceOwnerEnrollmentTokenType implements ValuedEnum {
     public static AndroidDeviceOwnerEnrollmentTokenType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return Default_escaped;
+            case "default": return DefaultEscaped;
             case "corporateOwnedDedicatedDeviceWithAzureADSharedMode": return CorporateOwnedDedicatedDeviceWithAzureADSharedMode;
             default: return null;
         }

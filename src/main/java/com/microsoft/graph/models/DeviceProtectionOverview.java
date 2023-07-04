@@ -4,45 +4,72 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Hardware information of a given device. */
+/**
+ * Hardware information of a given device.
+ */
 public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Clean device count. */
-    private Integer _cleanDeviceCount;
-    /** Critical failures device count. */
-    private Integer _criticalFailuresDeviceCount;
-    /** Device with inactive threat agent count */
-    private Integer _inactiveThreatAgentDeviceCount;
-    /** The OdataType property */
-    private String _odataType;
-    /** Pending full scan device count. */
-    private Integer _pendingFullScanDeviceCount;
-    /** Pending manual steps device count. */
-    private Integer _pendingManualStepsDeviceCount;
-    /** Pending offline scan device count. */
-    private Integer _pendingOfflineScanDeviceCount;
-    /** Pending quick scan device count. Valid values -2147483648 to 2147483647 */
-    private Integer _pendingQuickScanDeviceCount;
-    /** Pending restart device count. */
-    private Integer _pendingRestartDeviceCount;
-    /** Device with old signature count. */
-    private Integer _pendingSignatureUpdateDeviceCount;
-    /** Total device count. */
-    private Integer _totalReportedDeviceCount;
-    /** Device with threat agent state as unknown count. */
-    private Integer _unknownStateThreatAgentDeviceCount;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Indicates number of devices reporting as clean
+     */
+    private Integer cleanDeviceCount;
+    /**
+     * Indicates number of devices with critical failures
+     */
+    private Integer criticalFailuresDeviceCount;
+    /**
+     * Indicates number of devices with inactive threat agent
+     */
+    private Integer inactiveThreatAgentDeviceCount;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Indicates number of devices pending full scan
+     */
+    private Integer pendingFullScanDeviceCount;
+    /**
+     * Indicates number of devices with pending manual steps
+     */
+    private Integer pendingManualStepsDeviceCount;
+    /**
+     * Indicates number of pending offline scan devices
+     */
+    private Integer pendingOfflineScanDeviceCount;
+    /**
+     * Indicates the number of devices that have a pending full scan. Valid values -2147483648 to 2147483647
+     */
+    private Integer pendingQuickScanDeviceCount;
+    /**
+     * Indicates number of devices pending restart
+     */
+    private Integer pendingRestartDeviceCount;
+    /**
+     * Indicates number of devices with an old signature
+     */
+    private Integer pendingSignatureUpdateDeviceCount;
+    /**
+     * Total device count.
+     */
+    private Integer totalReportedDeviceCount;
+    /**
+     * Indicates number of devices with threat agent state as unknown
+     */
+    private Integer unknownStateThreatAgentDeviceCount;
     /**
      * Instantiates a new deviceProtectionOverview and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceProtectionOverview() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceProtectionOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,53 +87,52 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
-     * Gets the cleanDeviceCount property value. Clean device count.
+     * Gets the cleanDeviceCount property value. Indicates number of devices reporting as clean
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getCleanDeviceCount() {
-        return this._cleanDeviceCount;
+        return this.cleanDeviceCount;
     }
     /**
-     * Gets the criticalFailuresDeviceCount property value. Critical failures device count.
+     * Gets the criticalFailuresDeviceCount property value. Indicates number of devices with critical failures
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getCriticalFailuresDeviceCount() {
-        return this._criticalFailuresDeviceCount;
+        return this.criticalFailuresDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceProtectionOverview currentObject = this;
-        return new HashMap<>(12) {{
-            this.put("cleanDeviceCount", (n) -> { currentObject.setCleanDeviceCount(n.getIntegerValue()); });
-            this.put("criticalFailuresDeviceCount", (n) -> { currentObject.setCriticalFailuresDeviceCount(n.getIntegerValue()); });
-            this.put("inactiveThreatAgentDeviceCount", (n) -> { currentObject.setInactiveThreatAgentDeviceCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("pendingFullScanDeviceCount", (n) -> { currentObject.setPendingFullScanDeviceCount(n.getIntegerValue()); });
-            this.put("pendingManualStepsDeviceCount", (n) -> { currentObject.setPendingManualStepsDeviceCount(n.getIntegerValue()); });
-            this.put("pendingOfflineScanDeviceCount", (n) -> { currentObject.setPendingOfflineScanDeviceCount(n.getIntegerValue()); });
-            this.put("pendingQuickScanDeviceCount", (n) -> { currentObject.setPendingQuickScanDeviceCount(n.getIntegerValue()); });
-            this.put("pendingRestartDeviceCount", (n) -> { currentObject.setPendingRestartDeviceCount(n.getIntegerValue()); });
-            this.put("pendingSignatureUpdateDeviceCount", (n) -> { currentObject.setPendingSignatureUpdateDeviceCount(n.getIntegerValue()); });
-            this.put("totalReportedDeviceCount", (n) -> { currentObject.setTotalReportedDeviceCount(n.getIntegerValue()); });
-            this.put("unknownStateThreatAgentDeviceCount", (n) -> { currentObject.setUnknownStateThreatAgentDeviceCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        deserializerMap.put("cleanDeviceCount", (n) -> { this.setCleanDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("criticalFailuresDeviceCount", (n) -> { this.setCriticalFailuresDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("inactiveThreatAgentDeviceCount", (n) -> { this.setInactiveThreatAgentDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("pendingFullScanDeviceCount", (n) -> { this.setPendingFullScanDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("pendingManualStepsDeviceCount", (n) -> { this.setPendingManualStepsDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("pendingOfflineScanDeviceCount", (n) -> { this.setPendingOfflineScanDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("pendingQuickScanDeviceCount", (n) -> { this.setPendingQuickScanDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("pendingRestartDeviceCount", (n) -> { this.setPendingRestartDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("pendingSignatureUpdateDeviceCount", (n) -> { this.setPendingSignatureUpdateDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("totalReportedDeviceCount", (n) -> { this.setTotalReportedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("unknownStateThreatAgentDeviceCount", (n) -> { this.setUnknownStateThreatAgentDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the inactiveThreatAgentDeviceCount property value. Device with inactive threat agent count
+     * Gets the inactiveThreatAgentDeviceCount property value. Indicates number of devices with inactive threat agent
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getInactiveThreatAgentDeviceCount() {
-        return this._inactiveThreatAgentDeviceCount;
+        return this.inactiveThreatAgentDeviceCount;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -114,55 +140,55 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the pendingFullScanDeviceCount property value. Pending full scan device count.
+     * Gets the pendingFullScanDeviceCount property value. Indicates number of devices pending full scan
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getPendingFullScanDeviceCount() {
-        return this._pendingFullScanDeviceCount;
+        return this.pendingFullScanDeviceCount;
     }
     /**
-     * Gets the pendingManualStepsDeviceCount property value. Pending manual steps device count.
+     * Gets the pendingManualStepsDeviceCount property value. Indicates number of devices with pending manual steps
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getPendingManualStepsDeviceCount() {
-        return this._pendingManualStepsDeviceCount;
+        return this.pendingManualStepsDeviceCount;
     }
     /**
-     * Gets the pendingOfflineScanDeviceCount property value. Pending offline scan device count.
+     * Gets the pendingOfflineScanDeviceCount property value. Indicates number of pending offline scan devices
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getPendingOfflineScanDeviceCount() {
-        return this._pendingOfflineScanDeviceCount;
+        return this.pendingOfflineScanDeviceCount;
     }
     /**
-     * Gets the pendingQuickScanDeviceCount property value. Pending quick scan device count. Valid values -2147483648 to 2147483647
+     * Gets the pendingQuickScanDeviceCount property value. Indicates the number of devices that have a pending full scan. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getPendingQuickScanDeviceCount() {
-        return this._pendingQuickScanDeviceCount;
+        return this.pendingQuickScanDeviceCount;
     }
     /**
-     * Gets the pendingRestartDeviceCount property value. Pending restart device count.
+     * Gets the pendingRestartDeviceCount property value. Indicates number of devices pending restart
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getPendingRestartDeviceCount() {
-        return this._pendingRestartDeviceCount;
+        return this.pendingRestartDeviceCount;
     }
     /**
-     * Gets the pendingSignatureUpdateDeviceCount property value. Device with old signature count.
+     * Gets the pendingSignatureUpdateDeviceCount property value. Indicates number of devices with an old signature
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getPendingSignatureUpdateDeviceCount() {
-        return this._pendingSignatureUpdateDeviceCount;
+        return this.pendingSignatureUpdateDeviceCount;
     }
     /**
      * Gets the totalReportedDeviceCount property value. Total device count.
@@ -170,21 +196,22 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Integer getTotalReportedDeviceCount() {
-        return this._totalReportedDeviceCount;
+        return this.totalReportedDeviceCount;
     }
     /**
-     * Gets the unknownStateThreatAgentDeviceCount property value. Device with threat agent state as unknown count.
+     * Gets the unknownStateThreatAgentDeviceCount property value. Indicates number of devices with threat agent state as unknown
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getUnknownStateThreatAgentDeviceCount() {
-        return this._unknownStateThreatAgentDeviceCount;
+        return this.unknownStateThreatAgentDeviceCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("cleanDeviceCount", this.getCleanDeviceCount());
@@ -206,103 +233,116 @@ public class DeviceProtectionOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
-     * Sets the cleanDeviceCount property value. Clean device count.
+     * Sets the cleanDeviceCount property value. Indicates number of devices reporting as clean
      * @param value Value to set for the cleanDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCleanDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._cleanDeviceCount = value;
+        this.cleanDeviceCount = value;
     }
     /**
-     * Sets the criticalFailuresDeviceCount property value. Critical failures device count.
+     * Sets the criticalFailuresDeviceCount property value. Indicates number of devices with critical failures
      * @param value Value to set for the criticalFailuresDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCriticalFailuresDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._criticalFailuresDeviceCount = value;
+        this.criticalFailuresDeviceCount = value;
     }
     /**
-     * Sets the inactiveThreatAgentDeviceCount property value. Device with inactive threat agent count
+     * Sets the inactiveThreatAgentDeviceCount property value. Indicates number of devices with inactive threat agent
      * @param value Value to set for the inactiveThreatAgentDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInactiveThreatAgentDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._inactiveThreatAgentDeviceCount = value;
+        this.inactiveThreatAgentDeviceCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the pendingFullScanDeviceCount property value. Pending full scan device count.
+     * Sets the pendingFullScanDeviceCount property value. Indicates number of devices pending full scan
      * @param value Value to set for the pendingFullScanDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingFullScanDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._pendingFullScanDeviceCount = value;
+        this.pendingFullScanDeviceCount = value;
     }
     /**
-     * Sets the pendingManualStepsDeviceCount property value. Pending manual steps device count.
+     * Sets the pendingManualStepsDeviceCount property value. Indicates number of devices with pending manual steps
      * @param value Value to set for the pendingManualStepsDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingManualStepsDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._pendingManualStepsDeviceCount = value;
+        this.pendingManualStepsDeviceCount = value;
     }
     /**
-     * Sets the pendingOfflineScanDeviceCount property value. Pending offline scan device count.
+     * Sets the pendingOfflineScanDeviceCount property value. Indicates number of pending offline scan devices
      * @param value Value to set for the pendingOfflineScanDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingOfflineScanDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._pendingOfflineScanDeviceCount = value;
+        this.pendingOfflineScanDeviceCount = value;
     }
     /**
-     * Sets the pendingQuickScanDeviceCount property value. Pending quick scan device count. Valid values -2147483648 to 2147483647
+     * Sets the pendingQuickScanDeviceCount property value. Indicates the number of devices that have a pending full scan. Valid values -2147483648 to 2147483647
      * @param value Value to set for the pendingQuickScanDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingQuickScanDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._pendingQuickScanDeviceCount = value;
+        this.pendingQuickScanDeviceCount = value;
     }
     /**
-     * Sets the pendingRestartDeviceCount property value. Pending restart device count.
+     * Sets the pendingRestartDeviceCount property value. Indicates number of devices pending restart
      * @param value Value to set for the pendingRestartDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingRestartDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._pendingRestartDeviceCount = value;
+        this.pendingRestartDeviceCount = value;
     }
     /**
-     * Sets the pendingSignatureUpdateDeviceCount property value. Device with old signature count.
+     * Sets the pendingSignatureUpdateDeviceCount property value. Indicates number of devices with an old signature
      * @param value Value to set for the pendingSignatureUpdateDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingSignatureUpdateDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._pendingSignatureUpdateDeviceCount = value;
+        this.pendingSignatureUpdateDeviceCount = value;
     }
     /**
      * Sets the totalReportedDeviceCount property value. Total device count.
      * @param value Value to set for the totalReportedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalReportedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._totalReportedDeviceCount = value;
+        this.totalReportedDeviceCount = value;
     }
     /**
-     * Sets the unknownStateThreatAgentDeviceCount property value. Device with threat agent state as unknown count.
+     * Sets the unknownStateThreatAgentDeviceCount property value. Indicates number of devices with threat agent state as unknown
      * @param value Value to set for the unknownStateThreatAgentDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownStateThreatAgentDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._unknownStateThreatAgentDeviceCount = value;
+        this.unknownStateThreatAgentDeviceCount = value;
     }
 }

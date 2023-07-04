@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable {
-    /** If present, represents a conversation (for example, team or channel) @mentioned in a message. */
-    private TeamworkConversationIdentity _conversation;
-    /** If present, represents a tag @mentioned in a team message. */
-    private TeamworkTagIdentity _tag;
+    /**
+     * If present, represents a conversation (for example, team or channel) @mentioned in a message.
+     */
+    private TeamworkConversationIdentity conversation;
+    /**
+     * If present, represents a tag @mentioned in a team message.
+     */
+    private TeamworkTagIdentity tag;
     /**
      * Instantiates a new ChatMessageMentionedIdentitySet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatMessageMentionedIdentitySet() {
         super();
         this.setOdataType("#microsoft.graph.chatMessageMentionedIdentitySet");
@@ -36,19 +40,18 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      */
     @javax.annotation.Nullable
     public TeamworkConversationIdentity getConversation() {
-        return this._conversation;
+        return this.conversation;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChatMessageMentionedIdentitySet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("conversation", (n) -> { currentObject.setConversation(n.getObjectValue(TeamworkConversationIdentity::createFromDiscriminatorValue)); });
-            this.put("tag", (n) -> { currentObject.setTag(n.getObjectValue(TeamworkTagIdentity::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("conversation", (n) -> { this.setConversation(n.getObjectValue(TeamworkConversationIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("tag", (n) -> { this.setTag(n.getObjectValue(TeamworkTagIdentity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the tag property value. If present, represents a tag @mentioned in a team message.
@@ -56,13 +59,14 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      */
     @javax.annotation.Nullable
     public TeamworkTagIdentity getTag() {
-        return this._tag;
+        return this.tag;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * @param value Value to set for the conversation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversation(@javax.annotation.Nullable final TeamworkConversationIdentity value) {
-        this._conversation = value;
+        this.conversation = value;
     }
     /**
      * Sets the tag property value. If present, represents a tag @mentioned in a team message.
      * @param value Value to set for the tag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTag(@javax.annotation.Nullable final TeamworkTagIdentity value) {
-        this._tag = value;
+        this.tag = value;
     }
 }

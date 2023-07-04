@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * App source options for iOS kiosk mode.
+ */
 public enum IosKioskModeAppType implements ValuedEnum {
     /** Device default value, no intent. */
     NotConfigured("notConfigured"),

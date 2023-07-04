@@ -4,29 +4,40 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A folder containing pages of apps and weblinks on the Managed Home Screen */
+/**
+ * A folder containing pages of apps and weblinks on the Managed Home Screen
+ */
 public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Unique identifier for the folder */
-    private String _folderIdentifier;
-    /** Display name for the folder */
-    private String _folderName;
-    /** Items to be added to managed folder. This collection can contain a maximum of 500 elements. */
-    private java.util.List<AndroidDeviceOwnerKioskModeFolderItem> _items;
-    /** The OdataType property */
-    private String _odataType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Unique identifier for the folder
+     */
+    private String folderIdentifier;
+    /**
+     * Display name for the folder
+     */
+    private String folderName;
+    /**
+     * Items to be added to managed folder. This collection can contain a maximum of 500 elements.
+     */
+    private java.util.List<AndroidDeviceOwnerKioskModeFolderItem> items;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
     /**
      * Instantiates a new androidDeviceOwnerKioskModeManagedFolder and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerKioskModeManagedFolder() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeManagedFolder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,21 +55,20 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidDeviceOwnerKioskModeManagedFolder currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("folderIdentifier", (n) -> { currentObject.setFolderIdentifier(n.getStringValue()); });
-            this.put("folderName", (n) -> { currentObject.setFolderName(n.getStringValue()); });
-            this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(AndroidDeviceOwnerKioskModeFolderItem::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("folderIdentifier", (n) -> { this.setFolderIdentifier(n.getStringValue()); });
+        deserializerMap.put("folderName", (n) -> { this.setFolderName(n.getStringValue()); });
+        deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(AndroidDeviceOwnerKioskModeFolderItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the folderIdentifier property value. Unique identifier for the folder
@@ -66,7 +76,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public String getFolderIdentifier() {
-        return this._folderIdentifier;
+        return this.folderIdentifier;
     }
     /**
      * Gets the folderName property value. Display name for the folder
@@ -74,7 +84,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public String getFolderName() {
-        return this._folderName;
+        return this.folderName;
     }
     /**
      * Gets the items property value. Items to be added to managed folder. This collection can contain a maximum of 500 elements.
@@ -82,7 +92,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerKioskModeFolderItem> getItems() {
-        return this._items;
+        return this.items;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -90,13 +100,14 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("folderIdentifier", this.getFolderIdentifier());
@@ -110,39 +121,44 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the folderIdentifier property value. Unique identifier for the folder
      * @param value Value to set for the folderIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFolderIdentifier(@javax.annotation.Nullable final String value) {
-        this._folderIdentifier = value;
+        this.folderIdentifier = value;
     }
     /**
      * Sets the folderName property value. Display name for the folder
      * @param value Value to set for the folderName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFolderName(@javax.annotation.Nullable final String value) {
-        this._folderName = value;
+        this.folderName = value;
     }
     /**
      * Sets the items property value. Items to be added to managed folder. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the items property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerKioskModeFolderItem> value) {
-        this._items = value;
+        this.items = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

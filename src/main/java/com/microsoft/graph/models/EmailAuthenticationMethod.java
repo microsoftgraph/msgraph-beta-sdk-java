@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EmailAuthenticationMethod extends AuthenticationMethod implements Parsable {
-    /** The email address registered to this user. */
-    private String _emailAddress;
+    /**
+     * The email address registered to this user.
+     */
+    private String emailAddress;
     /**
      * Instantiates a new EmailAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmailAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.emailAuthenticationMethod");
@@ -34,24 +36,24 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nullable
     public String getEmailAddress() {
-        return this._emailAddress;
+        return this.emailAddress;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EmailAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
-        this._emailAddress = value;
+        this.emailAddress = value;
     }
 }

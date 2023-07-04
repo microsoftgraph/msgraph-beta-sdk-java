@@ -4,26 +4,41 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcSnapshot extends Entity implements Parsable {
-    /** The unique identifier for the Cloud PC. */
-    private String _cloudPcId;
-    /** The date and time at which the snapshot was taken. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _createdDateTime;
-    /** The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _lastRestoredDateTime;
-    /** The status of the Cloud PC snapshot. The possible values are: ready, unknownFutureValue. */
-    private CloudPcSnapshotStatus _status;
+    /**
+     * The unique identifier for the Cloud PC.
+     */
+    private String cloudPcId;
+    /**
+     * The date and time at which the snapshot was taken. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The date and time when the snapshot expires. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime expirationDateTime;
+    /**
+     * The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime lastRestoredDateTime;
+    /**
+     * The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
+     */
+    private CloudPcSnapshotType snapshotType;
+    /**
+     * The status of the Cloud PC snapshot. The possible values are: ready, unknownFutureValue.
+     */
+    private CloudPcSnapshotStatus status;
     /**
      * Instantiates a new CloudPcSnapshot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcSnapshot() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcSnapshot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +56,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCloudPcId() {
-        return this._cloudPcId;
+        return this.cloudPcId;
     }
     /**
      * Gets the createdDateTime property value. The date and time at which the snapshot was taken. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -49,21 +64,30 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
+    }
+    /**
+     * Gets the expirationDateTime property value. The date and time when the snapshot expires. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getExpirationDateTime() {
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcSnapshot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("cloudPcId", (n) -> { currentObject.setCloudPcId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastRestoredDateTime", (n) -> { currentObject.setLastRestoredDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CloudPcSnapshotStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("cloudPcId", (n) -> { this.setCloudPcId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastRestoredDateTime", (n) -> { this.setLastRestoredDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("snapshotType", (n) -> { this.setSnapshotType(n.getEnumValue(CloudPcSnapshotType.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcSnapshotStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastRestoredDateTime property value. The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -71,7 +95,15 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastRestoredDateTime() {
-        return this._lastRestoredDateTime;
+        return this.lastRestoredDateTime;
+    }
+    /**
+     * Gets the snapshotType property value. The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
+     * @return a cloudPcSnapshotType
+     */
+    @javax.annotation.Nullable
+    public CloudPcSnapshotType getSnapshotType() {
+        return this.snapshotType;
     }
     /**
      * Gets the status property value. The status of the Cloud PC snapshot. The possible values are: ready, unknownFutureValue.
@@ -79,19 +111,22 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CloudPcSnapshotStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("cloudPcId", this.getCloudPcId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeOffsetDateTimeValue("lastRestoredDateTime", this.getLastRestoredDateTime());
+        writer.writeEnumValue("snapshotType", this.getSnapshotType());
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
@@ -99,31 +134,53 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * @param value Value to set for the cloudPcId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcId(@javax.annotation.Nullable final String value) {
-        this._cloudPcId = value;
+        this.cloudPcId = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time at which the snapshot was taken. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
+    }
+    /**
+     * Sets the expirationDateTime property value. The date and time when the snapshot expires. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the expirationDateTime property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this.expirationDateTime = value;
     }
     /**
      * Sets the lastRestoredDateTime property value. The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastRestoredDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRestoredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastRestoredDateTime = value;
+        this.lastRestoredDateTime = value;
+    }
+    /**
+     * Sets the snapshotType property value. The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
+     * @param value Value to set for the snapshotType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSnapshotType(@javax.annotation.Nullable final CloudPcSnapshotType value) {
+        this.snapshotType = value;
     }
     /**
      * Sets the status property value. The status of the Cloud PC snapshot. The possible values are: ready, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CloudPcSnapshotStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

@@ -1,27 +1,23 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.BookingBusiness;
-import com.microsoft.graph.models.BookingCustomer;
-import com.microsoft.graph.models.BookingPerson;
-import com.microsoft.graph.models.BookingService;
-import com.microsoft.graph.models.BookingStaffMember;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingNamedEntity extends Entity implements Parsable {
-    /** A name for the derived entity, which interfaces with customers. */
-    private String _displayName;
+    /**
+     * A name for the derived entity, which interfaces with customers.
+     */
+    private String displayName;
     /**
      * Instantiates a new BookingNamedEntity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingNamedEntity() {
         super();
-        this.setOdataType("#microsoft.graph.bookingNamedEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,24 +46,24 @@ public class BookingNamedEntity extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingNamedEntity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -78,7 +74,8 @@ public class BookingNamedEntity extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
 }

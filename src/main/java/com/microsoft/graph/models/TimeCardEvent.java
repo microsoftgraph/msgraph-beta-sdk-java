@@ -5,28 +5,37 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeCardEvent implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Indicates whether the entry was recorded at the approved location. */
-    private Boolean _atApprovedLocation;
-    /** The time the entry is recorded. */
-    private OffsetDateTime _dateTime;
-    /** Notes about the timeCardEvent. */
-    private ItemBody _notes;
-    /** The OdataType property */
-    private String _odataType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Indicates whether the entry was recorded at the approved location.
+     */
+    private Boolean atApprovedLocation;
+    /**
+     * The time the entry is recorded.
+     */
+    private OffsetDateTime dateTime;
+    /**
+     * Notes about the timeCardEvent.
+     */
+    private ItemBody notes;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
     /**
      * Instantiates a new timeCardEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TimeCardEvent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.timeCardEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +53,7 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the atApprovedLocation property value. Indicates whether the entry was recorded at the approved location.
@@ -52,7 +61,7 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAtApprovedLocation() {
-        return this._atApprovedLocation;
+        return this.atApprovedLocation;
     }
     /**
      * Gets the dateTime property value. The time the entry is recorded.
@@ -60,21 +69,20 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getDateTime() {
-        return this._dateTime;
+        return this.dateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TimeCardEvent currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("atApprovedLocation", (n) -> { currentObject.setAtApprovedLocation(n.getBooleanValue()); });
-            this.put("dateTime", (n) -> { currentObject.setDateTime(n.getOffsetDateTimeValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("atApprovedLocation", (n) -> { this.setAtApprovedLocation(n.getBooleanValue()); });
+        deserializerMap.put("dateTime", (n) -> { this.setDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("notes", (n) -> { this.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notes property value. Notes about the timeCardEvent.
@@ -82,7 +90,7 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ItemBody getNotes() {
-        return this._notes;
+        return this.notes;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -90,13 +98,14 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("atApprovedLocation", this.getAtApprovedLocation());
@@ -110,39 +119,44 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the atApprovedLocation property value. Indicates whether the entry was recorded at the approved location.
      * @param value Value to set for the atApprovedLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAtApprovedLocation(@javax.annotation.Nullable final Boolean value) {
-        this._atApprovedLocation = value;
+        this.atApprovedLocation = value;
     }
     /**
      * Sets the dateTime property value. The time the entry is recorded.
      * @param value Value to set for the dateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._dateTime = value;
+        this.dateTime = value;
     }
     /**
      * Sets the notes property value. Notes about the timeCardEvent.
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final ItemBody value) {
-        this._notes = value;
+        this.notes = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

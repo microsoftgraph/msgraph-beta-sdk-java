@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Used together with personalApplications to control how apps in the personal profile are allowed or blocked.
+ */
 public enum PersonalProfilePersonalPlayStoreMode implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

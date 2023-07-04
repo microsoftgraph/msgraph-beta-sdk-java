@@ -3,22 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAreaFormat extends Entity implements Parsable {
-    /** Represents the fill format of an object, which includes background formatting information. Read-only. */
-    private WorkbookChartFill _fill;
-    /** Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only. */
-    private WorkbookChartFont _font;
+    /**
+     * Represents the fill format of an object, which includes background formatting information. Read-only.
+     */
+    private WorkbookChartFill fill;
+    /**
+     * Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
+     */
+    private WorkbookChartFont font;
     /**
      * Instantiates a new workbookChartAreaFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartAreaFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAreaFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +35,14 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartAreaFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
-            this.put("font", (n) -> { currentObject.setFont(n.getObjectValue(WorkbookChartFont::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fill", (n) -> { this.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
+        deserializerMap.put("font", (n) -> { this.setFont(n.getObjectValue(WorkbookChartFont::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fill property value. Represents the fill format of an object, which includes background formatting information. Read-only.
@@ -48,7 +50,7 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartFill getFill() {
-        return this._fill;
+        return this.fill;
     }
     /**
      * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
@@ -56,13 +58,14 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartFont getFont() {
-        return this._font;
+        return this.font;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +77,17 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      * @param value Value to set for the fill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFill(@javax.annotation.Nullable final WorkbookChartFill value) {
-        this._fill = value;
+        this.fill = value;
     }
     /**
      * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
      * @param value Value to set for the font property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFont(@javax.annotation.Nullable final WorkbookChartFont value) {
-        this._font = value;
+        this.font = value;
     }
 }

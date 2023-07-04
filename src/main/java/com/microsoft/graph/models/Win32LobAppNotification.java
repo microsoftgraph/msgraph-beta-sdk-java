@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Contains value for notification status.
+ */
 public enum Win32LobAppNotification implements ValuedEnum {
     /** Show all notifications. */
     ShowAll("showAll"),

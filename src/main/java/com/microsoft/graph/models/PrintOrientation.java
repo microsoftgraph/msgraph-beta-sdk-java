@@ -3,12 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum PrintOrientation implements ValuedEnum {
     Portrait("portrait"),
     Landscape("landscape"),
     ReverseLandscape("reverseLandscape"),
-    ReversePortrait("reversePortrait");
+    ReversePortrait("reversePortrait"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     PrintOrientation(final String value) {
         this.value = value;
@@ -23,6 +23,7 @@ public enum PrintOrientation implements ValuedEnum {
             case "landscape": return Landscape;
             case "reverseLandscape": return ReverseLandscape;
             case "reversePortrait": return ReversePortrait;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

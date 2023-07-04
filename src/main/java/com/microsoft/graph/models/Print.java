@@ -4,40 +4,57 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Print implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The list of available print connectors. */
-    private java.util.List<PrintConnector> _connectors;
-    /** The OdataType property */
-    private String _odataType;
-    /** The operations property */
-    private java.util.List<PrintOperation> _operations;
-    /** The list of printers registered in the tenant. */
-    private java.util.List<Printer> _printers;
-    /** The printerShares property */
-    private java.util.List<PrinterShare> _printerShares;
-    /** The reports property */
-    private ReportRoot _reports;
-    /** The list of available Universal Print service endpoints. */
-    private java.util.List<PrintService> _services;
-    /** Tenant-wide settings for the Universal Print service. */
-    private PrintSettings _settings;
-    /** The list of printer shares registered in the tenant. */
-    private java.util.List<PrinterShare> _shares;
-    /** The taskDefinitions property */
-    private java.util.List<PrintTaskDefinition> _taskDefinitions;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The list of available print connectors.
+     */
+    private java.util.List<PrintConnector> connectors;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The operations property
+     */
+    private java.util.List<PrintOperation> operations;
+    /**
+     * The list of printers registered in the tenant.
+     */
+    private java.util.List<Printer> printers;
+    /**
+     * The printerShares property
+     */
+    private java.util.List<PrinterShare> printerShares;
+    /**
+     * The list of available Universal Print service endpoints.
+     */
+    private java.util.List<PrintService> services;
+    /**
+     * Tenant-wide settings for the Universal Print service.
+     */
+    private PrintSettings settings;
+    /**
+     * The list of printer shares registered in the tenant.
+     */
+    private java.util.List<PrinterShare> shares;
+    /**
+     * The taskDefinitions property
+     */
+    private java.util.List<PrintTaskDefinition> taskDefinitions;
     /**
      * Instantiates a new Print and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Print() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.print");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,7 +72,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the connectors property value. The list of available print connectors.
@@ -63,27 +80,25 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintConnector> getConnectors() {
-        return this._connectors;
+        return this.connectors;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Print currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("connectors", (n) -> { currentObject.setConnectors(n.getCollectionOfObjectValues(PrintConnector::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(PrintOperation::createFromDiscriminatorValue)); });
-            this.put("printers", (n) -> { currentObject.setPrinters(n.getCollectionOfObjectValues(Printer::createFromDiscriminatorValue)); });
-            this.put("printerShares", (n) -> { currentObject.setPrinterShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
-            this.put("reports", (n) -> { currentObject.setReports(n.getObjectValue(ReportRoot::createFromDiscriminatorValue)); });
-            this.put("services", (n) -> { currentObject.setServices(n.getCollectionOfObjectValues(PrintService::createFromDiscriminatorValue)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(PrintSettings::createFromDiscriminatorValue)); });
-            this.put("shares", (n) -> { currentObject.setShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
-            this.put("taskDefinitions", (n) -> { currentObject.setTaskDefinitions(n.getCollectionOfObjectValues(PrintTaskDefinition::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        deserializerMap.put("connectors", (n) -> { this.setConnectors(n.getCollectionOfObjectValues(PrintConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(PrintOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("printers", (n) -> { this.setPrinters(n.getCollectionOfObjectValues(Printer::createFromDiscriminatorValue)); });
+        deserializerMap.put("printerShares", (n) -> { this.setPrinterShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
+        deserializerMap.put("services", (n) -> { this.setServices(n.getCollectionOfObjectValues(PrintService::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(PrintSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("shares", (n) -> { this.setShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
+        deserializerMap.put("taskDefinitions", (n) -> { this.setTaskDefinitions(n.getCollectionOfObjectValues(PrintTaskDefinition::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -91,7 +106,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the operations property value. The operations property
@@ -99,7 +114,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintOperation> getOperations() {
-        return this._operations;
+        return this.operations;
     }
     /**
      * Gets the printers property value. The list of printers registered in the tenant.
@@ -107,7 +122,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Printer> getPrinters() {
-        return this._printers;
+        return this.printers;
     }
     /**
      * Gets the printerShares property value. The printerShares property
@@ -115,15 +130,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrinterShare> getPrinterShares() {
-        return this._printerShares;
-    }
-    /**
-     * Gets the reports property value. The reports property
-     * @return a reportRoot
-     */
-    @javax.annotation.Nullable
-    public ReportRoot getReports() {
-        return this._reports;
+        return this.printerShares;
     }
     /**
      * Gets the services property value. The list of available Universal Print service endpoints.
@@ -131,7 +138,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintService> getServices() {
-        return this._services;
+        return this.services;
     }
     /**
      * Gets the settings property value. Tenant-wide settings for the Universal Print service.
@@ -139,7 +146,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PrintSettings getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Gets the shares property value. The list of printer shares registered in the tenant.
@@ -147,7 +154,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrinterShare> getShares() {
-        return this._shares;
+        return this.shares;
     }
     /**
      * Gets the taskDefinitions property value. The taskDefinitions property
@@ -155,13 +162,14 @@ public class Print implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintTaskDefinition> getTaskDefinitions() {
-        return this._taskDefinitions;
+        return this.taskDefinitions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("connectors", this.getConnectors());
@@ -169,7 +177,6 @@ public class Print implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("printers", this.getPrinters());
         writer.writeCollectionOfObjectValues("printerShares", this.getPrinterShares());
-        writer.writeObjectValue("reports", this.getReports());
         writer.writeCollectionOfObjectValues("services", this.getServices());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeCollectionOfObjectValues("shares", this.getShares());
@@ -181,87 +188,89 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the connectors property value. The list of available print connectors.
      * @param value Value to set for the connectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectors(@javax.annotation.Nullable final java.util.List<PrintConnector> value) {
-        this._connectors = value;
+        this.connectors = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the operations property value. The operations property
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<PrintOperation> value) {
-        this._operations = value;
+        this.operations = value;
     }
     /**
      * Sets the printers property value. The list of printers registered in the tenant.
      * @param value Value to set for the printers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinters(@javax.annotation.Nullable final java.util.List<Printer> value) {
-        this._printers = value;
+        this.printers = value;
     }
     /**
      * Sets the printerShares property value. The printerShares property
      * @param value Value to set for the printerShares property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinterShares(@javax.annotation.Nullable final java.util.List<PrinterShare> value) {
-        this._printerShares = value;
-    }
-    /**
-     * Sets the reports property value. The reports property
-     * @param value Value to set for the reports property.
-     * @return a void
-     */
-    public void setReports(@javax.annotation.Nullable final ReportRoot value) {
-        this._reports = value;
+        this.printerShares = value;
     }
     /**
      * Sets the services property value. The list of available Universal Print service endpoints.
      * @param value Value to set for the services property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServices(@javax.annotation.Nullable final java.util.List<PrintService> value) {
-        this._services = value;
+        this.services = value;
     }
     /**
      * Sets the settings property value. Tenant-wide settings for the Universal Print service.
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final PrintSettings value) {
-        this._settings = value;
+        this.settings = value;
     }
     /**
      * Sets the shares property value. The list of printer shares registered in the tenant.
      * @param value Value to set for the shares property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShares(@javax.annotation.Nullable final java.util.List<PrinterShare> value) {
-        this._shares = value;
+        this.shares = value;
     }
     /**
      * Sets the taskDefinitions property value. The taskDefinitions property
      * @param value Value to set for the taskDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskDefinitions(@javax.annotation.Nullable final java.util.List<PrintTaskDefinition> value) {
-        this._taskDefinitions = value;
+        this.taskDefinitions = value;
     }
 }

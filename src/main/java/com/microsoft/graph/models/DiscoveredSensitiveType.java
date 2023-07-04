@@ -4,35 +4,47 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class DiscoveredSensitiveType implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The classificationAttributes property */
-    private java.util.List<ClassificationAttribute> _classificationAttributes;
-    /** The confidence property */
-    private Integer _confidence;
-    /** The count property */
-    private Integer _count;
-    /** The id property */
-    private String _id;
-    /** The OdataType property */
-    private String _odataType;
     /**
-     * Instantiates a new discoveredSensitiveType and sets the default values.
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The classificationAttributes property
+     */
+    private java.util.List<ClassificationAttribute> classificationAttributes;
+    /**
+     * The confidence property
+     */
+    private Integer confidence;
+    /**
+     * The count property
+     */
+    private Integer count;
+    /**
+     * The id property
+     */
+    private UUID id;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Instantiates a new DiscoveredSensitiveType and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DiscoveredSensitiveType() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.discoveredSensitiveType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a discoveredSensitiveType
+     * @return a DiscoveredSensitiveType
      */
     @javax.annotation.Nonnull
     public static DiscoveredSensitiveType createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +57,7 @@ public class DiscoveredSensitiveType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the classificationAttributes property value. The classificationAttributes property
@@ -53,7 +65,7 @@ public class DiscoveredSensitiveType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ClassificationAttribute> getClassificationAttributes() {
-        return this._classificationAttributes;
+        return this.classificationAttributes;
     }
     /**
      * Gets the confidence property value. The confidence property
@@ -61,7 +73,7 @@ public class DiscoveredSensitiveType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getConfidence() {
-        return this._confidence;
+        return this.confidence;
     }
     /**
      * Gets the count property value. The count property
@@ -69,30 +81,29 @@ public class DiscoveredSensitiveType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getCount() {
-        return this._count;
+        return this.count;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DiscoveredSensitiveType currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("classificationAttributes", (n) -> { currentObject.setClassificationAttributes(n.getCollectionOfObjectValues(ClassificationAttribute::createFromDiscriminatorValue)); });
-            this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
-            this.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("classificationAttributes", (n) -> { this.setClassificationAttributes(n.getCollectionOfObjectValues(ClassificationAttribute::createFromDiscriminatorValue)); });
+        deserializerMap.put("confidence", (n) -> { this.setConfidence(n.getIntegerValue()); });
+        deserializerMap.put("count", (n) -> { this.setCount(n.getIntegerValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getUUIDValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The id property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getId() {
-        return this._id;
+    public UUID getId() {
+        return this.id;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -100,19 +111,20 @@ public class DiscoveredSensitiveType implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("classificationAttributes", this.getClassificationAttributes());
         writer.writeIntegerValue("confidence", this.getConfidence());
         writer.writeIntegerValue("count", this.getCount());
-        writer.writeStringValue("id", this.getId());
+        writer.writeUUIDValue("id", this.getId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -121,47 +133,53 @@ public class DiscoveredSensitiveType implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the classificationAttributes property value. The classificationAttributes property
      * @param value Value to set for the classificationAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassificationAttributes(@javax.annotation.Nullable final java.util.List<ClassificationAttribute> value) {
-        this._classificationAttributes = value;
+        this.classificationAttributes = value;
     }
     /**
      * Sets the confidence property value. The confidence property
      * @param value Value to set for the confidence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfidence(@javax.annotation.Nullable final Integer value) {
-        this._confidence = value;
+        this.confidence = value;
     }
     /**
      * Sets the count property value. The count property
      * @param value Value to set for the count property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCount(@javax.annotation.Nullable final Integer value) {
-        this._count = value;
+        this.count = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      * @return a void
      */
-    public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+    @javax.annotation.Nonnull
+    public void setId(@javax.annotation.Nullable final UUID value) {
+        this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

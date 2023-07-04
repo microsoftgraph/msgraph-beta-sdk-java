@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Indicates health state of the Windows management app.
+ */
 public enum HealthState implements ValuedEnum {
     /** Unknown state. */
     Unknown("unknown"),

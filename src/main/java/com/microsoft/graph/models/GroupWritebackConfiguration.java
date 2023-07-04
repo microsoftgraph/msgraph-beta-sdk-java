@@ -3,20 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupWritebackConfiguration extends WritebackConfiguration implements Parsable {
-    /** Indicates the target on-premise group type the cloud object will be written back as. Nullable. The possible values are: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup.If the cloud group is a unified (Microsoft 365) group, this property can be one of the following: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup. Azure AD security groups can be written back as universalSecurityGroup. If isEnabled or the NewUnifiedGroupWritebackDefault group setting is true but this property is not explicitly configured: Microsoft 365 groups will be written back as universalDistributionGroup by defaultSecurity groups will be written back as universalSecurityGroup by default */
-    private String _onPremisesGroupType;
+    /**
+     * Indicates the target on-premise group type the cloud object will be written back as. Nullable. The possible values are: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup.If the cloud group is a unified (Microsoft 365) group, this property can be one of the following: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup. Azure AD security groups can be written back as universalSecurityGroup. If isEnabled or the NewUnifiedGroupWritebackDefault group setting is true but this property is not explicitly configured: Microsoft 365 groups will be written back as universalDistributionGroup by defaultSecurity groups will be written back as universalSecurityGroup by default
+     */
+    private String onPremisesGroupType;
     /**
      * Instantiates a new GroupWritebackConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupWritebackConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.groupWritebackConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +31,13 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupWritebackConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("onPremisesGroupType", (n) -> { currentObject.setOnPremisesGroupType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("onPremisesGroupType", (n) -> { this.setOnPremisesGroupType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the onPremisesGroupType property value. Indicates the target on-premise group type the cloud object will be written back as. Nullable. The possible values are: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup.If the cloud group is a unified (Microsoft 365) group, this property can be one of the following: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup. Azure AD security groups can be written back as universalSecurityGroup. If isEnabled or the NewUnifiedGroupWritebackDefault group setting is true but this property is not explicitly configured: Microsoft 365 groups will be written back as universalDistributionGroup by defaultSecurity groups will be written back as universalSecurityGroup by default
@@ -45,13 +45,14 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
      */
     @javax.annotation.Nullable
     public String getOnPremisesGroupType() {
-        return this._onPremisesGroupType;
+        return this.onPremisesGroupType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +63,8 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
      * @param value Value to set for the onPremisesGroupType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesGroupType(@javax.annotation.Nullable final String value) {
-        this._onPremisesGroupType = value;
+        this.onPremisesGroupType = value;
     }
 }

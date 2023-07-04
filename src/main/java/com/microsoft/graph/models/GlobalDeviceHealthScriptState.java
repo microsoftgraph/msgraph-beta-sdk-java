@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the areGlobalScriptsAvailable method. */
+/**
+ * Indicates whether global device health scripts are enabled and are in which state
+ */
 public enum GlobalDeviceHealthScriptState implements ValuedEnum {
     /** Global device health scripts are not configured */
     NotConfigured("notConfigured"),

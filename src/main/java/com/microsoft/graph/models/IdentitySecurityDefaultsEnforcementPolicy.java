@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Parsable {
-    /** If set to true, Azure Active Directory security defaults is enabled for the tenant. */
-    private Boolean _isEnabled;
+    /**
+     * If set to true, Azure Active Directory security defaults is enabled for the tenant.
+     */
+    private Boolean isEnabled;
     /**
      * Instantiates a new IdentitySecurityDefaultsEnforcementPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy() {
         super();
         this.setOdataType("#microsoft.graph.identitySecurityDefaultsEnforcementPolicy");
@@ -30,14 +32,13 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IdentitySecurityDefaultsEnforcementPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. If set to true, Azure Active Directory security defaults is enabled for the tenant.
@@ -45,13 +46,14 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this._isEnabled;
+        return this.isEnabled;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabled = value;
+        this.isEnabled = value;
     }
 }

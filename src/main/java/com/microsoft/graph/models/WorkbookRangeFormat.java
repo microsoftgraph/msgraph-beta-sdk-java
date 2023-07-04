@@ -3,36 +3,53 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookRangeFormat extends Entity implements Parsable {
-    /** Collection of border objects that apply to the overall range selected Read-only. */
-    private java.util.List<WorkbookRangeBorder> _borders;
-    /** Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned. */
-    private Double _columnWidth;
-    /** Returns the fill object defined on the overall range. Read-only. */
-    private WorkbookRangeFill _fill;
-    /** Returns the font object defined on the overall range selected Read-only. */
-    private WorkbookRangeFont _font;
-    /** Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed. */
-    private String _horizontalAlignment;
-    /** Returns the format protection object for a range. Read-only. */
-    private WorkbookFormatProtection _protection;
-    /** Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned. */
-    private Double _rowHeight;
-    /** Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed. */
-    private String _verticalAlignment;
-    /** Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting */
-    private Boolean _wrapText;
+    /**
+     * Collection of border objects that apply to the overall range selected Read-only.
+     */
+    private java.util.List<WorkbookRangeBorder> borders;
+    /**
+     * Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
+     */
+    private Double columnWidth;
+    /**
+     * Returns the fill object defined on the overall range. Read-only.
+     */
+    private WorkbookRangeFill fill;
+    /**
+     * Returns the font object defined on the overall range selected Read-only.
+     */
+    private WorkbookRangeFont font;
+    /**
+     * Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     */
+    private String horizontalAlignment;
+    /**
+     * Returns the format protection object for a range. Read-only.
+     */
+    private WorkbookFormatProtection protection;
+    /**
+     * Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
+     */
+    private Double rowHeight;
+    /**
+     * Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
+     */
+    private String verticalAlignment;
+    /**
+     * Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting
+     */
+    private Boolean wrapText;
     /**
      * Instantiates a new workbookRangeFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookRangeFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookRangeFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +67,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookRangeBorder> getBorders() {
-        return this._borders;
+        return this.borders;
     }
     /**
      * Gets the columnWidth property value. Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
@@ -58,26 +75,25 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getColumnWidth() {
-        return this._columnWidth;
+        return this.columnWidth;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookRangeFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("borders", (n) -> { currentObject.setBorders(n.getCollectionOfObjectValues(WorkbookRangeBorder::createFromDiscriminatorValue)); });
-            this.put("columnWidth", (n) -> { currentObject.setColumnWidth(n.getDoubleValue()); });
-            this.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookRangeFill::createFromDiscriminatorValue)); });
-            this.put("font", (n) -> { currentObject.setFont(n.getObjectValue(WorkbookRangeFont::createFromDiscriminatorValue)); });
-            this.put("horizontalAlignment", (n) -> { currentObject.setHorizontalAlignment(n.getStringValue()); });
-            this.put("protection", (n) -> { currentObject.setProtection(n.getObjectValue(WorkbookFormatProtection::createFromDiscriminatorValue)); });
-            this.put("rowHeight", (n) -> { currentObject.setRowHeight(n.getDoubleValue()); });
-            this.put("verticalAlignment", (n) -> { currentObject.setVerticalAlignment(n.getStringValue()); });
-            this.put("wrapText", (n) -> { currentObject.setWrapText(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("borders", (n) -> { this.setBorders(n.getCollectionOfObjectValues(WorkbookRangeBorder::createFromDiscriminatorValue)); });
+        deserializerMap.put("columnWidth", (n) -> { this.setColumnWidth(n.getDoubleValue()); });
+        deserializerMap.put("fill", (n) -> { this.setFill(n.getObjectValue(WorkbookRangeFill::createFromDiscriminatorValue)); });
+        deserializerMap.put("font", (n) -> { this.setFont(n.getObjectValue(WorkbookRangeFont::createFromDiscriminatorValue)); });
+        deserializerMap.put("horizontalAlignment", (n) -> { this.setHorizontalAlignment(n.getStringValue()); });
+        deserializerMap.put("protection", (n) -> { this.setProtection(n.getObjectValue(WorkbookFormatProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("rowHeight", (n) -> { this.setRowHeight(n.getDoubleValue()); });
+        deserializerMap.put("verticalAlignment", (n) -> { this.setVerticalAlignment(n.getStringValue()); });
+        deserializerMap.put("wrapText", (n) -> { this.setWrapText(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fill property value. Returns the fill object defined on the overall range. Read-only.
@@ -85,7 +101,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookRangeFill getFill() {
-        return this._fill;
+        return this.fill;
     }
     /**
      * Gets the font property value. Returns the font object defined on the overall range selected Read-only.
@@ -93,7 +109,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookRangeFont getFont() {
-        return this._font;
+        return this.font;
     }
     /**
      * Gets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
@@ -101,7 +117,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getHorizontalAlignment() {
-        return this._horizontalAlignment;
+        return this.horizontalAlignment;
     }
     /**
      * Gets the protection property value. Returns the format protection object for a range. Read-only.
@@ -109,7 +125,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookFormatProtection getProtection() {
-        return this._protection;
+        return this.protection;
     }
     /**
      * Gets the rowHeight property value. Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
@@ -117,7 +133,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getRowHeight() {
-        return this._rowHeight;
+        return this.rowHeight;
     }
     /**
      * Gets the verticalAlignment property value. Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
@@ -125,7 +141,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVerticalAlignment() {
-        return this._verticalAlignment;
+        return this.verticalAlignment;
     }
     /**
      * Gets the wrapText property value. Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting
@@ -133,13 +149,14 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getWrapText() {
-        return this._wrapText;
+        return this.wrapText;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,71 +175,80 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
      * @param value Value to set for the borders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBorders(@javax.annotation.Nullable final java.util.List<WorkbookRangeBorder> value) {
-        this._borders = value;
+        this.borders = value;
     }
     /**
      * Sets the columnWidth property value. Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
      * @param value Value to set for the columnWidth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColumnWidth(@javax.annotation.Nullable final Double value) {
-        this._columnWidth = value;
+        this.columnWidth = value;
     }
     /**
      * Sets the fill property value. Returns the fill object defined on the overall range. Read-only.
      * @param value Value to set for the fill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFill(@javax.annotation.Nullable final WorkbookRangeFill value) {
-        this._fill = value;
+        this.fill = value;
     }
     /**
      * Sets the font property value. Returns the font object defined on the overall range selected Read-only.
      * @param value Value to set for the font property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFont(@javax.annotation.Nullable final WorkbookRangeFont value) {
-        this._font = value;
+        this.font = value;
     }
     /**
      * Sets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      * @param value Value to set for the horizontalAlignment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHorizontalAlignment(@javax.annotation.Nullable final String value) {
-        this._horizontalAlignment = value;
+        this.horizontalAlignment = value;
     }
     /**
      * Sets the protection property value. Returns the format protection object for a range. Read-only.
      * @param value Value to set for the protection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtection(@javax.annotation.Nullable final WorkbookFormatProtection value) {
-        this._protection = value;
+        this.protection = value;
     }
     /**
      * Sets the rowHeight property value. Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
      * @param value Value to set for the rowHeight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRowHeight(@javax.annotation.Nullable final Double value) {
-        this._rowHeight = value;
+        this.rowHeight = value;
     }
     /**
      * Sets the verticalAlignment property value. Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
      * @param value Value to set for the verticalAlignment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerticalAlignment(@javax.annotation.Nullable final String value) {
-        this._verticalAlignment = value;
+        this.verticalAlignment = value;
     }
     /**
      * Sets the wrapText property value. Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting
      * @param value Value to set for the wrapText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWrapText(@javax.annotation.Nullable final Boolean value) {
-        this._wrapText = value;
+        this.wrapText = value;
     }
 }

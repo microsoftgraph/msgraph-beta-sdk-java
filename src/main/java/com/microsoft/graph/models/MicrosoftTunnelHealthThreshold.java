@@ -3,31 +3,41 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Entity that represents the health thresholds of a health metric
+ */
 public class MicrosoftTunnelHealthThreshold extends Entity implements Parsable {
-    /** The default threshold for being healthy */
-    private Long _defaultHealthyThreshold;
-    /** The default threshold for being unhealthy */
-    private Long _defaultUnhealthyThreshold;
-    /** The threshold for being healthy */
-    private Long _healthyThreshold;
-    /** The threshold for being unhealthy */
-    private Long _unhealthyThreshold;
     /**
-     * Instantiates a new MicrosoftTunnelHealthThreshold and sets the default values.
+     * The threshold for being healthy based on default health status metrics: CPU usage healthy < 50%, Memory usage healthy < 50%, Disk space healthy > 5GB, Latency healthy < 10ms, health metrics can be customized. Read-only.
+     */
+    private Long defaultHealthyThreshold;
+    /**
+     * The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy > 75%, Memory usage unhealthy > 75%, Disk space < 3GB, Latency unhealthy > 20ms, health metrics can be customized. Read-only.
+     */
+    private Long defaultUnhealthyThreshold;
+    /**
+     * The threshold for being healthy based on default health status metrics: CPU usage healthy < 50%, Memory usage healthy < 50%, Disk space healthy > 5GB, Latency healthy < 10ms, health metrics can be customized.
+     */
+    private Long healthyThreshold;
+    /**
+     * The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy > 75%, Memory usage unhealthy > 75%, Disk space < 3GB, Latency Unhealthy > 20ms, health metrics can be customized.
+     */
+    private Long unhealthyThreshold;
+    /**
+     * Instantiates a new microsoftTunnelHealthThreshold and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftTunnelHealthThreshold() {
         super();
-        this.setOdataType("#microsoft.graph.microsoftTunnelHealthThreshold");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftTunnelHealthThreshold
+     * @return a microsoftTunnelHealthThreshold
      */
     @javax.annotation.Nonnull
     public static MicrosoftTunnelHealthThreshold createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -35,56 +45,56 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements Parsable {
         return new MicrosoftTunnelHealthThreshold();
     }
     /**
-     * Gets the defaultHealthyThreshold property value. The default threshold for being healthy
+     * Gets the defaultHealthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy < 50%, Memory usage healthy < 50%, Disk space healthy > 5GB, Latency healthy < 10ms, health metrics can be customized. Read-only.
      * @return a int64
      */
     @javax.annotation.Nullable
     public Long getDefaultHealthyThreshold() {
-        return this._defaultHealthyThreshold;
+        return this.defaultHealthyThreshold;
     }
     /**
-     * Gets the defaultUnhealthyThreshold property value. The default threshold for being unhealthy
+     * Gets the defaultUnhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy > 75%, Memory usage unhealthy > 75%, Disk space < 3GB, Latency unhealthy > 20ms, health metrics can be customized. Read-only.
      * @return a int64
      */
     @javax.annotation.Nullable
     public Long getDefaultUnhealthyThreshold() {
-        return this._defaultUnhealthyThreshold;
+        return this.defaultUnhealthyThreshold;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MicrosoftTunnelHealthThreshold currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultHealthyThreshold", (n) -> { currentObject.setDefaultHealthyThreshold(n.getLongValue()); });
-            this.put("defaultUnhealthyThreshold", (n) -> { currentObject.setDefaultUnhealthyThreshold(n.getLongValue()); });
-            this.put("healthyThreshold", (n) -> { currentObject.setHealthyThreshold(n.getLongValue()); });
-            this.put("unhealthyThreshold", (n) -> { currentObject.setUnhealthyThreshold(n.getLongValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultHealthyThreshold", (n) -> { this.setDefaultHealthyThreshold(n.getLongValue()); });
+        deserializerMap.put("defaultUnhealthyThreshold", (n) -> { this.setDefaultUnhealthyThreshold(n.getLongValue()); });
+        deserializerMap.put("healthyThreshold", (n) -> { this.setHealthyThreshold(n.getLongValue()); });
+        deserializerMap.put("unhealthyThreshold", (n) -> { this.setUnhealthyThreshold(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the healthyThreshold property value. The threshold for being healthy
+     * Gets the healthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy < 50%, Memory usage healthy < 50%, Disk space healthy > 5GB, Latency healthy < 10ms, health metrics can be customized.
      * @return a int64
      */
     @javax.annotation.Nullable
     public Long getHealthyThreshold() {
-        return this._healthyThreshold;
+        return this.healthyThreshold;
     }
     /**
-     * Gets the unhealthyThreshold property value. The threshold for being unhealthy
+     * Gets the unhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy > 75%, Memory usage unhealthy > 75%, Disk space < 3GB, Latency Unhealthy > 20ms, health metrics can be customized.
      * @return a int64
      */
     @javax.annotation.Nullable
     public Long getUnhealthyThreshold() {
-        return this._unhealthyThreshold;
+        return this.unhealthyThreshold;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -94,35 +104,39 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements Parsable {
         writer.writeLongValue("unhealthyThreshold", this.getUnhealthyThreshold());
     }
     /**
-     * Sets the defaultHealthyThreshold property value. The default threshold for being healthy
+     * Sets the defaultHealthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy < 50%, Memory usage healthy < 50%, Disk space healthy > 5GB, Latency healthy < 10ms, health metrics can be customized. Read-only.
      * @param value Value to set for the defaultHealthyThreshold property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultHealthyThreshold(@javax.annotation.Nullable final Long value) {
-        this._defaultHealthyThreshold = value;
+        this.defaultHealthyThreshold = value;
     }
     /**
-     * Sets the defaultUnhealthyThreshold property value. The default threshold for being unhealthy
+     * Sets the defaultUnhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy > 75%, Memory usage unhealthy > 75%, Disk space < 3GB, Latency unhealthy > 20ms, health metrics can be customized. Read-only.
      * @param value Value to set for the defaultUnhealthyThreshold property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultUnhealthyThreshold(@javax.annotation.Nullable final Long value) {
-        this._defaultUnhealthyThreshold = value;
+        this.defaultUnhealthyThreshold = value;
     }
     /**
-     * Sets the healthyThreshold property value. The threshold for being healthy
+     * Sets the healthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy < 50%, Memory usage healthy < 50%, Disk space healthy > 5GB, Latency healthy < 10ms, health metrics can be customized.
      * @param value Value to set for the healthyThreshold property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthyThreshold(@javax.annotation.Nullable final Long value) {
-        this._healthyThreshold = value;
+        this.healthyThreshold = value;
     }
     /**
-     * Sets the unhealthyThreshold property value. The threshold for being unhealthy
+     * Sets the unhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy > 75%, Memory usage unhealthy > 75%, Disk space < 3GB, Latency Unhealthy > 20ms, health metrics can be customized.
      * @param value Value to set for the unhealthyThreshold property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnhealthyThreshold(@javax.annotation.Nullable final Long value) {
-        this._unhealthyThreshold = value;
+        this.unhealthyThreshold = value;
     }
 }

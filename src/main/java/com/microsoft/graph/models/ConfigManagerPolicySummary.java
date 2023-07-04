@@ -4,35 +4,52 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A ConfigManager policy summary. */
+/**
+ * A ConfigManager policy summary.
+ */
 public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The number of devices evaluated to be compliant by the policy. */
-    private Integer _compliantDeviceCount;
-    /** The number of devices that have have been remediated by the policy. */
-    private Integer _enforcedDeviceCount;
-    /** The number of devices that failed to be evaluated by the policy. */
-    private Integer _failedDeviceCount;
-    /** The number of devices evaluated to be noncompliant by the policy. */
-    private Integer _nonCompliantDeviceCount;
-    /** The OdataType property */
-    private String _odataType;
-    /** The number of devices that have acknowledged the policy but are pending evaluation. */
-    private Integer _pendingDeviceCount;
-    /** The number of devices targeted by the policy. */
-    private Integer _targetedDeviceCount;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The number of devices evaluated to be compliant by the policy.
+     */
+    private Integer compliantDeviceCount;
+    /**
+     * The number of devices that have have been remediated by the policy.
+     */
+    private Integer enforcedDeviceCount;
+    /**
+     * The number of devices that failed to be evaluated by the policy.
+     */
+    private Integer failedDeviceCount;
+    /**
+     * The number of devices evaluated to be noncompliant by the policy.
+     */
+    private Integer nonCompliantDeviceCount;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The number of devices that have acknowledged the policy but are pending evaluation.
+     */
+    private Integer pendingDeviceCount;
+    /**
+     * The number of devices targeted by the policy.
+     */
+    private Integer targetedDeviceCount;
     /**
      * Instantiates a new configManagerPolicySummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConfigManagerPolicySummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.configManagerPolicySummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +67,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the compliantDeviceCount property value. The number of devices evaluated to be compliant by the policy.
@@ -58,7 +75,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Integer getCompliantDeviceCount() {
-        return this._compliantDeviceCount;
+        return this.compliantDeviceCount;
     }
     /**
      * Gets the enforcedDeviceCount property value. The number of devices that have have been remediated by the policy.
@@ -66,7 +83,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Integer getEnforcedDeviceCount() {
-        return this._enforcedDeviceCount;
+        return this.enforcedDeviceCount;
     }
     /**
      * Gets the failedDeviceCount property value. The number of devices that failed to be evaluated by the policy.
@@ -74,24 +91,23 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Integer getFailedDeviceCount() {
-        return this._failedDeviceCount;
+        return this.failedDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConfigManagerPolicySummary currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("enforcedDeviceCount", (n) -> { currentObject.setEnforcedDeviceCount(n.getIntegerValue()); });
-            this.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
-            this.put("nonCompliantDeviceCount", (n) -> { currentObject.setNonCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("pendingDeviceCount", (n) -> { currentObject.setPendingDeviceCount(n.getIntegerValue()); });
-            this.put("targetedDeviceCount", (n) -> { currentObject.setTargetedDeviceCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("compliantDeviceCount", (n) -> { this.setCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("enforcedDeviceCount", (n) -> { this.setEnforcedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("failedDeviceCount", (n) -> { this.setFailedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("nonCompliantDeviceCount", (n) -> { this.setNonCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("pendingDeviceCount", (n) -> { this.setPendingDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("targetedDeviceCount", (n) -> { this.setTargetedDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the nonCompliantDeviceCount property value. The number of devices evaluated to be noncompliant by the policy.
@@ -99,7 +115,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
-        return this._nonCompliantDeviceCount;
+        return this.nonCompliantDeviceCount;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,7 +123,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the pendingDeviceCount property value. The number of devices that have acknowledged the policy but are pending evaluation.
@@ -115,7 +131,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Integer getPendingDeviceCount() {
-        return this._pendingDeviceCount;
+        return this.pendingDeviceCount;
     }
     /**
      * Gets the targetedDeviceCount property value. The number of devices targeted by the policy.
@@ -123,13 +139,14 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Integer getTargetedDeviceCount() {
-        return this._targetedDeviceCount;
+        return this.targetedDeviceCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("compliantDeviceCount", this.getCompliantDeviceCount());
@@ -146,63 +163,71 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the compliantDeviceCount property value. The number of devices evaluated to be compliant by the policy.
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._compliantDeviceCount = value;
+        this.compliantDeviceCount = value;
     }
     /**
      * Sets the enforcedDeviceCount property value. The number of devices that have have been remediated by the policy.
      * @param value Value to set for the enforcedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforcedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._enforcedDeviceCount = value;
+        this.enforcedDeviceCount = value;
     }
     /**
      * Sets the failedDeviceCount property value. The number of devices that failed to be evaluated by the policy.
      * @param value Value to set for the failedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._failedDeviceCount = value;
+        this.failedDeviceCount = value;
     }
     /**
      * Sets the nonCompliantDeviceCount property value. The number of devices evaluated to be noncompliant by the policy.
      * @param value Value to set for the nonCompliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNonCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._nonCompliantDeviceCount = value;
+        this.nonCompliantDeviceCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the pendingDeviceCount property value. The number of devices that have acknowledged the policy but are pending evaluation.
      * @param value Value to set for the pendingDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._pendingDeviceCount = value;
+        this.pendingDeviceCount = value;
     }
     /**
      * Sets the targetedDeviceCount property value. The number of devices targeted by the policy.
      * @param value Value to set for the targetedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._targetedDeviceCount = value;
+        this.targetedDeviceCount = value;
     }
 }

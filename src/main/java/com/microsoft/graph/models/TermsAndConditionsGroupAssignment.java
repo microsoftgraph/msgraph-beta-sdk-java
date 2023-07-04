@@ -3,23 +3,28 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A termsAndConditionsGroupAssignment entity represents the assignment of a given Terms and Conditions (T&C) policy to a given group. Users in the group will be required to accept the terms in order to have devices enrolled into Intune. */
+/**
+ * A termsAndConditionsGroupAssignment entity represents the assignment of a given Terms and Conditions (T&C) policy to a given group. Users in the group will be required to accept the terms in order to have devices enrolled into Intune.
+ */
 public class TermsAndConditionsGroupAssignment extends Entity implements Parsable {
-    /** Unique identifier of a group that the T&C policy is assigned to. */
-    private String _targetGroupId;
-    /** Navigation link to the terms and conditions that are assigned. */
-    private TermsAndConditions _termsAndConditions;
+    /**
+     * Unique identifier of a group that the T&C policy is assigned to.
+     */
+    private String targetGroupId;
+    /**
+     * Navigation link to the terms and conditions that are assigned.
+     */
+    private TermsAndConditions termsAndConditions;
     /**
      * Instantiates a new termsAndConditionsGroupAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TermsAndConditionsGroupAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.termsAndConditionsGroupAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,15 +38,14 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TermsAndConditionsGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });
-            this.put("termsAndConditions", (n) -> { currentObject.setTermsAndConditions(n.getObjectValue(TermsAndConditions::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("targetGroupId", (n) -> { this.setTargetGroupId(n.getStringValue()); });
+        deserializerMap.put("termsAndConditions", (n) -> { this.setTermsAndConditions(n.getObjectValue(TermsAndConditions::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the targetGroupId property value. Unique identifier of a group that the T&C policy is assigned to.
@@ -49,7 +53,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getTargetGroupId() {
-        return this._targetGroupId;
+        return this.targetGroupId;
     }
     /**
      * Gets the termsAndConditions property value. Navigation link to the terms and conditions that are assigned.
@@ -57,13 +61,14 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public TermsAndConditions getTermsAndConditions() {
-        return this._termsAndConditions;
+        return this.termsAndConditions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,15 +80,17 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
      * @param value Value to set for the targetGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetGroupId(@javax.annotation.Nullable final String value) {
-        this._targetGroupId = value;
+        this.targetGroupId = value;
     }
     /**
      * Sets the termsAndConditions property value. Navigation link to the terms and conditions that are assigned.
      * @param value Value to set for the termsAndConditions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsAndConditions(@javax.annotation.Nullable final TermsAndConditions value) {
-        this._termsAndConditions = value;
+        this.termsAndConditions = value;
     }
 }

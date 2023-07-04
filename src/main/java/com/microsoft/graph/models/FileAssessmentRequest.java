@@ -3,19 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
-    /** Base64 encoded file content. The file content cannot fetch back because it isn't stored. */
-    private String _contentData;
-    /** The file name. */
-    private String _fileName;
+    /**
+     * Base64 encoded file content. The file content cannot fetch back because it isn't stored.
+     */
+    private String contentData;
+    /**
+     * The file name.
+     */
+    private String fileName;
     /**
      * Instantiates a new FileAssessmentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.fileAssessmentRequest");
@@ -36,19 +40,18 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @javax.annotation.Nullable
     public String getContentData() {
-        return this._contentData;
+        return this.contentData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FileAssessmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contentData", (n) -> { currentObject.setContentData(n.getStringValue()); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentData", (n) -> { this.setContentData(n.getStringValue()); });
+        deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileName property value. The file name.
@@ -56,13 +59,14 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     @javax.annotation.Nullable
     public String getFileName() {
-        return this._fileName;
+        return this.fileName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +78,17 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param value Value to set for the contentData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentData(@javax.annotation.Nullable final String value) {
-        this._contentData = value;
+        this.contentData = value;
     }
     /**
      * Sets the fileName property value. The file name.
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
-        this._fileName = value;
+        this.fileName = value;
     }
 }

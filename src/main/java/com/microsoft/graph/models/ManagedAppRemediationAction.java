@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * An admin initiated action to be applied on a managed app.
+ */
 public enum ManagedAppRemediationAction implements ValuedEnum {
     /** app and the corresponding company data to be blocked */
     Block("block"),

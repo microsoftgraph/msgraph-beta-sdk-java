@@ -4,33 +4,48 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represent status details for device and payload and all associated applied filters. */
+/**
+ * Represent status details for device and payload and all associated applied filters.
+ */
 public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Device properties used for filter evaluation during device check-in time. */
-    private java.util.List<KeyValuePair> _deviceProperties;
-    /** Evaluation result summaries for each filter associated to device and payload */
-    private java.util.List<AssignmentFilterEvaluationSummary> _evalutionSummaries;
-    /** Unique identifier for the device object. */
-    private String _managedDeviceId;
-    /** The OdataType property */
-    private String _odataType;
-    /** Unique identifier for payload object. */
-    private String _payloadId;
-    /** Unique identifier for UserId object. Can be null */
-    private String _userId;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Device properties used for filter evaluation during device check-in time.
+     */
+    private java.util.List<KeyValuePair> deviceProperties;
+    /**
+     * Evaluation result summaries for each filter associated to device and payload
+     */
+    private java.util.List<AssignmentFilterEvaluationSummary> evalutionSummaries;
+    /**
+     * Unique identifier for the device object.
+     */
+    private String managedDeviceId;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Unique identifier for payload object.
+     */
+    private String payloadId;
+    /**
+     * Unique identifier for UserId object. Can be null
+     */
+    private String userId;
     /**
      * Instantiates a new assignmentFilterStatusDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignmentFilterStatusDetails() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.assignmentFilterStatusDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +63,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the deviceProperties property value. Device properties used for filter evaluation during device check-in time.
@@ -56,7 +71,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getDeviceProperties() {
-        return this._deviceProperties;
+        return this.deviceProperties;
     }
     /**
      * Gets the evalutionSummaries property value. Evaluation result summaries for each filter associated to device and payload
@@ -64,23 +79,22 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public java.util.List<AssignmentFilterEvaluationSummary> getEvalutionSummaries() {
-        return this._evalutionSummaries;
+        return this.evalutionSummaries;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AssignmentFilterStatusDetails currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("deviceProperties", (n) -> { currentObject.setDeviceProperties(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("evalutionSummaries", (n) -> { currentObject.setEvalutionSummaries(n.getCollectionOfObjectValues(AssignmentFilterEvaluationSummary::createFromDiscriminatorValue)); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("deviceProperties", (n) -> { this.setDeviceProperties(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("evalutionSummaries", (n) -> { this.setEvalutionSummaries(n.getCollectionOfObjectValues(AssignmentFilterEvaluationSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("payloadId", (n) -> { this.setPayloadId(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceId property value. Unique identifier for the device object.
@@ -88,7 +102,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getManagedDeviceId() {
-        return this._managedDeviceId;
+        return this.managedDeviceId;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,7 +110,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the payloadId property value. Unique identifier for payload object.
@@ -104,7 +118,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getPayloadId() {
-        return this._payloadId;
+        return this.payloadId;
     }
     /**
      * Gets the userId property value. Unique identifier for UserId object. Can be null
@@ -112,13 +126,14 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("deviceProperties", this.getDeviceProperties());
@@ -134,55 +149,62 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the deviceProperties property value. Device properties used for filter evaluation during device check-in time.
      * @param value Value to set for the deviceProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceProperties(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._deviceProperties = value;
+        this.deviceProperties = value;
     }
     /**
      * Sets the evalutionSummaries property value. Evaluation result summaries for each filter associated to device and payload
      * @param value Value to set for the evalutionSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvalutionSummaries(@javax.annotation.Nullable final java.util.List<AssignmentFilterEvaluationSummary> value) {
-        this._evalutionSummaries = value;
+        this.evalutionSummaries = value;
     }
     /**
      * Sets the managedDeviceId property value. Unique identifier for the device object.
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
-        this._managedDeviceId = value;
+        this.managedDeviceId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the payloadId property value. Unique identifier for payload object.
      * @param value Value to set for the payloadId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadId(@javax.annotation.Nullable final String value) {
-        this._payloadId = value;
+        this.payloadId = value;
     }
     /**
      * Sets the userId property value. Unique identifier for UserId object. Can be null
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }
