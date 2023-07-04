@@ -78,7 +78,9 @@ public class PrinterDefaults implements IJsonBackedObject {
     /**
      * The Document Mime Type.
      * 
+     * @deprecated The documentMimeType property is deprecated and will stop returning data on July 31, 2023. Please use the contentType property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "documentMimeType", alternate = {"DocumentMimeType"})
     @Expose
 	@Nullable
@@ -96,7 +98,9 @@ public class PrinterDefaults implements IJsonBackedObject {
     /**
      * The Duplex Configuration.
      * 
+     * @deprecated The duplexConfiguration enum type is deprecated and will stop returning data on July 31, 2023. Please use the printDuplexMode enum type instead of this.
      */
+    @Deprecated
     @SerializedName(value = "duplexConfiguration", alternate = {"DuplexConfiguration"})
     @Expose
 	@Nullable
@@ -204,7 +208,9 @@ public class PrinterDefaults implements IJsonBackedObject {
     /**
      * The Pdf Fit To Page.
      * 
+     * @deprecated The pdfFitToPage property is deprecated and will stop returning data on July 31, 2023. Please use the fitPdfToPage property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "pdfFitToPage", alternate = {"PdfFitToPage"})
     @Expose
 	@Nullable
@@ -213,7 +219,9 @@ public class PrinterDefaults implements IJsonBackedObject {
     /**
      * The Presentation Direction.
      * 
+     * @deprecated The presentationDirection enum type is deprecated and will stop returning data on July 31, 2023. Please use the printMultipageLayout enum type instead of this.
      */
+    @Deprecated
     @SerializedName(value = "presentationDirection", alternate = {"PresentationDirection"})
     @Expose
 	@Nullable
@@ -222,7 +230,9 @@ public class PrinterDefaults implements IJsonBackedObject {
     /**
      * The Print Color Configuration.
      * 
+     * @deprecated The printColorConfiguration enum type is deprecated and will stop returning data on July 31, 2023. Please use the printColorMode enum type instead of this.
      */
+    @Deprecated
     @SerializedName(value = "printColorConfiguration", alternate = {"PrintColorConfiguration"})
     @Expose
 	@Nullable
@@ -231,7 +241,9 @@ public class PrinterDefaults implements IJsonBackedObject {
     /**
      * The Print Quality.
      * 
+     * @deprecated The printQuality property is deprecated and will stop returning data on July 31, 2023. Please use the quality property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "printQuality", alternate = {"PrintQuality"})
     @Expose
 	@Nullable

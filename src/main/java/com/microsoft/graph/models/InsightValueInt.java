@@ -27,7 +27,7 @@ public class InsightValueInt extends UserExperienceAnalyticsInsightValue impleme
 
     /**
      * The Value.
-     * Not yet documented
+     * The int value of the user experience analytics insight.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

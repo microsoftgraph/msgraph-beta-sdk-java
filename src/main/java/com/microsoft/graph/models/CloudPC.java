@@ -166,7 +166,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Power State.
-     * 
+     * The power state of a Cloud PC. The possible values are: running, poweredOff and unknown. This property only supports shift work Cloud PCs.
      */
     @SerializedName(value = "powerState", alternate = {"PowerState"})
     @Expose

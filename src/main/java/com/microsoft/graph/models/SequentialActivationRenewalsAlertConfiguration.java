@@ -27,7 +27,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
 
     /**
      * The Sequential Activation Counter Threshold.
-     * 
+     * The minimum number of activations within the timeIntervalBetweenActivations period to trigger an alert.
      */
     @SerializedName(value = "sequentialActivationCounterThreshold", alternate = {"SequentialActivationCounterThreshold"})
     @Expose
@@ -36,7 +36,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
 
     /**
      * The Time Interval Between Activations.
-     * 
+     * Time interval between activations to trigger an alert.
      */
     @SerializedName(value = "timeIntervalBetweenActivations", alternate = {"TimeIntervalBetweenActivations"})
     @Expose

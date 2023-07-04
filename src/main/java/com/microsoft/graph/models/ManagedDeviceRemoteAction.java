@@ -84,6 +84,10 @@ public enum ManagedDeviceRemoteAction
     */
     INITIATE_ON_DEMAND_PROACTIVE_REMEDIATION,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For ManagedDeviceRemoteAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

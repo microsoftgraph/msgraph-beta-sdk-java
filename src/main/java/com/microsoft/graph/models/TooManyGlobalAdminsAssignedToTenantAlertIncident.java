@@ -27,7 +27,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRol
 
     /**
      * The Assignee Display Name.
-     * 
+     * Display name of the subject that the incident applies to.
      */
     @SerializedName(value = "assigneeDisplayName", alternate = {"AssigneeDisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRol
 
     /**
      * The Assignee Id.
-     * 
+     * The identifier of the subject that the incident applies to.
      */
     @SerializedName(value = "assigneeId", alternate = {"AssigneeId"})
     @Expose
@@ -45,7 +45,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRol
 
     /**
      * The Assignee User Principal Name.
-     * 
+     * User principal name of the subject that the incident applies to. Applies to user principals.
      */
     @SerializedName(value = "assigneeUserPrincipalName", alternate = {"AssigneeUserPrincipalName"})
     @Expose

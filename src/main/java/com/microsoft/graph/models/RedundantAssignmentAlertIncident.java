@@ -27,7 +27,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
 
     /**
      * The Assignee Display Name.
-     * 
+     * Display name of the subject that the incident applies to.
      */
     @SerializedName(value = "assigneeDisplayName", alternate = {"AssigneeDisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
 
     /**
      * The Assignee Id.
-     * 
+     * The identifier of the subject that the incident applies to.
      */
     @SerializedName(value = "assigneeId", alternate = {"AssigneeId"})
     @Expose
@@ -45,7 +45,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
 
     /**
      * The Assignee User Principal Name.
-     * 
+     * User principal name of the subject that the incident applies to. Applies to user principals only.
      */
     @SerializedName(value = "assigneeUserPrincipalName", alternate = {"AssigneeUserPrincipalName"})
     @Expose
@@ -54,7 +54,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
 
     /**
      * The Last Activation Date Time.
-     * 
+     * Date and time of the last activation of the eligible assignment.
      */
     @SerializedName(value = "lastActivationDateTime", alternate = {"LastActivationDateTime"})
     @Expose
@@ -63,7 +63,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
 
     /**
      * The Role Definition Id.
-     * 
+     * The identifier for the directory role definition that's in scope of this incident.
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -72,7 +72,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
 
     /**
      * The Role Display Name.
-     * 
+     * The display name for the directory role.
      */
     @SerializedName(value = "roleDisplayName", alternate = {"RoleDisplayName"})
     @Expose
@@ -81,7 +81,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
 
     /**
      * The Role Template Id.
-     * 
+     * The globally unique identifier for the directory role.
      */
     @SerializedName(value = "roleTemplateId", alternate = {"RoleTemplateId"})
     @Expose

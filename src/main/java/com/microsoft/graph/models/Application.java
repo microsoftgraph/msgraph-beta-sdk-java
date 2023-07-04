@@ -81,7 +81,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Authentication Behaviors.
-     * The collection of authentication behaviors set for the application. Authentication behaviors are unset by default and must be explicitly enabled (or disabled). Returned only on $select.
+     * The collection of authentication behaviors set for the application. Authentication behaviors are unset by default and must be explicitly enabled (or disabled). Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
      */
     @SerializedName(value = "authenticationBehaviors", alternate = {"AuthenticationBehaviors"})
     @Expose

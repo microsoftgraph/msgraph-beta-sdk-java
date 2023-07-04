@@ -35,6 +35,42 @@ public class IosiPadOSWebClip extends MobileApp implements IJsonBackedObject {
     public String appUrl;
 
     /**
+     * The Full Screen Enabled.
+     * Whether or not to open the web clip as a full-screen web app. Defaults to false. If TRUE, opens the web clip as a full-screen web app. If FALSE, the web clip opens inside of another app, such as Safari or the app specified with targetApplicationBundleIdentifier.
+     */
+    @SerializedName(value = "fullScreenEnabled", alternate = {"FullScreenEnabled"})
+    @Expose
+	@Nullable
+    public Boolean fullScreenEnabled;
+
+    /**
+     * The Ignore Manifest Scope.
+     * Whether or not a full screen web clip can navigate to an external web site without showing the Safari UI. Defaults to false. If FALSE, the Safari UI appears when navigating away. If TRUE, the Safari UI will not be shown.
+     */
+    @SerializedName(value = "ignoreManifestScope", alternate = {"IgnoreManifestScope"})
+    @Expose
+	@Nullable
+    public Boolean ignoreManifestScope;
+
+    /**
+     * The Pre Composed Icon Enabled.
+     * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+     */
+    @SerializedName(value = "preComposedIconEnabled", alternate = {"PreComposedIconEnabled"})
+    @Expose
+	@Nullable
+    public Boolean preComposedIconEnabled;
+
+    /**
+     * The Target Application Bundle Identifier.
+     * Specifies the application bundle identifier which opens the URL. Available in iOS 14 and later.
+     */
+    @SerializedName(value = "targetApplicationBundleIdentifier", alternate = {"TargetApplicationBundleIdentifier"})
+    @Expose
+	@Nullable
+    public String targetApplicationBundleIdentifier;
+
+    /**
      * The Use Managed Browser.
      * Whether or not to use managed browser. When TRUE, the app will be required to be opened in Microsoft Edge. When FALSE, the app will not be required to be opened in Microsoft Edge. By default, this property is set to FALSE.
      */

@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements IJsonBack
 
     /**
      * The Devices Not Autopilot Registered.
-     * The count of intune devices that are not autopilot registerd.
+     * The count of intune devices that are not autopilot registerd. Read-only.
      */
     @SerializedName(value = "devicesNotAutopilotRegistered", alternate = {"DevicesNotAutopilotRegistered"})
     @Expose
@@ -48,7 +48,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements IJsonBack
 
     /**
      * The Devices Without Autopilot Profile Assigned.
-     * The count of intune devices not autopilot profile assigned.
+     * The count of intune devices not autopilot profile assigned. Read-only.
      */
     @SerializedName(value = "devicesWithoutAutopilotProfileAssigned", alternate = {"DevicesWithoutAutopilotProfileAssigned"})
     @Expose
@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements IJsonBack
 
     /**
      * The Total Windows10Devices Without Tenant Attached.
-     * The count of windows 10 devices that are Intune and Comanaged.
+     * The count of windows 10 devices that are Intune and co-managed. Read-only.
      */
     @SerializedName(value = "totalWindows10DevicesWithoutTenantAttached", alternate = {"TotalWindows10DevicesWithoutTenantAttached"})
     @Expose

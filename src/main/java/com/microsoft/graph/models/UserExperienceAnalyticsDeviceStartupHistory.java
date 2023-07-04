@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Core Boot Time In Ms.
-     * The user experience analytics device core boot time in milliseconds.
+     * The device core boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "coreBootTimeInMs", alternate = {"CoreBootTimeInMs"})
     @Expose
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Core Login Time In Ms.
-     * The user experience analytics device core login time in milliseconds.
+     * The device core login time in milliseconds. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "coreLoginTimeInMs", alternate = {"CoreLoginTimeInMs"})
     @Expose
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Device Id.
-     * The user experience analytics device id.
+     * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Feature Update Boot Time In Ms.
-     * The user experience analytics device feature update time in milliseconds.
+     * The impact of device feature updates on boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "featureUpdateBootTimeInMs", alternate = {"FeatureUpdateBootTimeInMs"})
     @Expose
@@ -64,7 +64,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Group Policy Boot Time In Ms.
-     * The User experience analytics Device group policy boot time in milliseconds.
+     * The impact of device group policy client on boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "groupPolicyBootTimeInMs", alternate = {"GroupPolicyBootTimeInMs"})
     @Expose
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Group Policy Login Time In Ms.
-     * The User experience analytics Device group policy login time in milliseconds.
+     * The impact of device group policy client on login time in milliseconds. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "groupPolicyLoginTimeInMs", alternate = {"GroupPolicyLoginTimeInMs"})
     @Expose
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Is Feature Update.
-     * The user experience analytics device boot record is a feature update.
+     * When TRUE, indicates the device boot record is associated with feature updates. When FALSE, indicates the device boot record is not associated with feature updates. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "isFeatureUpdate", alternate = {"IsFeatureUpdate"})
     @Expose
@@ -91,7 +91,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Is First Login.
-     * The user experience analytics device first login.
+     * When TRUE, indicates the device login is the first login after a reboot. When FALSE, indicates the device login is not the first login after a reboot. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "isFirstLogin", alternate = {"IsFirstLogin"})
     @Expose
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Operating System Version.
-     * The user experience analytics device boot record's operating system version.
+     * The user experience analytics device boot record's operating system version. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "operatingSystemVersion", alternate = {"OperatingSystemVersion"})
     @Expose
@@ -109,7 +109,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Responsive Desktop Time In Ms.
-     * The user experience analytics responsive desktop time in milliseconds.
+     * The time for desktop to become responsive during login process in milliseconds. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "responsiveDesktopTimeInMs", alternate = {"ResponsiveDesktopTimeInMs"})
     @Expose
@@ -118,7 +118,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Restart Category.
-     * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update.
+     * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update, unknownFutureValue.
      */
     @SerializedName(value = "restartCategory", alternate = {"RestartCategory"})
     @Expose
@@ -127,7 +127,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Restart Fault Bucket.
-     * OS restart fault bucket. The fault bucket is used to find additional information about a system crash.
+     * OS restart fault bucket. The fault bucket is used to find additional information about a system crash. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "restartFaultBucket", alternate = {"RestartFaultBucket"})
     @Expose
@@ -136,7 +136,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Restart Stop Code.
-     * OS restart stop code. This shows the bug check code which can be used to look up the blue screen reason.
+     * OS restart stop code. This shows the bug check code which can be used to look up the blue screen reason. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "restartStopCode", alternate = {"RestartStopCode"})
     @Expose
@@ -145,7 +145,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Start Time.
-     * The user experience analytics device boot start time.
+     * The device boot start time. The value cannot be modified and is automatically populated when the device performs a reboot. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
      */
     @SerializedName(value = "startTime", alternate = {"StartTime"})
     @Expose
@@ -154,7 +154,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Total Boot Time In Ms.
-     * The user experience analytics device total boot time in milliseconds.
+     * The device total boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "totalBootTimeInMs", alternate = {"TotalBootTimeInMs"})
     @Expose
@@ -163,7 +163,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Total Login Time In Ms.
-     * The user experience analytics device total login time in milliseconds.
+     * The device total login time in milliseconds. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "totalLoginTimeInMs", alternate = {"TotalLoginTimeInMs"})
     @Expose

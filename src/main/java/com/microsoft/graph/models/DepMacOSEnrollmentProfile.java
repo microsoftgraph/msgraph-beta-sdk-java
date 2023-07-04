@@ -62,6 +62,15 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     public String adminAccountUserName;
 
     /**
+     * The Auto Advance Setup Enabled.
+     * Indicates if Setup Assistant will automatically advance through its screen
+     */
+    @SerializedName(value = "autoAdvanceSetupEnabled", alternate = {"AutoAdvanceSetupEnabled"})
+    @Expose
+	@Nullable
+    public Boolean autoAdvanceSetupEnabled;
+
+    /**
      * The Auto Unlock With Watch Disabled.
      * Indicates if UnlockWithWatch screen is disabled
      */

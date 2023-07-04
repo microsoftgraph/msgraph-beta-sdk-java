@@ -670,6 +670,26 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * @return the collection request builder
      */
     @Nonnull
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder sponsors() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("sponsors"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder sponsors(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("sponsors") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
     public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
         return new com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf"), getClient(), null);
     }
@@ -1493,6 +1513,26 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     @Nonnull
     public com.microsoft.graph.requests.TeamWithReferenceRequestBuilder joinedTeams(@Nonnull final String id) {
         return new com.microsoft.graph.requests.TeamWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ResourceSpecificPermissionGrant collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
+        return new com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ResourceSpecificPermissionGrant item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants") + "/" + id, getClient(), null);
     }
 
     /**

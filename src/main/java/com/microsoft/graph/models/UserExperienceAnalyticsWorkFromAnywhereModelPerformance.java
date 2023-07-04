@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
 
     /**
      * The Cloud Identity Score.
-     * The user experience work from anywhere's cloud identity score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The cloud identity score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "cloudIdentityScore", alternate = {"CloudIdentityScore"})
     @Expose
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
 
     /**
      * The Cloud Management Score.
-     * The user experience work from anywhere's cloud management score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The cloud management score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "cloudManagementScore", alternate = {"CloudManagementScore"})
     @Expose
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
 
     /**
      * The Cloud Provisioning Score.
-     * The user experience work from anywhere's cloud provisioning score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The cloud provisioning score of the device model.  Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "cloudProvisioningScore", alternate = {"CloudProvisioningScore"})
     @Expose
@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics work from anywhere model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+     * The health state of the user experience analytics work from anywhere device model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose
@@ -64,7 +64,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
 
     /**
      * The Manufacturer.
-     * The user experience work from anywhere's manufacturer name of the devices.
+     * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
 
     /**
      * The Model.
-     * The user experience work from anywhere's model name of the devices.
+     * The model name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "model", alternate = {"Model"})
     @Expose
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
 
     /**
      * The Model Device Count.
-     * The user experience work from anywhere's devices count for the model. Valid values -2147483648 to 2147483647
+     * The devices count for the model. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "modelDeviceCount", alternate = {"ModelDeviceCount"})
     @Expose
@@ -91,7 +91,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
 
     /**
      * The Windows Score.
-     * The user experience work from anywhere windows score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The window score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "windowsScore", alternate = {"WindowsScore"})
     @Expose
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Ent
 
     /**
      * The Work From Anywhere Score.
-     * The user experience work from anywhere overall score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The work from anywhere score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "workFromAnywhereScore", alternate = {"WorkFromAnywhereScore"})
     @Expose

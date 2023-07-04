@@ -8,7 +8,9 @@ package com.microsoft.graph.models;
 
 /**
  * The Enum Print Media Type.
+ * @deprecated The printMediaType enum type is deprecated and will stop returning data on July 31, 2023. This enum type properties are replaced with string type properties.
 */
+@Deprecated
 public enum PrintMediaType
 {
     /**

@@ -139,7 +139,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
 
     /**
      * The Offer Shift Requests.
-     * 
+     * The offer requests for shifts in the schedule.
      */
     @SerializedName(value = "offerShiftRequests", alternate = {"OfferShiftRequests"})
     @Expose

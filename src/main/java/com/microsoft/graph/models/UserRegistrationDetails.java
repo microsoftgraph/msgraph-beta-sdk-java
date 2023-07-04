@@ -103,7 +103,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is System Preferred Authentication Method Enabled.
-     * 
+     * Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
      */
     @SerializedName(value = "isSystemPreferredAuthenticationMethodEnabled", alternate = {"IsSystemPreferredAuthenticationMethodEnabled"})
     @Expose
@@ -130,7 +130,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The System Preferred Authentication Methods.
-     * 
+     * Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
      */
     @SerializedName(value = "systemPreferredAuthenticationMethods", alternate = {"SystemPreferredAuthenticationMethods"})
     @Expose
@@ -148,7 +148,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The User Preferred Method For Secondary Authentication.
-     * 
+     * The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
      */
     @SerializedName(value = "userPreferredMethodForSecondaryAuthentication", alternate = {"UserPreferredMethodForSecondaryAuthentication"})
     @Expose

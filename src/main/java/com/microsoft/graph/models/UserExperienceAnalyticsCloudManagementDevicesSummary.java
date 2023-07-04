@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements IJs
 
     /**
      * The Co Managed Device Count.
-     * Total number of  co-managed devices.
+     * Total number of  co-managed devices. Read-only.
      */
     @SerializedName(value = "coManagedDeviceCount", alternate = {"CoManagedDeviceCount"})
     @Expose
@@ -48,7 +48,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements IJs
 
     /**
      * The Intune Device Count.
-     * The count of intune devices that are not autopilot registerd.
+     * The count of intune devices that are not autopilot registerd. Read-only.
      */
     @SerializedName(value = "intuneDeviceCount", alternate = {"IntuneDeviceCount"})
     @Expose
@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements IJs
 
     /**
      * The Tenant Attach Device Count.
-     * Total count of tenant attach devices.
+     * Total count of tenant attach devices. Read-only.
      */
     @SerializedName(value = "tenantAttachDeviceCount", alternate = {"TenantAttachDeviceCount"})
     @Expose

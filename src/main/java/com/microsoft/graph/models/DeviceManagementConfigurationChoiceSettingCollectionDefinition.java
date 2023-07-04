@@ -27,7 +27,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
 
     /**
      * The Maximum Count.
-     * Maximum number of choices in the collection. Valid values 1 to 100
+     * Maximum number of choices in the collection
      */
     @SerializedName(value = "maximumCount", alternate = {"MaximumCount"})
     @Expose
@@ -36,7 +36,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
 
     /**
      * The Minimum Count.
-     * Minimum number of choices in the collection. Valid values 1 to 100
+     * Minimum number of choices in the collection
      */
     @SerializedName(value = "minimumCount", alternate = {"MinimumCount"})
     @Expose

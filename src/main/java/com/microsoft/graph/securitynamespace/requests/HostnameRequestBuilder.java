@@ -147,6 +147,26 @@ public class HostnameRequestBuilder extends BaseRequestBuilder<Hostname> {
         return new com.microsoft.graph.security.requests.HostReputationRequestBuilder(getRequestUrlWithAdditionalSegment("reputation"), getClient(), null);
     }
     /**
+     *  Gets a request builder for the Subdomain collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.SubdomainCollectionWithReferencesRequestBuilder subdomains() {
+        return new com.microsoft.graph.security.requests.SubdomainCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("subdomains"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Subdomain item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.SubdomainWithReferenceRequestBuilder subdomains(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.SubdomainWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("subdomains") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the HostTracker collection
      *
      * @return the collection request builder

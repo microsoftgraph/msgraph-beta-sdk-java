@@ -118,7 +118,9 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     /**
      * The Daily Print Usage Summaries By Printer.
      * 
+     * @deprecated The dailyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsageByPrinter navigation property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "dailyPrintUsageSummariesByPrinter", alternate = {"DailyPrintUsageSummariesByPrinter"})
     @Expose
 	@Nullable
@@ -127,7 +129,9 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     /**
      * The Daily Print Usage Summaries By User.
      * 
+     * @deprecated The dailyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsage navigation property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "dailyPrintUsageSummariesByUser", alternate = {"DailyPrintUsageSummariesByUser"})
     @Expose
 	@Nullable
@@ -154,7 +158,9 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     /**
      * The Monthly Print Usage Summaries By Printer.
      * 
+     * @deprecated The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "monthlyPrintUsageSummariesByPrinter", alternate = {"MonthlyPrintUsageSummariesByPrinter"})
     @Expose
 	@Nullable
@@ -163,7 +169,9 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     /**
      * The Monthly Print Usage Summaries By User.
      * 
+     * @deprecated The monthlyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByUser navigation property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "monthlyPrintUsageSummariesByUser", alternate = {"MonthlyPrintUsageSummariesByUser"})
     @Expose
 	@Nullable

@@ -40,6 +40,10 @@ public enum ProtocolType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * authentication Transfer
+    */
+    AUTHENTICATION_TRANSFER,
+    /**
     * For ProtocolType values that were not expected from the service
     */
     UNEXPECTED_VALUE
