@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Indicates if the Group Policy Object file is covered and ready for Intune migration.
+ */
 public enum GroupPolicyMigrationReadiness implements ValuedEnum {
     /** No Intune coverage */
     None("none"),

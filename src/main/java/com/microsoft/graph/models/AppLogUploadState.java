@@ -3,14 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * AppLogUploadStatus
+ */
 public enum AppLogUploadState implements ValuedEnum {
-    /** Request is waiting to be processed or under processing */
+    /** Default. Indicates that request is waiting to be processed or under processing. */
     Pending("pending"),
-    /** Request is completed with file uploaded to Azure blob for download. */
+    /** Indicates that request is completed with file uploaded to Azure blob for download. */
     Completed("completed"),
-    /** Request finished processing and in error state. */
-    Failed("failed");
+    /** Indicates that request is completed with file uploaded to Azure blob for download. */
+    Failed("failed"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     AppLogUploadState(final String value) {
         this.value = value;
@@ -24,6 +28,7 @@ public enum AppLogUploadState implements ValuedEnum {
             case "pending": return Pending;
             case "completed": return Completed;
             case "failed": return Failed;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

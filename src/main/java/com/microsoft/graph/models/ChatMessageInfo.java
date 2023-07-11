@@ -4,30 +4,41 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMessageInfo extends Entity implements Parsable {
-    /** Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments. */
-    private ItemBody _body;
-    /** Date time object representing the time at which message was created. */
-    private OffsetDateTime _createdDateTime;
-    /** Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage. */
-    private EventMessageDetail _eventDetail;
-    /** Information about the sender of the message. */
-    private ChatMessageFromIdentitySet _from;
-    /** If set to true, the original message has been deleted. */
-    private Boolean _isDeleted;
-    /** The messageType property */
-    private ChatMessageType _messageType;
+    /**
+     * Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments.
+     */
+    private ItemBody body;
+    /**
+     * Date time object representing the time at which message was created.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+     */
+    private EventMessageDetail eventDetail;
+    /**
+     * Information about the sender of the message.
+     */
+    private ChatMessageFromIdentitySet from;
+    /**
+     * If set to true, the original message has been deleted.
+     */
+    private Boolean isDeleted;
+    /**
+     * The messageType property
+     */
+    private ChatMessageType messageType;
     /**
      * Instantiates a new chatMessageInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatMessageInfo() {
         super();
-        this.setOdataType("#microsoft.graph.chatMessageInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +56,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemBody getBody() {
-        return this._body;
+        return this.body;
     }
     /**
      * Gets the createdDateTime property value. Date time object representing the time at which message was created.
@@ -53,7 +64,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
@@ -61,23 +72,22 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EventMessageDetail getEventDetail() {
-        return this._eventDetail;
+        return this.eventDetail;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChatMessageInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("eventDetail", (n) -> { currentObject.setEventDetail(n.getObjectValue(EventMessageDetail::createFromDiscriminatorValue)); });
-            this.put("from", (n) -> { currentObject.setFrom(n.getObjectValue(ChatMessageFromIdentitySet::createFromDiscriminatorValue)); });
-            this.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
-            this.put("messageType", (n) -> { currentObject.setMessageType(n.getEnumValue(ChatMessageType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("eventDetail", (n) -> { this.setEventDetail(n.getObjectValue(EventMessageDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("from", (n) -> { this.setFrom(n.getObjectValue(ChatMessageFromIdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("isDeleted", (n) -> { this.setIsDeleted(n.getBooleanValue()); });
+        deserializerMap.put("messageType", (n) -> { this.setMessageType(n.getEnumValue(ChatMessageType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the from property value. Information about the sender of the message.
@@ -85,7 +95,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ChatMessageFromIdentitySet getFrom() {
-        return this._from;
+        return this.from;
     }
     /**
      * Gets the isDeleted property value. If set to true, the original message has been deleted.
@@ -93,7 +103,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDeleted() {
-        return this._isDeleted;
+        return this.isDeleted;
     }
     /**
      * Gets the messageType property value. The messageType property
@@ -101,13 +111,14 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ChatMessageType getMessageType() {
-        return this._messageType;
+        return this.messageType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +134,53 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
-        this._body = value;
+        this.body = value;
     }
     /**
      * Sets the createdDateTime property value. Date time object representing the time at which message was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
      * @param value Value to set for the eventDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDetail(@javax.annotation.Nullable final EventMessageDetail value) {
-        this._eventDetail = value;
+        this.eventDetail = value;
     }
     /**
      * Sets the from property value. Information about the sender of the message.
      * @param value Value to set for the from property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrom(@javax.annotation.Nullable final ChatMessageFromIdentitySet value) {
-        this._from = value;
+        this.from = value;
     }
     /**
      * Sets the isDeleted property value. If set to true, the original message has been deleted.
      * @param value Value to set for the isDeleted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeleted(@javax.annotation.Nullable final Boolean value) {
-        this._isDeleted = value;
+        this.isDeleted = value;
     }
     /**
      * Sets the messageType property value. The messageType property
      * @param value Value to set for the messageType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageType(@javax.annotation.Nullable final ChatMessageType value) {
-        this._messageType = value;
+        this.messageType = value;
     }
 }

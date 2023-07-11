@@ -5,45 +5,66 @@ import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrivilegedApproval extends Entity implements Parsable {
-    /** The approvalDuration property */
-    private Period _approvalDuration;
-    /** Possible values are: pending, approved, denied, aborted, canceled. */
-    private ApprovalState _approvalState;
-    /** The approvalType property */
-    private String _approvalType;
-    /** The approverReason property */
-    private String _approverReason;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _endDateTime;
-    /** Read-only. The role assignment request for this approval object */
-    private PrivilegedRoleAssignmentRequest _request;
-    /** The requestorReason property */
-    private String _requestorReason;
-    /** The roleId property */
-    private String _roleId;
-    /** The roleInfo property */
-    private PrivilegedRole _roleInfo;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _startDateTime;
-    /** The userId property */
-    private String _userId;
     /**
-     * Instantiates a new PrivilegedApproval and sets the default values.
+     * The approvalDuration property
+     */
+    private Period approvalDuration;
+    /**
+     * The approvalState property
+     */
+    private ApprovalState approvalState;
+    /**
+     * The approvalType property
+     */
+    private String approvalType;
+    /**
+     * The approverReason property
+     */
+    private String approverReason;
+    /**
+     * The endDateTime property
+     */
+    private OffsetDateTime endDateTime;
+    /**
+     * The request property
+     */
+    private PrivilegedRoleAssignmentRequest request;
+    /**
+     * The requestorReason property
+     */
+    private String requestorReason;
+    /**
+     * The roleId property
+     */
+    private String roleId;
+    /**
+     * The roleInfo property
+     */
+    private PrivilegedRole roleInfo;
+    /**
+     * The startDateTime property
+     */
+    private OffsetDateTime startDateTime;
+    /**
+     * The userId property
+     */
+    private String userId;
+    /**
+     * Instantiates a new privilegedApproval and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivilegedApproval() {
         super();
-        this.setOdataType("#microsoft.graph.privilegedApproval");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedApproval
+     * @return a privilegedApproval
      */
     @javax.annotation.Nonnull
     public static PrivilegedApproval createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -56,15 +77,15 @@ public class PrivilegedApproval extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Period getApprovalDuration() {
-        return this._approvalDuration;
+        return this.approvalDuration;
     }
     /**
-     * Gets the approvalState property value. Possible values are: pending, approved, denied, aborted, canceled.
+     * Gets the approvalState property value. The approvalState property
      * @return a approvalState
      */
     @javax.annotation.Nullable
     public ApprovalState getApprovalState() {
-        return this._approvalState;
+        return this.approvalState;
     }
     /**
      * Gets the approvalType property value. The approvalType property
@@ -72,7 +93,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getApprovalType() {
-        return this._approvalType;
+        return this.approvalType;
     }
     /**
      * Gets the approverReason property value. The approverReason property
@@ -80,44 +101,43 @@ public class PrivilegedApproval extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getApproverReason() {
-        return this._approverReason;
+        return this.approverReason;
     }
     /**
-     * Gets the endDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the endDateTime property value. The endDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrivilegedApproval currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("approvalDuration", (n) -> { currentObject.setApprovalDuration(n.getPeriodValue()); });
-            this.put("approvalState", (n) -> { currentObject.setApprovalState(n.getEnumValue(ApprovalState.class)); });
-            this.put("approvalType", (n) -> { currentObject.setApprovalType(n.getStringValue()); });
-            this.put("approverReason", (n) -> { currentObject.setApproverReason(n.getStringValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("request", (n) -> { currentObject.setRequest(n.getObjectValue(PrivilegedRoleAssignmentRequest::createFromDiscriminatorValue)); });
-            this.put("requestorReason", (n) -> { currentObject.setRequestorReason(n.getStringValue()); });
-            this.put("roleId", (n) -> { currentObject.setRoleId(n.getStringValue()); });
-            this.put("roleInfo", (n) -> { currentObject.setRoleInfo(n.getObjectValue(PrivilegedRole::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("approvalDuration", (n) -> { this.setApprovalDuration(n.getPeriodValue()); });
+        deserializerMap.put("approvalState", (n) -> { this.setApprovalState(n.getEnumValue(ApprovalState.class)); });
+        deserializerMap.put("approvalType", (n) -> { this.setApprovalType(n.getStringValue()); });
+        deserializerMap.put("approverReason", (n) -> { this.setApproverReason(n.getStringValue()); });
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("request", (n) -> { this.setRequest(n.getObjectValue(PrivilegedRoleAssignmentRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestorReason", (n) -> { this.setRequestorReason(n.getStringValue()); });
+        deserializerMap.put("roleId", (n) -> { this.setRoleId(n.getStringValue()); });
+        deserializerMap.put("roleInfo", (n) -> { this.setRoleInfo(n.getObjectValue(PrivilegedRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the request property value. Read-only. The role assignment request for this approval object
+     * Gets the request property value. The request property
      * @return a privilegedRoleAssignmentRequest
      */
     @javax.annotation.Nullable
     public PrivilegedRoleAssignmentRequest getRequest() {
-        return this._request;
+        return this.request;
     }
     /**
      * Gets the requestorReason property value. The requestorReason property
@@ -125,7 +145,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRequestorReason() {
-        return this._requestorReason;
+        return this.requestorReason;
     }
     /**
      * Gets the roleId property value. The roleId property
@@ -133,7 +153,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRoleId() {
-        return this._roleId;
+        return this.roleId;
     }
     /**
      * Gets the roleInfo property value. The roleInfo property
@@ -141,15 +161,15 @@ public class PrivilegedApproval extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrivilegedRole getRoleInfo() {
-        return this._roleInfo;
+        return this.roleInfo;
     }
     /**
-     * Gets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the startDateTime property value. The startDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the userId property value. The userId property
@@ -157,13 +177,14 @@ public class PrivilegedApproval extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -184,87 +205,98 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @param value Value to set for the approvalDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovalDuration(@javax.annotation.Nullable final Period value) {
-        this._approvalDuration = value;
+        this.approvalDuration = value;
     }
     /**
-     * Sets the approvalState property value. Possible values are: pending, approved, denied, aborted, canceled.
+     * Sets the approvalState property value. The approvalState property
      * @param value Value to set for the approvalState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovalState(@javax.annotation.Nullable final ApprovalState value) {
-        this._approvalState = value;
+        this.approvalState = value;
     }
     /**
      * Sets the approvalType property value. The approvalType property
      * @param value Value to set for the approvalType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovalType(@javax.annotation.Nullable final String value) {
-        this._approvalType = value;
+        this.approvalType = value;
     }
     /**
      * Sets the approverReason property value. The approverReason property
      * @param value Value to set for the approverReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApproverReason(@javax.annotation.Nullable final String value) {
-        this._approverReason = value;
+        this.approverReason = value;
     }
     /**
-     * Sets the endDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
-     * Sets the request property value. Read-only. The role assignment request for this approval object
+     * Sets the request property value. The request property
      * @param value Value to set for the request property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequest(@javax.annotation.Nullable final PrivilegedRoleAssignmentRequest value) {
-        this._request = value;
+        this.request = value;
     }
     /**
      * Sets the requestorReason property value. The requestorReason property
      * @param value Value to set for the requestorReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestorReason(@javax.annotation.Nullable final String value) {
-        this._requestorReason = value;
+        this.requestorReason = value;
     }
     /**
      * Sets the roleId property value. The roleId property
      * @param value Value to set for the roleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleId(@javax.annotation.Nullable final String value) {
-        this._roleId = value;
+        this.roleId = value;
     }
     /**
      * Sets the roleInfo property value. The roleInfo property
      * @param value Value to set for the roleInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleInfo(@javax.annotation.Nullable final PrivilegedRole value) {
-        this._roleInfo = value;
+        this.roleInfo = value;
     }
     /**
-     * Sets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the userId property value. The userId property
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

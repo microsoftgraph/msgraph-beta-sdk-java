@@ -4,35 +4,49 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Data sharing consent information.
+ */
 public class DataSharingConsent extends Entity implements Parsable {
-    /** The time consent was granted for this account */
-    private OffsetDateTime _grantDateTime;
-    /** The granted state for the data sharing consent */
-    private Boolean _granted;
-    /** The Upn of the user that granted consent for this account */
-    private String _grantedByUpn;
-    /** The UserId of the user that granted consent for this account */
-    private String _grantedByUserId;
-    /** The display name of the service work flow */
-    private String _serviceDisplayName;
-    /** The TermsUrl for the data sharing consent */
-    private String _termsUrl;
     /**
-     * Instantiates a new DataSharingConsent and sets the default values.
+     * The time consent was granted for this account
+     */
+    private OffsetDateTime grantDateTime;
+    /**
+     * The granted state for the data sharing consent
+     */
+    private Boolean granted;
+    /**
+     * The Upn of the user that granted consent for this account
+     */
+    private String grantedByUpn;
+    /**
+     * The UserId of the user that granted consent for this account
+     */
+    private String grantedByUserId;
+    /**
+     * The display name of the service work flow
+     */
+    private String serviceDisplayName;
+    /**
+     * The TermsUrl for the data sharing consent
+     */
+    private String termsUrl;
+    /**
+     * Instantiates a new dataSharingConsent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DataSharingConsent() {
         super();
-        this.setOdataType("#microsoft.graph.dataSharingConsent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DataSharingConsent
+     * @return a dataSharingConsent
      */
     @javax.annotation.Nonnull
     public static DataSharingConsent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -41,19 +55,18 @@ public class DataSharingConsent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DataSharingConsent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("grantDateTime", (n) -> { currentObject.setGrantDateTime(n.getOffsetDateTimeValue()); });
-            this.put("granted", (n) -> { currentObject.setGranted(n.getBooleanValue()); });
-            this.put("grantedByUpn", (n) -> { currentObject.setGrantedByUpn(n.getStringValue()); });
-            this.put("grantedByUserId", (n) -> { currentObject.setGrantedByUserId(n.getStringValue()); });
-            this.put("serviceDisplayName", (n) -> { currentObject.setServiceDisplayName(n.getStringValue()); });
-            this.put("termsUrl", (n) -> { currentObject.setTermsUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("grantDateTime", (n) -> { this.setGrantDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("granted", (n) -> { this.setGranted(n.getBooleanValue()); });
+        deserializerMap.put("grantedByUpn", (n) -> { this.setGrantedByUpn(n.getStringValue()); });
+        deserializerMap.put("grantedByUserId", (n) -> { this.setGrantedByUserId(n.getStringValue()); });
+        deserializerMap.put("serviceDisplayName", (n) -> { this.setServiceDisplayName(n.getStringValue()); });
+        deserializerMap.put("termsUrl", (n) -> { this.setTermsUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the grantDateTime property value. The time consent was granted for this account
@@ -61,7 +74,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getGrantDateTime() {
-        return this._grantDateTime;
+        return this.grantDateTime;
     }
     /**
      * Gets the granted property value. The granted state for the data sharing consent
@@ -69,7 +82,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getGranted() {
-        return this._granted;
+        return this.granted;
     }
     /**
      * Gets the grantedByUpn property value. The Upn of the user that granted consent for this account
@@ -77,7 +90,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getGrantedByUpn() {
-        return this._grantedByUpn;
+        return this.grantedByUpn;
     }
     /**
      * Gets the grantedByUserId property value. The UserId of the user that granted consent for this account
@@ -85,7 +98,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getGrantedByUserId() {
-        return this._grantedByUserId;
+        return this.grantedByUserId;
     }
     /**
      * Gets the serviceDisplayName property value. The display name of the service work flow
@@ -93,7 +106,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getServiceDisplayName() {
-        return this._serviceDisplayName;
+        return this.serviceDisplayName;
     }
     /**
      * Gets the termsUrl property value. The TermsUrl for the data sharing consent
@@ -101,13 +114,14 @@ public class DataSharingConsent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTermsUrl() {
-        return this._termsUrl;
+        return this.termsUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +137,53 @@ public class DataSharingConsent extends Entity implements Parsable {
      * @param value Value to set for the grantDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrantDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._grantDateTime = value;
+        this.grantDateTime = value;
     }
     /**
      * Sets the granted property value. The granted state for the data sharing consent
      * @param value Value to set for the granted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGranted(@javax.annotation.Nullable final Boolean value) {
-        this._granted = value;
+        this.granted = value;
     }
     /**
      * Sets the grantedByUpn property value. The Upn of the user that granted consent for this account
      * @param value Value to set for the grantedByUpn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrantedByUpn(@javax.annotation.Nullable final String value) {
-        this._grantedByUpn = value;
+        this.grantedByUpn = value;
     }
     /**
      * Sets the grantedByUserId property value. The UserId of the user that granted consent for this account
      * @param value Value to set for the grantedByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrantedByUserId(@javax.annotation.Nullable final String value) {
-        this._grantedByUserId = value;
+        this.grantedByUserId = value;
     }
     /**
      * Sets the serviceDisplayName property value. The display name of the service work flow
      * @param value Value to set for the serviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceDisplayName(@javax.annotation.Nullable final String value) {
-        this._serviceDisplayName = value;
+        this.serviceDisplayName = value;
     }
     /**
      * Sets the termsUrl property value. The TermsUrl for the data sharing consent
      * @param value Value to set for the termsUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsUrl(@javax.annotation.Nullable final String value) {
-        this._termsUrl = value;
+        this.termsUrl = value;
     }
 }

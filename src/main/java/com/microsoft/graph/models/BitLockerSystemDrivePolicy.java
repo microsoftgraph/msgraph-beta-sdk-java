@@ -4,47 +4,76 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** BitLocker Encryption Base Policies. */
+/**
+ * BitLocker Encryption Base Policies.
+ */
 public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256. */
-    private BitLockerEncryptionMethod _encryptionMethod;
-    /** Indicates the minimum length of startup pin. Valid values 4 to 20 */
-    private Integer _minimumPinLength;
-    /** The OdataType property */
-    private String _odataType;
-    /** Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect. */
-    private Boolean _prebootRecoveryEnableMessageAndUrl;
-    /** Defines a custom recovery message. */
-    private String _prebootRecoveryMessage;
-    /** Defines a custom recovery URL. */
-    private String _prebootRecoveryUrl;
-    /** Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker. */
-    private BitLockerRecoveryOptions _recoveryOptions;
-    /** Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive). */
-    private Boolean _startupAuthenticationBlockWithoutTpmChip;
-    /** Require additional authentication at startup. */
-    private Boolean _startupAuthenticationRequired;
-    /** Possible values of the ConfigurationUsage list. */
-    private ConfigurationUsage _startupAuthenticationTpmKeyUsage;
-    /** Possible values of the ConfigurationUsage list. */
-    private ConfigurationUsage _startupAuthenticationTpmPinAndKeyUsage;
-    /** Possible values of the ConfigurationUsage list. */
-    private ConfigurationUsage _startupAuthenticationTpmPinUsage;
-    /** Possible values of the ConfigurationUsage list. */
-    private ConfigurationUsage _startupAuthenticationTpmUsage;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
+     */
+    private BitLockerEncryptionMethod encryptionMethod;
+    /**
+     * Indicates the minimum length of startup pin. Valid values 4 to 20
+     */
+    private Integer minimumPinLength;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect.
+     */
+    private Boolean prebootRecoveryEnableMessageAndUrl;
+    /**
+     * Defines a custom recovery message.
+     */
+    private String prebootRecoveryMessage;
+    /**
+     * Defines a custom recovery URL.
+     */
+    private String prebootRecoveryUrl;
+    /**
+     * Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
+     */
+    private BitLockerRecoveryOptions recoveryOptions;
+    /**
+     * Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
+     */
+    private Boolean startupAuthenticationBlockWithoutTpmChip;
+    /**
+     * Require additional authentication at startup.
+     */
+    private Boolean startupAuthenticationRequired;
+    /**
+     * Possible values of the ConfigurationUsage list.
+     */
+    private ConfigurationUsage startupAuthenticationTpmKeyUsage;
+    /**
+     * Possible values of the ConfigurationUsage list.
+     */
+    private ConfigurationUsage startupAuthenticationTpmPinAndKeyUsage;
+    /**
+     * Possible values of the ConfigurationUsage list.
+     */
+    private ConfigurationUsage startupAuthenticationTpmPinUsage;
+    /**
+     * Possible values of the ConfigurationUsage list.
+     */
+    private ConfigurationUsage startupAuthenticationTpmUsage;
     /**
      * Instantiates a new bitLockerSystemDrivePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BitLockerSystemDrivePolicy() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bitLockerSystemDrivePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +91,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the encryptionMethod property value. Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
@@ -70,30 +99,29 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public BitLockerEncryptionMethod getEncryptionMethod() {
-        return this._encryptionMethod;
+        return this.encryptionMethod;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BitLockerSystemDrivePolicy currentObject = this;
-        return new HashMap<>(13) {{
-            this.put("encryptionMethod", (n) -> { currentObject.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
-            this.put("minimumPinLength", (n) -> { currentObject.setMinimumPinLength(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("prebootRecoveryEnableMessageAndUrl", (n) -> { currentObject.setPrebootRecoveryEnableMessageAndUrl(n.getBooleanValue()); });
-            this.put("prebootRecoveryMessage", (n) -> { currentObject.setPrebootRecoveryMessage(n.getStringValue()); });
-            this.put("prebootRecoveryUrl", (n) -> { currentObject.setPrebootRecoveryUrl(n.getStringValue()); });
-            this.put("recoveryOptions", (n) -> { currentObject.setRecoveryOptions(n.getObjectValue(BitLockerRecoveryOptions::createFromDiscriminatorValue)); });
-            this.put("startupAuthenticationBlockWithoutTpmChip", (n) -> { currentObject.setStartupAuthenticationBlockWithoutTpmChip(n.getBooleanValue()); });
-            this.put("startupAuthenticationRequired", (n) -> { currentObject.setStartupAuthenticationRequired(n.getBooleanValue()); });
-            this.put("startupAuthenticationTpmKeyUsage", (n) -> { currentObject.setStartupAuthenticationTpmKeyUsage(n.getEnumValue(ConfigurationUsage.class)); });
-            this.put("startupAuthenticationTpmPinAndKeyUsage", (n) -> { currentObject.setStartupAuthenticationTpmPinAndKeyUsage(n.getEnumValue(ConfigurationUsage.class)); });
-            this.put("startupAuthenticationTpmPinUsage", (n) -> { currentObject.setStartupAuthenticationTpmPinUsage(n.getEnumValue(ConfigurationUsage.class)); });
-            this.put("startupAuthenticationTpmUsage", (n) -> { currentObject.setStartupAuthenticationTpmUsage(n.getEnumValue(ConfigurationUsage.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
+        deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
+        deserializerMap.put("minimumPinLength", (n) -> { this.setMinimumPinLength(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("prebootRecoveryEnableMessageAndUrl", (n) -> { this.setPrebootRecoveryEnableMessageAndUrl(n.getBooleanValue()); });
+        deserializerMap.put("prebootRecoveryMessage", (n) -> { this.setPrebootRecoveryMessage(n.getStringValue()); });
+        deserializerMap.put("prebootRecoveryUrl", (n) -> { this.setPrebootRecoveryUrl(n.getStringValue()); });
+        deserializerMap.put("recoveryOptions", (n) -> { this.setRecoveryOptions(n.getObjectValue(BitLockerRecoveryOptions::createFromDiscriminatorValue)); });
+        deserializerMap.put("startupAuthenticationBlockWithoutTpmChip", (n) -> { this.setStartupAuthenticationBlockWithoutTpmChip(n.getBooleanValue()); });
+        deserializerMap.put("startupAuthenticationRequired", (n) -> { this.setStartupAuthenticationRequired(n.getBooleanValue()); });
+        deserializerMap.put("startupAuthenticationTpmKeyUsage", (n) -> { this.setStartupAuthenticationTpmKeyUsage(n.getEnumValue(ConfigurationUsage.class)); });
+        deserializerMap.put("startupAuthenticationTpmPinAndKeyUsage", (n) -> { this.setStartupAuthenticationTpmPinAndKeyUsage(n.getEnumValue(ConfigurationUsage.class)); });
+        deserializerMap.put("startupAuthenticationTpmPinUsage", (n) -> { this.setStartupAuthenticationTpmPinUsage(n.getEnumValue(ConfigurationUsage.class)); });
+        deserializerMap.put("startupAuthenticationTpmUsage", (n) -> { this.setStartupAuthenticationTpmUsage(n.getEnumValue(ConfigurationUsage.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the minimumPinLength property value. Indicates the minimum length of startup pin. Valid values 4 to 20
@@ -101,7 +129,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Integer getMinimumPinLength() {
-        return this._minimumPinLength;
+        return this.minimumPinLength;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -109,7 +137,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the prebootRecoveryEnableMessageAndUrl property value. Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect.
@@ -117,7 +145,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Boolean getPrebootRecoveryEnableMessageAndUrl() {
-        return this._prebootRecoveryEnableMessageAndUrl;
+        return this.prebootRecoveryEnableMessageAndUrl;
     }
     /**
      * Gets the prebootRecoveryMessage property value. Defines a custom recovery message.
@@ -125,7 +153,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getPrebootRecoveryMessage() {
-        return this._prebootRecoveryMessage;
+        return this.prebootRecoveryMessage;
     }
     /**
      * Gets the prebootRecoveryUrl property value. Defines a custom recovery URL.
@@ -133,7 +161,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getPrebootRecoveryUrl() {
-        return this._prebootRecoveryUrl;
+        return this.prebootRecoveryUrl;
     }
     /**
      * Gets the recoveryOptions property value. Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
@@ -141,7 +169,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public BitLockerRecoveryOptions getRecoveryOptions() {
-        return this._recoveryOptions;
+        return this.recoveryOptions;
     }
     /**
      * Gets the startupAuthenticationBlockWithoutTpmChip property value. Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
@@ -149,7 +177,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Boolean getStartupAuthenticationBlockWithoutTpmChip() {
-        return this._startupAuthenticationBlockWithoutTpmChip;
+        return this.startupAuthenticationBlockWithoutTpmChip;
     }
     /**
      * Gets the startupAuthenticationRequired property value. Require additional authentication at startup.
@@ -157,7 +185,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Boolean getStartupAuthenticationRequired() {
-        return this._startupAuthenticationRequired;
+        return this.startupAuthenticationRequired;
     }
     /**
      * Gets the startupAuthenticationTpmKeyUsage property value. Possible values of the ConfigurationUsage list.
@@ -165,7 +193,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmKeyUsage() {
-        return this._startupAuthenticationTpmKeyUsage;
+        return this.startupAuthenticationTpmKeyUsage;
     }
     /**
      * Gets the startupAuthenticationTpmPinAndKeyUsage property value. Possible values of the ConfigurationUsage list.
@@ -173,7 +201,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmPinAndKeyUsage() {
-        return this._startupAuthenticationTpmPinAndKeyUsage;
+        return this.startupAuthenticationTpmPinAndKeyUsage;
     }
     /**
      * Gets the startupAuthenticationTpmPinUsage property value. Possible values of the ConfigurationUsage list.
@@ -181,7 +209,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmPinUsage() {
-        return this._startupAuthenticationTpmPinUsage;
+        return this.startupAuthenticationTpmPinUsage;
     }
     /**
      * Gets the startupAuthenticationTpmUsage property value. Possible values of the ConfigurationUsage list.
@@ -189,13 +217,14 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmUsage() {
-        return this._startupAuthenticationTpmUsage;
+        return this.startupAuthenticationTpmUsage;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("encryptionMethod", this.getEncryptionMethod());
@@ -218,111 +247,125 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the encryptionMethod property value. Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @param value Value to set for the encryptionMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionMethod(@javax.annotation.Nullable final BitLockerEncryptionMethod value) {
-        this._encryptionMethod = value;
+        this.encryptionMethod = value;
     }
     /**
      * Sets the minimumPinLength property value. Indicates the minimum length of startup pin. Valid values 4 to 20
      * @param value Value to set for the minimumPinLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumPinLength(@javax.annotation.Nullable final Integer value) {
-        this._minimumPinLength = value;
+        this.minimumPinLength = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the prebootRecoveryEnableMessageAndUrl property value. Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect.
      * @param value Value to set for the prebootRecoveryEnableMessageAndUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrebootRecoveryEnableMessageAndUrl(@javax.annotation.Nullable final Boolean value) {
-        this._prebootRecoveryEnableMessageAndUrl = value;
+        this.prebootRecoveryEnableMessageAndUrl = value;
     }
     /**
      * Sets the prebootRecoveryMessage property value. Defines a custom recovery message.
      * @param value Value to set for the prebootRecoveryMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrebootRecoveryMessage(@javax.annotation.Nullable final String value) {
-        this._prebootRecoveryMessage = value;
+        this.prebootRecoveryMessage = value;
     }
     /**
      * Sets the prebootRecoveryUrl property value. Defines a custom recovery URL.
      * @param value Value to set for the prebootRecoveryUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrebootRecoveryUrl(@javax.annotation.Nullable final String value) {
-        this._prebootRecoveryUrl = value;
+        this.prebootRecoveryUrl = value;
     }
     /**
      * Sets the recoveryOptions property value. Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
      * @param value Value to set for the recoveryOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecoveryOptions(@javax.annotation.Nullable final BitLockerRecoveryOptions value) {
-        this._recoveryOptions = value;
+        this.recoveryOptions = value;
     }
     /**
      * Sets the startupAuthenticationBlockWithoutTpmChip property value. Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
      * @param value Value to set for the startupAuthenticationBlockWithoutTpmChip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartupAuthenticationBlockWithoutTpmChip(@javax.annotation.Nullable final Boolean value) {
-        this._startupAuthenticationBlockWithoutTpmChip = value;
+        this.startupAuthenticationBlockWithoutTpmChip = value;
     }
     /**
      * Sets the startupAuthenticationRequired property value. Require additional authentication at startup.
      * @param value Value to set for the startupAuthenticationRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartupAuthenticationRequired(@javax.annotation.Nullable final Boolean value) {
-        this._startupAuthenticationRequired = value;
+        this.startupAuthenticationRequired = value;
     }
     /**
      * Sets the startupAuthenticationTpmKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmKeyUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartupAuthenticationTpmKeyUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
-        this._startupAuthenticationTpmKeyUsage = value;
+        this.startupAuthenticationTpmKeyUsage = value;
     }
     /**
      * Sets the startupAuthenticationTpmPinAndKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmPinAndKeyUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartupAuthenticationTpmPinAndKeyUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
-        this._startupAuthenticationTpmPinAndKeyUsage = value;
+        this.startupAuthenticationTpmPinAndKeyUsage = value;
     }
     /**
      * Sets the startupAuthenticationTpmPinUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmPinUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartupAuthenticationTpmPinUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
-        this._startupAuthenticationTpmPinUsage = value;
+        this.startupAuthenticationTpmPinUsage = value;
     }
     /**
      * Sets the startupAuthenticationTpmUsage property value. Possible values of the ConfigurationUsage list.
      * @param value Value to set for the startupAuthenticationTpmUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartupAuthenticationTpmUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
-        this._startupAuthenticationTpmUsage = value;
+        this.startupAuthenticationTpmUsage = value;
     }
 }

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * An enum representing possible values for cross profile data sharing.
+ */
 public enum AndroidDeviceOwnerCertificateAccessType implements ValuedEnum {
     /** Require user approval for all apps */
     UserApproval("userApproval"),

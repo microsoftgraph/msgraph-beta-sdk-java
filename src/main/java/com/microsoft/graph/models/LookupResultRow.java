@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class LookupResultRow extends Entity implements Parsable {
-    /** The row property */
-    private String _row;
+    /**
+     * The row property
+     */
+    private String row;
     /**
      * Instantiates a new lookupResultRow and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LookupResultRow() {
         super();
-        this.setOdataType("#microsoft.graph.lookupResultRow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,14 +31,13 @@ public class LookupResultRow extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LookupResultRow currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("row", (n) -> { currentObject.setRow(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("row", (n) -> { this.setRow(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the row property value. The row property
@@ -46,13 +45,14 @@ public class LookupResultRow extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRow() {
-        return this._row;
+        return this.row;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,7 +63,8 @@ public class LookupResultRow extends Entity implements Parsable {
      * @param value Value to set for the row property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRow(@javax.annotation.Nullable final String value) {
-        this._row = value;
+        this.row = value;
     }
 }

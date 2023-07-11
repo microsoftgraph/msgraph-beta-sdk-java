@@ -3,21 +3,30 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Describes a supersedence relationship between two mobile apps.
+ */
 public class MobileAppSupersedence extends MobileAppRelationship implements Parsable {
-    /** The total number of apps directly or indirectly superseded by the child app. */
-    private Integer _supersededAppCount;
-    /** Indicates the supersedence type associated with a relationship between two mobile apps. */
-    private MobileAppSupersedenceType _supersedenceType;
-    /** The total number of apps directly or indirectly superseding the parent app. */
-    private Integer _supersedingAppCount;
     /**
-     * Instantiates a new MobileAppSupersedence and sets the default values.
+     * The total number of apps directly or indirectly superseded by the child app.
+     */
+    private Integer supersededAppCount;
+    /**
+     * Indicates the supersedence type associated with a relationship between two mobile apps.
+     */
+    private MobileAppSupersedenceType supersedenceType;
+    /**
+     * The total number of apps directly or indirectly superseding the parent app.
+     */
+    private Integer supersedingAppCount;
+    /**
+     * Instantiates a new mobileAppSupersedence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppSupersedence() {
         super();
         this.setOdataType("#microsoft.graph.mobileAppSupersedence");
@@ -25,7 +34,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileAppSupersedence
+     * @return a mobileAppSupersedence
      */
     @javax.annotation.Nonnull
     public static MobileAppSupersedence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -34,16 +43,15 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileAppSupersedence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("supersededAppCount", (n) -> { currentObject.setSupersededAppCount(n.getIntegerValue()); });
-            this.put("supersedenceType", (n) -> { currentObject.setSupersedenceType(n.getEnumValue(MobileAppSupersedenceType.class)); });
-            this.put("supersedingAppCount", (n) -> { currentObject.setSupersedingAppCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("supersededAppCount", (n) -> { this.setSupersededAppCount(n.getIntegerValue()); });
+        deserializerMap.put("supersedenceType", (n) -> { this.setSupersedenceType(n.getEnumValue(MobileAppSupersedenceType.class)); });
+        deserializerMap.put("supersedingAppCount", (n) -> { this.setSupersedingAppCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the supersededAppCount property value. The total number of apps directly or indirectly superseded by the child app.
@@ -51,7 +59,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
      */
     @javax.annotation.Nullable
     public Integer getSupersededAppCount() {
-        return this._supersededAppCount;
+        return this.supersededAppCount;
     }
     /**
      * Gets the supersedenceType property value. Indicates the supersedence type associated with a relationship between two mobile apps.
@@ -59,7 +67,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
      */
     @javax.annotation.Nullable
     public MobileAppSupersedenceType getSupersedenceType() {
-        return this._supersedenceType;
+        return this.supersedenceType;
     }
     /**
      * Gets the supersedingAppCount property value. The total number of apps directly or indirectly superseding the parent app.
@@ -67,13 +75,14 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
      */
     @javax.annotation.Nullable
     public Integer getSupersedingAppCount() {
-        return this._supersedingAppCount;
+        return this.supersedingAppCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +95,26 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
      * @param value Value to set for the supersededAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupersededAppCount(@javax.annotation.Nullable final Integer value) {
-        this._supersededAppCount = value;
+        this.supersededAppCount = value;
     }
     /**
      * Sets the supersedenceType property value. Indicates the supersedence type associated with a relationship between two mobile apps.
      * @param value Value to set for the supersedenceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupersedenceType(@javax.annotation.Nullable final MobileAppSupersedenceType value) {
-        this._supersedenceType = value;
+        this.supersedenceType = value;
     }
     /**
      * Sets the supersedingAppCount property value. The total number of apps directly or indirectly superseding the parent app.
      * @param value Value to set for the supersedingAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupersedingAppCount(@javax.annotation.Nullable final Integer value) {
-        this._supersedingAppCount = value;
+        this.supersedingAppCount = value;
     }
 }

@@ -4,26 +4,35 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the generateKey method. */
 public class GenerateKeyPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The exp property */
-    private Long _exp;
-    /** The kty property */
-    private String _kty;
-    /** The nbf property */
-    private Long _nbf;
-    /** The use property */
-    private String _use;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The exp property
+     */
+    private Long exp;
+    /**
+     * The kty property
+     */
+    private String kty;
+    /**
+     * The nbf property
+     */
+    private Long nbf;
+    /**
+     * The use property
+     */
+    private String use;
     /**
      * Instantiates a new generateKeyPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GenerateKeyPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -43,7 +52,7 @@ public class GenerateKeyPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the exp property value. The exp property
@@ -51,21 +60,20 @@ public class GenerateKeyPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Long getExp() {
-        return this._exp;
+        return this.exp;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GenerateKeyPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("exp", (n) -> { currentObject.setExp(n.getLongValue()); });
-            this.put("kty", (n) -> { currentObject.setKty(n.getStringValue()); });
-            this.put("nbf", (n) -> { currentObject.setNbf(n.getLongValue()); });
-            this.put("use", (n) -> { currentObject.setUse(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("exp", (n) -> { this.setExp(n.getLongValue()); });
+        deserializerMap.put("kty", (n) -> { this.setKty(n.getStringValue()); });
+        deserializerMap.put("nbf", (n) -> { this.setNbf(n.getLongValue()); });
+        deserializerMap.put("use", (n) -> { this.setUse(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the kty property value. The kty property
@@ -73,7 +81,7 @@ public class GenerateKeyPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getKty() {
-        return this._kty;
+        return this.kty;
     }
     /**
      * Gets the nbf property value. The nbf property
@@ -81,7 +89,7 @@ public class GenerateKeyPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Long getNbf() {
-        return this._nbf;
+        return this.nbf;
     }
     /**
      * Gets the use property value. The use property
@@ -89,13 +97,14 @@ public class GenerateKeyPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getUse() {
-        return this._use;
+        return this.use;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("exp", this.getExp());
@@ -109,39 +118,44 @@ public class GenerateKeyPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the exp property value. The exp property
      * @param value Value to set for the exp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExp(@javax.annotation.Nullable final Long value) {
-        this._exp = value;
+        this.exp = value;
     }
     /**
      * Sets the kty property value. The kty property
      * @param value Value to set for the kty property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKty(@javax.annotation.Nullable final String value) {
-        this._kty = value;
+        this.kty = value;
     }
     /**
      * Sets the nbf property value. The nbf property
      * @param value Value to set for the nbf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNbf(@javax.annotation.Nullable final Long value) {
-        this._nbf = value;
+        this.nbf = value;
     }
     /**
      * Sets the use property value. The use property
      * @param value Value to set for the use property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUse(@javax.annotation.Nullable final String value) {
-        this._use = value;
+        this.use = value;
     }
 }

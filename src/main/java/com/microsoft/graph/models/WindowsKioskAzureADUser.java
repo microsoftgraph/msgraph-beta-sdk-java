@@ -3,19 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The class used to identify an AzureAD user account for the kiosk configuration
+ */
 public class WindowsKioskAzureADUser extends WindowsKioskUser implements Parsable {
-    /** The ID of the AzureAD user that will be locked to this kiosk configuration */
-    private String _userId;
-    /** The user accounts that will be locked to this kiosk configuration */
-    private String _userPrincipalName;
     /**
-     * Instantiates a new WindowsKioskAzureADUser and sets the default values.
+     * The ID of the AzureAD user that will be locked to this kiosk configuration
+     */
+    private String userId;
+    /**
+     * The user accounts that will be locked to this kiosk configuration
+     */
+    private String userPrincipalName;
+    /**
+     * Instantiates a new windowsKioskAzureADUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskAzureADUser() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskAzureADUser");
@@ -23,7 +30,7 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsKioskAzureADUser
+     * @return a windowsKioskAzureADUser
      */
     @javax.annotation.Nonnull
     public static WindowsKioskAzureADUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -32,15 +39,14 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsKioskAzureADUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the userId property value. The ID of the AzureAD user that will be locked to this kiosk configuration
@@ -48,7 +54,7 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements Parsabl
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Gets the userPrincipalName property value. The user accounts that will be locked to this kiosk configuration
@@ -56,13 +62,14 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements Parsabl
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +81,17 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements Parsabl
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. The user accounts that will be locked to this kiosk configuration
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

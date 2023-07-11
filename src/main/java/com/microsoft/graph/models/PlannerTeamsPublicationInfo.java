@@ -1,35 +1,40 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The date and time when this task was last modified by the publication process. Read-only. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** The OdataType property */
-    private String _odataType;
-    /** The identifier of the publication. Read-only. */
-    private String _publicationId;
-    /** The identifier of the plannerPlan this task was originally placed in. Read-only. */
-    private String _publishedToPlanId;
-    /** The identifier of the team that initiated the publication process. Read-only. */
-    private String _publishingTeamId;
-    /** The display name of the team that initiated the publication process. This display name is for reference only, and might not represent the most up-to-date name of the team. Read-only. */
-    private String _publishingTeamName;
+public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements Parsable {
+    /**
+     * The date and time when this task was last modified by the publication process. Read-only.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * The identifier of the publication. Read-only.
+     */
+    private String publicationId;
+    /**
+     * The identifier of the plannerPlan this task was originally placed in. Read-only.
+     */
+    private String publishedToPlanId;
+    /**
+     * The identifier of the team that initiated the publication process. Read-only.
+     */
+    private String publishingTeamId;
+    /**
+     * The display name of the team that initiated the publication process. This display name is for reference only, and might not represent the most up-to-date name of the team. Read-only.
+     */
+    private String publishingTeamName;
     /**
      * Instantiates a new plannerTeamsPublicationInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerTeamsPublicationInfo() {
-        this.setAdditionalData(new HashMap<>());
+        super();
         this.setOdataType("#microsoft.graph.plannerTeamsPublicationInfo");
     }
     /**
@@ -43,28 +48,18 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
         return new PlannerTeamsPublicationInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
-     */
-    @javax.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
-    }
-    /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerTeamsPublicationInfo currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("publicationId", (n) -> { currentObject.setPublicationId(n.getStringValue()); });
-            this.put("publishedToPlanId", (n) -> { currentObject.setPublishedToPlanId(n.getStringValue()); });
-            this.put("publishingTeamId", (n) -> { currentObject.setPublishingTeamId(n.getStringValue()); });
-            this.put("publishingTeamName", (n) -> { currentObject.setPublishingTeamName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("publicationId", (n) -> { this.setPublicationId(n.getStringValue()); });
+        deserializerMap.put("publishedToPlanId", (n) -> { this.setPublishedToPlanId(n.getStringValue()); });
+        deserializerMap.put("publishingTeamId", (n) -> { this.setPublishingTeamId(n.getStringValue()); });
+        deserializerMap.put("publishingTeamName", (n) -> { this.setPublishingTeamName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when this task was last modified by the publication process. Read-only.
@@ -72,15 +67,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the publicationId property value. The identifier of the publication. Read-only.
@@ -88,7 +75,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getPublicationId() {
-        return this._publicationId;
+        return this.publicationId;
     }
     /**
      * Gets the publishedToPlanId property value. The identifier of the plannerPlan this task was originally placed in. Read-only.
@@ -96,7 +83,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getPublishedToPlanId() {
-        return this._publishedToPlanId;
+        return this.publishedToPlanId;
     }
     /**
      * Gets the publishingTeamId property value. The identifier of the team that initiated the publication process. Read-only.
@@ -104,7 +91,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getPublishingTeamId() {
-        return this._publishingTeamId;
+        return this.publishingTeamId;
     }
     /**
      * Gets the publishingTeamName property value. The display name of the team that initiated the publication process. This display name is for reference only, and might not represent the most up-to-date name of the team. Read-only.
@@ -112,77 +99,66 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getPublishingTeamName() {
-        return this._publishingTeamName;
+        return this.publishingTeamName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        super.serialize(writer);
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("publicationId", this.getPublicationId());
         writer.writeStringValue("publishedToPlanId", this.getPublishedToPlanId());
         writer.writeStringValue("publishingTeamId", this.getPublishingTeamId());
         writer.writeStringValue("publishingTeamName", this.getPublishingTeamName());
-        writer.writeAdditionalData(this.getAdditionalData());
-    }
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     * @return a void
-     */
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when this task was last modified by the publication process. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the publicationId property value. The identifier of the publication. Read-only.
      * @param value Value to set for the publicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublicationId(@javax.annotation.Nullable final String value) {
-        this._publicationId = value;
+        this.publicationId = value;
     }
     /**
      * Sets the publishedToPlanId property value. The identifier of the plannerPlan this task was originally placed in. Read-only.
      * @param value Value to set for the publishedToPlanId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedToPlanId(@javax.annotation.Nullable final String value) {
-        this._publishedToPlanId = value;
+        this.publishedToPlanId = value;
     }
     /**
      * Sets the publishingTeamId property value. The identifier of the team that initiated the publication process. Read-only.
      * @param value Value to set for the publishingTeamId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingTeamId(@javax.annotation.Nullable final String value) {
-        this._publishingTeamId = value;
+        this.publishingTeamId = value;
     }
     /**
      * Sets the publishingTeamName property value. The display name of the team that initiated the publication process. This display name is for reference only, and might not represent the most up-to-date name of the team. Read-only.
      * @param value Value to set for the publishingTeamName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingTeamName(@javax.annotation.Nullable final String value) {
-        this._publishingTeamName = value;
+        this.publishingTeamName = value;
     }
 }

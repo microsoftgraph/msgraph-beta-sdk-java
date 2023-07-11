@@ -6,28 +6,41 @@ import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The maxLifetime property */
-    private Period _maxLifetime;
-    /** The OdataType property */
-    private String _odataType;
-    /** Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable. */
-    private OffsetDateTime _restrictForAppsCreatedAfterDateTime;
-    /** The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy. */
-    private AppKeyCredentialRestrictionType _restrictionType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The certificateBasedApplicationConfigurationIds property
+     */
+    private java.util.List<String> certificateBasedApplicationConfigurationIds;
+    /**
+     * The maxLifetime property
+     */
+    private Period maxLifetime;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
+     */
+    private OffsetDateTime restrictForAppsCreatedAfterDateTime;
+    /**
+     * The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
+     */
+    private AppKeyCredentialRestrictionType restrictionType;
     /**
      * Instantiates a new keyCredentialConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public KeyCredentialConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.keyCredentialConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,21 +58,29 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
+    }
+    /**
+     * Gets the certificateBasedApplicationConfigurationIds property value. The certificateBasedApplicationConfigurationIds property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getCertificateBasedApplicationConfigurationIds() {
+        return this.certificateBasedApplicationConfigurationIds;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final KeyCredentialConfiguration currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("maxLifetime", (n) -> { currentObject.setMaxLifetime(n.getPeriodValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("restrictForAppsCreatedAfterDateTime", (n) -> { currentObject.setRestrictForAppsCreatedAfterDateTime(n.getOffsetDateTimeValue()); });
-            this.put("restrictionType", (n) -> { currentObject.setRestrictionType(n.getEnumValue(AppKeyCredentialRestrictionType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("certificateBasedApplicationConfigurationIds", (n) -> { this.setCertificateBasedApplicationConfigurationIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("maxLifetime", (n) -> { this.setMaxLifetime(n.getPeriodValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("restrictForAppsCreatedAfterDateTime", (n) -> { this.setRestrictForAppsCreatedAfterDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("restrictionType", (n) -> { this.setRestrictionType(n.getEnumValue(AppKeyCredentialRestrictionType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the maxLifetime property value. The maxLifetime property
@@ -67,7 +88,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Period getMaxLifetime() {
-        return this._maxLifetime;
+        return this.maxLifetime;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -75,7 +96,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the restrictForAppsCreatedAfterDateTime property value. Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
@@ -83,7 +104,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRestrictForAppsCreatedAfterDateTime() {
-        return this._restrictForAppsCreatedAfterDateTime;
+        return this.restrictForAppsCreatedAfterDateTime;
     }
     /**
      * Gets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
@@ -91,15 +112,17 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public AppKeyCredentialRestrictionType getRestrictionType() {
-        return this._restrictionType;
+        return this.restrictionType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfPrimitiveValues("certificateBasedApplicationConfigurationIds", this.getCertificateBasedApplicationConfigurationIds());
         writer.writePeriodValue("maxLifetime", this.getMaxLifetime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("restrictForAppsCreatedAfterDateTime", this.getRestrictForAppsCreatedAfterDateTime());
@@ -111,39 +134,53 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
+    }
+    /**
+     * Sets the certificateBasedApplicationConfigurationIds property value. The certificateBasedApplicationConfigurationIds property
+     * @param value Value to set for the certificateBasedApplicationConfigurationIds property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCertificateBasedApplicationConfigurationIds(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.certificateBasedApplicationConfigurationIds = value;
     }
     /**
      * Sets the maxLifetime property value. The maxLifetime property
      * @param value Value to set for the maxLifetime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxLifetime(@javax.annotation.Nullable final Period value) {
-        this._maxLifetime = value;
+        this.maxLifetime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the restrictForAppsCreatedAfterDateTime property value. Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
      * @param value Value to set for the restrictForAppsCreatedAfterDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestrictForAppsCreatedAfterDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._restrictForAppsCreatedAfterDateTime = value;
+        this.restrictForAppsCreatedAfterDateTime = value;
     }
     /**
      * Sets the restrictionType property value. The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @param value Value to set for the restrictionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestrictionType(@javax.annotation.Nullable final AppKeyCredentialRestrictionType value) {
-        this._restrictionType = value;
+        this.restrictionType = value;
     }
 }

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Android for Work device management targeting type for the account
+ */
 public enum AndroidManagedStoreAccountEnrollmentTarget implements ValuedEnum {
     None("none"),
     All("all"),

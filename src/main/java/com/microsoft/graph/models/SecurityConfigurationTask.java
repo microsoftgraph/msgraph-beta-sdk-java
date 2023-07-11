@@ -3,29 +3,46 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * A security configuration task.
+ */
 public class SecurityConfigurationTask extends DeviceAppManagementTask implements Parsable {
-    /** The endpoint security configuration applicable platform. */
-    private EndpointSecurityConfigurationApplicablePlatform _applicablePlatform;
-    /** The endpoint security policy type. */
-    private EndpointSecurityConfigurationType _endpointSecurityPolicy;
-    /** The endpoint security policy profile type. */
-    private EndpointSecurityConfigurationProfileType _endpointSecurityPolicyProfile;
-    /** Information about the mitigation. */
-    private String _insights;
-    /** The intended settings and their values. */
-    private java.util.List<KeyValuePair> _intendedSettings;
-    /** The number of vulnerable devices. */
-    private Integer _managedDeviceCount;
-    /** The vulnerable managed devices. */
-    private java.util.List<VulnerableManagedDevice> _managedDevices;
     /**
-     * Instantiates a new SecurityConfigurationTask and sets the default values.
+     * The endpoint security configuration applicable platform.
+     */
+    private EndpointSecurityConfigurationApplicablePlatform applicablePlatform;
+    /**
+     * The endpoint security policy type.
+     */
+    private EndpointSecurityConfigurationType endpointSecurityPolicy;
+    /**
+     * The endpoint security policy profile type.
+     */
+    private EndpointSecurityConfigurationProfileType endpointSecurityPolicyProfile;
+    /**
+     * Information about the mitigation.
+     */
+    private String insights;
+    /**
+     * The intended settings and their values.
+     */
+    private java.util.List<KeyValuePair> intendedSettings;
+    /**
+     * The number of vulnerable devices. Valid values 0 to 65536
+     */
+    private Integer managedDeviceCount;
+    /**
+     * The vulnerable managed devices.
+     */
+    private java.util.List<VulnerableManagedDevice> managedDevices;
+    /**
+     * Instantiates a new securityConfigurationTask and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityConfigurationTask() {
         super();
         this.setOdataType("#microsoft.graph.securityConfigurationTask");
@@ -33,7 +50,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecurityConfigurationTask
+     * @return a securityConfigurationTask
      */
     @javax.annotation.Nonnull
     public static SecurityConfigurationTask createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +63,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      */
     @javax.annotation.Nullable
     public EndpointSecurityConfigurationApplicablePlatform getApplicablePlatform() {
-        return this._applicablePlatform;
+        return this.applicablePlatform;
     }
     /**
      * Gets the endpointSecurityPolicy property value. The endpoint security policy type.
@@ -54,7 +71,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      */
     @javax.annotation.Nullable
     public EndpointSecurityConfigurationType getEndpointSecurityPolicy() {
-        return this._endpointSecurityPolicy;
+        return this.endpointSecurityPolicy;
     }
     /**
      * Gets the endpointSecurityPolicyProfile property value. The endpoint security policy profile type.
@@ -62,24 +79,23 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      */
     @javax.annotation.Nullable
     public EndpointSecurityConfigurationProfileType getEndpointSecurityPolicyProfile() {
-        return this._endpointSecurityPolicyProfile;
+        return this.endpointSecurityPolicyProfile;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SecurityConfigurationTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicablePlatform", (n) -> { currentObject.setApplicablePlatform(n.getEnumValue(EndpointSecurityConfigurationApplicablePlatform.class)); });
-            this.put("endpointSecurityPolicy", (n) -> { currentObject.setEndpointSecurityPolicy(n.getEnumValue(EndpointSecurityConfigurationType.class)); });
-            this.put("endpointSecurityPolicyProfile", (n) -> { currentObject.setEndpointSecurityPolicyProfile(n.getEnumValue(EndpointSecurityConfigurationProfileType.class)); });
-            this.put("insights", (n) -> { currentObject.setInsights(n.getStringValue()); });
-            this.put("intendedSettings", (n) -> { currentObject.setIntendedSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("managedDeviceCount", (n) -> { currentObject.setManagedDeviceCount(n.getIntegerValue()); });
-            this.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(VulnerableManagedDevice::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicablePlatform", (n) -> { this.setApplicablePlatform(n.getEnumValue(EndpointSecurityConfigurationApplicablePlatform.class)); });
+        deserializerMap.put("endpointSecurityPolicy", (n) -> { this.setEndpointSecurityPolicy(n.getEnumValue(EndpointSecurityConfigurationType.class)); });
+        deserializerMap.put("endpointSecurityPolicyProfile", (n) -> { this.setEndpointSecurityPolicyProfile(n.getEnumValue(EndpointSecurityConfigurationProfileType.class)); });
+        deserializerMap.put("insights", (n) -> { this.setInsights(n.getStringValue()); });
+        deserializerMap.put("intendedSettings", (n) -> { this.setIntendedSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceCount", (n) -> { this.setManagedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("managedDevices", (n) -> { this.setManagedDevices(n.getCollectionOfObjectValues(VulnerableManagedDevice::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the insights property value. Information about the mitigation.
@@ -87,7 +103,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      */
     @javax.annotation.Nullable
     public String getInsights() {
-        return this._insights;
+        return this.insights;
     }
     /**
      * Gets the intendedSettings property value. The intended settings and their values.
@@ -95,15 +111,15 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getIntendedSettings() {
-        return this._intendedSettings;
+        return this.intendedSettings;
     }
     /**
-     * Gets the managedDeviceCount property value. The number of vulnerable devices.
+     * Gets the managedDeviceCount property value. The number of vulnerable devices. Valid values 0 to 65536
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getManagedDeviceCount() {
-        return this._managedDeviceCount;
+        return this.managedDeviceCount;
     }
     /**
      * Gets the managedDevices property value. The vulnerable managed devices.
@@ -111,13 +127,14 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      */
     @javax.annotation.Nullable
     public java.util.List<VulnerableManagedDevice> getManagedDevices() {
-        return this._managedDevices;
+        return this.managedDevices;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,55 +151,62 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * @param value Value to set for the applicablePlatform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicablePlatform(@javax.annotation.Nullable final EndpointSecurityConfigurationApplicablePlatform value) {
-        this._applicablePlatform = value;
+        this.applicablePlatform = value;
     }
     /**
      * Sets the endpointSecurityPolicy property value. The endpoint security policy type.
      * @param value Value to set for the endpointSecurityPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointSecurityPolicy(@javax.annotation.Nullable final EndpointSecurityConfigurationType value) {
-        this._endpointSecurityPolicy = value;
+        this.endpointSecurityPolicy = value;
     }
     /**
      * Sets the endpointSecurityPolicyProfile property value. The endpoint security policy profile type.
      * @param value Value to set for the endpointSecurityPolicyProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointSecurityPolicyProfile(@javax.annotation.Nullable final EndpointSecurityConfigurationProfileType value) {
-        this._endpointSecurityPolicyProfile = value;
+        this.endpointSecurityPolicyProfile = value;
     }
     /**
      * Sets the insights property value. Information about the mitigation.
      * @param value Value to set for the insights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsights(@javax.annotation.Nullable final String value) {
-        this._insights = value;
+        this.insights = value;
     }
     /**
      * Sets the intendedSettings property value. The intended settings and their values.
      * @param value Value to set for the intendedSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntendedSettings(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._intendedSettings = value;
+        this.intendedSettings = value;
     }
     /**
-     * Sets the managedDeviceCount property value. The number of vulnerable devices.
+     * Sets the managedDeviceCount property value. The number of vulnerable devices. Valid values 0 to 65536
      * @param value Value to set for the managedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._managedDeviceCount = value;
+        this.managedDeviceCount = value;
     }
     /**
      * Sets the managedDevices property value. The vulnerable managed devices.
      * @param value Value to set for the managedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<VulnerableManagedDevice> value) {
-        this._managedDevices = value;
+        this.managedDevices = value;
     }
 }

@@ -3,15 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Constraint indicating that this value is a secret and will be encrypted.
+ */
 public class DeviceManagementIntentSettingSecretConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * Instantiates a new DeviceManagementIntentSettingSecretConstraint and sets the default values.
+     * Instantiates a new deviceManagementIntentSettingSecretConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementIntentSettingSecretConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementIntentSettingSecretConstraint");
@@ -19,7 +22,7 @@ public class DeviceManagementIntentSettingSecretConstraint extends DeviceManagem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementIntentSettingSecretConstraint
+     * @return a deviceManagementIntentSettingSecretConstraint
      */
     @javax.annotation.Nonnull
     public static DeviceManagementIntentSettingSecretConstraint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -28,19 +31,19 @@ public class DeviceManagementIntentSettingSecretConstraint extends DeviceManagem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementIntentSettingSecretConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

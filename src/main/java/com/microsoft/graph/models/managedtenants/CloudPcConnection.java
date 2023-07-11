@@ -5,29 +5,37 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class CloudPcConnection extends Entity implements Parsable {
-    /** The display name of the cloud PC connection. Required. Read-only. */
-    private String _displayName;
-    /** The health status of the cloud PC connection. Possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only. */
-    private String _healthCheckStatus;
-    /** Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only. */
-    private OffsetDateTime _lastRefreshedDateTime;
-    /** The display name for the managed tenant. Required. Read-only. */
-    private String _tenantDisplayName;
-    /** The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only. */
-    private String _tenantId;
+    /**
+     * The display name of the cloud PC connection. Required. Read-only.
+     */
+    private String displayName;
+    /**
+     * The health status of the cloud PC connection. Possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only.
+     */
+    private String healthCheckStatus;
+    /**
+     * Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
+     */
+    private OffsetDateTime lastRefreshedDateTime;
+    /**
+     * The display name for the managed tenant. Required. Read-only.
+     */
+    private String tenantDisplayName;
+    /**
+     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+     */
+    private String tenantId;
     /**
      * Instantiates a new cloudPcConnection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcConnection() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.cloudPcConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,22 +53,21 @@ public class CloudPcConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("healthCheckStatus", (n) -> { currentObject.setHealthCheckStatus(n.getStringValue()); });
-            this.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("healthCheckStatus", (n) -> { this.setHealthCheckStatus(n.getStringValue()); });
+        deserializerMap.put("lastRefreshedDateTime", (n) -> { this.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { this.setTenantDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the healthCheckStatus property value. The health status of the cloud PC connection. Possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only.
@@ -68,7 +75,7 @@ public class CloudPcConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getHealthCheckStatus() {
-        return this._healthCheckStatus;
+        return this.healthCheckStatus;
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
@@ -76,7 +83,7 @@ public class CloudPcConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
-        return this._lastRefreshedDateTime;
+        return this.lastRefreshedDateTime;
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
@@ -84,7 +91,7 @@ public class CloudPcConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantDisplayName() {
-        return this._tenantDisplayName;
+        return this.tenantDisplayName;
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
@@ -92,13 +99,14 @@ public class CloudPcConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -113,39 +121,44 @@ public class CloudPcConnection extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the healthCheckStatus property value. The health status of the cloud PC connection. Possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only.
      * @param value Value to set for the healthCheckStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthCheckStatus(@javax.annotation.Nullable final String value) {
-        this._healthCheckStatus = value;
+        this.healthCheckStatus = value;
     }
     /**
      * Sets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastRefreshedDateTime = value;
+        this.lastRefreshedDateTime = value;
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
-        this._tenantDisplayName = value;
+        this.tenantDisplayName = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
 }

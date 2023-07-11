@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * The type of VPN local identifier
+ */
 public enum VpnLocalIdentifier implements ValuedEnum {
     /** Device Fully Qualified Domain Name */
     DeviceFQDN("deviceFQDN"),

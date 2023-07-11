@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Supported values for the padding scheme used by encryption provider.
+ */
 public enum UserPfxPaddingScheme implements ValuedEnum {
     /** Unknown padding Scheme. */
     None("none"),

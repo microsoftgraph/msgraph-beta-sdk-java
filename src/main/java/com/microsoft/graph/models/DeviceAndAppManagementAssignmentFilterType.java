@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Represents type of the assignment filter.
+ */
 public enum DeviceAndAppManagementAssignmentFilterType implements ValuedEnum {
     /** Default value. Do not use. */
     None("none"),

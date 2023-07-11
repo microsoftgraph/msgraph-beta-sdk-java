@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Restrict managed app notification
+ */
 public enum ManagedAppNotificationRestriction implements ValuedEnum {
     /** Share all notifications. */
     Allow("allow"),

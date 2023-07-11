@@ -3,37 +3,56 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Compilance Policy and Configuration for a Setting State summary */
+/**
+ * Device Compilance Policy and Configuration for a Setting State summary
+ */
 public class SettingStateDeviceSummary extends Entity implements Parsable {
-    /** Device Compliant count for the setting */
-    private Integer _compliantDeviceCount;
-    /** Device conflict error count for the setting */
-    private Integer _conflictDeviceCount;
-    /** Device error count for the setting */
-    private Integer _errorDeviceCount;
-    /** Name of the InstancePath for the setting */
-    private String _instancePath;
-    /** Device NonCompliant count for the setting */
-    private Integer _nonCompliantDeviceCount;
-    /** Device Not Applicable count for the setting */
-    private Integer _notApplicableDeviceCount;
-    /** Device Compliant count for the setting */
-    private Integer _remediatedDeviceCount;
-    /** Name of the setting */
-    private String _settingName;
-    /** Device Unkown count for the setting */
-    private Integer _unknownDeviceCount;
+    /**
+     * Device Compliant count for the setting
+     */
+    private Integer compliantDeviceCount;
+    /**
+     * Device conflict error count for the setting
+     */
+    private Integer conflictDeviceCount;
+    /**
+     * Device error count for the setting
+     */
+    private Integer errorDeviceCount;
+    /**
+     * Name of the InstancePath for the setting
+     */
+    private String instancePath;
+    /**
+     * Device NonCompliant count for the setting
+     */
+    private Integer nonCompliantDeviceCount;
+    /**
+     * Device Not Applicable count for the setting
+     */
+    private Integer notApplicableDeviceCount;
+    /**
+     * Device Compliant count for the setting
+     */
+    private Integer remediatedDeviceCount;
+    /**
+     * Name of the setting
+     */
+    private String settingName;
+    /**
+     * Device Unkown count for the setting
+     */
+    private Integer unknownDeviceCount;
     /**
      * Instantiates a new settingStateDeviceSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SettingStateDeviceSummary() {
         super();
-        this.setOdataType("#microsoft.graph.settingStateDeviceSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +70,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getCompliantDeviceCount() {
-        return this._compliantDeviceCount;
+        return this.compliantDeviceCount;
     }
     /**
      * Gets the conflictDeviceCount property value. Device conflict error count for the setting
@@ -59,7 +78,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getConflictDeviceCount() {
-        return this._conflictDeviceCount;
+        return this.conflictDeviceCount;
     }
     /**
      * Gets the errorDeviceCount property value. Device error count for the setting
@@ -67,26 +86,25 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getErrorDeviceCount() {
-        return this._errorDeviceCount;
+        return this.errorDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SettingStateDeviceSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("conflictDeviceCount", (n) -> { currentObject.setConflictDeviceCount(n.getIntegerValue()); });
-            this.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
-            this.put("instancePath", (n) -> { currentObject.setInstancePath(n.getStringValue()); });
-            this.put("nonCompliantDeviceCount", (n) -> { currentObject.setNonCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("notApplicableDeviceCount", (n) -> { currentObject.setNotApplicableDeviceCount(n.getIntegerValue()); });
-            this.put("remediatedDeviceCount", (n) -> { currentObject.setRemediatedDeviceCount(n.getIntegerValue()); });
-            this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
-            this.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("compliantDeviceCount", (n) -> { this.setCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("conflictDeviceCount", (n) -> { this.setConflictDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("errorDeviceCount", (n) -> { this.setErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("instancePath", (n) -> { this.setInstancePath(n.getStringValue()); });
+        deserializerMap.put("nonCompliantDeviceCount", (n) -> { this.setNonCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("notApplicableDeviceCount", (n) -> { this.setNotApplicableDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("remediatedDeviceCount", (n) -> { this.setRemediatedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("settingName", (n) -> { this.setSettingName(n.getStringValue()); });
+        deserializerMap.put("unknownDeviceCount", (n) -> { this.setUnknownDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the instancePath property value. Name of the InstancePath for the setting
@@ -94,7 +112,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInstancePath() {
-        return this._instancePath;
+        return this.instancePath;
     }
     /**
      * Gets the nonCompliantDeviceCount property value. Device NonCompliant count for the setting
@@ -102,7 +120,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
-        return this._nonCompliantDeviceCount;
+        return this.nonCompliantDeviceCount;
     }
     /**
      * Gets the notApplicableDeviceCount property value. Device Not Applicable count for the setting
@@ -110,7 +128,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
-        return this._notApplicableDeviceCount;
+        return this.notApplicableDeviceCount;
     }
     /**
      * Gets the remediatedDeviceCount property value. Device Compliant count for the setting
@@ -118,7 +136,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
-        return this._remediatedDeviceCount;
+        return this.remediatedDeviceCount;
     }
     /**
      * Gets the settingName property value. Name of the setting
@@ -126,7 +144,7 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSettingName() {
-        return this._settingName;
+        return this.settingName;
     }
     /**
      * Gets the unknownDeviceCount property value. Device Unkown count for the setting
@@ -134,13 +152,14 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getUnknownDeviceCount() {
-        return this._unknownDeviceCount;
+        return this.unknownDeviceCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,71 +178,80 @@ public class SettingStateDeviceSummary extends Entity implements Parsable {
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._compliantDeviceCount = value;
+        this.compliantDeviceCount = value;
     }
     /**
      * Sets the conflictDeviceCount property value. Device conflict error count for the setting
      * @param value Value to set for the conflictDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._conflictDeviceCount = value;
+        this.conflictDeviceCount = value;
     }
     /**
      * Sets the errorDeviceCount property value. Device error count for the setting
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._errorDeviceCount = value;
+        this.errorDeviceCount = value;
     }
     /**
      * Sets the instancePath property value. Name of the InstancePath for the setting
      * @param value Value to set for the instancePath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstancePath(@javax.annotation.Nullable final String value) {
-        this._instancePath = value;
+        this.instancePath = value;
     }
     /**
      * Sets the nonCompliantDeviceCount property value. Device NonCompliant count for the setting
      * @param value Value to set for the nonCompliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNonCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._nonCompliantDeviceCount = value;
+        this.nonCompliantDeviceCount = value;
     }
     /**
      * Sets the notApplicableDeviceCount property value. Device Not Applicable count for the setting
      * @param value Value to set for the notApplicableDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._notApplicableDeviceCount = value;
+        this.notApplicableDeviceCount = value;
     }
     /**
      * Sets the remediatedDeviceCount property value. Device Compliant count for the setting
      * @param value Value to set for the remediatedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediatedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._remediatedDeviceCount = value;
+        this.remediatedDeviceCount = value;
     }
     /**
      * Sets the settingName property value. Name of the setting
      * @param value Value to set for the settingName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
-        this._settingName = value;
+        this.settingName = value;
     }
     /**
      * Sets the unknownDeviceCount property value. Device Unkown count for the setting
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._unknownDeviceCount = value;
+        this.unknownDeviceCount = value;
     }
 }

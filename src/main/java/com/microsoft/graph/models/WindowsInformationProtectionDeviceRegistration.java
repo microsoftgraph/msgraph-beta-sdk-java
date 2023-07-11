@@ -4,35 +4,49 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents device registration records for Bring-Your-Own-Device(BYOD) Windows devices.
+ */
 public class WindowsInformationProtectionDeviceRegistration extends Entity implements Parsable {
-    /** Device Mac address. */
-    private String _deviceMacAddress;
-    /** Device name. */
-    private String _deviceName;
-    /** Device identifier for this device registration record. */
-    private String _deviceRegistrationId;
-    /** Device type, for example, Windows laptop VS Windows phone. */
-    private String _deviceType;
-    /** Last checkin time of the device. */
-    private OffsetDateTime _lastCheckInDateTime;
-    /** UserId associated with this device registration record. */
-    private String _userId;
     /**
-     * Instantiates a new WindowsInformationProtectionDeviceRegistration and sets the default values.
+     * Device Mac address.
+     */
+    private String deviceMacAddress;
+    /**
+     * Device name.
+     */
+    private String deviceName;
+    /**
+     * Device identifier for this device registration record.
+     */
+    private String deviceRegistrationId;
+    /**
+     * Device type, for example, Windows laptop VS Windows phone.
+     */
+    private String deviceType;
+    /**
+     * Last checkin time of the device.
+     */
+    private OffsetDateTime lastCheckInDateTime;
+    /**
+     * UserId associated with this device registration record.
+     */
+    private String userId;
+    /**
+     * Instantiates a new windowsInformationProtectionDeviceRegistration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionDeviceRegistration() {
         super();
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionDeviceRegistration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtectionDeviceRegistration
+     * @return a windowsInformationProtectionDeviceRegistration
      */
     @javax.annotation.Nonnull
     public static WindowsInformationProtectionDeviceRegistration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +59,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      */
     @javax.annotation.Nullable
     public String getDeviceMacAddress() {
-        return this._deviceMacAddress;
+        return this.deviceMacAddress;
     }
     /**
      * Gets the deviceName property value. Device name.
@@ -53,7 +67,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * Gets the deviceRegistrationId property value. Device identifier for this device registration record.
@@ -61,7 +75,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      */
     @javax.annotation.Nullable
     public String getDeviceRegistrationId() {
-        return this._deviceRegistrationId;
+        return this.deviceRegistrationId;
     }
     /**
      * Gets the deviceType property value. Device type, for example, Windows laptop VS Windows phone.
@@ -69,23 +83,22 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      */
     @javax.annotation.Nullable
     public String getDeviceType() {
-        return this._deviceType;
+        return this.deviceType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsInformationProtectionDeviceRegistration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceMacAddress", (n) -> { currentObject.setDeviceMacAddress(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("deviceRegistrationId", (n) -> { currentObject.setDeviceRegistrationId(n.getStringValue()); });
-            this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getStringValue()); });
-            this.put("lastCheckInDateTime", (n) -> { currentObject.setLastCheckInDateTime(n.getOffsetDateTimeValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceMacAddress", (n) -> { this.setDeviceMacAddress(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("deviceRegistrationId", (n) -> { this.setDeviceRegistrationId(n.getStringValue()); });
+        deserializerMap.put("deviceType", (n) -> { this.setDeviceType(n.getStringValue()); });
+        deserializerMap.put("lastCheckInDateTime", (n) -> { this.setLastCheckInDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastCheckInDateTime property value. Last checkin time of the device.
@@ -93,7 +106,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastCheckInDateTime() {
-        return this._lastCheckInDateTime;
+        return this.lastCheckInDateTime;
     }
     /**
      * Gets the userId property value. UserId associated with this device registration record.
@@ -101,13 +114,14 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +137,53 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * @param value Value to set for the deviceMacAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceMacAddress(@javax.annotation.Nullable final String value) {
-        this._deviceMacAddress = value;
+        this.deviceMacAddress = value;
     }
     /**
      * Sets the deviceName property value. Device name.
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the deviceRegistrationId property value. Device identifier for this device registration record.
      * @param value Value to set for the deviceRegistrationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceRegistrationId(@javax.annotation.Nullable final String value) {
-        this._deviceRegistrationId = value;
+        this.deviceRegistrationId = value;
     }
     /**
      * Sets the deviceType property value. Device type, for example, Windows laptop VS Windows phone.
      * @param value Value to set for the deviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceType(@javax.annotation.Nullable final String value) {
-        this._deviceType = value;
+        this.deviceType = value;
     }
     /**
      * Sets the lastCheckInDateTime property value. Last checkin time of the device.
      * @param value Value to set for the lastCheckInDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastCheckInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastCheckInDateTime = value;
+        this.lastCheckInDateTime = value;
     }
     /**
      * Sets the userId property value. UserId associated with this device registration record.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

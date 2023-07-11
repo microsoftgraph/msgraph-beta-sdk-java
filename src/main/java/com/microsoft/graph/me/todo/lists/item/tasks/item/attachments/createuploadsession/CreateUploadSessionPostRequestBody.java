@@ -5,20 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the createUploadSession method. */
 public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The attachmentInfo property */
-    private AttachmentInfo _attachmentInfo;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The attachmentInfo property
+     */
+    private AttachmentInfo attachmentInfo;
     /**
      * Instantiates a new createUploadSessionPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CreateUploadSessionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,7 +41,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the attachmentInfo property value. The attachmentInfo property
@@ -46,24 +49,24 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public AttachmentInfo getAttachmentInfo() {
-        return this._attachmentInfo;
+        return this.attachmentInfo;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CreateUploadSessionPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("attachmentInfo", (n) -> { currentObject.setAttachmentInfo(n.getObjectValue(AttachmentInfo::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("attachmentInfo", (n) -> { this.setAttachmentInfo(n.getObjectValue(AttachmentInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attachmentInfo", this.getAttachmentInfo());
@@ -74,15 +77,17 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the attachmentInfo property value. The attachmentInfo property
      * @param value Value to set for the attachmentInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachmentInfo(@javax.annotation.Nullable final AttachmentInfo value) {
-        this._attachmentInfo = value;
+        this.attachmentInfo = value;
     }
 }

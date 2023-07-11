@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Indicates the type of content allowed to be cached by Apple's content caching service.
+ */
 public enum MacOSContentCachingType implements ValuedEnum {
     /** Default. Both user iCloud data and non-iCloud data will be cached. */
     NotConfigured("notConfigured"),

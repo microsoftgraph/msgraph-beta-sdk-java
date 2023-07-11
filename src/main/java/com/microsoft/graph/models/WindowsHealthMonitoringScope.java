@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Device health monitoring scope
+ */
 public enum WindowsHealthMonitoringScope implements ValuedEnum {
     /** Undefined */
     Undefined("undefined"),
@@ -12,7 +14,9 @@ public enum WindowsHealthMonitoringScope implements ValuedEnum {
     /** Boot performance events */
     BootPerformance("bootPerformance"),
     /** Windows updates events */
-    WindowsUpdates("windowsUpdates");
+    WindowsUpdates("windowsUpdates"),
+    /** PrivilegeManagement */
+    PrivilegeManagement("privilegeManagement");
     public final String value;
     WindowsHealthMonitoringScope(final String value) {
         this.value = value;
@@ -27,6 +31,7 @@ public enum WindowsHealthMonitoringScope implements ValuedEnum {
             case "healthMonitoring": return HealthMonitoring;
             case "bootPerformance": return BootPerformance;
             case "windowsUpdates": return WindowsUpdates;
+            case "privilegeManagement": return PrivilegeManagement;
             default: return null;
         }
     }

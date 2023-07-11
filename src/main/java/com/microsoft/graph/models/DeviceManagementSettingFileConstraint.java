@@ -3,17 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Constraint enforcing the file extension is acceptable for a given setting
+ */
 public class DeviceManagementSettingFileConstraint extends DeviceManagementConstraint implements Parsable {
-    /** Acceptable file extensions to upload for this setting */
-    private java.util.List<String> _supportedExtensions;
     /**
-     * Instantiates a new DeviceManagementSettingFileConstraint and sets the default values.
+     * Acceptable file extensions to upload for this setting
+     */
+    private java.util.List<String> supportedExtensions;
+    /**
+     * Instantiates a new deviceManagementSettingFileConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingFileConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingFileConstraint");
@@ -21,7 +26,7 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettingFileConstraint
+     * @return a deviceManagementSettingFileConstraint
      */
     @javax.annotation.Nonnull
     public static DeviceManagementSettingFileConstraint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,14 +35,13 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementSettingFileConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("supportedExtensions", (n) -> { currentObject.setSupportedExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("supportedExtensions", (n) -> { this.setSupportedExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the supportedExtensions property value. Acceptable file extensions to upload for this setting
@@ -45,13 +49,14 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSupportedExtensions() {
-        return this._supportedExtensions;
+        return this.supportedExtensions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +67,8 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * @param value Value to set for the supportedExtensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedExtensions(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._supportedExtensions = value;
+        this.supportedExtensions = value;
     }
 }

@@ -4,31 +4,44 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The definition value entity stores the value for a single group policy definition. */
+/**
+ * The definition value entity stores the value for a single group policy definition.
+ */
 public class GroupPolicyDefinitionValue extends Entity implements Parsable {
-    /** Group Policy Configuration Type */
-    private GroupPolicyConfigurationType _configurationType;
-    /** The date and time the object was created. */
-    private OffsetDateTime _createdDateTime;
-    /** The associated group policy definition with the value. */
-    private GroupPolicyDefinition _definition;
-    /** Enables or disables the associated group policy definition. */
-    private Boolean _enabled;
-    /** The date and time the entity was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** The associated group policy presentation values with the definition value. */
-    private java.util.List<GroupPolicyPresentationValue> _presentationValues;
+    /**
+     * Group Policy Configuration Type
+     */
+    private GroupPolicyConfigurationType configurationType;
+    /**
+     * The date and time the object was created.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The associated group policy definition with the value.
+     */
+    private GroupPolicyDefinition definition;
+    /**
+     * Enables or disables the associated group policy definition.
+     */
+    private Boolean enabled;
+    /**
+     * The date and time the entity was last modified.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * The associated group policy presentation values with the definition value.
+     */
+    private java.util.List<GroupPolicyPresentationValue> presentationValues;
     /**
      * Instantiates a new groupPolicyDefinitionValue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyDefinitionValue() {
         super();
-        this.setOdataType("#microsoft.graph.groupPolicyDefinitionValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +59,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public GroupPolicyConfigurationType getConfigurationType() {
-        return this._configurationType;
+        return this.configurationType;
     }
     /**
      * Gets the createdDateTime property value. The date and time the object was created.
@@ -54,7 +67,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the definition property value. The associated group policy definition with the value.
@@ -62,7 +75,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public GroupPolicyDefinition getDefinition() {
-        return this._definition;
+        return this.definition;
     }
     /**
      * Gets the enabled property value. Enables or disables the associated group policy definition.
@@ -70,23 +83,22 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getEnabled() {
-        return this._enabled;
+        return this.enabled;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyDefinitionValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("configurationType", (n) -> { currentObject.setConfigurationType(n.getEnumValue(GroupPolicyConfigurationType.class)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("definition", (n) -> { currentObject.setDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("presentationValues", (n) -> { currentObject.setPresentationValues(n.getCollectionOfObjectValues(GroupPolicyPresentationValue::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configurationType", (n) -> { this.setConfigurationType(n.getEnumValue(GroupPolicyConfigurationType.class)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("definition", (n) -> { this.setDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("presentationValues", (n) -> { this.setPresentationValues(n.getCollectionOfObjectValues(GroupPolicyPresentationValue::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
@@ -94,7 +106,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the presentationValues property value. The associated group policy presentation values with the definition value.
@@ -102,13 +114,14 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<GroupPolicyPresentationValue> getPresentationValues() {
-        return this._presentationValues;
+        return this.presentationValues;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,47 +137,53 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
      * @param value Value to set for the configurationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationType(@javax.annotation.Nullable final GroupPolicyConfigurationType value) {
-        this._configurationType = value;
+        this.configurationType = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the object was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the definition property value. The associated group policy definition with the value.
      * @param value Value to set for the definition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinition(@javax.annotation.Nullable final GroupPolicyDefinition value) {
-        this._definition = value;
+        this.definition = value;
     }
     /**
      * Sets the enabled property value. Enables or disables the associated group policy definition.
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._enabled = value;
+        this.enabled = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the presentationValues property value. The associated group policy presentation values with the definition value.
      * @param value Value to set for the presentationValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPresentationValues(@javax.annotation.Nullable final java.util.List<GroupPolicyPresentationValue> value) {
-        this._presentationValues = value;
+        this.presentationValues = value;
     }
 }

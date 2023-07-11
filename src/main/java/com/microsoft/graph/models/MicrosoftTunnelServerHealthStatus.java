@@ -3,22 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Enum of possible MicrosoftTunnelServer health status types
+ */
 public enum MicrosoftTunnelServerHealthStatus implements ValuedEnum {
-    /** The state is unknown */
+    /** Indicates that the health status of the server is unknown. This occurs when no health status has been reported, for example when the server is initialized, but has not yet been evaluated for its health. */
     Unknown("unknown"),
-    /** The state is healthy */
+    /** Indicates that the health status of the server is healthy. This should be the normal operational health status. */
     Healthy("healthy"),
-    /** The state is unhealthy */
+    /** Indicates that the health status of the server is unhealthy. This is normally a transient condition that will last up to 5 minutes. If the server cannot be remediated while reporting unhealthy state, the health state will change to 'warning'. If it can be remediated, the health state will return to 'healthy'. */
     Unhealthy("unhealthy"),
-    /** The state is warning */
+    /** Indicates a warning based on the Tunnel Gateway server's CPU usage, memory usage, latency, TLS certificate, version */
     Warning("warning"),
-    /** The state is offline */
+    /** Indicates the server state is offline */
     Offline("offline"),
-    /** The state is upgradeInProgress */
+    /** Indicates the upgrade in progress during the upgrade cycle of when Intune begins upgrading servers, one server at a time */
     UpgradeInProgress("upgradeInProgress"),
-    /** The state is upgradeFailed */
-    UpgradeFailed("upgradeFailed");
+    /** Indicates the failure of the upgrade during the upgrade cycle of when Intune begins upgrading servers, one server at a time */
+    UpgradeFailed("upgradeFailed"),
+    /** Evolvable enumeration sentinel value. Do not use enums. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     MicrosoftTunnelServerHealthStatus(final String value) {
         this.value = value;
@@ -36,6 +40,7 @@ public enum MicrosoftTunnelServerHealthStatus implements ValuedEnum {
             case "offline": return Offline;
             case "upgradeInProgress": return UpgradeInProgress;
             case "upgradeFailed": return UpgradeFailed;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

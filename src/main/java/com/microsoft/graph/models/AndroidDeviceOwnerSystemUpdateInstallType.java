@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * System Update Types for Android Device Owner.
+ */
 public enum AndroidDeviceOwnerSystemUpdateInstallType implements ValuedEnum {
     /** Device default behavior, which typically prompts the user to accept system updates. */
     DeviceDefault("deviceDefault"),

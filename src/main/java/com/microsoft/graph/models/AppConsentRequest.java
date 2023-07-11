@@ -3,29 +3,37 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class AppConsentRequest extends Entity implements Parsable {
-    /** The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby. */
-    private String _appDisplayName;
-    /** The identifier of the application. Required. Supports $filter (eq only) and $orderby. */
-    private String _appId;
-    /** The consent type of the request. Possible values are: Static and Dynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required. */
-    private String _consentType;
-    /** A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required. */
-    private java.util.List<AppConsentRequestScope> _pendingScopes;
-    /** A list of pending user consent requests. Supports $filter (eq). */
-    private java.util.List<UserConsentRequest> _userConsentRequests;
+    /**
+     * The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
+     */
+    private String appDisplayName;
+    /**
+     * The identifier of the application. Required. Supports $filter (eq only) and $orderby.
+     */
+    private String appId;
+    /**
+     * The consent type of the request. Possible values are: StaticandDynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
+     */
+    private String consentType;
+    /**
+     * A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
+     */
+    private java.util.List<AppConsentRequestScope> pendingScopes;
+    /**
+     * A list of pending user consent requests. Supports $filter (eq).
+     */
+    private java.util.List<UserConsentRequest> userConsentRequests;
     /**
      * Instantiates a new appConsentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppConsentRequest() {
         super();
-        this.setOdataType("#microsoft.graph.appConsentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,7 +51,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppDisplayName() {
-        return this._appDisplayName;
+        return this.appDisplayName;
     }
     /**
      * Gets the appId property value. The identifier of the application. Required. Supports $filter (eq only) and $orderby.
@@ -51,30 +59,29 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppId() {
-        return this._appId;
+        return this.appId;
     }
     /**
-     * Gets the consentType property value. The consent type of the request. Possible values are: Static and Dynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
+     * Gets the consentType property value. The consent type of the request. Possible values are: StaticandDynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getConsentType() {
-        return this._consentType;
+        return this.consentType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AppConsentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("consentType", (n) -> { currentObject.setConsentType(n.getStringValue()); });
-            this.put("pendingScopes", (n) -> { currentObject.setPendingScopes(n.getCollectionOfObjectValues(AppConsentRequestScope::createFromDiscriminatorValue)); });
-            this.put("userConsentRequests", (n) -> { currentObject.setUserConsentRequests(n.getCollectionOfObjectValues(UserConsentRequest::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("consentType", (n) -> { this.setConsentType(n.getStringValue()); });
+        deserializerMap.put("pendingScopes", (n) -> { this.setPendingScopes(n.getCollectionOfObjectValues(AppConsentRequestScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("userConsentRequests", (n) -> { this.setUserConsentRequests(n.getCollectionOfObjectValues(UserConsentRequest::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the pendingScopes property value. A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
@@ -82,7 +89,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppConsentRequestScope> getPendingScopes() {
-        return this._pendingScopes;
+        return this.pendingScopes;
     }
     /**
      * Gets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
@@ -90,13 +97,14 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UserConsentRequest> getUserConsentRequests() {
-        return this._userConsentRequests;
+        return this.userConsentRequests;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,39 +119,44 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
-        this._appDisplayName = value;
+        this.appDisplayName = value;
     }
     /**
      * Sets the appId property value. The identifier of the application. Required. Supports $filter (eq only) and $orderby.
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
-        this._appId = value;
+        this.appId = value;
     }
     /**
-     * Sets the consentType property value. The consent type of the request. Possible values are: Static and Dynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
+     * Sets the consentType property value. The consent type of the request. Possible values are: StaticandDynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
      * @param value Value to set for the consentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConsentType(@javax.annotation.Nullable final String value) {
-        this._consentType = value;
+        this.consentType = value;
     }
     /**
      * Sets the pendingScopes property value. A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
      * @param value Value to set for the pendingScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingScopes(@javax.annotation.Nullable final java.util.List<AppConsentRequestScope> value) {
-        this._pendingScopes = value;
+        this.pendingScopes = value;
     }
     /**
      * Sets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
      * @param value Value to set for the userConsentRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserConsentRequests(@javax.annotation.Nullable final java.util.List<UserConsentRequest> value) {
-        this._userConsentRequests = value;
+        this.userConsentRequests = value;
     }
 }

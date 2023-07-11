@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TaskFileAttachment extends AttachmentBase implements Parsable {
-    /** The base64-encoded contents of the file. */
-    private byte[] _contentBytes;
     /**
-     * Instantiates a new TaskFileAttachment and sets the default values.
+     * The base64-encoded contents of the file.
+     */
+    private byte[] contentBytes;
+    /**
+     * Instantiates a new taskFileAttachment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TaskFileAttachment() {
         super();
         this.setOdataType("#microsoft.graph.taskFileAttachment");
@@ -21,7 +23,7 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TaskFileAttachment
+     * @return a taskFileAttachment
      */
     @javax.annotation.Nonnull
     public static TaskFileAttachment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,28 +32,28 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
     }
     /**
      * Gets the contentBytes property value. The base64-encoded contents of the file.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getContentBytes() {
-        return this._contentBytes;
+        return this.contentBytes;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TaskFileAttachment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contentBytes", (n) -> { currentObject.setContentBytes(n.getByteArrayValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentBytes", (n) -> { this.setContentBytes(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
      * @param value Value to set for the contentBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentBytes(@javax.annotation.Nullable final byte[] value) {
-        this._contentBytes = value;
+        this.contentBytes = value;
     }
 }

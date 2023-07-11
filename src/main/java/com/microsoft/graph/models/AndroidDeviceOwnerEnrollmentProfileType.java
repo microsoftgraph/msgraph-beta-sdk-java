@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Android Device Owner Enrollment Profile types.
+ */
 public enum AndroidDeviceOwnerEnrollmentProfileType implements ValuedEnum {
     /** Not configured; this value is ignored. */
     NotConfigured("notConfigured"),

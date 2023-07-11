@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Pin Character Requirements
+ */
 public enum WindowsInformationProtectionPinCharacterRequirements implements ValuedEnum {
     /** Not allow */
     NotAllow("notAllow"),

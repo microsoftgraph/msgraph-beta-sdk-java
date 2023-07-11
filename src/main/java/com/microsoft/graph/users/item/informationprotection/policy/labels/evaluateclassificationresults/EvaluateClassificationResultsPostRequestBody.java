@@ -6,22 +6,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the evaluateClassificationResults method. */
 public class EvaluateClassificationResultsPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The classificationResults property */
-    private java.util.List<ClassificationResult> _classificationResults;
-    /** The contentInfo property */
-    private ContentInfo _contentInfo;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The classificationResults property
+     */
+    private java.util.List<ClassificationResult> classificationResults;
+    /**
+     * The contentInfo property
+     */
+    private ContentInfo contentInfo;
     /**
      * Instantiates a new evaluateClassificationResultsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EvaluateClassificationResultsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,7 +46,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the classificationResults property value. The classificationResults property
@@ -49,7 +54,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
      */
     @javax.annotation.Nullable
     public java.util.List<ClassificationResult> getClassificationResults() {
-        return this._classificationResults;
+        return this.classificationResults;
     }
     /**
      * Gets the contentInfo property value. The contentInfo property
@@ -57,25 +62,25 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
      */
     @javax.annotation.Nullable
     public ContentInfo getContentInfo() {
-        return this._contentInfo;
+        return this.contentInfo;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EvaluateClassificationResultsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("classificationResults", (n) -> { currentObject.setClassificationResults(n.getCollectionOfObjectValues(ClassificationResult::createFromDiscriminatorValue)); });
-            this.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("classificationResults", (n) -> { this.setClassificationResults(n.getCollectionOfObjectValues(ClassificationResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentInfo", (n) -> { this.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("classificationResults", this.getClassificationResults());
@@ -87,23 +92,26 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the classificationResults property value. The classificationResults property
      * @param value Value to set for the classificationResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassificationResults(@javax.annotation.Nullable final java.util.List<ClassificationResult> value) {
-        this._classificationResults = value;
+        this.classificationResults = value;
     }
     /**
      * Sets the contentInfo property value. The contentInfo property
      * @param value Value to set for the contentInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentInfo(@javax.annotation.Nullable final ContentInfo value) {
-        this._contentInfo = value;
+        this.contentInfo = value;
     }
 }

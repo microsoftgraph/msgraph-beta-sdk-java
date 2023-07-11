@@ -4,19 +4,23 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType implements Parsable {
-    /** Active Hours End */
-    private LocalTime _activeHoursEnd;
-    /** Active Hours Start */
-    private LocalTime _activeHoursStart;
     /**
-     * Instantiates a new WindowsUpdateActiveHoursInstall and sets the default values.
+     * Active Hours End
+     */
+    private LocalTime activeHoursEnd;
+    /**
+     * Active Hours Start
+     */
+    private LocalTime activeHoursStart;
+    /**
+     * Instantiates a new windowsUpdateActiveHoursInstall and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsUpdateActiveHoursInstall() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdateActiveHoursInstall");
@@ -24,7 +28,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsUpdateActiveHoursInstall
+     * @return a windowsUpdateActiveHoursInstall
      */
     @javax.annotation.Nonnull
     public static WindowsUpdateActiveHoursInstall createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +41,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      */
     @javax.annotation.Nullable
     public LocalTime getActiveHoursEnd() {
-        return this._activeHoursEnd;
+        return this.activeHoursEnd;
     }
     /**
      * Gets the activeHoursStart property value. Active Hours Start
@@ -45,25 +49,25 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      */
     @javax.annotation.Nullable
     public LocalTime getActiveHoursStart() {
-        return this._activeHoursStart;
+        return this.activeHoursStart;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsUpdateActiveHoursInstall currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeHoursEnd", (n) -> { currentObject.setActiveHoursEnd(n.getLocalTimeValue()); });
-            this.put("activeHoursStart", (n) -> { currentObject.setActiveHoursStart(n.getLocalTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeHoursEnd", (n) -> { this.setActiveHoursEnd(n.getLocalTimeValue()); });
+        deserializerMap.put("activeHoursStart", (n) -> { this.setActiveHoursStart(n.getLocalTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,15 +79,17 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      * @param value Value to set for the activeHoursEnd property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveHoursEnd(@javax.annotation.Nullable final LocalTime value) {
-        this._activeHoursEnd = value;
+        this.activeHoursEnd = value;
     }
     /**
      * Sets the activeHoursStart property value. Active Hours Start
      * @param value Value to set for the activeHoursStart property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveHoursStart(@javax.annotation.Nullable final LocalTime value) {
-        this._activeHoursStart = value;
+        this.activeHoursStart = value;
     }
 }

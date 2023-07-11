@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Defenders action to take on detected Potentially Unwanted Application (PUA).
+ */
 public enum DefenderPotentiallyUnwantedAppAction implements ValuedEnum {
     /** PUA Protection is off. Defender will not protect against potentially unwanted applications. */
     DeviceDefault("deviceDefault"),

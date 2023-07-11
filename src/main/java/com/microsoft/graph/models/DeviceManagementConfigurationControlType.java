@@ -3,22 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Setting control type representation in the UX
+ */
 public enum DeviceManagementConfigurationControlType implements ValuedEnum {
-    /** Don’t override default */
-    Default_escaped("default_escaped"),
-    /** Display Choice in dropdown */
+    /** Default. UX uses default UX element base on setting type for the setting. */
+    Default("default"),
+    /** Display the setting in dropdown box. */
     Dropdown("dropdown"),
-    /** Display text input in small text input */
+    /** Display text input in small text input. */
     SmallTextBox("smallTextBox"),
-    /** Display text input in large text input */
+    /** Display text input in large text input. */
     LargeTextBox("largeTextBox"),
-    /** Allow for toggle control type */
+    /** Allow for toggle control type. */
     Toggle("toggle"),
-    /** Allow for multiheader grid control type */
+    /** Allow for multiheader grid control type. */
     MultiheaderGrid("multiheaderGrid"),
-    /** Allow for context pane control type */
-    ContextPane("contextPane");
+    /** Allow for context pane control type. */
+    ContextPane("contextPane"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceManagementConfigurationControlType(final String value) {
         this.value = value;
@@ -29,13 +33,14 @@ public enum DeviceManagementConfigurationControlType implements ValuedEnum {
     public static DeviceManagementConfigurationControlType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return Default_escaped;
+            case "default": return Default;
             case "dropdown": return Dropdown;
             case "smallTextBox": return SmallTextBox;
             case "largeTextBox": return LargeTextBox;
             case "toggle": return Toggle;
             case "multiheaderGrid": return MultiheaderGrid;
             case "contextPane": return ContextPane;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

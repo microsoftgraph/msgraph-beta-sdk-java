@@ -3,57 +3,102 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Graph properties for Device Firmware Configuration Interface 
+ */
 public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration implements Parsable {
-    /** Possible values of a property */
-    private Enablement _bluetooth;
-    /** Possible values of a property */
-    private Enablement _bootFromBuiltInNetworkAdapters;
-    /** Possible values of a property */
-    private Enablement _bootFromExternalMedia;
-    /** Possible values of a property */
-    private Enablement _cameras;
-    /** Defines the permission level granted to users to enable them change Uefi settings */
-    private ChangeUefiSettingsPermission _changeUefiSettingsPermission;
-    /** Possible values of a property */
-    private Enablement _frontCamera;
-    /** Possible values of a property */
-    private Enablement _infraredCamera;
-    /** Possible values of a property */
-    private Enablement _microphone;
-    /** Possible values of a property */
-    private Enablement _microphonesAndSpeakers;
-    /** Possible values of a property */
-    private Enablement _nearFieldCommunication;
-    /** Possible values of a property */
-    private Enablement _radios;
-    /** Possible values of a property */
-    private Enablement _rearCamera;
-    /** Possible values of a property */
-    private Enablement _sdCard;
-    /** Possible values of a property */
-    private Enablement _simultaneousMultiThreading;
-    /** Possible values of a property */
-    private Enablement _usbTypeAPort;
-    /** Possible values of a property */
-    private Enablement _virtualizationOfCpuAndIO;
-    /** Possible values of a property */
-    private Enablement _wakeOnLAN;
-    /** Possible values of a property */
-    private Enablement _wakeOnPower;
-    /** Possible values of a property */
-    private Enablement _wiFi;
-    /** Possible values of a property */
-    private Enablement _windowsPlatformBinaryTable;
-    /** Possible values of a property */
-    private Enablement _wirelessWideAreaNetwork;
     /**
-     * Instantiates a new Windows10DeviceFirmwareConfigurationInterface and sets the default values.
+     * Possible values of a property
+     */
+    private Enablement bluetooth;
+    /**
+     * Possible values of a property
+     */
+    private Enablement bootFromBuiltInNetworkAdapters;
+    /**
+     * Possible values of a property
+     */
+    private Enablement bootFromExternalMedia;
+    /**
+     * Possible values of a property
+     */
+    private Enablement cameras;
+    /**
+     * Defines the permission level granted to users to enable them change Uefi settings
+     */
+    private ChangeUefiSettingsPermission changeUefiSettingsPermission;
+    /**
+     * Possible values of a property
+     */
+    private Enablement frontCamera;
+    /**
+     * Possible values of a property
+     */
+    private Enablement infraredCamera;
+    /**
+     * Possible values of a property
+     */
+    private Enablement microphone;
+    /**
+     * Possible values of a property
+     */
+    private Enablement microphonesAndSpeakers;
+    /**
+     * Possible values of a property
+     */
+    private Enablement nearFieldCommunication;
+    /**
+     * Possible values of a property
+     */
+    private Enablement radios;
+    /**
+     * Possible values of a property
+     */
+    private Enablement rearCamera;
+    /**
+     * Possible values of a property
+     */
+    private Enablement sdCard;
+    /**
+     * Possible values of a property
+     */
+    private Enablement simultaneousMultiThreading;
+    /**
+     * Possible values of a property
+     */
+    private Enablement usbTypeAPort;
+    /**
+     * Possible values of a property
+     */
+    private Enablement virtualizationOfCpuAndIO;
+    /**
+     * Possible values of a property
+     */
+    private Enablement wakeOnLAN;
+    /**
+     * Possible values of a property
+     */
+    private Enablement wakeOnPower;
+    /**
+     * Possible values of a property
+     */
+    private Enablement wiFi;
+    /**
+     * Possible values of a property
+     */
+    private Enablement windowsPlatformBinaryTable;
+    /**
+     * Possible values of a property
+     */
+    private Enablement wirelessWideAreaNetwork;
+    /**
+     * Instantiates a new windows10DeviceFirmwareConfigurationInterface and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10DeviceFirmwareConfigurationInterface() {
         super();
         this.setOdataType("#microsoft.graph.windows10DeviceFirmwareConfigurationInterface");
@@ -61,7 +106,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10DeviceFirmwareConfigurationInterface
+     * @return a windows10DeviceFirmwareConfigurationInterface
      */
     @javax.annotation.Nonnull
     public static Windows10DeviceFirmwareConfigurationInterface createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +119,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getBluetooth() {
-        return this._bluetooth;
+        return this.bluetooth;
     }
     /**
      * Gets the bootFromBuiltInNetworkAdapters property value. Possible values of a property
@@ -82,7 +127,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getBootFromBuiltInNetworkAdapters() {
-        return this._bootFromBuiltInNetworkAdapters;
+        return this.bootFromBuiltInNetworkAdapters;
     }
     /**
      * Gets the bootFromExternalMedia property value. Possible values of a property
@@ -90,7 +135,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getBootFromExternalMedia() {
-        return this._bootFromExternalMedia;
+        return this.bootFromExternalMedia;
     }
     /**
      * Gets the cameras property value. Possible values of a property
@@ -98,7 +143,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getCameras() {
-        return this._cameras;
+        return this.cameras;
     }
     /**
      * Gets the changeUefiSettingsPermission property value. Defines the permission level granted to users to enable them change Uefi settings
@@ -106,38 +151,37 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public ChangeUefiSettingsPermission getChangeUefiSettingsPermission() {
-        return this._changeUefiSettingsPermission;
+        return this.changeUefiSettingsPermission;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10DeviceFirmwareConfigurationInterface currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("bluetooth", (n) -> { currentObject.setBluetooth(n.getEnumValue(Enablement.class)); });
-            this.put("bootFromBuiltInNetworkAdapters", (n) -> { currentObject.setBootFromBuiltInNetworkAdapters(n.getEnumValue(Enablement.class)); });
-            this.put("bootFromExternalMedia", (n) -> { currentObject.setBootFromExternalMedia(n.getEnumValue(Enablement.class)); });
-            this.put("cameras", (n) -> { currentObject.setCameras(n.getEnumValue(Enablement.class)); });
-            this.put("changeUefiSettingsPermission", (n) -> { currentObject.setChangeUefiSettingsPermission(n.getEnumValue(ChangeUefiSettingsPermission.class)); });
-            this.put("frontCamera", (n) -> { currentObject.setFrontCamera(n.getEnumValue(Enablement.class)); });
-            this.put("infraredCamera", (n) -> { currentObject.setInfraredCamera(n.getEnumValue(Enablement.class)); });
-            this.put("microphone", (n) -> { currentObject.setMicrophone(n.getEnumValue(Enablement.class)); });
-            this.put("microphonesAndSpeakers", (n) -> { currentObject.setMicrophonesAndSpeakers(n.getEnumValue(Enablement.class)); });
-            this.put("nearFieldCommunication", (n) -> { currentObject.setNearFieldCommunication(n.getEnumValue(Enablement.class)); });
-            this.put("radios", (n) -> { currentObject.setRadios(n.getEnumValue(Enablement.class)); });
-            this.put("rearCamera", (n) -> { currentObject.setRearCamera(n.getEnumValue(Enablement.class)); });
-            this.put("sdCard", (n) -> { currentObject.setSdCard(n.getEnumValue(Enablement.class)); });
-            this.put("simultaneousMultiThreading", (n) -> { currentObject.setSimultaneousMultiThreading(n.getEnumValue(Enablement.class)); });
-            this.put("usbTypeAPort", (n) -> { currentObject.setUsbTypeAPort(n.getEnumValue(Enablement.class)); });
-            this.put("virtualizationOfCpuAndIO", (n) -> { currentObject.setVirtualizationOfCpuAndIO(n.getEnumValue(Enablement.class)); });
-            this.put("wakeOnLAN", (n) -> { currentObject.setWakeOnLAN(n.getEnumValue(Enablement.class)); });
-            this.put("wakeOnPower", (n) -> { currentObject.setWakeOnPower(n.getEnumValue(Enablement.class)); });
-            this.put("wiFi", (n) -> { currentObject.setWiFi(n.getEnumValue(Enablement.class)); });
-            this.put("windowsPlatformBinaryTable", (n) -> { currentObject.setWindowsPlatformBinaryTable(n.getEnumValue(Enablement.class)); });
-            this.put("wirelessWideAreaNetwork", (n) -> { currentObject.setWirelessWideAreaNetwork(n.getEnumValue(Enablement.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bluetooth", (n) -> { this.setBluetooth(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("bootFromBuiltInNetworkAdapters", (n) -> { this.setBootFromBuiltInNetworkAdapters(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("bootFromExternalMedia", (n) -> { this.setBootFromExternalMedia(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("cameras", (n) -> { this.setCameras(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("changeUefiSettingsPermission", (n) -> { this.setChangeUefiSettingsPermission(n.getEnumValue(ChangeUefiSettingsPermission.class)); });
+        deserializerMap.put("frontCamera", (n) -> { this.setFrontCamera(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("infraredCamera", (n) -> { this.setInfraredCamera(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("microphone", (n) -> { this.setMicrophone(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("microphonesAndSpeakers", (n) -> { this.setMicrophonesAndSpeakers(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("nearFieldCommunication", (n) -> { this.setNearFieldCommunication(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("radios", (n) -> { this.setRadios(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("rearCamera", (n) -> { this.setRearCamera(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("sdCard", (n) -> { this.setSdCard(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("simultaneousMultiThreading", (n) -> { this.setSimultaneousMultiThreading(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("usbTypeAPort", (n) -> { this.setUsbTypeAPort(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("virtualizationOfCpuAndIO", (n) -> { this.setVirtualizationOfCpuAndIO(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("wakeOnLAN", (n) -> { this.setWakeOnLAN(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("wakeOnPower", (n) -> { this.setWakeOnPower(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("wiFi", (n) -> { this.setWiFi(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("windowsPlatformBinaryTable", (n) -> { this.setWindowsPlatformBinaryTable(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("wirelessWideAreaNetwork", (n) -> { this.setWirelessWideAreaNetwork(n.getEnumValue(Enablement.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the frontCamera property value. Possible values of a property
@@ -145,7 +189,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getFrontCamera() {
-        return this._frontCamera;
+        return this.frontCamera;
     }
     /**
      * Gets the infraredCamera property value. Possible values of a property
@@ -153,7 +197,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getInfraredCamera() {
-        return this._infraredCamera;
+        return this.infraredCamera;
     }
     /**
      * Gets the microphone property value. Possible values of a property
@@ -161,7 +205,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getMicrophone() {
-        return this._microphone;
+        return this.microphone;
     }
     /**
      * Gets the microphonesAndSpeakers property value. Possible values of a property
@@ -169,7 +213,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getMicrophonesAndSpeakers() {
-        return this._microphonesAndSpeakers;
+        return this.microphonesAndSpeakers;
     }
     /**
      * Gets the nearFieldCommunication property value. Possible values of a property
@@ -177,7 +221,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getNearFieldCommunication() {
-        return this._nearFieldCommunication;
+        return this.nearFieldCommunication;
     }
     /**
      * Gets the radios property value. Possible values of a property
@@ -185,7 +229,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getRadios() {
-        return this._radios;
+        return this.radios;
     }
     /**
      * Gets the rearCamera property value. Possible values of a property
@@ -193,7 +237,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getRearCamera() {
-        return this._rearCamera;
+        return this.rearCamera;
     }
     /**
      * Gets the sdCard property value. Possible values of a property
@@ -201,7 +245,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getSdCard() {
-        return this._sdCard;
+        return this.sdCard;
     }
     /**
      * Gets the simultaneousMultiThreading property value. Possible values of a property
@@ -209,7 +253,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getSimultaneousMultiThreading() {
-        return this._simultaneousMultiThreading;
+        return this.simultaneousMultiThreading;
     }
     /**
      * Gets the usbTypeAPort property value. Possible values of a property
@@ -217,7 +261,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getUsbTypeAPort() {
-        return this._usbTypeAPort;
+        return this.usbTypeAPort;
     }
     /**
      * Gets the virtualizationOfCpuAndIO property value. Possible values of a property
@@ -225,7 +269,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getVirtualizationOfCpuAndIO() {
-        return this._virtualizationOfCpuAndIO;
+        return this.virtualizationOfCpuAndIO;
     }
     /**
      * Gets the wakeOnLAN property value. Possible values of a property
@@ -233,7 +277,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getWakeOnLAN() {
-        return this._wakeOnLAN;
+        return this.wakeOnLAN;
     }
     /**
      * Gets the wakeOnPower property value. Possible values of a property
@@ -241,7 +285,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getWakeOnPower() {
-        return this._wakeOnPower;
+        return this.wakeOnPower;
     }
     /**
      * Gets the wiFi property value. Possible values of a property
@@ -249,7 +293,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getWiFi() {
-        return this._wiFi;
+        return this.wiFi;
     }
     /**
      * Gets the windowsPlatformBinaryTable property value. Possible values of a property
@@ -257,7 +301,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getWindowsPlatformBinaryTable() {
-        return this._windowsPlatformBinaryTable;
+        return this.windowsPlatformBinaryTable;
     }
     /**
      * Gets the wirelessWideAreaNetwork property value. Possible values of a property
@@ -265,13 +309,14 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      */
     @javax.annotation.Nullable
     public Enablement getWirelessWideAreaNetwork() {
-        return this._wirelessWideAreaNetwork;
+        return this.wirelessWideAreaNetwork;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -302,167 +347,188 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the bluetooth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetooth(@javax.annotation.Nullable final Enablement value) {
-        this._bluetooth = value;
+        this.bluetooth = value;
     }
     /**
      * Sets the bootFromBuiltInNetworkAdapters property value. Possible values of a property
      * @param value Value to set for the bootFromBuiltInNetworkAdapters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBootFromBuiltInNetworkAdapters(@javax.annotation.Nullable final Enablement value) {
-        this._bootFromBuiltInNetworkAdapters = value;
+        this.bootFromBuiltInNetworkAdapters = value;
     }
     /**
      * Sets the bootFromExternalMedia property value. Possible values of a property
      * @param value Value to set for the bootFromExternalMedia property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBootFromExternalMedia(@javax.annotation.Nullable final Enablement value) {
-        this._bootFromExternalMedia = value;
+        this.bootFromExternalMedia = value;
     }
     /**
      * Sets the cameras property value. Possible values of a property
      * @param value Value to set for the cameras property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameras(@javax.annotation.Nullable final Enablement value) {
-        this._cameras = value;
+        this.cameras = value;
     }
     /**
      * Sets the changeUefiSettingsPermission property value. Defines the permission level granted to users to enable them change Uefi settings
      * @param value Value to set for the changeUefiSettingsPermission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeUefiSettingsPermission(@javax.annotation.Nullable final ChangeUefiSettingsPermission value) {
-        this._changeUefiSettingsPermission = value;
+        this.changeUefiSettingsPermission = value;
     }
     /**
      * Sets the frontCamera property value. Possible values of a property
      * @param value Value to set for the frontCamera property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrontCamera(@javax.annotation.Nullable final Enablement value) {
-        this._frontCamera = value;
+        this.frontCamera = value;
     }
     /**
      * Sets the infraredCamera property value. Possible values of a property
      * @param value Value to set for the infraredCamera property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfraredCamera(@javax.annotation.Nullable final Enablement value) {
-        this._infraredCamera = value;
+        this.infraredCamera = value;
     }
     /**
      * Sets the microphone property value. Possible values of a property
      * @param value Value to set for the microphone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrophone(@javax.annotation.Nullable final Enablement value) {
-        this._microphone = value;
+        this.microphone = value;
     }
     /**
      * Sets the microphonesAndSpeakers property value. Possible values of a property
      * @param value Value to set for the microphonesAndSpeakers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrophonesAndSpeakers(@javax.annotation.Nullable final Enablement value) {
-        this._microphonesAndSpeakers = value;
+        this.microphonesAndSpeakers = value;
     }
     /**
      * Sets the nearFieldCommunication property value. Possible values of a property
      * @param value Value to set for the nearFieldCommunication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNearFieldCommunication(@javax.annotation.Nullable final Enablement value) {
-        this._nearFieldCommunication = value;
+        this.nearFieldCommunication = value;
     }
     /**
      * Sets the radios property value. Possible values of a property
      * @param value Value to set for the radios property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRadios(@javax.annotation.Nullable final Enablement value) {
-        this._radios = value;
+        this.radios = value;
     }
     /**
      * Sets the rearCamera property value. Possible values of a property
      * @param value Value to set for the rearCamera property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRearCamera(@javax.annotation.Nullable final Enablement value) {
-        this._rearCamera = value;
+        this.rearCamera = value;
     }
     /**
      * Sets the sdCard property value. Possible values of a property
      * @param value Value to set for the sdCard property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSdCard(@javax.annotation.Nullable final Enablement value) {
-        this._sdCard = value;
+        this.sdCard = value;
     }
     /**
      * Sets the simultaneousMultiThreading property value. Possible values of a property
      * @param value Value to set for the simultaneousMultiThreading property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimultaneousMultiThreading(@javax.annotation.Nullable final Enablement value) {
-        this._simultaneousMultiThreading = value;
+        this.simultaneousMultiThreading = value;
     }
     /**
      * Sets the usbTypeAPort property value. Possible values of a property
      * @param value Value to set for the usbTypeAPort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsbTypeAPort(@javax.annotation.Nullable final Enablement value) {
-        this._usbTypeAPort = value;
+        this.usbTypeAPort = value;
     }
     /**
      * Sets the virtualizationOfCpuAndIO property value. Possible values of a property
      * @param value Value to set for the virtualizationOfCpuAndIO property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVirtualizationOfCpuAndIO(@javax.annotation.Nullable final Enablement value) {
-        this._virtualizationOfCpuAndIO = value;
+        this.virtualizationOfCpuAndIO = value;
     }
     /**
      * Sets the wakeOnLAN property value. Possible values of a property
      * @param value Value to set for the wakeOnLAN property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWakeOnLAN(@javax.annotation.Nullable final Enablement value) {
-        this._wakeOnLAN = value;
+        this.wakeOnLAN = value;
     }
     /**
      * Sets the wakeOnPower property value. Possible values of a property
      * @param value Value to set for the wakeOnPower property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWakeOnPower(@javax.annotation.Nullable final Enablement value) {
-        this._wakeOnPower = value;
+        this.wakeOnPower = value;
     }
     /**
      * Sets the wiFi property value. Possible values of a property
      * @param value Value to set for the wiFi property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFi(@javax.annotation.Nullable final Enablement value) {
-        this._wiFi = value;
+        this.wiFi = value;
     }
     /**
      * Sets the windowsPlatformBinaryTable property value. Possible values of a property
      * @param value Value to set for the windowsPlatformBinaryTable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsPlatformBinaryTable(@javax.annotation.Nullable final Enablement value) {
-        this._windowsPlatformBinaryTable = value;
+        this.windowsPlatformBinaryTable = value;
     }
     /**
      * Sets the wirelessWideAreaNetwork property value. Possible values of a property
      * @param value Value to set for the wirelessWideAreaNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWirelessWideAreaNetwork(@javax.annotation.Nullable final Enablement value) {
-        this._wirelessWideAreaNetwork = value;
+        this.wirelessWideAreaNetwork = value;
     }
 }

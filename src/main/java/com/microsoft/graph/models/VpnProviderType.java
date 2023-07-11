@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Provider type for per-app VPN.
+ */
 public enum VpnProviderType implements ValuedEnum {
     /** Tunnel traffic is not explicitly configured. */
     NotConfigured("notConfigured"),

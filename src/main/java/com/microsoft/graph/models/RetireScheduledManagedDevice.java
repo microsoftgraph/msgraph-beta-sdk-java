@@ -5,45 +5,72 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** ManagedDevices that are scheduled for retire */
+/**
+ * ManagedDevices that are scheduled for retire
+ */
 public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The complianceState property */
-    private ComplianceStatus _complianceState;
-    /** Device Compliance PolicyId */
-    private String _deviceCompliancePolicyId;
-    /** Device Compliance Policy Name */
-    private String _deviceCompliancePolicyName;
-    /** Device type. */
-    private DeviceType _deviceType;
-    /** Key of the entity. */
-    private String _id;
-    /** Managed DeviceId */
-    private String _managedDeviceId;
-    /** Managed Device Name */
-    private String _managedDeviceName;
-    /** Management agent type. */
-    private ManagementAgentType _managementAgent;
-    /** The OdataType property */
-    private String _odataType;
-    /** Owner type of device. */
-    private ManagedDeviceOwnerType _ownerType;
-    /** Managed Device Retire After DateTime */
-    private OffsetDateTime _retireAfterDateTime;
-    /** List of Scope Tags for this Entity instance. */
-    private java.util.List<String> _roleScopeTagIds;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The complianceState property
+     */
+    private ComplianceStatus complianceState;
+    /**
+     * Device Compliance PolicyId
+     */
+    private String deviceCompliancePolicyId;
+    /**
+     * Device Compliance Policy Name
+     */
+    private String deviceCompliancePolicyName;
+    /**
+     * Device type.
+     */
+    private DeviceType deviceType;
+    /**
+     * Key of the entity.
+     */
+    private String id;
+    /**
+     * Managed DeviceId
+     */
+    private String managedDeviceId;
+    /**
+     * Managed Device Name
+     */
+    private String managedDeviceName;
+    /**
+     * Management agent type.
+     */
+    private ManagementAgentType managementAgent;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Owner type of device.
+     */
+    private ManagedDeviceOwnerType ownerType;
+    /**
+     * Managed Device Retire After DateTime
+     */
+    private OffsetDateTime retireAfterDateTime;
+    /**
+     * List of Scope Tags for this Entity instance.
+     */
+    private java.util.List<String> roleScopeTagIds;
     /**
      * Instantiates a new retireScheduledManagedDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RetireScheduledManagedDevice() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.retireScheduledManagedDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +88,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the complianceState property value. The complianceState property
@@ -69,7 +96,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public ComplianceStatus getComplianceState() {
-        return this._complianceState;
+        return this.complianceState;
     }
     /**
      * Gets the deviceCompliancePolicyId property value. Device Compliance PolicyId
@@ -77,7 +104,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getDeviceCompliancePolicyId() {
-        return this._deviceCompliancePolicyId;
+        return this.deviceCompliancePolicyId;
     }
     /**
      * Gets the deviceCompliancePolicyName property value. Device Compliance Policy Name
@@ -85,7 +112,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getDeviceCompliancePolicyName() {
-        return this._deviceCompliancePolicyName;
+        return this.deviceCompliancePolicyName;
     }
     /**
      * Gets the deviceType property value. Device type.
@@ -93,29 +120,28 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public DeviceType getDeviceType() {
-        return this._deviceType;
+        return this.deviceType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RetireScheduledManagedDevice currentObject = this;
-        return new HashMap<>(12) {{
-            this.put("complianceState", (n) -> { currentObject.setComplianceState(n.getEnumValue(ComplianceStatus.class)); });
-            this.put("deviceCompliancePolicyId", (n) -> { currentObject.setDeviceCompliancePolicyId(n.getStringValue()); });
-            this.put("deviceCompliancePolicyName", (n) -> { currentObject.setDeviceCompliancePolicyName(n.getStringValue()); });
-            this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getEnumValue(DeviceType.class)); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("managedDeviceName", (n) -> { currentObject.setManagedDeviceName(n.getStringValue()); });
-            this.put("managementAgent", (n) -> { currentObject.setManagementAgent(n.getEnumValue(ManagementAgentType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("ownerType", (n) -> { currentObject.setOwnerType(n.getEnumValue(ManagedDeviceOwnerType.class)); });
-            this.put("retireAfterDateTime", (n) -> { currentObject.setRetireAfterDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        deserializerMap.put("complianceState", (n) -> { this.setComplianceState(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("deviceCompliancePolicyId", (n) -> { this.setDeviceCompliancePolicyId(n.getStringValue()); });
+        deserializerMap.put("deviceCompliancePolicyName", (n) -> { this.setDeviceCompliancePolicyName(n.getStringValue()); });
+        deserializerMap.put("deviceType", (n) -> { this.setDeviceType(n.getEnumValue(DeviceType.class)); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("managedDeviceName", (n) -> { this.setManagedDeviceName(n.getStringValue()); });
+        deserializerMap.put("managementAgent", (n) -> { this.setManagementAgent(n.getEnumValue(ManagementAgentType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("ownerType", (n) -> { this.setOwnerType(n.getEnumValue(ManagedDeviceOwnerType.class)); });
+        deserializerMap.put("retireAfterDateTime", (n) -> { this.setRetireAfterDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. Key of the entity.
@@ -123,7 +149,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the managedDeviceId property value. Managed DeviceId
@@ -131,7 +157,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getManagedDeviceId() {
-        return this._managedDeviceId;
+        return this.managedDeviceId;
     }
     /**
      * Gets the managedDeviceName property value. Managed Device Name
@@ -139,7 +165,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getManagedDeviceName() {
-        return this._managedDeviceName;
+        return this.managedDeviceName;
     }
     /**
      * Gets the managementAgent property value. Management agent type.
@@ -147,7 +173,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public ManagementAgentType getManagementAgent() {
-        return this._managementAgent;
+        return this.managementAgent;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -155,7 +181,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the ownerType property value. Owner type of device.
@@ -163,7 +189,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public ManagedDeviceOwnerType getOwnerType() {
-        return this._ownerType;
+        return this.ownerType;
     }
     /**
      * Gets the retireAfterDateTime property value. Managed Device Retire After DateTime
@@ -171,7 +197,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRetireAfterDateTime() {
-        return this._retireAfterDateTime;
+        return this.retireAfterDateTime;
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
@@ -179,13 +205,14 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this._roleScopeTagIds;
+        return this.roleScopeTagIds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("complianceState", this.getComplianceState());
@@ -207,103 +234,116 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the complianceState property value. The complianceState property
      * @param value Value to set for the complianceState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceState(@javax.annotation.Nullable final ComplianceStatus value) {
-        this._complianceState = value;
+        this.complianceState = value;
     }
     /**
      * Sets the deviceCompliancePolicyId property value. Device Compliance PolicyId
      * @param value Value to set for the deviceCompliancePolicyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicyId(@javax.annotation.Nullable final String value) {
-        this._deviceCompliancePolicyId = value;
+        this.deviceCompliancePolicyId = value;
     }
     /**
      * Sets the deviceCompliancePolicyName property value. Device Compliance Policy Name
      * @param value Value to set for the deviceCompliancePolicyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicyName(@javax.annotation.Nullable final String value) {
-        this._deviceCompliancePolicyName = value;
+        this.deviceCompliancePolicyName = value;
     }
     /**
      * Sets the deviceType property value. Device type.
      * @param value Value to set for the deviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceType(@javax.annotation.Nullable final DeviceType value) {
-        this._deviceType = value;
+        this.deviceType = value;
     }
     /**
      * Sets the id property value. Key of the entity.
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the managedDeviceId property value. Managed DeviceId
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
-        this._managedDeviceId = value;
+        this.managedDeviceId = value;
     }
     /**
      * Sets the managedDeviceName property value. Managed Device Name
      * @param value Value to set for the managedDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceName(@javax.annotation.Nullable final String value) {
-        this._managedDeviceName = value;
+        this.managedDeviceName = value;
     }
     /**
      * Sets the managementAgent property value. Management agent type.
      * @param value Value to set for the managementAgent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementAgent(@javax.annotation.Nullable final ManagementAgentType value) {
-        this._managementAgent = value;
+        this.managementAgent = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the ownerType property value. Owner type of device.
      * @param value Value to set for the ownerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerType(@javax.annotation.Nullable final ManagedDeviceOwnerType value) {
-        this._ownerType = value;
+        this.ownerType = value;
     }
     /**
      * Sets the retireAfterDateTime property value. Managed Device Retire After DateTime
      * @param value Value to set for the retireAfterDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRetireAfterDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._retireAfterDateTime = value;
+        this.retireAfterDateTime = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roleScopeTagIds = value;
+        this.roleScopeTagIds = value;
     }
 }

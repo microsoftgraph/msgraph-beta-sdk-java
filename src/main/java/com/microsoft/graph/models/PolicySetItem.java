@@ -1,51 +1,55 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DeviceCompliancePolicyPolicySetItem;
-import com.microsoft.graph.models.DeviceConfigurationPolicySetItem;
-import com.microsoft.graph.models.DeviceManagementConfigurationPolicyPolicySetItem;
-import com.microsoft.graph.models.DeviceManagementScriptPolicySetItem;
-import com.microsoft.graph.models.EnrollmentRestrictionsConfigurationPolicySetItem;
-import com.microsoft.graph.models.IosLobAppProvisioningConfigurationPolicySetItem;
-import com.microsoft.graph.models.ManagedAppProtectionPolicySetItem;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationPolicySetItem;
-import com.microsoft.graph.models.MdmWindowsInformationProtectionPolicyPolicySetItem;
-import com.microsoft.graph.models.MobileAppPolicySetItem;
-import com.microsoft.graph.models.TargetedManagedAppConfigurationPolicySetItem;
-import com.microsoft.graph.models.Windows10EnrollmentCompletionPageConfigurationPolicySetItem;
-import com.microsoft.graph.models.WindowsAutopilotDeploymentProfilePolicySetItem;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A class containing the properties used for PolicySet Item. */
+/**
+ * A class containing the properties used for PolicySet Item.
+ */
 public class PolicySetItem extends Entity implements Parsable {
-    /** Creation time of the PolicySetItem. */
-    private OffsetDateTime _createdDateTime;
-    /** DisplayName of the PolicySetItem. */
-    private String _displayName;
-    /** The errorCode property */
-    private ErrorCode _errorCode;
-    /** Tags of the guided deployment */
-    private java.util.List<String> _guidedDeploymentTags;
-    /** policySetType of the PolicySetItem. */
-    private String _itemType;
-    /** Last modified time of the PolicySetItem. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** PayloadId of the PolicySetItem. */
-    private String _payloadId;
-    /** The enum to specify the status of PolicySet. */
-    private PolicySetStatus _status;
+    /**
+     * Creation time of the PolicySetItem.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * DisplayName of the PolicySetItem.
+     */
+    private String displayName;
+    /**
+     * The errorCode property
+     */
+    private ErrorCode errorCode;
+    /**
+     * Tags of the guided deployment
+     */
+    private java.util.List<String> guidedDeploymentTags;
+    /**
+     * policySetType of the PolicySetItem.
+     */
+    private String itemType;
+    /**
+     * Last modified time of the PolicySetItem.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * PayloadId of the PolicySetItem.
+     */
+    private String payloadId;
+    /**
+     * The enum to specify the status of PolicySet.
+     */
+    private PolicySetStatus status;
     /**
      * Instantiates a new policySetItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PolicySetItem() {
         super();
-        this.setOdataType("#microsoft.graph.policySetItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -82,7 +86,7 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the displayName property value. DisplayName of the PolicySetItem.
@@ -90,7 +94,7 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the errorCode property value. The errorCode property
@@ -98,25 +102,24 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ErrorCode getErrorCode() {
-        return this._errorCode;
+        return this.errorCode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PolicySetItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getEnumValue(ErrorCode.class)); });
-            this.put("guidedDeploymentTags", (n) -> { currentObject.setGuidedDeploymentTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("itemType", (n) -> { currentObject.setItemType(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(PolicySetStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getEnumValue(ErrorCode.class)); });
+        deserializerMap.put("guidedDeploymentTags", (n) -> { this.setGuidedDeploymentTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("itemType", (n) -> { this.setItemType(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("payloadId", (n) -> { this.setPayloadId(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(PolicySetStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the guidedDeploymentTags property value. Tags of the guided deployment
@@ -124,7 +127,7 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getGuidedDeploymentTags() {
-        return this._guidedDeploymentTags;
+        return this.guidedDeploymentTags;
     }
     /**
      * Gets the itemType property value. policySetType of the PolicySetItem.
@@ -132,7 +135,7 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getItemType() {
-        return this._itemType;
+        return this.itemType;
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified time of the PolicySetItem.
@@ -140,7 +143,7 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the payloadId property value. PayloadId of the PolicySetItem.
@@ -148,7 +151,7 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPayloadId() {
-        return this._payloadId;
+        return this.payloadId;
     }
     /**
      * Gets the status property value. The enum to specify the status of PolicySet.
@@ -156,13 +159,14 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PolicySetStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -180,63 +184,71 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. DisplayName of the PolicySetItem.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the errorCode property value. The errorCode property
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final ErrorCode value) {
-        this._errorCode = value;
+        this.errorCode = value;
     }
     /**
      * Sets the guidedDeploymentTags property value. Tags of the guided deployment
      * @param value Value to set for the guidedDeploymentTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGuidedDeploymentTags(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._guidedDeploymentTags = value;
+        this.guidedDeploymentTags = value;
     }
     /**
      * Sets the itemType property value. policySetType of the PolicySetItem.
      * @param value Value to set for the itemType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemType(@javax.annotation.Nullable final String value) {
-        this._itemType = value;
+        this.itemType = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified time of the PolicySetItem.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the payloadId property value. PayloadId of the PolicySetItem.
      * @param value Value to set for the payloadId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadId(@javax.annotation.Nullable final String value) {
-        this._payloadId = value;
+        this.payloadId = value;
     }
     /**
      * Sets the status property value. The enum to specify the status of PolicySet.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final PolicySetStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

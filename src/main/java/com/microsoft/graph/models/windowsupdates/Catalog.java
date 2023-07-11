@@ -4,20 +4,21 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Catalog extends Entity implements Parsable {
-    /** Lists the content that you can approve for deployment. Read-only. */
-    private java.util.List<CatalogEntry> _entries;
+    /**
+     * Lists the content that you can approve for deployment. Read-only.
+     */
+    private java.util.List<CatalogEntry> entries;
     /**
      * Instantiates a new catalog and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Catalog() {
         super();
-        this.setOdataType("#microsoft.graph.windowsUpdates.catalog");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,24 +36,24 @@ public class Catalog extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CatalogEntry> getEntries() {
-        return this._entries;
+        return this.entries;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Catalog currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("entries", (n) -> { currentObject.setEntries(n.getCollectionOfObjectValues(CatalogEntry::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("entries", (n) -> { this.setEntries(n.getCollectionOfObjectValues(CatalogEntry::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,7 +64,8 @@ public class Catalog extends Entity implements Parsable {
      * @param value Value to set for the entries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEntries(@javax.annotation.Nullable final java.util.List<CatalogEntry> value) {
-        this._entries = value;
+        this.entries = value;
     }
 }

@@ -4,28 +4,37 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Parameter implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The name property */
-    private String _name;
-    /** The OdataType property */
-    private String _odataType;
-    /** The values property */
-    private java.util.List<String> _values;
-    /** The valueType property */
-    private ValueType _valueType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The name of the parameter.
+     */
+    private String name;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The values of the parameter.
+     */
+    private java.util.List<String> values;
+    /**
+     * The valueType property
+     */
+    private ValueType valueType;
     /**
      * Instantiates a new parameter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Parameter() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identityGovernance.parameter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,29 +52,28 @@ public class Parameter implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Parameter currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("valueType", (n) -> { currentObject.setValueType(n.getEnumValue(ValueType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(ValueType.class)); });
+        return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the parameter.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -73,15 +81,15 @@ public class Parameter implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the values property value. The values property
+     * Gets the values property value. The values of the parameter.
      * @return a string
      */
     @javax.annotation.Nullable
     public java.util.List<String> getValues() {
-        return this._values;
+        return this.values;
     }
     /**
      * Gets the valueType property value. The valueType property
@@ -89,13 +97,14 @@ public class Parameter implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ValueType getValueType() {
-        return this._valueType;
+        return this.valueType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
@@ -109,39 +118,44 @@ public class Parameter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the parameter.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the values property value. The values property
+     * Sets the values property value. The values of the parameter.
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._values = value;
+        this.values = value;
     }
     /**
      * Sets the valueType property value. The valueType property
      * @param value Value to set for the valueType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueType(@javax.annotation.Nullable final ValueType value) {
-        this._valueType = value;
+        this.valueType = value;
     }
 }

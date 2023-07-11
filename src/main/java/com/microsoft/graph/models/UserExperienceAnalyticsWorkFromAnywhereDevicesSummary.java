@@ -4,51 +4,84 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The user experience analytics Work From Anywhere metrics devices summary. */
+/**
+ * The user experience analytics Work From Anywhere metrics devices summary.
+ */
 public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The value of work from anywhere autopilot devices summary. */
-    private UserExperienceAnalyticsAutopilotDevicesSummary _autopilotDevicesSummary;
-    /** The user experience analytics work from anywhere Cloud Identity devices summary. */
-    private UserExperienceAnalyticsCloudIdentityDevicesSummary _cloudIdentityDevicesSummary;
-    /** The user experience work from anywhere Cloud management devices summary. */
-    private UserExperienceAnalyticsCloudManagementDevicesSummary _cloudManagementDevicesSummary;
-    /** Total number of co-managed devices. Valid values -2147483648 to 2147483647 */
-    private Integer _coManagedDevices;
-    /** The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647 */
-    private Integer _devicesNotAutopilotRegistered;
-    /** The count of intune devices not autopilot profile assigned. Valid values -2147483648 to 2147483647 */
-    private Integer _devicesWithoutAutopilotProfileAssigned;
-    /** The count of devices that are not cloud identity. Valid values -2147483648 to 2147483647 */
-    private Integer _devicesWithoutCloudIdentity;
-    /** The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647 */
-    private Integer _intuneDevices;
-    /** The OdataType property */
-    private String _odataType;
-    /** Total count of tenant attach devices. Valid values -2147483648 to 2147483647 */
-    private Integer _tenantAttachDevices;
-    /** The total count of devices. Valid values -2147483648 to 2147483647 */
-    private Integer _totalDevices;
-    /** The count of Windows 10 devices that have unsupported OS versions. Valid values -2147483648 to 2147483647 */
-    private Integer _unsupportedOSversionDevices;
-    /** The count of windows 10 devices. Valid values -2147483648 to 2147483647 */
-    private Integer _windows10Devices;
-    /** The user experience analytics work from anywhere Windows 10 devices summary. */
-    private UserExperienceAnalyticsWindows10DevicesSummary _windows10DevicesSummary;
-    /** The count of windows 10 devices that are Intune and Comanaged. Valid values -2147483648 to 2147483647 */
-    private Integer _windows10DevicesWithoutTenantAttach;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The user experience analytics work from anywhere Autopilot devices summary. Read-only.
+     */
+    private UserExperienceAnalyticsAutopilotDevicesSummary autopilotDevicesSummary;
+    /**
+     * The user experience analytics work from anywhere Cloud Identity devices summary. Read-only.
+     */
+    private UserExperienceAnalyticsCloudIdentityDevicesSummary cloudIdentityDevicesSummary;
+    /**
+     * The user experience analytics work from anywhere Cloud management devices summary. Read-only.
+     */
+    private UserExperienceAnalyticsCloudManagementDevicesSummary cloudManagementDevicesSummary;
+    /**
+     * Total number of co-managed devices. Read-only. Valid values -2147483648 to 2147483647
+     */
+    private Integer coManagedDevices;
+    /**
+     * The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
+     */
+    private Integer devicesNotAutopilotRegistered;
+    /**
+     * The count of intune devices not autopilot profile assigned. Read-only. Valid values -2147483648 to 2147483647
+     */
+    private Integer devicesWithoutAutopilotProfileAssigned;
+    /**
+     * The count of devices that are not cloud identity. Read-only. Valid values -2147483648 to 2147483647
+     */
+    private Integer devicesWithoutCloudIdentity;
+    /**
+     * The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
+     */
+    private Integer intuneDevices;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Total count of tenant attach devices. Read-only. Valid values -2147483648 to 2147483647
+     */
+    private Integer tenantAttachDevices;
+    /**
+     * The total count of devices. Read-only. Valid values -2147483648 to 2147483647
+     */
+    private Integer totalDevices;
+    /**
+     * The count of Windows 10 devices that have unsupported OS versions. Read-only. Valid values -2147483648 to 2147483647
+     */
+    private Integer unsupportedOSversionDevices;
+    /**
+     * The count of windows 10 devices. Read-only. Valid values -2147483648 to 2147483647
+     */
+    private Integer windows10Devices;
+    /**
+     * The user experience analytics work from anywhere Windows 10 devices summary. Read-only.
+     */
+    private UserExperienceAnalyticsWindows10DevicesSummary windows10DevicesSummary;
+    /**
+     * The count of windows 10 devices that are Intune and co-managed. Read-only. Valid values -2147483648 to 2147483647
+     */
+    private Integer windows10DevicesWithoutTenantAttach;
     /**
      * Instantiates a new userExperienceAnalyticsWorkFromAnywhereDevicesSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereDevicesSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,96 +99,95 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
-     * Gets the autopilotDevicesSummary property value. The value of work from anywhere autopilot devices summary.
+     * Gets the autopilotDevicesSummary property value. The user experience analytics work from anywhere Autopilot devices summary. Read-only.
      * @return a userExperienceAnalyticsAutopilotDevicesSummary
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsAutopilotDevicesSummary getAutopilotDevicesSummary() {
-        return this._autopilotDevicesSummary;
+        return this.autopilotDevicesSummary;
     }
     /**
-     * Gets the cloudIdentityDevicesSummary property value. The user experience analytics work from anywhere Cloud Identity devices summary.
+     * Gets the cloudIdentityDevicesSummary property value. The user experience analytics work from anywhere Cloud Identity devices summary. Read-only.
      * @return a userExperienceAnalyticsCloudIdentityDevicesSummary
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsCloudIdentityDevicesSummary getCloudIdentityDevicesSummary() {
-        return this._cloudIdentityDevicesSummary;
+        return this.cloudIdentityDevicesSummary;
     }
     /**
-     * Gets the cloudManagementDevicesSummary property value. The user experience work from anywhere Cloud management devices summary.
+     * Gets the cloudManagementDevicesSummary property value. The user experience analytics work from anywhere Cloud management devices summary. Read-only.
      * @return a userExperienceAnalyticsCloudManagementDevicesSummary
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsCloudManagementDevicesSummary getCloudManagementDevicesSummary() {
-        return this._cloudManagementDevicesSummary;
+        return this.cloudManagementDevicesSummary;
     }
     /**
-     * Gets the coManagedDevices property value. Total number of co-managed devices. Valid values -2147483648 to 2147483647
+     * Gets the coManagedDevices property value. Total number of co-managed devices. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getCoManagedDevices() {
-        return this._coManagedDevices;
+        return this.coManagedDevices;
     }
     /**
-     * Gets the devicesNotAutopilotRegistered property value. The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647
+     * Gets the devicesNotAutopilotRegistered property value. The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getDevicesNotAutopilotRegistered() {
-        return this._devicesNotAutopilotRegistered;
+        return this.devicesNotAutopilotRegistered;
     }
     /**
-     * Gets the devicesWithoutAutopilotProfileAssigned property value. The count of intune devices not autopilot profile assigned. Valid values -2147483648 to 2147483647
+     * Gets the devicesWithoutAutopilotProfileAssigned property value. The count of intune devices not autopilot profile assigned. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getDevicesWithoutAutopilotProfileAssigned() {
-        return this._devicesWithoutAutopilotProfileAssigned;
+        return this.devicesWithoutAutopilotProfileAssigned;
     }
     /**
-     * Gets the devicesWithoutCloudIdentity property value. The count of devices that are not cloud identity. Valid values -2147483648 to 2147483647
+     * Gets the devicesWithoutCloudIdentity property value. The count of devices that are not cloud identity. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getDevicesWithoutCloudIdentity() {
-        return this._devicesWithoutCloudIdentity;
+        return this.devicesWithoutCloudIdentity;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsWorkFromAnywhereDevicesSummary currentObject = this;
-        return new HashMap<>(15) {{
-            this.put("autopilotDevicesSummary", (n) -> { currentObject.setAutopilotDevicesSummary(n.getObjectValue(UserExperienceAnalyticsAutopilotDevicesSummary::createFromDiscriminatorValue)); });
-            this.put("cloudIdentityDevicesSummary", (n) -> { currentObject.setCloudIdentityDevicesSummary(n.getObjectValue(UserExperienceAnalyticsCloudIdentityDevicesSummary::createFromDiscriminatorValue)); });
-            this.put("cloudManagementDevicesSummary", (n) -> { currentObject.setCloudManagementDevicesSummary(n.getObjectValue(UserExperienceAnalyticsCloudManagementDevicesSummary::createFromDiscriminatorValue)); });
-            this.put("coManagedDevices", (n) -> { currentObject.setCoManagedDevices(n.getIntegerValue()); });
-            this.put("devicesNotAutopilotRegistered", (n) -> { currentObject.setDevicesNotAutopilotRegistered(n.getIntegerValue()); });
-            this.put("devicesWithoutAutopilotProfileAssigned", (n) -> { currentObject.setDevicesWithoutAutopilotProfileAssigned(n.getIntegerValue()); });
-            this.put("devicesWithoutCloudIdentity", (n) -> { currentObject.setDevicesWithoutCloudIdentity(n.getIntegerValue()); });
-            this.put("intuneDevices", (n) -> { currentObject.setIntuneDevices(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tenantAttachDevices", (n) -> { currentObject.setTenantAttachDevices(n.getIntegerValue()); });
-            this.put("totalDevices", (n) -> { currentObject.setTotalDevices(n.getIntegerValue()); });
-            this.put("unsupportedOSversionDevices", (n) -> { currentObject.setUnsupportedOSversionDevices(n.getIntegerValue()); });
-            this.put("windows10Devices", (n) -> { currentObject.setWindows10Devices(n.getIntegerValue()); });
-            this.put("windows10DevicesSummary", (n) -> { currentObject.setWindows10DevicesSummary(n.getObjectValue(UserExperienceAnalyticsWindows10DevicesSummary::createFromDiscriminatorValue)); });
-            this.put("windows10DevicesWithoutTenantAttach", (n) -> { currentObject.setWindows10DevicesWithoutTenantAttach(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
+        deserializerMap.put("autopilotDevicesSummary", (n) -> { this.setAutopilotDevicesSummary(n.getObjectValue(UserExperienceAnalyticsAutopilotDevicesSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudIdentityDevicesSummary", (n) -> { this.setCloudIdentityDevicesSummary(n.getObjectValue(UserExperienceAnalyticsCloudIdentityDevicesSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudManagementDevicesSummary", (n) -> { this.setCloudManagementDevicesSummary(n.getObjectValue(UserExperienceAnalyticsCloudManagementDevicesSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("coManagedDevices", (n) -> { this.setCoManagedDevices(n.getIntegerValue()); });
+        deserializerMap.put("devicesNotAutopilotRegistered", (n) -> { this.setDevicesNotAutopilotRegistered(n.getIntegerValue()); });
+        deserializerMap.put("devicesWithoutAutopilotProfileAssigned", (n) -> { this.setDevicesWithoutAutopilotProfileAssigned(n.getIntegerValue()); });
+        deserializerMap.put("devicesWithoutCloudIdentity", (n) -> { this.setDevicesWithoutCloudIdentity(n.getIntegerValue()); });
+        deserializerMap.put("intuneDevices", (n) -> { this.setIntuneDevices(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tenantAttachDevices", (n) -> { this.setTenantAttachDevices(n.getIntegerValue()); });
+        deserializerMap.put("totalDevices", (n) -> { this.setTotalDevices(n.getIntegerValue()); });
+        deserializerMap.put("unsupportedOSversionDevices", (n) -> { this.setUnsupportedOSversionDevices(n.getIntegerValue()); });
+        deserializerMap.put("windows10Devices", (n) -> { this.setWindows10Devices(n.getIntegerValue()); });
+        deserializerMap.put("windows10DevicesSummary", (n) -> { this.setWindows10DevicesSummary(n.getObjectValue(UserExperienceAnalyticsWindows10DevicesSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("windows10DevicesWithoutTenantAttach", (n) -> { this.setWindows10DevicesWithoutTenantAttach(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the intuneDevices property value. The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647
+     * Gets the intuneDevices property value. The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getIntuneDevices() {
-        return this._intuneDevices;
+        return this.intuneDevices;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -163,61 +195,62 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the tenantAttachDevices property value. Total count of tenant attach devices. Valid values -2147483648 to 2147483647
+     * Gets the tenantAttachDevices property value. Total count of tenant attach devices. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getTenantAttachDevices() {
-        return this._tenantAttachDevices;
+        return this.tenantAttachDevices;
     }
     /**
-     * Gets the totalDevices property value. The total count of devices. Valid values -2147483648 to 2147483647
+     * Gets the totalDevices property value. The total count of devices. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getTotalDevices() {
-        return this._totalDevices;
+        return this.totalDevices;
     }
     /**
-     * Gets the unsupportedOSversionDevices property value. The count of Windows 10 devices that have unsupported OS versions. Valid values -2147483648 to 2147483647
+     * Gets the unsupportedOSversionDevices property value. The count of Windows 10 devices that have unsupported OS versions. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getUnsupportedOSversionDevices() {
-        return this._unsupportedOSversionDevices;
+        return this.unsupportedOSversionDevices;
     }
     /**
-     * Gets the windows10Devices property value. The count of windows 10 devices. Valid values -2147483648 to 2147483647
+     * Gets the windows10Devices property value. The count of windows 10 devices. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getWindows10Devices() {
-        return this._windows10Devices;
+        return this.windows10Devices;
     }
     /**
-     * Gets the windows10DevicesSummary property value. The user experience analytics work from anywhere Windows 10 devices summary.
+     * Gets the windows10DevicesSummary property value. The user experience analytics work from anywhere Windows 10 devices summary. Read-only.
      * @return a userExperienceAnalyticsWindows10DevicesSummary
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsWindows10DevicesSummary getWindows10DevicesSummary() {
-        return this._windows10DevicesSummary;
+        return this.windows10DevicesSummary;
     }
     /**
-     * Gets the windows10DevicesWithoutTenantAttach property value. The count of windows 10 devices that are Intune and Comanaged. Valid values -2147483648 to 2147483647
+     * Gets the windows10DevicesWithoutTenantAttach property value. The count of windows 10 devices that are Intune and co-managed. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getWindows10DevicesWithoutTenantAttach() {
-        return this._windows10DevicesWithoutTenantAttach;
+        return this.windows10DevicesWithoutTenantAttach;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("autopilotDevicesSummary", this.getAutopilotDevicesSummary());
@@ -242,127 +275,143 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
-     * Sets the autopilotDevicesSummary property value. The value of work from anywhere autopilot devices summary.
+     * Sets the autopilotDevicesSummary property value. The user experience analytics work from anywhere Autopilot devices summary. Read-only.
      * @param value Value to set for the autopilotDevicesSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutopilotDevicesSummary(@javax.annotation.Nullable final UserExperienceAnalyticsAutopilotDevicesSummary value) {
-        this._autopilotDevicesSummary = value;
+        this.autopilotDevicesSummary = value;
     }
     /**
-     * Sets the cloudIdentityDevicesSummary property value. The user experience analytics work from anywhere Cloud Identity devices summary.
+     * Sets the cloudIdentityDevicesSummary property value. The user experience analytics work from anywhere Cloud Identity devices summary. Read-only.
      * @param value Value to set for the cloudIdentityDevicesSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudIdentityDevicesSummary(@javax.annotation.Nullable final UserExperienceAnalyticsCloudIdentityDevicesSummary value) {
-        this._cloudIdentityDevicesSummary = value;
+        this.cloudIdentityDevicesSummary = value;
     }
     /**
-     * Sets the cloudManagementDevicesSummary property value. The user experience work from anywhere Cloud management devices summary.
+     * Sets the cloudManagementDevicesSummary property value. The user experience analytics work from anywhere Cloud management devices summary. Read-only.
      * @param value Value to set for the cloudManagementDevicesSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudManagementDevicesSummary(@javax.annotation.Nullable final UserExperienceAnalyticsCloudManagementDevicesSummary value) {
-        this._cloudManagementDevicesSummary = value;
+        this.cloudManagementDevicesSummary = value;
     }
     /**
-     * Sets the coManagedDevices property value. Total number of co-managed devices. Valid values -2147483648 to 2147483647
+     * Sets the coManagedDevices property value. Total number of co-managed devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the coManagedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCoManagedDevices(@javax.annotation.Nullable final Integer value) {
-        this._coManagedDevices = value;
+        this.coManagedDevices = value;
     }
     /**
-     * Sets the devicesNotAutopilotRegistered property value. The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647
+     * Sets the devicesNotAutopilotRegistered property value. The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the devicesNotAutopilotRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicesNotAutopilotRegistered(@javax.annotation.Nullable final Integer value) {
-        this._devicesNotAutopilotRegistered = value;
+        this.devicesNotAutopilotRegistered = value;
     }
     /**
-     * Sets the devicesWithoutAutopilotProfileAssigned property value. The count of intune devices not autopilot profile assigned. Valid values -2147483648 to 2147483647
+     * Sets the devicesWithoutAutopilotProfileAssigned property value. The count of intune devices not autopilot profile assigned. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the devicesWithoutAutopilotProfileAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicesWithoutAutopilotProfileAssigned(@javax.annotation.Nullable final Integer value) {
-        this._devicesWithoutAutopilotProfileAssigned = value;
+        this.devicesWithoutAutopilotProfileAssigned = value;
     }
     /**
-     * Sets the devicesWithoutCloudIdentity property value. The count of devices that are not cloud identity. Valid values -2147483648 to 2147483647
+     * Sets the devicesWithoutCloudIdentity property value. The count of devices that are not cloud identity. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the devicesWithoutCloudIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicesWithoutCloudIdentity(@javax.annotation.Nullable final Integer value) {
-        this._devicesWithoutCloudIdentity = value;
+        this.devicesWithoutCloudIdentity = value;
     }
     /**
-     * Sets the intuneDevices property value. The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647
+     * Sets the intuneDevices property value. The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the intuneDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntuneDevices(@javax.annotation.Nullable final Integer value) {
-        this._intuneDevices = value;
+        this.intuneDevices = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the tenantAttachDevices property value. Total count of tenant attach devices. Valid values -2147483648 to 2147483647
+     * Sets the tenantAttachDevices property value. Total count of tenant attach devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the tenantAttachDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantAttachDevices(@javax.annotation.Nullable final Integer value) {
-        this._tenantAttachDevices = value;
+        this.tenantAttachDevices = value;
     }
     /**
-     * Sets the totalDevices property value. The total count of devices. Valid values -2147483648 to 2147483647
+     * Sets the totalDevices property value. The total count of devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the totalDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalDevices(@javax.annotation.Nullable final Integer value) {
-        this._totalDevices = value;
+        this.totalDevices = value;
     }
     /**
-     * Sets the unsupportedOSversionDevices property value. The count of Windows 10 devices that have unsupported OS versions. Valid values -2147483648 to 2147483647
+     * Sets the unsupportedOSversionDevices property value. The count of Windows 10 devices that have unsupported OS versions. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the unsupportedOSversionDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnsupportedOSversionDevices(@javax.annotation.Nullable final Integer value) {
-        this._unsupportedOSversionDevices = value;
+        this.unsupportedOSversionDevices = value;
     }
     /**
-     * Sets the windows10Devices property value. The count of windows 10 devices. Valid values -2147483648 to 2147483647
+     * Sets the windows10Devices property value. The count of windows 10 devices. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the windows10Devices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindows10Devices(@javax.annotation.Nullable final Integer value) {
-        this._windows10Devices = value;
+        this.windows10Devices = value;
     }
     /**
-     * Sets the windows10DevicesSummary property value. The user experience analytics work from anywhere Windows 10 devices summary.
+     * Sets the windows10DevicesSummary property value. The user experience analytics work from anywhere Windows 10 devices summary. Read-only.
      * @param value Value to set for the windows10DevicesSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindows10DevicesSummary(@javax.annotation.Nullable final UserExperienceAnalyticsWindows10DevicesSummary value) {
-        this._windows10DevicesSummary = value;
+        this.windows10DevicesSummary = value;
     }
     /**
-     * Sets the windows10DevicesWithoutTenantAttach property value. The count of windows 10 devices that are Intune and Comanaged. Valid values -2147483648 to 2147483647
+     * Sets the windows10DevicesWithoutTenantAttach property value. The count of windows 10 devices that are Intune and co-managed. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the windows10DevicesWithoutTenantAttach property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindows10DevicesWithoutTenantAttach(@javax.annotation.Nullable final Integer value) {
-        this._windows10DevicesWithoutTenantAttach = value;
+        this.windows10DevicesWithoutTenantAttach = value;
     }
 }

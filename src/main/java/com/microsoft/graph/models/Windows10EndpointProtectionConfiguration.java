@@ -4,467 +4,922 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the Windows10EndpointProtectionConfiguration resource.
+ */
 public class Windows10EndpointProtectionConfiguration extends DeviceConfiguration implements Parsable {
-    /** Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone. */
-    private Boolean _applicationGuardAllowCameraMicrophoneRedirection;
-    /** Allow users to download files from Edge in the application guard container and save them on the host file system */
-    private Boolean _applicationGuardAllowFileSaveOnHost;
-    /** Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.) */
-    private Boolean _applicationGuardAllowPersistence;
-    /** Allow printing to Local Printers from Container */
-    private Boolean _applicationGuardAllowPrintToLocalPrinters;
-    /** Allow printing to Network Printers from Container */
-    private Boolean _applicationGuardAllowPrintToNetworkPrinters;
-    /** Allow printing to PDF from Container */
-    private Boolean _applicationGuardAllowPrintToPDF;
-    /** Allow printing to XPS from Container */
-    private Boolean _applicationGuardAllowPrintToXPS;
-    /** Allow application guard to use virtual GPU */
-    private Boolean _applicationGuardAllowVirtualGPU;
-    /** Possible values for applicationGuardBlockClipboardSharingType */
-    private ApplicationGuardBlockClipboardSharingType _applicationGuardBlockClipboardSharing;
-    /** Possible values for applicationGuardBlockFileTransfer */
-    private ApplicationGuardBlockFileTransferType _applicationGuardBlockFileTransfer;
-    /** Block enterprise sites to load non-enterprise content, such as third party plug-ins */
-    private Boolean _applicationGuardBlockNonEnterpriseContent;
-    /** Allows certain device level Root Certificates to be shared with the Microsoft Defender Application Guard container. */
-    private java.util.List<String> _applicationGuardCertificateThumbprints;
-    /** Enable Windows Defender Application Guard */
-    private Boolean _applicationGuardEnabled;
-    /** Possible values for ApplicationGuardEnabledOptions */
-    private ApplicationGuardEnabledOptions _applicationGuardEnabledOptions;
-    /** Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.) */
-    private Boolean _applicationGuardForceAuditing;
-    /** Possible values of AppLocker Application Control Types */
-    private AppLockerApplicationControlType _appLockerApplicationControl;
-    /** Allows the admin to allow standard users to enable encrpytion during Azure AD Join. */
-    private Boolean _bitLockerAllowStandardUserEncryption;
-    /** Allows the Admin to disable the warning prompt for other disk encryption on the user machines. */
-    private Boolean _bitLockerDisableWarningForOtherDiskEncryption;
-    /** Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU. */
-    private Boolean _bitLockerEnableStorageCardEncryptionOnMobile;
-    /** Allows the admin to require encryption to be turned on using BitLocker. */
-    private Boolean _bitLockerEncryptDevice;
-    /** BitLocker Fixed Drive Policy. */
-    private BitLockerFixedDrivePolicy _bitLockerFixedDrivePolicy;
-    /** BitLocker recovery password rotation type */
-    private BitLockerRecoveryPasswordRotationType _bitLockerRecoveryPasswordRotation;
-    /** BitLocker Removable Drive Policy. */
-    private BitLockerRemovableDrivePolicy _bitLockerRemovableDrivePolicy;
-    /** BitLocker System Drive Policy. */
-    private BitLockerSystemDrivePolicy _bitLockerSystemDrivePolicy;
-    /** List of folder paths to be added to the list of protected folders */
-    private java.util.List<String> _defenderAdditionalGuardedFolders;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderAdobeReaderLaunchChildProcess;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderAdvancedRansomewareProtectionType;
-    /** Allows or disallows Windows Defender Behavior Monitoring functionality. */
-    private Boolean _defenderAllowBehaviorMonitoring;
-    /** To best protect your PC, Windows Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions. */
-    private Boolean _defenderAllowCloudProtection;
-    /** Allows or disallows user access to the Windows Defender UI. If disallowed, all Windows Defender notifications will also be suppressed. */
-    private Boolean _defenderAllowEndUserAccess;
-    /** Allows or disallows Windows Defender Intrusion Prevention functionality. */
-    private Boolean _defenderAllowIntrusionPreventionSystem;
-    /** Allows or disallows Windows Defender On Access Protection functionality. */
-    private Boolean _defenderAllowOnAccessProtection;
-    /** Allows or disallows Windows Defender Realtime Monitoring functionality. */
-    private Boolean _defenderAllowRealTimeMonitoring;
-    /** Allows or disallows scanning of archives. */
-    private Boolean _defenderAllowScanArchiveFiles;
-    /** Allows or disallows Windows Defender IOAVP Protection functionality. */
-    private Boolean _defenderAllowScanDownloads;
-    /** Allows or disallows a scanning of network files. */
-    private Boolean _defenderAllowScanNetworkFiles;
-    /** Allows or disallows a full scan of removable drives. During a quick scan, removable drives may still be scanned. */
-    private Boolean _defenderAllowScanRemovableDrivesDuringFullScan;
-    /** Allows or disallows Windows Defender Script Scanning functionality. */
-    private Boolean _defenderAllowScanScriptsLoadedInInternetExplorer;
-    /** List of exe files and folders to be excluded from attack surface reduction rules */
-    private java.util.List<String> _defenderAttackSurfaceReductionExcludedPaths;
-    /** Allows or disallows user access to the Windows Defender UI. If disallowed, all Windows Defender notifications will also be suppressed. */
-    private Boolean _defenderBlockEndUserAccess;
-    /** Possible values of Defender Attack Surface Reduction Rules */
-    private DefenderAttackSurfaceType _defenderBlockPersistenceThroughWmiType;
-    /** This policy setting allows you to manage whether a check for new virus and spyware definitions will occur before running a scan. */
-    private Boolean _defenderCheckForSignaturesBeforeRunningScan;
-    /** Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance. */
-    private DefenderCloudBlockLevelType _defenderCloudBlockLevel;
-    /** Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- 'Configure the 'Block at First Sight' feature; 'Join Microsoft MAPS'; 'Send file samples when further analysis is required'. Valid values 0 to 50 */
-    private Integer _defenderCloudExtendedTimeoutInSeconds;
-    /** Time period (in days) that quarantine items will be stored on the system. Valid values 0 to 90 */
-    private Integer _defenderDaysBeforeDeletingQuarantinedMalware;
-    /** Allows an administrator to specify any valid threat severity levels and the corresponding default action ID to take. */
-    private DefenderDetectedMalwareActions _defenderDetectedMalwareActions;
-    /** Allows or disallows Windows Defender Behavior Monitoring functionality. */
-    private Boolean _defenderDisableBehaviorMonitoring;
-    /** This policy setting allows you to configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time. */
-    private Boolean _defenderDisableCatchupFullScan;
-    /** This policy setting allows you to configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time. */
-    private Boolean _defenderDisableCatchupQuickScan;
-    /** To best protect your PC, Windows Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions. */
-    private Boolean _defenderDisableCloudProtection;
-    /** Allows or disallows Windows Defender Intrusion Prevention functionality. */
-    private Boolean _defenderDisableIntrusionPreventionSystem;
-    /** Allows or disallows Windows Defender On Access Protection functionality. */
-    private Boolean _defenderDisableOnAccessProtection;
-    /** Allows or disallows Windows Defender Realtime Monitoring functionality. */
-    private Boolean _defenderDisableRealTimeMonitoring;
-    /** Allows or disallows scanning of archives. */
-    private Boolean _defenderDisableScanArchiveFiles;
-    /** Allows or disallows Windows Defender IOAVP Protection functionality. */
-    private Boolean _defenderDisableScanDownloads;
-    /** Allows or disallows a scanning of network files. */
-    private Boolean _defenderDisableScanNetworkFiles;
-    /** Allows or disallows a full scan of removable drives. During a quick scan, removable drives may still be scanned. */
-    private Boolean _defenderDisableScanRemovableDrivesDuringFullScan;
-    /** Allows or disallows Windows Defender Script Scanning functionality. */
-    private Boolean _defenderDisableScanScriptsLoadedInInternetExplorer;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderEmailContentExecution;
-    /** Possible values of Defender Attack Surface Reduction Rules */
-    private DefenderAttackSurfaceType _defenderEmailContentExecutionType;
-    /** This policy setting allows you to enable or disable low CPU priority for scheduled scans. */
-    private Boolean _defenderEnableLowCpuPriority;
-    /** Allows or disallows scanning of email. */
-    private Boolean _defenderEnableScanIncomingMail;
-    /** Allows or disallows a full scan of mapped network drives. */
-    private Boolean _defenderEnableScanMappedNetworkDrivesDuringFullScan;
-    /** Xml content containing information regarding exploit protection details. */
-    private byte[] _defenderExploitProtectionXml;
-    /** Name of the file from which DefenderExploitProtectionXml was obtained. */
-    private String _defenderExploitProtectionXmlFileName;
-    /** File extensions to exclude from scans and real time protection. */
-    private java.util.List<String> _defenderFileExtensionsToExclude;
-    /** Files and folder to exclude from scans and real time protection. */
-    private java.util.List<String> _defenderFilesAndFoldersToExclude;
-    /** List of paths to exe that are allowed to access protected folders */
-    private java.util.List<String> _defenderGuardedFoldersAllowedAppPaths;
-    /** Possible values of Folder Protection */
-    private FolderProtectionType _defenderGuardMyFoldersType;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderNetworkProtectionType;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderOfficeAppsExecutableContentCreationOrLaunch;
-    /** Possible values of Defender Attack Surface Reduction Rules */
-    private DefenderAttackSurfaceType _defenderOfficeAppsExecutableContentCreationOrLaunchType;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderOfficeAppsLaunchChildProcess;
-    /** Possible values of Defender Attack Surface Reduction Rules */
-    private DefenderAttackSurfaceType _defenderOfficeAppsLaunchChildProcessType;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderOfficeAppsOtherProcessInjection;
-    /** Possible values of Defender Attack Surface Reduction Rules */
-    private DefenderAttackSurfaceType _defenderOfficeAppsOtherProcessInjectionType;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderOfficeCommunicationAppsLaunchChildProcess;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderOfficeMacroCodeAllowWin32Imports;
-    /** Possible values of Defender Attack Surface Reduction Rules */
-    private DefenderAttackSurfaceType _defenderOfficeMacroCodeAllowWin32ImportsType;
-    /** Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured. */
-    private DefenderProtectionType _defenderPotentiallyUnwantedAppAction;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderPreventCredentialStealingType;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderProcessCreation;
-    /** Possible values of Defender Attack Surface Reduction Rules */
-    private DefenderAttackSurfaceType _defenderProcessCreationType;
-    /** Processes to exclude from scans and real time protection. */
-    private java.util.List<String> _defenderProcessesToExclude;
-    /** Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly. */
-    private DefenderRealtimeScanDirection _defenderScanDirection;
-    /** Represents the average CPU load factor for the Windows Defender scan (in percent). The default value is 50. Valid values 0 to 100 */
-    private Integer _defenderScanMaxCpuPercentage;
-    /** Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full. */
-    private DefenderScanType _defenderScanType;
-    /** Selects the time of day that the Windows Defender quick scan should run. For example, a value of 0=12:00AM, a value of 60=1:00AM, a value of 120=2:00, and so on, up to a value of 1380=11:00PM. The default value is 120 */
-    private LocalTime _defenderScheduledQuickScanTime;
-    /** Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan. */
-    private WeeklySchedule _defenderScheduledScanDay;
-    /** Selects the time of day that the Windows Defender scan should run. */
-    private LocalTime _defenderScheduledScanTime;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderScriptDownloadedPayloadExecution;
-    /** Possible values of Defender Attack Surface Reduction Rules */
-    private DefenderAttackSurfaceType _defenderScriptDownloadedPayloadExecutionType;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderScriptObfuscatedMacroCode;
-    /** Possible values of Defender Attack Surface Reduction Rules */
-    private DefenderAttackSurfaceType _defenderScriptObfuscatedMacroCodeType;
-    /** Indicates whether or not to block user from overriding Exploit Protection settings. */
-    private Boolean _defenderSecurityCenterBlockExploitProtectionOverride;
-    /** Used to disable the display of the account protection area. */
-    private Boolean _defenderSecurityCenterDisableAccountUI;
-    /** Used to disable the display of the app and browser protection area. */
-    private Boolean _defenderSecurityCenterDisableAppBrowserUI;
-    /** Used to disable the display of the Clear TPM button. */
-    private Boolean _defenderSecurityCenterDisableClearTpmUI;
-    /** Used to disable the display of the family options area. */
-    private Boolean _defenderSecurityCenterDisableFamilyUI;
-    /** Used to disable the display of the hardware protection area. */
-    private Boolean _defenderSecurityCenterDisableHardwareUI;
-    /** Used to disable the display of the device performance and health area. */
-    private Boolean _defenderSecurityCenterDisableHealthUI;
-    /** Used to disable the display of the firewall and network protection area. */
-    private Boolean _defenderSecurityCenterDisableNetworkUI;
-    /** Used to disable the display of the notification area control. The user needs to either sign out and sign in or reboot the computer for this setting to take effect. */
-    private Boolean _defenderSecurityCenterDisableNotificationAreaUI;
-    /** Used to disable the display of the ransomware protection area. */
-    private Boolean _defenderSecurityCenterDisableRansomwareUI;
-    /** Used to disable the display of the secure boot area under Device security. */
-    private Boolean _defenderSecurityCenterDisableSecureBootUI;
-    /** Used to disable the display of the security process troubleshooting under Device security. */
-    private Boolean _defenderSecurityCenterDisableTroubleshootingUI;
-    /** Used to disable the display of the virus and threat protection area. */
-    private Boolean _defenderSecurityCenterDisableVirusUI;
-    /** Used to disable the display of update TPM Firmware when a vulnerable firmware is detected. */
-    private Boolean _defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI;
-    /** The email address that is displayed to users. */
-    private String _defenderSecurityCenterHelpEmail;
-    /** The phone number or Skype ID that is displayed to users. */
-    private String _defenderSecurityCenterHelpPhone;
-    /** The help portal URL this is displayed to users. */
-    private String _defenderSecurityCenterHelpURL;
-    /** Possible values for defenderSecurityCenterITContactDisplay */
-    private DefenderSecurityCenterITContactDisplayType _defenderSecurityCenterITContactDisplay;
-    /** Possible values for defenderSecurityCenterNotificationsFromApp */
-    private DefenderSecurityCenterNotificationsFromAppType _defenderSecurityCenterNotificationsFromApp;
-    /** The company name that is displayed to the users. */
-    private String _defenderSecurityCenterOrganizationDisplayName;
-    /** Specifies the interval (in hours) that will be used to check for signatures, so instead of using the ScheduleDay and ScheduleTime the check for new signatures will be set according to the interval. Valid values 0 to 24 */
-    private Integer _defenderSignatureUpdateIntervalInHours;
-    /** Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically. */
-    private DefenderSubmitSamplesConsentType _defenderSubmitSamplesConsentType;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderUntrustedExecutable;
-    /** Possible values of Defender Attack Surface Reduction Rules */
-    private DefenderAttackSurfaceType _defenderUntrustedExecutableType;
-    /** Possible values of Defender PUA Protection */
-    private DefenderProtectionType _defenderUntrustedUSBProcess;
-    /** Possible values of Defender Attack Surface Reduction Rules */
-    private DefenderAttackSurfaceType _defenderUntrustedUSBProcessType;
-    /** This property will be deprecated in May 2019 and will be replaced with property DeviceGuardSecureBootWithDMA. Specifies whether Platform Security Level is enabled at next reboot. */
-    private Boolean _deviceGuardEnableSecureBootWithDMA;
-    /** Turns On Virtualization Based Security(VBS). */
-    private Boolean _deviceGuardEnableVirtualizationBasedSecurity;
-    /** Possible values of a property */
-    private Enablement _deviceGuardLaunchSystemGuard;
-    /** Possible values of Credential Guard settings. */
-    private DeviceGuardLocalSystemAuthorityCredentialGuardType _deviceGuardLocalSystemAuthorityCredentialGuardSettings;
-    /** Possible values of Secure Boot with DMA */
-    private SecureBootWithDMAType _deviceGuardSecureBootWithDMA;
-    /** Possible values of the DmaGuardDeviceEnumerationPolicy. */
-    private DmaGuardDeviceEnumerationPolicyType _dmaGuardDeviceEnumerationPolicy;
-    /** Blocks stateful FTP connections to the device */
-    private Boolean _firewallBlockStatefulFTP;
-    /** Possible values for firewallCertificateRevocationListCheckMethod */
-    private FirewallCertificateRevocationListCheckMethodType _firewallCertificateRevocationListCheckMethod;
-    /** Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600 */
-    private Integer _firewallIdleTimeoutForSecurityAssociationInSeconds;
-    /** Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic */
-    private Boolean _firewallIPSecExemptionsAllowDHCP;
-    /** Configures IPSec exemptions to allow ICMP */
-    private Boolean _firewallIPSecExemptionsAllowICMP;
-    /** Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes */
-    private Boolean _firewallIPSecExemptionsAllowNeighborDiscovery;
-    /** Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes */
-    private Boolean _firewallIPSecExemptionsAllowRouterDiscovery;
-    /** Configures IPSec exemptions to no exemptions */
-    private Boolean _firewallIPSecExemptionsNone;
-    /** If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set */
-    private Boolean _firewallMergeKeyingModuleSettings;
-    /** Possible values for firewallPacketQueueingMethod */
-    private FirewallPacketQueueingMethodType _firewallPacketQueueingMethod;
-    /** Possible values for firewallPreSharedKeyEncodingMethod */
-    private FirewallPreSharedKeyEncodingMethodType _firewallPreSharedKeyEncodingMethod;
-    /** Configures the firewall profile settings for domain networks */
-    private WindowsFirewallNetworkProfile _firewallProfileDomain;
-    /** Configures the firewall profile settings for private networks */
-    private WindowsFirewallNetworkProfile _firewallProfilePrivate;
-    /** Configures the firewall profile settings for public networks */
-    private WindowsFirewallNetworkProfile _firewallProfilePublic;
-    /** Configures the firewall rule settings. This collection can contain a maximum of 150 elements. */
-    private java.util.List<WindowsFirewallRule> _firewallRules;
-    /** Possible values for LanManagerAuthenticationLevel */
-    private LanManagerAuthenticationLevel _lanManagerAuthenticationLevel;
-    /** If enabled,the SMB client will allow insecure guest logons. If not configured, the SMB client will reject insecure guest logons. */
-    private Boolean _lanManagerWorkstationDisableInsecureGuestLogons;
-    /** Define a different account name to be associated with the security identifier (SID) for the account 'Administrator'. */
-    private String _localSecurityOptionsAdministratorAccountName;
-    /** Possible values for LocalSecurityOptionsAdministratorElevationPromptBehavior */
-    private LocalSecurityOptionsAdministratorElevationPromptBehaviorType _localSecurityOptionsAdministratorElevationPromptBehavior;
-    /** This security setting determines whether to allows anonymous users to perform certain activities, such as enumerating the names of domain accounts and network shares. */
-    private Boolean _localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares;
-    /** Block PKU2U authentication requests to this device to use online identities. */
-    private Boolean _localSecurityOptionsAllowPKU2UAuthenticationRequests;
-    /** Edit the default Security Descriptor Definition Language string to allow or deny users and groups to make remote calls to the SAM. */
-    private String _localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager;
-    /** UI helper boolean for LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager entity */
-    private Boolean _localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool;
-    /** This security setting determines whether a computer can be shut down without having to log on to Windows. */
-    private Boolean _localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn;
-    /** Allow UIAccess apps to prompt for elevation without using the secure desktop. */
-    private Boolean _localSecurityOptionsAllowUIAccessApplicationElevation;
-    /** Allow UIAccess apps to prompt for elevation without using the secure desktop.Default is enabled */
-    private Boolean _localSecurityOptionsAllowUIAccessApplicationsForSecureLocations;
-    /** Prevent a portable computer from being undocked without having to log in. */
-    private Boolean _localSecurityOptionsAllowUndockWithoutHavingToLogon;
-    /** Prevent users from adding new Microsoft accounts to this computer. */
-    private Boolean _localSecurityOptionsBlockMicrosoftAccounts;
-    /** Enable Local accounts that are not password protected to log on from locations other than the physical device.Default is enabled */
-    private Boolean _localSecurityOptionsBlockRemoteLogonWithBlankPassword;
-    /** Enabling this settings allows only interactively logged on user to access CD-ROM media. */
-    private Boolean _localSecurityOptionsBlockRemoteOpticalDriveAccess;
-    /** Restrict installing printer drivers as part of connecting to a shared printer to admins only. */
-    private Boolean _localSecurityOptionsBlockUsersInstallingPrinterDrivers;
-    /** This security setting determines whether the virtual memory pagefile is cleared when the system is shut down. */
-    private Boolean _localSecurityOptionsClearVirtualMemoryPageFile;
-    /** This security setting determines whether packet signing is required by the SMB client component. */
-    private Boolean _localSecurityOptionsClientDigitallySignCommunicationsAlways;
-    /** If this security setting is enabled, the Server Message Block (SMB) redirector is allowed to send plaintext passwords to non-Microsoft SMB servers that do not support password encryption during authentication. */
-    private Boolean _localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers;
-    /** App installations requiring elevated privileges will prompt for admin credentials.Default is enabled */
-    private Boolean _localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation;
-    /** Determines whether the Local Administrator account is enabled or disabled. */
-    private Boolean _localSecurityOptionsDisableAdministratorAccount;
-    /** This security setting determines whether the SMB client attempts to negotiate SMB packet signing. */
-    private Boolean _localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees;
-    /** Determines if the Guest account is enabled or disabled. */
-    private Boolean _localSecurityOptionsDisableGuestAccount;
-    /** This security setting determines whether packet signing is required by the SMB server component. */
-    private Boolean _localSecurityOptionsDisableServerDigitallySignCommunicationsAlways;
-    /** This security setting determines whether the SMB server will negotiate SMB packet signing with clients that request it. */
-    private Boolean _localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees;
-    /** This security setting determines what additional permissions will be granted for anonymous connections to the computer. */
-    private Boolean _localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts;
-    /** Require CTRL+ALT+DEL to be pressed before a user can log on. */
-    private Boolean _localSecurityOptionsDoNotRequireCtrlAltDel;
-    /** This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default. */
-    private Boolean _localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange;
-    /** Possible values for LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser */
-    private LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType _localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser;
-    /** Define a different account name to be associated with the security identifier (SID) for the account 'Guest'. */
-    private String _localSecurityOptionsGuestAccountName;
-    /** Do not display the username of the last person who signed in on this device. */
-    private Boolean _localSecurityOptionsHideLastSignedInUser;
-    /** Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown. */
-    private Boolean _localSecurityOptionsHideUsernameAtSignIn;
-    /** Possible values for LocalSecurityOptionsInformationDisplayedOnLockScreen */
-    private LocalSecurityOptionsInformationDisplayedOnLockScreenType _localSecurityOptionsInformationDisplayedOnLockScreen;
-    /** Possible values for LocalSecurityOptionsInformationShownOnLockScreenType */
-    private LocalSecurityOptionsInformationShownOnLockScreenType _localSecurityOptionsInformationShownOnLockScreen;
-    /** Set message text for users attempting to log in. */
-    private String _localSecurityOptionsLogOnMessageText;
-    /** Set message title for users attempting to log in. */
-    private String _localSecurityOptionsLogOnMessageTitle;
-    /** Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999 */
-    private Integer _localSecurityOptionsMachineInactivityLimit;
-    /** Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999 */
-    private Integer _localSecurityOptionsMachineInactivityLimitInMinutes;
-    /** Possible values for LocalSecurityOptionsMinimumSessionSecurity */
-    private LocalSecurityOptionsMinimumSessionSecurity _localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients;
-    /** Possible values for LocalSecurityOptionsMinimumSessionSecurity */
-    private LocalSecurityOptionsMinimumSessionSecurity _localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers;
-    /** Enforce PKI certification path validation for a given executable file before it is permitted to run. */
-    private Boolean _localSecurityOptionsOnlyElevateSignedExecutables;
-    /** By default, this security setting restricts anonymous access to shares and pipes to the settings for named pipes that can be accessed anonymously and Shares that can be accessed anonymously */
-    private Boolean _localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares;
-    /** Possible values for LocalSecurityOptionsSmartCardRemovalBehaviorType */
-    private LocalSecurityOptionsSmartCardRemovalBehaviorType _localSecurityOptionsSmartCardRemovalBehavior;
-    /** Possible values for LocalSecurityOptionsStandardUserElevationPromptBehavior */
-    private LocalSecurityOptionsStandardUserElevationPromptBehaviorType _localSecurityOptionsStandardUserElevationPromptBehavior;
-    /** Enable all elevation requests to go to the interactive user's desktop rather than the secure desktop. Prompt behavior policy settings for admins and standard users are used. */
-    private Boolean _localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation;
-    /** Defines whether the built-in admin account uses Admin Approval Mode or runs all apps with full admin privileges.Default is enabled */
-    private Boolean _localSecurityOptionsUseAdminApprovalMode;
-    /** Define whether Admin Approval Mode and all UAC policy settings are enabled, default is enabled */
-    private Boolean _localSecurityOptionsUseAdminApprovalModeForAdministrators;
-    /** Virtualize file and registry write failures to per user locations */
-    private Boolean _localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations;
-    /** Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files. */
-    private Boolean _smartScreenBlockOverrideForFiles;
-    /** Allows IT Admins to configure SmartScreen for Windows. */
-    private Boolean _smartScreenEnableInShell;
-    /** This user right is used by Credential Manager during Backup/Restore. Users' saved credentials might be compromised if this privilege is given to other entities. Only states NotConfigured and Allowed are supported */
-    private DeviceManagementUserRightsSetting _userRightsAccessCredentialManagerAsTrustedCaller;
-    /** This user right allows a process to impersonate any user without authentication. The process can therefore gain access to the same local resources as that user. Only states NotConfigured and Allowed are supported */
-    private DeviceManagementUserRightsSetting _userRightsActAsPartOfTheOperatingSystem;
-    /** This user right determines which users and groups are allowed to connect to the computer over the network. State Allowed is supported. */
-    private DeviceManagementUserRightsSetting _userRightsAllowAccessFromNetwork;
-    /** This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when backing up files and directories. Only states NotConfigured and Allowed are supported */
-    private DeviceManagementUserRightsSetting _userRightsBackupData;
-    /** This user right determines which users and groups are block from connecting to the computer over the network. State Block is supported. */
-    private DeviceManagementUserRightsSetting _userRightsBlockAccessFromNetwork;
-    /** This user right determines which users and groups can change the time and date on the internal clock of the computer. Only states NotConfigured and Allowed are supported */
-    private DeviceManagementUserRightsSetting _userRightsChangeSystemTime;
-    /** This security setting determines whether users can create global objects that are available to all sessions. Users who can create global objects could affect processes that run under other users' sessions, which could lead to application failure or data corruption. Only states NotConfigured and Allowed are supported */
-    private DeviceManagementUserRightsSetting _userRightsCreateGlobalObjects;
-    /** This user right determines which users and groups can call an internal API to create and change the size of a page file. Only states NotConfigured and Allowed are supported */
-    private DeviceManagementUserRightsSetting _userRightsCreatePageFile;
-    /** This user right determines which accounts can be used by processes to create a directory object using the object manager. Only states NotConfigured and Allowed are supported */
-    private DeviceManagementUserRightsSetting _userRightsCreatePermanentSharedObjects;
-    /** This user right determines if the user can create a symbolic link from the computer to which they are logged on. Only states NotConfigured and Allowed are supported */
-    private DeviceManagementUserRightsSetting _userRightsCreateSymbolicLinks;
-    /** This user right determines which users/groups can be used by processes to create a token that can then be used to get access to any local resources when the process uses an internal API to create an access token. Only states NotConfigured and Allowed are supported */
-    private DeviceManagementUserRightsSetting _userRightsCreateToken;
-    /** This user right determines which users can attach a debugger to any process or to the kernel. Only states NotConfigured and Allowed are supported */
-    private DeviceManagementUserRightsSetting _userRightsDebugPrograms;
-    /** This user right determines which users can set the Trusted for Delegation setting on a user or computer object. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsDelegation;
-    /** This user right determines which users cannot log on to the computer. States NotConfigured, Blocked are supported */
-    private DeviceManagementUserRightsSetting _userRightsDenyLocalLogOn;
-    /** This user right determines which accounts can be used by a process to add entries to the security log. The security log is used to trace unauthorized system access.  Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsGenerateSecurityAudits;
-    /** Assigning this user right to a user allows programs running on behalf of that user to impersonate a client. Requiring this user right for this kind of impersonation prevents an unauthorized user from convincing a client to connect to a service that they have created and then impersonating that client, which can elevate the unauthorized user's permissions to administrative or system levels. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsImpersonateClient;
-    /** This user right determines which accounts can use a process with Write Property access to another process to increase the execution priority assigned to the other process. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsIncreaseSchedulingPriority;
-    /** This user right determines which users can dynamically load and unload device drivers or other code in to kernel mode. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsLoadUnloadDrivers;
-    /** This user right determines which users can log on to the computer. States NotConfigured, Allowed are supported */
-    private DeviceManagementUserRightsSetting _userRightsLocalLogOn;
-    /** This user right determines which accounts can use a process to keep data in physical memory, which prevents the system from paging the data to virtual memory on disk. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsLockMemory;
-    /** This user right determines which users can specify object access auditing options for individual resources, such as files, Active Directory objects, and registry keys. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsManageAuditingAndSecurityLogs;
-    /** This user right determines which users and groups can run maintenance tasks on a volume, such as remote defragmentation. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsManageVolumes;
-    /** This user right determines who can modify firmware environment values. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsModifyFirmwareEnvironment;
-    /** This user right determines which user accounts can modify the integrity label of objects, such as files, registry keys, or processes owned by other users. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsModifyObjectLabels;
-    /** This user right determines which users can use performance monitoring tools to monitor the performance of system processes. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsProfileSingleProcess;
-    /** This user right determines which users and groups are prohibited from logging on as a Remote Desktop Services client. Only states NotConfigured and Blocked are supported */
-    private DeviceManagementUserRightsSetting _userRightsRemoteDesktopServicesLogOn;
-    /** This user right determines which users are allowed to shut down a computer from a remote location on the network. Misuse of this user right can result in a denial of service. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsRemoteShutdown;
-    /** This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when restoring backed up files and directories, and determines which users can set any valid security principal as the owner of an object. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsRestoreData;
-    /** This user right determines which users can take ownership of any securable object in the system, including Active Directory objects, files and folders, printers, registry keys, processes, and threads. Only states NotConfigured and Allowed are supported. */
-    private DeviceManagementUserRightsSetting _userRightsTakeOwnership;
-    /** Defender TamperProtection setting options */
-    private WindowsDefenderTamperProtectionOptions _windowsDefenderTamperProtection;
-    /** Possible values of xbox service start type */
-    private ServiceStartType _xboxServicesAccessoryManagementServiceStartupMode;
-    /** This setting determines whether xbox game save is enabled (1) or disabled (0). */
-    private Boolean _xboxServicesEnableXboxGameSaveTask;
-    /** Possible values of xbox service start type */
-    private ServiceStartType _xboxServicesLiveAuthManagerServiceStartupMode;
-    /** Possible values of xbox service start type */
-    private ServiceStartType _xboxServicesLiveGameSaveServiceStartupMode;
-    /** Possible values of xbox service start type */
-    private ServiceStartType _xboxServicesLiveNetworkingServiceStartupMode;
     /**
-     * Instantiates a new Windows10EndpointProtectionConfiguration and sets the default values.
+     * Gets or sets whether applications inside Microsoft Defender Application Guard can access the devices camera and microphone.
+     */
+    private Boolean applicationGuardAllowCameraMicrophoneRedirection;
+    /**
+     * Allow users to download files from Edge in the application guard container and save them on the host file system
+     */
+    private Boolean applicationGuardAllowFileSaveOnHost;
+    /**
+     * Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
+     */
+    private Boolean applicationGuardAllowPersistence;
+    /**
+     * Allow printing to Local Printers from Container
+     */
+    private Boolean applicationGuardAllowPrintToLocalPrinters;
+    /**
+     * Allow printing to Network Printers from Container
+     */
+    private Boolean applicationGuardAllowPrintToNetworkPrinters;
+    /**
+     * Allow printing to PDF from Container
+     */
+    private Boolean applicationGuardAllowPrintToPDF;
+    /**
+     * Allow printing to XPS from Container
+     */
+    private Boolean applicationGuardAllowPrintToXPS;
+    /**
+     * Allow application guard to use virtual GPU
+     */
+    private Boolean applicationGuardAllowVirtualGPU;
+    /**
+     * Possible values for applicationGuardBlockClipboardSharingType
+     */
+    private ApplicationGuardBlockClipboardSharingType applicationGuardBlockClipboardSharing;
+    /**
+     * Possible values for applicationGuardBlockFileTransfer
+     */
+    private ApplicationGuardBlockFileTransferType applicationGuardBlockFileTransfer;
+    /**
+     * Block enterprise sites to load non-enterprise content, such as third party plug-ins
+     */
+    private Boolean applicationGuardBlockNonEnterpriseContent;
+    /**
+     * Allows certain device level Root Certificates to be shared with the Microsoft Defender Application Guard container.
+     */
+    private java.util.List<String> applicationGuardCertificateThumbprints;
+    /**
+     * Enable Windows Defender Application Guard
+     */
+    private Boolean applicationGuardEnabled;
+    /**
+     * Possible values for ApplicationGuardEnabledOptions
+     */
+    private ApplicationGuardEnabledOptions applicationGuardEnabledOptions;
+    /**
+     * Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
+     */
+    private Boolean applicationGuardForceAuditing;
+    /**
+     * Possible values of AppLocker Application Control Types
+     */
+    private AppLockerApplicationControlType appLockerApplicationControl;
+    /**
+     * Allows the admin to allow standard users to enable encrpytion during Azure AD Join.
+     */
+    private Boolean bitLockerAllowStandardUserEncryption;
+    /**
+     * Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
+     */
+    private Boolean bitLockerDisableWarningForOtherDiskEncryption;
+    /**
+     * Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
+     */
+    private Boolean bitLockerEnableStorageCardEncryptionOnMobile;
+    /**
+     * Allows the admin to require encryption to be turned on using BitLocker.
+     */
+    private Boolean bitLockerEncryptDevice;
+    /**
+     * BitLocker Fixed Drive Policy.
+     */
+    private BitLockerFixedDrivePolicy bitLockerFixedDrivePolicy;
+    /**
+     * BitLocker recovery password rotation type
+     */
+    private BitLockerRecoveryPasswordRotationType bitLockerRecoveryPasswordRotation;
+    /**
+     * BitLocker Removable Drive Policy.
+     */
+    private BitLockerRemovableDrivePolicy bitLockerRemovableDrivePolicy;
+    /**
+     * BitLocker System Drive Policy.
+     */
+    private BitLockerSystemDrivePolicy bitLockerSystemDrivePolicy;
+    /**
+     * List of folder paths to be added to the list of protected folders
+     */
+    private java.util.List<String> defenderAdditionalGuardedFolders;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderAdobeReaderLaunchChildProcess;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderAdvancedRansomewareProtectionType;
+    /**
+     * Allows or disallows Windows Defender Behavior Monitoring functionality.
+     */
+    private Boolean defenderAllowBehaviorMonitoring;
+    /**
+     * To best protect your PC, Windows Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.
+     */
+    private Boolean defenderAllowCloudProtection;
+    /**
+     * Allows or disallows user access to the Windows Defender UI. If disallowed, all Windows Defender notifications will also be suppressed.
+     */
+    private Boolean defenderAllowEndUserAccess;
+    /**
+     * Allows or disallows Windows Defender Intrusion Prevention functionality.
+     */
+    private Boolean defenderAllowIntrusionPreventionSystem;
+    /**
+     * Allows or disallows Windows Defender On Access Protection functionality.
+     */
+    private Boolean defenderAllowOnAccessProtection;
+    /**
+     * Allows or disallows Windows Defender Realtime Monitoring functionality.
+     */
+    private Boolean defenderAllowRealTimeMonitoring;
+    /**
+     * Allows or disallows scanning of archives.
+     */
+    private Boolean defenderAllowScanArchiveFiles;
+    /**
+     * Allows or disallows Windows Defender IOAVP Protection functionality.
+     */
+    private Boolean defenderAllowScanDownloads;
+    /**
+     * Allows or disallows a scanning of network files.
+     */
+    private Boolean defenderAllowScanNetworkFiles;
+    /**
+     * Allows or disallows a full scan of removable drives. During a quick scan, removable drives may still be scanned.
+     */
+    private Boolean defenderAllowScanRemovableDrivesDuringFullScan;
+    /**
+     * Allows or disallows Windows Defender Script Scanning functionality.
+     */
+    private Boolean defenderAllowScanScriptsLoadedInInternetExplorer;
+    /**
+     * List of exe files and folders to be excluded from attack surface reduction rules
+     */
+    private java.util.List<String> defenderAttackSurfaceReductionExcludedPaths;
+    /**
+     * Allows or disallows user access to the Windows Defender UI. If disallowed, all Windows Defender notifications will also be suppressed.
+     */
+    private Boolean defenderBlockEndUserAccess;
+    /**
+     * Possible values of Defender Attack Surface Reduction Rules
+     */
+    private DefenderAttackSurfaceType defenderBlockPersistenceThroughWmiType;
+    /**
+     * This policy setting allows you to manage whether a check for new virus and spyware definitions will occur before running a scan.
+     */
+    private Boolean defenderCheckForSignaturesBeforeRunningScan;
+    /**
+     * Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     */
+    private DefenderCloudBlockLevelType defenderCloudBlockLevel;
+    /**
+     * Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- 'Configure the 'Block at First Sight' feature; 'Join Microsoft MAPS'; 'Send file samples when further analysis is required'. Valid values 0 to 50
+     */
+    private Integer defenderCloudExtendedTimeoutInSeconds;
+    /**
+     * Time period (in days) that quarantine items will be stored on the system. Valid values 0 to 90
+     */
+    private Integer defenderDaysBeforeDeletingQuarantinedMalware;
+    /**
+     * Allows an administrator to specify any valid threat severity levels and the corresponding default action ID to take.
+     */
+    private DefenderDetectedMalwareActions defenderDetectedMalwareActions;
+    /**
+     * Allows or disallows Windows Defender Behavior Monitoring functionality.
+     */
+    private Boolean defenderDisableBehaviorMonitoring;
+    /**
+     * This policy setting allows you to configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
+     */
+    private Boolean defenderDisableCatchupFullScan;
+    /**
+     * This policy setting allows you to configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
+     */
+    private Boolean defenderDisableCatchupQuickScan;
+    /**
+     * To best protect your PC, Windows Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.
+     */
+    private Boolean defenderDisableCloudProtection;
+    /**
+     * Allows or disallows Windows Defender Intrusion Prevention functionality.
+     */
+    private Boolean defenderDisableIntrusionPreventionSystem;
+    /**
+     * Allows or disallows Windows Defender On Access Protection functionality.
+     */
+    private Boolean defenderDisableOnAccessProtection;
+    /**
+     * Allows or disallows Windows Defender Realtime Monitoring functionality.
+     */
+    private Boolean defenderDisableRealTimeMonitoring;
+    /**
+     * Allows or disallows scanning of archives.
+     */
+    private Boolean defenderDisableScanArchiveFiles;
+    /**
+     * Allows or disallows Windows Defender IOAVP Protection functionality.
+     */
+    private Boolean defenderDisableScanDownloads;
+    /**
+     * Allows or disallows a scanning of network files.
+     */
+    private Boolean defenderDisableScanNetworkFiles;
+    /**
+     * Allows or disallows a full scan of removable drives. During a quick scan, removable drives may still be scanned.
+     */
+    private Boolean defenderDisableScanRemovableDrivesDuringFullScan;
+    /**
+     * Allows or disallows Windows Defender Script Scanning functionality.
+     */
+    private Boolean defenderDisableScanScriptsLoadedInInternetExplorer;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderEmailContentExecution;
+    /**
+     * Possible values of Defender Attack Surface Reduction Rules
+     */
+    private DefenderAttackSurfaceType defenderEmailContentExecutionType;
+    /**
+     * This policy setting allows you to enable or disable low CPU priority for scheduled scans.
+     */
+    private Boolean defenderEnableLowCpuPriority;
+    /**
+     * Allows or disallows scanning of email.
+     */
+    private Boolean defenderEnableScanIncomingMail;
+    /**
+     * Allows or disallows a full scan of mapped network drives.
+     */
+    private Boolean defenderEnableScanMappedNetworkDrivesDuringFullScan;
+    /**
+     * Xml content containing information regarding exploit protection details.
+     */
+    private byte[] defenderExploitProtectionXml;
+    /**
+     * Name of the file from which DefenderExploitProtectionXml was obtained.
+     */
+    private String defenderExploitProtectionXmlFileName;
+    /**
+     * File extensions to exclude from scans and real time protection.
+     */
+    private java.util.List<String> defenderFileExtensionsToExclude;
+    /**
+     * Files and folder to exclude from scans and real time protection.
+     */
+    private java.util.List<String> defenderFilesAndFoldersToExclude;
+    /**
+     * List of paths to exe that are allowed to access protected folders
+     */
+    private java.util.List<String> defenderGuardedFoldersAllowedAppPaths;
+    /**
+     * Possible values of Folder Protection
+     */
+    private FolderProtectionType defenderGuardMyFoldersType;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderNetworkProtectionType;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderOfficeAppsExecutableContentCreationOrLaunch;
+    /**
+     * Possible values of Defender Attack Surface Reduction Rules
+     */
+    private DefenderAttackSurfaceType defenderOfficeAppsExecutableContentCreationOrLaunchType;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderOfficeAppsLaunchChildProcess;
+    /**
+     * Possible values of Defender Attack Surface Reduction Rules
+     */
+    private DefenderAttackSurfaceType defenderOfficeAppsLaunchChildProcessType;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderOfficeAppsOtherProcessInjection;
+    /**
+     * Possible values of Defender Attack Surface Reduction Rules
+     */
+    private DefenderAttackSurfaceType defenderOfficeAppsOtherProcessInjectionType;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderOfficeCommunicationAppsLaunchChildProcess;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderOfficeMacroCodeAllowWin32Imports;
+    /**
+     * Possible values of Defender Attack Surface Reduction Rules
+     */
+    private DefenderAttackSurfaceType defenderOfficeMacroCodeAllowWin32ImportsType;
+    /**
+     * Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     */
+    private DefenderProtectionType defenderPotentiallyUnwantedAppAction;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderPreventCredentialStealingType;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderProcessCreation;
+    /**
+     * Possible values of Defender Attack Surface Reduction Rules
+     */
+    private DefenderAttackSurfaceType defenderProcessCreationType;
+    /**
+     * Processes to exclude from scans and real time protection.
+     */
+    private java.util.List<String> defenderProcessesToExclude;
+    /**
+     * Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
+     */
+    private DefenderRealtimeScanDirection defenderScanDirection;
+    /**
+     * Represents the average CPU load factor for the Windows Defender scan (in percent). The default value is 50. Valid values 0 to 100
+     */
+    private Integer defenderScanMaxCpuPercentage;
+    /**
+     * Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full.
+     */
+    private DefenderScanType defenderScanType;
+    /**
+     * Selects the time of day that the Windows Defender quick scan should run. For example, a value of 0=12:00AM, a value of 60=1:00AM, a value of 120=2:00, and so on, up to a value of 1380=11:00PM. The default value is 120
+     */
+    private LocalTime defenderScheduledQuickScanTime;
+    /**
+     * Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
+     */
+    private WeeklySchedule defenderScheduledScanDay;
+    /**
+     * Selects the time of day that the Windows Defender scan should run.
+     */
+    private LocalTime defenderScheduledScanTime;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderScriptDownloadedPayloadExecution;
+    /**
+     * Possible values of Defender Attack Surface Reduction Rules
+     */
+    private DefenderAttackSurfaceType defenderScriptDownloadedPayloadExecutionType;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderScriptObfuscatedMacroCode;
+    /**
+     * Possible values of Defender Attack Surface Reduction Rules
+     */
+    private DefenderAttackSurfaceType defenderScriptObfuscatedMacroCodeType;
+    /**
+     * Indicates whether or not to block user from overriding Exploit Protection settings.
+     */
+    private Boolean defenderSecurityCenterBlockExploitProtectionOverride;
+    /**
+     * Used to disable the display of the account protection area.
+     */
+    private Boolean defenderSecurityCenterDisableAccountUI;
+    /**
+     * Used to disable the display of the app and browser protection area.
+     */
+    private Boolean defenderSecurityCenterDisableAppBrowserUI;
+    /**
+     * Used to disable the display of the Clear TPM button.
+     */
+    private Boolean defenderSecurityCenterDisableClearTpmUI;
+    /**
+     * Used to disable the display of the family options area.
+     */
+    private Boolean defenderSecurityCenterDisableFamilyUI;
+    /**
+     * Used to disable the display of the hardware protection area.
+     */
+    private Boolean defenderSecurityCenterDisableHardwareUI;
+    /**
+     * Used to disable the display of the device performance and health area.
+     */
+    private Boolean defenderSecurityCenterDisableHealthUI;
+    /**
+     * Used to disable the display of the firewall and network protection area.
+     */
+    private Boolean defenderSecurityCenterDisableNetworkUI;
+    /**
+     * Used to disable the display of the notification area control. The user needs to either sign out and sign in or reboot the computer for this setting to take effect.
+     */
+    private Boolean defenderSecurityCenterDisableNotificationAreaUI;
+    /**
+     * Used to disable the display of the ransomware protection area.
+     */
+    private Boolean defenderSecurityCenterDisableRansomwareUI;
+    /**
+     * Used to disable the display of the secure boot area under Device security.
+     */
+    private Boolean defenderSecurityCenterDisableSecureBootUI;
+    /**
+     * Used to disable the display of the security process troubleshooting under Device security.
+     */
+    private Boolean defenderSecurityCenterDisableTroubleshootingUI;
+    /**
+     * Used to disable the display of the virus and threat protection area.
+     */
+    private Boolean defenderSecurityCenterDisableVirusUI;
+    /**
+     * Used to disable the display of update TPM Firmware when a vulnerable firmware is detected.
+     */
+    private Boolean defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI;
+    /**
+     * The email address that is displayed to users.
+     */
+    private String defenderSecurityCenterHelpEmail;
+    /**
+     * The phone number or Skype ID that is displayed to users.
+     */
+    private String defenderSecurityCenterHelpPhone;
+    /**
+     * The help portal URL this is displayed to users.
+     */
+    private String defenderSecurityCenterHelpURL;
+    /**
+     * Possible values for defenderSecurityCenterITContactDisplay
+     */
+    private DefenderSecurityCenterITContactDisplayType defenderSecurityCenterITContactDisplay;
+    /**
+     * Possible values for defenderSecurityCenterNotificationsFromApp
+     */
+    private DefenderSecurityCenterNotificationsFromAppType defenderSecurityCenterNotificationsFromApp;
+    /**
+     * The company name that is displayed to the users.
+     */
+    private String defenderSecurityCenterOrganizationDisplayName;
+    /**
+     * Specifies the interval (in hours) that will be used to check for signatures, so instead of using the ScheduleDay and ScheduleTime the check for new signatures will be set according to the interval. Valid values 0 to 24
+     */
+    private Integer defenderSignatureUpdateIntervalInHours;
+    /**
+     * Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
+     */
+    private DefenderSubmitSamplesConsentType defenderSubmitSamplesConsentType;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderUntrustedExecutable;
+    /**
+     * Possible values of Defender Attack Surface Reduction Rules
+     */
+    private DefenderAttackSurfaceType defenderUntrustedExecutableType;
+    /**
+     * Possible values of Defender PUA Protection
+     */
+    private DefenderProtectionType defenderUntrustedUSBProcess;
+    /**
+     * Possible values of Defender Attack Surface Reduction Rules
+     */
+    private DefenderAttackSurfaceType defenderUntrustedUSBProcessType;
+    /**
+     * This property will be deprecated in May 2019 and will be replaced with property DeviceGuardSecureBootWithDMA. Specifies whether Platform Security Level is enabled at next reboot.
+     */
+    private Boolean deviceGuardEnableSecureBootWithDMA;
+    /**
+     * Turns On Virtualization Based Security(VBS).
+     */
+    private Boolean deviceGuardEnableVirtualizationBasedSecurity;
+    /**
+     * Possible values of a property
+     */
+    private Enablement deviceGuardLaunchSystemGuard;
+    /**
+     * Possible values of Credential Guard settings.
+     */
+    private DeviceGuardLocalSystemAuthorityCredentialGuardType deviceGuardLocalSystemAuthorityCredentialGuardSettings;
+    /**
+     * Possible values of Secure Boot with DMA
+     */
+    private SecureBootWithDMAType deviceGuardSecureBootWithDMA;
+    /**
+     * Possible values of the DmaGuardDeviceEnumerationPolicy.
+     */
+    private DmaGuardDeviceEnumerationPolicyType dmaGuardDeviceEnumerationPolicy;
+    /**
+     * Blocks stateful FTP connections to the device
+     */
+    private Boolean firewallBlockStatefulFTP;
+    /**
+     * Possible values for firewallCertificateRevocationListCheckMethod
+     */
+    private FirewallCertificateRevocationListCheckMethodType firewallCertificateRevocationListCheckMethod;
+    /**
+     * Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
+     */
+    private Integer firewallIdleTimeoutForSecurityAssociationInSeconds;
+    /**
+     * Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
+     */
+    private Boolean firewallIPSecExemptionsAllowDHCP;
+    /**
+     * Configures IPSec exemptions to allow ICMP
+     */
+    private Boolean firewallIPSecExemptionsAllowICMP;
+    /**
+     * Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
+     */
+    private Boolean firewallIPSecExemptionsAllowNeighborDiscovery;
+    /**
+     * Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
+     */
+    private Boolean firewallIPSecExemptionsAllowRouterDiscovery;
+    /**
+     * Configures IPSec exemptions to no exemptions
+     */
+    private Boolean firewallIPSecExemptionsNone;
+    /**
+     * If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
+     */
+    private Boolean firewallMergeKeyingModuleSettings;
+    /**
+     * Possible values for firewallPacketQueueingMethod
+     */
+    private FirewallPacketQueueingMethodType firewallPacketQueueingMethod;
+    /**
+     * Possible values for firewallPreSharedKeyEncodingMethod
+     */
+    private FirewallPreSharedKeyEncodingMethodType firewallPreSharedKeyEncodingMethod;
+    /**
+     * Configures the firewall profile settings for domain networks
+     */
+    private WindowsFirewallNetworkProfile firewallProfileDomain;
+    /**
+     * Configures the firewall profile settings for private networks
+     */
+    private WindowsFirewallNetworkProfile firewallProfilePrivate;
+    /**
+     * Configures the firewall profile settings for public networks
+     */
+    private WindowsFirewallNetworkProfile firewallProfilePublic;
+    /**
+     * Configures the firewall rule settings. This collection can contain a maximum of 150 elements.
+     */
+    private java.util.List<WindowsFirewallRule> firewallRules;
+    /**
+     * Possible values for LanManagerAuthenticationLevel
+     */
+    private LanManagerAuthenticationLevel lanManagerAuthenticationLevel;
+    /**
+     * If enabled,the SMB client will allow insecure guest logons. If not configured, the SMB client will reject insecure guest logons.
+     */
+    private Boolean lanManagerWorkstationDisableInsecureGuestLogons;
+    /**
+     * Define a different account name to be associated with the security identifier (SID) for the account 'Administrator'.
+     */
+    private String localSecurityOptionsAdministratorAccountName;
+    /**
+     * Possible values for LocalSecurityOptionsAdministratorElevationPromptBehavior
+     */
+    private LocalSecurityOptionsAdministratorElevationPromptBehaviorType localSecurityOptionsAdministratorElevationPromptBehavior;
+    /**
+     * This security setting determines whether to allows anonymous users to perform certain activities, such as enumerating the names of domain accounts and network shares.
+     */
+    private Boolean localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares;
+    /**
+     * Block PKU2U authentication requests to this device to use online identities.
+     */
+    private Boolean localSecurityOptionsAllowPKU2UAuthenticationRequests;
+    /**
+     * Edit the default Security Descriptor Definition Language string to allow or deny users and groups to make remote calls to the SAM.
+     */
+    private String localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager;
+    /**
+     * UI helper boolean for LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager entity
+     */
+    private Boolean localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool;
+    /**
+     * This security setting determines whether a computer can be shut down without having to log on to Windows.
+     */
+    private Boolean localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn;
+    /**
+     * Allow UIAccess apps to prompt for elevation without using the secure desktop.
+     */
+    private Boolean localSecurityOptionsAllowUIAccessApplicationElevation;
+    /**
+     * Allow UIAccess apps to prompt for elevation without using the secure desktop.Default is enabled
+     */
+    private Boolean localSecurityOptionsAllowUIAccessApplicationsForSecureLocations;
+    /**
+     * Prevent a portable computer from being undocked without having to log in.
+     */
+    private Boolean localSecurityOptionsAllowUndockWithoutHavingToLogon;
+    /**
+     * Prevent users from adding new Microsoft accounts to this computer.
+     */
+    private Boolean localSecurityOptionsBlockMicrosoftAccounts;
+    /**
+     * Enable Local accounts that are not password protected to log on from locations other than the physical device.Default is enabled
+     */
+    private Boolean localSecurityOptionsBlockRemoteLogonWithBlankPassword;
+    /**
+     * Enabling this settings allows only interactively logged on user to access CD-ROM media.
+     */
+    private Boolean localSecurityOptionsBlockRemoteOpticalDriveAccess;
+    /**
+     * Restrict installing printer drivers as part of connecting to a shared printer to admins only.
+     */
+    private Boolean localSecurityOptionsBlockUsersInstallingPrinterDrivers;
+    /**
+     * This security setting determines whether the virtual memory pagefile is cleared when the system is shut down.
+     */
+    private Boolean localSecurityOptionsClearVirtualMemoryPageFile;
+    /**
+     * This security setting determines whether packet signing is required by the SMB client component.
+     */
+    private Boolean localSecurityOptionsClientDigitallySignCommunicationsAlways;
+    /**
+     * If this security setting is enabled, the Server Message Block (SMB) redirector is allowed to send plaintext passwords to non-Microsoft SMB servers that do not support password encryption during authentication.
+     */
+    private Boolean localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers;
+    /**
+     * App installations requiring elevated privileges will prompt for admin credentials.Default is enabled
+     */
+    private Boolean localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation;
+    /**
+     * Determines whether the Local Administrator account is enabled or disabled.
+     */
+    private Boolean localSecurityOptionsDisableAdministratorAccount;
+    /**
+     * This security setting determines whether the SMB client attempts to negotiate SMB packet signing.
+     */
+    private Boolean localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees;
+    /**
+     * Determines if the Guest account is enabled or disabled.
+     */
+    private Boolean localSecurityOptionsDisableGuestAccount;
+    /**
+     * This security setting determines whether packet signing is required by the SMB server component.
+     */
+    private Boolean localSecurityOptionsDisableServerDigitallySignCommunicationsAlways;
+    /**
+     * This security setting determines whether the SMB server will negotiate SMB packet signing with clients that request it.
+     */
+    private Boolean localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees;
+    /**
+     * This security setting determines what additional permissions will be granted for anonymous connections to the computer.
+     */
+    private Boolean localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts;
+    /**
+     * Require CTRL+ALT+DEL to be pressed before a user can log on.
+     */
+    private Boolean localSecurityOptionsDoNotRequireCtrlAltDel;
+    /**
+     * This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. Its not stored by default.
+     */
+    private Boolean localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange;
+    /**
+     * Possible values for LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
+     */
+    private LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser;
+    /**
+     * Define a different account name to be associated with the security identifier (SID) for the account 'Guest'.
+     */
+    private String localSecurityOptionsGuestAccountName;
+    /**
+     * Do not display the username of the last person who signed in on this device.
+     */
+    private Boolean localSecurityOptionsHideLastSignedInUser;
+    /**
+     * Do not display the username of the person signing in to this device after credentials are entered and before the devices desktop is shown.
+     */
+    private Boolean localSecurityOptionsHideUsernameAtSignIn;
+    /**
+     * Possible values for LocalSecurityOptionsInformationDisplayedOnLockScreen
+     */
+    private LocalSecurityOptionsInformationDisplayedOnLockScreenType localSecurityOptionsInformationDisplayedOnLockScreen;
+    /**
+     * Possible values for LocalSecurityOptionsInformationShownOnLockScreenType
+     */
+    private LocalSecurityOptionsInformationShownOnLockScreenType localSecurityOptionsInformationShownOnLockScreen;
+    /**
+     * Set message text for users attempting to log in.
+     */
+    private String localSecurityOptionsLogOnMessageText;
+    /**
+     * Set message title for users attempting to log in.
+     */
+    private String localSecurityOptionsLogOnMessageTitle;
+    /**
+     * Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
+     */
+    private Integer localSecurityOptionsMachineInactivityLimit;
+    /**
+     * Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
+     */
+    private Integer localSecurityOptionsMachineInactivityLimitInMinutes;
+    /**
+     * Possible values for LocalSecurityOptionsMinimumSessionSecurity
+     */
+    private LocalSecurityOptionsMinimumSessionSecurity localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients;
+    /**
+     * Possible values for LocalSecurityOptionsMinimumSessionSecurity
+     */
+    private LocalSecurityOptionsMinimumSessionSecurity localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers;
+    /**
+     * Enforce PKI certification path validation for a given executable file before it is permitted to run.
+     */
+    private Boolean localSecurityOptionsOnlyElevateSignedExecutables;
+    /**
+     * By default, this security setting restricts anonymous access to shares and pipes to the settings for named pipes that can be accessed anonymously and Shares that can be accessed anonymously
+     */
+    private Boolean localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares;
+    /**
+     * Possible values for LocalSecurityOptionsSmartCardRemovalBehaviorType
+     */
+    private LocalSecurityOptionsSmartCardRemovalBehaviorType localSecurityOptionsSmartCardRemovalBehavior;
+    /**
+     * Possible values for LocalSecurityOptionsStandardUserElevationPromptBehavior
+     */
+    private LocalSecurityOptionsStandardUserElevationPromptBehaviorType localSecurityOptionsStandardUserElevationPromptBehavior;
+    /**
+     * Enable all elevation requests to go to the interactive user's desktop rather than the secure desktop. Prompt behavior policy settings for admins and standard users are used.
+     */
+    private Boolean localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation;
+    /**
+     * Defines whether the built-in admin account uses Admin Approval Mode or runs all apps with full admin privileges.Default is enabled
+     */
+    private Boolean localSecurityOptionsUseAdminApprovalMode;
+    /**
+     * Define whether Admin Approval Mode and all UAC policy settings are enabled, default is enabled
+     */
+    private Boolean localSecurityOptionsUseAdminApprovalModeForAdministrators;
+    /**
+     * Virtualize file and registry write failures to per user locations
+     */
+    private Boolean localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations;
+    /**
+     * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
+     */
+    private Boolean smartScreenBlockOverrideForFiles;
+    /**
+     * Allows IT Admins to configure SmartScreen for Windows.
+     */
+    private Boolean smartScreenEnableInShell;
+    /**
+     * This user right is used by Credential Manager during Backup/Restore. Users' saved credentials might be compromised if this privilege is given to other entities. Only states NotConfigured and Allowed are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsAccessCredentialManagerAsTrustedCaller;
+    /**
+     * This user right allows a process to impersonate any user without authentication. The process can therefore gain access to the same local resources as that user. Only states NotConfigured and Allowed are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsActAsPartOfTheOperatingSystem;
+    /**
+     * This user right determines which users and groups are allowed to connect to the computer over the network. State Allowed is supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsAllowAccessFromNetwork;
+    /**
+     * This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when backing up files and directories. Only states NotConfigured and Allowed are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsBackupData;
+    /**
+     * This user right determines which users and groups are block from connecting to the computer over the network. State Block is supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsBlockAccessFromNetwork;
+    /**
+     * This user right determines which users and groups can change the time and date on the internal clock of the computer. Only states NotConfigured and Allowed are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsChangeSystemTime;
+    /**
+     * This security setting determines whether users can create global objects that are available to all sessions. Users who can create global objects could affect processes that run under other users' sessions, which could lead to application failure or data corruption. Only states NotConfigured and Allowed are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsCreateGlobalObjects;
+    /**
+     * This user right determines which users and groups can call an internal API to create and change the size of a page file. Only states NotConfigured and Allowed are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsCreatePageFile;
+    /**
+     * This user right determines which accounts can be used by processes to create a directory object using the object manager. Only states NotConfigured and Allowed are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsCreatePermanentSharedObjects;
+    /**
+     * This user right determines if the user can create a symbolic link from the computer to which they are logged on. Only states NotConfigured and Allowed are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsCreateSymbolicLinks;
+    /**
+     * This user right determines which users/groups can be used by processes to create a token that can then be used to get access to any local resources when the process uses an internal API to create an access token. Only states NotConfigured and Allowed are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsCreateToken;
+    /**
+     * This user right determines which users can attach a debugger to any process or to the kernel. Only states NotConfigured and Allowed are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsDebugPrograms;
+    /**
+     * This user right determines which users can set the Trusted for Delegation setting on a user or computer object. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsDelegation;
+    /**
+     * This user right determines which users cannot log on to the computer. States NotConfigured, Blocked are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsDenyLocalLogOn;
+    /**
+     * This user right determines which accounts can be used by a process to add entries to the security log. The security log is used to trace unauthorized system access.  Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsGenerateSecurityAudits;
+    /**
+     * Assigning this user right to a user allows programs running on behalf of that user to impersonate a client. Requiring this user right for this kind of impersonation prevents an unauthorized user from convincing a client to connect to a service that they have created and then impersonating that client, which can elevate the unauthorized user's permissions to administrative or system levels. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsImpersonateClient;
+    /**
+     * This user right determines which accounts can use a process with Write Property access to another process to increase the execution priority assigned to the other process. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsIncreaseSchedulingPriority;
+    /**
+     * This user right determines which users can dynamically load and unload device drivers or other code in to kernel mode. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsLoadUnloadDrivers;
+    /**
+     * This user right determines which users can log on to the computer. States NotConfigured, Allowed are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsLocalLogOn;
+    /**
+     * This user right determines which accounts can use a process to keep data in physical memory, which prevents the system from paging the data to virtual memory on disk. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsLockMemory;
+    /**
+     * This user right determines which users can specify object access auditing options for individual resources, such as files, Active Directory objects, and registry keys. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsManageAuditingAndSecurityLogs;
+    /**
+     * This user right determines which users and groups can run maintenance tasks on a volume, such as remote defragmentation. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsManageVolumes;
+    /**
+     * This user right determines who can modify firmware environment values. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsModifyFirmwareEnvironment;
+    /**
+     * This user right determines which user accounts can modify the integrity label of objects, such as files, registry keys, or processes owned by other users. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsModifyObjectLabels;
+    /**
+     * This user right determines which users can use performance monitoring tools to monitor the performance of system processes. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsProfileSingleProcess;
+    /**
+     * This user right determines which users and groups are prohibited from logging on as a Remote Desktop Services client. Only states NotConfigured and Blocked are supported
+     */
+    private DeviceManagementUserRightsSetting userRightsRemoteDesktopServicesLogOn;
+    /**
+     * This user right determines which users are allowed to shut down a computer from a remote location on the network. Misuse of this user right can result in a denial of service. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsRemoteShutdown;
+    /**
+     * This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when restoring backed up files and directories, and determines which users can set any valid security principal as the owner of an object. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsRestoreData;
+    /**
+     * This user right determines which users can take ownership of any securable object in the system, including Active Directory objects, files and folders, printers, registry keys, processes, and threads. Only states NotConfigured and Allowed are supported.
+     */
+    private DeviceManagementUserRightsSetting userRightsTakeOwnership;
+    /**
+     * Defender TamperProtection setting options
+     */
+    private WindowsDefenderTamperProtectionOptions windowsDefenderTamperProtection;
+    /**
+     * Possible values of xbox service start type
+     */
+    private ServiceStartType xboxServicesAccessoryManagementServiceStartupMode;
+    /**
+     * This setting determines whether xbox game save is enabled (1) or disabled (0).
+     */
+    private Boolean xboxServicesEnableXboxGameSaveTask;
+    /**
+     * Possible values of xbox service start type
+     */
+    private ServiceStartType xboxServicesLiveAuthManagerServiceStartupMode;
+    /**
+     * Possible values of xbox service start type
+     */
+    private ServiceStartType xboxServicesLiveGameSaveServiceStartupMode;
+    /**
+     * Possible values of xbox service start type
+     */
+    private ServiceStartType xboxServicesLiveNetworkingServiceStartupMode;
+    /**
+     * Instantiates a new windows10EndpointProtectionConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10EndpointProtectionConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10EndpointProtectionConfiguration");
@@ -472,7 +927,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10EndpointProtectionConfiguration
+     * @return a windows10EndpointProtectionConfiguration
      */
     @javax.annotation.Nonnull
     public static Windows10EndpointProtectionConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -480,12 +935,12 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return new Windows10EndpointProtectionConfiguration();
     }
     /**
-     * Gets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone.
+     * Gets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the devices camera and microphone.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowCameraMicrophoneRedirection() {
-        return this._applicationGuardAllowCameraMicrophoneRedirection;
+        return this.applicationGuardAllowCameraMicrophoneRedirection;
     }
     /**
      * Gets the applicationGuardAllowFileSaveOnHost property value. Allow users to download files from Edge in the application guard container and save them on the host file system
@@ -493,7 +948,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowFileSaveOnHost() {
-        return this._applicationGuardAllowFileSaveOnHost;
+        return this.applicationGuardAllowFileSaveOnHost;
     }
     /**
      * Gets the applicationGuardAllowPersistence property value. Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
@@ -501,7 +956,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowPersistence() {
-        return this._applicationGuardAllowPersistence;
+        return this.applicationGuardAllowPersistence;
     }
     /**
      * Gets the applicationGuardAllowPrintToLocalPrinters property value. Allow printing to Local Printers from Container
@@ -509,7 +964,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToLocalPrinters() {
-        return this._applicationGuardAllowPrintToLocalPrinters;
+        return this.applicationGuardAllowPrintToLocalPrinters;
     }
     /**
      * Gets the applicationGuardAllowPrintToNetworkPrinters property value. Allow printing to Network Printers from Container
@@ -517,7 +972,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToNetworkPrinters() {
-        return this._applicationGuardAllowPrintToNetworkPrinters;
+        return this.applicationGuardAllowPrintToNetworkPrinters;
     }
     /**
      * Gets the applicationGuardAllowPrintToPDF property value. Allow printing to PDF from Container
@@ -525,7 +980,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToPDF() {
-        return this._applicationGuardAllowPrintToPDF;
+        return this.applicationGuardAllowPrintToPDF;
     }
     /**
      * Gets the applicationGuardAllowPrintToXPS property value. Allow printing to XPS from Container
@@ -533,7 +988,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToXPS() {
-        return this._applicationGuardAllowPrintToXPS;
+        return this.applicationGuardAllowPrintToXPS;
     }
     /**
      * Gets the applicationGuardAllowVirtualGPU property value. Allow application guard to use virtual GPU
@@ -541,7 +996,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardAllowVirtualGPU() {
-        return this._applicationGuardAllowVirtualGPU;
+        return this.applicationGuardAllowVirtualGPU;
     }
     /**
      * Gets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
@@ -549,7 +1004,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public ApplicationGuardBlockClipboardSharingType getApplicationGuardBlockClipboardSharing() {
-        return this._applicationGuardBlockClipboardSharing;
+        return this.applicationGuardBlockClipboardSharing;
     }
     /**
      * Gets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
@@ -557,7 +1012,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public ApplicationGuardBlockFileTransferType getApplicationGuardBlockFileTransfer() {
-        return this._applicationGuardBlockFileTransfer;
+        return this.applicationGuardBlockFileTransfer;
     }
     /**
      * Gets the applicationGuardBlockNonEnterpriseContent property value. Block enterprise sites to load non-enterprise content, such as third party plug-ins
@@ -565,7 +1020,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardBlockNonEnterpriseContent() {
-        return this._applicationGuardBlockNonEnterpriseContent;
+        return this.applicationGuardBlockNonEnterpriseContent;
     }
     /**
      * Gets the applicationGuardCertificateThumbprints property value. Allows certain device level Root Certificates to be shared with the Microsoft Defender Application Guard container.
@@ -573,7 +1028,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getApplicationGuardCertificateThumbprints() {
-        return this._applicationGuardCertificateThumbprints;
+        return this.applicationGuardCertificateThumbprints;
     }
     /**
      * Gets the applicationGuardEnabled property value. Enable Windows Defender Application Guard
@@ -581,7 +1036,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardEnabled() {
-        return this._applicationGuardEnabled;
+        return this.applicationGuardEnabled;
     }
     /**
      * Gets the applicationGuardEnabledOptions property value. Possible values for ApplicationGuardEnabledOptions
@@ -589,7 +1044,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public ApplicationGuardEnabledOptions getApplicationGuardEnabledOptions() {
-        return this._applicationGuardEnabledOptions;
+        return this.applicationGuardEnabledOptions;
     }
     /**
      * Gets the applicationGuardForceAuditing property value. Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
@@ -597,7 +1052,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getApplicationGuardForceAuditing() {
-        return this._applicationGuardForceAuditing;
+        return this.applicationGuardForceAuditing;
     }
     /**
      * Gets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
@@ -605,7 +1060,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public AppLockerApplicationControlType getAppLockerApplicationControl() {
-        return this._appLockerApplicationControl;
+        return this.appLockerApplicationControl;
     }
     /**
      * Gets the bitLockerAllowStandardUserEncryption property value. Allows the admin to allow standard users to enable encrpytion during Azure AD Join.
@@ -613,7 +1068,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getBitLockerAllowStandardUserEncryption() {
-        return this._bitLockerAllowStandardUserEncryption;
+        return this.bitLockerAllowStandardUserEncryption;
     }
     /**
      * Gets the bitLockerDisableWarningForOtherDiskEncryption property value. Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
@@ -621,7 +1076,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getBitLockerDisableWarningForOtherDiskEncryption() {
-        return this._bitLockerDisableWarningForOtherDiskEncryption;
+        return this.bitLockerDisableWarningForOtherDiskEncryption;
     }
     /**
      * Gets the bitLockerEnableStorageCardEncryptionOnMobile property value. Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
@@ -629,7 +1084,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getBitLockerEnableStorageCardEncryptionOnMobile() {
-        return this._bitLockerEnableStorageCardEncryptionOnMobile;
+        return this.bitLockerEnableStorageCardEncryptionOnMobile;
     }
     /**
      * Gets the bitLockerEncryptDevice property value. Allows the admin to require encryption to be turned on using BitLocker.
@@ -637,7 +1092,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getBitLockerEncryptDevice() {
-        return this._bitLockerEncryptDevice;
+        return this.bitLockerEncryptDevice;
     }
     /**
      * Gets the bitLockerFixedDrivePolicy property value. BitLocker Fixed Drive Policy.
@@ -645,7 +1100,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public BitLockerFixedDrivePolicy getBitLockerFixedDrivePolicy() {
-        return this._bitLockerFixedDrivePolicy;
+        return this.bitLockerFixedDrivePolicy;
     }
     /**
      * Gets the bitLockerRecoveryPasswordRotation property value. BitLocker recovery password rotation type
@@ -653,7 +1108,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public BitLockerRecoveryPasswordRotationType getBitLockerRecoveryPasswordRotation() {
-        return this._bitLockerRecoveryPasswordRotation;
+        return this.bitLockerRecoveryPasswordRotation;
     }
     /**
      * Gets the bitLockerRemovableDrivePolicy property value. BitLocker Removable Drive Policy.
@@ -661,7 +1116,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public BitLockerRemovableDrivePolicy getBitLockerRemovableDrivePolicy() {
-        return this._bitLockerRemovableDrivePolicy;
+        return this.bitLockerRemovableDrivePolicy;
     }
     /**
      * Gets the bitLockerSystemDrivePolicy property value. BitLocker System Drive Policy.
@@ -669,7 +1124,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public BitLockerSystemDrivePolicy getBitLockerSystemDrivePolicy() {
-        return this._bitLockerSystemDrivePolicy;
+        return this.bitLockerSystemDrivePolicy;
     }
     /**
      * Gets the defenderAdditionalGuardedFolders property value. List of folder paths to be added to the list of protected folders
@@ -677,7 +1132,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefenderAdditionalGuardedFolders() {
-        return this._defenderAdditionalGuardedFolders;
+        return this.defenderAdditionalGuardedFolders;
     }
     /**
      * Gets the defenderAdobeReaderLaunchChildProcess property value. Possible values of Defender PUA Protection
@@ -685,7 +1140,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderAdobeReaderLaunchChildProcess() {
-        return this._defenderAdobeReaderLaunchChildProcess;
+        return this.defenderAdobeReaderLaunchChildProcess;
     }
     /**
      * Gets the defenderAdvancedRansomewareProtectionType property value. Possible values of Defender PUA Protection
@@ -693,7 +1148,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderAdvancedRansomewareProtectionType() {
-        return this._defenderAdvancedRansomewareProtectionType;
+        return this.defenderAdvancedRansomewareProtectionType;
     }
     /**
      * Gets the defenderAllowBehaviorMonitoring property value. Allows or disallows Windows Defender Behavior Monitoring functionality.
@@ -701,7 +1156,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderAllowBehaviorMonitoring() {
-        return this._defenderAllowBehaviorMonitoring;
+        return this.defenderAllowBehaviorMonitoring;
     }
     /**
      * Gets the defenderAllowCloudProtection property value. To best protect your PC, Windows Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.
@@ -709,7 +1164,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderAllowCloudProtection() {
-        return this._defenderAllowCloudProtection;
+        return this.defenderAllowCloudProtection;
     }
     /**
      * Gets the defenderAllowEndUserAccess property value. Allows or disallows user access to the Windows Defender UI. If disallowed, all Windows Defender notifications will also be suppressed.
@@ -717,7 +1172,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderAllowEndUserAccess() {
-        return this._defenderAllowEndUserAccess;
+        return this.defenderAllowEndUserAccess;
     }
     /**
      * Gets the defenderAllowIntrusionPreventionSystem property value. Allows or disallows Windows Defender Intrusion Prevention functionality.
@@ -725,7 +1180,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderAllowIntrusionPreventionSystem() {
-        return this._defenderAllowIntrusionPreventionSystem;
+        return this.defenderAllowIntrusionPreventionSystem;
     }
     /**
      * Gets the defenderAllowOnAccessProtection property value. Allows or disallows Windows Defender On Access Protection functionality.
@@ -733,7 +1188,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderAllowOnAccessProtection() {
-        return this._defenderAllowOnAccessProtection;
+        return this.defenderAllowOnAccessProtection;
     }
     /**
      * Gets the defenderAllowRealTimeMonitoring property value. Allows or disallows Windows Defender Realtime Monitoring functionality.
@@ -741,7 +1196,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderAllowRealTimeMonitoring() {
-        return this._defenderAllowRealTimeMonitoring;
+        return this.defenderAllowRealTimeMonitoring;
     }
     /**
      * Gets the defenderAllowScanArchiveFiles property value. Allows or disallows scanning of archives.
@@ -749,7 +1204,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderAllowScanArchiveFiles() {
-        return this._defenderAllowScanArchiveFiles;
+        return this.defenderAllowScanArchiveFiles;
     }
     /**
      * Gets the defenderAllowScanDownloads property value. Allows or disallows Windows Defender IOAVP Protection functionality.
@@ -757,7 +1212,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderAllowScanDownloads() {
-        return this._defenderAllowScanDownloads;
+        return this.defenderAllowScanDownloads;
     }
     /**
      * Gets the defenderAllowScanNetworkFiles property value. Allows or disallows a scanning of network files.
@@ -765,7 +1220,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderAllowScanNetworkFiles() {
-        return this._defenderAllowScanNetworkFiles;
+        return this.defenderAllowScanNetworkFiles;
     }
     /**
      * Gets the defenderAllowScanRemovableDrivesDuringFullScan property value. Allows or disallows a full scan of removable drives. During a quick scan, removable drives may still be scanned.
@@ -773,7 +1228,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderAllowScanRemovableDrivesDuringFullScan() {
-        return this._defenderAllowScanRemovableDrivesDuringFullScan;
+        return this.defenderAllowScanRemovableDrivesDuringFullScan;
     }
     /**
      * Gets the defenderAllowScanScriptsLoadedInInternetExplorer property value. Allows or disallows Windows Defender Script Scanning functionality.
@@ -781,7 +1236,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderAllowScanScriptsLoadedInInternetExplorer() {
-        return this._defenderAllowScanScriptsLoadedInInternetExplorer;
+        return this.defenderAllowScanScriptsLoadedInInternetExplorer;
     }
     /**
      * Gets the defenderAttackSurfaceReductionExcludedPaths property value. List of exe files and folders to be excluded from attack surface reduction rules
@@ -789,7 +1244,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefenderAttackSurfaceReductionExcludedPaths() {
-        return this._defenderAttackSurfaceReductionExcludedPaths;
+        return this.defenderAttackSurfaceReductionExcludedPaths;
     }
     /**
      * Gets the defenderBlockEndUserAccess property value. Allows or disallows user access to the Windows Defender UI. If disallowed, all Windows Defender notifications will also be suppressed.
@@ -797,7 +1252,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderBlockEndUserAccess() {
-        return this._defenderBlockEndUserAccess;
+        return this.defenderBlockEndUserAccess;
     }
     /**
      * Gets the defenderBlockPersistenceThroughWmiType property value. Possible values of Defender Attack Surface Reduction Rules
@@ -805,7 +1260,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderBlockPersistenceThroughWmiType() {
-        return this._defenderBlockPersistenceThroughWmiType;
+        return this.defenderBlockPersistenceThroughWmiType;
     }
     /**
      * Gets the defenderCheckForSignaturesBeforeRunningScan property value. This policy setting allows you to manage whether a check for new virus and spyware definitions will occur before running a scan.
@@ -813,7 +1268,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderCheckForSignaturesBeforeRunningScan() {
-        return this._defenderCheckForSignaturesBeforeRunningScan;
+        return this.defenderCheckForSignaturesBeforeRunningScan;
     }
     /**
      * Gets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
@@ -821,7 +1276,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderCloudBlockLevelType getDefenderCloudBlockLevel() {
-        return this._defenderCloudBlockLevel;
+        return this.defenderCloudBlockLevel;
     }
     /**
      * Gets the defenderCloudExtendedTimeoutInSeconds property value. Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- 'Configure the 'Block at First Sight' feature; 'Join Microsoft MAPS'; 'Send file samples when further analysis is required'. Valid values 0 to 50
@@ -829,7 +1284,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getDefenderCloudExtendedTimeoutInSeconds() {
-        return this._defenderCloudExtendedTimeoutInSeconds;
+        return this.defenderCloudExtendedTimeoutInSeconds;
     }
     /**
      * Gets the defenderDaysBeforeDeletingQuarantinedMalware property value. Time period (in days) that quarantine items will be stored on the system. Valid values 0 to 90
@@ -837,7 +1292,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getDefenderDaysBeforeDeletingQuarantinedMalware() {
-        return this._defenderDaysBeforeDeletingQuarantinedMalware;
+        return this.defenderDaysBeforeDeletingQuarantinedMalware;
     }
     /**
      * Gets the defenderDetectedMalwareActions property value. Allows an administrator to specify any valid threat severity levels and the corresponding default action ID to take.
@@ -845,7 +1300,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderDetectedMalwareActions getDefenderDetectedMalwareActions() {
-        return this._defenderDetectedMalwareActions;
+        return this.defenderDetectedMalwareActions;
     }
     /**
      * Gets the defenderDisableBehaviorMonitoring property value. Allows or disallows Windows Defender Behavior Monitoring functionality.
@@ -853,7 +1308,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableBehaviorMonitoring() {
-        return this._defenderDisableBehaviorMonitoring;
+        return this.defenderDisableBehaviorMonitoring;
     }
     /**
      * Gets the defenderDisableCatchupFullScan property value. This policy setting allows you to configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
@@ -861,7 +1316,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableCatchupFullScan() {
-        return this._defenderDisableCatchupFullScan;
+        return this.defenderDisableCatchupFullScan;
     }
     /**
      * Gets the defenderDisableCatchupQuickScan property value. This policy setting allows you to configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
@@ -869,7 +1324,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableCatchupQuickScan() {
-        return this._defenderDisableCatchupQuickScan;
+        return this.defenderDisableCatchupQuickScan;
     }
     /**
      * Gets the defenderDisableCloudProtection property value. To best protect your PC, Windows Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.
@@ -877,7 +1332,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableCloudProtection() {
-        return this._defenderDisableCloudProtection;
+        return this.defenderDisableCloudProtection;
     }
     /**
      * Gets the defenderDisableIntrusionPreventionSystem property value. Allows or disallows Windows Defender Intrusion Prevention functionality.
@@ -885,7 +1340,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableIntrusionPreventionSystem() {
-        return this._defenderDisableIntrusionPreventionSystem;
+        return this.defenderDisableIntrusionPreventionSystem;
     }
     /**
      * Gets the defenderDisableOnAccessProtection property value. Allows or disallows Windows Defender On Access Protection functionality.
@@ -893,7 +1348,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableOnAccessProtection() {
-        return this._defenderDisableOnAccessProtection;
+        return this.defenderDisableOnAccessProtection;
     }
     /**
      * Gets the defenderDisableRealTimeMonitoring property value. Allows or disallows Windows Defender Realtime Monitoring functionality.
@@ -901,7 +1356,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableRealTimeMonitoring() {
-        return this._defenderDisableRealTimeMonitoring;
+        return this.defenderDisableRealTimeMonitoring;
     }
     /**
      * Gets the defenderDisableScanArchiveFiles property value. Allows or disallows scanning of archives.
@@ -909,7 +1364,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableScanArchiveFiles() {
-        return this._defenderDisableScanArchiveFiles;
+        return this.defenderDisableScanArchiveFiles;
     }
     /**
      * Gets the defenderDisableScanDownloads property value. Allows or disallows Windows Defender IOAVP Protection functionality.
@@ -917,7 +1372,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableScanDownloads() {
-        return this._defenderDisableScanDownloads;
+        return this.defenderDisableScanDownloads;
     }
     /**
      * Gets the defenderDisableScanNetworkFiles property value. Allows or disallows a scanning of network files.
@@ -925,7 +1380,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableScanNetworkFiles() {
-        return this._defenderDisableScanNetworkFiles;
+        return this.defenderDisableScanNetworkFiles;
     }
     /**
      * Gets the defenderDisableScanRemovableDrivesDuringFullScan property value. Allows or disallows a full scan of removable drives. During a quick scan, removable drives may still be scanned.
@@ -933,7 +1388,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableScanRemovableDrivesDuringFullScan() {
-        return this._defenderDisableScanRemovableDrivesDuringFullScan;
+        return this.defenderDisableScanRemovableDrivesDuringFullScan;
     }
     /**
      * Gets the defenderDisableScanScriptsLoadedInInternetExplorer property value. Allows or disallows Windows Defender Script Scanning functionality.
@@ -941,7 +1396,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderDisableScanScriptsLoadedInInternetExplorer() {
-        return this._defenderDisableScanScriptsLoadedInInternetExplorer;
+        return this.defenderDisableScanScriptsLoadedInInternetExplorer;
     }
     /**
      * Gets the defenderEmailContentExecution property value. Possible values of Defender PUA Protection
@@ -949,7 +1404,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderEmailContentExecution() {
-        return this._defenderEmailContentExecution;
+        return this.defenderEmailContentExecution;
     }
     /**
      * Gets the defenderEmailContentExecutionType property value. Possible values of Defender Attack Surface Reduction Rules
@@ -957,7 +1412,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderEmailContentExecutionType() {
-        return this._defenderEmailContentExecutionType;
+        return this.defenderEmailContentExecutionType;
     }
     /**
      * Gets the defenderEnableLowCpuPriority property value. This policy setting allows you to enable or disable low CPU priority for scheduled scans.
@@ -965,7 +1420,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderEnableLowCpuPriority() {
-        return this._defenderEnableLowCpuPriority;
+        return this.defenderEnableLowCpuPriority;
     }
     /**
      * Gets the defenderEnableScanIncomingMail property value. Allows or disallows scanning of email.
@@ -973,7 +1428,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderEnableScanIncomingMail() {
-        return this._defenderEnableScanIncomingMail;
+        return this.defenderEnableScanIncomingMail;
     }
     /**
      * Gets the defenderEnableScanMappedNetworkDrivesDuringFullScan property value. Allows or disallows a full scan of mapped network drives.
@@ -981,15 +1436,15 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderEnableScanMappedNetworkDrivesDuringFullScan() {
-        return this._defenderEnableScanMappedNetworkDrivesDuringFullScan;
+        return this.defenderEnableScanMappedNetworkDrivesDuringFullScan;
     }
     /**
      * Gets the defenderExploitProtectionXml property value. Xml content containing information regarding exploit protection details.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getDefenderExploitProtectionXml() {
-        return this._defenderExploitProtectionXml;
+        return this.defenderExploitProtectionXml;
     }
     /**
      * Gets the defenderExploitProtectionXmlFileName property value. Name of the file from which DefenderExploitProtectionXml was obtained.
@@ -997,7 +1452,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getDefenderExploitProtectionXmlFileName() {
-        return this._defenderExploitProtectionXmlFileName;
+        return this.defenderExploitProtectionXmlFileName;
     }
     /**
      * Gets the defenderFileExtensionsToExclude property value. File extensions to exclude from scans and real time protection.
@@ -1005,7 +1460,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefenderFileExtensionsToExclude() {
-        return this._defenderFileExtensionsToExclude;
+        return this.defenderFileExtensionsToExclude;
     }
     /**
      * Gets the defenderFilesAndFoldersToExclude property value. Files and folder to exclude from scans and real time protection.
@@ -1013,7 +1468,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefenderFilesAndFoldersToExclude() {
-        return this._defenderFilesAndFoldersToExclude;
+        return this.defenderFilesAndFoldersToExclude;
     }
     /**
      * Gets the defenderGuardedFoldersAllowedAppPaths property value. List of paths to exe that are allowed to access protected folders
@@ -1021,7 +1476,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefenderGuardedFoldersAllowedAppPaths() {
-        return this._defenderGuardedFoldersAllowedAppPaths;
+        return this.defenderGuardedFoldersAllowedAppPaths;
     }
     /**
      * Gets the defenderGuardMyFoldersType property value. Possible values of Folder Protection
@@ -1029,7 +1484,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public FolderProtectionType getDefenderGuardMyFoldersType() {
-        return this._defenderGuardMyFoldersType;
+        return this.defenderGuardMyFoldersType;
     }
     /**
      * Gets the defenderNetworkProtectionType property value. Possible values of Defender PUA Protection
@@ -1037,7 +1492,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderNetworkProtectionType() {
-        return this._defenderNetworkProtectionType;
+        return this.defenderNetworkProtectionType;
     }
     /**
      * Gets the defenderOfficeAppsExecutableContentCreationOrLaunch property value. Possible values of Defender PUA Protection
@@ -1045,7 +1500,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderOfficeAppsExecutableContentCreationOrLaunch() {
-        return this._defenderOfficeAppsExecutableContentCreationOrLaunch;
+        return this.defenderOfficeAppsExecutableContentCreationOrLaunch;
     }
     /**
      * Gets the defenderOfficeAppsExecutableContentCreationOrLaunchType property value. Possible values of Defender Attack Surface Reduction Rules
@@ -1053,7 +1508,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderOfficeAppsExecutableContentCreationOrLaunchType() {
-        return this._defenderOfficeAppsExecutableContentCreationOrLaunchType;
+        return this.defenderOfficeAppsExecutableContentCreationOrLaunchType;
     }
     /**
      * Gets the defenderOfficeAppsLaunchChildProcess property value. Possible values of Defender PUA Protection
@@ -1061,7 +1516,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderOfficeAppsLaunchChildProcess() {
-        return this._defenderOfficeAppsLaunchChildProcess;
+        return this.defenderOfficeAppsLaunchChildProcess;
     }
     /**
      * Gets the defenderOfficeAppsLaunchChildProcessType property value. Possible values of Defender Attack Surface Reduction Rules
@@ -1069,7 +1524,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderOfficeAppsLaunchChildProcessType() {
-        return this._defenderOfficeAppsLaunchChildProcessType;
+        return this.defenderOfficeAppsLaunchChildProcessType;
     }
     /**
      * Gets the defenderOfficeAppsOtherProcessInjection property value. Possible values of Defender PUA Protection
@@ -1077,7 +1532,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderOfficeAppsOtherProcessInjection() {
-        return this._defenderOfficeAppsOtherProcessInjection;
+        return this.defenderOfficeAppsOtherProcessInjection;
     }
     /**
      * Gets the defenderOfficeAppsOtherProcessInjectionType property value. Possible values of Defender Attack Surface Reduction Rules
@@ -1085,7 +1540,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderOfficeAppsOtherProcessInjectionType() {
-        return this._defenderOfficeAppsOtherProcessInjectionType;
+        return this.defenderOfficeAppsOtherProcessInjectionType;
     }
     /**
      * Gets the defenderOfficeCommunicationAppsLaunchChildProcess property value. Possible values of Defender PUA Protection
@@ -1093,7 +1548,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderOfficeCommunicationAppsLaunchChildProcess() {
-        return this._defenderOfficeCommunicationAppsLaunchChildProcess;
+        return this.defenderOfficeCommunicationAppsLaunchChildProcess;
     }
     /**
      * Gets the defenderOfficeMacroCodeAllowWin32Imports property value. Possible values of Defender PUA Protection
@@ -1101,7 +1556,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderOfficeMacroCodeAllowWin32Imports() {
-        return this._defenderOfficeMacroCodeAllowWin32Imports;
+        return this.defenderOfficeMacroCodeAllowWin32Imports;
     }
     /**
      * Gets the defenderOfficeMacroCodeAllowWin32ImportsType property value. Possible values of Defender Attack Surface Reduction Rules
@@ -1109,7 +1564,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderOfficeMacroCodeAllowWin32ImportsType() {
-        return this._defenderOfficeMacroCodeAllowWin32ImportsType;
+        return this.defenderOfficeMacroCodeAllowWin32ImportsType;
     }
     /**
      * Gets the defenderPotentiallyUnwantedAppAction property value. Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
@@ -1117,7 +1572,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderPotentiallyUnwantedAppAction() {
-        return this._defenderPotentiallyUnwantedAppAction;
+        return this.defenderPotentiallyUnwantedAppAction;
     }
     /**
      * Gets the defenderPreventCredentialStealingType property value. Possible values of Defender PUA Protection
@@ -1125,7 +1580,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderPreventCredentialStealingType() {
-        return this._defenderPreventCredentialStealingType;
+        return this.defenderPreventCredentialStealingType;
     }
     /**
      * Gets the defenderProcessCreation property value. Possible values of Defender PUA Protection
@@ -1133,7 +1588,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderProcessCreation() {
-        return this._defenderProcessCreation;
+        return this.defenderProcessCreation;
     }
     /**
      * Gets the defenderProcessCreationType property value. Possible values of Defender Attack Surface Reduction Rules
@@ -1141,7 +1596,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderProcessCreationType() {
-        return this._defenderProcessCreationType;
+        return this.defenderProcessCreationType;
     }
     /**
      * Gets the defenderProcessesToExclude property value. Processes to exclude from scans and real time protection.
@@ -1149,7 +1604,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefenderProcessesToExclude() {
-        return this._defenderProcessesToExclude;
+        return this.defenderProcessesToExclude;
     }
     /**
      * Gets the defenderScanDirection property value. Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
@@ -1157,7 +1612,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderRealtimeScanDirection getDefenderScanDirection() {
-        return this._defenderScanDirection;
+        return this.defenderScanDirection;
     }
     /**
      * Gets the defenderScanMaxCpuPercentage property value. Represents the average CPU load factor for the Windows Defender scan (in percent). The default value is 50. Valid values 0 to 100
@@ -1165,7 +1620,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getDefenderScanMaxCpuPercentage() {
-        return this._defenderScanMaxCpuPercentage;
+        return this.defenderScanMaxCpuPercentage;
     }
     /**
      * Gets the defenderScanType property value. Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full.
@@ -1173,7 +1628,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderScanType getDefenderScanType() {
-        return this._defenderScanType;
+        return this.defenderScanType;
     }
     /**
      * Gets the defenderScheduledQuickScanTime property value. Selects the time of day that the Windows Defender quick scan should run. For example, a value of 0=12:00AM, a value of 60=1:00AM, a value of 120=2:00, and so on, up to a value of 1380=11:00PM. The default value is 120
@@ -1181,7 +1636,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public LocalTime getDefenderScheduledQuickScanTime() {
-        return this._defenderScheduledQuickScanTime;
+        return this.defenderScheduledQuickScanTime;
     }
     /**
      * Gets the defenderScheduledScanDay property value. Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
@@ -1189,7 +1644,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public WeeklySchedule getDefenderScheduledScanDay() {
-        return this._defenderScheduledScanDay;
+        return this.defenderScheduledScanDay;
     }
     /**
      * Gets the defenderScheduledScanTime property value. Selects the time of day that the Windows Defender scan should run.
@@ -1197,7 +1652,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public LocalTime getDefenderScheduledScanTime() {
-        return this._defenderScheduledScanTime;
+        return this.defenderScheduledScanTime;
     }
     /**
      * Gets the defenderScriptDownloadedPayloadExecution property value. Possible values of Defender PUA Protection
@@ -1205,7 +1660,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderScriptDownloadedPayloadExecution() {
-        return this._defenderScriptDownloadedPayloadExecution;
+        return this.defenderScriptDownloadedPayloadExecution;
     }
     /**
      * Gets the defenderScriptDownloadedPayloadExecutionType property value. Possible values of Defender Attack Surface Reduction Rules
@@ -1213,7 +1668,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderScriptDownloadedPayloadExecutionType() {
-        return this._defenderScriptDownloadedPayloadExecutionType;
+        return this.defenderScriptDownloadedPayloadExecutionType;
     }
     /**
      * Gets the defenderScriptObfuscatedMacroCode property value. Possible values of Defender PUA Protection
@@ -1221,7 +1676,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderScriptObfuscatedMacroCode() {
-        return this._defenderScriptObfuscatedMacroCode;
+        return this.defenderScriptObfuscatedMacroCode;
     }
     /**
      * Gets the defenderScriptObfuscatedMacroCodeType property value. Possible values of Defender Attack Surface Reduction Rules
@@ -1229,7 +1684,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderScriptObfuscatedMacroCodeType() {
-        return this._defenderScriptObfuscatedMacroCodeType;
+        return this.defenderScriptObfuscatedMacroCodeType;
     }
     /**
      * Gets the defenderSecurityCenterBlockExploitProtectionOverride property value. Indicates whether or not to block user from overriding Exploit Protection settings.
@@ -1237,7 +1692,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterBlockExploitProtectionOverride() {
-        return this._defenderSecurityCenterBlockExploitProtectionOverride;
+        return this.defenderSecurityCenterBlockExploitProtectionOverride;
     }
     /**
      * Gets the defenderSecurityCenterDisableAccountUI property value. Used to disable the display of the account protection area.
@@ -1245,7 +1700,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableAccountUI() {
-        return this._defenderSecurityCenterDisableAccountUI;
+        return this.defenderSecurityCenterDisableAccountUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableAppBrowserUI property value. Used to disable the display of the app and browser protection area.
@@ -1253,7 +1708,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableAppBrowserUI() {
-        return this._defenderSecurityCenterDisableAppBrowserUI;
+        return this.defenderSecurityCenterDisableAppBrowserUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableClearTpmUI property value. Used to disable the display of the Clear TPM button.
@@ -1261,7 +1716,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableClearTpmUI() {
-        return this._defenderSecurityCenterDisableClearTpmUI;
+        return this.defenderSecurityCenterDisableClearTpmUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableFamilyUI property value. Used to disable the display of the family options area.
@@ -1269,7 +1724,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableFamilyUI() {
-        return this._defenderSecurityCenterDisableFamilyUI;
+        return this.defenderSecurityCenterDisableFamilyUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableHardwareUI property value. Used to disable the display of the hardware protection area.
@@ -1277,7 +1732,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableHardwareUI() {
-        return this._defenderSecurityCenterDisableHardwareUI;
+        return this.defenderSecurityCenterDisableHardwareUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableHealthUI property value. Used to disable the display of the device performance and health area.
@@ -1285,7 +1740,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableHealthUI() {
-        return this._defenderSecurityCenterDisableHealthUI;
+        return this.defenderSecurityCenterDisableHealthUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableNetworkUI property value. Used to disable the display of the firewall and network protection area.
@@ -1293,7 +1748,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableNetworkUI() {
-        return this._defenderSecurityCenterDisableNetworkUI;
+        return this.defenderSecurityCenterDisableNetworkUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableNotificationAreaUI property value. Used to disable the display of the notification area control. The user needs to either sign out and sign in or reboot the computer for this setting to take effect.
@@ -1301,7 +1756,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableNotificationAreaUI() {
-        return this._defenderSecurityCenterDisableNotificationAreaUI;
+        return this.defenderSecurityCenterDisableNotificationAreaUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableRansomwareUI property value. Used to disable the display of the ransomware protection area.
@@ -1309,7 +1764,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableRansomwareUI() {
-        return this._defenderSecurityCenterDisableRansomwareUI;
+        return this.defenderSecurityCenterDisableRansomwareUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableSecureBootUI property value. Used to disable the display of the secure boot area under Device security.
@@ -1317,7 +1772,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableSecureBootUI() {
-        return this._defenderSecurityCenterDisableSecureBootUI;
+        return this.defenderSecurityCenterDisableSecureBootUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableTroubleshootingUI property value. Used to disable the display of the security process troubleshooting under Device security.
@@ -1325,7 +1780,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableTroubleshootingUI() {
-        return this._defenderSecurityCenterDisableTroubleshootingUI;
+        return this.defenderSecurityCenterDisableTroubleshootingUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableVirusUI property value. Used to disable the display of the virus and threat protection area.
@@ -1333,7 +1788,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableVirusUI() {
-        return this._defenderSecurityCenterDisableVirusUI;
+        return this.defenderSecurityCenterDisableVirusUI;
     }
     /**
      * Gets the defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI property value. Used to disable the display of update TPM Firmware when a vulnerable firmware is detected.
@@ -1341,7 +1796,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI() {
-        return this._defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI;
+        return this.defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI;
     }
     /**
      * Gets the defenderSecurityCenterHelpEmail property value. The email address that is displayed to users.
@@ -1349,7 +1804,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getDefenderSecurityCenterHelpEmail() {
-        return this._defenderSecurityCenterHelpEmail;
+        return this.defenderSecurityCenterHelpEmail;
     }
     /**
      * Gets the defenderSecurityCenterHelpPhone property value. The phone number or Skype ID that is displayed to users.
@@ -1357,7 +1812,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getDefenderSecurityCenterHelpPhone() {
-        return this._defenderSecurityCenterHelpPhone;
+        return this.defenderSecurityCenterHelpPhone;
     }
     /**
      * Gets the defenderSecurityCenterHelpURL property value. The help portal URL this is displayed to users.
@@ -1365,7 +1820,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getDefenderSecurityCenterHelpURL() {
-        return this._defenderSecurityCenterHelpURL;
+        return this.defenderSecurityCenterHelpURL;
     }
     /**
      * Gets the defenderSecurityCenterITContactDisplay property value. Possible values for defenderSecurityCenterITContactDisplay
@@ -1373,7 +1828,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderSecurityCenterITContactDisplayType getDefenderSecurityCenterITContactDisplay() {
-        return this._defenderSecurityCenterITContactDisplay;
+        return this.defenderSecurityCenterITContactDisplay;
     }
     /**
      * Gets the defenderSecurityCenterNotificationsFromApp property value. Possible values for defenderSecurityCenterNotificationsFromApp
@@ -1381,7 +1836,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderSecurityCenterNotificationsFromAppType getDefenderSecurityCenterNotificationsFromApp() {
-        return this._defenderSecurityCenterNotificationsFromApp;
+        return this.defenderSecurityCenterNotificationsFromApp;
     }
     /**
      * Gets the defenderSecurityCenterOrganizationDisplayName property value. The company name that is displayed to the users.
@@ -1389,7 +1844,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getDefenderSecurityCenterOrganizationDisplayName() {
-        return this._defenderSecurityCenterOrganizationDisplayName;
+        return this.defenderSecurityCenterOrganizationDisplayName;
     }
     /**
      * Gets the defenderSignatureUpdateIntervalInHours property value. Specifies the interval (in hours) that will be used to check for signatures, so instead of using the ScheduleDay and ScheduleTime the check for new signatures will be set according to the interval. Valid values 0 to 24
@@ -1397,7 +1852,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getDefenderSignatureUpdateIntervalInHours() {
-        return this._defenderSignatureUpdateIntervalInHours;
+        return this.defenderSignatureUpdateIntervalInHours;
     }
     /**
      * Gets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
@@ -1405,7 +1860,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderSubmitSamplesConsentType getDefenderSubmitSamplesConsentType() {
-        return this._defenderSubmitSamplesConsentType;
+        return this.defenderSubmitSamplesConsentType;
     }
     /**
      * Gets the defenderUntrustedExecutable property value. Possible values of Defender PUA Protection
@@ -1413,7 +1868,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderUntrustedExecutable() {
-        return this._defenderUntrustedExecutable;
+        return this.defenderUntrustedExecutable;
     }
     /**
      * Gets the defenderUntrustedExecutableType property value. Possible values of Defender Attack Surface Reduction Rules
@@ -1421,7 +1876,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderUntrustedExecutableType() {
-        return this._defenderUntrustedExecutableType;
+        return this.defenderUntrustedExecutableType;
     }
     /**
      * Gets the defenderUntrustedUSBProcess property value. Possible values of Defender PUA Protection
@@ -1429,7 +1884,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderProtectionType getDefenderUntrustedUSBProcess() {
-        return this._defenderUntrustedUSBProcess;
+        return this.defenderUntrustedUSBProcess;
     }
     /**
      * Gets the defenderUntrustedUSBProcessType property value. Possible values of Defender Attack Surface Reduction Rules
@@ -1437,7 +1892,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderUntrustedUSBProcessType() {
-        return this._defenderUntrustedUSBProcessType;
+        return this.defenderUntrustedUSBProcessType;
     }
     /**
      * Gets the deviceGuardEnableSecureBootWithDMA property value. This property will be deprecated in May 2019 and will be replaced with property DeviceGuardSecureBootWithDMA. Specifies whether Platform Security Level is enabled at next reboot.
@@ -1445,7 +1900,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDeviceGuardEnableSecureBootWithDMA() {
-        return this._deviceGuardEnableSecureBootWithDMA;
+        return this.deviceGuardEnableSecureBootWithDMA;
     }
     /**
      * Gets the deviceGuardEnableVirtualizationBasedSecurity property value. Turns On Virtualization Based Security(VBS).
@@ -1453,7 +1908,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getDeviceGuardEnableVirtualizationBasedSecurity() {
-        return this._deviceGuardEnableVirtualizationBasedSecurity;
+        return this.deviceGuardEnableVirtualizationBasedSecurity;
     }
     /**
      * Gets the deviceGuardLaunchSystemGuard property value. Possible values of a property
@@ -1461,7 +1916,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Enablement getDeviceGuardLaunchSystemGuard() {
-        return this._deviceGuardLaunchSystemGuard;
+        return this.deviceGuardLaunchSystemGuard;
     }
     /**
      * Gets the deviceGuardLocalSystemAuthorityCredentialGuardSettings property value. Possible values of Credential Guard settings.
@@ -1469,7 +1924,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceGuardLocalSystemAuthorityCredentialGuardType getDeviceGuardLocalSystemAuthorityCredentialGuardSettings() {
-        return this._deviceGuardLocalSystemAuthorityCredentialGuardSettings;
+        return this.deviceGuardLocalSystemAuthorityCredentialGuardSettings;
     }
     /**
      * Gets the deviceGuardSecureBootWithDMA property value. Possible values of Secure Boot with DMA
@@ -1477,7 +1932,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public SecureBootWithDMAType getDeviceGuardSecureBootWithDMA() {
-        return this._deviceGuardSecureBootWithDMA;
+        return this.deviceGuardSecureBootWithDMA;
     }
     /**
      * Gets the dmaGuardDeviceEnumerationPolicy property value. Possible values of the DmaGuardDeviceEnumerationPolicy.
@@ -1485,243 +1940,242 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DmaGuardDeviceEnumerationPolicyType getDmaGuardDeviceEnumerationPolicy() {
-        return this._dmaGuardDeviceEnumerationPolicy;
+        return this.dmaGuardDeviceEnumerationPolicy;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10EndpointProtectionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationGuardAllowCameraMicrophoneRedirection", (n) -> { currentObject.setApplicationGuardAllowCameraMicrophoneRedirection(n.getBooleanValue()); });
-            this.put("applicationGuardAllowFileSaveOnHost", (n) -> { currentObject.setApplicationGuardAllowFileSaveOnHost(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPersistence", (n) -> { currentObject.setApplicationGuardAllowPersistence(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToLocalPrinters", (n) -> { currentObject.setApplicationGuardAllowPrintToLocalPrinters(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToNetworkPrinters", (n) -> { currentObject.setApplicationGuardAllowPrintToNetworkPrinters(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToPDF", (n) -> { currentObject.setApplicationGuardAllowPrintToPDF(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToXPS", (n) -> { currentObject.setApplicationGuardAllowPrintToXPS(n.getBooleanValue()); });
-            this.put("applicationGuardAllowVirtualGPU", (n) -> { currentObject.setApplicationGuardAllowVirtualGPU(n.getBooleanValue()); });
-            this.put("applicationGuardBlockClipboardSharing", (n) -> { currentObject.setApplicationGuardBlockClipboardSharing(n.getEnumValue(ApplicationGuardBlockClipboardSharingType.class)); });
-            this.put("applicationGuardBlockFileTransfer", (n) -> { currentObject.setApplicationGuardBlockFileTransfer(n.getEnumValue(ApplicationGuardBlockFileTransferType.class)); });
-            this.put("applicationGuardBlockNonEnterpriseContent", (n) -> { currentObject.setApplicationGuardBlockNonEnterpriseContent(n.getBooleanValue()); });
-            this.put("applicationGuardCertificateThumbprints", (n) -> { currentObject.setApplicationGuardCertificateThumbprints(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("applicationGuardEnabled", (n) -> { currentObject.setApplicationGuardEnabled(n.getBooleanValue()); });
-            this.put("applicationGuardEnabledOptions", (n) -> { currentObject.setApplicationGuardEnabledOptions(n.getEnumValue(ApplicationGuardEnabledOptions.class)); });
-            this.put("applicationGuardForceAuditing", (n) -> { currentObject.setApplicationGuardForceAuditing(n.getBooleanValue()); });
-            this.put("appLockerApplicationControl", (n) -> { currentObject.setAppLockerApplicationControl(n.getEnumValue(AppLockerApplicationControlType.class)); });
-            this.put("bitLockerAllowStandardUserEncryption", (n) -> { currentObject.setBitLockerAllowStandardUserEncryption(n.getBooleanValue()); });
-            this.put("bitLockerDisableWarningForOtherDiskEncryption", (n) -> { currentObject.setBitLockerDisableWarningForOtherDiskEncryption(n.getBooleanValue()); });
-            this.put("bitLockerEnableStorageCardEncryptionOnMobile", (n) -> { currentObject.setBitLockerEnableStorageCardEncryptionOnMobile(n.getBooleanValue()); });
-            this.put("bitLockerEncryptDevice", (n) -> { currentObject.setBitLockerEncryptDevice(n.getBooleanValue()); });
-            this.put("bitLockerFixedDrivePolicy", (n) -> { currentObject.setBitLockerFixedDrivePolicy(n.getObjectValue(BitLockerFixedDrivePolicy::createFromDiscriminatorValue)); });
-            this.put("bitLockerRecoveryPasswordRotation", (n) -> { currentObject.setBitLockerRecoveryPasswordRotation(n.getEnumValue(BitLockerRecoveryPasswordRotationType.class)); });
-            this.put("bitLockerRemovableDrivePolicy", (n) -> { currentObject.setBitLockerRemovableDrivePolicy(n.getObjectValue(BitLockerRemovableDrivePolicy::createFromDiscriminatorValue)); });
-            this.put("bitLockerSystemDrivePolicy", (n) -> { currentObject.setBitLockerSystemDrivePolicy(n.getObjectValue(BitLockerSystemDrivePolicy::createFromDiscriminatorValue)); });
-            this.put("defenderAdditionalGuardedFolders", (n) -> { currentObject.setDefenderAdditionalGuardedFolders(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderAdobeReaderLaunchChildProcess", (n) -> { currentObject.setDefenderAdobeReaderLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderAdvancedRansomewareProtectionType", (n) -> { currentObject.setDefenderAdvancedRansomewareProtectionType(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderAllowBehaviorMonitoring", (n) -> { currentObject.setDefenderAllowBehaviorMonitoring(n.getBooleanValue()); });
-            this.put("defenderAllowCloudProtection", (n) -> { currentObject.setDefenderAllowCloudProtection(n.getBooleanValue()); });
-            this.put("defenderAllowEndUserAccess", (n) -> { currentObject.setDefenderAllowEndUserAccess(n.getBooleanValue()); });
-            this.put("defenderAllowIntrusionPreventionSystem", (n) -> { currentObject.setDefenderAllowIntrusionPreventionSystem(n.getBooleanValue()); });
-            this.put("defenderAllowOnAccessProtection", (n) -> { currentObject.setDefenderAllowOnAccessProtection(n.getBooleanValue()); });
-            this.put("defenderAllowRealTimeMonitoring", (n) -> { currentObject.setDefenderAllowRealTimeMonitoring(n.getBooleanValue()); });
-            this.put("defenderAllowScanArchiveFiles", (n) -> { currentObject.setDefenderAllowScanArchiveFiles(n.getBooleanValue()); });
-            this.put("defenderAllowScanDownloads", (n) -> { currentObject.setDefenderAllowScanDownloads(n.getBooleanValue()); });
-            this.put("defenderAllowScanNetworkFiles", (n) -> { currentObject.setDefenderAllowScanNetworkFiles(n.getBooleanValue()); });
-            this.put("defenderAllowScanRemovableDrivesDuringFullScan", (n) -> { currentObject.setDefenderAllowScanRemovableDrivesDuringFullScan(n.getBooleanValue()); });
-            this.put("defenderAllowScanScriptsLoadedInInternetExplorer", (n) -> { currentObject.setDefenderAllowScanScriptsLoadedInInternetExplorer(n.getBooleanValue()); });
-            this.put("defenderAttackSurfaceReductionExcludedPaths", (n) -> { currentObject.setDefenderAttackSurfaceReductionExcludedPaths(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderBlockEndUserAccess", (n) -> { currentObject.setDefenderBlockEndUserAccess(n.getBooleanValue()); });
-            this.put("defenderBlockPersistenceThroughWmiType", (n) -> { currentObject.setDefenderBlockPersistenceThroughWmiType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderCheckForSignaturesBeforeRunningScan", (n) -> { currentObject.setDefenderCheckForSignaturesBeforeRunningScan(n.getBooleanValue()); });
-            this.put("defenderCloudBlockLevel", (n) -> { currentObject.setDefenderCloudBlockLevel(n.getEnumValue(DefenderCloudBlockLevelType.class)); });
-            this.put("defenderCloudExtendedTimeoutInSeconds", (n) -> { currentObject.setDefenderCloudExtendedTimeoutInSeconds(n.getIntegerValue()); });
-            this.put("defenderDaysBeforeDeletingQuarantinedMalware", (n) -> { currentObject.setDefenderDaysBeforeDeletingQuarantinedMalware(n.getIntegerValue()); });
-            this.put("defenderDetectedMalwareActions", (n) -> { currentObject.setDefenderDetectedMalwareActions(n.getObjectValue(DefenderDetectedMalwareActions::createFromDiscriminatorValue)); });
-            this.put("defenderDisableBehaviorMonitoring", (n) -> { currentObject.setDefenderDisableBehaviorMonitoring(n.getBooleanValue()); });
-            this.put("defenderDisableCatchupFullScan", (n) -> { currentObject.setDefenderDisableCatchupFullScan(n.getBooleanValue()); });
-            this.put("defenderDisableCatchupQuickScan", (n) -> { currentObject.setDefenderDisableCatchupQuickScan(n.getBooleanValue()); });
-            this.put("defenderDisableCloudProtection", (n) -> { currentObject.setDefenderDisableCloudProtection(n.getBooleanValue()); });
-            this.put("defenderDisableIntrusionPreventionSystem", (n) -> { currentObject.setDefenderDisableIntrusionPreventionSystem(n.getBooleanValue()); });
-            this.put("defenderDisableOnAccessProtection", (n) -> { currentObject.setDefenderDisableOnAccessProtection(n.getBooleanValue()); });
-            this.put("defenderDisableRealTimeMonitoring", (n) -> { currentObject.setDefenderDisableRealTimeMonitoring(n.getBooleanValue()); });
-            this.put("defenderDisableScanArchiveFiles", (n) -> { currentObject.setDefenderDisableScanArchiveFiles(n.getBooleanValue()); });
-            this.put("defenderDisableScanDownloads", (n) -> { currentObject.setDefenderDisableScanDownloads(n.getBooleanValue()); });
-            this.put("defenderDisableScanNetworkFiles", (n) -> { currentObject.setDefenderDisableScanNetworkFiles(n.getBooleanValue()); });
-            this.put("defenderDisableScanRemovableDrivesDuringFullScan", (n) -> { currentObject.setDefenderDisableScanRemovableDrivesDuringFullScan(n.getBooleanValue()); });
-            this.put("defenderDisableScanScriptsLoadedInInternetExplorer", (n) -> { currentObject.setDefenderDisableScanScriptsLoadedInInternetExplorer(n.getBooleanValue()); });
-            this.put("defenderEmailContentExecution", (n) -> { currentObject.setDefenderEmailContentExecution(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderEmailContentExecutionType", (n) -> { currentObject.setDefenderEmailContentExecutionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderEnableLowCpuPriority", (n) -> { currentObject.setDefenderEnableLowCpuPriority(n.getBooleanValue()); });
-            this.put("defenderEnableScanIncomingMail", (n) -> { currentObject.setDefenderEnableScanIncomingMail(n.getBooleanValue()); });
-            this.put("defenderEnableScanMappedNetworkDrivesDuringFullScan", (n) -> { currentObject.setDefenderEnableScanMappedNetworkDrivesDuringFullScan(n.getBooleanValue()); });
-            this.put("defenderExploitProtectionXml", (n) -> { currentObject.setDefenderExploitProtectionXml(n.getByteArrayValue()); });
-            this.put("defenderExploitProtectionXmlFileName", (n) -> { currentObject.setDefenderExploitProtectionXmlFileName(n.getStringValue()); });
-            this.put("defenderFileExtensionsToExclude", (n) -> { currentObject.setDefenderFileExtensionsToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderFilesAndFoldersToExclude", (n) -> { currentObject.setDefenderFilesAndFoldersToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderGuardedFoldersAllowedAppPaths", (n) -> { currentObject.setDefenderGuardedFoldersAllowedAppPaths(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderGuardMyFoldersType", (n) -> { currentObject.setDefenderGuardMyFoldersType(n.getEnumValue(FolderProtectionType.class)); });
-            this.put("defenderNetworkProtectionType", (n) -> { currentObject.setDefenderNetworkProtectionType(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeAppsExecutableContentCreationOrLaunch", (n) -> { currentObject.setDefenderOfficeAppsExecutableContentCreationOrLaunch(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeAppsExecutableContentCreationOrLaunchType", (n) -> { currentObject.setDefenderOfficeAppsExecutableContentCreationOrLaunchType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderOfficeAppsLaunchChildProcess", (n) -> { currentObject.setDefenderOfficeAppsLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeAppsLaunchChildProcessType", (n) -> { currentObject.setDefenderOfficeAppsLaunchChildProcessType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderOfficeAppsOtherProcessInjection", (n) -> { currentObject.setDefenderOfficeAppsOtherProcessInjection(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeAppsOtherProcessInjectionType", (n) -> { currentObject.setDefenderOfficeAppsOtherProcessInjectionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderOfficeCommunicationAppsLaunchChildProcess", (n) -> { currentObject.setDefenderOfficeCommunicationAppsLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeMacroCodeAllowWin32Imports", (n) -> { currentObject.setDefenderOfficeMacroCodeAllowWin32Imports(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeMacroCodeAllowWin32ImportsType", (n) -> { currentObject.setDefenderOfficeMacroCodeAllowWin32ImportsType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderPotentiallyUnwantedAppAction", (n) -> { currentObject.setDefenderPotentiallyUnwantedAppAction(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderPreventCredentialStealingType", (n) -> { currentObject.setDefenderPreventCredentialStealingType(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderProcessCreation", (n) -> { currentObject.setDefenderProcessCreation(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderProcessCreationType", (n) -> { currentObject.setDefenderProcessCreationType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderProcessesToExclude", (n) -> { currentObject.setDefenderProcessesToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderScanDirection", (n) -> { currentObject.setDefenderScanDirection(n.getEnumValue(DefenderRealtimeScanDirection.class)); });
-            this.put("defenderScanMaxCpuPercentage", (n) -> { currentObject.setDefenderScanMaxCpuPercentage(n.getIntegerValue()); });
-            this.put("defenderScanType", (n) -> { currentObject.setDefenderScanType(n.getEnumValue(DefenderScanType.class)); });
-            this.put("defenderScheduledQuickScanTime", (n) -> { currentObject.setDefenderScheduledQuickScanTime(n.getLocalTimeValue()); });
-            this.put("defenderScheduledScanDay", (n) -> { currentObject.setDefenderScheduledScanDay(n.getEnumValue(WeeklySchedule.class)); });
-            this.put("defenderScheduledScanTime", (n) -> { currentObject.setDefenderScheduledScanTime(n.getLocalTimeValue()); });
-            this.put("defenderScriptDownloadedPayloadExecution", (n) -> { currentObject.setDefenderScriptDownloadedPayloadExecution(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderScriptDownloadedPayloadExecutionType", (n) -> { currentObject.setDefenderScriptDownloadedPayloadExecutionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderScriptObfuscatedMacroCode", (n) -> { currentObject.setDefenderScriptObfuscatedMacroCode(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderScriptObfuscatedMacroCodeType", (n) -> { currentObject.setDefenderScriptObfuscatedMacroCodeType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderSecurityCenterBlockExploitProtectionOverride", (n) -> { currentObject.setDefenderSecurityCenterBlockExploitProtectionOverride(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableAccountUI", (n) -> { currentObject.setDefenderSecurityCenterDisableAccountUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableAppBrowserUI", (n) -> { currentObject.setDefenderSecurityCenterDisableAppBrowserUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableClearTpmUI", (n) -> { currentObject.setDefenderSecurityCenterDisableClearTpmUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableFamilyUI", (n) -> { currentObject.setDefenderSecurityCenterDisableFamilyUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableHardwareUI", (n) -> { currentObject.setDefenderSecurityCenterDisableHardwareUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableHealthUI", (n) -> { currentObject.setDefenderSecurityCenterDisableHealthUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableNetworkUI", (n) -> { currentObject.setDefenderSecurityCenterDisableNetworkUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableNotificationAreaUI", (n) -> { currentObject.setDefenderSecurityCenterDisableNotificationAreaUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableRansomwareUI", (n) -> { currentObject.setDefenderSecurityCenterDisableRansomwareUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableSecureBootUI", (n) -> { currentObject.setDefenderSecurityCenterDisableSecureBootUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableTroubleshootingUI", (n) -> { currentObject.setDefenderSecurityCenterDisableTroubleshootingUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableVirusUI", (n) -> { currentObject.setDefenderSecurityCenterDisableVirusUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI", (n) -> { currentObject.setDefenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterHelpEmail", (n) -> { currentObject.setDefenderSecurityCenterHelpEmail(n.getStringValue()); });
-            this.put("defenderSecurityCenterHelpPhone", (n) -> { currentObject.setDefenderSecurityCenterHelpPhone(n.getStringValue()); });
-            this.put("defenderSecurityCenterHelpURL", (n) -> { currentObject.setDefenderSecurityCenterHelpURL(n.getStringValue()); });
-            this.put("defenderSecurityCenterITContactDisplay", (n) -> { currentObject.setDefenderSecurityCenterITContactDisplay(n.getEnumValue(DefenderSecurityCenterITContactDisplayType.class)); });
-            this.put("defenderSecurityCenterNotificationsFromApp", (n) -> { currentObject.setDefenderSecurityCenterNotificationsFromApp(n.getEnumValue(DefenderSecurityCenterNotificationsFromAppType.class)); });
-            this.put("defenderSecurityCenterOrganizationDisplayName", (n) -> { currentObject.setDefenderSecurityCenterOrganizationDisplayName(n.getStringValue()); });
-            this.put("defenderSignatureUpdateIntervalInHours", (n) -> { currentObject.setDefenderSignatureUpdateIntervalInHours(n.getIntegerValue()); });
-            this.put("defenderSubmitSamplesConsentType", (n) -> { currentObject.setDefenderSubmitSamplesConsentType(n.getEnumValue(DefenderSubmitSamplesConsentType.class)); });
-            this.put("defenderUntrustedExecutable", (n) -> { currentObject.setDefenderUntrustedExecutable(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderUntrustedExecutableType", (n) -> { currentObject.setDefenderUntrustedExecutableType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderUntrustedUSBProcess", (n) -> { currentObject.setDefenderUntrustedUSBProcess(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderUntrustedUSBProcessType", (n) -> { currentObject.setDefenderUntrustedUSBProcessType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("deviceGuardEnableSecureBootWithDMA", (n) -> { currentObject.setDeviceGuardEnableSecureBootWithDMA(n.getBooleanValue()); });
-            this.put("deviceGuardEnableVirtualizationBasedSecurity", (n) -> { currentObject.setDeviceGuardEnableVirtualizationBasedSecurity(n.getBooleanValue()); });
-            this.put("deviceGuardLaunchSystemGuard", (n) -> { currentObject.setDeviceGuardLaunchSystemGuard(n.getEnumValue(Enablement.class)); });
-            this.put("deviceGuardLocalSystemAuthorityCredentialGuardSettings", (n) -> { currentObject.setDeviceGuardLocalSystemAuthorityCredentialGuardSettings(n.getEnumValue(DeviceGuardLocalSystemAuthorityCredentialGuardType.class)); });
-            this.put("deviceGuardSecureBootWithDMA", (n) -> { currentObject.setDeviceGuardSecureBootWithDMA(n.getEnumValue(SecureBootWithDMAType.class)); });
-            this.put("dmaGuardDeviceEnumerationPolicy", (n) -> { currentObject.setDmaGuardDeviceEnumerationPolicy(n.getEnumValue(DmaGuardDeviceEnumerationPolicyType.class)); });
-            this.put("firewallBlockStatefulFTP", (n) -> { currentObject.setFirewallBlockStatefulFTP(n.getBooleanValue()); });
-            this.put("firewallCertificateRevocationListCheckMethod", (n) -> { currentObject.setFirewallCertificateRevocationListCheckMethod(n.getEnumValue(FirewallCertificateRevocationListCheckMethodType.class)); });
-            this.put("firewallIdleTimeoutForSecurityAssociationInSeconds", (n) -> { currentObject.setFirewallIdleTimeoutForSecurityAssociationInSeconds(n.getIntegerValue()); });
-            this.put("firewallIPSecExemptionsAllowDHCP", (n) -> { currentObject.setFirewallIPSecExemptionsAllowDHCP(n.getBooleanValue()); });
-            this.put("firewallIPSecExemptionsAllowICMP", (n) -> { currentObject.setFirewallIPSecExemptionsAllowICMP(n.getBooleanValue()); });
-            this.put("firewallIPSecExemptionsAllowNeighborDiscovery", (n) -> { currentObject.setFirewallIPSecExemptionsAllowNeighborDiscovery(n.getBooleanValue()); });
-            this.put("firewallIPSecExemptionsAllowRouterDiscovery", (n) -> { currentObject.setFirewallIPSecExemptionsAllowRouterDiscovery(n.getBooleanValue()); });
-            this.put("firewallIPSecExemptionsNone", (n) -> { currentObject.setFirewallIPSecExemptionsNone(n.getBooleanValue()); });
-            this.put("firewallMergeKeyingModuleSettings", (n) -> { currentObject.setFirewallMergeKeyingModuleSettings(n.getBooleanValue()); });
-            this.put("firewallPacketQueueingMethod", (n) -> { currentObject.setFirewallPacketQueueingMethod(n.getEnumValue(FirewallPacketQueueingMethodType.class)); });
-            this.put("firewallPreSharedKeyEncodingMethod", (n) -> { currentObject.setFirewallPreSharedKeyEncodingMethod(n.getEnumValue(FirewallPreSharedKeyEncodingMethodType.class)); });
-            this.put("firewallProfileDomain", (n) -> { currentObject.setFirewallProfileDomain(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
-            this.put("firewallProfilePrivate", (n) -> { currentObject.setFirewallProfilePrivate(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
-            this.put("firewallProfilePublic", (n) -> { currentObject.setFirewallProfilePublic(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
-            this.put("firewallRules", (n) -> { currentObject.setFirewallRules(n.getCollectionOfObjectValues(WindowsFirewallRule::createFromDiscriminatorValue)); });
-            this.put("lanManagerAuthenticationLevel", (n) -> { currentObject.setLanManagerAuthenticationLevel(n.getEnumValue(LanManagerAuthenticationLevel.class)); });
-            this.put("lanManagerWorkstationDisableInsecureGuestLogons", (n) -> { currentObject.setLanManagerWorkstationDisableInsecureGuestLogons(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAdministratorAccountName", (n) -> { currentObject.setLocalSecurityOptionsAdministratorAccountName(n.getStringValue()); });
-            this.put("localSecurityOptionsAdministratorElevationPromptBehavior", (n) -> { currentObject.setLocalSecurityOptionsAdministratorElevationPromptBehavior(n.getEnumValue(LocalSecurityOptionsAdministratorElevationPromptBehaviorType.class)); });
-            this.put("localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares", (n) -> { currentObject.setLocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowPKU2UAuthenticationRequests", (n) -> { currentObject.setLocalSecurityOptionsAllowPKU2UAuthenticationRequests(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager", (n) -> { currentObject.setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager(n.getStringValue()); });
-            this.put("localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool", (n) -> { currentObject.setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn", (n) -> { currentObject.setLocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowUIAccessApplicationElevation", (n) -> { currentObject.setLocalSecurityOptionsAllowUIAccessApplicationElevation(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowUIAccessApplicationsForSecureLocations", (n) -> { currentObject.setLocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowUndockWithoutHavingToLogon", (n) -> { currentObject.setLocalSecurityOptionsAllowUndockWithoutHavingToLogon(n.getBooleanValue()); });
-            this.put("localSecurityOptionsBlockMicrosoftAccounts", (n) -> { currentObject.setLocalSecurityOptionsBlockMicrosoftAccounts(n.getBooleanValue()); });
-            this.put("localSecurityOptionsBlockRemoteLogonWithBlankPassword", (n) -> { currentObject.setLocalSecurityOptionsBlockRemoteLogonWithBlankPassword(n.getBooleanValue()); });
-            this.put("localSecurityOptionsBlockRemoteOpticalDriveAccess", (n) -> { currentObject.setLocalSecurityOptionsBlockRemoteOpticalDriveAccess(n.getBooleanValue()); });
-            this.put("localSecurityOptionsBlockUsersInstallingPrinterDrivers", (n) -> { currentObject.setLocalSecurityOptionsBlockUsersInstallingPrinterDrivers(n.getBooleanValue()); });
-            this.put("localSecurityOptionsClearVirtualMemoryPageFile", (n) -> { currentObject.setLocalSecurityOptionsClearVirtualMemoryPageFile(n.getBooleanValue()); });
-            this.put("localSecurityOptionsClientDigitallySignCommunicationsAlways", (n) -> { currentObject.setLocalSecurityOptionsClientDigitallySignCommunicationsAlways(n.getBooleanValue()); });
-            this.put("localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers", (n) -> { currentObject.setLocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation", (n) -> { currentObject.setLocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDisableAdministratorAccount", (n) -> { currentObject.setLocalSecurityOptionsDisableAdministratorAccount(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees", (n) -> { currentObject.setLocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDisableGuestAccount", (n) -> { currentObject.setLocalSecurityOptionsDisableGuestAccount(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDisableServerDigitallySignCommunicationsAlways", (n) -> { currentObject.setLocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees", (n) -> { currentObject.setLocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts", (n) -> { currentObject.setLocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDoNotRequireCtrlAltDel", (n) -> { currentObject.setLocalSecurityOptionsDoNotRequireCtrlAltDel(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange", (n) -> { currentObject.setLocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange(n.getBooleanValue()); });
-            this.put("localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser", (n) -> { currentObject.setLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser(n.getEnumValue(LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType.class)); });
-            this.put("localSecurityOptionsGuestAccountName", (n) -> { currentObject.setLocalSecurityOptionsGuestAccountName(n.getStringValue()); });
-            this.put("localSecurityOptionsHideLastSignedInUser", (n) -> { currentObject.setLocalSecurityOptionsHideLastSignedInUser(n.getBooleanValue()); });
-            this.put("localSecurityOptionsHideUsernameAtSignIn", (n) -> { currentObject.setLocalSecurityOptionsHideUsernameAtSignIn(n.getBooleanValue()); });
-            this.put("localSecurityOptionsInformationDisplayedOnLockScreen", (n) -> { currentObject.setLocalSecurityOptionsInformationDisplayedOnLockScreen(n.getEnumValue(LocalSecurityOptionsInformationDisplayedOnLockScreenType.class)); });
-            this.put("localSecurityOptionsInformationShownOnLockScreen", (n) -> { currentObject.setLocalSecurityOptionsInformationShownOnLockScreen(n.getEnumValue(LocalSecurityOptionsInformationShownOnLockScreenType.class)); });
-            this.put("localSecurityOptionsLogOnMessageText", (n) -> { currentObject.setLocalSecurityOptionsLogOnMessageText(n.getStringValue()); });
-            this.put("localSecurityOptionsLogOnMessageTitle", (n) -> { currentObject.setLocalSecurityOptionsLogOnMessageTitle(n.getStringValue()); });
-            this.put("localSecurityOptionsMachineInactivityLimit", (n) -> { currentObject.setLocalSecurityOptionsMachineInactivityLimit(n.getIntegerValue()); });
-            this.put("localSecurityOptionsMachineInactivityLimitInMinutes", (n) -> { currentObject.setLocalSecurityOptionsMachineInactivityLimitInMinutes(n.getIntegerValue()); });
-            this.put("localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients", (n) -> { currentObject.setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients(n.getEnumValue(LocalSecurityOptionsMinimumSessionSecurity.class)); });
-            this.put("localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers", (n) -> { currentObject.setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers(n.getEnumValue(LocalSecurityOptionsMinimumSessionSecurity.class)); });
-            this.put("localSecurityOptionsOnlyElevateSignedExecutables", (n) -> { currentObject.setLocalSecurityOptionsOnlyElevateSignedExecutables(n.getBooleanValue()); });
-            this.put("localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares", (n) -> { currentObject.setLocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares(n.getBooleanValue()); });
-            this.put("localSecurityOptionsSmartCardRemovalBehavior", (n) -> { currentObject.setLocalSecurityOptionsSmartCardRemovalBehavior(n.getEnumValue(LocalSecurityOptionsSmartCardRemovalBehaviorType.class)); });
-            this.put("localSecurityOptionsStandardUserElevationPromptBehavior", (n) -> { currentObject.setLocalSecurityOptionsStandardUserElevationPromptBehavior(n.getEnumValue(LocalSecurityOptionsStandardUserElevationPromptBehaviorType.class)); });
-            this.put("localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation", (n) -> { currentObject.setLocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation(n.getBooleanValue()); });
-            this.put("localSecurityOptionsUseAdminApprovalMode", (n) -> { currentObject.setLocalSecurityOptionsUseAdminApprovalMode(n.getBooleanValue()); });
-            this.put("localSecurityOptionsUseAdminApprovalModeForAdministrators", (n) -> { currentObject.setLocalSecurityOptionsUseAdminApprovalModeForAdministrators(n.getBooleanValue()); });
-            this.put("localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations", (n) -> { currentObject.setLocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations(n.getBooleanValue()); });
-            this.put("smartScreenBlockOverrideForFiles", (n) -> { currentObject.setSmartScreenBlockOverrideForFiles(n.getBooleanValue()); });
-            this.put("smartScreenEnableInShell", (n) -> { currentObject.setSmartScreenEnableInShell(n.getBooleanValue()); });
-            this.put("userRightsAccessCredentialManagerAsTrustedCaller", (n) -> { currentObject.setUserRightsAccessCredentialManagerAsTrustedCaller(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsActAsPartOfTheOperatingSystem", (n) -> { currentObject.setUserRightsActAsPartOfTheOperatingSystem(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsAllowAccessFromNetwork", (n) -> { currentObject.setUserRightsAllowAccessFromNetwork(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsBackupData", (n) -> { currentObject.setUserRightsBackupData(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsBlockAccessFromNetwork", (n) -> { currentObject.setUserRightsBlockAccessFromNetwork(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsChangeSystemTime", (n) -> { currentObject.setUserRightsChangeSystemTime(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsCreateGlobalObjects", (n) -> { currentObject.setUserRightsCreateGlobalObjects(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsCreatePageFile", (n) -> { currentObject.setUserRightsCreatePageFile(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsCreatePermanentSharedObjects", (n) -> { currentObject.setUserRightsCreatePermanentSharedObjects(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsCreateSymbolicLinks", (n) -> { currentObject.setUserRightsCreateSymbolicLinks(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsCreateToken", (n) -> { currentObject.setUserRightsCreateToken(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsDebugPrograms", (n) -> { currentObject.setUserRightsDebugPrograms(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsDelegation", (n) -> { currentObject.setUserRightsDelegation(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsDenyLocalLogOn", (n) -> { currentObject.setUserRightsDenyLocalLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsGenerateSecurityAudits", (n) -> { currentObject.setUserRightsGenerateSecurityAudits(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsImpersonateClient", (n) -> { currentObject.setUserRightsImpersonateClient(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsIncreaseSchedulingPriority", (n) -> { currentObject.setUserRightsIncreaseSchedulingPriority(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsLoadUnloadDrivers", (n) -> { currentObject.setUserRightsLoadUnloadDrivers(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsLocalLogOn", (n) -> { currentObject.setUserRightsLocalLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsLockMemory", (n) -> { currentObject.setUserRightsLockMemory(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsManageAuditingAndSecurityLogs", (n) -> { currentObject.setUserRightsManageAuditingAndSecurityLogs(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsManageVolumes", (n) -> { currentObject.setUserRightsManageVolumes(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsModifyFirmwareEnvironment", (n) -> { currentObject.setUserRightsModifyFirmwareEnvironment(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsModifyObjectLabels", (n) -> { currentObject.setUserRightsModifyObjectLabels(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsProfileSingleProcess", (n) -> { currentObject.setUserRightsProfileSingleProcess(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsRemoteDesktopServicesLogOn", (n) -> { currentObject.setUserRightsRemoteDesktopServicesLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsRemoteShutdown", (n) -> { currentObject.setUserRightsRemoteShutdown(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsRestoreData", (n) -> { currentObject.setUserRightsRestoreData(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsTakeOwnership", (n) -> { currentObject.setUserRightsTakeOwnership(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("windowsDefenderTamperProtection", (n) -> { currentObject.setWindowsDefenderTamperProtection(n.getEnumValue(WindowsDefenderTamperProtectionOptions.class)); });
-            this.put("xboxServicesAccessoryManagementServiceStartupMode", (n) -> { currentObject.setXboxServicesAccessoryManagementServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
-            this.put("xboxServicesEnableXboxGameSaveTask", (n) -> { currentObject.setXboxServicesEnableXboxGameSaveTask(n.getBooleanValue()); });
-            this.put("xboxServicesLiveAuthManagerServiceStartupMode", (n) -> { currentObject.setXboxServicesLiveAuthManagerServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
-            this.put("xboxServicesLiveGameSaveServiceStartupMode", (n) -> { currentObject.setXboxServicesLiveGameSaveServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
-            this.put("xboxServicesLiveNetworkingServiceStartupMode", (n) -> { currentObject.setXboxServicesLiveNetworkingServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationGuardAllowCameraMicrophoneRedirection", (n) -> { this.setApplicationGuardAllowCameraMicrophoneRedirection(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowFileSaveOnHost", (n) -> { this.setApplicationGuardAllowFileSaveOnHost(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPersistence", (n) -> { this.setApplicationGuardAllowPersistence(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToLocalPrinters", (n) -> { this.setApplicationGuardAllowPrintToLocalPrinters(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToNetworkPrinters", (n) -> { this.setApplicationGuardAllowPrintToNetworkPrinters(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToPDF", (n) -> { this.setApplicationGuardAllowPrintToPDF(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToXPS", (n) -> { this.setApplicationGuardAllowPrintToXPS(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowVirtualGPU", (n) -> { this.setApplicationGuardAllowVirtualGPU(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardBlockClipboardSharing", (n) -> { this.setApplicationGuardBlockClipboardSharing(n.getEnumValue(ApplicationGuardBlockClipboardSharingType.class)); });
+        deserializerMap.put("applicationGuardBlockFileTransfer", (n) -> { this.setApplicationGuardBlockFileTransfer(n.getEnumValue(ApplicationGuardBlockFileTransferType.class)); });
+        deserializerMap.put("applicationGuardBlockNonEnterpriseContent", (n) -> { this.setApplicationGuardBlockNonEnterpriseContent(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardCertificateThumbprints", (n) -> { this.setApplicationGuardCertificateThumbprints(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("applicationGuardEnabled", (n) -> { this.setApplicationGuardEnabled(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardEnabledOptions", (n) -> { this.setApplicationGuardEnabledOptions(n.getEnumValue(ApplicationGuardEnabledOptions.class)); });
+        deserializerMap.put("applicationGuardForceAuditing", (n) -> { this.setApplicationGuardForceAuditing(n.getBooleanValue()); });
+        deserializerMap.put("appLockerApplicationControl", (n) -> { this.setAppLockerApplicationControl(n.getEnumValue(AppLockerApplicationControlType.class)); });
+        deserializerMap.put("bitLockerAllowStandardUserEncryption", (n) -> { this.setBitLockerAllowStandardUserEncryption(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerDisableWarningForOtherDiskEncryption", (n) -> { this.setBitLockerDisableWarningForOtherDiskEncryption(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerEnableStorageCardEncryptionOnMobile", (n) -> { this.setBitLockerEnableStorageCardEncryptionOnMobile(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerEncryptDevice", (n) -> { this.setBitLockerEncryptDevice(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerFixedDrivePolicy", (n) -> { this.setBitLockerFixedDrivePolicy(n.getObjectValue(BitLockerFixedDrivePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("bitLockerRecoveryPasswordRotation", (n) -> { this.setBitLockerRecoveryPasswordRotation(n.getEnumValue(BitLockerRecoveryPasswordRotationType.class)); });
+        deserializerMap.put("bitLockerRemovableDrivePolicy", (n) -> { this.setBitLockerRemovableDrivePolicy(n.getObjectValue(BitLockerRemovableDrivePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("bitLockerSystemDrivePolicy", (n) -> { this.setBitLockerSystemDrivePolicy(n.getObjectValue(BitLockerSystemDrivePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("defenderAdditionalGuardedFolders", (n) -> { this.setDefenderAdditionalGuardedFolders(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderAdobeReaderLaunchChildProcess", (n) -> { this.setDefenderAdobeReaderLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderAdvancedRansomewareProtectionType", (n) -> { this.setDefenderAdvancedRansomewareProtectionType(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderAllowBehaviorMonitoring", (n) -> { this.setDefenderAllowBehaviorMonitoring(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowCloudProtection", (n) -> { this.setDefenderAllowCloudProtection(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowEndUserAccess", (n) -> { this.setDefenderAllowEndUserAccess(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowIntrusionPreventionSystem", (n) -> { this.setDefenderAllowIntrusionPreventionSystem(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowOnAccessProtection", (n) -> { this.setDefenderAllowOnAccessProtection(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowRealTimeMonitoring", (n) -> { this.setDefenderAllowRealTimeMonitoring(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowScanArchiveFiles", (n) -> { this.setDefenderAllowScanArchiveFiles(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowScanDownloads", (n) -> { this.setDefenderAllowScanDownloads(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowScanNetworkFiles", (n) -> { this.setDefenderAllowScanNetworkFiles(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowScanRemovableDrivesDuringFullScan", (n) -> { this.setDefenderAllowScanRemovableDrivesDuringFullScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowScanScriptsLoadedInInternetExplorer", (n) -> { this.setDefenderAllowScanScriptsLoadedInInternetExplorer(n.getBooleanValue()); });
+        deserializerMap.put("defenderAttackSurfaceReductionExcludedPaths", (n) -> { this.setDefenderAttackSurfaceReductionExcludedPaths(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderBlockEndUserAccess", (n) -> { this.setDefenderBlockEndUserAccess(n.getBooleanValue()); });
+        deserializerMap.put("defenderBlockPersistenceThroughWmiType", (n) -> { this.setDefenderBlockPersistenceThroughWmiType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderCheckForSignaturesBeforeRunningScan", (n) -> { this.setDefenderCheckForSignaturesBeforeRunningScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderCloudBlockLevel", (n) -> { this.setDefenderCloudBlockLevel(n.getEnumValue(DefenderCloudBlockLevelType.class)); });
+        deserializerMap.put("defenderCloudExtendedTimeoutInSeconds", (n) -> { this.setDefenderCloudExtendedTimeoutInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("defenderDaysBeforeDeletingQuarantinedMalware", (n) -> { this.setDefenderDaysBeforeDeletingQuarantinedMalware(n.getIntegerValue()); });
+        deserializerMap.put("defenderDetectedMalwareActions", (n) -> { this.setDefenderDetectedMalwareActions(n.getObjectValue(DefenderDetectedMalwareActions::createFromDiscriminatorValue)); });
+        deserializerMap.put("defenderDisableBehaviorMonitoring", (n) -> { this.setDefenderDisableBehaviorMonitoring(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableCatchupFullScan", (n) -> { this.setDefenderDisableCatchupFullScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableCatchupQuickScan", (n) -> { this.setDefenderDisableCatchupQuickScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableCloudProtection", (n) -> { this.setDefenderDisableCloudProtection(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableIntrusionPreventionSystem", (n) -> { this.setDefenderDisableIntrusionPreventionSystem(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableOnAccessProtection", (n) -> { this.setDefenderDisableOnAccessProtection(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableRealTimeMonitoring", (n) -> { this.setDefenderDisableRealTimeMonitoring(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableScanArchiveFiles", (n) -> { this.setDefenderDisableScanArchiveFiles(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableScanDownloads", (n) -> { this.setDefenderDisableScanDownloads(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableScanNetworkFiles", (n) -> { this.setDefenderDisableScanNetworkFiles(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableScanRemovableDrivesDuringFullScan", (n) -> { this.setDefenderDisableScanRemovableDrivesDuringFullScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableScanScriptsLoadedInInternetExplorer", (n) -> { this.setDefenderDisableScanScriptsLoadedInInternetExplorer(n.getBooleanValue()); });
+        deserializerMap.put("defenderEmailContentExecution", (n) -> { this.setDefenderEmailContentExecution(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderEmailContentExecutionType", (n) -> { this.setDefenderEmailContentExecutionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderEnableLowCpuPriority", (n) -> { this.setDefenderEnableLowCpuPriority(n.getBooleanValue()); });
+        deserializerMap.put("defenderEnableScanIncomingMail", (n) -> { this.setDefenderEnableScanIncomingMail(n.getBooleanValue()); });
+        deserializerMap.put("defenderEnableScanMappedNetworkDrivesDuringFullScan", (n) -> { this.setDefenderEnableScanMappedNetworkDrivesDuringFullScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderExploitProtectionXml", (n) -> { this.setDefenderExploitProtectionXml(n.getByteArrayValue()); });
+        deserializerMap.put("defenderExploitProtectionXmlFileName", (n) -> { this.setDefenderExploitProtectionXmlFileName(n.getStringValue()); });
+        deserializerMap.put("defenderFileExtensionsToExclude", (n) -> { this.setDefenderFileExtensionsToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderFilesAndFoldersToExclude", (n) -> { this.setDefenderFilesAndFoldersToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderGuardedFoldersAllowedAppPaths", (n) -> { this.setDefenderGuardedFoldersAllowedAppPaths(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderGuardMyFoldersType", (n) -> { this.setDefenderGuardMyFoldersType(n.getEnumValue(FolderProtectionType.class)); });
+        deserializerMap.put("defenderNetworkProtectionType", (n) -> { this.setDefenderNetworkProtectionType(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeAppsExecutableContentCreationOrLaunch", (n) -> { this.setDefenderOfficeAppsExecutableContentCreationOrLaunch(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeAppsExecutableContentCreationOrLaunchType", (n) -> { this.setDefenderOfficeAppsExecutableContentCreationOrLaunchType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderOfficeAppsLaunchChildProcess", (n) -> { this.setDefenderOfficeAppsLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeAppsLaunchChildProcessType", (n) -> { this.setDefenderOfficeAppsLaunchChildProcessType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderOfficeAppsOtherProcessInjection", (n) -> { this.setDefenderOfficeAppsOtherProcessInjection(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeAppsOtherProcessInjectionType", (n) -> { this.setDefenderOfficeAppsOtherProcessInjectionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderOfficeCommunicationAppsLaunchChildProcess", (n) -> { this.setDefenderOfficeCommunicationAppsLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeMacroCodeAllowWin32Imports", (n) -> { this.setDefenderOfficeMacroCodeAllowWin32Imports(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeMacroCodeAllowWin32ImportsType", (n) -> { this.setDefenderOfficeMacroCodeAllowWin32ImportsType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderPotentiallyUnwantedAppAction", (n) -> { this.setDefenderPotentiallyUnwantedAppAction(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderPreventCredentialStealingType", (n) -> { this.setDefenderPreventCredentialStealingType(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderProcessCreation", (n) -> { this.setDefenderProcessCreation(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderProcessCreationType", (n) -> { this.setDefenderProcessCreationType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderProcessesToExclude", (n) -> { this.setDefenderProcessesToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderScanDirection", (n) -> { this.setDefenderScanDirection(n.getEnumValue(DefenderRealtimeScanDirection.class)); });
+        deserializerMap.put("defenderScanMaxCpuPercentage", (n) -> { this.setDefenderScanMaxCpuPercentage(n.getIntegerValue()); });
+        deserializerMap.put("defenderScanType", (n) -> { this.setDefenderScanType(n.getEnumValue(DefenderScanType.class)); });
+        deserializerMap.put("defenderScheduledQuickScanTime", (n) -> { this.setDefenderScheduledQuickScanTime(n.getLocalTimeValue()); });
+        deserializerMap.put("defenderScheduledScanDay", (n) -> { this.setDefenderScheduledScanDay(n.getEnumValue(WeeklySchedule.class)); });
+        deserializerMap.put("defenderScheduledScanTime", (n) -> { this.setDefenderScheduledScanTime(n.getLocalTimeValue()); });
+        deserializerMap.put("defenderScriptDownloadedPayloadExecution", (n) -> { this.setDefenderScriptDownloadedPayloadExecution(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderScriptDownloadedPayloadExecutionType", (n) -> { this.setDefenderScriptDownloadedPayloadExecutionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderScriptObfuscatedMacroCode", (n) -> { this.setDefenderScriptObfuscatedMacroCode(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderScriptObfuscatedMacroCodeType", (n) -> { this.setDefenderScriptObfuscatedMacroCodeType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderSecurityCenterBlockExploitProtectionOverride", (n) -> { this.setDefenderSecurityCenterBlockExploitProtectionOverride(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableAccountUI", (n) -> { this.setDefenderSecurityCenterDisableAccountUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableAppBrowserUI", (n) -> { this.setDefenderSecurityCenterDisableAppBrowserUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableClearTpmUI", (n) -> { this.setDefenderSecurityCenterDisableClearTpmUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableFamilyUI", (n) -> { this.setDefenderSecurityCenterDisableFamilyUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableHardwareUI", (n) -> { this.setDefenderSecurityCenterDisableHardwareUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableHealthUI", (n) -> { this.setDefenderSecurityCenterDisableHealthUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableNetworkUI", (n) -> { this.setDefenderSecurityCenterDisableNetworkUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableNotificationAreaUI", (n) -> { this.setDefenderSecurityCenterDisableNotificationAreaUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableRansomwareUI", (n) -> { this.setDefenderSecurityCenterDisableRansomwareUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableSecureBootUI", (n) -> { this.setDefenderSecurityCenterDisableSecureBootUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableTroubleshootingUI", (n) -> { this.setDefenderSecurityCenterDisableTroubleshootingUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableVirusUI", (n) -> { this.setDefenderSecurityCenterDisableVirusUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI", (n) -> { this.setDefenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterHelpEmail", (n) -> { this.setDefenderSecurityCenterHelpEmail(n.getStringValue()); });
+        deserializerMap.put("defenderSecurityCenterHelpPhone", (n) -> { this.setDefenderSecurityCenterHelpPhone(n.getStringValue()); });
+        deserializerMap.put("defenderSecurityCenterHelpURL", (n) -> { this.setDefenderSecurityCenterHelpURL(n.getStringValue()); });
+        deserializerMap.put("defenderSecurityCenterITContactDisplay", (n) -> { this.setDefenderSecurityCenterITContactDisplay(n.getEnumValue(DefenderSecurityCenterITContactDisplayType.class)); });
+        deserializerMap.put("defenderSecurityCenterNotificationsFromApp", (n) -> { this.setDefenderSecurityCenterNotificationsFromApp(n.getEnumValue(DefenderSecurityCenterNotificationsFromAppType.class)); });
+        deserializerMap.put("defenderSecurityCenterOrganizationDisplayName", (n) -> { this.setDefenderSecurityCenterOrganizationDisplayName(n.getStringValue()); });
+        deserializerMap.put("defenderSignatureUpdateIntervalInHours", (n) -> { this.setDefenderSignatureUpdateIntervalInHours(n.getIntegerValue()); });
+        deserializerMap.put("defenderSubmitSamplesConsentType", (n) -> { this.setDefenderSubmitSamplesConsentType(n.getEnumValue(DefenderSubmitSamplesConsentType.class)); });
+        deserializerMap.put("defenderUntrustedExecutable", (n) -> { this.setDefenderUntrustedExecutable(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderUntrustedExecutableType", (n) -> { this.setDefenderUntrustedExecutableType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderUntrustedUSBProcess", (n) -> { this.setDefenderUntrustedUSBProcess(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderUntrustedUSBProcessType", (n) -> { this.setDefenderUntrustedUSBProcessType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("deviceGuardEnableSecureBootWithDMA", (n) -> { this.setDeviceGuardEnableSecureBootWithDMA(n.getBooleanValue()); });
+        deserializerMap.put("deviceGuardEnableVirtualizationBasedSecurity", (n) -> { this.setDeviceGuardEnableVirtualizationBasedSecurity(n.getBooleanValue()); });
+        deserializerMap.put("deviceGuardLaunchSystemGuard", (n) -> { this.setDeviceGuardLaunchSystemGuard(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("deviceGuardLocalSystemAuthorityCredentialGuardSettings", (n) -> { this.setDeviceGuardLocalSystemAuthorityCredentialGuardSettings(n.getEnumValue(DeviceGuardLocalSystemAuthorityCredentialGuardType.class)); });
+        deserializerMap.put("deviceGuardSecureBootWithDMA", (n) -> { this.setDeviceGuardSecureBootWithDMA(n.getEnumValue(SecureBootWithDMAType.class)); });
+        deserializerMap.put("dmaGuardDeviceEnumerationPolicy", (n) -> { this.setDmaGuardDeviceEnumerationPolicy(n.getEnumValue(DmaGuardDeviceEnumerationPolicyType.class)); });
+        deserializerMap.put("firewallBlockStatefulFTP", (n) -> { this.setFirewallBlockStatefulFTP(n.getBooleanValue()); });
+        deserializerMap.put("firewallCertificateRevocationListCheckMethod", (n) -> { this.setFirewallCertificateRevocationListCheckMethod(n.getEnumValue(FirewallCertificateRevocationListCheckMethodType.class)); });
+        deserializerMap.put("firewallIdleTimeoutForSecurityAssociationInSeconds", (n) -> { this.setFirewallIdleTimeoutForSecurityAssociationInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowDHCP", (n) -> { this.setFirewallIPSecExemptionsAllowDHCP(n.getBooleanValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowICMP", (n) -> { this.setFirewallIPSecExemptionsAllowICMP(n.getBooleanValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowNeighborDiscovery", (n) -> { this.setFirewallIPSecExemptionsAllowNeighborDiscovery(n.getBooleanValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowRouterDiscovery", (n) -> { this.setFirewallIPSecExemptionsAllowRouterDiscovery(n.getBooleanValue()); });
+        deserializerMap.put("firewallIPSecExemptionsNone", (n) -> { this.setFirewallIPSecExemptionsNone(n.getBooleanValue()); });
+        deserializerMap.put("firewallMergeKeyingModuleSettings", (n) -> { this.setFirewallMergeKeyingModuleSettings(n.getBooleanValue()); });
+        deserializerMap.put("firewallPacketQueueingMethod", (n) -> { this.setFirewallPacketQueueingMethod(n.getEnumValue(FirewallPacketQueueingMethodType.class)); });
+        deserializerMap.put("firewallPreSharedKeyEncodingMethod", (n) -> { this.setFirewallPreSharedKeyEncodingMethod(n.getEnumValue(FirewallPreSharedKeyEncodingMethodType.class)); });
+        deserializerMap.put("firewallProfileDomain", (n) -> { this.setFirewallProfileDomain(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("firewallProfilePrivate", (n) -> { this.setFirewallProfilePrivate(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("firewallProfilePublic", (n) -> { this.setFirewallProfilePublic(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("firewallRules", (n) -> { this.setFirewallRules(n.getCollectionOfObjectValues(WindowsFirewallRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("lanManagerAuthenticationLevel", (n) -> { this.setLanManagerAuthenticationLevel(n.getEnumValue(LanManagerAuthenticationLevel.class)); });
+        deserializerMap.put("lanManagerWorkstationDisableInsecureGuestLogons", (n) -> { this.setLanManagerWorkstationDisableInsecureGuestLogons(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAdministratorAccountName", (n) -> { this.setLocalSecurityOptionsAdministratorAccountName(n.getStringValue()); });
+        deserializerMap.put("localSecurityOptionsAdministratorElevationPromptBehavior", (n) -> { this.setLocalSecurityOptionsAdministratorElevationPromptBehavior(n.getEnumValue(LocalSecurityOptionsAdministratorElevationPromptBehaviorType.class)); });
+        deserializerMap.put("localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares", (n) -> { this.setLocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowPKU2UAuthenticationRequests", (n) -> { this.setLocalSecurityOptionsAllowPKU2UAuthenticationRequests(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager", (n) -> { this.setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager(n.getStringValue()); });
+        deserializerMap.put("localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool", (n) -> { this.setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn", (n) -> { this.setLocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowUIAccessApplicationElevation", (n) -> { this.setLocalSecurityOptionsAllowUIAccessApplicationElevation(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowUIAccessApplicationsForSecureLocations", (n) -> { this.setLocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowUndockWithoutHavingToLogon", (n) -> { this.setLocalSecurityOptionsAllowUndockWithoutHavingToLogon(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsBlockMicrosoftAccounts", (n) -> { this.setLocalSecurityOptionsBlockMicrosoftAccounts(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsBlockRemoteLogonWithBlankPassword", (n) -> { this.setLocalSecurityOptionsBlockRemoteLogonWithBlankPassword(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsBlockRemoteOpticalDriveAccess", (n) -> { this.setLocalSecurityOptionsBlockRemoteOpticalDriveAccess(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsBlockUsersInstallingPrinterDrivers", (n) -> { this.setLocalSecurityOptionsBlockUsersInstallingPrinterDrivers(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsClearVirtualMemoryPageFile", (n) -> { this.setLocalSecurityOptionsClearVirtualMemoryPageFile(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsClientDigitallySignCommunicationsAlways", (n) -> { this.setLocalSecurityOptionsClientDigitallySignCommunicationsAlways(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers", (n) -> { this.setLocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation", (n) -> { this.setLocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDisableAdministratorAccount", (n) -> { this.setLocalSecurityOptionsDisableAdministratorAccount(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees", (n) -> { this.setLocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDisableGuestAccount", (n) -> { this.setLocalSecurityOptionsDisableGuestAccount(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDisableServerDigitallySignCommunicationsAlways", (n) -> { this.setLocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees", (n) -> { this.setLocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts", (n) -> { this.setLocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDoNotRequireCtrlAltDel", (n) -> { this.setLocalSecurityOptionsDoNotRequireCtrlAltDel(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange", (n) -> { this.setLocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser", (n) -> { this.setLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser(n.getEnumValue(LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType.class)); });
+        deserializerMap.put("localSecurityOptionsGuestAccountName", (n) -> { this.setLocalSecurityOptionsGuestAccountName(n.getStringValue()); });
+        deserializerMap.put("localSecurityOptionsHideLastSignedInUser", (n) -> { this.setLocalSecurityOptionsHideLastSignedInUser(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsHideUsernameAtSignIn", (n) -> { this.setLocalSecurityOptionsHideUsernameAtSignIn(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsInformationDisplayedOnLockScreen", (n) -> { this.setLocalSecurityOptionsInformationDisplayedOnLockScreen(n.getEnumValue(LocalSecurityOptionsInformationDisplayedOnLockScreenType.class)); });
+        deserializerMap.put("localSecurityOptionsInformationShownOnLockScreen", (n) -> { this.setLocalSecurityOptionsInformationShownOnLockScreen(n.getEnumValue(LocalSecurityOptionsInformationShownOnLockScreenType.class)); });
+        deserializerMap.put("localSecurityOptionsLogOnMessageText", (n) -> { this.setLocalSecurityOptionsLogOnMessageText(n.getStringValue()); });
+        deserializerMap.put("localSecurityOptionsLogOnMessageTitle", (n) -> { this.setLocalSecurityOptionsLogOnMessageTitle(n.getStringValue()); });
+        deserializerMap.put("localSecurityOptionsMachineInactivityLimit", (n) -> { this.setLocalSecurityOptionsMachineInactivityLimit(n.getIntegerValue()); });
+        deserializerMap.put("localSecurityOptionsMachineInactivityLimitInMinutes", (n) -> { this.setLocalSecurityOptionsMachineInactivityLimitInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients", (n) -> { this.setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients(n.getEnumValue(LocalSecurityOptionsMinimumSessionSecurity.class)); });
+        deserializerMap.put("localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers", (n) -> { this.setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers(n.getEnumValue(LocalSecurityOptionsMinimumSessionSecurity.class)); });
+        deserializerMap.put("localSecurityOptionsOnlyElevateSignedExecutables", (n) -> { this.setLocalSecurityOptionsOnlyElevateSignedExecutables(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares", (n) -> { this.setLocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsSmartCardRemovalBehavior", (n) -> { this.setLocalSecurityOptionsSmartCardRemovalBehavior(n.getEnumValue(LocalSecurityOptionsSmartCardRemovalBehaviorType.class)); });
+        deserializerMap.put("localSecurityOptionsStandardUserElevationPromptBehavior", (n) -> { this.setLocalSecurityOptionsStandardUserElevationPromptBehavior(n.getEnumValue(LocalSecurityOptionsStandardUserElevationPromptBehaviorType.class)); });
+        deserializerMap.put("localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation", (n) -> { this.setLocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsUseAdminApprovalMode", (n) -> { this.setLocalSecurityOptionsUseAdminApprovalMode(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsUseAdminApprovalModeForAdministrators", (n) -> { this.setLocalSecurityOptionsUseAdminApprovalModeForAdministrators(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations", (n) -> { this.setLocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations(n.getBooleanValue()); });
+        deserializerMap.put("smartScreenBlockOverrideForFiles", (n) -> { this.setSmartScreenBlockOverrideForFiles(n.getBooleanValue()); });
+        deserializerMap.put("smartScreenEnableInShell", (n) -> { this.setSmartScreenEnableInShell(n.getBooleanValue()); });
+        deserializerMap.put("userRightsAccessCredentialManagerAsTrustedCaller", (n) -> { this.setUserRightsAccessCredentialManagerAsTrustedCaller(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsActAsPartOfTheOperatingSystem", (n) -> { this.setUserRightsActAsPartOfTheOperatingSystem(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsAllowAccessFromNetwork", (n) -> { this.setUserRightsAllowAccessFromNetwork(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsBackupData", (n) -> { this.setUserRightsBackupData(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsBlockAccessFromNetwork", (n) -> { this.setUserRightsBlockAccessFromNetwork(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsChangeSystemTime", (n) -> { this.setUserRightsChangeSystemTime(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsCreateGlobalObjects", (n) -> { this.setUserRightsCreateGlobalObjects(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsCreatePageFile", (n) -> { this.setUserRightsCreatePageFile(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsCreatePermanentSharedObjects", (n) -> { this.setUserRightsCreatePermanentSharedObjects(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsCreateSymbolicLinks", (n) -> { this.setUserRightsCreateSymbolicLinks(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsCreateToken", (n) -> { this.setUserRightsCreateToken(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsDebugPrograms", (n) -> { this.setUserRightsDebugPrograms(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsDelegation", (n) -> { this.setUserRightsDelegation(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsDenyLocalLogOn", (n) -> { this.setUserRightsDenyLocalLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsGenerateSecurityAudits", (n) -> { this.setUserRightsGenerateSecurityAudits(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsImpersonateClient", (n) -> { this.setUserRightsImpersonateClient(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsIncreaseSchedulingPriority", (n) -> { this.setUserRightsIncreaseSchedulingPriority(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsLoadUnloadDrivers", (n) -> { this.setUserRightsLoadUnloadDrivers(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsLocalLogOn", (n) -> { this.setUserRightsLocalLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsLockMemory", (n) -> { this.setUserRightsLockMemory(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsManageAuditingAndSecurityLogs", (n) -> { this.setUserRightsManageAuditingAndSecurityLogs(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsManageVolumes", (n) -> { this.setUserRightsManageVolumes(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsModifyFirmwareEnvironment", (n) -> { this.setUserRightsModifyFirmwareEnvironment(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsModifyObjectLabels", (n) -> { this.setUserRightsModifyObjectLabels(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsProfileSingleProcess", (n) -> { this.setUserRightsProfileSingleProcess(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsRemoteDesktopServicesLogOn", (n) -> { this.setUserRightsRemoteDesktopServicesLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsRemoteShutdown", (n) -> { this.setUserRightsRemoteShutdown(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsRestoreData", (n) -> { this.setUserRightsRestoreData(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsTakeOwnership", (n) -> { this.setUserRightsTakeOwnership(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsDefenderTamperProtection", (n) -> { this.setWindowsDefenderTamperProtection(n.getEnumValue(WindowsDefenderTamperProtectionOptions.class)); });
+        deserializerMap.put("xboxServicesAccessoryManagementServiceStartupMode", (n) -> { this.setXboxServicesAccessoryManagementServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
+        deserializerMap.put("xboxServicesEnableXboxGameSaveTask", (n) -> { this.setXboxServicesEnableXboxGameSaveTask(n.getBooleanValue()); });
+        deserializerMap.put("xboxServicesLiveAuthManagerServiceStartupMode", (n) -> { this.setXboxServicesLiveAuthManagerServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
+        deserializerMap.put("xboxServicesLiveGameSaveServiceStartupMode", (n) -> { this.setXboxServicesLiveGameSaveServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
+        deserializerMap.put("xboxServicesLiveNetworkingServiceStartupMode", (n) -> { this.setXboxServicesLiveNetworkingServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the firewallBlockStatefulFTP property value. Blocks stateful FTP connections to the device
@@ -1729,7 +2183,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallBlockStatefulFTP() {
-        return this._firewallBlockStatefulFTP;
+        return this.firewallBlockStatefulFTP;
     }
     /**
      * Gets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
@@ -1737,7 +2191,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public FirewallCertificateRevocationListCheckMethodType getFirewallCertificateRevocationListCheckMethod() {
-        return this._firewallCertificateRevocationListCheckMethod;
+        return this.firewallCertificateRevocationListCheckMethod;
     }
     /**
      * Gets the firewallIdleTimeoutForSecurityAssociationInSeconds property value. Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
@@ -1745,7 +2199,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Integer getFirewallIdleTimeoutForSecurityAssociationInSeconds() {
-        return this._firewallIdleTimeoutForSecurityAssociationInSeconds;
+        return this.firewallIdleTimeoutForSecurityAssociationInSeconds;
     }
     /**
      * Gets the firewallIPSecExemptionsAllowDHCP property value. Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
@@ -1753,7 +2207,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowDHCP() {
-        return this._firewallIPSecExemptionsAllowDHCP;
+        return this.firewallIPSecExemptionsAllowDHCP;
     }
     /**
      * Gets the firewallIPSecExemptionsAllowICMP property value. Configures IPSec exemptions to allow ICMP
@@ -1761,7 +2215,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowICMP() {
-        return this._firewallIPSecExemptionsAllowICMP;
+        return this.firewallIPSecExemptionsAllowICMP;
     }
     /**
      * Gets the firewallIPSecExemptionsAllowNeighborDiscovery property value. Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
@@ -1769,7 +2223,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowNeighborDiscovery() {
-        return this._firewallIPSecExemptionsAllowNeighborDiscovery;
+        return this.firewallIPSecExemptionsAllowNeighborDiscovery;
     }
     /**
      * Gets the firewallIPSecExemptionsAllowRouterDiscovery property value. Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
@@ -1777,7 +2231,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowRouterDiscovery() {
-        return this._firewallIPSecExemptionsAllowRouterDiscovery;
+        return this.firewallIPSecExemptionsAllowRouterDiscovery;
     }
     /**
      * Gets the firewallIPSecExemptionsNone property value. Configures IPSec exemptions to no exemptions
@@ -1785,7 +2239,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsNone() {
-        return this._firewallIPSecExemptionsNone;
+        return this.firewallIPSecExemptionsNone;
     }
     /**
      * Gets the firewallMergeKeyingModuleSettings property value. If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
@@ -1793,7 +2247,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getFirewallMergeKeyingModuleSettings() {
-        return this._firewallMergeKeyingModuleSettings;
+        return this.firewallMergeKeyingModuleSettings;
     }
     /**
      * Gets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
@@ -1801,7 +2255,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public FirewallPacketQueueingMethodType getFirewallPacketQueueingMethod() {
-        return this._firewallPacketQueueingMethod;
+        return this.firewallPacketQueueingMethod;
     }
     /**
      * Gets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
@@ -1809,7 +2263,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public FirewallPreSharedKeyEncodingMethodType getFirewallPreSharedKeyEncodingMethod() {
-        return this._firewallPreSharedKeyEncodingMethod;
+        return this.firewallPreSharedKeyEncodingMethod;
     }
     /**
      * Gets the firewallProfileDomain property value. Configures the firewall profile settings for domain networks
@@ -1817,7 +2271,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public WindowsFirewallNetworkProfile getFirewallProfileDomain() {
-        return this._firewallProfileDomain;
+        return this.firewallProfileDomain;
     }
     /**
      * Gets the firewallProfilePrivate property value. Configures the firewall profile settings for private networks
@@ -1825,7 +2279,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public WindowsFirewallNetworkProfile getFirewallProfilePrivate() {
-        return this._firewallProfilePrivate;
+        return this.firewallProfilePrivate;
     }
     /**
      * Gets the firewallProfilePublic property value. Configures the firewall profile settings for public networks
@@ -1833,7 +2287,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public WindowsFirewallNetworkProfile getFirewallProfilePublic() {
-        return this._firewallProfilePublic;
+        return this.firewallProfilePublic;
     }
     /**
      * Gets the firewallRules property value. Configures the firewall rule settings. This collection can contain a maximum of 150 elements.
@@ -1841,7 +2295,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsFirewallRule> getFirewallRules() {
-        return this._firewallRules;
+        return this.firewallRules;
     }
     /**
      * Gets the lanManagerAuthenticationLevel property value. Possible values for LanManagerAuthenticationLevel
@@ -1849,7 +2303,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public LanManagerAuthenticationLevel getLanManagerAuthenticationLevel() {
-        return this._lanManagerAuthenticationLevel;
+        return this.lanManagerAuthenticationLevel;
     }
     /**
      * Gets the lanManagerWorkstationDisableInsecureGuestLogons property value. If enabled,the SMB client will allow insecure guest logons. If not configured, the SMB client will reject insecure guest logons.
@@ -1857,7 +2311,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLanManagerWorkstationDisableInsecureGuestLogons() {
-        return this._lanManagerWorkstationDisableInsecureGuestLogons;
+        return this.lanManagerWorkstationDisableInsecureGuestLogons;
     }
     /**
      * Gets the localSecurityOptionsAdministratorAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account 'Administrator'.
@@ -1865,7 +2319,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getLocalSecurityOptionsAdministratorAccountName() {
-        return this._localSecurityOptionsAdministratorAccountName;
+        return this.localSecurityOptionsAdministratorAccountName;
     }
     /**
      * Gets the localSecurityOptionsAdministratorElevationPromptBehavior property value. Possible values for LocalSecurityOptionsAdministratorElevationPromptBehavior
@@ -1873,7 +2327,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public LocalSecurityOptionsAdministratorElevationPromptBehaviorType getLocalSecurityOptionsAdministratorElevationPromptBehavior() {
-        return this._localSecurityOptionsAdministratorElevationPromptBehavior;
+        return this.localSecurityOptionsAdministratorElevationPromptBehavior;
     }
     /**
      * Gets the localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares property value. This security setting determines whether to allows anonymous users to perform certain activities, such as enumerating the names of domain accounts and network shares.
@@ -1881,7 +2335,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares() {
-        return this._localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares;
+        return this.localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares;
     }
     /**
      * Gets the localSecurityOptionsAllowPKU2UAuthenticationRequests property value. Block PKU2U authentication requests to this device to use online identities.
@@ -1889,7 +2343,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowPKU2UAuthenticationRequests() {
-        return this._localSecurityOptionsAllowPKU2UAuthenticationRequests;
+        return this.localSecurityOptionsAllowPKU2UAuthenticationRequests;
     }
     /**
      * Gets the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager property value. Edit the default Security Descriptor Definition Language string to allow or deny users and groups to make remote calls to the SAM.
@@ -1897,7 +2351,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager() {
-        return this._localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager;
+        return this.localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager;
     }
     /**
      * Gets the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool property value. UI helper boolean for LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager entity
@@ -1905,7 +2359,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool() {
-        return this._localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool;
+        return this.localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool;
     }
     /**
      * Gets the localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn property value. This security setting determines whether a computer can be shut down without having to log on to Windows.
@@ -1913,7 +2367,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn() {
-        return this._localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn;
+        return this.localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn;
     }
     /**
      * Gets the localSecurityOptionsAllowUIAccessApplicationElevation property value. Allow UIAccess apps to prompt for elevation without using the secure desktop.
@@ -1921,7 +2375,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowUIAccessApplicationElevation() {
-        return this._localSecurityOptionsAllowUIAccessApplicationElevation;
+        return this.localSecurityOptionsAllowUIAccessApplicationElevation;
     }
     /**
      * Gets the localSecurityOptionsAllowUIAccessApplicationsForSecureLocations property value. Allow UIAccess apps to prompt for elevation without using the secure desktop.Default is enabled
@@ -1929,7 +2383,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations() {
-        return this._localSecurityOptionsAllowUIAccessApplicationsForSecureLocations;
+        return this.localSecurityOptionsAllowUIAccessApplicationsForSecureLocations;
     }
     /**
      * Gets the localSecurityOptionsAllowUndockWithoutHavingToLogon property value. Prevent a portable computer from being undocked without having to log in.
@@ -1937,7 +2391,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowUndockWithoutHavingToLogon() {
-        return this._localSecurityOptionsAllowUndockWithoutHavingToLogon;
+        return this.localSecurityOptionsAllowUndockWithoutHavingToLogon;
     }
     /**
      * Gets the localSecurityOptionsBlockMicrosoftAccounts property value. Prevent users from adding new Microsoft accounts to this computer.
@@ -1945,7 +2399,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsBlockMicrosoftAccounts() {
-        return this._localSecurityOptionsBlockMicrosoftAccounts;
+        return this.localSecurityOptionsBlockMicrosoftAccounts;
     }
     /**
      * Gets the localSecurityOptionsBlockRemoteLogonWithBlankPassword property value. Enable Local accounts that are not password protected to log on from locations other than the physical device.Default is enabled
@@ -1953,7 +2407,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsBlockRemoteLogonWithBlankPassword() {
-        return this._localSecurityOptionsBlockRemoteLogonWithBlankPassword;
+        return this.localSecurityOptionsBlockRemoteLogonWithBlankPassword;
     }
     /**
      * Gets the localSecurityOptionsBlockRemoteOpticalDriveAccess property value. Enabling this settings allows only interactively logged on user to access CD-ROM media.
@@ -1961,7 +2415,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsBlockRemoteOpticalDriveAccess() {
-        return this._localSecurityOptionsBlockRemoteOpticalDriveAccess;
+        return this.localSecurityOptionsBlockRemoteOpticalDriveAccess;
     }
     /**
      * Gets the localSecurityOptionsBlockUsersInstallingPrinterDrivers property value. Restrict installing printer drivers as part of connecting to a shared printer to admins only.
@@ -1969,7 +2423,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsBlockUsersInstallingPrinterDrivers() {
-        return this._localSecurityOptionsBlockUsersInstallingPrinterDrivers;
+        return this.localSecurityOptionsBlockUsersInstallingPrinterDrivers;
     }
     /**
      * Gets the localSecurityOptionsClearVirtualMemoryPageFile property value. This security setting determines whether the virtual memory pagefile is cleared when the system is shut down.
@@ -1977,7 +2431,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsClearVirtualMemoryPageFile() {
-        return this._localSecurityOptionsClearVirtualMemoryPageFile;
+        return this.localSecurityOptionsClearVirtualMemoryPageFile;
     }
     /**
      * Gets the localSecurityOptionsClientDigitallySignCommunicationsAlways property value. This security setting determines whether packet signing is required by the SMB client component.
@@ -1985,7 +2439,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsClientDigitallySignCommunicationsAlways() {
-        return this._localSecurityOptionsClientDigitallySignCommunicationsAlways;
+        return this.localSecurityOptionsClientDigitallySignCommunicationsAlways;
     }
     /**
      * Gets the localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers property value. If this security setting is enabled, the Server Message Block (SMB) redirector is allowed to send plaintext passwords to non-Microsoft SMB servers that do not support password encryption during authentication.
@@ -1993,7 +2447,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers() {
-        return this._localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers;
+        return this.localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers;
     }
     /**
      * Gets the localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation property value. App installations requiring elevated privileges will prompt for admin credentials.Default is enabled
@@ -2001,7 +2455,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation() {
-        return this._localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation;
+        return this.localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation;
     }
     /**
      * Gets the localSecurityOptionsDisableAdministratorAccount property value. Determines whether the Local Administrator account is enabled or disabled.
@@ -2009,7 +2463,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsDisableAdministratorAccount() {
-        return this._localSecurityOptionsDisableAdministratorAccount;
+        return this.localSecurityOptionsDisableAdministratorAccount;
     }
     /**
      * Gets the localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees property value. This security setting determines whether the SMB client attempts to negotiate SMB packet signing.
@@ -2017,7 +2471,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees() {
-        return this._localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees;
+        return this.localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees;
     }
     /**
      * Gets the localSecurityOptionsDisableGuestAccount property value. Determines if the Guest account is enabled or disabled.
@@ -2025,7 +2479,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsDisableGuestAccount() {
-        return this._localSecurityOptionsDisableGuestAccount;
+        return this.localSecurityOptionsDisableGuestAccount;
     }
     /**
      * Gets the localSecurityOptionsDisableServerDigitallySignCommunicationsAlways property value. This security setting determines whether packet signing is required by the SMB server component.
@@ -2033,7 +2487,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways() {
-        return this._localSecurityOptionsDisableServerDigitallySignCommunicationsAlways;
+        return this.localSecurityOptionsDisableServerDigitallySignCommunicationsAlways;
     }
     /**
      * Gets the localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees property value. This security setting determines whether the SMB server will negotiate SMB packet signing with clients that request it.
@@ -2041,7 +2495,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees() {
-        return this._localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees;
+        return this.localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees;
     }
     /**
      * Gets the localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts property value. This security setting determines what additional permissions will be granted for anonymous connections to the computer.
@@ -2049,7 +2503,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts() {
-        return this._localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts;
+        return this.localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts;
     }
     /**
      * Gets the localSecurityOptionsDoNotRequireCtrlAltDel property value. Require CTRL+ALT+DEL to be pressed before a user can log on.
@@ -2057,15 +2511,15 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsDoNotRequireCtrlAltDel() {
-        return this._localSecurityOptionsDoNotRequireCtrlAltDel;
+        return this.localSecurityOptionsDoNotRequireCtrlAltDel;
     }
     /**
-     * Gets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default.
+     * Gets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. Its not stored by default.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange() {
-        return this._localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange;
+        return this.localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange;
     }
     /**
      * Gets the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser property value. Possible values for LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
@@ -2073,7 +2527,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType getLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser() {
-        return this._localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser;
+        return this.localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser;
     }
     /**
      * Gets the localSecurityOptionsGuestAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account 'Guest'.
@@ -2081,7 +2535,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getLocalSecurityOptionsGuestAccountName() {
-        return this._localSecurityOptionsGuestAccountName;
+        return this.localSecurityOptionsGuestAccountName;
     }
     /**
      * Gets the localSecurityOptionsHideLastSignedInUser property value. Do not display the username of the last person who signed in on this device.
@@ -2089,15 +2543,15 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsHideLastSignedInUser() {
-        return this._localSecurityOptionsHideLastSignedInUser;
+        return this.localSecurityOptionsHideLastSignedInUser;
     }
     /**
-     * Gets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown.
+     * Gets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the devices desktop is shown.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsHideUsernameAtSignIn() {
-        return this._localSecurityOptionsHideUsernameAtSignIn;
+        return this.localSecurityOptionsHideUsernameAtSignIn;
     }
     /**
      * Gets the localSecurityOptionsInformationDisplayedOnLockScreen property value. Possible values for LocalSecurityOptionsInformationDisplayedOnLockScreen
@@ -2105,7 +2559,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public LocalSecurityOptionsInformationDisplayedOnLockScreenType getLocalSecurityOptionsInformationDisplayedOnLockScreen() {
-        return this._localSecurityOptionsInformationDisplayedOnLockScreen;
+        return this.localSecurityOptionsInformationDisplayedOnLockScreen;
     }
     /**
      * Gets the localSecurityOptionsInformationShownOnLockScreen property value. Possible values for LocalSecurityOptionsInformationShownOnLockScreenType
@@ -2113,7 +2567,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public LocalSecurityOptionsInformationShownOnLockScreenType getLocalSecurityOptionsInformationShownOnLockScreen() {
-        return this._localSecurityOptionsInformationShownOnLockScreen;
+        return this.localSecurityOptionsInformationShownOnLockScreen;
     }
     /**
      * Gets the localSecurityOptionsLogOnMessageText property value. Set message text for users attempting to log in.
@@ -2121,7 +2575,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getLocalSecurityOptionsLogOnMessageText() {
-        return this._localSecurityOptionsLogOnMessageText;
+        return this.localSecurityOptionsLogOnMessageText;
     }
     /**
      * Gets the localSecurityOptionsLogOnMessageTitle property value. Set message title for users attempting to log in.
@@ -2129,23 +2583,23 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public String getLocalSecurityOptionsLogOnMessageTitle() {
-        return this._localSecurityOptionsLogOnMessageTitle;
+        return this.localSecurityOptionsLogOnMessageTitle;
     }
     /**
-     * Gets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Gets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getLocalSecurityOptionsMachineInactivityLimit() {
-        return this._localSecurityOptionsMachineInactivityLimit;
+        return this.localSecurityOptionsMachineInactivityLimit;
     }
     /**
-     * Gets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Gets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getLocalSecurityOptionsMachineInactivityLimitInMinutes() {
-        return this._localSecurityOptionsMachineInactivityLimitInMinutes;
+        return this.localSecurityOptionsMachineInactivityLimitInMinutes;
     }
     /**
      * Gets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients property value. Possible values for LocalSecurityOptionsMinimumSessionSecurity
@@ -2153,7 +2607,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public LocalSecurityOptionsMinimumSessionSecurity getLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients() {
-        return this._localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients;
+        return this.localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients;
     }
     /**
      * Gets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers property value. Possible values for LocalSecurityOptionsMinimumSessionSecurity
@@ -2161,7 +2615,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public LocalSecurityOptionsMinimumSessionSecurity getLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers() {
-        return this._localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers;
+        return this.localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers;
     }
     /**
      * Gets the localSecurityOptionsOnlyElevateSignedExecutables property value. Enforce PKI certification path validation for a given executable file before it is permitted to run.
@@ -2169,7 +2623,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsOnlyElevateSignedExecutables() {
-        return this._localSecurityOptionsOnlyElevateSignedExecutables;
+        return this.localSecurityOptionsOnlyElevateSignedExecutables;
     }
     /**
      * Gets the localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares property value. By default, this security setting restricts anonymous access to shares and pipes to the settings for named pipes that can be accessed anonymously and Shares that can be accessed anonymously
@@ -2177,7 +2631,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares() {
-        return this._localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares;
+        return this.localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares;
     }
     /**
      * Gets the localSecurityOptionsSmartCardRemovalBehavior property value. Possible values for LocalSecurityOptionsSmartCardRemovalBehaviorType
@@ -2185,7 +2639,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public LocalSecurityOptionsSmartCardRemovalBehaviorType getLocalSecurityOptionsSmartCardRemovalBehavior() {
-        return this._localSecurityOptionsSmartCardRemovalBehavior;
+        return this.localSecurityOptionsSmartCardRemovalBehavior;
     }
     /**
      * Gets the localSecurityOptionsStandardUserElevationPromptBehavior property value. Possible values for LocalSecurityOptionsStandardUserElevationPromptBehavior
@@ -2193,7 +2647,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public LocalSecurityOptionsStandardUserElevationPromptBehaviorType getLocalSecurityOptionsStandardUserElevationPromptBehavior() {
-        return this._localSecurityOptionsStandardUserElevationPromptBehavior;
+        return this.localSecurityOptionsStandardUserElevationPromptBehavior;
     }
     /**
      * Gets the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation property value. Enable all elevation requests to go to the interactive user's desktop rather than the secure desktop. Prompt behavior policy settings for admins and standard users are used.
@@ -2201,7 +2655,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation() {
-        return this._localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation;
+        return this.localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation;
     }
     /**
      * Gets the localSecurityOptionsUseAdminApprovalMode property value. Defines whether the built-in admin account uses Admin Approval Mode or runs all apps with full admin privileges.Default is enabled
@@ -2209,7 +2663,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsUseAdminApprovalMode() {
-        return this._localSecurityOptionsUseAdminApprovalMode;
+        return this.localSecurityOptionsUseAdminApprovalMode;
     }
     /**
      * Gets the localSecurityOptionsUseAdminApprovalModeForAdministrators property value. Define whether Admin Approval Mode and all UAC policy settings are enabled, default is enabled
@@ -2217,7 +2671,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsUseAdminApprovalModeForAdministrators() {
-        return this._localSecurityOptionsUseAdminApprovalModeForAdministrators;
+        return this.localSecurityOptionsUseAdminApprovalModeForAdministrators;
     }
     /**
      * Gets the localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations property value. Virtualize file and registry write failures to per user locations
@@ -2225,7 +2679,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getLocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations() {
-        return this._localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations;
+        return this.localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations;
     }
     /**
      * Gets the smartScreenBlockOverrideForFiles property value. Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
@@ -2233,7 +2687,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getSmartScreenBlockOverrideForFiles() {
-        return this._smartScreenBlockOverrideForFiles;
+        return this.smartScreenBlockOverrideForFiles;
     }
     /**
      * Gets the smartScreenEnableInShell property value. Allows IT Admins to configure SmartScreen for Windows.
@@ -2241,7 +2695,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getSmartScreenEnableInShell() {
-        return this._smartScreenEnableInShell;
+        return this.smartScreenEnableInShell;
     }
     /**
      * Gets the userRightsAccessCredentialManagerAsTrustedCaller property value. This user right is used by Credential Manager during Backup/Restore. Users' saved credentials might be compromised if this privilege is given to other entities. Only states NotConfigured and Allowed are supported
@@ -2249,7 +2703,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsAccessCredentialManagerAsTrustedCaller() {
-        return this._userRightsAccessCredentialManagerAsTrustedCaller;
+        return this.userRightsAccessCredentialManagerAsTrustedCaller;
     }
     /**
      * Gets the userRightsActAsPartOfTheOperatingSystem property value. This user right allows a process to impersonate any user without authentication. The process can therefore gain access to the same local resources as that user. Only states NotConfigured and Allowed are supported
@@ -2257,7 +2711,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsActAsPartOfTheOperatingSystem() {
-        return this._userRightsActAsPartOfTheOperatingSystem;
+        return this.userRightsActAsPartOfTheOperatingSystem;
     }
     /**
      * Gets the userRightsAllowAccessFromNetwork property value. This user right determines which users and groups are allowed to connect to the computer over the network. State Allowed is supported.
@@ -2265,7 +2719,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsAllowAccessFromNetwork() {
-        return this._userRightsAllowAccessFromNetwork;
+        return this.userRightsAllowAccessFromNetwork;
     }
     /**
      * Gets the userRightsBackupData property value. This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when backing up files and directories. Only states NotConfigured and Allowed are supported
@@ -2273,7 +2727,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsBackupData() {
-        return this._userRightsBackupData;
+        return this.userRightsBackupData;
     }
     /**
      * Gets the userRightsBlockAccessFromNetwork property value. This user right determines which users and groups are block from connecting to the computer over the network. State Block is supported.
@@ -2281,7 +2735,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsBlockAccessFromNetwork() {
-        return this._userRightsBlockAccessFromNetwork;
+        return this.userRightsBlockAccessFromNetwork;
     }
     /**
      * Gets the userRightsChangeSystemTime property value. This user right determines which users and groups can change the time and date on the internal clock of the computer. Only states NotConfigured and Allowed are supported
@@ -2289,7 +2743,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsChangeSystemTime() {
-        return this._userRightsChangeSystemTime;
+        return this.userRightsChangeSystemTime;
     }
     /**
      * Gets the userRightsCreateGlobalObjects property value. This security setting determines whether users can create global objects that are available to all sessions. Users who can create global objects could affect processes that run under other users' sessions, which could lead to application failure or data corruption. Only states NotConfigured and Allowed are supported
@@ -2297,7 +2751,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsCreateGlobalObjects() {
-        return this._userRightsCreateGlobalObjects;
+        return this.userRightsCreateGlobalObjects;
     }
     /**
      * Gets the userRightsCreatePageFile property value. This user right determines which users and groups can call an internal API to create and change the size of a page file. Only states NotConfigured and Allowed are supported
@@ -2305,7 +2759,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsCreatePageFile() {
-        return this._userRightsCreatePageFile;
+        return this.userRightsCreatePageFile;
     }
     /**
      * Gets the userRightsCreatePermanentSharedObjects property value. This user right determines which accounts can be used by processes to create a directory object using the object manager. Only states NotConfigured and Allowed are supported
@@ -2313,7 +2767,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsCreatePermanentSharedObjects() {
-        return this._userRightsCreatePermanentSharedObjects;
+        return this.userRightsCreatePermanentSharedObjects;
     }
     /**
      * Gets the userRightsCreateSymbolicLinks property value. This user right determines if the user can create a symbolic link from the computer to which they are logged on. Only states NotConfigured and Allowed are supported
@@ -2321,7 +2775,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsCreateSymbolicLinks() {
-        return this._userRightsCreateSymbolicLinks;
+        return this.userRightsCreateSymbolicLinks;
     }
     /**
      * Gets the userRightsCreateToken property value. This user right determines which users/groups can be used by processes to create a token that can then be used to get access to any local resources when the process uses an internal API to create an access token. Only states NotConfigured and Allowed are supported
@@ -2329,7 +2783,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsCreateToken() {
-        return this._userRightsCreateToken;
+        return this.userRightsCreateToken;
     }
     /**
      * Gets the userRightsDebugPrograms property value. This user right determines which users can attach a debugger to any process or to the kernel. Only states NotConfigured and Allowed are supported
@@ -2337,7 +2791,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsDebugPrograms() {
-        return this._userRightsDebugPrograms;
+        return this.userRightsDebugPrograms;
     }
     /**
      * Gets the userRightsDelegation property value. This user right determines which users can set the Trusted for Delegation setting on a user or computer object. Only states NotConfigured and Allowed are supported.
@@ -2345,7 +2799,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsDelegation() {
-        return this._userRightsDelegation;
+        return this.userRightsDelegation;
     }
     /**
      * Gets the userRightsDenyLocalLogOn property value. This user right determines which users cannot log on to the computer. States NotConfigured, Blocked are supported
@@ -2353,7 +2807,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsDenyLocalLogOn() {
-        return this._userRightsDenyLocalLogOn;
+        return this.userRightsDenyLocalLogOn;
     }
     /**
      * Gets the userRightsGenerateSecurityAudits property value. This user right determines which accounts can be used by a process to add entries to the security log. The security log is used to trace unauthorized system access.  Only states NotConfigured and Allowed are supported.
@@ -2361,7 +2815,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsGenerateSecurityAudits() {
-        return this._userRightsGenerateSecurityAudits;
+        return this.userRightsGenerateSecurityAudits;
     }
     /**
      * Gets the userRightsImpersonateClient property value. Assigning this user right to a user allows programs running on behalf of that user to impersonate a client. Requiring this user right for this kind of impersonation prevents an unauthorized user from convincing a client to connect to a service that they have created and then impersonating that client, which can elevate the unauthorized user's permissions to administrative or system levels. Only states NotConfigured and Allowed are supported.
@@ -2369,7 +2823,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsImpersonateClient() {
-        return this._userRightsImpersonateClient;
+        return this.userRightsImpersonateClient;
     }
     /**
      * Gets the userRightsIncreaseSchedulingPriority property value. This user right determines which accounts can use a process with Write Property access to another process to increase the execution priority assigned to the other process. Only states NotConfigured and Allowed are supported.
@@ -2377,7 +2831,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsIncreaseSchedulingPriority() {
-        return this._userRightsIncreaseSchedulingPriority;
+        return this.userRightsIncreaseSchedulingPriority;
     }
     /**
      * Gets the userRightsLoadUnloadDrivers property value. This user right determines which users can dynamically load and unload device drivers or other code in to kernel mode. Only states NotConfigured and Allowed are supported.
@@ -2385,7 +2839,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsLoadUnloadDrivers() {
-        return this._userRightsLoadUnloadDrivers;
+        return this.userRightsLoadUnloadDrivers;
     }
     /**
      * Gets the userRightsLocalLogOn property value. This user right determines which users can log on to the computer. States NotConfigured, Allowed are supported
@@ -2393,7 +2847,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsLocalLogOn() {
-        return this._userRightsLocalLogOn;
+        return this.userRightsLocalLogOn;
     }
     /**
      * Gets the userRightsLockMemory property value. This user right determines which accounts can use a process to keep data in physical memory, which prevents the system from paging the data to virtual memory on disk. Only states NotConfigured and Allowed are supported.
@@ -2401,7 +2855,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsLockMemory() {
-        return this._userRightsLockMemory;
+        return this.userRightsLockMemory;
     }
     /**
      * Gets the userRightsManageAuditingAndSecurityLogs property value. This user right determines which users can specify object access auditing options for individual resources, such as files, Active Directory objects, and registry keys. Only states NotConfigured and Allowed are supported.
@@ -2409,7 +2863,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsManageAuditingAndSecurityLogs() {
-        return this._userRightsManageAuditingAndSecurityLogs;
+        return this.userRightsManageAuditingAndSecurityLogs;
     }
     /**
      * Gets the userRightsManageVolumes property value. This user right determines which users and groups can run maintenance tasks on a volume, such as remote defragmentation. Only states NotConfigured and Allowed are supported.
@@ -2417,7 +2871,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsManageVolumes() {
-        return this._userRightsManageVolumes;
+        return this.userRightsManageVolumes;
     }
     /**
      * Gets the userRightsModifyFirmwareEnvironment property value. This user right determines who can modify firmware environment values. Only states NotConfigured and Allowed are supported.
@@ -2425,7 +2879,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsModifyFirmwareEnvironment() {
-        return this._userRightsModifyFirmwareEnvironment;
+        return this.userRightsModifyFirmwareEnvironment;
     }
     /**
      * Gets the userRightsModifyObjectLabels property value. This user right determines which user accounts can modify the integrity label of objects, such as files, registry keys, or processes owned by other users. Only states NotConfigured and Allowed are supported.
@@ -2433,7 +2887,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsModifyObjectLabels() {
-        return this._userRightsModifyObjectLabels;
+        return this.userRightsModifyObjectLabels;
     }
     /**
      * Gets the userRightsProfileSingleProcess property value. This user right determines which users can use performance monitoring tools to monitor the performance of system processes. Only states NotConfigured and Allowed are supported.
@@ -2441,7 +2895,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsProfileSingleProcess() {
-        return this._userRightsProfileSingleProcess;
+        return this.userRightsProfileSingleProcess;
     }
     /**
      * Gets the userRightsRemoteDesktopServicesLogOn property value. This user right determines which users and groups are prohibited from logging on as a Remote Desktop Services client. Only states NotConfigured and Blocked are supported
@@ -2449,7 +2903,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsRemoteDesktopServicesLogOn() {
-        return this._userRightsRemoteDesktopServicesLogOn;
+        return this.userRightsRemoteDesktopServicesLogOn;
     }
     /**
      * Gets the userRightsRemoteShutdown property value. This user right determines which users are allowed to shut down a computer from a remote location on the network. Misuse of this user right can result in a denial of service. Only states NotConfigured and Allowed are supported.
@@ -2457,7 +2911,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsRemoteShutdown() {
-        return this._userRightsRemoteShutdown;
+        return this.userRightsRemoteShutdown;
     }
     /**
      * Gets the userRightsRestoreData property value. This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when restoring backed up files and directories, and determines which users can set any valid security principal as the owner of an object. Only states NotConfigured and Allowed are supported.
@@ -2465,7 +2919,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsRestoreData() {
-        return this._userRightsRestoreData;
+        return this.userRightsRestoreData;
     }
     /**
      * Gets the userRightsTakeOwnership property value. This user right determines which users can take ownership of any securable object in the system, including Active Directory objects, files and folders, printers, registry keys, processes, and threads. Only states NotConfigured and Allowed are supported.
@@ -2473,7 +2927,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsTakeOwnership() {
-        return this._userRightsTakeOwnership;
+        return this.userRightsTakeOwnership;
     }
     /**
      * Gets the windowsDefenderTamperProtection property value. Defender TamperProtection setting options
@@ -2481,7 +2935,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public WindowsDefenderTamperProtectionOptions getWindowsDefenderTamperProtection() {
-        return this._windowsDefenderTamperProtection;
+        return this.windowsDefenderTamperProtection;
     }
     /**
      * Gets the xboxServicesAccessoryManagementServiceStartupMode property value. Possible values of xbox service start type
@@ -2489,7 +2943,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public ServiceStartType getXboxServicesAccessoryManagementServiceStartupMode() {
-        return this._xboxServicesAccessoryManagementServiceStartupMode;
+        return this.xboxServicesAccessoryManagementServiceStartupMode;
     }
     /**
      * Gets the xboxServicesEnableXboxGameSaveTask property value. This setting determines whether xbox game save is enabled (1) or disabled (0).
@@ -2497,7 +2951,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getXboxServicesEnableXboxGameSaveTask() {
-        return this._xboxServicesEnableXboxGameSaveTask;
+        return this.xboxServicesEnableXboxGameSaveTask;
     }
     /**
      * Gets the xboxServicesLiveAuthManagerServiceStartupMode property value. Possible values of xbox service start type
@@ -2505,7 +2959,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public ServiceStartType getXboxServicesLiveAuthManagerServiceStartupMode() {
-        return this._xboxServicesLiveAuthManagerServiceStartupMode;
+        return this.xboxServicesLiveAuthManagerServiceStartupMode;
     }
     /**
      * Gets the xboxServicesLiveGameSaveServiceStartupMode property value. Possible values of xbox service start type
@@ -2513,7 +2967,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public ServiceStartType getXboxServicesLiveGameSaveServiceStartupMode() {
-        return this._xboxServicesLiveGameSaveServiceStartupMode;
+        return this.xboxServicesLiveGameSaveServiceStartupMode;
     }
     /**
      * Gets the xboxServicesLiveNetworkingServiceStartupMode property value. Possible values of xbox service start type
@@ -2521,13 +2975,14 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nullable
     public ServiceStartType getXboxServicesLiveNetworkingServiceStartupMode() {
-        return this._xboxServicesLiveNetworkingServiceStartupMode;
+        return this.xboxServicesLiveNetworkingServiceStartupMode;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -2759,1811 +3214,2037 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         writer.writeEnumValue("xboxServicesLiveNetworkingServiceStartupMode", this.getXboxServicesLiveNetworkingServiceStartupMode());
     }
     /**
-     * Sets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone.
+     * Sets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the devices camera and microphone.
      * @param value Value to set for the applicationGuardAllowCameraMicrophoneRedirection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowCameraMicrophoneRedirection(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowCameraMicrophoneRedirection = value;
+        this.applicationGuardAllowCameraMicrophoneRedirection = value;
     }
     /**
      * Sets the applicationGuardAllowFileSaveOnHost property value. Allow users to download files from Edge in the application guard container and save them on the host file system
      * @param value Value to set for the applicationGuardAllowFileSaveOnHost property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowFileSaveOnHost(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowFileSaveOnHost = value;
+        this.applicationGuardAllowFileSaveOnHost = value;
     }
     /**
      * Sets the applicationGuardAllowPersistence property value. Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
      * @param value Value to set for the applicationGuardAllowPersistence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowPersistence(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowPersistence = value;
+        this.applicationGuardAllowPersistence = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToLocalPrinters property value. Allow printing to Local Printers from Container
      * @param value Value to set for the applicationGuardAllowPrintToLocalPrinters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToLocalPrinters(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowPrintToLocalPrinters = value;
+        this.applicationGuardAllowPrintToLocalPrinters = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToNetworkPrinters property value. Allow printing to Network Printers from Container
      * @param value Value to set for the applicationGuardAllowPrintToNetworkPrinters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToNetworkPrinters(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowPrintToNetworkPrinters = value;
+        this.applicationGuardAllowPrintToNetworkPrinters = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToPDF property value. Allow printing to PDF from Container
      * @param value Value to set for the applicationGuardAllowPrintToPDF property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToPDF(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowPrintToPDF = value;
+        this.applicationGuardAllowPrintToPDF = value;
     }
     /**
      * Sets the applicationGuardAllowPrintToXPS property value. Allow printing to XPS from Container
      * @param value Value to set for the applicationGuardAllowPrintToXPS property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToXPS(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowPrintToXPS = value;
+        this.applicationGuardAllowPrintToXPS = value;
     }
     /**
      * Sets the applicationGuardAllowVirtualGPU property value. Allow application guard to use virtual GPU
      * @param value Value to set for the applicationGuardAllowVirtualGPU property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowVirtualGPU(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardAllowVirtualGPU = value;
+        this.applicationGuardAllowVirtualGPU = value;
     }
     /**
      * Sets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
      * @param value Value to set for the applicationGuardBlockClipboardSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardBlockClipboardSharing(@javax.annotation.Nullable final ApplicationGuardBlockClipboardSharingType value) {
-        this._applicationGuardBlockClipboardSharing = value;
+        this.applicationGuardBlockClipboardSharing = value;
     }
     /**
      * Sets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
      * @param value Value to set for the applicationGuardBlockFileTransfer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardBlockFileTransfer(@javax.annotation.Nullable final ApplicationGuardBlockFileTransferType value) {
-        this._applicationGuardBlockFileTransfer = value;
+        this.applicationGuardBlockFileTransfer = value;
     }
     /**
      * Sets the applicationGuardBlockNonEnterpriseContent property value. Block enterprise sites to load non-enterprise content, such as third party plug-ins
      * @param value Value to set for the applicationGuardBlockNonEnterpriseContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardBlockNonEnterpriseContent(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardBlockNonEnterpriseContent = value;
+        this.applicationGuardBlockNonEnterpriseContent = value;
     }
     /**
      * Sets the applicationGuardCertificateThumbprints property value. Allows certain device level Root Certificates to be shared with the Microsoft Defender Application Guard container.
      * @param value Value to set for the applicationGuardCertificateThumbprints property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardCertificateThumbprints(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._applicationGuardCertificateThumbprints = value;
+        this.applicationGuardCertificateThumbprints = value;
     }
     /**
      * Sets the applicationGuardEnabled property value. Enable Windows Defender Application Guard
      * @param value Value to set for the applicationGuardEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardEnabled = value;
+        this.applicationGuardEnabled = value;
     }
     /**
      * Sets the applicationGuardEnabledOptions property value. Possible values for ApplicationGuardEnabledOptions
      * @param value Value to set for the applicationGuardEnabledOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardEnabledOptions(@javax.annotation.Nullable final ApplicationGuardEnabledOptions value) {
-        this._applicationGuardEnabledOptions = value;
+        this.applicationGuardEnabledOptions = value;
     }
     /**
      * Sets the applicationGuardForceAuditing property value. Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
      * @param value Value to set for the applicationGuardForceAuditing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardForceAuditing(@javax.annotation.Nullable final Boolean value) {
-        this._applicationGuardForceAuditing = value;
+        this.applicationGuardForceAuditing = value;
     }
     /**
      * Sets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
      * @param value Value to set for the appLockerApplicationControl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppLockerApplicationControl(@javax.annotation.Nullable final AppLockerApplicationControlType value) {
-        this._appLockerApplicationControl = value;
+        this.appLockerApplicationControl = value;
     }
     /**
      * Sets the bitLockerAllowStandardUserEncryption property value. Allows the admin to allow standard users to enable encrpytion during Azure AD Join.
      * @param value Value to set for the bitLockerAllowStandardUserEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerAllowStandardUserEncryption(@javax.annotation.Nullable final Boolean value) {
-        this._bitLockerAllowStandardUserEncryption = value;
+        this.bitLockerAllowStandardUserEncryption = value;
     }
     /**
      * Sets the bitLockerDisableWarningForOtherDiskEncryption property value. Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
      * @param value Value to set for the bitLockerDisableWarningForOtherDiskEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerDisableWarningForOtherDiskEncryption(@javax.annotation.Nullable final Boolean value) {
-        this._bitLockerDisableWarningForOtherDiskEncryption = value;
+        this.bitLockerDisableWarningForOtherDiskEncryption = value;
     }
     /**
      * Sets the bitLockerEnableStorageCardEncryptionOnMobile property value. Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
      * @param value Value to set for the bitLockerEnableStorageCardEncryptionOnMobile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerEnableStorageCardEncryptionOnMobile(@javax.annotation.Nullable final Boolean value) {
-        this._bitLockerEnableStorageCardEncryptionOnMobile = value;
+        this.bitLockerEnableStorageCardEncryptionOnMobile = value;
     }
     /**
      * Sets the bitLockerEncryptDevice property value. Allows the admin to require encryption to be turned on using BitLocker.
      * @param value Value to set for the bitLockerEncryptDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerEncryptDevice(@javax.annotation.Nullable final Boolean value) {
-        this._bitLockerEncryptDevice = value;
+        this.bitLockerEncryptDevice = value;
     }
     /**
      * Sets the bitLockerFixedDrivePolicy property value. BitLocker Fixed Drive Policy.
      * @param value Value to set for the bitLockerFixedDrivePolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerFixedDrivePolicy(@javax.annotation.Nullable final BitLockerFixedDrivePolicy value) {
-        this._bitLockerFixedDrivePolicy = value;
+        this.bitLockerFixedDrivePolicy = value;
     }
     /**
      * Sets the bitLockerRecoveryPasswordRotation property value. BitLocker recovery password rotation type
      * @param value Value to set for the bitLockerRecoveryPasswordRotation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerRecoveryPasswordRotation(@javax.annotation.Nullable final BitLockerRecoveryPasswordRotationType value) {
-        this._bitLockerRecoveryPasswordRotation = value;
+        this.bitLockerRecoveryPasswordRotation = value;
     }
     /**
      * Sets the bitLockerRemovableDrivePolicy property value. BitLocker Removable Drive Policy.
      * @param value Value to set for the bitLockerRemovableDrivePolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerRemovableDrivePolicy(@javax.annotation.Nullable final BitLockerRemovableDrivePolicy value) {
-        this._bitLockerRemovableDrivePolicy = value;
+        this.bitLockerRemovableDrivePolicy = value;
     }
     /**
      * Sets the bitLockerSystemDrivePolicy property value. BitLocker System Drive Policy.
      * @param value Value to set for the bitLockerSystemDrivePolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerSystemDrivePolicy(@javax.annotation.Nullable final BitLockerSystemDrivePolicy value) {
-        this._bitLockerSystemDrivePolicy = value;
+        this.bitLockerSystemDrivePolicy = value;
     }
     /**
      * Sets the defenderAdditionalGuardedFolders property value. List of folder paths to be added to the list of protected folders
      * @param value Value to set for the defenderAdditionalGuardedFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAdditionalGuardedFolders(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._defenderAdditionalGuardedFolders = value;
+        this.defenderAdditionalGuardedFolders = value;
     }
     /**
      * Sets the defenderAdobeReaderLaunchChildProcess property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderAdobeReaderLaunchChildProcess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAdobeReaderLaunchChildProcess(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderAdobeReaderLaunchChildProcess = value;
+        this.defenderAdobeReaderLaunchChildProcess = value;
     }
     /**
      * Sets the defenderAdvancedRansomewareProtectionType property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderAdvancedRansomewareProtectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAdvancedRansomewareProtectionType(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderAdvancedRansomewareProtectionType = value;
+        this.defenderAdvancedRansomewareProtectionType = value;
     }
     /**
      * Sets the defenderAllowBehaviorMonitoring property value. Allows or disallows Windows Defender Behavior Monitoring functionality.
      * @param value Value to set for the defenderAllowBehaviorMonitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowBehaviorMonitoring(@javax.annotation.Nullable final Boolean value) {
-        this._defenderAllowBehaviorMonitoring = value;
+        this.defenderAllowBehaviorMonitoring = value;
     }
     /**
      * Sets the defenderAllowCloudProtection property value. To best protect your PC, Windows Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.
      * @param value Value to set for the defenderAllowCloudProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowCloudProtection(@javax.annotation.Nullable final Boolean value) {
-        this._defenderAllowCloudProtection = value;
+        this.defenderAllowCloudProtection = value;
     }
     /**
      * Sets the defenderAllowEndUserAccess property value. Allows or disallows user access to the Windows Defender UI. If disallowed, all Windows Defender notifications will also be suppressed.
      * @param value Value to set for the defenderAllowEndUserAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowEndUserAccess(@javax.annotation.Nullable final Boolean value) {
-        this._defenderAllowEndUserAccess = value;
+        this.defenderAllowEndUserAccess = value;
     }
     /**
      * Sets the defenderAllowIntrusionPreventionSystem property value. Allows or disallows Windows Defender Intrusion Prevention functionality.
      * @param value Value to set for the defenderAllowIntrusionPreventionSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowIntrusionPreventionSystem(@javax.annotation.Nullable final Boolean value) {
-        this._defenderAllowIntrusionPreventionSystem = value;
+        this.defenderAllowIntrusionPreventionSystem = value;
     }
     /**
      * Sets the defenderAllowOnAccessProtection property value. Allows or disallows Windows Defender On Access Protection functionality.
      * @param value Value to set for the defenderAllowOnAccessProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowOnAccessProtection(@javax.annotation.Nullable final Boolean value) {
-        this._defenderAllowOnAccessProtection = value;
+        this.defenderAllowOnAccessProtection = value;
     }
     /**
      * Sets the defenderAllowRealTimeMonitoring property value. Allows or disallows Windows Defender Realtime Monitoring functionality.
      * @param value Value to set for the defenderAllowRealTimeMonitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowRealTimeMonitoring(@javax.annotation.Nullable final Boolean value) {
-        this._defenderAllowRealTimeMonitoring = value;
+        this.defenderAllowRealTimeMonitoring = value;
     }
     /**
      * Sets the defenderAllowScanArchiveFiles property value. Allows or disallows scanning of archives.
      * @param value Value to set for the defenderAllowScanArchiveFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowScanArchiveFiles(@javax.annotation.Nullable final Boolean value) {
-        this._defenderAllowScanArchiveFiles = value;
+        this.defenderAllowScanArchiveFiles = value;
     }
     /**
      * Sets the defenderAllowScanDownloads property value. Allows or disallows Windows Defender IOAVP Protection functionality.
      * @param value Value to set for the defenderAllowScanDownloads property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowScanDownloads(@javax.annotation.Nullable final Boolean value) {
-        this._defenderAllowScanDownloads = value;
+        this.defenderAllowScanDownloads = value;
     }
     /**
      * Sets the defenderAllowScanNetworkFiles property value. Allows or disallows a scanning of network files.
      * @param value Value to set for the defenderAllowScanNetworkFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowScanNetworkFiles(@javax.annotation.Nullable final Boolean value) {
-        this._defenderAllowScanNetworkFiles = value;
+        this.defenderAllowScanNetworkFiles = value;
     }
     /**
      * Sets the defenderAllowScanRemovableDrivesDuringFullScan property value. Allows or disallows a full scan of removable drives. During a quick scan, removable drives may still be scanned.
      * @param value Value to set for the defenderAllowScanRemovableDrivesDuringFullScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowScanRemovableDrivesDuringFullScan(@javax.annotation.Nullable final Boolean value) {
-        this._defenderAllowScanRemovableDrivesDuringFullScan = value;
+        this.defenderAllowScanRemovableDrivesDuringFullScan = value;
     }
     /**
      * Sets the defenderAllowScanScriptsLoadedInInternetExplorer property value. Allows or disallows Windows Defender Script Scanning functionality.
      * @param value Value to set for the defenderAllowScanScriptsLoadedInInternetExplorer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowScanScriptsLoadedInInternetExplorer(@javax.annotation.Nullable final Boolean value) {
-        this._defenderAllowScanScriptsLoadedInInternetExplorer = value;
+        this.defenderAllowScanScriptsLoadedInInternetExplorer = value;
     }
     /**
      * Sets the defenderAttackSurfaceReductionExcludedPaths property value. List of exe files and folders to be excluded from attack surface reduction rules
      * @param value Value to set for the defenderAttackSurfaceReductionExcludedPaths property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAttackSurfaceReductionExcludedPaths(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._defenderAttackSurfaceReductionExcludedPaths = value;
+        this.defenderAttackSurfaceReductionExcludedPaths = value;
     }
     /**
      * Sets the defenderBlockEndUserAccess property value. Allows or disallows user access to the Windows Defender UI. If disallowed, all Windows Defender notifications will also be suppressed.
      * @param value Value to set for the defenderBlockEndUserAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderBlockEndUserAccess(@javax.annotation.Nullable final Boolean value) {
-        this._defenderBlockEndUserAccess = value;
+        this.defenderBlockEndUserAccess = value;
     }
     /**
      * Sets the defenderBlockPersistenceThroughWmiType property value. Possible values of Defender Attack Surface Reduction Rules
      * @param value Value to set for the defenderBlockPersistenceThroughWmiType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderBlockPersistenceThroughWmiType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
-        this._defenderBlockPersistenceThroughWmiType = value;
+        this.defenderBlockPersistenceThroughWmiType = value;
     }
     /**
      * Sets the defenderCheckForSignaturesBeforeRunningScan property value. This policy setting allows you to manage whether a check for new virus and spyware definitions will occur before running a scan.
      * @param value Value to set for the defenderCheckForSignaturesBeforeRunningScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderCheckForSignaturesBeforeRunningScan(@javax.annotation.Nullable final Boolean value) {
-        this._defenderCheckForSignaturesBeforeRunningScan = value;
+        this.defenderCheckForSignaturesBeforeRunningScan = value;
     }
     /**
      * Sets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
      * @param value Value to set for the defenderCloudBlockLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderCloudBlockLevel(@javax.annotation.Nullable final DefenderCloudBlockLevelType value) {
-        this._defenderCloudBlockLevel = value;
+        this.defenderCloudBlockLevel = value;
     }
     /**
      * Sets the defenderCloudExtendedTimeoutInSeconds property value. Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- 'Configure the 'Block at First Sight' feature; 'Join Microsoft MAPS'; 'Send file samples when further analysis is required'. Valid values 0 to 50
      * @param value Value to set for the defenderCloudExtendedTimeoutInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderCloudExtendedTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._defenderCloudExtendedTimeoutInSeconds = value;
+        this.defenderCloudExtendedTimeoutInSeconds = value;
     }
     /**
      * Sets the defenderDaysBeforeDeletingQuarantinedMalware property value. Time period (in days) that quarantine items will be stored on the system. Valid values 0 to 90
      * @param value Value to set for the defenderDaysBeforeDeletingQuarantinedMalware property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDaysBeforeDeletingQuarantinedMalware(@javax.annotation.Nullable final Integer value) {
-        this._defenderDaysBeforeDeletingQuarantinedMalware = value;
+        this.defenderDaysBeforeDeletingQuarantinedMalware = value;
     }
     /**
      * Sets the defenderDetectedMalwareActions property value. Allows an administrator to specify any valid threat severity levels and the corresponding default action ID to take.
      * @param value Value to set for the defenderDetectedMalwareActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDetectedMalwareActions(@javax.annotation.Nullable final DefenderDetectedMalwareActions value) {
-        this._defenderDetectedMalwareActions = value;
+        this.defenderDetectedMalwareActions = value;
     }
     /**
      * Sets the defenderDisableBehaviorMonitoring property value. Allows or disallows Windows Defender Behavior Monitoring functionality.
      * @param value Value to set for the defenderDisableBehaviorMonitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableBehaviorMonitoring(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableBehaviorMonitoring = value;
+        this.defenderDisableBehaviorMonitoring = value;
     }
     /**
      * Sets the defenderDisableCatchupFullScan property value. This policy setting allows you to configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
      * @param value Value to set for the defenderDisableCatchupFullScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableCatchupFullScan(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableCatchupFullScan = value;
+        this.defenderDisableCatchupFullScan = value;
     }
     /**
      * Sets the defenderDisableCatchupQuickScan property value. This policy setting allows you to configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
      * @param value Value to set for the defenderDisableCatchupQuickScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableCatchupQuickScan(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableCatchupQuickScan = value;
+        this.defenderDisableCatchupQuickScan = value;
     }
     /**
      * Sets the defenderDisableCloudProtection property value. To best protect your PC, Windows Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.
      * @param value Value to set for the defenderDisableCloudProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableCloudProtection(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableCloudProtection = value;
+        this.defenderDisableCloudProtection = value;
     }
     /**
      * Sets the defenderDisableIntrusionPreventionSystem property value. Allows or disallows Windows Defender Intrusion Prevention functionality.
      * @param value Value to set for the defenderDisableIntrusionPreventionSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableIntrusionPreventionSystem(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableIntrusionPreventionSystem = value;
+        this.defenderDisableIntrusionPreventionSystem = value;
     }
     /**
      * Sets the defenderDisableOnAccessProtection property value. Allows or disallows Windows Defender On Access Protection functionality.
      * @param value Value to set for the defenderDisableOnAccessProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableOnAccessProtection(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableOnAccessProtection = value;
+        this.defenderDisableOnAccessProtection = value;
     }
     /**
      * Sets the defenderDisableRealTimeMonitoring property value. Allows or disallows Windows Defender Realtime Monitoring functionality.
      * @param value Value to set for the defenderDisableRealTimeMonitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableRealTimeMonitoring(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableRealTimeMonitoring = value;
+        this.defenderDisableRealTimeMonitoring = value;
     }
     /**
      * Sets the defenderDisableScanArchiveFiles property value. Allows or disallows scanning of archives.
      * @param value Value to set for the defenderDisableScanArchiveFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableScanArchiveFiles(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableScanArchiveFiles = value;
+        this.defenderDisableScanArchiveFiles = value;
     }
     /**
      * Sets the defenderDisableScanDownloads property value. Allows or disallows Windows Defender IOAVP Protection functionality.
      * @param value Value to set for the defenderDisableScanDownloads property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableScanDownloads(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableScanDownloads = value;
+        this.defenderDisableScanDownloads = value;
     }
     /**
      * Sets the defenderDisableScanNetworkFiles property value. Allows or disallows a scanning of network files.
      * @param value Value to set for the defenderDisableScanNetworkFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableScanNetworkFiles(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableScanNetworkFiles = value;
+        this.defenderDisableScanNetworkFiles = value;
     }
     /**
      * Sets the defenderDisableScanRemovableDrivesDuringFullScan property value. Allows or disallows a full scan of removable drives. During a quick scan, removable drives may still be scanned.
      * @param value Value to set for the defenderDisableScanRemovableDrivesDuringFullScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableScanRemovableDrivesDuringFullScan(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableScanRemovableDrivesDuringFullScan = value;
+        this.defenderDisableScanRemovableDrivesDuringFullScan = value;
     }
     /**
      * Sets the defenderDisableScanScriptsLoadedInInternetExplorer property value. Allows or disallows Windows Defender Script Scanning functionality.
      * @param value Value to set for the defenderDisableScanScriptsLoadedInInternetExplorer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableScanScriptsLoadedInInternetExplorer(@javax.annotation.Nullable final Boolean value) {
-        this._defenderDisableScanScriptsLoadedInInternetExplorer = value;
+        this.defenderDisableScanScriptsLoadedInInternetExplorer = value;
     }
     /**
      * Sets the defenderEmailContentExecution property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderEmailContentExecution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderEmailContentExecution(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderEmailContentExecution = value;
+        this.defenderEmailContentExecution = value;
     }
     /**
      * Sets the defenderEmailContentExecutionType property value. Possible values of Defender Attack Surface Reduction Rules
      * @param value Value to set for the defenderEmailContentExecutionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderEmailContentExecutionType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
-        this._defenderEmailContentExecutionType = value;
+        this.defenderEmailContentExecutionType = value;
     }
     /**
      * Sets the defenderEnableLowCpuPriority property value. This policy setting allows you to enable or disable low CPU priority for scheduled scans.
      * @param value Value to set for the defenderEnableLowCpuPriority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderEnableLowCpuPriority(@javax.annotation.Nullable final Boolean value) {
-        this._defenderEnableLowCpuPriority = value;
+        this.defenderEnableLowCpuPriority = value;
     }
     /**
      * Sets the defenderEnableScanIncomingMail property value. Allows or disallows scanning of email.
      * @param value Value to set for the defenderEnableScanIncomingMail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderEnableScanIncomingMail(@javax.annotation.Nullable final Boolean value) {
-        this._defenderEnableScanIncomingMail = value;
+        this.defenderEnableScanIncomingMail = value;
     }
     /**
      * Sets the defenderEnableScanMappedNetworkDrivesDuringFullScan property value. Allows or disallows a full scan of mapped network drives.
      * @param value Value to set for the defenderEnableScanMappedNetworkDrivesDuringFullScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderEnableScanMappedNetworkDrivesDuringFullScan(@javax.annotation.Nullable final Boolean value) {
-        this._defenderEnableScanMappedNetworkDrivesDuringFullScan = value;
+        this.defenderEnableScanMappedNetworkDrivesDuringFullScan = value;
     }
     /**
      * Sets the defenderExploitProtectionXml property value. Xml content containing information regarding exploit protection details.
      * @param value Value to set for the defenderExploitProtectionXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderExploitProtectionXml(@javax.annotation.Nullable final byte[] value) {
-        this._defenderExploitProtectionXml = value;
+        this.defenderExploitProtectionXml = value;
     }
     /**
      * Sets the defenderExploitProtectionXmlFileName property value. Name of the file from which DefenderExploitProtectionXml was obtained.
      * @param value Value to set for the defenderExploitProtectionXmlFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderExploitProtectionXmlFileName(@javax.annotation.Nullable final String value) {
-        this._defenderExploitProtectionXmlFileName = value;
+        this.defenderExploitProtectionXmlFileName = value;
     }
     /**
      * Sets the defenderFileExtensionsToExclude property value. File extensions to exclude from scans and real time protection.
      * @param value Value to set for the defenderFileExtensionsToExclude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderFileExtensionsToExclude(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._defenderFileExtensionsToExclude = value;
+        this.defenderFileExtensionsToExclude = value;
     }
     /**
      * Sets the defenderFilesAndFoldersToExclude property value. Files and folder to exclude from scans and real time protection.
      * @param value Value to set for the defenderFilesAndFoldersToExclude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderFilesAndFoldersToExclude(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._defenderFilesAndFoldersToExclude = value;
+        this.defenderFilesAndFoldersToExclude = value;
     }
     /**
      * Sets the defenderGuardedFoldersAllowedAppPaths property value. List of paths to exe that are allowed to access protected folders
      * @param value Value to set for the defenderGuardedFoldersAllowedAppPaths property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderGuardedFoldersAllowedAppPaths(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._defenderGuardedFoldersAllowedAppPaths = value;
+        this.defenderGuardedFoldersAllowedAppPaths = value;
     }
     /**
      * Sets the defenderGuardMyFoldersType property value. Possible values of Folder Protection
      * @param value Value to set for the defenderGuardMyFoldersType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderGuardMyFoldersType(@javax.annotation.Nullable final FolderProtectionType value) {
-        this._defenderGuardMyFoldersType = value;
+        this.defenderGuardMyFoldersType = value;
     }
     /**
      * Sets the defenderNetworkProtectionType property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderNetworkProtectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderNetworkProtectionType(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderNetworkProtectionType = value;
+        this.defenderNetworkProtectionType = value;
     }
     /**
      * Sets the defenderOfficeAppsExecutableContentCreationOrLaunch property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderOfficeAppsExecutableContentCreationOrLaunch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsExecutableContentCreationOrLaunch(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderOfficeAppsExecutableContentCreationOrLaunch = value;
+        this.defenderOfficeAppsExecutableContentCreationOrLaunch = value;
     }
     /**
      * Sets the defenderOfficeAppsExecutableContentCreationOrLaunchType property value. Possible values of Defender Attack Surface Reduction Rules
      * @param value Value to set for the defenderOfficeAppsExecutableContentCreationOrLaunchType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsExecutableContentCreationOrLaunchType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
-        this._defenderOfficeAppsExecutableContentCreationOrLaunchType = value;
+        this.defenderOfficeAppsExecutableContentCreationOrLaunchType = value;
     }
     /**
      * Sets the defenderOfficeAppsLaunchChildProcess property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderOfficeAppsLaunchChildProcess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsLaunchChildProcess(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderOfficeAppsLaunchChildProcess = value;
+        this.defenderOfficeAppsLaunchChildProcess = value;
     }
     /**
      * Sets the defenderOfficeAppsLaunchChildProcessType property value. Possible values of Defender Attack Surface Reduction Rules
      * @param value Value to set for the defenderOfficeAppsLaunchChildProcessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsLaunchChildProcessType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
-        this._defenderOfficeAppsLaunchChildProcessType = value;
+        this.defenderOfficeAppsLaunchChildProcessType = value;
     }
     /**
      * Sets the defenderOfficeAppsOtherProcessInjection property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderOfficeAppsOtherProcessInjection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsOtherProcessInjection(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderOfficeAppsOtherProcessInjection = value;
+        this.defenderOfficeAppsOtherProcessInjection = value;
     }
     /**
      * Sets the defenderOfficeAppsOtherProcessInjectionType property value. Possible values of Defender Attack Surface Reduction Rules
      * @param value Value to set for the defenderOfficeAppsOtherProcessInjectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsOtherProcessInjectionType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
-        this._defenderOfficeAppsOtherProcessInjectionType = value;
+        this.defenderOfficeAppsOtherProcessInjectionType = value;
     }
     /**
      * Sets the defenderOfficeCommunicationAppsLaunchChildProcess property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderOfficeCommunicationAppsLaunchChildProcess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeCommunicationAppsLaunchChildProcess(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderOfficeCommunicationAppsLaunchChildProcess = value;
+        this.defenderOfficeCommunicationAppsLaunchChildProcess = value;
     }
     /**
      * Sets the defenderOfficeMacroCodeAllowWin32Imports property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderOfficeMacroCodeAllowWin32Imports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeMacroCodeAllowWin32Imports(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderOfficeMacroCodeAllowWin32Imports = value;
+        this.defenderOfficeMacroCodeAllowWin32Imports = value;
     }
     /**
      * Sets the defenderOfficeMacroCodeAllowWin32ImportsType property value. Possible values of Defender Attack Surface Reduction Rules
      * @param value Value to set for the defenderOfficeMacroCodeAllowWin32ImportsType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeMacroCodeAllowWin32ImportsType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
-        this._defenderOfficeMacroCodeAllowWin32ImportsType = value;
+        this.defenderOfficeMacroCodeAllowWin32ImportsType = value;
     }
     /**
      * Sets the defenderPotentiallyUnwantedAppAction property value. Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
      * @param value Value to set for the defenderPotentiallyUnwantedAppAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderPotentiallyUnwantedAppAction(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderPotentiallyUnwantedAppAction = value;
+        this.defenderPotentiallyUnwantedAppAction = value;
     }
     /**
      * Sets the defenderPreventCredentialStealingType property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderPreventCredentialStealingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderPreventCredentialStealingType(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderPreventCredentialStealingType = value;
+        this.defenderPreventCredentialStealingType = value;
     }
     /**
      * Sets the defenderProcessCreation property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderProcessCreation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderProcessCreation(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderProcessCreation = value;
+        this.defenderProcessCreation = value;
     }
     /**
      * Sets the defenderProcessCreationType property value. Possible values of Defender Attack Surface Reduction Rules
      * @param value Value to set for the defenderProcessCreationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderProcessCreationType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
-        this._defenderProcessCreationType = value;
+        this.defenderProcessCreationType = value;
     }
     /**
      * Sets the defenderProcessesToExclude property value. Processes to exclude from scans and real time protection.
      * @param value Value to set for the defenderProcessesToExclude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderProcessesToExclude(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._defenderProcessesToExclude = value;
+        this.defenderProcessesToExclude = value;
     }
     /**
      * Sets the defenderScanDirection property value. Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
      * @param value Value to set for the defenderScanDirection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanDirection(@javax.annotation.Nullable final DefenderRealtimeScanDirection value) {
-        this._defenderScanDirection = value;
+        this.defenderScanDirection = value;
     }
     /**
      * Sets the defenderScanMaxCpuPercentage property value. Represents the average CPU load factor for the Windows Defender scan (in percent). The default value is 50. Valid values 0 to 100
      * @param value Value to set for the defenderScanMaxCpuPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanMaxCpuPercentage(@javax.annotation.Nullable final Integer value) {
-        this._defenderScanMaxCpuPercentage = value;
+        this.defenderScanMaxCpuPercentage = value;
     }
     /**
      * Sets the defenderScanType property value. Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full.
      * @param value Value to set for the defenderScanType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanType(@javax.annotation.Nullable final DefenderScanType value) {
-        this._defenderScanType = value;
+        this.defenderScanType = value;
     }
     /**
      * Sets the defenderScheduledQuickScanTime property value. Selects the time of day that the Windows Defender quick scan should run. For example, a value of 0=12:00AM, a value of 60=1:00AM, a value of 120=2:00, and so on, up to a value of 1380=11:00PM. The default value is 120
      * @param value Value to set for the defenderScheduledQuickScanTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScheduledQuickScanTime(@javax.annotation.Nullable final LocalTime value) {
-        this._defenderScheduledQuickScanTime = value;
+        this.defenderScheduledQuickScanTime = value;
     }
     /**
      * Sets the defenderScheduledScanDay property value. Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
      * @param value Value to set for the defenderScheduledScanDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScheduledScanDay(@javax.annotation.Nullable final WeeklySchedule value) {
-        this._defenderScheduledScanDay = value;
+        this.defenderScheduledScanDay = value;
     }
     /**
      * Sets the defenderScheduledScanTime property value. Selects the time of day that the Windows Defender scan should run.
      * @param value Value to set for the defenderScheduledScanTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScheduledScanTime(@javax.annotation.Nullable final LocalTime value) {
-        this._defenderScheduledScanTime = value;
+        this.defenderScheduledScanTime = value;
     }
     /**
      * Sets the defenderScriptDownloadedPayloadExecution property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderScriptDownloadedPayloadExecution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScriptDownloadedPayloadExecution(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderScriptDownloadedPayloadExecution = value;
+        this.defenderScriptDownloadedPayloadExecution = value;
     }
     /**
      * Sets the defenderScriptDownloadedPayloadExecutionType property value. Possible values of Defender Attack Surface Reduction Rules
      * @param value Value to set for the defenderScriptDownloadedPayloadExecutionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScriptDownloadedPayloadExecutionType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
-        this._defenderScriptDownloadedPayloadExecutionType = value;
+        this.defenderScriptDownloadedPayloadExecutionType = value;
     }
     /**
      * Sets the defenderScriptObfuscatedMacroCode property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderScriptObfuscatedMacroCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScriptObfuscatedMacroCode(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderScriptObfuscatedMacroCode = value;
+        this.defenderScriptObfuscatedMacroCode = value;
     }
     /**
      * Sets the defenderScriptObfuscatedMacroCodeType property value. Possible values of Defender Attack Surface Reduction Rules
      * @param value Value to set for the defenderScriptObfuscatedMacroCodeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScriptObfuscatedMacroCodeType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
-        this._defenderScriptObfuscatedMacroCodeType = value;
+        this.defenderScriptObfuscatedMacroCodeType = value;
     }
     /**
      * Sets the defenderSecurityCenterBlockExploitProtectionOverride property value. Indicates whether or not to block user from overriding Exploit Protection settings.
      * @param value Value to set for the defenderSecurityCenterBlockExploitProtectionOverride property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterBlockExploitProtectionOverride(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterBlockExploitProtectionOverride = value;
+        this.defenderSecurityCenterBlockExploitProtectionOverride = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableAccountUI property value. Used to disable the display of the account protection area.
      * @param value Value to set for the defenderSecurityCenterDisableAccountUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableAccountUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableAccountUI = value;
+        this.defenderSecurityCenterDisableAccountUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableAppBrowserUI property value. Used to disable the display of the app and browser protection area.
      * @param value Value to set for the defenderSecurityCenterDisableAppBrowserUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableAppBrowserUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableAppBrowserUI = value;
+        this.defenderSecurityCenterDisableAppBrowserUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableClearTpmUI property value. Used to disable the display of the Clear TPM button.
      * @param value Value to set for the defenderSecurityCenterDisableClearTpmUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableClearTpmUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableClearTpmUI = value;
+        this.defenderSecurityCenterDisableClearTpmUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableFamilyUI property value. Used to disable the display of the family options area.
      * @param value Value to set for the defenderSecurityCenterDisableFamilyUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableFamilyUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableFamilyUI = value;
+        this.defenderSecurityCenterDisableFamilyUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableHardwareUI property value. Used to disable the display of the hardware protection area.
      * @param value Value to set for the defenderSecurityCenterDisableHardwareUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableHardwareUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableHardwareUI = value;
+        this.defenderSecurityCenterDisableHardwareUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableHealthUI property value. Used to disable the display of the device performance and health area.
      * @param value Value to set for the defenderSecurityCenterDisableHealthUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableHealthUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableHealthUI = value;
+        this.defenderSecurityCenterDisableHealthUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableNetworkUI property value. Used to disable the display of the firewall and network protection area.
      * @param value Value to set for the defenderSecurityCenterDisableNetworkUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableNetworkUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableNetworkUI = value;
+        this.defenderSecurityCenterDisableNetworkUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableNotificationAreaUI property value. Used to disable the display of the notification area control. The user needs to either sign out and sign in or reboot the computer for this setting to take effect.
      * @param value Value to set for the defenderSecurityCenterDisableNotificationAreaUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableNotificationAreaUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableNotificationAreaUI = value;
+        this.defenderSecurityCenterDisableNotificationAreaUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableRansomwareUI property value. Used to disable the display of the ransomware protection area.
      * @param value Value to set for the defenderSecurityCenterDisableRansomwareUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableRansomwareUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableRansomwareUI = value;
+        this.defenderSecurityCenterDisableRansomwareUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableSecureBootUI property value. Used to disable the display of the secure boot area under Device security.
      * @param value Value to set for the defenderSecurityCenterDisableSecureBootUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableSecureBootUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableSecureBootUI = value;
+        this.defenderSecurityCenterDisableSecureBootUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableTroubleshootingUI property value. Used to disable the display of the security process troubleshooting under Device security.
      * @param value Value to set for the defenderSecurityCenterDisableTroubleshootingUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableTroubleshootingUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableTroubleshootingUI = value;
+        this.defenderSecurityCenterDisableTroubleshootingUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableVirusUI property value. Used to disable the display of the virus and threat protection area.
      * @param value Value to set for the defenderSecurityCenterDisableVirusUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableVirusUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableVirusUI = value;
+        this.defenderSecurityCenterDisableVirusUI = value;
     }
     /**
      * Sets the defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI property value. Used to disable the display of update TPM Firmware when a vulnerable firmware is detected.
      * @param value Value to set for the defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI(@javax.annotation.Nullable final Boolean value) {
-        this._defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI = value;
+        this.defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI = value;
     }
     /**
      * Sets the defenderSecurityCenterHelpEmail property value. The email address that is displayed to users.
      * @param value Value to set for the defenderSecurityCenterHelpEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterHelpEmail(@javax.annotation.Nullable final String value) {
-        this._defenderSecurityCenterHelpEmail = value;
+        this.defenderSecurityCenterHelpEmail = value;
     }
     /**
      * Sets the defenderSecurityCenterHelpPhone property value. The phone number or Skype ID that is displayed to users.
      * @param value Value to set for the defenderSecurityCenterHelpPhone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterHelpPhone(@javax.annotation.Nullable final String value) {
-        this._defenderSecurityCenterHelpPhone = value;
+        this.defenderSecurityCenterHelpPhone = value;
     }
     /**
      * Sets the defenderSecurityCenterHelpURL property value. The help portal URL this is displayed to users.
      * @param value Value to set for the defenderSecurityCenterHelpURL property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterHelpURL(@javax.annotation.Nullable final String value) {
-        this._defenderSecurityCenterHelpURL = value;
+        this.defenderSecurityCenterHelpURL = value;
     }
     /**
      * Sets the defenderSecurityCenterITContactDisplay property value. Possible values for defenderSecurityCenterITContactDisplay
      * @param value Value to set for the defenderSecurityCenterITContactDisplay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterITContactDisplay(@javax.annotation.Nullable final DefenderSecurityCenterITContactDisplayType value) {
-        this._defenderSecurityCenterITContactDisplay = value;
+        this.defenderSecurityCenterITContactDisplay = value;
     }
     /**
      * Sets the defenderSecurityCenterNotificationsFromApp property value. Possible values for defenderSecurityCenterNotificationsFromApp
      * @param value Value to set for the defenderSecurityCenterNotificationsFromApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterNotificationsFromApp(@javax.annotation.Nullable final DefenderSecurityCenterNotificationsFromAppType value) {
-        this._defenderSecurityCenterNotificationsFromApp = value;
+        this.defenderSecurityCenterNotificationsFromApp = value;
     }
     /**
      * Sets the defenderSecurityCenterOrganizationDisplayName property value. The company name that is displayed to the users.
      * @param value Value to set for the defenderSecurityCenterOrganizationDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterOrganizationDisplayName(@javax.annotation.Nullable final String value) {
-        this._defenderSecurityCenterOrganizationDisplayName = value;
+        this.defenderSecurityCenterOrganizationDisplayName = value;
     }
     /**
      * Sets the defenderSignatureUpdateIntervalInHours property value. Specifies the interval (in hours) that will be used to check for signatures, so instead of using the ScheduleDay and ScheduleTime the check for new signatures will be set according to the interval. Valid values 0 to 24
      * @param value Value to set for the defenderSignatureUpdateIntervalInHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSignatureUpdateIntervalInHours(@javax.annotation.Nullable final Integer value) {
-        this._defenderSignatureUpdateIntervalInHours = value;
+        this.defenderSignatureUpdateIntervalInHours = value;
     }
     /**
      * Sets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
      * @param value Value to set for the defenderSubmitSamplesConsentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSubmitSamplesConsentType(@javax.annotation.Nullable final DefenderSubmitSamplesConsentType value) {
-        this._defenderSubmitSamplesConsentType = value;
+        this.defenderSubmitSamplesConsentType = value;
     }
     /**
      * Sets the defenderUntrustedExecutable property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderUntrustedExecutable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderUntrustedExecutable(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderUntrustedExecutable = value;
+        this.defenderUntrustedExecutable = value;
     }
     /**
      * Sets the defenderUntrustedExecutableType property value. Possible values of Defender Attack Surface Reduction Rules
      * @param value Value to set for the defenderUntrustedExecutableType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderUntrustedExecutableType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
-        this._defenderUntrustedExecutableType = value;
+        this.defenderUntrustedExecutableType = value;
     }
     /**
      * Sets the defenderUntrustedUSBProcess property value. Possible values of Defender PUA Protection
      * @param value Value to set for the defenderUntrustedUSBProcess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderUntrustedUSBProcess(@javax.annotation.Nullable final DefenderProtectionType value) {
-        this._defenderUntrustedUSBProcess = value;
+        this.defenderUntrustedUSBProcess = value;
     }
     /**
      * Sets the defenderUntrustedUSBProcessType property value. Possible values of Defender Attack Surface Reduction Rules
      * @param value Value to set for the defenderUntrustedUSBProcessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderUntrustedUSBProcessType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
-        this._defenderUntrustedUSBProcessType = value;
+        this.defenderUntrustedUSBProcessType = value;
     }
     /**
      * Sets the deviceGuardEnableSecureBootWithDMA property value. This property will be deprecated in May 2019 and will be replaced with property DeviceGuardSecureBootWithDMA. Specifies whether Platform Security Level is enabled at next reboot.
      * @param value Value to set for the deviceGuardEnableSecureBootWithDMA property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardEnableSecureBootWithDMA(@javax.annotation.Nullable final Boolean value) {
-        this._deviceGuardEnableSecureBootWithDMA = value;
+        this.deviceGuardEnableSecureBootWithDMA = value;
     }
     /**
      * Sets the deviceGuardEnableVirtualizationBasedSecurity property value. Turns On Virtualization Based Security(VBS).
      * @param value Value to set for the deviceGuardEnableVirtualizationBasedSecurity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardEnableVirtualizationBasedSecurity(@javax.annotation.Nullable final Boolean value) {
-        this._deviceGuardEnableVirtualizationBasedSecurity = value;
+        this.deviceGuardEnableVirtualizationBasedSecurity = value;
     }
     /**
      * Sets the deviceGuardLaunchSystemGuard property value. Possible values of a property
      * @param value Value to set for the deviceGuardLaunchSystemGuard property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardLaunchSystemGuard(@javax.annotation.Nullable final Enablement value) {
-        this._deviceGuardLaunchSystemGuard = value;
+        this.deviceGuardLaunchSystemGuard = value;
     }
     /**
      * Sets the deviceGuardLocalSystemAuthorityCredentialGuardSettings property value. Possible values of Credential Guard settings.
      * @param value Value to set for the deviceGuardLocalSystemAuthorityCredentialGuardSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardLocalSystemAuthorityCredentialGuardSettings(@javax.annotation.Nullable final DeviceGuardLocalSystemAuthorityCredentialGuardType value) {
-        this._deviceGuardLocalSystemAuthorityCredentialGuardSettings = value;
+        this.deviceGuardLocalSystemAuthorityCredentialGuardSettings = value;
     }
     /**
      * Sets the deviceGuardSecureBootWithDMA property value. Possible values of Secure Boot with DMA
      * @param value Value to set for the deviceGuardSecureBootWithDMA property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardSecureBootWithDMA(@javax.annotation.Nullable final SecureBootWithDMAType value) {
-        this._deviceGuardSecureBootWithDMA = value;
+        this.deviceGuardSecureBootWithDMA = value;
     }
     /**
      * Sets the dmaGuardDeviceEnumerationPolicy property value. Possible values of the DmaGuardDeviceEnumerationPolicy.
      * @param value Value to set for the dmaGuardDeviceEnumerationPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDmaGuardDeviceEnumerationPolicy(@javax.annotation.Nullable final DmaGuardDeviceEnumerationPolicyType value) {
-        this._dmaGuardDeviceEnumerationPolicy = value;
+        this.dmaGuardDeviceEnumerationPolicy = value;
     }
     /**
      * Sets the firewallBlockStatefulFTP property value. Blocks stateful FTP connections to the device
      * @param value Value to set for the firewallBlockStatefulFTP property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallBlockStatefulFTP(@javax.annotation.Nullable final Boolean value) {
-        this._firewallBlockStatefulFTP = value;
+        this.firewallBlockStatefulFTP = value;
     }
     /**
      * Sets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
      * @param value Value to set for the firewallCertificateRevocationListCheckMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallCertificateRevocationListCheckMethod(@javax.annotation.Nullable final FirewallCertificateRevocationListCheckMethodType value) {
-        this._firewallCertificateRevocationListCheckMethod = value;
+        this.firewallCertificateRevocationListCheckMethod = value;
     }
     /**
      * Sets the firewallIdleTimeoutForSecurityAssociationInSeconds property value. Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
      * @param value Value to set for the firewallIdleTimeoutForSecurityAssociationInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIdleTimeoutForSecurityAssociationInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._firewallIdleTimeoutForSecurityAssociationInSeconds = value;
+        this.firewallIdleTimeoutForSecurityAssociationInSeconds = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowDHCP property value. Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
      * @param value Value to set for the firewallIPSecExemptionsAllowDHCP property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowDHCP(@javax.annotation.Nullable final Boolean value) {
-        this._firewallIPSecExemptionsAllowDHCP = value;
+        this.firewallIPSecExemptionsAllowDHCP = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowICMP property value. Configures IPSec exemptions to allow ICMP
      * @param value Value to set for the firewallIPSecExemptionsAllowICMP property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowICMP(@javax.annotation.Nullable final Boolean value) {
-        this._firewallIPSecExemptionsAllowICMP = value;
+        this.firewallIPSecExemptionsAllowICMP = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowNeighborDiscovery property value. Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
      * @param value Value to set for the firewallIPSecExemptionsAllowNeighborDiscovery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowNeighborDiscovery(@javax.annotation.Nullable final Boolean value) {
-        this._firewallIPSecExemptionsAllowNeighborDiscovery = value;
+        this.firewallIPSecExemptionsAllowNeighborDiscovery = value;
     }
     /**
      * Sets the firewallIPSecExemptionsAllowRouterDiscovery property value. Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
      * @param value Value to set for the firewallIPSecExemptionsAllowRouterDiscovery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowRouterDiscovery(@javax.annotation.Nullable final Boolean value) {
-        this._firewallIPSecExemptionsAllowRouterDiscovery = value;
+        this.firewallIPSecExemptionsAllowRouterDiscovery = value;
     }
     /**
      * Sets the firewallIPSecExemptionsNone property value. Configures IPSec exemptions to no exemptions
      * @param value Value to set for the firewallIPSecExemptionsNone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsNone(@javax.annotation.Nullable final Boolean value) {
-        this._firewallIPSecExemptionsNone = value;
+        this.firewallIPSecExemptionsNone = value;
     }
     /**
      * Sets the firewallMergeKeyingModuleSettings property value. If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
      * @param value Value to set for the firewallMergeKeyingModuleSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallMergeKeyingModuleSettings(@javax.annotation.Nullable final Boolean value) {
-        this._firewallMergeKeyingModuleSettings = value;
+        this.firewallMergeKeyingModuleSettings = value;
     }
     /**
      * Sets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
      * @param value Value to set for the firewallPacketQueueingMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallPacketQueueingMethod(@javax.annotation.Nullable final FirewallPacketQueueingMethodType value) {
-        this._firewallPacketQueueingMethod = value;
+        this.firewallPacketQueueingMethod = value;
     }
     /**
      * Sets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
      * @param value Value to set for the firewallPreSharedKeyEncodingMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallPreSharedKeyEncodingMethod(@javax.annotation.Nullable final FirewallPreSharedKeyEncodingMethodType value) {
-        this._firewallPreSharedKeyEncodingMethod = value;
+        this.firewallPreSharedKeyEncodingMethod = value;
     }
     /**
      * Sets the firewallProfileDomain property value. Configures the firewall profile settings for domain networks
      * @param value Value to set for the firewallProfileDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallProfileDomain(@javax.annotation.Nullable final WindowsFirewallNetworkProfile value) {
-        this._firewallProfileDomain = value;
+        this.firewallProfileDomain = value;
     }
     /**
      * Sets the firewallProfilePrivate property value. Configures the firewall profile settings for private networks
      * @param value Value to set for the firewallProfilePrivate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallProfilePrivate(@javax.annotation.Nullable final WindowsFirewallNetworkProfile value) {
-        this._firewallProfilePrivate = value;
+        this.firewallProfilePrivate = value;
     }
     /**
      * Sets the firewallProfilePublic property value. Configures the firewall profile settings for public networks
      * @param value Value to set for the firewallProfilePublic property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallProfilePublic(@javax.annotation.Nullable final WindowsFirewallNetworkProfile value) {
-        this._firewallProfilePublic = value;
+        this.firewallProfilePublic = value;
     }
     /**
      * Sets the firewallRules property value. Configures the firewall rule settings. This collection can contain a maximum of 150 elements.
      * @param value Value to set for the firewallRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallRules(@javax.annotation.Nullable final java.util.List<WindowsFirewallRule> value) {
-        this._firewallRules = value;
+        this.firewallRules = value;
     }
     /**
      * Sets the lanManagerAuthenticationLevel property value. Possible values for LanManagerAuthenticationLevel
      * @param value Value to set for the lanManagerAuthenticationLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanManagerAuthenticationLevel(@javax.annotation.Nullable final LanManagerAuthenticationLevel value) {
-        this._lanManagerAuthenticationLevel = value;
+        this.lanManagerAuthenticationLevel = value;
     }
     /**
      * Sets the lanManagerWorkstationDisableInsecureGuestLogons property value. If enabled,the SMB client will allow insecure guest logons. If not configured, the SMB client will reject insecure guest logons.
      * @param value Value to set for the lanManagerWorkstationDisableInsecureGuestLogons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanManagerWorkstationDisableInsecureGuestLogons(@javax.annotation.Nullable final Boolean value) {
-        this._lanManagerWorkstationDisableInsecureGuestLogons = value;
+        this.lanManagerWorkstationDisableInsecureGuestLogons = value;
     }
     /**
      * Sets the localSecurityOptionsAdministratorAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account 'Administrator'.
      * @param value Value to set for the localSecurityOptionsAdministratorAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAdministratorAccountName(@javax.annotation.Nullable final String value) {
-        this._localSecurityOptionsAdministratorAccountName = value;
+        this.localSecurityOptionsAdministratorAccountName = value;
     }
     /**
      * Sets the localSecurityOptionsAdministratorElevationPromptBehavior property value. Possible values for LocalSecurityOptionsAdministratorElevationPromptBehavior
      * @param value Value to set for the localSecurityOptionsAdministratorElevationPromptBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAdministratorElevationPromptBehavior(@javax.annotation.Nullable final LocalSecurityOptionsAdministratorElevationPromptBehaviorType value) {
-        this._localSecurityOptionsAdministratorElevationPromptBehavior = value;
+        this.localSecurityOptionsAdministratorElevationPromptBehavior = value;
     }
     /**
      * Sets the localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares property value. This security setting determines whether to allows anonymous users to perform certain activities, such as enumerating the names of domain accounts and network shares.
      * @param value Value to set for the localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares = value;
+        this.localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares = value;
     }
     /**
      * Sets the localSecurityOptionsAllowPKU2UAuthenticationRequests property value. Block PKU2U authentication requests to this device to use online identities.
      * @param value Value to set for the localSecurityOptionsAllowPKU2UAuthenticationRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowPKU2UAuthenticationRequests(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsAllowPKU2UAuthenticationRequests = value;
+        this.localSecurityOptionsAllowPKU2UAuthenticationRequests = value;
     }
     /**
      * Sets the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager property value. Edit the default Security Descriptor Definition Language string to allow or deny users and groups to make remote calls to the SAM.
      * @param value Value to set for the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager(@javax.annotation.Nullable final String value) {
-        this._localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager = value;
+        this.localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager = value;
     }
     /**
      * Sets the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool property value. UI helper boolean for LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager entity
      * @param value Value to set for the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool = value;
+        this.localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool = value;
     }
     /**
      * Sets the localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn property value. This security setting determines whether a computer can be shut down without having to log on to Windows.
      * @param value Value to set for the localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn = value;
+        this.localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn = value;
     }
     /**
      * Sets the localSecurityOptionsAllowUIAccessApplicationElevation property value. Allow UIAccess apps to prompt for elevation without using the secure desktop.
      * @param value Value to set for the localSecurityOptionsAllowUIAccessApplicationElevation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowUIAccessApplicationElevation(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsAllowUIAccessApplicationElevation = value;
+        this.localSecurityOptionsAllowUIAccessApplicationElevation = value;
     }
     /**
      * Sets the localSecurityOptionsAllowUIAccessApplicationsForSecureLocations property value. Allow UIAccess apps to prompt for elevation without using the secure desktop.Default is enabled
      * @param value Value to set for the localSecurityOptionsAllowUIAccessApplicationsForSecureLocations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsAllowUIAccessApplicationsForSecureLocations = value;
+        this.localSecurityOptionsAllowUIAccessApplicationsForSecureLocations = value;
     }
     /**
      * Sets the localSecurityOptionsAllowUndockWithoutHavingToLogon property value. Prevent a portable computer from being undocked without having to log in.
      * @param value Value to set for the localSecurityOptionsAllowUndockWithoutHavingToLogon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowUndockWithoutHavingToLogon(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsAllowUndockWithoutHavingToLogon = value;
+        this.localSecurityOptionsAllowUndockWithoutHavingToLogon = value;
     }
     /**
      * Sets the localSecurityOptionsBlockMicrosoftAccounts property value. Prevent users from adding new Microsoft accounts to this computer.
      * @param value Value to set for the localSecurityOptionsBlockMicrosoftAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsBlockMicrosoftAccounts(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsBlockMicrosoftAccounts = value;
+        this.localSecurityOptionsBlockMicrosoftAccounts = value;
     }
     /**
      * Sets the localSecurityOptionsBlockRemoteLogonWithBlankPassword property value. Enable Local accounts that are not password protected to log on from locations other than the physical device.Default is enabled
      * @param value Value to set for the localSecurityOptionsBlockRemoteLogonWithBlankPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsBlockRemoteLogonWithBlankPassword(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsBlockRemoteLogonWithBlankPassword = value;
+        this.localSecurityOptionsBlockRemoteLogonWithBlankPassword = value;
     }
     /**
      * Sets the localSecurityOptionsBlockRemoteOpticalDriveAccess property value. Enabling this settings allows only interactively logged on user to access CD-ROM media.
      * @param value Value to set for the localSecurityOptionsBlockRemoteOpticalDriveAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsBlockRemoteOpticalDriveAccess(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsBlockRemoteOpticalDriveAccess = value;
+        this.localSecurityOptionsBlockRemoteOpticalDriveAccess = value;
     }
     /**
      * Sets the localSecurityOptionsBlockUsersInstallingPrinterDrivers property value. Restrict installing printer drivers as part of connecting to a shared printer to admins only.
      * @param value Value to set for the localSecurityOptionsBlockUsersInstallingPrinterDrivers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsBlockUsersInstallingPrinterDrivers(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsBlockUsersInstallingPrinterDrivers = value;
+        this.localSecurityOptionsBlockUsersInstallingPrinterDrivers = value;
     }
     /**
      * Sets the localSecurityOptionsClearVirtualMemoryPageFile property value. This security setting determines whether the virtual memory pagefile is cleared when the system is shut down.
      * @param value Value to set for the localSecurityOptionsClearVirtualMemoryPageFile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsClearVirtualMemoryPageFile(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsClearVirtualMemoryPageFile = value;
+        this.localSecurityOptionsClearVirtualMemoryPageFile = value;
     }
     /**
      * Sets the localSecurityOptionsClientDigitallySignCommunicationsAlways property value. This security setting determines whether packet signing is required by the SMB client component.
      * @param value Value to set for the localSecurityOptionsClientDigitallySignCommunicationsAlways property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsClientDigitallySignCommunicationsAlways(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsClientDigitallySignCommunicationsAlways = value;
+        this.localSecurityOptionsClientDigitallySignCommunicationsAlways = value;
     }
     /**
      * Sets the localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers property value. If this security setting is enabled, the Server Message Block (SMB) redirector is allowed to send plaintext passwords to non-Microsoft SMB servers that do not support password encryption during authentication.
      * @param value Value to set for the localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers = value;
+        this.localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers = value;
     }
     /**
      * Sets the localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation property value. App installations requiring elevated privileges will prompt for admin credentials.Default is enabled
      * @param value Value to set for the localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation = value;
+        this.localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation = value;
     }
     /**
      * Sets the localSecurityOptionsDisableAdministratorAccount property value. Determines whether the Local Administrator account is enabled or disabled.
      * @param value Value to set for the localSecurityOptionsDisableAdministratorAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDisableAdministratorAccount(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsDisableAdministratorAccount = value;
+        this.localSecurityOptionsDisableAdministratorAccount = value;
     }
     /**
      * Sets the localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees property value. This security setting determines whether the SMB client attempts to negotiate SMB packet signing.
      * @param value Value to set for the localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees = value;
+        this.localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees = value;
     }
     /**
      * Sets the localSecurityOptionsDisableGuestAccount property value. Determines if the Guest account is enabled or disabled.
      * @param value Value to set for the localSecurityOptionsDisableGuestAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDisableGuestAccount(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsDisableGuestAccount = value;
+        this.localSecurityOptionsDisableGuestAccount = value;
     }
     /**
      * Sets the localSecurityOptionsDisableServerDigitallySignCommunicationsAlways property value. This security setting determines whether packet signing is required by the SMB server component.
      * @param value Value to set for the localSecurityOptionsDisableServerDigitallySignCommunicationsAlways property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsDisableServerDigitallySignCommunicationsAlways = value;
+        this.localSecurityOptionsDisableServerDigitallySignCommunicationsAlways = value;
     }
     /**
      * Sets the localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees property value. This security setting determines whether the SMB server will negotiate SMB packet signing with clients that request it.
      * @param value Value to set for the localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees = value;
+        this.localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees = value;
     }
     /**
      * Sets the localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts property value. This security setting determines what additional permissions will be granted for anonymous connections to the computer.
      * @param value Value to set for the localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts = value;
+        this.localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts = value;
     }
     /**
      * Sets the localSecurityOptionsDoNotRequireCtrlAltDel property value. Require CTRL+ALT+DEL to be pressed before a user can log on.
      * @param value Value to set for the localSecurityOptionsDoNotRequireCtrlAltDel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDoNotRequireCtrlAltDel(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsDoNotRequireCtrlAltDel = value;
+        this.localSecurityOptionsDoNotRequireCtrlAltDel = value;
     }
     /**
-     * Sets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default.
+     * Sets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. Its not stored by default.
      * @param value Value to set for the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange = value;
+        this.localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange = value;
     }
     /**
      * Sets the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser property value. Possible values for LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
      * @param value Value to set for the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser(@javax.annotation.Nullable final LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType value) {
-        this._localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser = value;
+        this.localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser = value;
     }
     /**
      * Sets the localSecurityOptionsGuestAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account 'Guest'.
      * @param value Value to set for the localSecurityOptionsGuestAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsGuestAccountName(@javax.annotation.Nullable final String value) {
-        this._localSecurityOptionsGuestAccountName = value;
+        this.localSecurityOptionsGuestAccountName = value;
     }
     /**
      * Sets the localSecurityOptionsHideLastSignedInUser property value. Do not display the username of the last person who signed in on this device.
      * @param value Value to set for the localSecurityOptionsHideLastSignedInUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsHideLastSignedInUser(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsHideLastSignedInUser = value;
+        this.localSecurityOptionsHideLastSignedInUser = value;
     }
     /**
-     * Sets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown.
+     * Sets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the devices desktop is shown.
      * @param value Value to set for the localSecurityOptionsHideUsernameAtSignIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsHideUsernameAtSignIn(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsHideUsernameAtSignIn = value;
+        this.localSecurityOptionsHideUsernameAtSignIn = value;
     }
     /**
      * Sets the localSecurityOptionsInformationDisplayedOnLockScreen property value. Possible values for LocalSecurityOptionsInformationDisplayedOnLockScreen
      * @param value Value to set for the localSecurityOptionsInformationDisplayedOnLockScreen property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsInformationDisplayedOnLockScreen(@javax.annotation.Nullable final LocalSecurityOptionsInformationDisplayedOnLockScreenType value) {
-        this._localSecurityOptionsInformationDisplayedOnLockScreen = value;
+        this.localSecurityOptionsInformationDisplayedOnLockScreen = value;
     }
     /**
      * Sets the localSecurityOptionsInformationShownOnLockScreen property value. Possible values for LocalSecurityOptionsInformationShownOnLockScreenType
      * @param value Value to set for the localSecurityOptionsInformationShownOnLockScreen property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsInformationShownOnLockScreen(@javax.annotation.Nullable final LocalSecurityOptionsInformationShownOnLockScreenType value) {
-        this._localSecurityOptionsInformationShownOnLockScreen = value;
+        this.localSecurityOptionsInformationShownOnLockScreen = value;
     }
     /**
      * Sets the localSecurityOptionsLogOnMessageText property value. Set message text for users attempting to log in.
      * @param value Value to set for the localSecurityOptionsLogOnMessageText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsLogOnMessageText(@javax.annotation.Nullable final String value) {
-        this._localSecurityOptionsLogOnMessageText = value;
+        this.localSecurityOptionsLogOnMessageText = value;
     }
     /**
      * Sets the localSecurityOptionsLogOnMessageTitle property value. Set message title for users attempting to log in.
      * @param value Value to set for the localSecurityOptionsLogOnMessageTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsLogOnMessageTitle(@javax.annotation.Nullable final String value) {
-        this._localSecurityOptionsLogOnMessageTitle = value;
+        this.localSecurityOptionsLogOnMessageTitle = value;
     }
     /**
-     * Sets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Sets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @param value Value to set for the localSecurityOptionsMachineInactivityLimit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsMachineInactivityLimit(@javax.annotation.Nullable final Integer value) {
-        this._localSecurityOptionsMachineInactivityLimit = value;
+        this.localSecurityOptionsMachineInactivityLimit = value;
     }
     /**
-     * Sets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Sets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @param value Value to set for the localSecurityOptionsMachineInactivityLimitInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsMachineInactivityLimitInMinutes(@javax.annotation.Nullable final Integer value) {
-        this._localSecurityOptionsMachineInactivityLimitInMinutes = value;
+        this.localSecurityOptionsMachineInactivityLimitInMinutes = value;
     }
     /**
      * Sets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients property value. Possible values for LocalSecurityOptionsMinimumSessionSecurity
      * @param value Value to set for the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients(@javax.annotation.Nullable final LocalSecurityOptionsMinimumSessionSecurity value) {
-        this._localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients = value;
+        this.localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients = value;
     }
     /**
      * Sets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers property value. Possible values for LocalSecurityOptionsMinimumSessionSecurity
      * @param value Value to set for the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers(@javax.annotation.Nullable final LocalSecurityOptionsMinimumSessionSecurity value) {
-        this._localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers = value;
+        this.localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers = value;
     }
     /**
      * Sets the localSecurityOptionsOnlyElevateSignedExecutables property value. Enforce PKI certification path validation for a given executable file before it is permitted to run.
      * @param value Value to set for the localSecurityOptionsOnlyElevateSignedExecutables property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsOnlyElevateSignedExecutables(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsOnlyElevateSignedExecutables = value;
+        this.localSecurityOptionsOnlyElevateSignedExecutables = value;
     }
     /**
      * Sets the localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares property value. By default, this security setting restricts anonymous access to shares and pipes to the settings for named pipes that can be accessed anonymously and Shares that can be accessed anonymously
      * @param value Value to set for the localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares = value;
+        this.localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares = value;
     }
     /**
      * Sets the localSecurityOptionsSmartCardRemovalBehavior property value. Possible values for LocalSecurityOptionsSmartCardRemovalBehaviorType
      * @param value Value to set for the localSecurityOptionsSmartCardRemovalBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsSmartCardRemovalBehavior(@javax.annotation.Nullable final LocalSecurityOptionsSmartCardRemovalBehaviorType value) {
-        this._localSecurityOptionsSmartCardRemovalBehavior = value;
+        this.localSecurityOptionsSmartCardRemovalBehavior = value;
     }
     /**
      * Sets the localSecurityOptionsStandardUserElevationPromptBehavior property value. Possible values for LocalSecurityOptionsStandardUserElevationPromptBehavior
      * @param value Value to set for the localSecurityOptionsStandardUserElevationPromptBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsStandardUserElevationPromptBehavior(@javax.annotation.Nullable final LocalSecurityOptionsStandardUserElevationPromptBehaviorType value) {
-        this._localSecurityOptionsStandardUserElevationPromptBehavior = value;
+        this.localSecurityOptionsStandardUserElevationPromptBehavior = value;
     }
     /**
      * Sets the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation property value. Enable all elevation requests to go to the interactive user's desktop rather than the secure desktop. Prompt behavior policy settings for admins and standard users are used.
      * @param value Value to set for the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation = value;
+        this.localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation = value;
     }
     /**
      * Sets the localSecurityOptionsUseAdminApprovalMode property value. Defines whether the built-in admin account uses Admin Approval Mode or runs all apps with full admin privileges.Default is enabled
      * @param value Value to set for the localSecurityOptionsUseAdminApprovalMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsUseAdminApprovalMode(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsUseAdminApprovalMode = value;
+        this.localSecurityOptionsUseAdminApprovalMode = value;
     }
     /**
      * Sets the localSecurityOptionsUseAdminApprovalModeForAdministrators property value. Define whether Admin Approval Mode and all UAC policy settings are enabled, default is enabled
      * @param value Value to set for the localSecurityOptionsUseAdminApprovalModeForAdministrators property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsUseAdminApprovalModeForAdministrators(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsUseAdminApprovalModeForAdministrators = value;
+        this.localSecurityOptionsUseAdminApprovalModeForAdministrators = value;
     }
     /**
      * Sets the localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations property value. Virtualize file and registry write failures to per user locations
      * @param value Value to set for the localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations(@javax.annotation.Nullable final Boolean value) {
-        this._localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations = value;
+        this.localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations = value;
     }
     /**
      * Sets the smartScreenBlockOverrideForFiles property value. Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
      * @param value Value to set for the smartScreenBlockOverrideForFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmartScreenBlockOverrideForFiles(@javax.annotation.Nullable final Boolean value) {
-        this._smartScreenBlockOverrideForFiles = value;
+        this.smartScreenBlockOverrideForFiles = value;
     }
     /**
      * Sets the smartScreenEnableInShell property value. Allows IT Admins to configure SmartScreen for Windows.
      * @param value Value to set for the smartScreenEnableInShell property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmartScreenEnableInShell(@javax.annotation.Nullable final Boolean value) {
-        this._smartScreenEnableInShell = value;
+        this.smartScreenEnableInShell = value;
     }
     /**
      * Sets the userRightsAccessCredentialManagerAsTrustedCaller property value. This user right is used by Credential Manager during Backup/Restore. Users' saved credentials might be compromised if this privilege is given to other entities. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsAccessCredentialManagerAsTrustedCaller property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsAccessCredentialManagerAsTrustedCaller(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsAccessCredentialManagerAsTrustedCaller = value;
+        this.userRightsAccessCredentialManagerAsTrustedCaller = value;
     }
     /**
      * Sets the userRightsActAsPartOfTheOperatingSystem property value. This user right allows a process to impersonate any user without authentication. The process can therefore gain access to the same local resources as that user. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsActAsPartOfTheOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsActAsPartOfTheOperatingSystem(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsActAsPartOfTheOperatingSystem = value;
+        this.userRightsActAsPartOfTheOperatingSystem = value;
     }
     /**
      * Sets the userRightsAllowAccessFromNetwork property value. This user right determines which users and groups are allowed to connect to the computer over the network. State Allowed is supported.
      * @param value Value to set for the userRightsAllowAccessFromNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsAllowAccessFromNetwork(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsAllowAccessFromNetwork = value;
+        this.userRightsAllowAccessFromNetwork = value;
     }
     /**
      * Sets the userRightsBackupData property value. This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when backing up files and directories. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsBackupData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsBackupData(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsBackupData = value;
+        this.userRightsBackupData = value;
     }
     /**
      * Sets the userRightsBlockAccessFromNetwork property value. This user right determines which users and groups are block from connecting to the computer over the network. State Block is supported.
      * @param value Value to set for the userRightsBlockAccessFromNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsBlockAccessFromNetwork(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsBlockAccessFromNetwork = value;
+        this.userRightsBlockAccessFromNetwork = value;
     }
     /**
      * Sets the userRightsChangeSystemTime property value. This user right determines which users and groups can change the time and date on the internal clock of the computer. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsChangeSystemTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsChangeSystemTime(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsChangeSystemTime = value;
+        this.userRightsChangeSystemTime = value;
     }
     /**
      * Sets the userRightsCreateGlobalObjects property value. This security setting determines whether users can create global objects that are available to all sessions. Users who can create global objects could affect processes that run under other users' sessions, which could lead to application failure or data corruption. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsCreateGlobalObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsCreateGlobalObjects(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsCreateGlobalObjects = value;
+        this.userRightsCreateGlobalObjects = value;
     }
     /**
      * Sets the userRightsCreatePageFile property value. This user right determines which users and groups can call an internal API to create and change the size of a page file. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsCreatePageFile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsCreatePageFile(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsCreatePageFile = value;
+        this.userRightsCreatePageFile = value;
     }
     /**
      * Sets the userRightsCreatePermanentSharedObjects property value. This user right determines which accounts can be used by processes to create a directory object using the object manager. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsCreatePermanentSharedObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsCreatePermanentSharedObjects(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsCreatePermanentSharedObjects = value;
+        this.userRightsCreatePermanentSharedObjects = value;
     }
     /**
      * Sets the userRightsCreateSymbolicLinks property value. This user right determines if the user can create a symbolic link from the computer to which they are logged on. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsCreateSymbolicLinks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsCreateSymbolicLinks(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsCreateSymbolicLinks = value;
+        this.userRightsCreateSymbolicLinks = value;
     }
     /**
      * Sets the userRightsCreateToken property value. This user right determines which users/groups can be used by processes to create a token that can then be used to get access to any local resources when the process uses an internal API to create an access token. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsCreateToken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsCreateToken(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsCreateToken = value;
+        this.userRightsCreateToken = value;
     }
     /**
      * Sets the userRightsDebugPrograms property value. This user right determines which users can attach a debugger to any process or to the kernel. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsDebugPrograms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsDebugPrograms(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsDebugPrograms = value;
+        this.userRightsDebugPrograms = value;
     }
     /**
      * Sets the userRightsDelegation property value. This user right determines which users can set the Trusted for Delegation setting on a user or computer object. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsDelegation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsDelegation(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsDelegation = value;
+        this.userRightsDelegation = value;
     }
     /**
      * Sets the userRightsDenyLocalLogOn property value. This user right determines which users cannot log on to the computer. States NotConfigured, Blocked are supported
      * @param value Value to set for the userRightsDenyLocalLogOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsDenyLocalLogOn(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsDenyLocalLogOn = value;
+        this.userRightsDenyLocalLogOn = value;
     }
     /**
      * Sets the userRightsGenerateSecurityAudits property value. This user right determines which accounts can be used by a process to add entries to the security log. The security log is used to trace unauthorized system access.  Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsGenerateSecurityAudits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsGenerateSecurityAudits(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsGenerateSecurityAudits = value;
+        this.userRightsGenerateSecurityAudits = value;
     }
     /**
      * Sets the userRightsImpersonateClient property value. Assigning this user right to a user allows programs running on behalf of that user to impersonate a client. Requiring this user right for this kind of impersonation prevents an unauthorized user from convincing a client to connect to a service that they have created and then impersonating that client, which can elevate the unauthorized user's permissions to administrative or system levels. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsImpersonateClient property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsImpersonateClient(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsImpersonateClient = value;
+        this.userRightsImpersonateClient = value;
     }
     /**
      * Sets the userRightsIncreaseSchedulingPriority property value. This user right determines which accounts can use a process with Write Property access to another process to increase the execution priority assigned to the other process. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsIncreaseSchedulingPriority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsIncreaseSchedulingPriority(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsIncreaseSchedulingPriority = value;
+        this.userRightsIncreaseSchedulingPriority = value;
     }
     /**
      * Sets the userRightsLoadUnloadDrivers property value. This user right determines which users can dynamically load and unload device drivers or other code in to kernel mode. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsLoadUnloadDrivers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsLoadUnloadDrivers(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsLoadUnloadDrivers = value;
+        this.userRightsLoadUnloadDrivers = value;
     }
     /**
      * Sets the userRightsLocalLogOn property value. This user right determines which users can log on to the computer. States NotConfigured, Allowed are supported
      * @param value Value to set for the userRightsLocalLogOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsLocalLogOn(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsLocalLogOn = value;
+        this.userRightsLocalLogOn = value;
     }
     /**
      * Sets the userRightsLockMemory property value. This user right determines which accounts can use a process to keep data in physical memory, which prevents the system from paging the data to virtual memory on disk. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsLockMemory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsLockMemory(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsLockMemory = value;
+        this.userRightsLockMemory = value;
     }
     /**
      * Sets the userRightsManageAuditingAndSecurityLogs property value. This user right determines which users can specify object access auditing options for individual resources, such as files, Active Directory objects, and registry keys. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsManageAuditingAndSecurityLogs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsManageAuditingAndSecurityLogs(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsManageAuditingAndSecurityLogs = value;
+        this.userRightsManageAuditingAndSecurityLogs = value;
     }
     /**
      * Sets the userRightsManageVolumes property value. This user right determines which users and groups can run maintenance tasks on a volume, such as remote defragmentation. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsManageVolumes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsManageVolumes(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsManageVolumes = value;
+        this.userRightsManageVolumes = value;
     }
     /**
      * Sets the userRightsModifyFirmwareEnvironment property value. This user right determines who can modify firmware environment values. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsModifyFirmwareEnvironment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsModifyFirmwareEnvironment(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsModifyFirmwareEnvironment = value;
+        this.userRightsModifyFirmwareEnvironment = value;
     }
     /**
      * Sets the userRightsModifyObjectLabels property value. This user right determines which user accounts can modify the integrity label of objects, such as files, registry keys, or processes owned by other users. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsModifyObjectLabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsModifyObjectLabels(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsModifyObjectLabels = value;
+        this.userRightsModifyObjectLabels = value;
     }
     /**
      * Sets the userRightsProfileSingleProcess property value. This user right determines which users can use performance monitoring tools to monitor the performance of system processes. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsProfileSingleProcess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsProfileSingleProcess(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsProfileSingleProcess = value;
+        this.userRightsProfileSingleProcess = value;
     }
     /**
      * Sets the userRightsRemoteDesktopServicesLogOn property value. This user right determines which users and groups are prohibited from logging on as a Remote Desktop Services client. Only states NotConfigured and Blocked are supported
      * @param value Value to set for the userRightsRemoteDesktopServicesLogOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsRemoteDesktopServicesLogOn(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsRemoteDesktopServicesLogOn = value;
+        this.userRightsRemoteDesktopServicesLogOn = value;
     }
     /**
      * Sets the userRightsRemoteShutdown property value. This user right determines which users are allowed to shut down a computer from a remote location on the network. Misuse of this user right can result in a denial of service. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsRemoteShutdown property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsRemoteShutdown(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsRemoteShutdown = value;
+        this.userRightsRemoteShutdown = value;
     }
     /**
      * Sets the userRightsRestoreData property value. This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when restoring backed up files and directories, and determines which users can set any valid security principal as the owner of an object. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsRestoreData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsRestoreData(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsRestoreData = value;
+        this.userRightsRestoreData = value;
     }
     /**
      * Sets the userRightsTakeOwnership property value. This user right determines which users can take ownership of any securable object in the system, including Active Directory objects, files and folders, printers, registry keys, processes, and threads. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsTakeOwnership property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsTakeOwnership(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
-        this._userRightsTakeOwnership = value;
+        this.userRightsTakeOwnership = value;
     }
     /**
      * Sets the windowsDefenderTamperProtection property value. Defender TamperProtection setting options
      * @param value Value to set for the windowsDefenderTamperProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsDefenderTamperProtection(@javax.annotation.Nullable final WindowsDefenderTamperProtectionOptions value) {
-        this._windowsDefenderTamperProtection = value;
+        this.windowsDefenderTamperProtection = value;
     }
     /**
      * Sets the xboxServicesAccessoryManagementServiceStartupMode property value. Possible values of xbox service start type
      * @param value Value to set for the xboxServicesAccessoryManagementServiceStartupMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setXboxServicesAccessoryManagementServiceStartupMode(@javax.annotation.Nullable final ServiceStartType value) {
-        this._xboxServicesAccessoryManagementServiceStartupMode = value;
+        this.xboxServicesAccessoryManagementServiceStartupMode = value;
     }
     /**
      * Sets the xboxServicesEnableXboxGameSaveTask property value. This setting determines whether xbox game save is enabled (1) or disabled (0).
      * @param value Value to set for the xboxServicesEnableXboxGameSaveTask property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setXboxServicesEnableXboxGameSaveTask(@javax.annotation.Nullable final Boolean value) {
-        this._xboxServicesEnableXboxGameSaveTask = value;
+        this.xboxServicesEnableXboxGameSaveTask = value;
     }
     /**
      * Sets the xboxServicesLiveAuthManagerServiceStartupMode property value. Possible values of xbox service start type
      * @param value Value to set for the xboxServicesLiveAuthManagerServiceStartupMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setXboxServicesLiveAuthManagerServiceStartupMode(@javax.annotation.Nullable final ServiceStartType value) {
-        this._xboxServicesLiveAuthManagerServiceStartupMode = value;
+        this.xboxServicesLiveAuthManagerServiceStartupMode = value;
     }
     /**
      * Sets the xboxServicesLiveGameSaveServiceStartupMode property value. Possible values of xbox service start type
      * @param value Value to set for the xboxServicesLiveGameSaveServiceStartupMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setXboxServicesLiveGameSaveServiceStartupMode(@javax.annotation.Nullable final ServiceStartType value) {
-        this._xboxServicesLiveGameSaveServiceStartupMode = value;
+        this.xboxServicesLiveGameSaveServiceStartupMode = value;
     }
     /**
      * Sets the xboxServicesLiveNetworkingServiceStartupMode property value. Possible values of xbox service start type
      * @param value Value to set for the xboxServicesLiveNetworkingServiceStartupMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setXboxServicesLiveNetworkingServiceStartupMode(@javax.annotation.Nullable final ServiceStartType value) {
-        this._xboxServicesLiveNetworkingServiceStartupMode = value;
+        this.xboxServicesLiveNetworkingServiceStartupMode = value;
     }
 }

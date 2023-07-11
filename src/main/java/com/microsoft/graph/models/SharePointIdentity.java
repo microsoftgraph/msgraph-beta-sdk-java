@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharePointIdentity extends Identity implements Parsable {
-    /** The sign in name of the SharePoint identity. */
-    private String _loginName;
     /**
-     * Instantiates a new SharePointIdentity and sets the default values.
+     * The sign in name of the SharePoint identity.
+     */
+    private String loginName;
+    /**
+     * Instantiates a new sharePointIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharePointIdentity() {
         super();
         this.setOdataType("#microsoft.graph.sharePointIdentity");
@@ -21,7 +23,7 @@ public class SharePointIdentity extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SharePointIdentity
+     * @return a sharePointIdentity
      */
     @javax.annotation.Nonnull
     public static SharePointIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,14 +32,13 @@ public class SharePointIdentity extends Identity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharePointIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("loginName", (n) -> { currentObject.setLoginName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("loginName", (n) -> { this.setLoginName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the loginName property value. The sign in name of the SharePoint identity.
@@ -45,13 +46,14 @@ public class SharePointIdentity extends Identity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLoginName() {
-        return this._loginName;
+        return this.loginName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class SharePointIdentity extends Identity implements Parsable {
      * @param value Value to set for the loginName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoginName(@javax.annotation.Nullable final String value) {
-        this._loginName = value;
+        this.loginName = value;
     }
 }

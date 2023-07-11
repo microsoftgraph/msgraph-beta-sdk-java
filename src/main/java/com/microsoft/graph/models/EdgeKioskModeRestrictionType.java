@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Specify how the Microsoft Edge settings are restricted based on kiosk mode.
+ */
 public enum EdgeKioskModeRestrictionType implements ValuedEnum {
     /** Not configured (unrestricted). */
     NotConfigured("notConfigured"),

@@ -4,35 +4,52 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** VPN Security Association Parameters */
+/**
+ * VPN Security Association Parameters
+ */
 public class CryptographySuite implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Authentication Transform Constants. Possible values are: md5_96, sha1_96, sha_256_128, aes128Gcm, aes192Gcm, aes256Gcm. */
-    private AuthenticationTransformConstant _authenticationTransformConstants;
-    /** Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305. */
-    private VpnEncryptionAlgorithmType _cipherTransformConstants;
-    /** Diffie Hellman Group. Possible values are: group1, group2, group14, ecp256, ecp384, group24. */
-    private DiffieHellmanGroup _dhGroup;
-    /** Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305. */
-    private VpnEncryptionAlgorithmType _encryptionMethod;
-    /** Integrity Check Method. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5. */
-    private VpnIntegrityAlgorithmType _integrityCheckMethod;
-    /** The OdataType property */
-    private String _odataType;
-    /** Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24. */
-    private PerfectForwardSecrecyGroup _pfsGroup;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Authentication Transform Constants. Possible values are: md5_96, sha1_96, sha_256_128, aes128Gcm, aes192Gcm, aes256Gcm.
+     */
+    private AuthenticationTransformConstant authenticationTransformConstants;
+    /**
+     * Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
+     */
+    private VpnEncryptionAlgorithmType cipherTransformConstants;
+    /**
+     * Diffie Hellman Group. Possible values are: group1, group2, group14, ecp256, ecp384, group24.
+     */
+    private DiffieHellmanGroup dhGroup;
+    /**
+     * Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
+     */
+    private VpnEncryptionAlgorithmType encryptionMethod;
+    /**
+     * Integrity Check Method. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
+     */
+    private VpnIntegrityAlgorithmType integrityCheckMethod;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24.
+     */
+    private PerfectForwardSecrecyGroup pfsGroup;
     /**
      * Instantiates a new cryptographySuite and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CryptographySuite() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.cryptographySuite");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +67,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the authenticationTransformConstants property value. Authentication Transform Constants. Possible values are: md5_96, sha1_96, sha_256_128, aes128Gcm, aes192Gcm, aes256Gcm.
@@ -58,7 +75,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public AuthenticationTransformConstant getAuthenticationTransformConstants() {
-        return this._authenticationTransformConstants;
+        return this.authenticationTransformConstants;
     }
     /**
      * Gets the cipherTransformConstants property value. Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
@@ -66,7 +83,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public VpnEncryptionAlgorithmType getCipherTransformConstants() {
-        return this._cipherTransformConstants;
+        return this.cipherTransformConstants;
     }
     /**
      * Gets the dhGroup property value. Diffie Hellman Group. Possible values are: group1, group2, group14, ecp256, ecp384, group24.
@@ -74,7 +91,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public DiffieHellmanGroup getDhGroup() {
-        return this._dhGroup;
+        return this.dhGroup;
     }
     /**
      * Gets the encryptionMethod property value. Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
@@ -82,24 +99,23 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public VpnEncryptionAlgorithmType getEncryptionMethod() {
-        return this._encryptionMethod;
+        return this.encryptionMethod;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CryptographySuite currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("authenticationTransformConstants", (n) -> { currentObject.setAuthenticationTransformConstants(n.getEnumValue(AuthenticationTransformConstant.class)); });
-            this.put("cipherTransformConstants", (n) -> { currentObject.setCipherTransformConstants(n.getEnumValue(VpnEncryptionAlgorithmType.class)); });
-            this.put("dhGroup", (n) -> { currentObject.setDhGroup(n.getEnumValue(DiffieHellmanGroup.class)); });
-            this.put("encryptionMethod", (n) -> { currentObject.setEncryptionMethod(n.getEnumValue(VpnEncryptionAlgorithmType.class)); });
-            this.put("integrityCheckMethod", (n) -> { currentObject.setIntegrityCheckMethod(n.getEnumValue(VpnIntegrityAlgorithmType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("pfsGroup", (n) -> { currentObject.setPfsGroup(n.getEnumValue(PerfectForwardSecrecyGroup.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("authenticationTransformConstants", (n) -> { this.setAuthenticationTransformConstants(n.getEnumValue(AuthenticationTransformConstant.class)); });
+        deserializerMap.put("cipherTransformConstants", (n) -> { this.setCipherTransformConstants(n.getEnumValue(VpnEncryptionAlgorithmType.class)); });
+        deserializerMap.put("dhGroup", (n) -> { this.setDhGroup(n.getEnumValue(DiffieHellmanGroup.class)); });
+        deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(VpnEncryptionAlgorithmType.class)); });
+        deserializerMap.put("integrityCheckMethod", (n) -> { this.setIntegrityCheckMethod(n.getEnumValue(VpnIntegrityAlgorithmType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("pfsGroup", (n) -> { this.setPfsGroup(n.getEnumValue(PerfectForwardSecrecyGroup.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the integrityCheckMethod property value. Integrity Check Method. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
@@ -107,7 +123,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public VpnIntegrityAlgorithmType getIntegrityCheckMethod() {
-        return this._integrityCheckMethod;
+        return this.integrityCheckMethod;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -115,7 +131,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the pfsGroup property value. Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24.
@@ -123,13 +139,14 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PerfectForwardSecrecyGroup getPfsGroup() {
-        return this._pfsGroup;
+        return this.pfsGroup;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("authenticationTransformConstants", this.getAuthenticationTransformConstants());
@@ -146,63 +163,71 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the authenticationTransformConstants property value. Authentication Transform Constants. Possible values are: md5_96, sha1_96, sha_256_128, aes128Gcm, aes192Gcm, aes256Gcm.
      * @param value Value to set for the authenticationTransformConstants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationTransformConstants(@javax.annotation.Nullable final AuthenticationTransformConstant value) {
-        this._authenticationTransformConstants = value;
+        this.authenticationTransformConstants = value;
     }
     /**
      * Sets the cipherTransformConstants property value. Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      * @param value Value to set for the cipherTransformConstants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCipherTransformConstants(@javax.annotation.Nullable final VpnEncryptionAlgorithmType value) {
-        this._cipherTransformConstants = value;
+        this.cipherTransformConstants = value;
     }
     /**
      * Sets the dhGroup property value. Diffie Hellman Group. Possible values are: group1, group2, group14, ecp256, ecp384, group24.
      * @param value Value to set for the dhGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDhGroup(@javax.annotation.Nullable final DiffieHellmanGroup value) {
-        this._dhGroup = value;
+        this.dhGroup = value;
     }
     /**
      * Sets the encryptionMethod property value. Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      * @param value Value to set for the encryptionMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionMethod(@javax.annotation.Nullable final VpnEncryptionAlgorithmType value) {
-        this._encryptionMethod = value;
+        this.encryptionMethod = value;
     }
     /**
      * Sets the integrityCheckMethod property value. Integrity Check Method. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
      * @param value Value to set for the integrityCheckMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntegrityCheckMethod(@javax.annotation.Nullable final VpnIntegrityAlgorithmType value) {
-        this._integrityCheckMethod = value;
+        this.integrityCheckMethod = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the pfsGroup property value. Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24.
      * @param value Value to set for the pfsGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPfsGroup(@javax.annotation.Nullable final PerfectForwardSecrecyGroup value) {
-        this._pfsGroup = value;
+        this.pfsGroup = value;
     }
 }

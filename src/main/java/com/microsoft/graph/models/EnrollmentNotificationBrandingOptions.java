@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
+ */
 public enum EnrollmentNotificationBrandingOptions implements ValuedEnum {
     /** Indicates that the template has no branding. */
     None("none"),

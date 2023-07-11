@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum SimulationAttackTechnique implements ValuedEnum {
     Unknown("unknown"),
     CredentialHarvesting("credentialHarvesting"),
@@ -11,7 +10,8 @@ public enum SimulationAttackTechnique implements ValuedEnum {
     DriveByUrl("driveByUrl"),
     LinkInAttachment("linkInAttachment"),
     LinkToMalwareFile("linkToMalwareFile"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    OAuthConsentGrant("oAuthConsentGrant");
     public final String value;
     SimulationAttackTechnique(final String value) {
         this.value = value;
@@ -29,6 +29,7 @@ public enum SimulationAttackTechnique implements ValuedEnum {
             case "linkInAttachment": return LinkInAttachment;
             case "linkToMalwareFile": return LinkToMalwareFile;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "oAuthConsentGrant": return OAuthConsentGrant;
             default: return null;
         }
     }

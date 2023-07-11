@@ -4,37 +4,53 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class ProgramControl extends Entity implements Parsable {
-    /** The controlId of the control, in particular the identifier of an access review. Required on create. */
-    private String _controlId;
-    /** The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create. */
-    private String _controlTypeId;
-    /** The creation date and time of the program control. */
-    private OffsetDateTime _createdDateTime;
-    /** The name of the control. */
-    private String _displayName;
-    /** The user who created the program control. */
-    private UserIdentity _owner;
-    /** The program this control is part of. */
-    private Program _program;
-    /** The programId of the program this control is a part of. Required on create. */
-    private String _programId;
-    /** The resource, a group or an app, targeted by this program control's access review. */
-    private ProgramResource _resource;
-    /** The life cycle status of the control. */
-    private String _status;
+    /**
+     * The controlId of the control, in particular the identifier of an access review. Required on create.
+     */
+    private String controlId;
+    /**
+     * The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
+     */
+    private String controlTypeId;
+    /**
+     * The creation date and time of the program control.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The name of the control.
+     */
+    private String displayName;
+    /**
+     * The user who created the program control.
+     */
+    private UserIdentity owner;
+    /**
+     * The program this control is part of.
+     */
+    private Program program;
+    /**
+     * The programId of the program this control is a part of. Required on create.
+     */
+    private String programId;
+    /**
+     * The resource, a group or an app, targeted by this program control's access review.
+     */
+    private ProgramResource resource;
+    /**
+     * The life cycle status of the control.
+     */
+    private String status;
     /**
      * Instantiates a new programControl and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProgramControl() {
         super();
-        this.setOdataType("#microsoft.graph.programControl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +68,7 @@ public class ProgramControl extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getControlId() {
-        return this._controlId;
+        return this.controlId;
     }
     /**
      * Gets the controlTypeId property value. The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
@@ -60,7 +76,7 @@ public class ProgramControl extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getControlTypeId() {
-        return this._controlTypeId;
+        return this.controlTypeId;
     }
     /**
      * Gets the createdDateTime property value. The creation date and time of the program control.
@@ -68,7 +84,7 @@ public class ProgramControl extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the displayName property value. The name of the control.
@@ -76,26 +92,25 @@ public class ProgramControl extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProgramControl currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("controlId", (n) -> { currentObject.setControlId(n.getStringValue()); });
-            this.put("controlTypeId", (n) -> { currentObject.setControlTypeId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
-            this.put("program", (n) -> { currentObject.setProgram(n.getObjectValue(Program::createFromDiscriminatorValue)); });
-            this.put("programId", (n) -> { currentObject.setProgramId(n.getStringValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(ProgramResource::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("controlId", (n) -> { this.setControlId(n.getStringValue()); });
+        deserializerMap.put("controlTypeId", (n) -> { this.setControlTypeId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("owner", (n) -> { this.setOwner(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("program", (n) -> { this.setProgram(n.getObjectValue(Program::createFromDiscriminatorValue)); });
+        deserializerMap.put("programId", (n) -> { this.setProgramId(n.getStringValue()); });
+        deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(ProgramResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the owner property value. The user who created the program control.
@@ -103,7 +118,7 @@ public class ProgramControl extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public UserIdentity getOwner() {
-        return this._owner;
+        return this.owner;
     }
     /**
      * Gets the program property value. The program this control is part of.
@@ -111,7 +126,7 @@ public class ProgramControl extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Program getProgram() {
-        return this._program;
+        return this.program;
     }
     /**
      * Gets the programId property value. The programId of the program this control is a part of. Required on create.
@@ -119,7 +134,7 @@ public class ProgramControl extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getProgramId() {
-        return this._programId;
+        return this.programId;
     }
     /**
      * Gets the resource property value. The resource, a group or an app, targeted by this program control's access review.
@@ -127,7 +142,7 @@ public class ProgramControl extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ProgramResource getResource() {
-        return this._resource;
+        return this.resource;
     }
     /**
      * Gets the status property value. The life cycle status of the control.
@@ -135,13 +150,14 @@ public class ProgramControl extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,71 +176,80 @@ public class ProgramControl extends Entity implements Parsable {
      * @param value Value to set for the controlId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setControlId(@javax.annotation.Nullable final String value) {
-        this._controlId = value;
+        this.controlId = value;
     }
     /**
      * Sets the controlTypeId property value. The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
      * @param value Value to set for the controlTypeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setControlTypeId(@javax.annotation.Nullable final String value) {
-        this._controlTypeId = value;
+        this.controlTypeId = value;
     }
     /**
      * Sets the createdDateTime property value. The creation date and time of the program control.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. The name of the control.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the owner property value. The user who created the program control.
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final UserIdentity value) {
-        this._owner = value;
+        this.owner = value;
     }
     /**
      * Sets the program property value. The program this control is part of.
      * @param value Value to set for the program property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgram(@javax.annotation.Nullable final Program value) {
-        this._program = value;
+        this.program = value;
     }
     /**
      * Sets the programId property value. The programId of the program this control is a part of. Required on create.
      * @param value Value to set for the programId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgramId(@javax.annotation.Nullable final String value) {
-        this._programId = value;
+        this.programId = value;
     }
     /**
      * Sets the resource property value. The resource, a group or an app, targeted by this program control's access review.
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final ProgramResource value) {
-        this._resource = value;
+        this.resource = value;
     }
     /**
      * Sets the status property value. The life cycle status of the control.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
 }

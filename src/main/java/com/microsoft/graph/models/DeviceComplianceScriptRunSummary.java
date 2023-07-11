@@ -4,28 +4,40 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties for the run summary of a device management script.
+ */
 public class DeviceComplianceScriptRunSummary extends Entity implements Parsable {
-    /** Number of devices on which the detection script execution encountered an error and did not complete. Valid values -2147483648 to 2147483647 */
-    private Integer _detectionScriptErrorDeviceCount;
-    /** Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647 */
-    private Integer _detectionScriptPendingDeviceCount;
-    /** Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647 */
-    private Integer _issueDetectedDeviceCount;
-    /** Last run time for the script across all devices */
-    private OffsetDateTime _lastScriptRunDateTime;
-    /** Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647 */
-    private Integer _noIssueDetectedDeviceCount;
+    /**
+     * Number of devices on which the detection script execution encountered an error and did not complete. Valid values -2147483648 to 2147483647
+     */
+    private Integer detectionScriptErrorDeviceCount;
+    /**
+     * Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647
+     */
+    private Integer detectionScriptPendingDeviceCount;
+    /**
+     * Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
+     */
+    private Integer issueDetectedDeviceCount;
+    /**
+     * Last run time for the script across all devices
+     */
+    private OffsetDateTime lastScriptRunDateTime;
+    /**
+     * Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
+     */
+    private Integer noIssueDetectedDeviceCount;
     /**
      * Instantiates a new deviceComplianceScriptRunSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceComplianceScriptRunSummary() {
         super();
-        this.setOdataType("#microsoft.graph.deviceComplianceScriptRunSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,7 +55,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public Integer getDetectionScriptErrorDeviceCount() {
-        return this._detectionScriptErrorDeviceCount;
+        return this.detectionScriptErrorDeviceCount;
     }
     /**
      * Gets the detectionScriptPendingDeviceCount property value. Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647
@@ -51,22 +63,21 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public Integer getDetectionScriptPendingDeviceCount() {
-        return this._detectionScriptPendingDeviceCount;
+        return this.detectionScriptPendingDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceComplianceScriptRunSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("detectionScriptErrorDeviceCount", (n) -> { currentObject.setDetectionScriptErrorDeviceCount(n.getIntegerValue()); });
-            this.put("detectionScriptPendingDeviceCount", (n) -> { currentObject.setDetectionScriptPendingDeviceCount(n.getIntegerValue()); });
-            this.put("issueDetectedDeviceCount", (n) -> { currentObject.setIssueDetectedDeviceCount(n.getIntegerValue()); });
-            this.put("lastScriptRunDateTime", (n) -> { currentObject.setLastScriptRunDateTime(n.getOffsetDateTimeValue()); });
-            this.put("noIssueDetectedDeviceCount", (n) -> { currentObject.setNoIssueDetectedDeviceCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("detectionScriptErrorDeviceCount", (n) -> { this.setDetectionScriptErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("detectionScriptPendingDeviceCount", (n) -> { this.setDetectionScriptPendingDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("issueDetectedDeviceCount", (n) -> { this.setIssueDetectedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("lastScriptRunDateTime", (n) -> { this.setLastScriptRunDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("noIssueDetectedDeviceCount", (n) -> { this.setNoIssueDetectedDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the issueDetectedDeviceCount property value. Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
@@ -74,7 +85,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public Integer getIssueDetectedDeviceCount() {
-        return this._issueDetectedDeviceCount;
+        return this.issueDetectedDeviceCount;
     }
     /**
      * Gets the lastScriptRunDateTime property value. Last run time for the script across all devices
@@ -82,7 +93,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastScriptRunDateTime() {
-        return this._lastScriptRunDateTime;
+        return this.lastScriptRunDateTime;
     }
     /**
      * Gets the noIssueDetectedDeviceCount property value. Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
@@ -90,13 +101,14 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public Integer getNoIssueDetectedDeviceCount() {
-        return this._noIssueDetectedDeviceCount;
+        return this.noIssueDetectedDeviceCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,39 +123,44 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      * @param value Value to set for the detectionScriptErrorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionScriptErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._detectionScriptErrorDeviceCount = value;
+        this.detectionScriptErrorDeviceCount = value;
     }
     /**
      * Sets the detectionScriptPendingDeviceCount property value. Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647
      * @param value Value to set for the detectionScriptPendingDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionScriptPendingDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._detectionScriptPendingDeviceCount = value;
+        this.detectionScriptPendingDeviceCount = value;
     }
     /**
      * Sets the issueDetectedDeviceCount property value. Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
      * @param value Value to set for the issueDetectedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssueDetectedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._issueDetectedDeviceCount = value;
+        this.issueDetectedDeviceCount = value;
     }
     /**
      * Sets the lastScriptRunDateTime property value. Last run time for the script across all devices
      * @param value Value to set for the lastScriptRunDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastScriptRunDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastScriptRunDateTime = value;
+        this.lastScriptRunDateTime = value;
     }
     /**
      * Sets the noIssueDetectedDeviceCount property value. Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
      * @param value Value to set for the noIssueDetectedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNoIssueDetectedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._noIssueDetectedDeviceCount = value;
+        this.noIssueDetectedDeviceCount = value;
     }
 }

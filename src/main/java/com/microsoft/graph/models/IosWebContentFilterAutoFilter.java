@@ -3,19 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents an iOS Web Content Filter setting type, which enables iOS automatic filter feature and allows for additional URL access control. When constructed with no property values, the iOS device will enable the automatic filter regardless.
+ */
 public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase implements Parsable {
-    /** Additional URLs allowed for access */
-    private java.util.List<String> _allowedUrls;
-    /** Additional URLs blocked for access */
-    private java.util.List<String> _blockedUrls;
     /**
-     * Instantiates a new IosWebContentFilterAutoFilter and sets the default values.
+     * Additional URLs allowed for access
+     */
+    private java.util.List<String> allowedUrls;
+    /**
+     * Additional URLs blocked for access
+     */
+    private java.util.List<String> blockedUrls;
+    /**
+     * Instantiates a new iosWebContentFilterAutoFilter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosWebContentFilterAutoFilter() {
         super();
         this.setOdataType("#microsoft.graph.iosWebContentFilterAutoFilter");
@@ -23,7 +30,7 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosWebContentFilterAutoFilter
+     * @return a iosWebContentFilterAutoFilter
      */
     @javax.annotation.Nonnull
     public static IosWebContentFilterAutoFilter createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +43,7 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAllowedUrls() {
-        return this._allowedUrls;
+        return this.allowedUrls;
     }
     /**
      * Gets the blockedUrls property value. Additional URLs blocked for access
@@ -44,25 +51,25 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
      */
     @javax.annotation.Nullable
     public java.util.List<String> getBlockedUrls() {
-        return this._blockedUrls;
+        return this.blockedUrls;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosWebContentFilterAutoFilter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedUrls", (n) -> { currentObject.setAllowedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("blockedUrls", (n) -> { currentObject.setBlockedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedUrls", (n) -> { this.setAllowedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("blockedUrls", (n) -> { this.setBlockedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +81,17 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
      * @param value Value to set for the allowedUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedUrls(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._allowedUrls = value;
+        this.allowedUrls = value;
     }
     /**
      * Sets the blockedUrls property value. Additional URLs blocked for access
      * @param value Value to set for the blockedUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockedUrls(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._blockedUrls = value;
+        this.blockedUrls = value;
     }
 }

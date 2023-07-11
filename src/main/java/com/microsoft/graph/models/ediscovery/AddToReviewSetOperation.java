@@ -3,27 +3,30 @@ package com.microsoft.graph.models.ediscovery;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AddToReviewSetOperation extends CaseOperation implements Parsable {
-    /** The review set to which items matching the source collection query are added to. */
-    private ReviewSet _reviewSet;
-    /** The sourceCollection that items are being added from. */
-    private SourceCollection _sourceCollection;
     /**
-     * Instantiates a new AddToReviewSetOperation and sets the default values.
+     * The review set to which items matching the source collection query are added to.
+     */
+    private ReviewSet reviewSet;
+    /**
+     * The sourceCollection that items are being added from.
+     */
+    private SourceCollection sourceCollection;
+    /**
+     * Instantiates a new addToReviewSetOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddToReviewSetOperation() {
         super();
-        this.setOdataType("#microsoft.graph.ediscovery.addToReviewSetOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AddToReviewSetOperation
+     * @return a addToReviewSetOperation
      */
     @javax.annotation.Nonnull
     public static AddToReviewSetOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -32,15 +35,14 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AddToReviewSetOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("reviewSet", (n) -> { currentObject.setReviewSet(n.getObjectValue(ReviewSet::createFromDiscriminatorValue)); });
-            this.put("sourceCollection", (n) -> { currentObject.setSourceCollection(n.getObjectValue(SourceCollection::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("reviewSet", (n) -> { this.setReviewSet(n.getObjectValue(ReviewSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceCollection", (n) -> { this.setSourceCollection(n.getObjectValue(SourceCollection::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the reviewSet property value. The review set to which items matching the source collection query are added to.
@@ -48,7 +50,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      */
     @javax.annotation.Nullable
     public ReviewSet getReviewSet() {
-        return this._reviewSet;
+        return this.reviewSet;
     }
     /**
      * Gets the sourceCollection property value. The sourceCollection that items are being added from.
@@ -56,13 +58,14 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      */
     @javax.annotation.Nullable
     public SourceCollection getSourceCollection() {
-        return this._sourceCollection;
+        return this.sourceCollection;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +77,17 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the reviewSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewSet(@javax.annotation.Nullable final ReviewSet value) {
-        this._reviewSet = value;
+        this.reviewSet = value;
     }
     /**
      * Sets the sourceCollection property value. The sourceCollection that items are being added from.
      * @param value Value to set for the sourceCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceCollection(@javax.annotation.Nullable final SourceCollection value) {
-        this._sourceCollection = value;
+        this.sourceCollection = value;
     }
 }

@@ -4,32 +4,45 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TemplateParameter implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The description for the template parameter. Optional. Read-only. */
-    private String _description;
-    /** The display name for the template parameter. Required. Read-only. */
-    private String _displayName;
-    /** The allowed values for the template parameter represented by a serialized string of JSON. Optional. Read-only. */
-    private String _jsonAllowedValues;
-    /** The default value for the template parameter represented by a serialized string of JSON. Required. Read-only. */
-    private String _jsonDefaultValue;
-    /** The OdataType property */
-    private String _odataType;
-    /** The valueType property */
-    private ManagementParameterValueType _valueType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The description for the template parameter. Optional. Read-only.
+     */
+    private String description;
+    /**
+     * The display name for the template parameter. Required. Read-only.
+     */
+    private String displayName;
+    /**
+     * The allowed values for the template parameter represented by a serialized string of JSON. Optional. Read-only.
+     */
+    private String jsonAllowedValues;
+    /**
+     * The default value for the template parameter represented by a serialized string of JSON. Required. Read-only.
+     */
+    private String jsonDefaultValue;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The valueType property
+     */
+    private ManagementParameterValueType valueType;
     /**
      * Instantiates a new templateParameter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TemplateParameter() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.managedTenants.templateParameter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +60,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the description property value. The description for the template parameter. Optional. Read-only.
@@ -55,7 +68,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name for the template parameter. Required. Read-only.
@@ -63,23 +76,22 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TemplateParameter currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("jsonAllowedValues", (n) -> { currentObject.setJsonAllowedValues(n.getStringValue()); });
-            this.put("jsonDefaultValue", (n) -> { currentObject.setJsonDefaultValue(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("valueType", (n) -> { currentObject.setValueType(n.getEnumValue(ManagementParameterValueType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("jsonAllowedValues", (n) -> { this.setJsonAllowedValues(n.getStringValue()); });
+        deserializerMap.put("jsonDefaultValue", (n) -> { this.setJsonDefaultValue(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("valueType", (n) -> { this.setValueType(n.getEnumValue(ManagementParameterValueType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the jsonAllowedValues property value. The allowed values for the template parameter represented by a serialized string of JSON. Optional. Read-only.
@@ -87,7 +99,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getJsonAllowedValues() {
-        return this._jsonAllowedValues;
+        return this.jsonAllowedValues;
     }
     /**
      * Gets the jsonDefaultValue property value. The default value for the template parameter represented by a serialized string of JSON. Required. Read-only.
@@ -95,7 +107,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getJsonDefaultValue() {
-        return this._jsonDefaultValue;
+        return this.jsonDefaultValue;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -103,7 +115,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the valueType property value. The valueType property
@@ -111,13 +123,14 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ManagementParameterValueType getValueType() {
-        return this._valueType;
+        return this.valueType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -133,55 +146,62 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the description property value. The description for the template parameter. Optional. Read-only.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name for the template parameter. Required. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the jsonAllowedValues property value. The allowed values for the template parameter represented by a serialized string of JSON. Optional. Read-only.
      * @param value Value to set for the jsonAllowedValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJsonAllowedValues(@javax.annotation.Nullable final String value) {
-        this._jsonAllowedValues = value;
+        this.jsonAllowedValues = value;
     }
     /**
      * Sets the jsonDefaultValue property value. The default value for the template parameter represented by a serialized string of JSON. Required. Read-only.
      * @param value Value to set for the jsonDefaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJsonDefaultValue(@javax.annotation.Nullable final String value) {
-        this._jsonDefaultValue = value;
+        this.jsonDefaultValue = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the valueType property value. The valueType property
      * @param value Value to set for the valueType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueType(@javax.annotation.Nullable final ManagementParameterValueType value) {
-        this._valueType = value;
+        this.valueType = value;
     }
 }

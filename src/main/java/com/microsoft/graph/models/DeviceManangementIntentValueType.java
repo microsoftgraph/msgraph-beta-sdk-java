@@ -3,12 +3,11 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum DeviceManangementIntentValueType implements ValuedEnum {
     /** The setting value is an integer */
     Integer("integer"),
     /** The setting value is a boolean */
-    Boolean_escaped("boolean_escaped"),
+    Boolean("boolean"),
     /** The setting value is a string */
     String("string"),
     /** The setting value is a complex object */
@@ -28,7 +27,7 @@ public enum DeviceManangementIntentValueType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "integer": return Integer;
-            case "boolean": return Boolean_escaped;
+            case "boolean": return Boolean;
             case "string": return String;
             case "complex": return Complex;
             case "collection": return Collection;

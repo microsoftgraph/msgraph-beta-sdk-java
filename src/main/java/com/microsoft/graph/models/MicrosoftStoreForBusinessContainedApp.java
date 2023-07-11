@@ -3,17 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * A class that represents a contained app of a MicrosoftStoreForBusinessApp.
+ */
 public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp implements Parsable {
-    /** The app user model ID of the contained app of a MicrosoftStoreForBusinessApp. */
-    private String _appUserModelId;
     /**
-     * Instantiates a new MicrosoftStoreForBusinessContainedApp and sets the default values.
+     * The app user model ID of the contained app of a MicrosoftStoreForBusinessApp.
+     */
+    private String appUserModelId;
+    /**
+     * Instantiates a new microsoftStoreForBusinessContainedApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftStoreForBusinessContainedApp() {
         super();
         this.setOdataType("#microsoft.graph.microsoftStoreForBusinessContainedApp");
@@ -21,7 +26,7 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftStoreForBusinessContainedApp
+     * @return a microsoftStoreForBusinessContainedApp
      */
     @javax.annotation.Nonnull
     public static MicrosoftStoreForBusinessContainedApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -34,24 +39,24 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
      */
     @javax.annotation.Nullable
     public String getAppUserModelId() {
-        return this._appUserModelId;
+        return this.appUserModelId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MicrosoftStoreForBusinessContainedApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appUserModelId", (n) -> { currentObject.setAppUserModelId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appUserModelId", (n) -> { this.setAppUserModelId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +67,8 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
      * @param value Value to set for the appUserModelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppUserModelId(@javax.annotation.Nullable final String value) {
-        this._appUserModelId = value;
+        this.appUserModelId = value;
     }
 }
