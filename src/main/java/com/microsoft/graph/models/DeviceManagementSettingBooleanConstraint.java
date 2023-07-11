@@ -3,17 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Base entity for a constraint
+ */
 public class DeviceManagementSettingBooleanConstraint extends DeviceManagementConstraint implements Parsable {
-    /** The boolean value to compare against */
-    private Boolean _value;
     /**
-     * Instantiates a new DeviceManagementSettingBooleanConstraint and sets the default values.
+     * The boolean value to compare against
+     */
+    private Boolean value;
+    /**
+     * Instantiates a new deviceManagementSettingBooleanConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingBooleanConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingBooleanConstraint");
@@ -21,7 +26,7 @@ public class DeviceManagementSettingBooleanConstraint extends DeviceManagementCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettingBooleanConstraint
+     * @return a deviceManagementSettingBooleanConstraint
      */
     @javax.annotation.Nonnull
     public static DeviceManagementSettingBooleanConstraint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,14 +35,13 @@ public class DeviceManagementSettingBooleanConstraint extends DeviceManagementCo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementSettingBooleanConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { this.setValue(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The boolean value to compare against
@@ -45,13 +49,14 @@ public class DeviceManagementSettingBooleanConstraint extends DeviceManagementCo
      */
     @javax.annotation.Nullable
     public Boolean getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +67,8 @@ public class DeviceManagementSettingBooleanConstraint extends DeviceManagementCo
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Boolean value) {
-        this._value = value;
+        this.value = value;
     }
 }

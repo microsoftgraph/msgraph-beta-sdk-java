@@ -1,27 +1,34 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.SwapShiftsChangeRequest;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable {
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _recipientActionDateTime;
-    /** Custom message sent by recipient of the offer shift request. */
-    private String _recipientActionMessage;
-    /** User id of the recipient of the offer shift request. */
-    private String _recipientUserId;
-    /** User id of the sender of the offer shift request. */
-    private String _senderShiftId;
     /**
-     * Instantiates a new OfferShiftRequest and sets the default values.
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
+    private OffsetDateTime recipientActionDateTime;
+    /**
+     * Custom message sent by recipient of the offer shift request.
+     */
+    private String recipientActionMessage;
+    /**
+     * User id of the recipient of the offer shift request.
+     */
+    private String recipientUserId;
+    /**
+     * User id of the sender of the offer shift request.
+     */
+    private String senderShiftId;
+    /**
+     * Instantiates a new offerShiftRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OfferShiftRequest() {
         super();
         this.setOdataType("#microsoft.graph.offerShiftRequest");
@@ -29,7 +36,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OfferShiftRequest
+     * @return a offerShiftRequest
      */
     @javax.annotation.Nonnull
     public static OfferShiftRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,17 +52,16 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OfferShiftRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("recipientActionDateTime", (n) -> { currentObject.setRecipientActionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("recipientActionMessage", (n) -> { currentObject.setRecipientActionMessage(n.getStringValue()); });
-            this.put("recipientUserId", (n) -> { currentObject.setRecipientUserId(n.getStringValue()); });
-            this.put("senderShiftId", (n) -> { currentObject.setSenderShiftId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("recipientActionDateTime", (n) -> { this.setRecipientActionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("recipientActionMessage", (n) -> { this.setRecipientActionMessage(n.getStringValue()); });
+        deserializerMap.put("recipientUserId", (n) -> { this.setRecipientUserId(n.getStringValue()); });
+        deserializerMap.put("senderShiftId", (n) -> { this.setSenderShiftId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the recipientActionDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -63,7 +69,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRecipientActionDateTime() {
-        return this._recipientActionDateTime;
+        return this.recipientActionDateTime;
     }
     /**
      * Gets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
@@ -71,7 +77,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nullable
     public String getRecipientActionMessage() {
-        return this._recipientActionMessage;
+        return this.recipientActionMessage;
     }
     /**
      * Gets the recipientUserId property value. User id of the recipient of the offer shift request.
@@ -79,7 +85,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nullable
     public String getRecipientUserId() {
-        return this._recipientUserId;
+        return this.recipientUserId;
     }
     /**
      * Gets the senderShiftId property value. User id of the sender of the offer shift request.
@@ -87,17 +93,17 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     @javax.annotation.Nullable
     public String getSenderShiftId() {
-        return this._senderShiftId;
+        return this.senderShiftId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeOffsetDateTimeValue("recipientActionDateTime", this.getRecipientActionDateTime());
         writer.writeStringValue("recipientActionMessage", this.getRecipientActionMessage());
         writer.writeStringValue("recipientUserId", this.getRecipientUserId());
         writer.writeStringValue("senderShiftId", this.getSenderShiftId());
@@ -107,31 +113,35 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      * @param value Value to set for the recipientActionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._recipientActionDateTime = value;
+        this.recipientActionDateTime = value;
     }
     /**
      * Sets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
      * @param value Value to set for the recipientActionMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientActionMessage(@javax.annotation.Nullable final String value) {
-        this._recipientActionMessage = value;
+        this.recipientActionMessage = value;
     }
     /**
      * Sets the recipientUserId property value. User id of the recipient of the offer shift request.
      * @param value Value to set for the recipientUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientUserId(@javax.annotation.Nullable final String value) {
-        this._recipientUserId = value;
+        this.recipientUserId = value;
     }
     /**
      * Sets the senderShiftId property value. User id of the sender of the offer shift request.
      * @param value Value to set for the senderShiftId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSenderShiftId(@javax.annotation.Nullable final String value) {
-        this._senderShiftId = value;
+        this.senderShiftId = value;
     }
 }

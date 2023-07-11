@@ -4,25 +4,29 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class ThreatAssessmentResult extends Entity implements Parsable {
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _createdDateTime;
-    /** The result message for each threat assessment. */
-    private String _message;
-    /** The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan. */
-    private ThreatAssessmentResultType _resultType;
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The result message for each threat assessment.
+     */
+    private String message;
+    /**
+     * The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
+     */
+    private ThreatAssessmentResultType resultType;
     /**
      * Instantiates a new threatAssessmentResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ThreatAssessmentResult() {
         super();
-        this.setOdataType("#microsoft.graph.threatAssessmentResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,20 +44,19 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ThreatAssessmentResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("resultType", (n) -> { currentObject.setResultType(n.getEnumValue(ThreatAssessmentResultType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
+        deserializerMap.put("resultType", (n) -> { this.setResultType(n.getEnumValue(ThreatAssessmentResultType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The result message for each threat assessment.
@@ -61,7 +64,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMessage() {
-        return this._message;
+        return this.message;
     }
     /**
      * Gets the resultType property value. The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
@@ -69,13 +72,14 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ThreatAssessmentResultType getResultType() {
-        return this._resultType;
+        return this.resultType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -88,23 +92,26 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the message property value. The result message for each threat assessment.
      * @param value Value to set for the message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
-        this._message = value;
+        this.message = value;
     }
     /**
      * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
      * @param value Value to set for the resultType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultType(@javax.annotation.Nullable final ThreatAssessmentResultType value) {
-        this._resultType = value;
+        this.resultType = value;
     }
 }

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * The classes of apps that are allowed to click-to-open a phone number, for making phone calls or sending text messages.
+ */
 public enum ManagedAppPhoneNumberRedirectLevel implements ValuedEnum {
     /** Sharing is allowed to all apps. */
     AllApps("allApps"),

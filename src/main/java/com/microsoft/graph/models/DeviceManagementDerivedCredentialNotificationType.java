@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Supported values for the notification type to use.
+ */
 public enum DeviceManagementDerivedCredentialNotificationType implements ValuedEnum {
     /** None */
     None("none"),

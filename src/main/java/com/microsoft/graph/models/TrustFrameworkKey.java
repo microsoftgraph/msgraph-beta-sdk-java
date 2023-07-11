@@ -4,54 +4,89 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** RSA Key - private exponent. Field cannot be read back. */
-    private String _d;
-    /** RSA Key - first exponent. Field cannot be read back. */
-    private String _dp;
-    /** RSA Key - second exponent. Field cannot be read back. */
-    private String _dq;
-    /** RSA Key - public exponent */
-    private String _e;
-    /** This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.) */
-    private Long _exp;
-    /** Symmetric Key for oct key type. Field cannot be read back. */
-    private String _k;
-    /** The unique identifier for the key. */
-    private String _kid;
-    /** The kty (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct. */
-    private String _kty;
-    /** RSA Key - modulus */
-    private String _n;
-    /** This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.) */
-    private Long _nbf;
-    /** The OdataType property */
-    private String _odataType;
-    /** RSA Key - first prime. Field cannot be read back. */
-    private String _p;
-    /** RSA Key - second prime. Field cannot be read back. */
-    private String _q;
-    /** RSA Key - Coefficient. Field cannot be read back. */
-    private String _qi;
-    /** The use (public key use) parameter identifies the intended use of the public key.  The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption) */
-    private String _use;
-    /** The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280. */
-    private java.util.List<String> _x5c;
-    /** The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280. */
-    private String _x5t;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * RSA Key - private exponent. Field cannot be read back.
+     */
+    private String d;
+    /**
+     * RSA Key - first exponent. Field cannot be read back.
+     */
+    private String dp;
+    /**
+     * RSA Key - second exponent. Field cannot be read back.
+     */
+    private String dq;
+    /**
+     * RSA Key - public exponent
+     */
+    private String e;
+    /**
+     * This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     */
+    private Long exp;
+    /**
+     * Symmetric Key for oct key type. Field cannot be read back.
+     */
+    private String k;
+    /**
+     * The unique identifier for the key.
+     */
+    private String kid;
+    /**
+     * The kty (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
+     */
+    private String kty;
+    /**
+     * RSA Key - modulus
+     */
+    private String n;
+    /**
+     * This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     */
+    private Long nbf;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * RSA Key - first prime. Field cannot be read back.
+     */
+    private String p;
+    /**
+     * RSA Key - second prime. Field cannot be read back.
+     */
+    private String q;
+    /**
+     * RSA Key - Coefficient. Field cannot be read back.
+     */
+    private String qi;
+    /**
+     * The use (public key use) parameter identifies the intended use of the public key.  The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption)
+     */
+    private String use;
+    /**
+     * The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
+     */
+    private java.util.List<String> x5c;
+    /**
+     * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
+     */
+    private String x5t;
     /**
      * Instantiates a new trustFrameworkKey and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TrustFrameworkKey() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.trustFrameworkKey");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,7 +104,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the d property value. RSA Key - private exponent. Field cannot be read back.
@@ -77,7 +112,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getD() {
-        return this._d;
+        return this.d;
     }
     /**
      * Gets the dp property value. RSA Key - first exponent. Field cannot be read back.
@@ -85,7 +120,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDp() {
-        return this._dp;
+        return this.dp;
     }
     /**
      * Gets the dq property value. RSA Key - second exponent. Field cannot be read back.
@@ -93,7 +128,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDq() {
-        return this._dq;
+        return this.dq;
     }
     /**
      * Gets the e property value. RSA Key - public exponent
@@ -101,7 +136,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getE() {
-        return this._e;
+        return this.e;
     }
     /**
      * Gets the exp property value. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
@@ -109,34 +144,33 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getExp() {
-        return this._exp;
+        return this.exp;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TrustFrameworkKey currentObject = this;
-        return new HashMap<>(17) {{
-            this.put("d", (n) -> { currentObject.setD(n.getStringValue()); });
-            this.put("dp", (n) -> { currentObject.setDp(n.getStringValue()); });
-            this.put("dq", (n) -> { currentObject.setDq(n.getStringValue()); });
-            this.put("e", (n) -> { currentObject.setE(n.getStringValue()); });
-            this.put("exp", (n) -> { currentObject.setExp(n.getLongValue()); });
-            this.put("k", (n) -> { currentObject.setK(n.getStringValue()); });
-            this.put("kid", (n) -> { currentObject.setKid(n.getStringValue()); });
-            this.put("kty", (n) -> { currentObject.setKty(n.getStringValue()); });
-            this.put("n", (n) -> { currentObject.setN(n.getStringValue()); });
-            this.put("nbf", (n) -> { currentObject.setNbf(n.getLongValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("p", (n) -> { currentObject.setP(n.getStringValue()); });
-            this.put("q", (n) -> { currentObject.setQ(n.getStringValue()); });
-            this.put("qi", (n) -> { currentObject.setQi(n.getStringValue()); });
-            this.put("use", (n) -> { currentObject.setUse(n.getStringValue()); });
-            this.put("x5c", (n) -> { currentObject.setX5c(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("x5t", (n) -> { currentObject.setX5t(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(17);
+        deserializerMap.put("d", (n) -> { this.setD(n.getStringValue()); });
+        deserializerMap.put("dp", (n) -> { this.setDp(n.getStringValue()); });
+        deserializerMap.put("dq", (n) -> { this.setDq(n.getStringValue()); });
+        deserializerMap.put("e", (n) -> { this.setE(n.getStringValue()); });
+        deserializerMap.put("exp", (n) -> { this.setExp(n.getLongValue()); });
+        deserializerMap.put("k", (n) -> { this.setK(n.getStringValue()); });
+        deserializerMap.put("kid", (n) -> { this.setKid(n.getStringValue()); });
+        deserializerMap.put("kty", (n) -> { this.setKty(n.getStringValue()); });
+        deserializerMap.put("n", (n) -> { this.setN(n.getStringValue()); });
+        deserializerMap.put("nbf", (n) -> { this.setNbf(n.getLongValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("p", (n) -> { this.setP(n.getStringValue()); });
+        deserializerMap.put("q", (n) -> { this.setQ(n.getStringValue()); });
+        deserializerMap.put("qi", (n) -> { this.setQi(n.getStringValue()); });
+        deserializerMap.put("use", (n) -> { this.setUse(n.getStringValue()); });
+        deserializerMap.put("x5c", (n) -> { this.setX5c(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("x5t", (n) -> { this.setX5t(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the k property value. Symmetric Key for oct key type. Field cannot be read back.
@@ -144,7 +178,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getK() {
-        return this._k;
+        return this.k;
     }
     /**
      * Gets the kid property value. The unique identifier for the key.
@@ -152,7 +186,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getKid() {
-        return this._kid;
+        return this.kid;
     }
     /**
      * Gets the kty property value. The kty (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
@@ -160,7 +194,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getKty() {
-        return this._kty;
+        return this.kty;
     }
     /**
      * Gets the n property value. RSA Key - modulus
@@ -168,7 +202,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getN() {
-        return this._n;
+        return this.n;
     }
     /**
      * Gets the nbf property value. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
@@ -176,7 +210,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getNbf() {
-        return this._nbf;
+        return this.nbf;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -184,7 +218,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the p property value. RSA Key - first prime. Field cannot be read back.
@@ -192,7 +226,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getP() {
-        return this._p;
+        return this.p;
     }
     /**
      * Gets the q property value. RSA Key - second prime. Field cannot be read back.
@@ -200,7 +234,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getQ() {
-        return this._q;
+        return this.q;
     }
     /**
      * Gets the qi property value. RSA Key - Coefficient. Field cannot be read back.
@@ -208,7 +242,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getQi() {
-        return this._qi;
+        return this.qi;
     }
     /**
      * Gets the use property value. The use (public key use) parameter identifies the intended use of the public key.  The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption)
@@ -216,7 +250,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUse() {
-        return this._use;
+        return this.use;
     }
     /**
      * Gets the x5c property value. The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
@@ -224,7 +258,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getX5c() {
-        return this._x5c;
+        return this.x5c;
     }
     /**
      * Gets the x5t property value. The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
@@ -232,13 +266,14 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getX5t() {
-        return this._x5t;
+        return this.x5t;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("d", this.getD());
@@ -265,143 +300,161 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the d property value. RSA Key - private exponent. Field cannot be read back.
      * @param value Value to set for the d property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setD(@javax.annotation.Nullable final String value) {
-        this._d = value;
+        this.d = value;
     }
     /**
      * Sets the dp property value. RSA Key - first exponent. Field cannot be read back.
      * @param value Value to set for the dp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDp(@javax.annotation.Nullable final String value) {
-        this._dp = value;
+        this.dp = value;
     }
     /**
      * Sets the dq property value. RSA Key - second exponent. Field cannot be read back.
      * @param value Value to set for the dq property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDq(@javax.annotation.Nullable final String value) {
-        this._dq = value;
+        this.dq = value;
     }
     /**
      * Sets the e property value. RSA Key - public exponent
      * @param value Value to set for the e property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setE(@javax.annotation.Nullable final String value) {
-        this._e = value;
+        this.e = value;
     }
     /**
      * Sets the exp property value. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      * @param value Value to set for the exp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExp(@javax.annotation.Nullable final Long value) {
-        this._exp = value;
+        this.exp = value;
     }
     /**
      * Sets the k property value. Symmetric Key for oct key type. Field cannot be read back.
      * @param value Value to set for the k property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setK(@javax.annotation.Nullable final String value) {
-        this._k = value;
+        this.k = value;
     }
     /**
      * Sets the kid property value. The unique identifier for the key.
      * @param value Value to set for the kid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKid(@javax.annotation.Nullable final String value) {
-        this._kid = value;
+        this.kid = value;
     }
     /**
      * Sets the kty property value. The kty (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
      * @param value Value to set for the kty property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKty(@javax.annotation.Nullable final String value) {
-        this._kty = value;
+        this.kty = value;
     }
     /**
      * Sets the n property value. RSA Key - modulus
      * @param value Value to set for the n property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setN(@javax.annotation.Nullable final String value) {
-        this._n = value;
+        this.n = value;
     }
     /**
      * Sets the nbf property value. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      * @param value Value to set for the nbf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNbf(@javax.annotation.Nullable final Long value) {
-        this._nbf = value;
+        this.nbf = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the p property value. RSA Key - first prime. Field cannot be read back.
      * @param value Value to set for the p property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setP(@javax.annotation.Nullable final String value) {
-        this._p = value;
+        this.p = value;
     }
     /**
      * Sets the q property value. RSA Key - second prime. Field cannot be read back.
      * @param value Value to set for the q property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQ(@javax.annotation.Nullable final String value) {
-        this._q = value;
+        this.q = value;
     }
     /**
      * Sets the qi property value. RSA Key - Coefficient. Field cannot be read back.
      * @param value Value to set for the qi property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQi(@javax.annotation.Nullable final String value) {
-        this._qi = value;
+        this.qi = value;
     }
     /**
      * Sets the use property value. The use (public key use) parameter identifies the intended use of the public key.  The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption)
      * @param value Value to set for the use property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUse(@javax.annotation.Nullable final String value) {
-        this._use = value;
+        this.use = value;
     }
     /**
      * Sets the x5c property value. The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
      * @param value Value to set for the x5c property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setX5c(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._x5c = value;
+        this.x5c = value;
     }
     /**
      * Sets the x5t property value. The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
      * @param value Value to set for the x5t property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setX5t(@javax.annotation.Nullable final String value) {
-        this._x5t = value;
+        this.x5t = value;
     }
 }

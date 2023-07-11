@@ -1,0 +1,241 @@
+package com.microsoft.graph.devicelocalcredentials;
+
+import com.microsoft.graph.devicelocalcredentials.item.DeviceLocalCredentialInfoItemRequestBuilder;
+import com.microsoft.graph.models.DeviceLocalCredentialInfo;
+import com.microsoft.graph.models.DeviceLocalCredentialInfoCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.kiota.BaseRequestBuilder;
+import com.microsoft.kiota.BaseRequestConfiguration;
+import com.microsoft.kiota.HttpMethod;
+import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParsableFactory;
+import java.net.URISyntaxException;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+/**
+ * Provides operations to manage the collection of deviceLocalCredentialInfo entities.
+ */
+public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the collection of deviceLocalCredentialInfo entities.
+     * @param deviceLocalCredentialInfoId Unique identifier of the item
+     * @return a DeviceLocalCredentialInfoItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeviceLocalCredentialInfoItemRequestBuilder byDeviceLocalCredentialInfoId(@javax.annotation.Nonnull final String deviceLocalCredentialInfoId) {
+        Objects.requireNonNull(deviceLocalCredentialInfoId);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("deviceLocalCredentialInfo%2Did", deviceLocalCredentialInfoId);
+        return new DeviceLocalCredentialInfoItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Instantiates a new DeviceLocalCredentialsRequestBuilder and sets the default values.
+     * @param pathParameters Path parameters for the request
+     * @param requestAdapter The request adapter to use to execute the requests.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public DeviceLocalCredentialsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24search,%24filter,%24orderby,%24select}", pathParameters);
+    }
+    /**
+     * Instantiates a new DeviceLocalCredentialsRequestBuilder and sets the default values.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @param requestAdapter The request adapter to use to execute the requests.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public DeviceLocalCredentialsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24search,%24filter,%24orderby,%24select}", rawUrl);
+    }
+    /**
+     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
+     * @return a CompletableFuture of deviceLocalCredentialInfoCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/devicelocalcredentialinfo-list?view=graph-rest-1.0">Find more info here</a>
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfoCollectionResponse> get() {
+        try {
+            final RequestInformation requestInfo = toGetRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceLocalCredentialInfoCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfoCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfoCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of deviceLocalCredentialInfoCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/devicelocalcredentialinfo-list?view=graph-rest-1.0">Find more info here</a>
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfoCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        try {
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceLocalCredentialInfoCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfoCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfoCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Add new entity to deviceLocalCredentials
+     * @param body The request body
+     * @return a CompletableFuture of deviceLocalCredentialInfo
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> post(@javax.annotation.Nonnull final DeviceLocalCredentialInfo body) {
+        try {
+            final RequestInformation requestInfo = toPostRequestInformation(body, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceLocalCredentialInfo::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> executionException = new java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Add new entity to deviceLocalCredentials
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of deviceLocalCredentialInfo
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> post(@javax.annotation.Nonnull final DeviceLocalCredentialInfo body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        try {
+            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceLocalCredentialInfo::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> executionException = new java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Add new entity to deviceLocalCredentials
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final DeviceLocalCredentialInfo body) throws URISyntaxException {
+        return toPostRequestInformation(body, null);
+    }
+    /**
+     * Add new entity to deviceLocalCredentials
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final DeviceLocalCredentialInfo body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
+     */
+    public class GetQueryParameters {
+        /**
+         * Filter items by property values
+         */
+        @QueryParameter(name = "%24filter")
+        @javax.annotation.Nullable
+        public String filter;
+        /**
+         * Order items by property values
+         */
+        @QueryParameter(name = "%24orderby")
+        @javax.annotation.Nullable
+        public String[] orderby;
+        /**
+         * Search items by search phrases
+         */
+        @QueryParameter(name = "%24search")
+        @javax.annotation.Nullable
+        public String search;
+        /**
+         * Select properties to be returned
+         */
+        @QueryParameter(name = "%24select")
+        @javax.annotation.Nullable
+        public String[] select;
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class GetRequestConfiguration extends BaseRequestConfiguration {
+        /**
+         * Request query parameters
+         */
+        @javax.annotation.Nullable
+        public GetQueryParameters queryParameters = new GetQueryParameters();
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class PostRequestConfiguration extends BaseRequestConfiguration {
+    }
+}

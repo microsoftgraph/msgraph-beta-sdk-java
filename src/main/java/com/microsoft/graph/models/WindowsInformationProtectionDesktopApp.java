@@ -3,21 +3,30 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * App for Windows information protection
+ */
 public class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectionApp implements Parsable {
-    /** The binary name. */
-    private String _binaryName;
-    /** The high binary version. */
-    private String _binaryVersionHigh;
-    /** The lower binary version. */
-    private String _binaryVersionLow;
     /**
-     * Instantiates a new WindowsInformationProtectionDesktopApp and sets the default values.
+     * The binary name.
+     */
+    private String binaryName;
+    /**
+     * The high binary version.
+     */
+    private String binaryVersionHigh;
+    /**
+     * The lower binary version.
+     */
+    private String binaryVersionLow;
+    /**
+     * Instantiates a new windowsInformationProtectionDesktopApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionDesktopApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtectionDesktopApp");
@@ -25,7 +34,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtectionDesktopApp
+     * @return a windowsInformationProtectionDesktopApp
      */
     @javax.annotation.Nonnull
     public static WindowsInformationProtectionDesktopApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +47,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      */
     @javax.annotation.Nullable
     public String getBinaryName() {
-        return this._binaryName;
+        return this.binaryName;
     }
     /**
      * Gets the binaryVersionHigh property value. The high binary version.
@@ -46,7 +55,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      */
     @javax.annotation.Nullable
     public String getBinaryVersionHigh() {
-        return this._binaryVersionHigh;
+        return this.binaryVersionHigh;
     }
     /**
      * Gets the binaryVersionLow property value. The lower binary version.
@@ -54,26 +63,26 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      */
     @javax.annotation.Nullable
     public String getBinaryVersionLow() {
-        return this._binaryVersionLow;
+        return this.binaryVersionLow;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsInformationProtectionDesktopApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("binaryName", (n) -> { currentObject.setBinaryName(n.getStringValue()); });
-            this.put("binaryVersionHigh", (n) -> { currentObject.setBinaryVersionHigh(n.getStringValue()); });
-            this.put("binaryVersionLow", (n) -> { currentObject.setBinaryVersionLow(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("binaryName", (n) -> { this.setBinaryName(n.getStringValue()); });
+        deserializerMap.put("binaryVersionHigh", (n) -> { this.setBinaryVersionHigh(n.getStringValue()); });
+        deserializerMap.put("binaryVersionLow", (n) -> { this.setBinaryVersionLow(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +95,26 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      * @param value Value to set for the binaryName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBinaryName(@javax.annotation.Nullable final String value) {
-        this._binaryName = value;
+        this.binaryName = value;
     }
     /**
      * Sets the binaryVersionHigh property value. The high binary version.
      * @param value Value to set for the binaryVersionHigh property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBinaryVersionHigh(@javax.annotation.Nullable final String value) {
-        this._binaryVersionHigh = value;
+        this.binaryVersionHigh = value;
     }
     /**
      * Sets the binaryVersionLow property value. The lower binary version.
      * @param value Value to set for the binaryVersionLow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBinaryVersionLow(@javax.annotation.Nullable final String value) {
-        this._binaryVersionLow = value;
+        this.binaryVersionLow = value;
     }
 }

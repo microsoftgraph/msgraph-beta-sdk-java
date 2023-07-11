@@ -3,11 +3,11 @@ package com.microsoft.graph.models.identitygovernance;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum LifecycleTaskCategory implements ValuedEnum {
     Joiner("joiner"),
     Leaver("leaver"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Mover("mover");
     public final String value;
     LifecycleTaskCategory(final String value) {
         this.value = value;
@@ -21,6 +21,7 @@ public enum LifecycleTaskCategory implements ValuedEnum {
             case "joiner": return Joiner;
             case "leaver": return Leaver;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "mover": return Mover;
             default: return null;
         }
     }

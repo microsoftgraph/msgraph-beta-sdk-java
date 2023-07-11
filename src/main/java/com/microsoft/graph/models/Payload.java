@@ -1,0 +1,554 @@
+package com.microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class Payload extends Entity implements Parsable {
+    /**
+     * The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
+     */
+    private PayloadBrand brand;
+    /**
+     * The complexity of a payload.Possible values are: unknown, low, medium, high, unknownFutureValue
+     */
+    private PayloadComplexity complexity;
+    /**
+     * Identity of the user who created the attack simulation and training campaign payload.
+     */
+    private EmailIdentity createdBy;
+    /**
+     * Date and time when the attack simulation and training campaign payload.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * Description of the attack simulation and training campaign payload.
+     */
+    private String description;
+    /**
+     * Additional details about the payload.
+     */
+    private PayloadDetail detail;
+    /**
+     * Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
+     */
+    private String displayName;
+    /**
+     * Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
+     */
+    private PayloadIndustry industry;
+    /**
+     * Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
+     */
+    private Boolean isAutomated;
+    /**
+     * Indicates whether the payload is controversial.
+     */
+    private Boolean isControversial;
+    /**
+     * Indicates whether the payload is from any recent event.
+     */
+    private Boolean isCurrentEvent;
+    /**
+     * Payload language.
+     */
+    private String language;
+    /**
+     * Identity of the user who most recently modified the attack simulation and training campaign payload.
+     */
+    private EmailIdentity lastModifiedBy;
+    /**
+     * Date and time when the attack simulation and training campaign payload was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * Free text tags for a payload.
+     */
+    private java.util.List<String> payloadTags;
+    /**
+     * The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
+     */
+    private PayloadDeliveryPlatform platform;
+    /**
+     * Predicted probability for a payload to phish a targeted user.
+     */
+    private Double predictedCompromiseRate;
+    /**
+     * Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
+     */
+    private SimulationAttackType simulationAttackType;
+    /**
+     * The source property
+     */
+    private SimulationContentSource source;
+    /**
+     * Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue. Inherited from simulation.
+     */
+    private SimulationContentStatus status;
+    /**
+     * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     */
+    private SimulationAttackTechnique technique;
+    /**
+     * The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
+     */
+    private PayloadTheme theme;
+    /**
+     * Instantiates a new payload and sets the default values.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public Payload() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a payload
+     */
+    @javax.annotation.Nonnull
+    public static Payload createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new Payload();
+    }
+    /**
+     * Gets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
+     * @return a payloadBrand
+     */
+    @javax.annotation.Nullable
+    public PayloadBrand getBrand() {
+        return this.brand;
+    }
+    /**
+     * Gets the complexity property value. The complexity of a payload.Possible values are: unknown, low, medium, high, unknownFutureValue
+     * @return a payloadComplexity
+     */
+    @javax.annotation.Nullable
+    public PayloadComplexity getComplexity() {
+        return this.complexity;
+    }
+    /**
+     * Gets the createdBy property value. Identity of the user who created the attack simulation and training campaign payload.
+     * @return a emailIdentity
+     */
+    @javax.annotation.Nullable
+    public EmailIdentity getCreatedBy() {
+        return this.createdBy;
+    }
+    /**
+     * Gets the createdDateTime property value. Date and time when the attack simulation and training campaign payload.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.createdDateTime;
+    }
+    /**
+     * Gets the description property value. Description of the attack simulation and training campaign payload.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDescription() {
+        return this.description;
+    }
+    /**
+     * Gets the detail property value. Additional details about the payload.
+     * @return a payloadDetail
+     */
+    @javax.annotation.Nullable
+    public PayloadDetail getDetail() {
+        return this.detail;
+    }
+    /**
+     * Gets the displayName property value. Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDisplayName() {
+        return this.displayName;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("brand", (n) -> { this.setBrand(n.getEnumValue(PayloadBrand.class)); });
+        deserializerMap.put("complexity", (n) -> { this.setComplexity(n.getEnumValue(PayloadComplexity.class)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("detail", (n) -> { this.setDetail(n.getObjectValue(PayloadDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("industry", (n) -> { this.setIndustry(n.getEnumValue(PayloadIndustry.class)); });
+        deserializerMap.put("isAutomated", (n) -> { this.setIsAutomated(n.getBooleanValue()); });
+        deserializerMap.put("isControversial", (n) -> { this.setIsControversial(n.getBooleanValue()); });
+        deserializerMap.put("isCurrentEvent", (n) -> { this.setIsCurrentEvent(n.getBooleanValue()); });
+        deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("payloadTags", (n) -> { this.setPayloadTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(PayloadDeliveryPlatform.class)); });
+        deserializerMap.put("predictedCompromiseRate", (n) -> { this.setPredictedCompromiseRate(n.getDoubleValue()); });
+        deserializerMap.put("simulationAttackType", (n) -> { this.setSimulationAttackType(n.getEnumValue(SimulationAttackType.class)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SimulationContentSource.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationContentStatus.class)); });
+        deserializerMap.put("technique", (n) -> { this.setTechnique(n.getEnumValue(SimulationAttackTechnique.class)); });
+        deserializerMap.put("theme", (n) -> { this.setTheme(n.getEnumValue(PayloadTheme.class)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
+     * @return a payloadIndustry
+     */
+    @javax.annotation.Nullable
+    public PayloadIndustry getIndustry() {
+        return this.industry;
+    }
+    /**
+     * Gets the isAutomated property value. Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsAutomated() {
+        return this.isAutomated;
+    }
+    /**
+     * Gets the isControversial property value. Indicates whether the payload is controversial.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsControversial() {
+        return this.isControversial;
+    }
+    /**
+     * Gets the isCurrentEvent property value. Indicates whether the payload is from any recent event.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsCurrentEvent() {
+        return this.isCurrentEvent;
+    }
+    /**
+     * Gets the language property value. Payload language.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getLanguage() {
+        return this.language;
+    }
+    /**
+     * Gets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign payload.
+     * @return a emailIdentity
+     */
+    @javax.annotation.Nullable
+    public EmailIdentity getLastModifiedBy() {
+        return this.lastModifiedBy;
+    }
+    /**
+     * Gets the lastModifiedDateTime property value. Date and time when the attack simulation and training campaign payload was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getLastModifiedDateTime() {
+        return this.lastModifiedDateTime;
+    }
+    /**
+     * Gets the payloadTags property value. Free text tags for a payload.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getPayloadTags() {
+        return this.payloadTags;
+    }
+    /**
+     * Gets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
+     * @return a payloadDeliveryPlatform
+     */
+    @javax.annotation.Nullable
+    public PayloadDeliveryPlatform getPlatform() {
+        return this.platform;
+    }
+    /**
+     * Gets the predictedCompromiseRate property value. Predicted probability for a payload to phish a targeted user.
+     * @return a double
+     */
+    @javax.annotation.Nullable
+    public Double getPredictedCompromiseRate() {
+        return this.predictedCompromiseRate;
+    }
+    /**
+     * Gets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
+     * @return a simulationAttackType
+     */
+    @javax.annotation.Nullable
+    public SimulationAttackType getSimulationAttackType() {
+        return this.simulationAttackType;
+    }
+    /**
+     * Gets the source property value. The source property
+     * @return a simulationContentSource
+     */
+    @javax.annotation.Nullable
+    public SimulationContentSource getSource() {
+        return this.source;
+    }
+    /**
+     * Gets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue. Inherited from simulation.
+     * @return a simulationContentStatus
+     */
+    @javax.annotation.Nullable
+    public SimulationContentStatus getStatus() {
+        return this.status;
+    }
+    /**
+     * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     * @return a simulationAttackTechnique
+     */
+    @javax.annotation.Nullable
+    public SimulationAttackTechnique getTechnique() {
+        return this.technique;
+    }
+    /**
+     * Gets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
+     * @return a payloadTheme
+     */
+    @javax.annotation.Nullable
+    public PayloadTheme getTheme() {
+        return this.theme;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeEnumValue("brand", this.getBrand());
+        writer.writeEnumValue("complexity", this.getComplexity());
+        writer.writeObjectValue("createdBy", this.getCreatedBy());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeStringValue("description", this.getDescription());
+        writer.writeObjectValue("detail", this.getDetail());
+        writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("industry", this.getIndustry());
+        writer.writeBooleanValue("isAutomated", this.getIsAutomated());
+        writer.writeBooleanValue("isControversial", this.getIsControversial());
+        writer.writeBooleanValue("isCurrentEvent", this.getIsCurrentEvent());
+        writer.writeStringValue("language", this.getLanguage());
+        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
+        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeCollectionOfPrimitiveValues("payloadTags", this.getPayloadTags());
+        writer.writeEnumValue("platform", this.getPlatform());
+        writer.writeDoubleValue("predictedCompromiseRate", this.getPredictedCompromiseRate());
+        writer.writeEnumValue("simulationAttackType", this.getSimulationAttackType());
+        writer.writeEnumValue("source", this.getSource());
+        writer.writeEnumValue("status", this.getStatus());
+        writer.writeEnumValue("technique", this.getTechnique());
+        writer.writeEnumValue("theme", this.getTheme());
+    }
+    /**
+     * Sets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
+     * @param value Value to set for the brand property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setBrand(@javax.annotation.Nullable final PayloadBrand value) {
+        this.brand = value;
+    }
+    /**
+     * Sets the complexity property value. The complexity of a payload.Possible values are: unknown, low, medium, high, unknownFutureValue
+     * @param value Value to set for the complexity property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setComplexity(@javax.annotation.Nullable final PayloadComplexity value) {
+        this.complexity = value;
+    }
+    /**
+     * Sets the createdBy property value. Identity of the user who created the attack simulation and training campaign payload.
+     * @param value Value to set for the createdBy property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCreatedBy(@javax.annotation.Nullable final EmailIdentity value) {
+        this.createdBy = value;
+    }
+    /**
+     * Sets the createdDateTime property value. Date and time when the attack simulation and training campaign payload.
+     * @param value Value to set for the createdDateTime property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this.createdDateTime = value;
+    }
+    /**
+     * Sets the description property value. Description of the attack simulation and training campaign payload.
+     * @param value Value to set for the description property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDescription(@javax.annotation.Nullable final String value) {
+        this.description = value;
+    }
+    /**
+     * Sets the detail property value. Additional details about the payload.
+     * @param value Value to set for the detail property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDetail(@javax.annotation.Nullable final PayloadDetail value) {
+        this.detail = value;
+    }
+    /**
+     * Sets the displayName property value. Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
+     * @param value Value to set for the displayName property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDisplayName(@javax.annotation.Nullable final String value) {
+        this.displayName = value;
+    }
+    /**
+     * Sets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
+     * @param value Value to set for the industry property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIndustry(@javax.annotation.Nullable final PayloadIndustry value) {
+        this.industry = value;
+    }
+    /**
+     * Sets the isAutomated property value. Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
+     * @param value Value to set for the isAutomated property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsAutomated(@javax.annotation.Nullable final Boolean value) {
+        this.isAutomated = value;
+    }
+    /**
+     * Sets the isControversial property value. Indicates whether the payload is controversial.
+     * @param value Value to set for the isControversial property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsControversial(@javax.annotation.Nullable final Boolean value) {
+        this.isControversial = value;
+    }
+    /**
+     * Sets the isCurrentEvent property value. Indicates whether the payload is from any recent event.
+     * @param value Value to set for the isCurrentEvent property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsCurrentEvent(@javax.annotation.Nullable final Boolean value) {
+        this.isCurrentEvent = value;
+    }
+    /**
+     * Sets the language property value. Payload language.
+     * @param value Value to set for the language property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLanguage(@javax.annotation.Nullable final String value) {
+        this.language = value;
+    }
+    /**
+     * Sets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign payload.
+     * @param value Value to set for the lastModifiedBy property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLastModifiedBy(@javax.annotation.Nullable final EmailIdentity value) {
+        this.lastModifiedBy = value;
+    }
+    /**
+     * Sets the lastModifiedDateTime property value. Date and time when the attack simulation and training campaign payload was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the lastModifiedDateTime property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this.lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the payloadTags property value. Free text tags for a payload.
+     * @param value Value to set for the payloadTags property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPayloadTags(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.payloadTags = value;
+    }
+    /**
+     * Sets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
+     * @param value Value to set for the platform property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPlatform(@javax.annotation.Nullable final PayloadDeliveryPlatform value) {
+        this.platform = value;
+    }
+    /**
+     * Sets the predictedCompromiseRate property value. Predicted probability for a payload to phish a targeted user.
+     * @param value Value to set for the predictedCompromiseRate property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPredictedCompromiseRate(@javax.annotation.Nullable final Double value) {
+        this.predictedCompromiseRate = value;
+    }
+    /**
+     * Sets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
+     * @param value Value to set for the simulationAttackType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSimulationAttackType(@javax.annotation.Nullable final SimulationAttackType value) {
+        this.simulationAttackType = value;
+    }
+    /**
+     * Sets the source property value. The source property
+     * @param value Value to set for the source property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSource(@javax.annotation.Nullable final SimulationContentSource value) {
+        this.source = value;
+    }
+    /**
+     * Sets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue. Inherited from simulation.
+     * @param value Value to set for the status property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setStatus(@javax.annotation.Nullable final SimulationContentStatus value) {
+        this.status = value;
+    }
+    /**
+     * Sets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     * @param value Value to set for the technique property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTechnique(@javax.annotation.Nullable final SimulationAttackTechnique value) {
+        this.technique = value;
+    }
+    /**
+     * Sets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
+     * @param value Value to set for the theme property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTheme(@javax.annotation.Nullable final PayloadTheme value) {
+        this.theme = value;
+    }
+}

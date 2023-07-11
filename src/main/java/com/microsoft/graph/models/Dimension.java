@@ -1,30 +1,50 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
-public class Dimension extends Entity implements Parsable {
-    /** The code property */
-    private String _code;
-    /** The dimensionValues property */
-    private java.util.List<DimensionValue> _dimensionValues;
-    /** The displayName property */
-    private String _displayName;
-    /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
+import java.util.UUID;
+public class Dimension implements AdditionalDataHolder, Parsable {
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The code property
+     */
+    private String code;
+    /**
+     * The dimensionValues property
+     */
+    private java.util.List<DimensionValue> dimensionValues;
+    /**
+     * The displayName property
+     */
+    private String displayName;
+    /**
+     * The id property
+     */
+    private UUID id;
+    /**
+     * The lastModifiedDateTime property
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
     /**
      * Instantiates a new dimension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Dimension() {
-        super();
-        this.setOdataType("#microsoft.graph.dimension");
+        this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,12 +57,20 @@ public class Dimension extends Entity implements Parsable {
         return new Dimension();
     }
     /**
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a Map<String, Object>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        return this.additionalData;
+    }
+    /**
      * Gets the code property value. The code property
      * @return a string
      */
     @javax.annotation.Nullable
     public String getCode() {
-        return this._code;
+        return this.code;
     }
     /**
      * Gets the dimensionValues property value. The dimensionValues property
@@ -50,7 +78,7 @@ public class Dimension extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DimensionValue> getDimensionValues() {
-        return this._dimensionValues;
+        return this.dimensionValues;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -58,21 +86,30 @@ public class Dimension extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Dimension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("dimensionValues", (n) -> { currentObject.setDimensionValues(n.getCollectionOfObjectValues(DimensionValue::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
+        deserializerMap.put("dimensionValues", (n) -> { this.setDimensionValues(n.getCollectionOfObjectValues(DimensionValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getUUIDValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the id property value. The id property
+     * @return a UUID
+     */
+    @javax.annotation.Nullable
+    public UUID getId() {
+        return this.id;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -80,51 +117,93 @@ public class Dimension extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        super.serialize(writer);
         writer.writeStringValue("code", this.getCode());
         writer.writeCollectionOfObjectValues("dimensionValues", this.getDimensionValues());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeUUIDValue("id", this.getId());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+        this.additionalData = value;
     }
     /**
      * Sets the code property value. The code property
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
-        this._code = value;
+        this.code = value;
     }
     /**
      * Sets the dimensionValues property value. The dimensionValues property
      * @param value Value to set for the dimensionValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDimensionValues(@javax.annotation.Nullable final java.util.List<DimensionValue> value) {
-        this._dimensionValues = value;
+        this.dimensionValues = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
+    }
+    /**
+     * Sets the id property value. The id property
+     * @param value Value to set for the id property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setId(@javax.annotation.Nullable final UUID value) {
+        this.id = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this.odataType = value;
     }
 }

@@ -4,26 +4,33 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementConfigurationSettingOccurrence implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Maximum times setting can be set on device. */
-    private Integer _maxDeviceOccurrence;
-    /** Minimum times setting can be set on device. A MinDeviceOccurrence of 0 means setting is optional */
-    private Integer _minDeviceOccurrence;
-    /** The OdataType property */
-    private String _odataType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Maximum times setting can be set on device.
+     */
+    private Integer maxDeviceOccurrence;
+    /**
+     * Minimum times setting can be set on device. A MinDeviceOccurrence of 0 means setting is optional
+     */
+    private Integer minDeviceOccurrence;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
     /**
      * Instantiates a new deviceManagementConfigurationSettingOccurrence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingOccurrence() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingOccurrence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,20 +48,19 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationSettingOccurrence currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("maxDeviceOccurrence", (n) -> { currentObject.setMaxDeviceOccurrence(n.getIntegerValue()); });
-            this.put("minDeviceOccurrence", (n) -> { currentObject.setMinDeviceOccurrence(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("maxDeviceOccurrence", (n) -> { this.setMaxDeviceOccurrence(n.getIntegerValue()); });
+        deserializerMap.put("minDeviceOccurrence", (n) -> { this.setMinDeviceOccurrence(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maxDeviceOccurrence property value. Maximum times setting can be set on device.
@@ -62,7 +68,7 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      */
     @javax.annotation.Nullable
     public Integer getMaxDeviceOccurrence() {
-        return this._maxDeviceOccurrence;
+        return this.maxDeviceOccurrence;
     }
     /**
      * Gets the minDeviceOccurrence property value. Minimum times setting can be set on device. A MinDeviceOccurrence of 0 means setting is optional
@@ -70,7 +76,7 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      */
     @javax.annotation.Nullable
     public Integer getMinDeviceOccurrence() {
-        return this._minDeviceOccurrence;
+        return this.minDeviceOccurrence;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -78,13 +84,14 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("maxDeviceOccurrence", this.getMaxDeviceOccurrence());
@@ -97,31 +104,35 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the maxDeviceOccurrence property value. Maximum times setting can be set on device.
      * @param value Value to set for the maxDeviceOccurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxDeviceOccurrence(@javax.annotation.Nullable final Integer value) {
-        this._maxDeviceOccurrence = value;
+        this.maxDeviceOccurrence = value;
     }
     /**
      * Sets the minDeviceOccurrence property value. Minimum times setting can be set on device. A MinDeviceOccurrence of 0 means setting is optional
      * @param value Value to set for the minDeviceOccurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinDeviceOccurrence(@javax.annotation.Nullable final Integer value) {
-        this._minDeviceOccurrence = value;
+        this.minDeviceOccurrence = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

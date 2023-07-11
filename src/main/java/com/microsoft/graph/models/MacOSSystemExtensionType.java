@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Flag enum representing the allowed macOS system extension types.
+ */
 public enum MacOSSystemExtensionType implements ValuedEnum {
     /** Enables driver extensions. */
     DriverExtensionsAllowed("driverExtensionsAllowed"),

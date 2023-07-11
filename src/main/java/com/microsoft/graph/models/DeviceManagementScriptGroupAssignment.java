@@ -3,21 +3,24 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties used to assign a device management script to a group. */
+/**
+ * Contains properties used to assign a device management script to a group.
+ */
 public class DeviceManagementScriptGroupAssignment extends Entity implements Parsable {
-    /** The Id of the Azure Active Directory group we are targeting the script to. */
-    private String _targetGroupId;
+    /**
+     * The Id of the Azure Active Directory group we are targeting the script to.
+     */
+    private String targetGroupId;
     /**
      * Instantiates a new deviceManagementScriptGroupAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementScriptGroupAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementScriptGroupAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,14 +34,13 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementScriptGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("targetGroupId", (n) -> { this.setTargetGroupId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the targetGroupId property value. The Id of the Azure Active Directory group we are targeting the script to.
@@ -46,13 +48,14 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
      */
     @javax.annotation.Nullable
     public String getTargetGroupId() {
-        return this._targetGroupId;
+        return this.targetGroupId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,7 +66,8 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
      * @param value Value to set for the targetGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetGroupId(@javax.annotation.Nullable final String value) {
-        this._targetGroupId = value;
+        this.targetGroupId = value;
     }
 }

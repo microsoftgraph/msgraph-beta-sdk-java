@@ -3,22 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookWorksheetProtection extends Entity implements Parsable {
-    /** Sheet protection options. Read-only. */
-    private WorkbookWorksheetProtectionOptions _options;
-    /** Indicates if the worksheet is protected.  Read-only. */
-    private Boolean _protected_escaped;
+    /**
+     * Sheet protection options. Read-only.
+     */
+    private WorkbookWorksheetProtectionOptions options;
+    /**
+     * Indicates if the worksheet is protected.  Read-only.
+     */
+    private Boolean protectedEscaped;
     /**
      * Instantiates a new workbookWorksheetProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookWorksheetProtection() {
         super();
-        this.setOdataType("#microsoft.graph.workbookWorksheetProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +35,14 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookWorksheetProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("options", (n) -> { currentObject.setOptions(n.getObjectValue(WorkbookWorksheetProtectionOptions::createFromDiscriminatorValue)); });
-            this.put("protected", (n) -> { currentObject.setProtected(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("options", (n) -> { this.setOptions(n.getObjectValue(WorkbookWorksheetProtectionOptions::createFromDiscriminatorValue)); });
+        deserializerMap.put("protected", (n) -> { this.setProtected(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the options property value. Sheet protection options. Read-only.
@@ -48,7 +50,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookWorksheetProtectionOptions getOptions() {
-        return this._options;
+        return this.options;
     }
     /**
      * Gets the protected property value. Indicates if the worksheet is protected.  Read-only.
@@ -56,13 +58,14 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getProtected() {
-        return this._protected_escaped;
+        return this.protectedEscaped;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +77,17 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      * @param value Value to set for the options property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOptions(@javax.annotation.Nullable final WorkbookWorksheetProtectionOptions value) {
-        this._options = value;
+        this.options = value;
     }
     /**
      * Sets the protected property value. Indicates if the worksheet is protected.  Read-only.
      * @param value Value to set for the protected property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtected(@javax.annotation.Nullable final Boolean value) {
-        this._protected_escaped = value;
+        this.protectedEscaped = value;
     }
 }

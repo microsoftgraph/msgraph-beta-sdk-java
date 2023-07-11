@@ -4,39 +4,57 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class TenantDetailedInformation extends Entity implements Parsable {
-    /** The city where the managed tenant is located. Optional. Read-only. */
-    private String _city;
-    /** The code for the country where the managed tenant is located. Optional. Read-only. */
-    private String _countryCode;
-    /** The name for the country where the managed tenant is located. Optional. Read-only. */
-    private String _countryName;
-    /** The default domain name for the managed tenant. Optional. Read-only. */
-    private String _defaultDomainName;
-    /** The display name for the managed tenant. */
-    private String _displayName;
-    /** The business industry associated with the managed tenant. Optional. Read-only. */
-    private String _industryName;
-    /** The region where the managed tenant is located. Optional. Read-only. */
-    private String _region;
-    /** The business segment associated with the managed tenant. Optional. Read-only. */
-    private String _segmentName;
-    /** The Azure Active Directory tenant identifier for the managed tenant. */
-    private String _tenantId;
-    /** The vertical associated with the managed tenant. Optional. Read-only. */
-    private String _verticalName;
+    /**
+     * The city where the managed tenant is located. Optional. Read-only.
+     */
+    private String city;
+    /**
+     * The code for the country where the managed tenant is located. Optional. Read-only.
+     */
+    private String countryCode;
+    /**
+     * The name for the country where the managed tenant is located. Optional. Read-only.
+     */
+    private String countryName;
+    /**
+     * The default domain name for the managed tenant. Optional. Read-only.
+     */
+    private String defaultDomainName;
+    /**
+     * The display name for the managed tenant.
+     */
+    private String displayName;
+    /**
+     * The business industry associated with the managed tenant. Optional. Read-only.
+     */
+    private String industryName;
+    /**
+     * The region where the managed tenant is located. Optional. Read-only.
+     */
+    private String region;
+    /**
+     * The business segment associated with the managed tenant. Optional. Read-only.
+     */
+    private String segmentName;
+    /**
+     * The Azure Active Directory tenant identifier for the managed tenant.
+     */
+    private String tenantId;
+    /**
+     * The vertical associated with the managed tenant. Optional. Read-only.
+     */
+    private String verticalName;
     /**
      * Instantiates a new tenantDetailedInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantDetailedInformation() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.tenantDetailedInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +72,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCity() {
-        return this._city;
+        return this.city;
     }
     /**
      * Gets the countryCode property value. The code for the country where the managed tenant is located. Optional. Read-only.
@@ -62,7 +80,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCountryCode() {
-        return this._countryCode;
+        return this.countryCode;
     }
     /**
      * Gets the countryName property value. The name for the country where the managed tenant is located. Optional. Read-only.
@@ -70,7 +88,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCountryName() {
-        return this._countryName;
+        return this.countryName;
     }
     /**
      * Gets the defaultDomainName property value. The default domain name for the managed tenant. Optional. Read-only.
@@ -78,7 +96,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDefaultDomainName() {
-        return this._defaultDomainName;
+        return this.defaultDomainName;
     }
     /**
      * Gets the displayName property value. The display name for the managed tenant.
@@ -86,27 +104,26 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TenantDetailedInformation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
-            this.put("countryCode", (n) -> { currentObject.setCountryCode(n.getStringValue()); });
-            this.put("countryName", (n) -> { currentObject.setCountryName(n.getStringValue()); });
-            this.put("defaultDomainName", (n) -> { currentObject.setDefaultDomainName(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("industryName", (n) -> { currentObject.setIndustryName(n.getStringValue()); });
-            this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
-            this.put("segmentName", (n) -> { currentObject.setSegmentName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("verticalName", (n) -> { currentObject.setVerticalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
+        deserializerMap.put("countryCode", (n) -> { this.setCountryCode(n.getStringValue()); });
+        deserializerMap.put("countryName", (n) -> { this.setCountryName(n.getStringValue()); });
+        deserializerMap.put("defaultDomainName", (n) -> { this.setDefaultDomainName(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("industryName", (n) -> { this.setIndustryName(n.getStringValue()); });
+        deserializerMap.put("region", (n) -> { this.setRegion(n.getStringValue()); });
+        deserializerMap.put("segmentName", (n) -> { this.setSegmentName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("verticalName", (n) -> { this.setVerticalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the industryName property value. The business industry associated with the managed tenant. Optional. Read-only.
@@ -114,7 +131,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIndustryName() {
-        return this._industryName;
+        return this.industryName;
     }
     /**
      * Gets the region property value. The region where the managed tenant is located. Optional. Read-only.
@@ -122,7 +139,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRegion() {
-        return this._region;
+        return this.region;
     }
     /**
      * Gets the segmentName property value. The business segment associated with the managed tenant. Optional. Read-only.
@@ -130,7 +147,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSegmentName() {
-        return this._segmentName;
+        return this.segmentName;
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant.
@@ -138,7 +155,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Gets the verticalName property value. The vertical associated with the managed tenant. Optional. Read-only.
@@ -146,13 +163,14 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVerticalName() {
-        return this._verticalName;
+        return this.verticalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,79 +190,89 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the city property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCity(@javax.annotation.Nullable final String value) {
-        this._city = value;
+        this.city = value;
     }
     /**
      * Sets the countryCode property value. The code for the country where the managed tenant is located. Optional. Read-only.
      * @param value Value to set for the countryCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryCode(@javax.annotation.Nullable final String value) {
-        this._countryCode = value;
+        this.countryCode = value;
     }
     /**
      * Sets the countryName property value. The name for the country where the managed tenant is located. Optional. Read-only.
      * @param value Value to set for the countryName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryName(@javax.annotation.Nullable final String value) {
-        this._countryName = value;
+        this.countryName = value;
     }
     /**
      * Sets the defaultDomainName property value. The default domain name for the managed tenant. Optional. Read-only.
      * @param value Value to set for the defaultDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultDomainName(@javax.annotation.Nullable final String value) {
-        this._defaultDomainName = value;
+        this.defaultDomainName = value;
     }
     /**
      * Sets the displayName property value. The display name for the managed tenant.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the industryName property value. The business industry associated with the managed tenant. Optional. Read-only.
      * @param value Value to set for the industryName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndustryName(@javax.annotation.Nullable final String value) {
-        this._industryName = value;
+        this.industryName = value;
     }
     /**
      * Sets the region property value. The region where the managed tenant is located. Optional. Read-only.
      * @param value Value to set for the region property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegion(@javax.annotation.Nullable final String value) {
-        this._region = value;
+        this.region = value;
     }
     /**
      * Sets the segmentName property value. The business segment associated with the managed tenant. Optional. Read-only.
      * @param value Value to set for the segmentName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSegmentName(@javax.annotation.Nullable final String value) {
-        this._segmentName = value;
+        this.segmentName = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
     /**
      * Sets the verticalName property value. The vertical associated with the managed tenant. Optional. Read-only.
      * @param value Value to set for the verticalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerticalName(@javax.annotation.Nullable final String value) {
-        this._verticalName = value;
+        this.verticalName = value;
     }
 }

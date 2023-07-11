@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Indicates the status of the mobile app on the device.
+ */
 public enum MobileAppIntent implements ValuedEnum {
     /** Available */
     Available("available"),

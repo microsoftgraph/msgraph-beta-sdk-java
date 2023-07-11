@@ -4,23 +4,28 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The group policy configuration assignment entity assigns one or more AAD groups to a specific group policy configuration. */
+/**
+ * The group policy configuration assignment entity assigns one or more AAD groups to a specific group policy configuration.
+ */
 public class GroupPolicyConfigurationAssignment extends Entity implements Parsable {
-    /** The date and time the entity was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** The type of groups targeted the group policy configuration. */
-    private DeviceAndAppManagementAssignmentTarget _target;
+    /**
+     * The date and time the entity was last modified.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * The type of groups targeted the group policy configuration.
+     */
+    private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new groupPolicyConfigurationAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyConfigurationAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.groupPolicyConfigurationAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,15 +39,14 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyConfigurationAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
@@ -50,7 +54,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the target property value. The type of groups targeted the group policy configuration.
@@ -58,13 +62,14 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
-        return this._target;
+        return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,15 +81,17 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the target property value. The type of groups targeted the group policy configuration.
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
-        this._target = value;
+        this.target = value;
     }
 }

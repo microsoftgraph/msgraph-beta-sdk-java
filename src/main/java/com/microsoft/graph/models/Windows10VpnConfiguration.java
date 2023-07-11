@@ -3,65 +3,118 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * By providing the configurations in this profile you can instruct the Windows 10 device (desktop or mobile) to connect to desired VPN endpoint. By specifying the authentication method and security types expected by VPN endpoint you can make the VPN connection seamless for end user.
+ */
 public class Windows10VpnConfiguration extends WindowsVpnConfiguration implements Parsable {
-    /** Associated Apps. This collection can contain a maximum of 10000 elements. */
-    private java.util.List<Windows10AssociatedApps> _associatedApps;
-    /** Windows 10 VPN connection types. */
-    private Windows10VpnAuthenticationMethod _authenticationMethod;
-    /** VPN connection types. */
-    private Windows10VpnConnectionType _connectionType;
-    /** Cryptography Suite security settings for IKEv2 VPN in Windows10 and above */
-    private CryptographySuite _cryptographySuite;
-    /** DNS rules. This collection can contain a maximum of 1000 elements. */
-    private java.util.List<VpnDnsRule> _dnsRules;
-    /** Specify DNS suffixes to add to the DNS search list to properly route short names. */
-    private java.util.List<String> _dnsSuffixes;
-    /** Extensible Authentication Protocol (EAP) XML. (UTF8 encoded byte array) */
-    private byte[] _eapXml;
-    /** Enable Always On mode. */
-    private Boolean _enableAlwaysOn;
-    /** Enable conditional access. */
-    private Boolean _enableConditionalAccess;
-    /** Enable device tunnel. */
-    private Boolean _enableDeviceTunnel;
-    /** Enable IP address registration with internal DNS. */
-    private Boolean _enableDnsRegistration;
-    /** Enable single sign-on (SSO) with alternate certificate. */
-    private Boolean _enableSingleSignOnWithAlternateCertificate;
-    /** Enable split tunneling. */
-    private Boolean _enableSplitTunneling;
-    /** Identity certificate for client authentication when authentication method is certificate. */
-    private WindowsCertificateProfileBase _identityCertificate;
-    /** ID of the Microsoft Tunnel site associated with the VPN profile. */
-    private String _microsoftTunnelSiteId;
-    /** Only associated Apps can use connection (per-app VPN). */
-    private Boolean _onlyAssociatedAppsCanUseConnection;
-    /** Profile target type. Possible values are: user, device, autoPilotDevice. */
-    private Windows10VpnProfileTarget _profileTarget;
-    /** Proxy Server. */
-    private Windows10VpnProxyServer _proxyServer;
-    /** Remember user credentials. */
-    private Boolean _rememberUserCredentials;
-    /** Routes (optional for third-party providers). This collection can contain a maximum of 1000 elements. */
-    private java.util.List<VpnRoute> _routes;
-    /** Single sign-on Extended Key Usage (EKU). */
-    private ExtendedKeyUsage _singleSignOnEku;
-    /** Single sign-on issuer hash. */
-    private String _singleSignOnIssuerHash;
-    /** Traffic rules. This collection can contain a maximum of 1000 elements. */
-    private java.util.List<VpnTrafficRule> _trafficRules;
-    /** Trusted Network Domains */
-    private java.util.List<String> _trustedNetworkDomains;
-    /** Windows Information Protection (WIP) domain to associate with this connection. */
-    private String _windowsInformationProtectionDomain;
     /**
-     * Instantiates a new Windows10VpnConfiguration and sets the default values.
+     * Associated Apps. This collection can contain a maximum of 10000 elements.
+     */
+    private java.util.List<Windows10AssociatedApps> associatedApps;
+    /**
+     * Windows 10 VPN connection types.
+     */
+    private Windows10VpnAuthenticationMethod authenticationMethod;
+    /**
+     * VPN connection types.
+     */
+    private Windows10VpnConnectionType connectionType;
+    /**
+     * Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
+     */
+    private CryptographySuite cryptographySuite;
+    /**
+     * DNS rules. This collection can contain a maximum of 1000 elements.
+     */
+    private java.util.List<VpnDnsRule> dnsRules;
+    /**
+     * Specify DNS suffixes to add to the DNS search list to properly route short names.
+     */
+    private java.util.List<String> dnsSuffixes;
+    /**
+     * Extensible Authentication Protocol (EAP) XML. (UTF8 encoded byte array)
+     */
+    private byte[] eapXml;
+    /**
+     * Enable Always On mode.
+     */
+    private Boolean enableAlwaysOn;
+    /**
+     * Enable conditional access.
+     */
+    private Boolean enableConditionalAccess;
+    /**
+     * Enable device tunnel.
+     */
+    private Boolean enableDeviceTunnel;
+    /**
+     * Enable IP address registration with internal DNS.
+     */
+    private Boolean enableDnsRegistration;
+    /**
+     * Enable single sign-on (SSO) with alternate certificate.
+     */
+    private Boolean enableSingleSignOnWithAlternateCertificate;
+    /**
+     * Enable split tunneling.
+     */
+    private Boolean enableSplitTunneling;
+    /**
+     * Identity certificate for client authentication when authentication method is certificate.
+     */
+    private WindowsCertificateProfileBase identityCertificate;
+    /**
+     * ID of the Microsoft Tunnel site associated with the VPN profile.
+     */
+    private String microsoftTunnelSiteId;
+    /**
+     * Only associated Apps can use connection (per-app VPN).
+     */
+    private Boolean onlyAssociatedAppsCanUseConnection;
+    /**
+     * Profile target type. Possible values are: user, device, autoPilotDevice.
+     */
+    private Windows10VpnProfileTarget profileTarget;
+    /**
+     * Proxy Server.
+     */
+    private Windows10VpnProxyServer proxyServer;
+    /**
+     * Remember user credentials.
+     */
+    private Boolean rememberUserCredentials;
+    /**
+     * Routes (optional for third-party providers). This collection can contain a maximum of 1000 elements.
+     */
+    private java.util.List<VpnRoute> routes;
+    /**
+     * Single sign-on Extended Key Usage (EKU).
+     */
+    private ExtendedKeyUsage singleSignOnEku;
+    /**
+     * Single sign-on issuer hash.
+     */
+    private String singleSignOnIssuerHash;
+    /**
+     * Traffic rules. This collection can contain a maximum of 1000 elements.
+     */
+    private java.util.List<VpnTrafficRule> trafficRules;
+    /**
+     * Trusted Network Domains
+     */
+    private java.util.List<String> trustedNetworkDomains;
+    /**
+     * Windows Information Protection (WIP) domain to associate with this connection.
+     */
+    private String windowsInformationProtectionDomain;
+    /**
+     * Instantiates a new windows10VpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10VpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10VpnConfiguration");
@@ -69,7 +122,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10VpnConfiguration
+     * @return a windows10VpnConfiguration
      */
     @javax.annotation.Nonnull
     public static Windows10VpnConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +135,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<Windows10AssociatedApps> getAssociatedApps() {
-        return this._associatedApps;
+        return this.associatedApps;
     }
     /**
      * Gets the authenticationMethod property value. Windows 10 VPN connection types.
@@ -90,7 +143,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Windows10VpnAuthenticationMethod getAuthenticationMethod() {
-        return this._authenticationMethod;
+        return this.authenticationMethod;
     }
     /**
      * Gets the connectionType property value. VPN connection types.
@@ -98,7 +151,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Windows10VpnConnectionType getConnectionType() {
-        return this._connectionType;
+        return this.connectionType;
     }
     /**
      * Gets the cryptographySuite property value. Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
@@ -106,7 +159,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public CryptographySuite getCryptographySuite() {
-        return this._cryptographySuite;
+        return this.cryptographySuite;
     }
     /**
      * Gets the dnsRules property value. DNS rules. This collection can contain a maximum of 1000 elements.
@@ -114,7 +167,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<VpnDnsRule> getDnsRules() {
-        return this._dnsRules;
+        return this.dnsRules;
     }
     /**
      * Gets the dnsSuffixes property value. Specify DNS suffixes to add to the DNS search list to properly route short names.
@@ -122,15 +175,15 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDnsSuffixes() {
-        return this._dnsSuffixes;
+        return this.dnsSuffixes;
     }
     /**
      * Gets the eapXml property value. Extensible Authentication Protocol (EAP) XML. (UTF8 encoded byte array)
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getEapXml() {
-        return this._eapXml;
+        return this.eapXml;
     }
     /**
      * Gets the enableAlwaysOn property value. Enable Always On mode.
@@ -138,7 +191,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getEnableAlwaysOn() {
-        return this._enableAlwaysOn;
+        return this.enableAlwaysOn;
     }
     /**
      * Gets the enableConditionalAccess property value. Enable conditional access.
@@ -146,7 +199,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getEnableConditionalAccess() {
-        return this._enableConditionalAccess;
+        return this.enableConditionalAccess;
     }
     /**
      * Gets the enableDeviceTunnel property value. Enable device tunnel.
@@ -154,7 +207,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getEnableDeviceTunnel() {
-        return this._enableDeviceTunnel;
+        return this.enableDeviceTunnel;
     }
     /**
      * Gets the enableDnsRegistration property value. Enable IP address registration with internal DNS.
@@ -162,7 +215,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getEnableDnsRegistration() {
-        return this._enableDnsRegistration;
+        return this.enableDnsRegistration;
     }
     /**
      * Gets the enableSingleSignOnWithAlternateCertificate property value. Enable single sign-on (SSO) with alternate certificate.
@@ -170,7 +223,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getEnableSingleSignOnWithAlternateCertificate() {
-        return this._enableSingleSignOnWithAlternateCertificate;
+        return this.enableSingleSignOnWithAlternateCertificate;
     }
     /**
      * Gets the enableSplitTunneling property value. Enable split tunneling.
@@ -178,42 +231,41 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getEnableSplitTunneling() {
-        return this._enableSplitTunneling;
+        return this.enableSplitTunneling;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10VpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("associatedApps", (n) -> { currentObject.setAssociatedApps(n.getCollectionOfObjectValues(Windows10AssociatedApps::createFromDiscriminatorValue)); });
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(Windows10VpnAuthenticationMethod.class)); });
-            this.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(Windows10VpnConnectionType.class)); });
-            this.put("cryptographySuite", (n) -> { currentObject.setCryptographySuite(n.getObjectValue(CryptographySuite::createFromDiscriminatorValue)); });
-            this.put("dnsRules", (n) -> { currentObject.setDnsRules(n.getCollectionOfObjectValues(VpnDnsRule::createFromDiscriminatorValue)); });
-            this.put("dnsSuffixes", (n) -> { currentObject.setDnsSuffixes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("eapXml", (n) -> { currentObject.setEapXml(n.getByteArrayValue()); });
-            this.put("enableAlwaysOn", (n) -> { currentObject.setEnableAlwaysOn(n.getBooleanValue()); });
-            this.put("enableConditionalAccess", (n) -> { currentObject.setEnableConditionalAccess(n.getBooleanValue()); });
-            this.put("enableDeviceTunnel", (n) -> { currentObject.setEnableDeviceTunnel(n.getBooleanValue()); });
-            this.put("enableDnsRegistration", (n) -> { currentObject.setEnableDnsRegistration(n.getBooleanValue()); });
-            this.put("enableSingleSignOnWithAlternateCertificate", (n) -> { currentObject.setEnableSingleSignOnWithAlternateCertificate(n.getBooleanValue()); });
-            this.put("enableSplitTunneling", (n) -> { currentObject.setEnableSplitTunneling(n.getBooleanValue()); });
-            this.put("identityCertificate", (n) -> { currentObject.setIdentityCertificate(n.getObjectValue(WindowsCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("microsoftTunnelSiteId", (n) -> { currentObject.setMicrosoftTunnelSiteId(n.getStringValue()); });
-            this.put("onlyAssociatedAppsCanUseConnection", (n) -> { currentObject.setOnlyAssociatedAppsCanUseConnection(n.getBooleanValue()); });
-            this.put("profileTarget", (n) -> { currentObject.setProfileTarget(n.getEnumValue(Windows10VpnProfileTarget.class)); });
-            this.put("proxyServer", (n) -> { currentObject.setProxyServer(n.getObjectValue(Windows10VpnProxyServer::createFromDiscriminatorValue)); });
-            this.put("rememberUserCredentials", (n) -> { currentObject.setRememberUserCredentials(n.getBooleanValue()); });
-            this.put("routes", (n) -> { currentObject.setRoutes(n.getCollectionOfObjectValues(VpnRoute::createFromDiscriminatorValue)); });
-            this.put("singleSignOnEku", (n) -> { currentObject.setSingleSignOnEku(n.getObjectValue(ExtendedKeyUsage::createFromDiscriminatorValue)); });
-            this.put("singleSignOnIssuerHash", (n) -> { currentObject.setSingleSignOnIssuerHash(n.getStringValue()); });
-            this.put("trafficRules", (n) -> { currentObject.setTrafficRules(n.getCollectionOfObjectValues(VpnTrafficRule::createFromDiscriminatorValue)); });
-            this.put("trustedNetworkDomains", (n) -> { currentObject.setTrustedNetworkDomains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("windowsInformationProtectionDomain", (n) -> { currentObject.setWindowsInformationProtectionDomain(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("associatedApps", (n) -> { this.setAssociatedApps(n.getCollectionOfObjectValues(Windows10AssociatedApps::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(Windows10VpnAuthenticationMethod.class)); });
+        deserializerMap.put("connectionType", (n) -> { this.setConnectionType(n.getEnumValue(Windows10VpnConnectionType.class)); });
+        deserializerMap.put("cryptographySuite", (n) -> { this.setCryptographySuite(n.getObjectValue(CryptographySuite::createFromDiscriminatorValue)); });
+        deserializerMap.put("dnsRules", (n) -> { this.setDnsRules(n.getCollectionOfObjectValues(VpnDnsRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("dnsSuffixes", (n) -> { this.setDnsSuffixes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("eapXml", (n) -> { this.setEapXml(n.getByteArrayValue()); });
+        deserializerMap.put("enableAlwaysOn", (n) -> { this.setEnableAlwaysOn(n.getBooleanValue()); });
+        deserializerMap.put("enableConditionalAccess", (n) -> { this.setEnableConditionalAccess(n.getBooleanValue()); });
+        deserializerMap.put("enableDeviceTunnel", (n) -> { this.setEnableDeviceTunnel(n.getBooleanValue()); });
+        deserializerMap.put("enableDnsRegistration", (n) -> { this.setEnableDnsRegistration(n.getBooleanValue()); });
+        deserializerMap.put("enableSingleSignOnWithAlternateCertificate", (n) -> { this.setEnableSingleSignOnWithAlternateCertificate(n.getBooleanValue()); });
+        deserializerMap.put("enableSplitTunneling", (n) -> { this.setEnableSplitTunneling(n.getBooleanValue()); });
+        deserializerMap.put("identityCertificate", (n) -> { this.setIdentityCertificate(n.getObjectValue(WindowsCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftTunnelSiteId", (n) -> { this.setMicrosoftTunnelSiteId(n.getStringValue()); });
+        deserializerMap.put("onlyAssociatedAppsCanUseConnection", (n) -> { this.setOnlyAssociatedAppsCanUseConnection(n.getBooleanValue()); });
+        deserializerMap.put("profileTarget", (n) -> { this.setProfileTarget(n.getEnumValue(Windows10VpnProfileTarget.class)); });
+        deserializerMap.put("proxyServer", (n) -> { this.setProxyServer(n.getObjectValue(Windows10VpnProxyServer::createFromDiscriminatorValue)); });
+        deserializerMap.put("rememberUserCredentials", (n) -> { this.setRememberUserCredentials(n.getBooleanValue()); });
+        deserializerMap.put("routes", (n) -> { this.setRoutes(n.getCollectionOfObjectValues(VpnRoute::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleSignOnEku", (n) -> { this.setSingleSignOnEku(n.getObjectValue(ExtendedKeyUsage::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleSignOnIssuerHash", (n) -> { this.setSingleSignOnIssuerHash(n.getStringValue()); });
+        deserializerMap.put("trafficRules", (n) -> { this.setTrafficRules(n.getCollectionOfObjectValues(VpnTrafficRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("trustedNetworkDomains", (n) -> { this.setTrustedNetworkDomains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("windowsInformationProtectionDomain", (n) -> { this.setWindowsInformationProtectionDomain(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
@@ -221,7 +273,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public WindowsCertificateProfileBase getIdentityCertificate() {
-        return this._identityCertificate;
+        return this.identityCertificate;
     }
     /**
      * Gets the microsoftTunnelSiteId property value. ID of the Microsoft Tunnel site associated with the VPN profile.
@@ -229,7 +281,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public String getMicrosoftTunnelSiteId() {
-        return this._microsoftTunnelSiteId;
+        return this.microsoftTunnelSiteId;
     }
     /**
      * Gets the onlyAssociatedAppsCanUseConnection property value. Only associated Apps can use connection (per-app VPN).
@@ -237,7 +289,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getOnlyAssociatedAppsCanUseConnection() {
-        return this._onlyAssociatedAppsCanUseConnection;
+        return this.onlyAssociatedAppsCanUseConnection;
     }
     /**
      * Gets the profileTarget property value. Profile target type. Possible values are: user, device, autoPilotDevice.
@@ -245,7 +297,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Windows10VpnProfileTarget getProfileTarget() {
-        return this._profileTarget;
+        return this.profileTarget;
     }
     /**
      * Gets the proxyServer property value. Proxy Server.
@@ -253,7 +305,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Windows10VpnProxyServer getProxyServer() {
-        return this._proxyServer;
+        return this.proxyServer;
     }
     /**
      * Gets the rememberUserCredentials property value. Remember user credentials.
@@ -261,7 +313,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public Boolean getRememberUserCredentials() {
-        return this._rememberUserCredentials;
+        return this.rememberUserCredentials;
     }
     /**
      * Gets the routes property value. Routes (optional for third-party providers). This collection can contain a maximum of 1000 elements.
@@ -269,7 +321,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<VpnRoute> getRoutes() {
-        return this._routes;
+        return this.routes;
     }
     /**
      * Gets the singleSignOnEku property value. Single sign-on Extended Key Usage (EKU).
@@ -277,7 +329,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public ExtendedKeyUsage getSingleSignOnEku() {
-        return this._singleSignOnEku;
+        return this.singleSignOnEku;
     }
     /**
      * Gets the singleSignOnIssuerHash property value. Single sign-on issuer hash.
@@ -285,7 +337,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public String getSingleSignOnIssuerHash() {
-        return this._singleSignOnIssuerHash;
+        return this.singleSignOnIssuerHash;
     }
     /**
      * Gets the trafficRules property value. Traffic rules. This collection can contain a maximum of 1000 elements.
@@ -293,7 +345,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<VpnTrafficRule> getTrafficRules() {
-        return this._trafficRules;
+        return this.trafficRules;
     }
     /**
      * Gets the trustedNetworkDomains property value. Trusted Network Domains
@@ -301,7 +353,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTrustedNetworkDomains() {
-        return this._trustedNetworkDomains;
+        return this.trustedNetworkDomains;
     }
     /**
      * Gets the windowsInformationProtectionDomain property value. Windows Information Protection (WIP) domain to associate with this connection.
@@ -309,13 +361,14 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     @javax.annotation.Nullable
     public String getWindowsInformationProtectionDomain() {
-        return this._windowsInformationProtectionDomain;
+        return this.windowsInformationProtectionDomain;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -350,199 +403,224 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the associatedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssociatedApps(@javax.annotation.Nullable final java.util.List<Windows10AssociatedApps> value) {
-        this._associatedApps = value;
+        this.associatedApps = value;
     }
     /**
      * Sets the authenticationMethod property value. Windows 10 VPN connection types.
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final Windows10VpnAuthenticationMethod value) {
-        this._authenticationMethod = value;
+        this.authenticationMethod = value;
     }
     /**
      * Sets the connectionType property value. VPN connection types.
      * @param value Value to set for the connectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionType(@javax.annotation.Nullable final Windows10VpnConnectionType value) {
-        this._connectionType = value;
+        this.connectionType = value;
     }
     /**
      * Sets the cryptographySuite property value. Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
      * @param value Value to set for the cryptographySuite property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCryptographySuite(@javax.annotation.Nullable final CryptographySuite value) {
-        this._cryptographySuite = value;
+        this.cryptographySuite = value;
     }
     /**
      * Sets the dnsRules property value. DNS rules. This collection can contain a maximum of 1000 elements.
      * @param value Value to set for the dnsRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDnsRules(@javax.annotation.Nullable final java.util.List<VpnDnsRule> value) {
-        this._dnsRules = value;
+        this.dnsRules = value;
     }
     /**
      * Sets the dnsSuffixes property value. Specify DNS suffixes to add to the DNS search list to properly route short names.
      * @param value Value to set for the dnsSuffixes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDnsSuffixes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._dnsSuffixes = value;
+        this.dnsSuffixes = value;
     }
     /**
      * Sets the eapXml property value. Extensible Authentication Protocol (EAP) XML. (UTF8 encoded byte array)
      * @param value Value to set for the eapXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapXml(@javax.annotation.Nullable final byte[] value) {
-        this._eapXml = value;
+        this.eapXml = value;
     }
     /**
      * Sets the enableAlwaysOn property value. Enable Always On mode.
      * @param value Value to set for the enableAlwaysOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableAlwaysOn(@javax.annotation.Nullable final Boolean value) {
-        this._enableAlwaysOn = value;
+        this.enableAlwaysOn = value;
     }
     /**
      * Sets the enableConditionalAccess property value. Enable conditional access.
      * @param value Value to set for the enableConditionalAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableConditionalAccess(@javax.annotation.Nullable final Boolean value) {
-        this._enableConditionalAccess = value;
+        this.enableConditionalAccess = value;
     }
     /**
      * Sets the enableDeviceTunnel property value. Enable device tunnel.
      * @param value Value to set for the enableDeviceTunnel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableDeviceTunnel(@javax.annotation.Nullable final Boolean value) {
-        this._enableDeviceTunnel = value;
+        this.enableDeviceTunnel = value;
     }
     /**
      * Sets the enableDnsRegistration property value. Enable IP address registration with internal DNS.
      * @param value Value to set for the enableDnsRegistration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableDnsRegistration(@javax.annotation.Nullable final Boolean value) {
-        this._enableDnsRegistration = value;
+        this.enableDnsRegistration = value;
     }
     /**
      * Sets the enableSingleSignOnWithAlternateCertificate property value. Enable single sign-on (SSO) with alternate certificate.
      * @param value Value to set for the enableSingleSignOnWithAlternateCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableSingleSignOnWithAlternateCertificate(@javax.annotation.Nullable final Boolean value) {
-        this._enableSingleSignOnWithAlternateCertificate = value;
+        this.enableSingleSignOnWithAlternateCertificate = value;
     }
     /**
      * Sets the enableSplitTunneling property value. Enable split tunneling.
      * @param value Value to set for the enableSplitTunneling property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableSplitTunneling(@javax.annotation.Nullable final Boolean value) {
-        this._enableSplitTunneling = value;
+        this.enableSplitTunneling = value;
     }
     /**
      * Sets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final WindowsCertificateProfileBase value) {
-        this._identityCertificate = value;
+        this.identityCertificate = value;
     }
     /**
      * Sets the microsoftTunnelSiteId property value. ID of the Microsoft Tunnel site associated with the VPN profile.
      * @param value Value to set for the microsoftTunnelSiteId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftTunnelSiteId(@javax.annotation.Nullable final String value) {
-        this._microsoftTunnelSiteId = value;
+        this.microsoftTunnelSiteId = value;
     }
     /**
      * Sets the onlyAssociatedAppsCanUseConnection property value. Only associated Apps can use connection (per-app VPN).
      * @param value Value to set for the onlyAssociatedAppsCanUseConnection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlyAssociatedAppsCanUseConnection(@javax.annotation.Nullable final Boolean value) {
-        this._onlyAssociatedAppsCanUseConnection = value;
+        this.onlyAssociatedAppsCanUseConnection = value;
     }
     /**
      * Sets the profileTarget property value. Profile target type. Possible values are: user, device, autoPilotDevice.
      * @param value Value to set for the profileTarget property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileTarget(@javax.annotation.Nullable final Windows10VpnProfileTarget value) {
-        this._profileTarget = value;
+        this.profileTarget = value;
     }
     /**
      * Sets the proxyServer property value. Proxy Server.
      * @param value Value to set for the proxyServer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyServer(@javax.annotation.Nullable final Windows10VpnProxyServer value) {
-        this._proxyServer = value;
+        this.proxyServer = value;
     }
     /**
      * Sets the rememberUserCredentials property value. Remember user credentials.
      * @param value Value to set for the rememberUserCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRememberUserCredentials(@javax.annotation.Nullable final Boolean value) {
-        this._rememberUserCredentials = value;
+        this.rememberUserCredentials = value;
     }
     /**
      * Sets the routes property value. Routes (optional for third-party providers). This collection can contain a maximum of 1000 elements.
      * @param value Value to set for the routes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoutes(@javax.annotation.Nullable final java.util.List<VpnRoute> value) {
-        this._routes = value;
+        this.routes = value;
     }
     /**
      * Sets the singleSignOnEku property value. Single sign-on Extended Key Usage (EKU).
      * @param value Value to set for the singleSignOnEku property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnEku(@javax.annotation.Nullable final ExtendedKeyUsage value) {
-        this._singleSignOnEku = value;
+        this.singleSignOnEku = value;
     }
     /**
      * Sets the singleSignOnIssuerHash property value. Single sign-on issuer hash.
      * @param value Value to set for the singleSignOnIssuerHash property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnIssuerHash(@javax.annotation.Nullable final String value) {
-        this._singleSignOnIssuerHash = value;
+        this.singleSignOnIssuerHash = value;
     }
     /**
      * Sets the trafficRules property value. Traffic rules. This collection can contain a maximum of 1000 elements.
      * @param value Value to set for the trafficRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrafficRules(@javax.annotation.Nullable final java.util.List<VpnTrafficRule> value) {
-        this._trafficRules = value;
+        this.trafficRules = value;
     }
     /**
      * Sets the trustedNetworkDomains property value. Trusted Network Domains
      * @param value Value to set for the trustedNetworkDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedNetworkDomains(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._trustedNetworkDomains = value;
+        this.trustedNetworkDomains = value;
     }
     /**
      * Sets the windowsInformationProtectionDomain property value. Windows Information Protection (WIP) domain to associate with this connection.
      * @param value Value to set for the windowsInformationProtectionDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsInformationProtectionDomain(@javax.annotation.Nullable final String value) {
-        this._windowsInformationProtectionDomain = value;
+        this.windowsInformationProtectionDomain = value;
     }
 }

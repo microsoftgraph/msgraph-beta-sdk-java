@@ -3,29 +3,43 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LanguageProficiency extends ItemFacet implements Parsable {
-    /** Contains the long-form name for the language. */
-    private String _displayName;
-    /** The proficiency property */
-    private LanguageProficiencyLevel _proficiency;
-    /** Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue. */
-    private LanguageProficiencyLevel _reading;
-    /** Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue. */
-    private LanguageProficiencyLevel _spoken;
-    /** Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU). */
-    private String _tag;
-    /** The thumbnailUrl property */
-    private String _thumbnailUrl;
-    /** Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue. */
-    private LanguageProficiencyLevel _written;
     /**
-     * Instantiates a new LanguageProficiency and sets the default values.
+     * Contains the long-form name for the language.
+     */
+    private String displayName;
+    /**
+     * The proficiency property
+     */
+    private LanguageProficiencyLevel proficiency;
+    /**
+     * Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
+     */
+    private LanguageProficiencyLevel reading;
+    /**
+     * Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
+     */
+    private LanguageProficiencyLevel spoken;
+    /**
+     * Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
+     */
+    private String tag;
+    /**
+     * The thumbnailUrl property
+     */
+    private String thumbnailUrl;
+    /**
+     * Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
+     */
+    private LanguageProficiencyLevel written;
+    /**
+     * Instantiates a new languageProficiency and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LanguageProficiency() {
         super();
         this.setOdataType("#microsoft.graph.languageProficiency");
@@ -33,7 +47,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LanguageProficiency
+     * @return a languageProficiency
      */
     @javax.annotation.Nonnull
     public static LanguageProficiency createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,24 +60,23 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LanguageProficiency currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("proficiency", (n) -> { currentObject.setProficiency(n.getEnumValue(LanguageProficiencyLevel.class)); });
-            this.put("reading", (n) -> { currentObject.setReading(n.getEnumValue(LanguageProficiencyLevel.class)); });
-            this.put("spoken", (n) -> { currentObject.setSpoken(n.getEnumValue(LanguageProficiencyLevel.class)); });
-            this.put("tag", (n) -> { currentObject.setTag(n.getStringValue()); });
-            this.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
-            this.put("written", (n) -> { currentObject.setWritten(n.getEnumValue(LanguageProficiencyLevel.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("proficiency", (n) -> { this.setProficiency(n.getEnumValue(LanguageProficiencyLevel.class)); });
+        deserializerMap.put("reading", (n) -> { this.setReading(n.getEnumValue(LanguageProficiencyLevel.class)); });
+        deserializerMap.put("spoken", (n) -> { this.setSpoken(n.getEnumValue(LanguageProficiencyLevel.class)); });
+        deserializerMap.put("tag", (n) -> { this.setTag(n.getStringValue()); });
+        deserializerMap.put("thumbnailUrl", (n) -> { this.setThumbnailUrl(n.getStringValue()); });
+        deserializerMap.put("written", (n) -> { this.setWritten(n.getEnumValue(LanguageProficiencyLevel.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the proficiency property value. The proficiency property
@@ -71,7 +84,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public LanguageProficiencyLevel getProficiency() {
-        return this._proficiency;
+        return this.proficiency;
     }
     /**
      * Gets the reading property value. Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
@@ -79,7 +92,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public LanguageProficiencyLevel getReading() {
-        return this._reading;
+        return this.reading;
     }
     /**
      * Gets the spoken property value. Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
@@ -87,7 +100,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public LanguageProficiencyLevel getSpoken() {
-        return this._spoken;
+        return this.spoken;
     }
     /**
      * Gets the tag property value. Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
@@ -95,7 +108,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTag() {
-        return this._tag;
+        return this.tag;
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
@@ -103,7 +116,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getThumbnailUrl() {
-        return this._thumbnailUrl;
+        return this.thumbnailUrl;
     }
     /**
      * Gets the written property value. Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
@@ -111,13 +124,14 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public LanguageProficiencyLevel getWritten() {
-        return this._written;
+        return this.written;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,55 +148,62 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the proficiency property value. The proficiency property
      * @param value Value to set for the proficiency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProficiency(@javax.annotation.Nullable final LanguageProficiencyLevel value) {
-        this._proficiency = value;
+        this.proficiency = value;
     }
     /**
      * Sets the reading property value. Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @param value Value to set for the reading property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReading(@javax.annotation.Nullable final LanguageProficiencyLevel value) {
-        this._reading = value;
+        this.reading = value;
     }
     /**
      * Sets the spoken property value. Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @param value Value to set for the spoken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpoken(@javax.annotation.Nullable final LanguageProficiencyLevel value) {
-        this._spoken = value;
+        this.spoken = value;
     }
     /**
      * Sets the tag property value. Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
      * @param value Value to set for the tag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTag(@javax.annotation.Nullable final String value) {
-        this._tag = value;
+        this.tag = value;
     }
     /**
      * Sets the thumbnailUrl property value. The thumbnailUrl property
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
-        this._thumbnailUrl = value;
+        this.thumbnailUrl = value;
     }
     /**
      * Sets the written property value. Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @param value Value to set for the written property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWritten(@javax.annotation.Nullable final LanguageProficiencyLevel value) {
-        this._written = value;
+        this.written = value;
     }
 }

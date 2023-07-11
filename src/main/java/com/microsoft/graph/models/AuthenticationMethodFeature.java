@@ -3,13 +3,13 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the usersRegisteredByFeature method. */
 public enum AuthenticationMethodFeature implements ValuedEnum {
     SsprRegistered("ssprRegistered"),
     SsprEnabled("ssprEnabled"),
     SsprCapable("ssprCapable"),
     PasswordlessCapable("passwordlessCapable"),
-    MfaCapable("mfaCapable");
+    MfaCapable("mfaCapable"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     AuthenticationMethodFeature(final String value) {
         this.value = value;
@@ -25,6 +25,7 @@ public enum AuthenticationMethodFeature implements ValuedEnum {
             case "ssprCapable": return SsprCapable;
             case "passwordlessCapable": return PasswordlessCapable;
             case "mfaCapable": return MfaCapable;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Describes the TemplateFamily for the Template entity
+ */
 public enum DeviceEnrollmentConfigurationType implements ValuedEnum {
     /** Default. Set to unknown if the configuration type cannot be determined. */
     Unknown("unknown"),

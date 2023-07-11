@@ -1,39 +1,31 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AddLargeGalleryViewOperation;
-import com.microsoft.graph.models.CancelMediaProcessingOperation;
-import com.microsoft.graph.models.InviteParticipantsOperation;
-import com.microsoft.graph.models.MuteParticipantOperation;
-import com.microsoft.graph.models.MuteParticipantsOperation;
-import com.microsoft.graph.models.PlayPromptOperation;
-import com.microsoft.graph.models.RecordOperation;
-import com.microsoft.graph.models.StartHoldMusicOperation;
-import com.microsoft.graph.models.StopHoldMusicOperation;
-import com.microsoft.graph.models.SubscribeToToneOperation;
-import com.microsoft.graph.models.UnmuteParticipantOperation;
-import com.microsoft.graph.models.UpdateRecordingStatusOperation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
 public class CommsOperation extends Entity implements Parsable {
-    /** Unique Client Context string. Max limit is 256 chars. */
-    private String _clientContext;
-    /** The result information. Read-only. */
-    private ResultInfo _resultInfo;
-    /** The status property */
-    private OperationStatus _status;
+    /**
+     * Unique Client Context string. Max limit is 256 chars.
+     */
+    private String clientContext;
+    /**
+     * The result information. Read-only.
+     */
+    private ResultInfo resultInfo;
+    /**
+     * The status property
+     */
+    private OperationStatus status;
     /**
      * Instantiates a new commsOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CommsOperation() {
         super();
-        this.setOdataType("#microsoft.graph.commsOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,20 +61,19 @@ public class CommsOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getClientContext() {
-        return this._clientContext;
+        return this.clientContext;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CommsOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
-            this.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(OperationStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("clientContext", (n) -> { this.setClientContext(n.getStringValue()); });
+        deserializerMap.put("resultInfo", (n) -> { this.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(OperationStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the resultInfo property value. The result information. Read-only.
@@ -90,7 +81,7 @@ public class CommsOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ResultInfo getResultInfo() {
-        return this._resultInfo;
+        return this.resultInfo;
     }
     /**
      * Gets the status property value. The status property
@@ -98,13 +89,14 @@ public class CommsOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OperationStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -117,23 +109,26 @@ public class CommsOperation extends Entity implements Parsable {
      * @param value Value to set for the clientContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
-        this._clientContext = value;
+        this.clientContext = value;
     }
     /**
      * Sets the resultInfo property value. The result information. Read-only.
      * @param value Value to set for the resultInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultInfo(@javax.annotation.Nullable final ResultInfo value) {
-        this._resultInfo = value;
+        this.resultInfo = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final OperationStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

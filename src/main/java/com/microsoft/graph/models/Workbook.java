@@ -3,32 +3,45 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Workbook extends Entity implements Parsable {
-    /** The application property */
-    private WorkbookApplication _application;
-    /** The comments property */
-    private java.util.List<WorkbookComment> _comments;
-    /** The functions property */
-    private WorkbookFunctions _functions;
-    /** Represents a collection of workbooks scoped named items (named ranges and constants). Read-only. */
-    private java.util.List<WorkbookNamedItem> _names;
-    /** The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable. */
-    private java.util.List<WorkbookOperation> _operations;
-    /** Represents a collection of tables associated with the workbook. Read-only. */
-    private java.util.List<WorkbookTable> _tables;
-    /** Represents a collection of worksheets associated with the workbook. Read-only. */
-    private java.util.List<WorkbookWorksheet> _worksheets;
+    /**
+     * The application property
+     */
+    private WorkbookApplication application;
+    /**
+     * The comments property
+     */
+    private java.util.List<WorkbookComment> comments;
+    /**
+     * The functions property
+     */
+    private WorkbookFunctions functions;
+    /**
+     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+     */
+    private java.util.List<WorkbookNamedItem> names;
+    /**
+     * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
+     */
+    private java.util.List<WorkbookOperation> operations;
+    /**
+     * Represents a collection of tables associated with the workbook. Read-only.
+     */
+    private java.util.List<WorkbookTable> tables;
+    /**
+     * Represents a collection of worksheets associated with the workbook. Read-only.
+     */
+    private java.util.List<WorkbookWorksheet> worksheets;
     /**
      * Instantiates a new workbook and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Workbook() {
         super();
-        this.setOdataType("#microsoft.graph.workbook");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +59,7 @@ public class Workbook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookApplication getApplication() {
-        return this._application;
+        return this.application;
     }
     /**
      * Gets the comments property value. The comments property
@@ -54,24 +67,23 @@ public class Workbook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookComment> getComments() {
-        return this._comments;
+        return this.comments;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Workbook currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(WorkbookApplication::createFromDiscriminatorValue)); });
-            this.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfObjectValues(WorkbookComment::createFromDiscriminatorValue)); });
-            this.put("functions", (n) -> { currentObject.setFunctions(n.getObjectValue(WorkbookFunctions::createFromDiscriminatorValue)); });
-            this.put("names", (n) -> { currentObject.setNames(n.getCollectionOfObjectValues(WorkbookNamedItem::createFromDiscriminatorValue)); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(WorkbookOperation::createFromDiscriminatorValue)); });
-            this.put("tables", (n) -> { currentObject.setTables(n.getCollectionOfObjectValues(WorkbookTable::createFromDiscriminatorValue)); });
-            this.put("worksheets", (n) -> { currentObject.setWorksheets(n.getCollectionOfObjectValues(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("application", (n) -> { this.setApplication(n.getObjectValue(WorkbookApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfObjectValues(WorkbookComment::createFromDiscriminatorValue)); });
+        deserializerMap.put("functions", (n) -> { this.setFunctions(n.getObjectValue(WorkbookFunctions::createFromDiscriminatorValue)); });
+        deserializerMap.put("names", (n) -> { this.setNames(n.getCollectionOfObjectValues(WorkbookNamedItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(WorkbookOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("tables", (n) -> { this.setTables(n.getCollectionOfObjectValues(WorkbookTable::createFromDiscriminatorValue)); });
+        deserializerMap.put("worksheets", (n) -> { this.setWorksheets(n.getCollectionOfObjectValues(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the functions property value. The functions property
@@ -79,7 +91,7 @@ public class Workbook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookFunctions getFunctions() {
-        return this._functions;
+        return this.functions;
     }
     /**
      * Gets the names property value. Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
@@ -87,7 +99,7 @@ public class Workbook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookNamedItem> getNames() {
-        return this._names;
+        return this.names;
     }
     /**
      * Gets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
@@ -95,7 +107,7 @@ public class Workbook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookOperation> getOperations() {
-        return this._operations;
+        return this.operations;
     }
     /**
      * Gets the tables property value. Represents a collection of tables associated with the workbook. Read-only.
@@ -103,7 +115,7 @@ public class Workbook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookTable> getTables() {
-        return this._tables;
+        return this.tables;
     }
     /**
      * Gets the worksheets property value. Represents a collection of worksheets associated with the workbook. Read-only.
@@ -111,13 +123,14 @@ public class Workbook extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkbookWorksheet> getWorksheets() {
-        return this._worksheets;
+        return this.worksheets;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,55 +147,62 @@ public class Workbook extends Entity implements Parsable {
      * @param value Value to set for the application property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplication(@javax.annotation.Nullable final WorkbookApplication value) {
-        this._application = value;
+        this.application = value;
     }
     /**
      * Sets the comments property value. The comments property
      * @param value Value to set for the comments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComments(@javax.annotation.Nullable final java.util.List<WorkbookComment> value) {
-        this._comments = value;
+        this.comments = value;
     }
     /**
      * Sets the functions property value. The functions property
      * @param value Value to set for the functions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFunctions(@javax.annotation.Nullable final WorkbookFunctions value) {
-        this._functions = value;
+        this.functions = value;
     }
     /**
      * Sets the names property value. Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      * @param value Value to set for the names property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNames(@javax.annotation.Nullable final java.util.List<WorkbookNamedItem> value) {
-        this._names = value;
+        this.names = value;
     }
     /**
      * Sets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<WorkbookOperation> value) {
-        this._operations = value;
+        this.operations = value;
     }
     /**
      * Sets the tables property value. Represents a collection of tables associated with the workbook. Read-only.
      * @param value Value to set for the tables property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTables(@javax.annotation.Nullable final java.util.List<WorkbookTable> value) {
-        this._tables = value;
+        this.tables = value;
     }
     /**
      * Sets the worksheets property value. Represents a collection of worksheets associated with the workbook. Read-only.
      * @param value Value to set for the worksheets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorksheets(@javax.annotation.Nullable final java.util.List<WorkbookWorksheet> value) {
-        this._worksheets = value;
+        this.worksheets = value;
     }
 }

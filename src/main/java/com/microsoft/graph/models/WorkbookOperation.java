@@ -3,25 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WorkbookOperation extends Entity implements Parsable {
-    /** The error returned by the operation. */
-    private WorkbookOperationError _error;
-    /** The resource URI for the result. */
-    private String _resourceLocation;
-    /** The status property */
-    private WorkbookOperationStatus _status;
+    /**
+     * The error returned by the operation.
+     */
+    private WorkbookOperationError error;
+    /**
+     * The resource URI for the result.
+     */
+    private String resourceLocation;
+    /**
+     * The status property
+     */
+    private WorkbookOperationStatus status;
     /**
      * Instantiates a new workbookOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookOperation() {
         super();
-        this.setOdataType("#microsoft.graph.workbookOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,20 +43,19 @@ public class WorkbookOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookOperationError getError() {
-        return this._error;
+        return this.error;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(WorkbookOperationError::createFromDiscriminatorValue)); });
-            this.put("resourceLocation", (n) -> { currentObject.setResourceLocation(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(WorkbookOperationStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(WorkbookOperationError::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceLocation", (n) -> { this.setResourceLocation(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(WorkbookOperationStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the resourceLocation property value. The resource URI for the result.
@@ -60,7 +63,7 @@ public class WorkbookOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceLocation() {
-        return this._resourceLocation;
+        return this.resourceLocation;
     }
     /**
      * Gets the status property value. The status property
@@ -68,13 +71,14 @@ public class WorkbookOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookOperationStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,23 +91,26 @@ public class WorkbookOperation extends Entity implements Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final WorkbookOperationError value) {
-        this._error = value;
+        this.error = value;
     }
     /**
      * Sets the resourceLocation property value. The resource URI for the result.
      * @param value Value to set for the resourceLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceLocation(@javax.annotation.Nullable final String value) {
-        this._resourceLocation = value;
+        this.resourceLocation = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final WorkbookOperationStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

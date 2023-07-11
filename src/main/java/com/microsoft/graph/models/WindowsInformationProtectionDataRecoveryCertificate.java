@@ -5,31 +5,44 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Windows Information Protection DataRecoveryCertificate */
+/**
+ * Windows Information Protection DataRecoveryCertificate
+ */
 public class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Data recovery Certificate */
-    private byte[] _certificate;
-    /** Data recovery Certificate description */
-    private String _description;
-    /** Data recovery Certificate expiration datetime */
-    private OffsetDateTime _expirationDateTime;
-    /** The OdataType property */
-    private String _odataType;
-    /** Data recovery Certificate subject name */
-    private String _subjectName;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Data recovery Certificate
+     */
+    private byte[] certificate;
+    /**
+     * Data recovery Certificate description
+     */
+    private String description;
+    /**
+     * Data recovery Certificate expiration datetime
+     */
+    private OffsetDateTime expirationDateTime;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Data recovery Certificate subject name
+     */
+    private String subjectName;
     /**
      * Instantiates a new windowsInformationProtectionDataRecoveryCertificate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionDataRecoveryCertificate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionDataRecoveryCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,15 +60,15 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the certificate property value. Data recovery Certificate
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getCertificate() {
-        return this._certificate;
+        return this.certificate;
     }
     /**
      * Gets the description property value. Data recovery Certificate description
@@ -63,7 +76,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the expirationDateTime property value. Data recovery Certificate expiration datetime
@@ -71,22 +84,21 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsInformationProtectionDataRecoveryCertificate currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("certificate", (n) -> { currentObject.setCertificate(n.getByteArrayValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("subjectName", (n) -> { currentObject.setSubjectName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("certificate", (n) -> { this.setCertificate(n.getByteArrayValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("subjectName", (n) -> { this.setSubjectName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -94,7 +106,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the subjectName property value. Data recovery Certificate subject name
@@ -102,13 +114,14 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     @javax.annotation.Nullable
     public String getSubjectName() {
-        return this._subjectName;
+        return this.subjectName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("certificate", this.getCertificate());
@@ -123,47 +136,53 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the certificate property value. Data recovery Certificate
      * @param value Value to set for the certificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificate(@javax.annotation.Nullable final byte[] value) {
-        this._certificate = value;
+        this.certificate = value;
     }
     /**
      * Sets the description property value. Data recovery Certificate description
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the expirationDateTime property value. Data recovery Certificate expiration datetime
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the subjectName property value. Data recovery Certificate subject name
      * @param value Value to set for the subjectName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectName(@javax.annotation.Nullable final String value) {
-        this._subjectName = value;
+        this.subjectName = value;
     }
 }

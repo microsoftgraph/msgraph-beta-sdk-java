@@ -3,17 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Base entity for a constraint
+ */
 public class DeviceManagementSettingRequiredConstraint extends DeviceManagementConstraint implements Parsable {
-    /** List of value which means not configured for the setting */
-    private String _notConfiguredValue;
     /**
-     * Instantiates a new DeviceManagementSettingRequiredConstraint and sets the default values.
+     * List of value which means not configured for the setting
+     */
+    private String notConfiguredValue;
+    /**
+     * Instantiates a new deviceManagementSettingRequiredConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingRequiredConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingRequiredConstraint");
@@ -21,7 +26,7 @@ public class DeviceManagementSettingRequiredConstraint extends DeviceManagementC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettingRequiredConstraint
+     * @return a deviceManagementSettingRequiredConstraint
      */
     @javax.annotation.Nonnull
     public static DeviceManagementSettingRequiredConstraint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,14 +35,13 @@ public class DeviceManagementSettingRequiredConstraint extends DeviceManagementC
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementSettingRequiredConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("notConfiguredValue", (n) -> { currentObject.setNotConfiguredValue(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("notConfiguredValue", (n) -> { this.setNotConfiguredValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notConfiguredValue property value. List of value which means not configured for the setting
@@ -45,13 +49,14 @@ public class DeviceManagementSettingRequiredConstraint extends DeviceManagementC
      */
     @javax.annotation.Nullable
     public String getNotConfiguredValue() {
-        return this._notConfiguredValue;
+        return this.notConfiguredValue;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +67,8 @@ public class DeviceManagementSettingRequiredConstraint extends DeviceManagementC
      * @param value Value to set for the notConfiguredValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotConfiguredValue(@javax.annotation.Nullable final String value) {
-        this._notConfiguredValue = value;
+        this.notConfiguredValue = value;
     }
 }

@@ -5,28 +5,37 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Indicates if updater configuration will be skipped and the agent will receive an update when the next version of the agent is available. */
-    private Boolean _allowUpdateConfigurationOverride;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _deferUpdateDateTime;
-    /** The OdataType property */
-    private String _odataType;
-    /** The updateWindow property */
-    private UpdateWindow _updateWindow;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Indicates if updater configuration will be skipped and the agent will receive an update when the next version of the agent is available.
+     */
+    private Boolean allowUpdateConfigurationOverride;
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
+    private OffsetDateTime deferUpdateDateTime;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The updateWindow property
+     */
+    private UpdateWindow updateWindow;
     /**
      * Instantiates a new hybridAgentUpdaterConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public HybridAgentUpdaterConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.hybridAgentUpdaterConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +53,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowUpdateConfigurationOverride property value. Indicates if updater configuration will be skipped and the agent will receive an update when the next version of the agent is available.
@@ -52,7 +61,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public Boolean getAllowUpdateConfigurationOverride() {
-        return this._allowUpdateConfigurationOverride;
+        return this.allowUpdateConfigurationOverride;
     }
     /**
      * Gets the deferUpdateDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -60,21 +69,20 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public OffsetDateTime getDeferUpdateDateTime() {
-        return this._deferUpdateDateTime;
+        return this.deferUpdateDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HybridAgentUpdaterConfiguration currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("allowUpdateConfigurationOverride", (n) -> { currentObject.setAllowUpdateConfigurationOverride(n.getBooleanValue()); });
-            this.put("deferUpdateDateTime", (n) -> { currentObject.setDeferUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("updateWindow", (n) -> { currentObject.setUpdateWindow(n.getObjectValue(UpdateWindow::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("allowUpdateConfigurationOverride", (n) -> { this.setAllowUpdateConfigurationOverride(n.getBooleanValue()); });
+        deserializerMap.put("deferUpdateDateTime", (n) -> { this.setDeferUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("updateWindow", (n) -> { this.setUpdateWindow(n.getObjectValue(UpdateWindow::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -82,7 +90,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the updateWindow property value. The updateWindow property
@@ -90,13 +98,14 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public UpdateWindow getUpdateWindow() {
-        return this._updateWindow;
+        return this.updateWindow;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowUpdateConfigurationOverride", this.getAllowUpdateConfigurationOverride());
@@ -110,39 +119,44 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowUpdateConfigurationOverride property value. Indicates if updater configuration will be skipped and the agent will receive an update when the next version of the agent is available.
      * @param value Value to set for the allowUpdateConfigurationOverride property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowUpdateConfigurationOverride(@javax.annotation.Nullable final Boolean value) {
-        this._allowUpdateConfigurationOverride = value;
+        this.allowUpdateConfigurationOverride = value;
     }
     /**
      * Sets the deferUpdateDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the deferUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeferUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._deferUpdateDateTime = value;
+        this.deferUpdateDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the updateWindow property value. The updateWindow property
      * @param value Value to set for the updateWindow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateWindow(@javax.annotation.Nullable final UpdateWindow value) {
-        this._updateWindow = value;
+        this.updateWindow = value;
     }
 }

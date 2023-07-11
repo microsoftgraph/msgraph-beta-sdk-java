@@ -3,26 +3,41 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OrganizationSettings extends Entity implements Parsable {
-    /** Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization. */
-    private InsightsSettings _itemInsights;
-    /** The microsoftApplicationDataAccess property */
-    private MicrosoftApplicationDataAccessSettings _microsoftApplicationDataAccess;
-    /** Contains the properties that are configured by an administrator for the visibility of a list of people relevant and working with a user in Microsoft 365. List peopleInsights returns the settings to display or return people insights in an organization. */
-    private InsightsSettings _peopleInsights;
-    /** Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization. */
-    private java.util.List<ProfileCardProperty> _profileCardProperties;
+    /**
+     * Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user's contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
+     */
+    private InsightsSettings contactInsights;
+    /**
+     * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
+     */
+    private InsightsSettings itemInsights;
+    /**
+     * The microsoftApplicationDataAccess property
+     */
+    private MicrosoftApplicationDataAccessSettings microsoftApplicationDataAccess;
+    /**
+     * Contains the properties that are configured by an administrator for the visibility of a list of people relevant and working with a user in Microsoft 365. List peopleInsights returns the settings to display or return people insights in an organization.
+     */
+    private InsightsSettings peopleInsights;
+    /**
+     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
+     */
+    private java.util.List<ProfileCardProperty> profileCardProperties;
+    /**
+     * The pronouns property
+     */
+    private PronounsSettings pronouns;
     /**
      * Instantiates a new organizationSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationSettings() {
         super();
-        this.setOdataType("#microsoft.graph.organizationSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,18 +50,27 @@ public class OrganizationSettings extends Entity implements Parsable {
         return new OrganizationSettings();
     }
     /**
+     * Gets the contactInsights property value. Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user's contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
+     * @return a insightsSettings
+     */
+    @javax.annotation.Nullable
+    public InsightsSettings getContactInsights() {
+        return this.contactInsights;
+    }
+    /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OrganizationSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("itemInsights", (n) -> { currentObject.setItemInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
-            this.put("microsoftApplicationDataAccess", (n) -> { currentObject.setMicrosoftApplicationDataAccess(n.getObjectValue(MicrosoftApplicationDataAccessSettings::createFromDiscriminatorValue)); });
-            this.put("peopleInsights", (n) -> { currentObject.setPeopleInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
-            this.put("profileCardProperties", (n) -> { currentObject.setProfileCardProperties(n.getCollectionOfObjectValues(ProfileCardProperty::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contactInsights", (n) -> { this.setContactInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftApplicationDataAccess", (n) -> { this.setMicrosoftApplicationDataAccess(n.getObjectValue(MicrosoftApplicationDataAccessSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("peopleInsights", (n) -> { this.setPeopleInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("profileCardProperties", (n) -> { this.setProfileCardProperties(n.getCollectionOfObjectValues(ProfileCardProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("pronouns", (n) -> { this.setPronouns(n.getObjectValue(PronounsSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the itemInsights property value. Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
@@ -54,7 +78,7 @@ public class OrganizationSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public InsightsSettings getItemInsights() {
-        return this._itemInsights;
+        return this.itemInsights;
     }
     /**
      * Gets the microsoftApplicationDataAccess property value. The microsoftApplicationDataAccess property
@@ -62,7 +86,7 @@ public class OrganizationSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public MicrosoftApplicationDataAccessSettings getMicrosoftApplicationDataAccess() {
-        return this._microsoftApplicationDataAccess;
+        return this.microsoftApplicationDataAccess;
     }
     /**
      * Gets the peopleInsights property value. Contains the properties that are configured by an administrator for the visibility of a list of people relevant and working with a user in Microsoft 365. List peopleInsights returns the settings to display or return people insights in an organization.
@@ -70,7 +94,7 @@ public class OrganizationSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public InsightsSettings getPeopleInsights() {
-        return this._peopleInsights;
+        return this.peopleInsights;
     }
     /**
      * Gets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
@@ -78,51 +102,84 @@ public class OrganizationSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ProfileCardProperty> getProfileCardProperties() {
-        return this._profileCardProperties;
+        return this.profileCardProperties;
+    }
+    /**
+     * Gets the pronouns property value. The pronouns property
+     * @return a pronounsSettings
+     */
+    @javax.annotation.Nullable
+    public PronounsSettings getPronouns() {
+        return this.pronouns;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("contactInsights", this.getContactInsights());
         writer.writeObjectValue("itemInsights", this.getItemInsights());
         writer.writeObjectValue("microsoftApplicationDataAccess", this.getMicrosoftApplicationDataAccess());
         writer.writeObjectValue("peopleInsights", this.getPeopleInsights());
         writer.writeCollectionOfObjectValues("profileCardProperties", this.getProfileCardProperties());
+        writer.writeObjectValue("pronouns", this.getPronouns());
+    }
+    /**
+     * Sets the contactInsights property value. Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user's contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
+     * @param value Value to set for the contactInsights property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setContactInsights(@javax.annotation.Nullable final InsightsSettings value) {
+        this.contactInsights = value;
     }
     /**
      * Sets the itemInsights property value. Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
      * @param value Value to set for the itemInsights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemInsights(@javax.annotation.Nullable final InsightsSettings value) {
-        this._itemInsights = value;
+        this.itemInsights = value;
     }
     /**
      * Sets the microsoftApplicationDataAccess property value. The microsoftApplicationDataAccess property
      * @param value Value to set for the microsoftApplicationDataAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftApplicationDataAccess(@javax.annotation.Nullable final MicrosoftApplicationDataAccessSettings value) {
-        this._microsoftApplicationDataAccess = value;
+        this.microsoftApplicationDataAccess = value;
     }
     /**
      * Sets the peopleInsights property value. Contains the properties that are configured by an administrator for the visibility of a list of people relevant and working with a user in Microsoft 365. List peopleInsights returns the settings to display or return people insights in an organization.
      * @param value Value to set for the peopleInsights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeopleInsights(@javax.annotation.Nullable final InsightsSettings value) {
-        this._peopleInsights = value;
+        this.peopleInsights = value;
     }
     /**
      * Sets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
      * @param value Value to set for the profileCardProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileCardProperties(@javax.annotation.Nullable final java.util.List<ProfileCardProperty> value) {
-        this._profileCardProperties = value;
+        this.profileCardProperties = value;
+    }
+    /**
+     * Sets the pronouns property value. The pronouns property
+     * @param value Value to set for the pronouns property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPronouns(@javax.annotation.Nullable final PronounsSettings value) {
+        this.pronouns = value;
     }
 }

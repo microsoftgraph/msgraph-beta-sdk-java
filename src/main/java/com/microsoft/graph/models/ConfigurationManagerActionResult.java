@@ -3,27 +3,33 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Device action result
+ */
 public class ConfigurationManagerActionResult extends DeviceActionResult implements Parsable {
-    /** Delivery state of Configuration Manager device action */
-    private ConfigurationManagerActionDeliveryStatus _actionDeliveryStatus;
-    /** Error code of Configuration Manager action from client */
-    private Integer _errorCode;
     /**
-     * Instantiates a new ConfigurationManagerActionResult and sets the default values.
+     * Delivery state of Configuration Manager device action
+     */
+    private ConfigurationManagerActionDeliveryStatus actionDeliveryStatus;
+    /**
+     * Error code of Configuration Manager action from client
+     */
+    private Integer errorCode;
+    /**
+     * Instantiates a new configurationManagerActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConfigurationManagerActionResult() {
         super();
-        this.setOdataType("#microsoft.graph.configurationManagerActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConfigurationManagerActionResult
+     * @return a configurationManagerActionResult
      */
     @javax.annotation.Nonnull
     public static ConfigurationManagerActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +42,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      */
     @javax.annotation.Nullable
     public ConfigurationManagerActionDeliveryStatus getActionDeliveryStatus() {
-        return this._actionDeliveryStatus;
+        return this.actionDeliveryStatus;
     }
     /**
      * Gets the errorCode property value. Error code of Configuration Manager action from client
@@ -44,25 +50,25 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      */
     @javax.annotation.Nullable
     public Integer getErrorCode() {
-        return this._errorCode;
+        return this.errorCode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConfigurationManagerActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actionDeliveryStatus", (n) -> { currentObject.setActionDeliveryStatus(n.getEnumValue(ConfigurationManagerActionDeliveryStatus.class)); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionDeliveryStatus", (n) -> { this.setActionDeliveryStatus(n.getEnumValue(ConfigurationManagerActionDeliveryStatus.class)); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +80,17 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      * @param value Value to set for the actionDeliveryStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionDeliveryStatus(@javax.annotation.Nullable final ConfigurationManagerActionDeliveryStatus value) {
-        this._actionDeliveryStatus = value;
+        this.actionDeliveryStatus = value;
     }
     /**
      * Sets the errorCode property value. Error code of Configuration Manager action from client
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Integer value) {
-        this._errorCode = value;
+        this.errorCode = value;
     }
 }

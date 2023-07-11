@@ -3,19 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Abstract class to contain properties used to assign a mobile app to a group.
+ */
 public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
-    /** The track IDs to enable for this app assignment. */
-    private java.util.List<String> _androidManagedStoreAppTrackIds;
-    /** Prioritization for automatic updates of Android Managed Store apps set on assignment. */
-    private AndroidManagedStoreAutoUpdateMode _autoUpdateMode;
     /**
-     * Instantiates a new AndroidManagedStoreAppAssignmentSettings and sets the default values.
+     * The track IDs to enable for this app assignment.
+     */
+    private java.util.List<String> androidManagedStoreAppTrackIds;
+    /**
+     * Prioritization for automatic updates of Android Managed Store apps set on assignment.
+     */
+    private AndroidManagedStoreAutoUpdateMode autoUpdateMode;
+    /**
+     * Instantiates a new androidManagedStoreAppAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedStoreAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedStoreAppAssignmentSettings");
@@ -23,7 +30,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidManagedStoreAppAssignmentSettings
+     * @return a androidManagedStoreAppAssignmentSettings
      */
     @javax.annotation.Nonnull
     public static AndroidManagedStoreAppAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +43,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAndroidManagedStoreAppTrackIds() {
-        return this._androidManagedStoreAppTrackIds;
+        return this.androidManagedStoreAppTrackIds;
     }
     /**
      * Gets the autoUpdateMode property value. Prioritization for automatic updates of Android Managed Store apps set on assignment.
@@ -44,25 +51,25 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
      */
     @javax.annotation.Nullable
     public AndroidManagedStoreAutoUpdateMode getAutoUpdateMode() {
-        return this._autoUpdateMode;
+        return this.autoUpdateMode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidManagedStoreAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("androidManagedStoreAppTrackIds", (n) -> { currentObject.setAndroidManagedStoreAppTrackIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("autoUpdateMode", (n) -> { currentObject.setAutoUpdateMode(n.getEnumValue(AndroidManagedStoreAutoUpdateMode.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("androidManagedStoreAppTrackIds", (n) -> { this.setAndroidManagedStoreAppTrackIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("autoUpdateMode", (n) -> { this.setAutoUpdateMode(n.getEnumValue(AndroidManagedStoreAutoUpdateMode.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +81,17 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
      * @param value Value to set for the androidManagedStoreAppTrackIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidManagedStoreAppTrackIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._androidManagedStoreAppTrackIds = value;
+        this.androidManagedStoreAppTrackIds = value;
     }
     /**
      * Sets the autoUpdateMode property value. Prioritization for automatic updates of Android Managed Store apps set on assignment.
      * @param value Value to set for the autoUpdateMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoUpdateMode(@javax.annotation.Nullable final AndroidManagedStoreAutoUpdateMode value) {
-        this._autoUpdateMode = value;
+        this.autoUpdateMode = value;
     }
 }

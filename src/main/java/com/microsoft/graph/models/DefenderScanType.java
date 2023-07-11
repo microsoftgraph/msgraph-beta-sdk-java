@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Possible values for system scan type.
+ */
 public enum DefenderScanType implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

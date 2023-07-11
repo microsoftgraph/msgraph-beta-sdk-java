@@ -4,37 +4,53 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class ActivityHistoryItem extends Entity implements Parsable {
-    /** The activeDurationSeconds property */
-    private Integer _activeDurationSeconds;
-    /** The activity property */
-    private UserActivity _activity;
-    /** The createdDateTime property */
-    private OffsetDateTime _createdDateTime;
-    /** The expirationDateTime property */
-    private OffsetDateTime _expirationDateTime;
-    /** The lastActiveDateTime property */
-    private OffsetDateTime _lastActiveDateTime;
-    /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** The startedDateTime property */
-    private OffsetDateTime _startedDateTime;
-    /** The status property */
-    private Status _status;
-    /** The userTimezone property */
-    private String _userTimezone;
+    /**
+     * The activeDurationSeconds property
+     */
+    private Integer activeDurationSeconds;
+    /**
+     * The activity property
+     */
+    private UserActivity activity;
+    /**
+     * The createdDateTime property
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The expirationDateTime property
+     */
+    private OffsetDateTime expirationDateTime;
+    /**
+     * The lastActiveDateTime property
+     */
+    private OffsetDateTime lastActiveDateTime;
+    /**
+     * The lastModifiedDateTime property
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * The startedDateTime property
+     */
+    private OffsetDateTime startedDateTime;
+    /**
+     * The status property
+     */
+    private Status status;
+    /**
+     * The userTimezone property
+     */
+    private String userTimezone;
     /**
      * Instantiates a new activityHistoryItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ActivityHistoryItem() {
         super();
-        this.setOdataType("#microsoft.graph.activityHistoryItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +68,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getActiveDurationSeconds() {
-        return this._activeDurationSeconds;
+        return this.activeDurationSeconds;
     }
     /**
      * Gets the activity property value. The activity property
@@ -60,7 +76,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public UserActivity getActivity() {
-        return this._activity;
+        return this.activity;
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -68,7 +84,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the expirationDateTime property value. The expirationDateTime property
@@ -76,26 +92,25 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ActivityHistoryItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeDurationSeconds", (n) -> { currentObject.setActiveDurationSeconds(n.getIntegerValue()); });
-            this.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(UserActivity::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastActiveDateTime", (n) -> { currentObject.setLastActiveDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("startedDateTime", (n) -> { currentObject.setStartedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(Status.class)); });
-            this.put("userTimezone", (n) -> { currentObject.setUserTimezone(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeDurationSeconds", (n) -> { this.setActiveDurationSeconds(n.getIntegerValue()); });
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getObjectValue(UserActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastActiveDateTime", (n) -> { this.setLastActiveDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("startedDateTime", (n) -> { this.setStartedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(Status.class)); });
+        deserializerMap.put("userTimezone", (n) -> { this.setUserTimezone(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastActiveDateTime property value. The lastActiveDateTime property
@@ -103,7 +118,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastActiveDateTime() {
-        return this._lastActiveDateTime;
+        return this.lastActiveDateTime;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -111,7 +126,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the startedDateTime property value. The startedDateTime property
@@ -119,7 +134,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
-        return this._startedDateTime;
+        return this.startedDateTime;
     }
     /**
      * Gets the status property value. The status property
@@ -127,7 +142,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Status getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the userTimezone property value. The userTimezone property
@@ -135,13 +150,14 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserTimezone() {
-        return this._userTimezone;
+        return this.userTimezone;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,71 +176,80 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param value Value to set for the activeDurationSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDurationSeconds(@javax.annotation.Nullable final Integer value) {
-        this._activeDurationSeconds = value;
+        this.activeDurationSeconds = value;
     }
     /**
      * Sets the activity property value. The activity property
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final UserActivity value) {
-        this._activity = value;
+        this.activity = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the lastActiveDateTime property value. The lastActiveDateTime property
      * @param value Value to set for the lastActiveDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActiveDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastActiveDateTime = value;
+        this.lastActiveDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the startedDateTime property value. The startedDateTime property
      * @param value Value to set for the startedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startedDateTime = value;
+        this.startedDateTime = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final Status value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the userTimezone property value. The userTimezone property
      * @param value Value to set for the userTimezone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserTimezone(@javax.annotation.Nullable final String value) {
-        this._userTimezone = value;
+        this.userTimezone = value;
     }
 }

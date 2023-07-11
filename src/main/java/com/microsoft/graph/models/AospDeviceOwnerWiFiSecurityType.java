@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Wi-Fi Security Types for AOSP Device Owner.
+ */
 public enum AospDeviceOwnerWiFiSecurityType implements ValuedEnum {
     /** Open (No Authentication). */
     Open("open"),

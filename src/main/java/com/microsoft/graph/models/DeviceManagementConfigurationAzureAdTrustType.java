@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Required AAD Trust Type
+ */
 public enum DeviceManagementConfigurationAzureAdTrustType implements ValuedEnum {
     /** No AAD Trust Type specified */
     None("none"),

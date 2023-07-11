@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * An enum type for wallpaper display location specifier.
+ */
 public enum IosWallpaperDisplayLocation implements ValuedEnum {
     /** No location specified for wallpaper display. */
     NotConfigured("notConfigured"),

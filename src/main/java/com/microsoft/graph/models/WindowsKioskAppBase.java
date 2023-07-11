@@ -1,37 +1,47 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.WindowsKioskDesktopApp;
-import com.microsoft.graph.models.WindowsKioskUWPApp;
-import com.microsoft.graph.models.WindowsKioskWin32App;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The base class for a type of apps */
+/**
+ * The base class for a type of apps
+ */
 public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The type of Windows kiosk app. */
-    private WindowsKioskAppType _appType;
-    /** Allow the app to be auto-launched in multi-app kiosk mode */
-    private Boolean _autoLaunch;
-    /** Represents the friendly name of an app */
-    private String _name;
-    /** The OdataType property */
-    private String _odataType;
-    /** The tile size of Windows app in the start layout. */
-    private WindowsAppStartLayoutTileSize _startLayoutTileSize;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The type of Windows kiosk app.
+     */
+    private WindowsKioskAppType appType;
+    /**
+     * Allow the app to be auto-launched in multi-app kiosk mode
+     */
+    private Boolean autoLaunch;
+    /**
+     * Represents the friendly name of an app
+     */
+    private String name;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The tile size of Windows app in the start layout.
+     */
+    private WindowsAppStartLayoutTileSize startLayoutTileSize;
     /**
      * Instantiates a new windowsKioskAppBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskAppBase() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsKioskAppBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +68,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the appType property value. The type of Windows kiosk app.
@@ -66,7 +76,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public WindowsKioskAppType getAppType() {
-        return this._appType;
+        return this.appType;
     }
     /**
      * Gets the autoLaunch property value. Allow the app to be auto-launched in multi-app kiosk mode
@@ -74,22 +84,21 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAutoLaunch() {
-        return this._autoLaunch;
+        return this.autoLaunch;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsKioskAppBase currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("appType", (n) -> { currentObject.setAppType(n.getEnumValue(WindowsKioskAppType.class)); });
-            this.put("autoLaunch", (n) -> { currentObject.setAutoLaunch(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("startLayoutTileSize", (n) -> { currentObject.setStartLayoutTileSize(n.getEnumValue(WindowsAppStartLayoutTileSize.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("appType", (n) -> { this.setAppType(n.getEnumValue(WindowsKioskAppType.class)); });
+        deserializerMap.put("autoLaunch", (n) -> { this.setAutoLaunch(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("startLayoutTileSize", (n) -> { this.setStartLayoutTileSize(n.getEnumValue(WindowsAppStartLayoutTileSize.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Represents the friendly name of an app
@@ -97,7 +106,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -105,7 +114,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the startLayoutTileSize property value. The tile size of Windows app in the start layout.
@@ -113,13 +122,14 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public WindowsAppStartLayoutTileSize getStartLayoutTileSize() {
-        return this._startLayoutTileSize;
+        return this.startLayoutTileSize;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("appType", this.getAppType());
@@ -134,47 +144,53 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the appType property value. The type of Windows kiosk app.
      * @param value Value to set for the appType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppType(@javax.annotation.Nullable final WindowsKioskAppType value) {
-        this._appType = value;
+        this.appType = value;
     }
     /**
      * Sets the autoLaunch property value. Allow the app to be auto-launched in multi-app kiosk mode
      * @param value Value to set for the autoLaunch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoLaunch(@javax.annotation.Nullable final Boolean value) {
-        this._autoLaunch = value;
+        this.autoLaunch = value;
     }
     /**
      * Sets the name property value. Represents the friendly name of an app
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the startLayoutTileSize property value. The tile size of Windows app in the start layout.
      * @param value Value to set for the startLayoutTileSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartLayoutTileSize(@javax.annotation.Nullable final WindowsAppStartLayoutTileSize value) {
-        this._startLayoutTileSize = value;
+        this.startLayoutTileSize = value;
     }
 }

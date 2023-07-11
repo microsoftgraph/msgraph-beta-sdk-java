@@ -3,27 +3,30 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserAnalytics extends Entity implements Parsable {
-    /** The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable. */
-    private java.util.List<ActivityStatistics> _activityStatistics;
-    /** The current settings for a user to use the analytics API. */
-    private Settings _settings;
     /**
-     * Instantiates a new UserAnalytics and sets the default values.
+     * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
+     */
+    private java.util.List<ActivityStatistics> activityStatistics;
+    /**
+     * The current settings for a user to use the analytics API.
+     */
+    private Settings settings;
+    /**
+     * Instantiates a new userAnalytics and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserAnalytics() {
         super();
-        this.setOdataType("#microsoft.graph.userAnalytics");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserAnalytics
+     * @return a userAnalytics
      */
     @javax.annotation.Nonnull
     public static UserAnalytics createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,19 +39,18 @@ public class UserAnalytics extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ActivityStatistics> getActivityStatistics() {
-        return this._activityStatistics;
+        return this.activityStatistics;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserAnalytics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activityStatistics", (n) -> { currentObject.setActivityStatistics(n.getCollectionOfObjectValues(ActivityStatistics::createFromDiscriminatorValue)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(Settings::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activityStatistics", (n) -> { this.setActivityStatistics(n.getCollectionOfObjectValues(ActivityStatistics::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(Settings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the settings property value. The current settings for a user to use the analytics API.
@@ -56,13 +58,14 @@ public class UserAnalytics extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Settings getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +77,17 @@ public class UserAnalytics extends Entity implements Parsable {
      * @param value Value to set for the activityStatistics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityStatistics(@javax.annotation.Nullable final java.util.List<ActivityStatistics> value) {
-        this._activityStatistics = value;
+        this.activityStatistics = value;
     }
     /**
      * Sets the settings property value. The current settings for a user to use the analytics API.
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final Settings value) {
-        this._settings = value;
+        this.settings = value;
     }
 }

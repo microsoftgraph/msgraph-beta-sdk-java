@@ -4,35 +4,61 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Windows Log Collection request entity. */
+import java.util.UUID;
+/**
+ * Windows Log Collection request entity.
+ */
 public class DeviceLogCollectionResponse extends Entity implements Parsable {
-    /** The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18 */
-    private Long _errorCode;
-    /** The DateTime of the expiration of the logs */
-    private OffsetDateTime _expirationDateTimeUTC;
-    /** The UPN for who initiated the request */
-    private String _initiatedByUserPrincipalName;
-    /** The device Id */
-    private String _managedDeviceId;
-    /** The DateTime the request was received */
-    private OffsetDateTime _receivedDateTimeUTC;
-    /** The DateTime of the request */
-    private OffsetDateTime _requestedDateTimeUTC;
-    /** The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _size;
-    /** The status of the log collection request */
-    private String _status;
+    /**
+     * The User Principal Name (UPN) of the user that enrolled the device.
+     */
+    private String enrolledByUser;
+    /**
+     * The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
+     */
+    private Long errorCode;
+    /**
+     * The DateTime of the expiration of the logs.
+     */
+    private OffsetDateTime expirationDateTimeUTC;
+    /**
+     * The UPN for who initiated the request.
+     */
+    private String initiatedByUserPrincipalName;
+    /**
+     * Indicates Intune device unique identifier.
+     */
+    private UUID managedDeviceId;
+    /**
+     * The DateTime the request was received.
+     */
+    private OffsetDateTime receivedDateTimeUTC;
+    /**
+     * The DateTime of the request.
+     */
+    private OffsetDateTime requestedDateTimeUTC;
+    /**
+     * The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    private Double size;
+    /**
+     * The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    private Double sizeInKB;
+    /**
+     * AppLogUploadStatus
+     */
+    private AppLogUploadState status;
     /**
      * Instantiates a new deviceLogCollectionResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceLogCollectionResponse() {
         super();
-        this.setOdataType("#microsoft.graph.deviceLogCollectionResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,70 +71,79 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
         return new DeviceLogCollectionResponse();
     }
     /**
+     * Gets the enrolledByUser property value. The User Principal Name (UPN) of the user that enrolled the device.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getEnrolledByUser() {
+        return this.enrolledByUser;
+    }
+    /**
      * Gets the errorCode property value. The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
      * @return a int64
      */
     @javax.annotation.Nullable
     public Long getErrorCode() {
-        return this._errorCode;
+        return this.errorCode;
     }
     /**
-     * Gets the expirationDateTimeUTC property value. The DateTime of the expiration of the logs
+     * Gets the expirationDateTimeUTC property value. The DateTime of the expiration of the logs.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTimeUTC() {
-        return this._expirationDateTimeUTC;
+        return this.expirationDateTimeUTC;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceLogCollectionResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getLongValue()); });
-            this.put("expirationDateTimeUTC", (n) -> { currentObject.setExpirationDateTimeUTC(n.getOffsetDateTimeValue()); });
-            this.put("initiatedByUserPrincipalName", (n) -> { currentObject.setInitiatedByUserPrincipalName(n.getStringValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("receivedDateTimeUTC", (n) -> { currentObject.setReceivedDateTimeUTC(n.getOffsetDateTimeValue()); });
-            this.put("requestedDateTimeUTC", (n) -> { currentObject.setRequestedDateTimeUTC(n.getOffsetDateTimeValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getDoubleValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("enrolledByUser", (n) -> { this.setEnrolledByUser(n.getStringValue()); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getLongValue()); });
+        deserializerMap.put("expirationDateTimeUTC", (n) -> { this.setExpirationDateTimeUTC(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("initiatedByUserPrincipalName", (n) -> { this.setInitiatedByUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getUUIDValue()); });
+        deserializerMap.put("receivedDateTimeUTC", (n) -> { this.setReceivedDateTimeUTC(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("requestedDateTimeUTC", (n) -> { this.setRequestedDateTimeUTC(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getDoubleValue()); });
+        deserializerMap.put("sizeInKB", (n) -> { this.setSizeInKB(n.getDoubleValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AppLogUploadState.class)); });
+        return deserializerMap;
     }
     /**
-     * Gets the initiatedByUserPrincipalName property value. The UPN for who initiated the request
+     * Gets the initiatedByUserPrincipalName property value. The UPN for who initiated the request.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getInitiatedByUserPrincipalName() {
-        return this._initiatedByUserPrincipalName;
+        return this.initiatedByUserPrincipalName;
     }
     /**
-     * Gets the managedDeviceId property value. The device Id
-     * @return a string
+     * Gets the managedDeviceId property value. Indicates Intune device unique identifier.
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getManagedDeviceId() {
-        return this._managedDeviceId;
+    public UUID getManagedDeviceId() {
+        return this.managedDeviceId;
     }
     /**
-     * Gets the receivedDateTimeUTC property value. The DateTime the request was received
+     * Gets the receivedDateTimeUTC property value. The DateTime the request was received.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getReceivedDateTimeUTC() {
-        return this._receivedDateTimeUTC;
+        return this.receivedDateTimeUTC;
     }
     /**
-     * Gets the requestedDateTimeUTC property value. The DateTime of the request
+     * Gets the requestedDateTimeUTC property value. The DateTime of the request.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRequestedDateTimeUTC() {
-        return this._requestedDateTimeUTC;
+        return this.requestedDateTimeUTC;
     }
     /**
      * Gets the size property value. The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -116,95 +151,132 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Double getSize() {
-        return this._size;
+        return this.size;
     }
     /**
-     * Gets the status property value. The status of the log collection request
-     * @return a string
+     * Gets the sizeInKB property value. The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * @return a double
      */
     @javax.annotation.Nullable
-    public String getStatus() {
-        return this._status;
+    public Double getSizeInKB() {
+        return this.sizeInKB;
+    }
+    /**
+     * Gets the status property value. AppLogUploadStatus
+     * @return a appLogUploadState
+     */
+    @javax.annotation.Nullable
+    public AppLogUploadState getStatus() {
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("enrolledByUser", this.getEnrolledByUser());
         writer.writeLongValue("errorCode", this.getErrorCode());
         writer.writeOffsetDateTimeValue("expirationDateTimeUTC", this.getExpirationDateTimeUTC());
         writer.writeStringValue("initiatedByUserPrincipalName", this.getInitiatedByUserPrincipalName());
-        writer.writeStringValue("managedDeviceId", this.getManagedDeviceId());
+        writer.writeUUIDValue("managedDeviceId", this.getManagedDeviceId());
         writer.writeOffsetDateTimeValue("receivedDateTimeUTC", this.getReceivedDateTimeUTC());
         writer.writeOffsetDateTimeValue("requestedDateTimeUTC", this.getRequestedDateTimeUTC());
         writer.writeDoubleValue("size", this.getSize());
-        writer.writeStringValue("status", this.getStatus());
+        writer.writeDoubleValue("sizeInKB", this.getSizeInKB());
+        writer.writeEnumValue("status", this.getStatus());
+    }
+    /**
+     * Sets the enrolledByUser property value. The User Principal Name (UPN) of the user that enrolled the device.
+     * @param value Value to set for the enrolledByUser property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setEnrolledByUser(@javax.annotation.Nullable final String value) {
+        this.enrolledByUser = value;
     }
     /**
      * Sets the errorCode property value. The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Long value) {
-        this._errorCode = value;
+        this.errorCode = value;
     }
     /**
-     * Sets the expirationDateTimeUTC property value. The DateTime of the expiration of the logs
+     * Sets the expirationDateTimeUTC property value. The DateTime of the expiration of the logs.
      * @param value Value to set for the expirationDateTimeUTC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTimeUTC = value;
+        this.expirationDateTimeUTC = value;
     }
     /**
-     * Sets the initiatedByUserPrincipalName property value. The UPN for who initiated the request
+     * Sets the initiatedByUserPrincipalName property value. The UPN for who initiated the request.
      * @param value Value to set for the initiatedByUserPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedByUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._initiatedByUserPrincipalName = value;
+        this.initiatedByUserPrincipalName = value;
     }
     /**
-     * Sets the managedDeviceId property value. The device Id
+     * Sets the managedDeviceId property value. Indicates Intune device unique identifier.
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
-    public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
-        this._managedDeviceId = value;
+    @javax.annotation.Nonnull
+    public void setManagedDeviceId(@javax.annotation.Nullable final UUID value) {
+        this.managedDeviceId = value;
     }
     /**
-     * Sets the receivedDateTimeUTC property value. The DateTime the request was received
+     * Sets the receivedDateTimeUTC property value. The DateTime the request was received.
      * @param value Value to set for the receivedDateTimeUTC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._receivedDateTimeUTC = value;
+        this.receivedDateTimeUTC = value;
     }
     /**
-     * Sets the requestedDateTimeUTC property value. The DateTime of the request
+     * Sets the requestedDateTimeUTC property value. The DateTime of the request.
      * @param value Value to set for the requestedDateTimeUTC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestedDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._requestedDateTimeUTC = value;
+        this.requestedDateTimeUTC = value;
     }
     /**
      * Sets the size property value. The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Double value) {
-        this._size = value;
+        this.size = value;
     }
     /**
-     * Sets the status property value. The status of the log collection request
+     * Sets the sizeInKB property value. The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * @param value Value to set for the sizeInKB property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSizeInKB(@javax.annotation.Nullable final Double value) {
+        this.sizeInKB = value;
+    }
+    /**
+     * Sets the status property value. AppLogUploadStatus
      * @param value Value to set for the status property.
      * @return a void
      */
-    public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+    @javax.annotation.Nonnull
+    public void setStatus(@javax.annotation.Nullable final AppLogUploadState value) {
+        this.status = value;
     }
 }

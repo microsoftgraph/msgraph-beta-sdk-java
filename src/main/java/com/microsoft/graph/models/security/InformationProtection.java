@@ -4,22 +4,25 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InformationProtection extends Entity implements Parsable {
-    /** Read the Microsoft Purview Information Protection policy settings for the user or organization. */
-    private InformationProtectionPolicySetting _labelPolicySettings;
-    /** Read the Microsoft Purview Information Protection labels for the user or organization. */
-    private java.util.List<SensitivityLabel> _sensitivityLabels;
+    /**
+     * Read the Microsoft Purview Information Protection policy settings for the user or organization.
+     */
+    private InformationProtectionPolicySetting labelPolicySettings;
+    /**
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
+     */
+    private java.util.List<SensitivityLabel> sensitivityLabels;
     /**
      * Instantiates a new informationProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InformationProtection() {
         super();
-        this.setOdataType("#microsoft.graph.security.informationProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,15 +36,14 @@ public class InformationProtection extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InformationProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("labelPolicySettings", (n) -> { currentObject.setLabelPolicySettings(n.getObjectValue(InformationProtectionPolicySetting::createFromDiscriminatorValue)); });
-            this.put("sensitivityLabels", (n) -> { currentObject.setSensitivityLabels(n.getCollectionOfObjectValues(SensitivityLabel::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("labelPolicySettings", (n) -> { this.setLabelPolicySettings(n.getObjectValue(InformationProtectionPolicySetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("sensitivityLabels", (n) -> { this.setSensitivityLabels(n.getCollectionOfObjectValues(SensitivityLabel::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the labelPolicySettings property value. Read the Microsoft Purview Information Protection policy settings for the user or organization.
@@ -49,7 +51,7 @@ public class InformationProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public InformationProtectionPolicySetting getLabelPolicySettings() {
-        return this._labelPolicySettings;
+        return this.labelPolicySettings;
     }
     /**
      * Gets the sensitivityLabels property value. Read the Microsoft Purview Information Protection labels for the user or organization.
@@ -57,13 +59,14 @@ public class InformationProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SensitivityLabel> getSensitivityLabels() {
-        return this._sensitivityLabels;
+        return this.sensitivityLabels;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,15 +78,17 @@ public class InformationProtection extends Entity implements Parsable {
      * @param value Value to set for the labelPolicySettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabelPolicySettings(@javax.annotation.Nullable final InformationProtectionPolicySetting value) {
-        this._labelPolicySettings = value;
+        this.labelPolicySettings = value;
     }
     /**
      * Sets the sensitivityLabels property value. Read the Microsoft Purview Information Protection labels for the user or organization.
      * @param value Value to set for the sensitivityLabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitivityLabels(@javax.annotation.Nullable final java.util.List<SensitivityLabel> value) {
-        this._sensitivityLabels = value;
+        this.sensitivityLabels = value;
     }
 }

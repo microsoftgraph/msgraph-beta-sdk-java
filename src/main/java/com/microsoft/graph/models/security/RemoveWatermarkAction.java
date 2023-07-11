@@ -3,17 +3,19 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RemoveWatermarkAction extends InformationProtectionAction implements Parsable {
-    /** The name of the UI element of watermark to be removed. */
-    private java.util.List<String> _uiElementNames;
     /**
-     * Instantiates a new RemoveWatermarkAction and sets the default values.
+     * The name of the UI element of watermark to be removed.
+     */
+    private java.util.List<String> uiElementNames;
+    /**
+     * Instantiates a new removeWatermarkAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemoveWatermarkAction() {
         super();
         this.setOdataType("#microsoft.graph.security.removeWatermarkAction");
@@ -21,7 +23,7 @@ public class RemoveWatermarkAction extends InformationProtectionAction implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RemoveWatermarkAction
+     * @return a removeWatermarkAction
      */
     @javax.annotation.Nonnull
     public static RemoveWatermarkAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,14 +32,13 @@ public class RemoveWatermarkAction extends InformationProtectionAction implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RemoveWatermarkAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("uiElementNames", (n) -> { currentObject.setUiElementNames(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("uiElementNames", (n) -> { this.setUiElementNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the uiElementNames property value. The name of the UI element of watermark to be removed.
@@ -45,13 +46,14 @@ public class RemoveWatermarkAction extends InformationProtectionAction implement
      */
     @javax.annotation.Nullable
     public java.util.List<String> getUiElementNames() {
-        return this._uiElementNames;
+        return this.uiElementNames;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class RemoveWatermarkAction extends InformationProtectionAction implement
      * @param value Value to set for the uiElementNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUiElementNames(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._uiElementNames = value;
+        this.uiElementNames = value;
     }
 }

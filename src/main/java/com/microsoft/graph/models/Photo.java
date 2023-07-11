@@ -5,40 +5,61 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Photo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Camera manufacturer. Read-only. */
-    private String _cameraMake;
-    /** Camera model. Read-only. */
-    private String _cameraModel;
-    /** The denominator for the exposure time fraction from the camera. Read-only. */
-    private Double _exposureDenominator;
-    /** The numerator for the exposure time fraction from the camera. Read-only. */
-    private Double _exposureNumerator;
-    /** The F-stop value from the camera. Read-only. */
-    private Double _fNumber;
-    /** The focal length from the camera. Read-only. */
-    private Double _focalLength;
-    /** The ISO value from the camera. Read-only. */
-    private Integer _iso;
-    /** The OdataType property */
-    private String _odataType;
-    /** The orientation value from the camera. Writable on OneDrive Personal. */
-    private Integer _orientation;
-    /** The date and time the photo was taken in UTC time. Read-only. */
-    private OffsetDateTime _takenDateTime;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Camera manufacturer. Read-only.
+     */
+    private String cameraMake;
+    /**
+     * Camera model. Read-only.
+     */
+    private String cameraModel;
+    /**
+     * The denominator for the exposure time fraction from the camera. Read-only.
+     */
+    private Double exposureDenominator;
+    /**
+     * The numerator for the exposure time fraction from the camera. Read-only.
+     */
+    private Double exposureNumerator;
+    /**
+     * The F-stop value from the camera. Read-only.
+     */
+    private Double fNumber;
+    /**
+     * The focal length from the camera. Read-only.
+     */
+    private Double focalLength;
+    /**
+     * The ISO value from the camera. Read-only.
+     */
+    private Integer iso;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The orientation value from the camera. Writable on OneDrive Personal.
+     */
+    private Integer orientation;
+    /**
+     * The date and time the photo was taken in UTC time. Read-only.
+     */
+    private OffsetDateTime takenDateTime;
     /**
      * Instantiates a new photo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Photo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.photo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,7 +77,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the cameraMake property value. Camera manufacturer. Read-only.
@@ -64,7 +85,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCameraMake() {
-        return this._cameraMake;
+        return this.cameraMake;
     }
     /**
      * Gets the cameraModel property value. Camera model. Read-only.
@@ -72,7 +93,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCameraModel() {
-        return this._cameraModel;
+        return this.cameraModel;
     }
     /**
      * Gets the exposureDenominator property value. The denominator for the exposure time fraction from the camera. Read-only.
@@ -80,7 +101,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getExposureDenominator() {
-        return this._exposureDenominator;
+        return this.exposureDenominator;
     }
     /**
      * Gets the exposureNumerator property value. The numerator for the exposure time fraction from the camera. Read-only.
@@ -88,27 +109,26 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getExposureNumerator() {
-        return this._exposureNumerator;
+        return this.exposureNumerator;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Photo currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("cameraMake", (n) -> { currentObject.setCameraMake(n.getStringValue()); });
-            this.put("cameraModel", (n) -> { currentObject.setCameraModel(n.getStringValue()); });
-            this.put("exposureDenominator", (n) -> { currentObject.setExposureDenominator(n.getDoubleValue()); });
-            this.put("exposureNumerator", (n) -> { currentObject.setExposureNumerator(n.getDoubleValue()); });
-            this.put("fNumber", (n) -> { currentObject.setFNumber(n.getDoubleValue()); });
-            this.put("focalLength", (n) -> { currentObject.setFocalLength(n.getDoubleValue()); });
-            this.put("iso", (n) -> { currentObject.setIso(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("orientation", (n) -> { currentObject.setOrientation(n.getIntegerValue()); });
-            this.put("takenDateTime", (n) -> { currentObject.setTakenDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        deserializerMap.put("cameraMake", (n) -> { this.setCameraMake(n.getStringValue()); });
+        deserializerMap.put("cameraModel", (n) -> { this.setCameraModel(n.getStringValue()); });
+        deserializerMap.put("exposureDenominator", (n) -> { this.setExposureDenominator(n.getDoubleValue()); });
+        deserializerMap.put("exposureNumerator", (n) -> { this.setExposureNumerator(n.getDoubleValue()); });
+        deserializerMap.put("fNumber", (n) -> { this.setFNumber(n.getDoubleValue()); });
+        deserializerMap.put("focalLength", (n) -> { this.setFocalLength(n.getDoubleValue()); });
+        deserializerMap.put("iso", (n) -> { this.setIso(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("orientation", (n) -> { this.setOrientation(n.getIntegerValue()); });
+        deserializerMap.put("takenDateTime", (n) -> { this.setTakenDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fNumber property value. The F-stop value from the camera. Read-only.
@@ -116,7 +136,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getFNumber() {
-        return this._fNumber;
+        return this.fNumber;
     }
     /**
      * Gets the focalLength property value. The focal length from the camera. Read-only.
@@ -124,7 +144,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Double getFocalLength() {
-        return this._focalLength;
+        return this.focalLength;
     }
     /**
      * Gets the iso property value. The ISO value from the camera. Read-only.
@@ -132,7 +152,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getIso() {
-        return this._iso;
+        return this.iso;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -140,7 +160,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
@@ -148,7 +168,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getOrientation() {
-        return this._orientation;
+        return this.orientation;
     }
     /**
      * Gets the takenDateTime property value. The date and time the photo was taken in UTC time. Read-only.
@@ -156,13 +176,14 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getTakenDateTime() {
-        return this._takenDateTime;
+        return this.takenDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("cameraMake", this.getCameraMake());
@@ -182,87 +203,98 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the cameraMake property value. Camera manufacturer. Read-only.
      * @param value Value to set for the cameraMake property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraMake(@javax.annotation.Nullable final String value) {
-        this._cameraMake = value;
+        this.cameraMake = value;
     }
     /**
      * Sets the cameraModel property value. Camera model. Read-only.
      * @param value Value to set for the cameraModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraModel(@javax.annotation.Nullable final String value) {
-        this._cameraModel = value;
+        this.cameraModel = value;
     }
     /**
      * Sets the exposureDenominator property value. The denominator for the exposure time fraction from the camera. Read-only.
      * @param value Value to set for the exposureDenominator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExposureDenominator(@javax.annotation.Nullable final Double value) {
-        this._exposureDenominator = value;
+        this.exposureDenominator = value;
     }
     /**
      * Sets the exposureNumerator property value. The numerator for the exposure time fraction from the camera. Read-only.
      * @param value Value to set for the exposureNumerator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExposureNumerator(@javax.annotation.Nullable final Double value) {
-        this._exposureNumerator = value;
+        this.exposureNumerator = value;
     }
     /**
      * Sets the fNumber property value. The F-stop value from the camera. Read-only.
      * @param value Value to set for the fNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFNumber(@javax.annotation.Nullable final Double value) {
-        this._fNumber = value;
+        this.fNumber = value;
     }
     /**
      * Sets the focalLength property value. The focal length from the camera. Read-only.
      * @param value Value to set for the focalLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFocalLength(@javax.annotation.Nullable final Double value) {
-        this._focalLength = value;
+        this.focalLength = value;
     }
     /**
      * Sets the iso property value. The ISO value from the camera. Read-only.
      * @param value Value to set for the iso property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIso(@javax.annotation.Nullable final Integer value) {
-        this._iso = value;
+        this.iso = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
      * @param value Value to set for the orientation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrientation(@javax.annotation.Nullable final Integer value) {
-        this._orientation = value;
+        this.orientation = value;
     }
     /**
      * Sets the takenDateTime property value. The date and time the photo was taken in UTC time. Read-only.
      * @param value Value to set for the takenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTakenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._takenDateTime = value;
+        this.takenDateTime = value;
     }
 }

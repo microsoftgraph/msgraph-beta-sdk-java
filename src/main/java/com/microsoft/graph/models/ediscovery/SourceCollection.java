@@ -6,44 +6,69 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SourceCollection extends Entity implements Parsable {
-    /** Adds an additional source to the sourceCollection. */
-    private java.util.List<DataSource> _additionalSources;
-    /** Adds the results of the sourceCollection to the specified reviewSet. */
-    private AddToReviewSetOperation _addToReviewSetOperation;
-    /** The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery. You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date>=06/01/2016 AND Date<=07/01/2016. */
-    private String _contentQuery;
-    /** The user who created the sourceCollection. */
-    private IdentitySet _createdBy;
-    /** The date and time the sourceCollection was created. */
-    private OffsetDateTime _createdDateTime;
-    /** Custodian sources that are included in the sourceCollection. */
-    private java.util.List<DataSource> _custodianSources;
-    /** When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources. */
-    private DataSourceScopes _dataSourceScopes;
-    /** The description of the sourceCollection. */
-    private String _description;
-    /** The display name of the sourceCollection. */
-    private String _displayName;
-    /** The last estimate operation associated with the sourceCollection. */
-    private EstimateStatisticsOperation _lastEstimateStatisticsOperation;
-    /** The last user who modified the sourceCollection. */
-    private IdentitySet _lastModifiedBy;
-    /** The last date and time the sourceCollection was modified. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** noncustodialDataSource sources that are included in the sourceCollection */
-    private java.util.List<NoncustodialDataSource> _noncustodialSources;
+    /**
+     * Adds an additional source to the sourceCollection.
+     */
+    private java.util.List<DataSource> additionalSources;
+    /**
+     * Adds the results of the sourceCollection to the specified reviewSet.
+     */
+    private AddToReviewSetOperation addToReviewSetOperation;
+    /**
+     * The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery. You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date>=06/01/2016 AND Date<=07/01/2016.
+     */
+    private String contentQuery;
+    /**
+     * The user who created the sourceCollection.
+     */
+    private IdentitySet createdBy;
+    /**
+     * The date and time the sourceCollection was created.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * Custodian sources that are included in the sourceCollection.
+     */
+    private java.util.List<DataSource> custodianSources;
+    /**
+     * When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+     */
+    private DataSourceScopes dataSourceScopes;
+    /**
+     * The description of the sourceCollection.
+     */
+    private String description;
+    /**
+     * The display name of the sourceCollection.
+     */
+    private String displayName;
+    /**
+     * The last estimate operation associated with the sourceCollection.
+     */
+    private EstimateStatisticsOperation lastEstimateStatisticsOperation;
+    /**
+     * The last user who modified the sourceCollection.
+     */
+    private IdentitySet lastModifiedBy;
+    /**
+     * The last date and time the sourceCollection was modified.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * noncustodialDataSource sources that are included in the sourceCollection
+     */
+    private java.util.List<NoncustodialDataSource> noncustodialSources;
     /**
      * Instantiates a new sourceCollection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SourceCollection() {
         super();
-        this.setOdataType("#microsoft.graph.ediscovery.sourceCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +86,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DataSource> getAdditionalSources() {
-        return this._additionalSources;
+        return this.additionalSources;
     }
     /**
      * Gets the addToReviewSetOperation property value. Adds the results of the sourceCollection to the specified reviewSet.
@@ -69,7 +94,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AddToReviewSetOperation getAddToReviewSetOperation() {
-        return this._addToReviewSetOperation;
+        return this.addToReviewSetOperation;
     }
     /**
      * Gets the contentQuery property value. The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery. You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date>=06/01/2016 AND Date<=07/01/2016.
@@ -77,7 +102,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContentQuery() {
-        return this._contentQuery;
+        return this.contentQuery;
     }
     /**
      * Gets the createdBy property value. The user who created the sourceCollection.
@@ -85,7 +110,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The date and time the sourceCollection was created.
@@ -93,7 +118,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the custodianSources property value. Custodian sources that are included in the sourceCollection.
@@ -101,7 +126,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DataSource> getCustodianSources() {
-        return this._custodianSources;
+        return this.custodianSources;
     }
     /**
      * Gets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
@@ -109,7 +134,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DataSourceScopes getDataSourceScopes() {
-        return this._dataSourceScopes;
+        return this.dataSourceScopes;
     }
     /**
      * Gets the description property value. The description of the sourceCollection.
@@ -117,7 +142,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name of the sourceCollection.
@@ -125,30 +150,29 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SourceCollection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("additionalSources", (n) -> { currentObject.setAdditionalSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
-            this.put("addToReviewSetOperation", (n) -> { currentObject.setAddToReviewSetOperation(n.getObjectValue(AddToReviewSetOperation::createFromDiscriminatorValue)); });
-            this.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("custodianSources", (n) -> { currentObject.setCustodianSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
-            this.put("dataSourceScopes", (n) -> { currentObject.setDataSourceScopes(n.getEnumValue(DataSourceScopes.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastEstimateStatisticsOperation", (n) -> { currentObject.setLastEstimateStatisticsOperation(n.getObjectValue(EstimateStatisticsOperation::createFromDiscriminatorValue)); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("noncustodialSources", (n) -> { currentObject.setNoncustodialSources(n.getCollectionOfObjectValues(NoncustodialDataSource::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("additionalSources", (n) -> { this.setAdditionalSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("addToReviewSetOperation", (n) -> { this.setAddToReviewSetOperation(n.getObjectValue(AddToReviewSetOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentQuery", (n) -> { this.setContentQuery(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("custodianSources", (n) -> { this.setCustodianSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataSourceScopes", (n) -> { this.setDataSourceScopes(n.getEnumValue(DataSourceScopes.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastEstimateStatisticsOperation", (n) -> { this.setLastEstimateStatisticsOperation(n.getObjectValue(EstimateStatisticsOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("noncustodialSources", (n) -> { this.setNoncustodialSources(n.getCollectionOfObjectValues(NoncustodialDataSource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastEstimateStatisticsOperation property value. The last estimate operation associated with the sourceCollection.
@@ -156,7 +180,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EstimateStatisticsOperation getLastEstimateStatisticsOperation() {
-        return this._lastEstimateStatisticsOperation;
+        return this.lastEstimateStatisticsOperation;
     }
     /**
      * Gets the lastModifiedBy property value. The last user who modified the sourceCollection.
@@ -164,7 +188,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedDateTime property value. The last date and time the sourceCollection was modified.
@@ -172,7 +196,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the noncustodialSources property value. noncustodialDataSource sources that are included in the sourceCollection
@@ -180,13 +204,14 @@ public class SourceCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<NoncustodialDataSource> getNoncustodialSources() {
-        return this._noncustodialSources;
+        return this.noncustodialSources;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -209,103 +234,116 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the additionalSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalSources(@javax.annotation.Nullable final java.util.List<DataSource> value) {
-        this._additionalSources = value;
+        this.additionalSources = value;
     }
     /**
      * Sets the addToReviewSetOperation property value. Adds the results of the sourceCollection to the specified reviewSet.
      * @param value Value to set for the addToReviewSetOperation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddToReviewSetOperation(@javax.annotation.Nullable final AddToReviewSetOperation value) {
-        this._addToReviewSetOperation = value;
+        this.addToReviewSetOperation = value;
     }
     /**
      * Sets the contentQuery property value. The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery. You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date>=06/01/2016 AND Date<=07/01/2016.
      * @param value Value to set for the contentQuery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentQuery(@javax.annotation.Nullable final String value) {
-        this._contentQuery = value;
+        this.contentQuery = value;
     }
     /**
      * Sets the createdBy property value. The user who created the sourceCollection.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the sourceCollection was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the custodianSources property value. Custodian sources that are included in the sourceCollection.
      * @param value Value to set for the custodianSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustodianSources(@javax.annotation.Nullable final java.util.List<DataSource> value) {
-        this._custodianSources = value;
+        this.custodianSources = value;
     }
     /**
      * Sets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      * @param value Value to set for the dataSourceScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSourceScopes(@javax.annotation.Nullable final DataSourceScopes value) {
-        this._dataSourceScopes = value;
+        this.dataSourceScopes = value;
     }
     /**
      * Sets the description property value. The description of the sourceCollection.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the sourceCollection.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastEstimateStatisticsOperation property value. The last estimate operation associated with the sourceCollection.
      * @param value Value to set for the lastEstimateStatisticsOperation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastEstimateStatisticsOperation(@javax.annotation.Nullable final EstimateStatisticsOperation value) {
-        this._lastEstimateStatisticsOperation = value;
+        this.lastEstimateStatisticsOperation = value;
     }
     /**
      * Sets the lastModifiedBy property value. The last user who modified the sourceCollection.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The last date and time the sourceCollection was modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the noncustodialSources property value. noncustodialDataSource sources that are included in the sourceCollection
      * @param value Value to set for the noncustodialSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNoncustodialSources(@javax.annotation.Nullable final java.util.List<NoncustodialDataSource> value) {
-        this._noncustodialSources = value;
+        this.noncustodialSources = value;
     }
 }

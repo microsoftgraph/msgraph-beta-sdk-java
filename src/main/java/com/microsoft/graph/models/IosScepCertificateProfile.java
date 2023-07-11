@@ -3,35 +3,58 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * iOS SCEP certificate profile.
+ */
 public class IosScepCertificateProfile extends IosCertificateProfileBase implements Parsable {
-    /** Target store certificate. Possible values are: user, machine. */
-    private CertificateStore _certificateStore;
-    /** Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements. */
-    private java.util.List<CustomSubjectAlternativeName> _customSubjectAlternativeNames;
-    /** Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements. */
-    private java.util.List<ExtendedKeyUsage> _extendedKeyUsages;
-    /** Key Size Options. */
-    private KeySize _keySize;
-    /** Key Usage Options. */
-    private KeyUsages _keyUsage;
-    /** Certificate state for devices. This collection can contain a maximum of 2147483647 elements. */
-    private java.util.List<ManagedDeviceCertificateState> _managedDeviceCertificateStates;
-    /** Trusted Root Certificate. */
-    private IosTrustedRootCertificate _rootCertificate;
-    /** SCEP Server Url(s). */
-    private java.util.List<String> _scepServerUrls;
-    /** Custom String that defines the AAD Attribute. */
-    private String _subjectAlternativeNameFormatString;
-    /** Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US */
-    private String _subjectNameFormatString;
     /**
-     * Instantiates a new IosScepCertificateProfile and sets the default values.
+     * Target store certificate. Possible values are: user, machine.
+     */
+    private CertificateStore certificateStore;
+    /**
+     * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
+     */
+    private java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
+    /**
+     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
+     */
+    private java.util.List<ExtendedKeyUsage> extendedKeyUsages;
+    /**
+     * Key Size Options.
+     */
+    private KeySize keySize;
+    /**
+     * Key Usage Options.
+     */
+    private KeyUsages keyUsage;
+    /**
+     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
+     */
+    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
+    /**
+     * Trusted Root Certificate.
+     */
+    private IosTrustedRootCertificate rootCertificate;
+    /**
+     * SCEP Server Url(s).
+     */
+    private java.util.List<String> scepServerUrls;
+    /**
+     * Custom String that defines the AAD Attribute.
+     */
+    private String subjectAlternativeNameFormatString;
+    /**
+     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
+     */
+    private String subjectNameFormatString;
+    /**
+     * Instantiates a new iosScepCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosScepCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.iosScepCertificateProfile");
@@ -39,7 +62,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosScepCertificateProfile
+     * @return a iosScepCertificateProfile
      */
     @javax.annotation.Nonnull
     public static IosScepCertificateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +75,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      */
     @javax.annotation.Nullable
     public CertificateStore getCertificateStore() {
-        return this._certificateStore;
+        return this.certificateStore;
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
@@ -60,7 +83,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      */
     @javax.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
-        return this._customSubjectAlternativeNames;
+        return this.customSubjectAlternativeNames;
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
@@ -68,27 +91,26 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      */
     @javax.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
-        return this._extendedKeyUsages;
+        return this.extendedKeyUsages;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosScepCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
-            this.put("customSubjectAlternativeNames", (n) -> { currentObject.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
-            this.put("extendedKeyUsages", (n) -> { currentObject.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
-            this.put("keySize", (n) -> { currentObject.setKeySize(n.getEnumValue(KeySize.class)); });
-            this.put("keyUsage", (n) -> { currentObject.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
-            this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
-            this.put("rootCertificate", (n) -> { currentObject.setRootCertificate(n.getObjectValue(IosTrustedRootCertificate::createFromDiscriminatorValue)); });
-            this.put("scepServerUrls", (n) -> { currentObject.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("subjectAlternativeNameFormatString", (n) -> { currentObject.setSubjectAlternativeNameFormatString(n.getStringValue()); });
-            this.put("subjectNameFormatString", (n) -> { currentObject.setSubjectNameFormatString(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
+        deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
+        deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
+        deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize.class)); });
+        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
+        deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
+        deserializerMap.put("rootCertificate", (n) -> { this.setRootCertificate(n.getObjectValue(IosTrustedRootCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("scepServerUrls", (n) -> { this.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("subjectAlternativeNameFormatString", (n) -> { this.setSubjectAlternativeNameFormatString(n.getStringValue()); });
+        deserializerMap.put("subjectNameFormatString", (n) -> { this.setSubjectNameFormatString(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the keySize property value. Key Size Options.
@@ -96,7 +118,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      */
     @javax.annotation.Nullable
     public KeySize getKeySize() {
-        return this._keySize;
+        return this.keySize;
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
@@ -104,7 +126,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      */
     @javax.annotation.Nullable
     public KeyUsages getKeyUsage() {
-        return this._keyUsage;
+        return this.keyUsage;
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
@@ -112,7 +134,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this._managedDeviceCertificateStates;
+        return this.managedDeviceCertificateStates;
     }
     /**
      * Gets the rootCertificate property value. Trusted Root Certificate.
@@ -120,7 +142,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      */
     @javax.annotation.Nullable
     public IosTrustedRootCertificate getRootCertificate() {
-        return this._rootCertificate;
+        return this.rootCertificate;
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s).
@@ -128,7 +150,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      */
     @javax.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
-        return this._scepServerUrls;
+        return this.scepServerUrls;
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
@@ -136,7 +158,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      */
     @javax.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this._subjectAlternativeNameFormatString;
+        return this.subjectAlternativeNameFormatString;
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -144,13 +166,14 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      */
     @javax.annotation.Nullable
     public String getSubjectNameFormatString() {
-        return this._subjectNameFormatString;
+        return this.subjectNameFormatString;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,79 +193,89 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * @param value Value to set for the certificateStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateStore(@javax.annotation.Nullable final CertificateStore value) {
-        this._certificateStore = value;
+        this.certificateStore = value;
     }
     /**
      * Sets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the customSubjectAlternativeNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSubjectAlternativeNames(@javax.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
-        this._customSubjectAlternativeNames = value;
+        this.customSubjectAlternativeNames = value;
     }
     /**
      * Sets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the extendedKeyUsages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtendedKeyUsages(@javax.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
-        this._extendedKeyUsages = value;
+        this.extendedKeyUsages = value;
     }
     /**
      * Sets the keySize property value. Key Size Options.
      * @param value Value to set for the keySize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeySize(@javax.annotation.Nullable final KeySize value) {
-        this._keySize = value;
+        this.keySize = value;
     }
     /**
      * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyUsage(@javax.annotation.Nullable final KeyUsages value) {
-        this._keyUsage = value;
+        this.keyUsage = value;
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this._managedDeviceCertificateStates = value;
+        this.managedDeviceCertificateStates = value;
     }
     /**
      * Sets the rootCertificate property value. Trusted Root Certificate.
      * @param value Value to set for the rootCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificate(@javax.annotation.Nullable final IosTrustedRootCertificate value) {
-        this._rootCertificate = value;
+        this.rootCertificate = value;
     }
     /**
      * Sets the scepServerUrls property value. SCEP Server Url(s).
      * @param value Value to set for the scepServerUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScepServerUrls(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._scepServerUrls = value;
+        this.scepServerUrls = value;
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
-        this._subjectAlternativeNameFormatString = value;
+        this.subjectAlternativeNameFormatString = value;
     }
     /**
      * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
-        this._subjectNameFormatString = value;
+        this.subjectNameFormatString = value;
     }
 }

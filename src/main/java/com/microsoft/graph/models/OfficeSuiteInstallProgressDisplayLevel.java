@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * The Enum to specify the level of display for the Installation Progress Setup UI on the Device.
+ */
 public enum OfficeSuiteInstallProgressDisplayLevel implements ValuedEnum {
     None("none"),
     Full("full");

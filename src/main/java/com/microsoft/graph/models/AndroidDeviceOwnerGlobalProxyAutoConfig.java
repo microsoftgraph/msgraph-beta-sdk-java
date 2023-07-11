@@ -3,17 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Android Device Owner Global Proxy.
+ */
 public class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerGlobalProxy implements Parsable {
-    /** The proxy auto-config URL */
-    private String _proxyAutoConfigURL;
     /**
-     * Instantiates a new AndroidDeviceOwnerGlobalProxyAutoConfig and sets the default values.
+     * The proxy auto-config URL
+     */
+    private String proxyAutoConfigURL;
+    /**
+     * Instantiates a new androidDeviceOwnerGlobalProxyAutoConfig and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerGlobalProxyAutoConfig() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerGlobalProxyAutoConfig");
@@ -21,7 +26,7 @@ public class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerG
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidDeviceOwnerGlobalProxyAutoConfig
+     * @return a androidDeviceOwnerGlobalProxyAutoConfig
      */
     @javax.annotation.Nonnull
     public static AndroidDeviceOwnerGlobalProxyAutoConfig createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,14 +35,13 @@ public class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerG
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidDeviceOwnerGlobalProxyAutoConfig currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("proxyAutoConfigURL", (n) -> { currentObject.setProxyAutoConfigURL(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("proxyAutoConfigURL", (n) -> { this.setProxyAutoConfigURL(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the proxyAutoConfigURL property value. The proxy auto-config URL
@@ -45,13 +49,14 @@ public class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerG
      */
     @javax.annotation.Nullable
     public String getProxyAutoConfigURL() {
-        return this._proxyAutoConfigURL;
+        return this.proxyAutoConfigURL;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +67,8 @@ public class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerG
      * @param value Value to set for the proxyAutoConfigURL property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyAutoConfigURL(@javax.annotation.Nullable final String value) {
-        this._proxyAutoConfigURL = value;
+        this.proxyAutoConfigURL = value;
     }
 }

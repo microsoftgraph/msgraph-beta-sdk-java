@@ -3,27 +3,42 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Base class to detect a Win32 App
+ */
 public class Win32LobAppRegistryDetection extends Win32LobAppDetection implements Parsable {
-    /** A value indicating whether this registry path is for checking 32-bit app on 64-bit system */
-    private Boolean _check32BitOn64System;
-    /** Contains all supported registry data detection type. */
-    private Win32LobAppRegistryDetectionType _detectionType;
-    /** The registry detection value */
-    private String _detectionValue;
-    /** The registry key path to detect Win32 Line of Business (LoB) app */
-    private String _keyPath;
-    /** Contains properties for detection operator. */
-    private Win32LobAppDetectionOperator _operator;
-    /** The registry value name */
-    private String _valueName;
     /**
-     * Instantiates a new Win32LobAppRegistryDetection and sets the default values.
+     * A value indicating whether this registry path is for checking 32-bit app on 64-bit system
+     */
+    private Boolean check32BitOn64System;
+    /**
+     * Contains all supported registry data detection type.
+     */
+    private Win32LobAppRegistryDetectionType detectionType;
+    /**
+     * The registry detection value
+     */
+    private String detectionValue;
+    /**
+     * The registry key path to detect Win32 Line of Business (LoB) app
+     */
+    private String keyPath;
+    /**
+     * Contains properties for detection operator.
+     */
+    private Win32LobAppDetectionOperator operator;
+    /**
+     * The registry value name
+     */
+    private String valueName;
+    /**
+     * Instantiates a new win32LobAppRegistryDetection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppRegistryDetection() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppRegistryDetection");
@@ -31,7 +46,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Win32LobAppRegistryDetection
+     * @return a win32LobAppRegistryDetection
      */
     @javax.annotation.Nonnull
     public static Win32LobAppRegistryDetection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +59,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      */
     @javax.annotation.Nullable
     public Boolean getCheck32BitOn64System() {
-        return this._check32BitOn64System;
+        return this.check32BitOn64System;
     }
     /**
      * Gets the detectionType property value. Contains all supported registry data detection type.
@@ -52,7 +67,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      */
     @javax.annotation.Nullable
     public Win32LobAppRegistryDetectionType getDetectionType() {
-        return this._detectionType;
+        return this.detectionType;
     }
     /**
      * Gets the detectionValue property value. The registry detection value
@@ -60,23 +75,22 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      */
     @javax.annotation.Nullable
     public String getDetectionValue() {
-        return this._detectionValue;
+        return this.detectionValue;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Win32LobAppRegistryDetection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
-            this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getEnumValue(Win32LobAppRegistryDetectionType.class)); });
-            this.put("detectionValue", (n) -> { currentObject.setDetectionValue(n.getStringValue()); });
-            this.put("keyPath", (n) -> { currentObject.setKeyPath(n.getStringValue()); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Win32LobAppDetectionOperator.class)); });
-            this.put("valueName", (n) -> { currentObject.setValueName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("check32BitOn64System", (n) -> { this.setCheck32BitOn64System(n.getBooleanValue()); });
+        deserializerMap.put("detectionType", (n) -> { this.setDetectionType(n.getEnumValue(Win32LobAppRegistryDetectionType.class)); });
+        deserializerMap.put("detectionValue", (n) -> { this.setDetectionValue(n.getStringValue()); });
+        deserializerMap.put("keyPath", (n) -> { this.setKeyPath(n.getStringValue()); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(Win32LobAppDetectionOperator.class)); });
+        deserializerMap.put("valueName", (n) -> { this.setValueName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the keyPath property value. The registry key path to detect Win32 Line of Business (LoB) app
@@ -84,7 +98,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      */
     @javax.annotation.Nullable
     public String getKeyPath() {
-        return this._keyPath;
+        return this.keyPath;
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
@@ -92,7 +106,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      */
     @javax.annotation.Nullable
     public Win32LobAppDetectionOperator getOperator() {
-        return this._operator;
+        return this.operator;
     }
     /**
      * Gets the valueName property value. The registry value name
@@ -100,13 +114,14 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      */
     @javax.annotation.Nullable
     public String getValueName() {
-        return this._valueName;
+        return this.valueName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,47 +137,53 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      * @param value Value to set for the check32BitOn64System property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCheck32BitOn64System(@javax.annotation.Nullable final Boolean value) {
-        this._check32BitOn64System = value;
+        this.check32BitOn64System = value;
     }
     /**
      * Sets the detectionType property value. Contains all supported registry data detection type.
      * @param value Value to set for the detectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionType(@javax.annotation.Nullable final Win32LobAppRegistryDetectionType value) {
-        this._detectionType = value;
+        this.detectionType = value;
     }
     /**
      * Sets the detectionValue property value. The registry detection value
      * @param value Value to set for the detectionValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionValue(@javax.annotation.Nullable final String value) {
-        this._detectionValue = value;
+        this.detectionValue = value;
     }
     /**
      * Sets the keyPath property value. The registry key path to detect Win32 Line of Business (LoB) app
      * @param value Value to set for the keyPath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyPath(@javax.annotation.Nullable final String value) {
-        this._keyPath = value;
+        this.keyPath = value;
     }
     /**
      * Sets the operator property value. Contains properties for detection operator.
      * @param value Value to set for the operator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final Win32LobAppDetectionOperator value) {
-        this._operator = value;
+        this.operator = value;
     }
     /**
      * Sets the valueName property value. The registry value name
      * @param value Value to set for the valueName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueName(@javax.annotation.Nullable final String value) {
-        this._valueName = value;
+        this.valueName = value;
     }
 }

@@ -4,48 +4,77 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The property to determine if Android device administrator enrollment is enabled for this account. */
-    private Boolean _androidDeviceAdministratorEnrollmentEnabled;
-    /** Provider type for Derived Credentials. */
-    private DerivedCredentialProviderType _derivedCredentialProvider;
-    /** The Derived Credential Provider self-service URI. */
-    private String _derivedCredentialUrl;
-    /** The number of days a device is allowed to go without checking in to remain compliant. */
-    private Integer _deviceComplianceCheckinThresholdDays;
-    /** When the device does not check in for specified number of days, the company data might be removed and the device will not be under management. Valid values 30 to 270 */
-    private Integer _deviceInactivityBeforeRetirementInDay;
-    /** Determines whether the autopilot diagnostic feature is enabled or not. */
-    private Boolean _enableAutopilotDiagnostics;
-    /** Determines whether the device group membership report feature is enabled or not. */
-    private Boolean _enableDeviceGroupMembershipReport;
-    /** Determines whether the enhanced troubleshooting UX is enabled or not. */
-    private Boolean _enableEnhancedTroubleshootingExperience;
-    /** Determines whether the log collection feature should be available for use. */
-    private Boolean _enableLogCollection;
-    /** Is feature enabled or not for enhanced jailbreak detection. */
-    private Boolean _enhancedJailBreak;
-    /** The property to determine whether to ignore unsupported compliance settings on certian models of devices. */
-    private Boolean _ignoreDevicesForUnsupportedSettingsEnabled;
-    /** Is feature enabled or not for scheduled action for rule. */
-    private Boolean _isScheduledActionEnabled;
-    /** The OdataType property */
-    private String _odataType;
-    /** Device should be noncompliant when there is no compliance policy targeted when this is true */
-    private Boolean _secureByDefault;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The property to determine if Android device administrator enrollment is enabled for this account.
+     */
+    private Boolean androidDeviceAdministratorEnrollmentEnabled;
+    /**
+     * Provider type for Derived Credentials.
+     */
+    private DerivedCredentialProviderType derivedCredentialProvider;
+    /**
+     * The Derived Credential Provider self-service URI.
+     */
+    private String derivedCredentialUrl;
+    /**
+     * The number of days a device is allowed to go without checking in to remain compliant.
+     */
+    private Integer deviceComplianceCheckinThresholdDays;
+    /**
+     * When the device does not check in for specified number of days, the company data might be removed and the device will not be under management. Valid values 30 to 270
+     */
+    private Integer deviceInactivityBeforeRetirementInDay;
+    /**
+     * Determines whether the autopilot diagnostic feature is enabled or not.
+     */
+    private Boolean enableAutopilotDiagnostics;
+    /**
+     * Determines whether the device group membership report feature is enabled or not.
+     */
+    private Boolean enableDeviceGroupMembershipReport;
+    /**
+     * Determines whether the enhanced troubleshooting UX is enabled or not.
+     */
+    private Boolean enableEnhancedTroubleshootingExperience;
+    /**
+     * Determines whether the log collection feature should be available for use.
+     */
+    private Boolean enableLogCollection;
+    /**
+     * Is feature enabled or not for enhanced jailbreak detection.
+     */
+    private Boolean enhancedJailBreak;
+    /**
+     * The property to determine whether to ignore unsupported compliance settings on certian models of devices.
+     */
+    private Boolean ignoreDevicesForUnsupportedSettingsEnabled;
+    /**
+     * Is feature enabled or not for scheduled action for rule.
+     */
+    private Boolean isScheduledActionEnabled;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Device should be noncompliant when there is no compliance policy targeted when this is true
+     */
+    private Boolean secureByDefault;
     /**
      * Instantiates a new deviceManagementSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,7 +92,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the androidDeviceAdministratorEnrollmentEnabled property value. The property to determine if Android device administrator enrollment is enabled for this account.
@@ -71,7 +100,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getAndroidDeviceAdministratorEnrollmentEnabled() {
-        return this._androidDeviceAdministratorEnrollmentEnabled;
+        return this.androidDeviceAdministratorEnrollmentEnabled;
     }
     /**
      * Gets the derivedCredentialProvider property value. Provider type for Derived Credentials.
@@ -79,7 +108,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public DerivedCredentialProviderType getDerivedCredentialProvider() {
-        return this._derivedCredentialProvider;
+        return this.derivedCredentialProvider;
     }
     /**
      * Gets the derivedCredentialUrl property value. The Derived Credential Provider self-service URI.
@@ -87,7 +116,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getDerivedCredentialUrl() {
-        return this._derivedCredentialUrl;
+        return this.derivedCredentialUrl;
     }
     /**
      * Gets the deviceComplianceCheckinThresholdDays property value. The number of days a device is allowed to go without checking in to remain compliant.
@@ -95,7 +124,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Integer getDeviceComplianceCheckinThresholdDays() {
-        return this._deviceComplianceCheckinThresholdDays;
+        return this.deviceComplianceCheckinThresholdDays;
     }
     /**
      * Gets the deviceInactivityBeforeRetirementInDay property value. When the device does not check in for specified number of days, the company data might be removed and the device will not be under management. Valid values 30 to 270
@@ -103,7 +132,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Integer getDeviceInactivityBeforeRetirementInDay() {
-        return this._deviceInactivityBeforeRetirementInDay;
+        return this.deviceInactivityBeforeRetirementInDay;
     }
     /**
      * Gets the enableAutopilotDiagnostics property value. Determines whether the autopilot diagnostic feature is enabled or not.
@@ -111,7 +140,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getEnableAutopilotDiagnostics() {
-        return this._enableAutopilotDiagnostics;
+        return this.enableAutopilotDiagnostics;
     }
     /**
      * Gets the enableDeviceGroupMembershipReport property value. Determines whether the device group membership report feature is enabled or not.
@@ -119,7 +148,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getEnableDeviceGroupMembershipReport() {
-        return this._enableDeviceGroupMembershipReport;
+        return this.enableDeviceGroupMembershipReport;
     }
     /**
      * Gets the enableEnhancedTroubleshootingExperience property value. Determines whether the enhanced troubleshooting UX is enabled or not.
@@ -127,7 +156,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getEnableEnhancedTroubleshootingExperience() {
-        return this._enableEnhancedTroubleshootingExperience;
+        return this.enableEnhancedTroubleshootingExperience;
     }
     /**
      * Gets the enableLogCollection property value. Determines whether the log collection feature should be available for use.
@@ -135,7 +164,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getEnableLogCollection() {
-        return this._enableLogCollection;
+        return this.enableLogCollection;
     }
     /**
      * Gets the enhancedJailBreak property value. Is feature enabled or not for enhanced jailbreak detection.
@@ -143,31 +172,30 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getEnhancedJailBreak() {
-        return this._enhancedJailBreak;
+        return this.enhancedJailBreak;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementSettings currentObject = this;
-        return new HashMap<>(14) {{
-            this.put("androidDeviceAdministratorEnrollmentEnabled", (n) -> { currentObject.setAndroidDeviceAdministratorEnrollmentEnabled(n.getBooleanValue()); });
-            this.put("derivedCredentialProvider", (n) -> { currentObject.setDerivedCredentialProvider(n.getEnumValue(DerivedCredentialProviderType.class)); });
-            this.put("derivedCredentialUrl", (n) -> { currentObject.setDerivedCredentialUrl(n.getStringValue()); });
-            this.put("deviceComplianceCheckinThresholdDays", (n) -> { currentObject.setDeviceComplianceCheckinThresholdDays(n.getIntegerValue()); });
-            this.put("deviceInactivityBeforeRetirementInDay", (n) -> { currentObject.setDeviceInactivityBeforeRetirementInDay(n.getIntegerValue()); });
-            this.put("enableAutopilotDiagnostics", (n) -> { currentObject.setEnableAutopilotDiagnostics(n.getBooleanValue()); });
-            this.put("enableDeviceGroupMembershipReport", (n) -> { currentObject.setEnableDeviceGroupMembershipReport(n.getBooleanValue()); });
-            this.put("enableEnhancedTroubleshootingExperience", (n) -> { currentObject.setEnableEnhancedTroubleshootingExperience(n.getBooleanValue()); });
-            this.put("enableLogCollection", (n) -> { currentObject.setEnableLogCollection(n.getBooleanValue()); });
-            this.put("enhancedJailBreak", (n) -> { currentObject.setEnhancedJailBreak(n.getBooleanValue()); });
-            this.put("ignoreDevicesForUnsupportedSettingsEnabled", (n) -> { currentObject.setIgnoreDevicesForUnsupportedSettingsEnabled(n.getBooleanValue()); });
-            this.put("isScheduledActionEnabled", (n) -> { currentObject.setIsScheduledActionEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("secureByDefault", (n) -> { currentObject.setSecureByDefault(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
+        deserializerMap.put("androidDeviceAdministratorEnrollmentEnabled", (n) -> { this.setAndroidDeviceAdministratorEnrollmentEnabled(n.getBooleanValue()); });
+        deserializerMap.put("derivedCredentialProvider", (n) -> { this.setDerivedCredentialProvider(n.getEnumValue(DerivedCredentialProviderType.class)); });
+        deserializerMap.put("derivedCredentialUrl", (n) -> { this.setDerivedCredentialUrl(n.getStringValue()); });
+        deserializerMap.put("deviceComplianceCheckinThresholdDays", (n) -> { this.setDeviceComplianceCheckinThresholdDays(n.getIntegerValue()); });
+        deserializerMap.put("deviceInactivityBeforeRetirementInDay", (n) -> { this.setDeviceInactivityBeforeRetirementInDay(n.getIntegerValue()); });
+        deserializerMap.put("enableAutopilotDiagnostics", (n) -> { this.setEnableAutopilotDiagnostics(n.getBooleanValue()); });
+        deserializerMap.put("enableDeviceGroupMembershipReport", (n) -> { this.setEnableDeviceGroupMembershipReport(n.getBooleanValue()); });
+        deserializerMap.put("enableEnhancedTroubleshootingExperience", (n) -> { this.setEnableEnhancedTroubleshootingExperience(n.getBooleanValue()); });
+        deserializerMap.put("enableLogCollection", (n) -> { this.setEnableLogCollection(n.getBooleanValue()); });
+        deserializerMap.put("enhancedJailBreak", (n) -> { this.setEnhancedJailBreak(n.getBooleanValue()); });
+        deserializerMap.put("ignoreDevicesForUnsupportedSettingsEnabled", (n) -> { this.setIgnoreDevicesForUnsupportedSettingsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isScheduledActionEnabled", (n) -> { this.setIsScheduledActionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("secureByDefault", (n) -> { this.setSecureByDefault(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ignoreDevicesForUnsupportedSettingsEnabled property value. The property to determine whether to ignore unsupported compliance settings on certian models of devices.
@@ -175,7 +203,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getIgnoreDevicesForUnsupportedSettingsEnabled() {
-        return this._ignoreDevicesForUnsupportedSettingsEnabled;
+        return this.ignoreDevicesForUnsupportedSettingsEnabled;
     }
     /**
      * Gets the isScheduledActionEnabled property value. Is feature enabled or not for scheduled action for rule.
@@ -183,7 +211,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getIsScheduledActionEnabled() {
-        return this._isScheduledActionEnabled;
+        return this.isScheduledActionEnabled;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -191,7 +219,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
@@ -199,13 +227,14 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getSecureByDefault() {
-        return this._secureByDefault;
+        return this.secureByDefault;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("androidDeviceAdministratorEnrollmentEnabled", this.getAndroidDeviceAdministratorEnrollmentEnabled());
@@ -229,119 +258,134 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the androidDeviceAdministratorEnrollmentEnabled property value. The property to determine if Android device administrator enrollment is enabled for this account.
      * @param value Value to set for the androidDeviceAdministratorEnrollmentEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidDeviceAdministratorEnrollmentEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._androidDeviceAdministratorEnrollmentEnabled = value;
+        this.androidDeviceAdministratorEnrollmentEnabled = value;
     }
     /**
      * Sets the derivedCredentialProvider property value. Provider type for Derived Credentials.
      * @param value Value to set for the derivedCredentialProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialProvider(@javax.annotation.Nullable final DerivedCredentialProviderType value) {
-        this._derivedCredentialProvider = value;
+        this.derivedCredentialProvider = value;
     }
     /**
      * Sets the derivedCredentialUrl property value. The Derived Credential Provider self-service URI.
      * @param value Value to set for the derivedCredentialUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialUrl(@javax.annotation.Nullable final String value) {
-        this._derivedCredentialUrl = value;
+        this.derivedCredentialUrl = value;
     }
     /**
      * Sets the deviceComplianceCheckinThresholdDays property value. The number of days a device is allowed to go without checking in to remain compliant.
      * @param value Value to set for the deviceComplianceCheckinThresholdDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceComplianceCheckinThresholdDays(@javax.annotation.Nullable final Integer value) {
-        this._deviceComplianceCheckinThresholdDays = value;
+        this.deviceComplianceCheckinThresholdDays = value;
     }
     /**
      * Sets the deviceInactivityBeforeRetirementInDay property value. When the device does not check in for specified number of days, the company data might be removed and the device will not be under management. Valid values 30 to 270
      * @param value Value to set for the deviceInactivityBeforeRetirementInDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceInactivityBeforeRetirementInDay(@javax.annotation.Nullable final Integer value) {
-        this._deviceInactivityBeforeRetirementInDay = value;
+        this.deviceInactivityBeforeRetirementInDay = value;
     }
     /**
      * Sets the enableAutopilotDiagnostics property value. Determines whether the autopilot diagnostic feature is enabled or not.
      * @param value Value to set for the enableAutopilotDiagnostics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableAutopilotDiagnostics(@javax.annotation.Nullable final Boolean value) {
-        this._enableAutopilotDiagnostics = value;
+        this.enableAutopilotDiagnostics = value;
     }
     /**
      * Sets the enableDeviceGroupMembershipReport property value. Determines whether the device group membership report feature is enabled or not.
      * @param value Value to set for the enableDeviceGroupMembershipReport property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableDeviceGroupMembershipReport(@javax.annotation.Nullable final Boolean value) {
-        this._enableDeviceGroupMembershipReport = value;
+        this.enableDeviceGroupMembershipReport = value;
     }
     /**
      * Sets the enableEnhancedTroubleshootingExperience property value. Determines whether the enhanced troubleshooting UX is enabled or not.
      * @param value Value to set for the enableEnhancedTroubleshootingExperience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableEnhancedTroubleshootingExperience(@javax.annotation.Nullable final Boolean value) {
-        this._enableEnhancedTroubleshootingExperience = value;
+        this.enableEnhancedTroubleshootingExperience = value;
     }
     /**
      * Sets the enableLogCollection property value. Determines whether the log collection feature should be available for use.
      * @param value Value to set for the enableLogCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableLogCollection(@javax.annotation.Nullable final Boolean value) {
-        this._enableLogCollection = value;
+        this.enableLogCollection = value;
     }
     /**
      * Sets the enhancedJailBreak property value. Is feature enabled or not for enhanced jailbreak detection.
      * @param value Value to set for the enhancedJailBreak property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnhancedJailBreak(@javax.annotation.Nullable final Boolean value) {
-        this._enhancedJailBreak = value;
+        this.enhancedJailBreak = value;
     }
     /**
      * Sets the ignoreDevicesForUnsupportedSettingsEnabled property value. The property to determine whether to ignore unsupported compliance settings on certian models of devices.
      * @param value Value to set for the ignoreDevicesForUnsupportedSettingsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIgnoreDevicesForUnsupportedSettingsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._ignoreDevicesForUnsupportedSettingsEnabled = value;
+        this.ignoreDevicesForUnsupportedSettingsEnabled = value;
     }
     /**
      * Sets the isScheduledActionEnabled property value. Is feature enabled or not for scheduled action for rule.
      * @param value Value to set for the isScheduledActionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsScheduledActionEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isScheduledActionEnabled = value;
+        this.isScheduledActionEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
      * @param value Value to set for the secureByDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecureByDefault(@javax.annotation.Nullable final Boolean value) {
-        this._secureByDefault = value;
+        this.secureByDefault = value;
     }
 }

@@ -4,74 +4,129 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class NetworkInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent. */
-    private Float _bandwidthLowEventRatio;
-    /** The wireless LAN basic service set identifier of the media endpoint used to connect to the network. */
-    private String _basicServiceSetIdentifier;
-    /** The connectionType property */
-    private NetworkConnectionType _connectionType;
-    /** Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication. */
-    private Float _delayEventRatio;
-    /** DNS suffix associated with the network adapter of the media endpoint. */
-    private String _dnsSuffix;
-    /** IP address of the media endpoint. */
-    private String _ipAddress;
-    /** Link speed in bits per second reported by the network adapter used by the media endpoint. */
-    private Long _linkSpeed;
-    /** The media access control (MAC) address of the media endpoint's network device. */
-    private String _macAddress;
-    /** The networkTransportProtocol property */
-    private NetworkTransportProtocol _networkTransportProtocol;
-    /** The OdataType property */
-    private String _odataType;
-    /** Network port number used by media endpoint. */
-    private Integer _port;
-    /** Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received. */
-    private Float _receivedQualityEventRatio;
-    /** IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint. */
-    private String _reflexiveIPAddress;
-    /** IP address of the media relay server allocated by the media endpoint. */
-    private String _relayIPAddress;
-    /** Network port number allocated on the media relay server by the media endpoint. */
-    private Integer _relayPort;
-    /** Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent. */
-    private Float _sentQualityEventRatio;
-    /** Subnet used for media stream by the media endpoint. */
-    private String _subnet;
-    /** List of network trace route hops collected for this media stream.* */
-    private java.util.List<TraceRouteHop> _traceRouteHops;
-    /** The wifiBand property */
-    private WifiBand _wifiBand;
-    /** Estimated remaining battery charge in percentage reported by the media endpoint. */
-    private Integer _wifiBatteryCharge;
-    /** WiFi channel used by the media endpoint. */
-    private Integer _wifiChannel;
-    /** Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint. */
-    private String _wifiMicrosoftDriver;
-    /** Version of the Microsoft WiFi driver used by the media endpoint. */
-    private String _wifiMicrosoftDriverVersion;
-    /** The wifiRadioType property */
-    private WifiRadioType _wifiRadioType;
-    /** WiFi signal strength in percentage reported by the media endpoint. */
-    private Integer _wifiSignalStrength;
-    /** Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint. */
-    private String _wifiVendorDriver;
-    /** Version of the WiFi driver used by the media endpoint. */
-    private String _wifiVendorDriverVersion;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
+     */
+    private Float bandwidthLowEventRatio;
+    /**
+     * The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
+     */
+    private String basicServiceSetIdentifier;
+    /**
+     * The connectionType property
+     */
+    private NetworkConnectionType connectionType;
+    /**
+     * Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
+     */
+    private Float delayEventRatio;
+    /**
+     * DNS suffix associated with the network adapter of the media endpoint.
+     */
+    private String dnsSuffix;
+    /**
+     * IP address of the media endpoint.
+     */
+    private String ipAddress;
+    /**
+     * Link speed in bits per second reported by the network adapter used by the media endpoint.
+     */
+    private Long linkSpeed;
+    /**
+     * The media access control (MAC) address of the media endpoint's network device.
+     */
+    private String macAddress;
+    /**
+     * The networkTransportProtocol property
+     */
+    private NetworkTransportProtocol networkTransportProtocol;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Network port number used by media endpoint.
+     */
+    private Integer port;
+    /**
+     * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
+     */
+    private Float receivedQualityEventRatio;
+    /**
+     * IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
+     */
+    private String reflexiveIPAddress;
+    /**
+     * IP address of the media relay server allocated by the media endpoint.
+     */
+    private String relayIPAddress;
+    /**
+     * Network port number allocated on the media relay server by the media endpoint.
+     */
+    private Integer relayPort;
+    /**
+     * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
+     */
+    private Float sentQualityEventRatio;
+    /**
+     * Subnet used for media stream by the media endpoint.
+     */
+    private String subnet;
+    /**
+     * List of network trace route hops collected for this media stream.*
+     */
+    private java.util.List<TraceRouteHop> traceRouteHops;
+    /**
+     * The wifiBand property
+     */
+    private WifiBand wifiBand;
+    /**
+     * Estimated remaining battery charge in percentage reported by the media endpoint.
+     */
+    private Integer wifiBatteryCharge;
+    /**
+     * WiFi channel used by the media endpoint.
+     */
+    private Integer wifiChannel;
+    /**
+     * Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
+     */
+    private String wifiMicrosoftDriver;
+    /**
+     * Version of the Microsoft WiFi driver used by the media endpoint.
+     */
+    private String wifiMicrosoftDriverVersion;
+    /**
+     * The wifiRadioType property
+     */
+    private WifiRadioType wifiRadioType;
+    /**
+     * WiFi signal strength in percentage reported by the media endpoint.
+     */
+    private Integer wifiSignalStrength;
+    /**
+     * Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
+     */
+    private String wifiVendorDriver;
+    /**
+     * Version of the WiFi driver used by the media endpoint.
+     */
+    private String wifiVendorDriverVersion;
     /**
      * Instantiates a new networkInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public NetworkInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.networkInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,7 +144,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the bandwidthLowEventRatio property value. Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
@@ -97,7 +152,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getBandwidthLowEventRatio() {
-        return this._bandwidthLowEventRatio;
+        return this.bandwidthLowEventRatio;
     }
     /**
      * Gets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
@@ -105,7 +160,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getBasicServiceSetIdentifier() {
-        return this._basicServiceSetIdentifier;
+        return this.basicServiceSetIdentifier;
     }
     /**
      * Gets the connectionType property value. The connectionType property
@@ -113,7 +168,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public NetworkConnectionType getConnectionType() {
-        return this._connectionType;
+        return this.connectionType;
     }
     /**
      * Gets the delayEventRatio property value. Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
@@ -121,7 +176,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getDelayEventRatio() {
-        return this._delayEventRatio;
+        return this.delayEventRatio;
     }
     /**
      * Gets the dnsSuffix property value. DNS suffix associated with the network adapter of the media endpoint.
@@ -129,44 +184,43 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDnsSuffix() {
-        return this._dnsSuffix;
+        return this.dnsSuffix;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final NetworkInfo currentObject = this;
-        return new HashMap<>(27) {{
-            this.put("bandwidthLowEventRatio", (n) -> { currentObject.setBandwidthLowEventRatio(n.getFloatValue()); });
-            this.put("basicServiceSetIdentifier", (n) -> { currentObject.setBasicServiceSetIdentifier(n.getStringValue()); });
-            this.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(NetworkConnectionType.class)); });
-            this.put("delayEventRatio", (n) -> { currentObject.setDelayEventRatio(n.getFloatValue()); });
-            this.put("dnsSuffix", (n) -> { currentObject.setDnsSuffix(n.getStringValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("linkSpeed", (n) -> { currentObject.setLinkSpeed(n.getLongValue()); });
-            this.put("macAddress", (n) -> { currentObject.setMacAddress(n.getStringValue()); });
-            this.put("networkTransportProtocol", (n) -> { currentObject.setNetworkTransportProtocol(n.getEnumValue(NetworkTransportProtocol.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("port", (n) -> { currentObject.setPort(n.getIntegerValue()); });
-            this.put("receivedQualityEventRatio", (n) -> { currentObject.setReceivedQualityEventRatio(n.getFloatValue()); });
-            this.put("reflexiveIPAddress", (n) -> { currentObject.setReflexiveIPAddress(n.getStringValue()); });
-            this.put("relayIPAddress", (n) -> { currentObject.setRelayIPAddress(n.getStringValue()); });
-            this.put("relayPort", (n) -> { currentObject.setRelayPort(n.getIntegerValue()); });
-            this.put("sentQualityEventRatio", (n) -> { currentObject.setSentQualityEventRatio(n.getFloatValue()); });
-            this.put("subnet", (n) -> { currentObject.setSubnet(n.getStringValue()); });
-            this.put("traceRouteHops", (n) -> { currentObject.setTraceRouteHops(n.getCollectionOfObjectValues(TraceRouteHop::createFromDiscriminatorValue)); });
-            this.put("wifiBand", (n) -> { currentObject.setWifiBand(n.getEnumValue(WifiBand.class)); });
-            this.put("wifiBatteryCharge", (n) -> { currentObject.setWifiBatteryCharge(n.getIntegerValue()); });
-            this.put("wifiChannel", (n) -> { currentObject.setWifiChannel(n.getIntegerValue()); });
-            this.put("wifiMicrosoftDriver", (n) -> { currentObject.setWifiMicrosoftDriver(n.getStringValue()); });
-            this.put("wifiMicrosoftDriverVersion", (n) -> { currentObject.setWifiMicrosoftDriverVersion(n.getStringValue()); });
-            this.put("wifiRadioType", (n) -> { currentObject.setWifiRadioType(n.getEnumValue(WifiRadioType.class)); });
-            this.put("wifiSignalStrength", (n) -> { currentObject.setWifiSignalStrength(n.getIntegerValue()); });
-            this.put("wifiVendorDriver", (n) -> { currentObject.setWifiVendorDriver(n.getStringValue()); });
-            this.put("wifiVendorDriverVersion", (n) -> { currentObject.setWifiVendorDriverVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(27);
+        deserializerMap.put("bandwidthLowEventRatio", (n) -> { this.setBandwidthLowEventRatio(n.getFloatValue()); });
+        deserializerMap.put("basicServiceSetIdentifier", (n) -> { this.setBasicServiceSetIdentifier(n.getStringValue()); });
+        deserializerMap.put("connectionType", (n) -> { this.setConnectionType(n.getEnumValue(NetworkConnectionType.class)); });
+        deserializerMap.put("delayEventRatio", (n) -> { this.setDelayEventRatio(n.getFloatValue()); });
+        deserializerMap.put("dnsSuffix", (n) -> { this.setDnsSuffix(n.getStringValue()); });
+        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("linkSpeed", (n) -> { this.setLinkSpeed(n.getLongValue()); });
+        deserializerMap.put("macAddress", (n) -> { this.setMacAddress(n.getStringValue()); });
+        deserializerMap.put("networkTransportProtocol", (n) -> { this.setNetworkTransportProtocol(n.getEnumValue(NetworkTransportProtocol.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
+        deserializerMap.put("receivedQualityEventRatio", (n) -> { this.setReceivedQualityEventRatio(n.getFloatValue()); });
+        deserializerMap.put("reflexiveIPAddress", (n) -> { this.setReflexiveIPAddress(n.getStringValue()); });
+        deserializerMap.put("relayIPAddress", (n) -> { this.setRelayIPAddress(n.getStringValue()); });
+        deserializerMap.put("relayPort", (n) -> { this.setRelayPort(n.getIntegerValue()); });
+        deserializerMap.put("sentQualityEventRatio", (n) -> { this.setSentQualityEventRatio(n.getFloatValue()); });
+        deserializerMap.put("subnet", (n) -> { this.setSubnet(n.getStringValue()); });
+        deserializerMap.put("traceRouteHops", (n) -> { this.setTraceRouteHops(n.getCollectionOfObjectValues(TraceRouteHop::createFromDiscriminatorValue)); });
+        deserializerMap.put("wifiBand", (n) -> { this.setWifiBand(n.getEnumValue(WifiBand.class)); });
+        deserializerMap.put("wifiBatteryCharge", (n) -> { this.setWifiBatteryCharge(n.getIntegerValue()); });
+        deserializerMap.put("wifiChannel", (n) -> { this.setWifiChannel(n.getIntegerValue()); });
+        deserializerMap.put("wifiMicrosoftDriver", (n) -> { this.setWifiMicrosoftDriver(n.getStringValue()); });
+        deserializerMap.put("wifiMicrosoftDriverVersion", (n) -> { this.setWifiMicrosoftDriverVersion(n.getStringValue()); });
+        deserializerMap.put("wifiRadioType", (n) -> { this.setWifiRadioType(n.getEnumValue(WifiRadioType.class)); });
+        deserializerMap.put("wifiSignalStrength", (n) -> { this.setWifiSignalStrength(n.getIntegerValue()); });
+        deserializerMap.put("wifiVendorDriver", (n) -> { this.setWifiVendorDriver(n.getStringValue()); });
+        deserializerMap.put("wifiVendorDriverVersion", (n) -> { this.setWifiVendorDriverVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddress property value. IP address of the media endpoint.
@@ -174,7 +228,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getIpAddress() {
-        return this._ipAddress;
+        return this.ipAddress;
     }
     /**
      * Gets the linkSpeed property value. Link speed in bits per second reported by the network adapter used by the media endpoint.
@@ -182,7 +236,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Long getLinkSpeed() {
-        return this._linkSpeed;
+        return this.linkSpeed;
     }
     /**
      * Gets the macAddress property value. The media access control (MAC) address of the media endpoint's network device.
@@ -190,7 +244,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMacAddress() {
-        return this._macAddress;
+        return this.macAddress;
     }
     /**
      * Gets the networkTransportProtocol property value. The networkTransportProtocol property
@@ -198,7 +252,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public NetworkTransportProtocol getNetworkTransportProtocol() {
-        return this._networkTransportProtocol;
+        return this.networkTransportProtocol;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -206,7 +260,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the port property value. Network port number used by media endpoint.
@@ -214,7 +268,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPort() {
-        return this._port;
+        return this.port;
     }
     /**
      * Gets the receivedQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
@@ -222,7 +276,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getReceivedQualityEventRatio() {
-        return this._receivedQualityEventRatio;
+        return this.receivedQualityEventRatio;
     }
     /**
      * Gets the reflexiveIPAddress property value. IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
@@ -230,7 +284,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getReflexiveIPAddress() {
-        return this._reflexiveIPAddress;
+        return this.reflexiveIPAddress;
     }
     /**
      * Gets the relayIPAddress property value. IP address of the media relay server allocated by the media endpoint.
@@ -238,7 +292,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRelayIPAddress() {
-        return this._relayIPAddress;
+        return this.relayIPAddress;
     }
     /**
      * Gets the relayPort property value. Network port number allocated on the media relay server by the media endpoint.
@@ -246,7 +300,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getRelayPort() {
-        return this._relayPort;
+        return this.relayPort;
     }
     /**
      * Gets the sentQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
@@ -254,7 +308,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getSentQualityEventRatio() {
-        return this._sentQualityEventRatio;
+        return this.sentQualityEventRatio;
     }
     /**
      * Gets the subnet property value. Subnet used for media stream by the media endpoint.
@@ -262,7 +316,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSubnet() {
-        return this._subnet;
+        return this.subnet;
     }
     /**
      * Gets the traceRouteHops property value. List of network trace route hops collected for this media stream.*
@@ -270,7 +324,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TraceRouteHop> getTraceRouteHops() {
-        return this._traceRouteHops;
+        return this.traceRouteHops;
     }
     /**
      * Gets the wifiBand property value. The wifiBand property
@@ -278,7 +332,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public WifiBand getWifiBand() {
-        return this._wifiBand;
+        return this.wifiBand;
     }
     /**
      * Gets the wifiBatteryCharge property value. Estimated remaining battery charge in percentage reported by the media endpoint.
@@ -286,7 +340,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getWifiBatteryCharge() {
-        return this._wifiBatteryCharge;
+        return this.wifiBatteryCharge;
     }
     /**
      * Gets the wifiChannel property value. WiFi channel used by the media endpoint.
@@ -294,7 +348,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getWifiChannel() {
-        return this._wifiChannel;
+        return this.wifiChannel;
     }
     /**
      * Gets the wifiMicrosoftDriver property value. Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
@@ -302,7 +356,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getWifiMicrosoftDriver() {
-        return this._wifiMicrosoftDriver;
+        return this.wifiMicrosoftDriver;
     }
     /**
      * Gets the wifiMicrosoftDriverVersion property value. Version of the Microsoft WiFi driver used by the media endpoint.
@@ -310,7 +364,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getWifiMicrosoftDriverVersion() {
-        return this._wifiMicrosoftDriverVersion;
+        return this.wifiMicrosoftDriverVersion;
     }
     /**
      * Gets the wifiRadioType property value. The wifiRadioType property
@@ -318,7 +372,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public WifiRadioType getWifiRadioType() {
-        return this._wifiRadioType;
+        return this.wifiRadioType;
     }
     /**
      * Gets the wifiSignalStrength property value. WiFi signal strength in percentage reported by the media endpoint.
@@ -326,7 +380,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getWifiSignalStrength() {
-        return this._wifiSignalStrength;
+        return this.wifiSignalStrength;
     }
     /**
      * Gets the wifiVendorDriver property value. Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
@@ -334,7 +388,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getWifiVendorDriver() {
-        return this._wifiVendorDriver;
+        return this.wifiVendorDriver;
     }
     /**
      * Gets the wifiVendorDriverVersion property value. Version of the WiFi driver used by the media endpoint.
@@ -342,13 +396,14 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getWifiVendorDriverVersion() {
-        return this._wifiVendorDriverVersion;
+        return this.wifiVendorDriverVersion;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeFloatValue("bandwidthLowEventRatio", this.getBandwidthLowEventRatio());
@@ -385,223 +440,251 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the bandwidthLowEventRatio property value. Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
      * @param value Value to set for the bandwidthLowEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBandwidthLowEventRatio(@javax.annotation.Nullable final Float value) {
-        this._bandwidthLowEventRatio = value;
+        this.bandwidthLowEventRatio = value;
     }
     /**
      * Sets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
      * @param value Value to set for the basicServiceSetIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBasicServiceSetIdentifier(@javax.annotation.Nullable final String value) {
-        this._basicServiceSetIdentifier = value;
+        this.basicServiceSetIdentifier = value;
     }
     /**
      * Sets the connectionType property value. The connectionType property
      * @param value Value to set for the connectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionType(@javax.annotation.Nullable final NetworkConnectionType value) {
-        this._connectionType = value;
+        this.connectionType = value;
     }
     /**
      * Sets the delayEventRatio property value. Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
      * @param value Value to set for the delayEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDelayEventRatio(@javax.annotation.Nullable final Float value) {
-        this._delayEventRatio = value;
+        this.delayEventRatio = value;
     }
     /**
      * Sets the dnsSuffix property value. DNS suffix associated with the network adapter of the media endpoint.
      * @param value Value to set for the dnsSuffix property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDnsSuffix(@javax.annotation.Nullable final String value) {
-        this._dnsSuffix = value;
+        this.dnsSuffix = value;
     }
     /**
      * Sets the ipAddress property value. IP address of the media endpoint.
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
-        this._ipAddress = value;
+        this.ipAddress = value;
     }
     /**
      * Sets the linkSpeed property value. Link speed in bits per second reported by the network adapter used by the media endpoint.
      * @param value Value to set for the linkSpeed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinkSpeed(@javax.annotation.Nullable final Long value) {
-        this._linkSpeed = value;
+        this.linkSpeed = value;
     }
     /**
      * Sets the macAddress property value. The media access control (MAC) address of the media endpoint's network device.
      * @param value Value to set for the macAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacAddress(@javax.annotation.Nullable final String value) {
-        this._macAddress = value;
+        this.macAddress = value;
     }
     /**
      * Sets the networkTransportProtocol property value. The networkTransportProtocol property
      * @param value Value to set for the networkTransportProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkTransportProtocol(@javax.annotation.Nullable final NetworkTransportProtocol value) {
-        this._networkTransportProtocol = value;
+        this.networkTransportProtocol = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the port property value. Network port number used by media endpoint.
      * @param value Value to set for the port property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPort(@javax.annotation.Nullable final Integer value) {
-        this._port = value;
+        this.port = value;
     }
     /**
      * Sets the receivedQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
      * @param value Value to set for the receivedQualityEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedQualityEventRatio(@javax.annotation.Nullable final Float value) {
-        this._receivedQualityEventRatio = value;
+        this.receivedQualityEventRatio = value;
     }
     /**
      * Sets the reflexiveIPAddress property value. IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
      * @param value Value to set for the reflexiveIPAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReflexiveIPAddress(@javax.annotation.Nullable final String value) {
-        this._reflexiveIPAddress = value;
+        this.reflexiveIPAddress = value;
     }
     /**
      * Sets the relayIPAddress property value. IP address of the media relay server allocated by the media endpoint.
      * @param value Value to set for the relayIPAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelayIPAddress(@javax.annotation.Nullable final String value) {
-        this._relayIPAddress = value;
+        this.relayIPAddress = value;
     }
     /**
      * Sets the relayPort property value. Network port number allocated on the media relay server by the media endpoint.
      * @param value Value to set for the relayPort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelayPort(@javax.annotation.Nullable final Integer value) {
-        this._relayPort = value;
+        this.relayPort = value;
     }
     /**
      * Sets the sentQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
      * @param value Value to set for the sentQualityEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentQualityEventRatio(@javax.annotation.Nullable final Float value) {
-        this._sentQualityEventRatio = value;
+        this.sentQualityEventRatio = value;
     }
     /**
      * Sets the subnet property value. Subnet used for media stream by the media endpoint.
      * @param value Value to set for the subnet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubnet(@javax.annotation.Nullable final String value) {
-        this._subnet = value;
+        this.subnet = value;
     }
     /**
      * Sets the traceRouteHops property value. List of network trace route hops collected for this media stream.*
      * @param value Value to set for the traceRouteHops property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTraceRouteHops(@javax.annotation.Nullable final java.util.List<TraceRouteHop> value) {
-        this._traceRouteHops = value;
+        this.traceRouteHops = value;
     }
     /**
      * Sets the wifiBand property value. The wifiBand property
      * @param value Value to set for the wifiBand property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiBand(@javax.annotation.Nullable final WifiBand value) {
-        this._wifiBand = value;
+        this.wifiBand = value;
     }
     /**
      * Sets the wifiBatteryCharge property value. Estimated remaining battery charge in percentage reported by the media endpoint.
      * @param value Value to set for the wifiBatteryCharge property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiBatteryCharge(@javax.annotation.Nullable final Integer value) {
-        this._wifiBatteryCharge = value;
+        this.wifiBatteryCharge = value;
     }
     /**
      * Sets the wifiChannel property value. WiFi channel used by the media endpoint.
      * @param value Value to set for the wifiChannel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiChannel(@javax.annotation.Nullable final Integer value) {
-        this._wifiChannel = value;
+        this.wifiChannel = value;
     }
     /**
      * Sets the wifiMicrosoftDriver property value. Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
      * @param value Value to set for the wifiMicrosoftDriver property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiMicrosoftDriver(@javax.annotation.Nullable final String value) {
-        this._wifiMicrosoftDriver = value;
+        this.wifiMicrosoftDriver = value;
     }
     /**
      * Sets the wifiMicrosoftDriverVersion property value. Version of the Microsoft WiFi driver used by the media endpoint.
      * @param value Value to set for the wifiMicrosoftDriverVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiMicrosoftDriverVersion(@javax.annotation.Nullable final String value) {
-        this._wifiMicrosoftDriverVersion = value;
+        this.wifiMicrosoftDriverVersion = value;
     }
     /**
      * Sets the wifiRadioType property value. The wifiRadioType property
      * @param value Value to set for the wifiRadioType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiRadioType(@javax.annotation.Nullable final WifiRadioType value) {
-        this._wifiRadioType = value;
+        this.wifiRadioType = value;
     }
     /**
      * Sets the wifiSignalStrength property value. WiFi signal strength in percentage reported by the media endpoint.
      * @param value Value to set for the wifiSignalStrength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiSignalStrength(@javax.annotation.Nullable final Integer value) {
-        this._wifiSignalStrength = value;
+        this.wifiSignalStrength = value;
     }
     /**
      * Sets the wifiVendorDriver property value. Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
      * @param value Value to set for the wifiVendorDriver property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiVendorDriver(@javax.annotation.Nullable final String value) {
-        this._wifiVendorDriver = value;
+        this.wifiVendorDriver = value;
     }
     /**
      * Sets the wifiVendorDriverVersion property value. Version of the WiFi driver used by the media endpoint.
      * @param value Value to set for the wifiVendorDriverVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiVendorDriverVersion(@javax.annotation.Nullable final String value) {
-        this._wifiVendorDriverVersion = value;
+        this.wifiVendorDriverVersion = value;
     }
 }

@@ -4,26 +4,33 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable {
-    /** Time that the roleEligibilityScheduleInstance will expire. */
-    private OffsetDateTime _endDateTime;
-    /** Membership type of the assignment. It can either be Inherited, Direct, or Group. */
-    private String _memberType;
-    /** Identifier of the parent roleEligibilitySchedule for this instance. */
-    private String _roleEligibilityScheduleId;
-    /** Time that the roleEligibilityScheduleInstance will start. */
-    private OffsetDateTime _startDateTime;
+    /**
+     * Time that the roleEligibilityScheduleInstance will expire.
+     */
+    private OffsetDateTime endDateTime;
+    /**
+     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
+     */
+    private String memberType;
+    /**
+     * Identifier of the parent roleEligibilitySchedule for this instance.
+     */
+    private String roleEligibilityScheduleId;
+    /**
+     * Time that the roleEligibilityScheduleInstance will start.
+     */
+    private OffsetDateTime startDateTime;
     /**
      * Instantiates a new unifiedRoleEligibilityScheduleInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleEligibilityScheduleInstance() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleEligibilityScheduleInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,21 +48,20 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnifiedRoleEligibilityScheduleInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });
-            this.put("roleEligibilityScheduleId", (n) -> { currentObject.setRoleEligibilityScheduleId(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("memberType", (n) -> { this.setMemberType(n.getStringValue()); });
+        deserializerMap.put("roleEligibilityScheduleId", (n) -> { this.setRoleEligibilityScheduleId(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the memberType property value. Membership type of the assignment. It can either be Inherited, Direct, or Group.
@@ -63,7 +69,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nullable
     public String getMemberType() {
-        return this._memberType;
+        return this.memberType;
     }
     /**
      * Gets the roleEligibilityScheduleId property value. Identifier of the parent roleEligibilitySchedule for this instance.
@@ -71,7 +77,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nullable
     public String getRoleEligibilityScheduleId() {
-        return this._roleEligibilityScheduleId;
+        return this.roleEligibilityScheduleId;
     }
     /**
      * Gets the startDateTime property value. Time that the roleEligibilityScheduleInstance will start.
@@ -79,13 +85,14 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,31 +106,35 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the memberType property value. Membership type of the assignment. It can either be Inherited, Direct, or Group.
      * @param value Value to set for the memberType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberType(@javax.annotation.Nullable final String value) {
-        this._memberType = value;
+        this.memberType = value;
     }
     /**
      * Sets the roleEligibilityScheduleId property value. Identifier of the parent roleEligibilitySchedule for this instance.
      * @param value Value to set for the roleEligibilityScheduleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleEligibilityScheduleId(@javax.annotation.Nullable final String value) {
-        this._roleEligibilityScheduleId = value;
+        this.roleEligibilityScheduleId = value;
     }
     /**
      * Sets the startDateTime property value. Time that the roleEligibilityScheduleInstance will start.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
 }

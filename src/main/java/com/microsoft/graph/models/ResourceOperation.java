@@ -3,33 +3,45 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Describes the resourceOperation resource (entity) of the Microsoft Graph API (REST), which supports Intune workflows related to role-based access control (RBAC).
+ */
 public class ResourceOperation extends Entity implements Parsable {
-    /** Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible. */
-    private String _actionName;
-    /** Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal. */
-    private String _description;
-    /** Determines whether the Permission is validated for Scopes defined per Role Assignment. This property is read-only. */
-    private Boolean _enabledForScopeValidation;
-    /** Resource category to which this Operation belongs. This property is read-only. */
-    private String _resource;
-    /** Name of the Resource this operation is performed on. */
-    private String _resourceName;
     /**
-     * Instantiates a new ResourceOperation and sets the default values.
+     * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
+     */
+    private String actionName;
+    /**
+     * Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
+     */
+    private String description;
+    /**
+     * Determines whether the Permission is validated for Scopes defined per Role Assignment. This property is read-only.
+     */
+    private Boolean enabledForScopeValidation;
+    /**
+     * Resource category to which this Operation belongs. This property is read-only.
+     */
+    private String resource;
+    /**
+     * Name of the Resource this operation is performed on.
+     */
+    private String resourceName;
+    /**
+     * Instantiates a new resourceOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResourceOperation() {
         super();
-        this.setOdataType("#microsoft.graph.resourceOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ResourceOperation
+     * @return a resourceOperation
      */
     @javax.annotation.Nonnull
     public static ResourceOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +54,7 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getActionName() {
-        return this._actionName;
+        return this.actionName;
     }
     /**
      * Gets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
@@ -50,7 +62,7 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the enabledForScopeValidation property value. Determines whether the Permission is validated for Scopes defined per Role Assignment. This property is read-only.
@@ -58,22 +70,21 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getEnabledForScopeValidation() {
-        return this._enabledForScopeValidation;
+        return this.enabledForScopeValidation;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ResourceOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("enabledForScopeValidation", (n) -> { currentObject.setEnabledForScopeValidation(n.getBooleanValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
-            this.put("resourceName", (n) -> { currentObject.setResourceName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionName", (n) -> { this.setActionName(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("enabledForScopeValidation", (n) -> { this.setEnabledForScopeValidation(n.getBooleanValue()); });
+        deserializerMap.put("resource", (n) -> { this.setResource(n.getStringValue()); });
+        deserializerMap.put("resourceName", (n) -> { this.setResourceName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the resource property value. Resource category to which this Operation belongs. This property is read-only.
@@ -81,7 +92,7 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResource() {
-        return this._resource;
+        return this.resource;
     }
     /**
      * Gets the resourceName property value. Name of the Resource this operation is performed on.
@@ -89,20 +100,19 @@ public class ResourceOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceName() {
-        return this._resourceName;
+        return this.resourceName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("actionName", this.getActionName());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeBooleanValue("enabledForScopeValidation", this.getEnabledForScopeValidation());
-        writer.writeStringValue("resource", this.getResource());
         writer.writeStringValue("resourceName", this.getResourceName());
     }
     /**
@@ -110,39 +120,44 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the actionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionName(@javax.annotation.Nullable final String value) {
-        this._actionName = value;
+        this.actionName = value;
     }
     /**
      * Sets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the enabledForScopeValidation property value. Determines whether the Permission is validated for Scopes defined per Role Assignment. This property is read-only.
      * @param value Value to set for the enabledForScopeValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabledForScopeValidation(@javax.annotation.Nullable final Boolean value) {
-        this._enabledForScopeValidation = value;
+        this.enabledForScopeValidation = value;
     }
     /**
      * Sets the resource property value. Resource category to which this Operation belongs. This property is read-only.
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final String value) {
-        this._resource = value;
+        this.resource = value;
     }
     /**
      * Sets the resourceName property value. Name of the Resource this operation is performed on.
      * @param value Value to set for the resourceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceName(@javax.annotation.Nullable final String value) {
-        this._resourceName = value;
+        this.resourceName = value;
     }
 }

@@ -3,25 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlayPromptOperation extends CommsOperation implements Parsable {
-    /** Possible values are: unknown, completedSuccessfully, mediaOperationCanceled. */
-    private PlayPromptCompletionReason _completionReason;
     /**
-     * Instantiates a new PlayPromptOperation and sets the default values.
+     * Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
+     */
+    private PlayPromptCompletionReason completionReason;
+    /**
+     * Instantiates a new playPromptOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlayPromptOperation() {
         super();
-        this.setOdataType("#microsoft.graph.playPromptOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlayPromptOperation
+     * @return a playPromptOperation
      */
     @javax.annotation.Nonnull
     public static PlayPromptOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -34,24 +35,24 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      */
     @javax.annotation.Nullable
     public PlayPromptCompletionReason getCompletionReason() {
-        return this._completionReason;
+        return this.completionReason;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlayPromptOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("completionReason", (n) -> { currentObject.setCompletionReason(n.getEnumValue(PlayPromptCompletionReason.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("completionReason", (n) -> { this.setCompletionReason(n.getEnumValue(PlayPromptCompletionReason.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +63,8 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      * @param value Value to set for the completionReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletionReason(@javax.annotation.Nullable final PlayPromptCompletionReason value) {
-        this._completionReason = value;
+        this.completionReason = value;
     }
 }

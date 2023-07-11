@@ -4,24 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the lookup method. */
 public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The key property */
-    private String _key;
-    /** The resultColumnNames property */
-    private java.util.List<String> _resultColumnNames;
-    /** The values property */
-    private java.util.List<String> _values;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The key property
+     */
+    private String key;
+    /**
+     * The resultColumnNames property
+     */
+    private java.util.List<String> resultColumnNames;
+    /**
+     * The values property
+     */
+    private java.util.List<String> values;
     /**
      * Instantiates a new lookupPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LookupPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,20 +48,19 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LookupPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
-            this.put("resultColumnNames", (n) -> { currentObject.setResultColumnNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
+        deserializerMap.put("resultColumnNames", (n) -> { this.setResultColumnNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the key property value. The key property
@@ -62,7 +68,7 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getKey() {
-        return this._key;
+        return this.key;
     }
     /**
      * Gets the resultColumnNames property value. The resultColumnNames property
@@ -70,7 +76,7 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getResultColumnNames() {
-        return this._resultColumnNames;
+        return this.resultColumnNames;
     }
     /**
      * Gets the values property value. The values property
@@ -78,13 +84,14 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getValues() {
-        return this._values;
+        return this.values;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("key", this.getKey());
@@ -97,31 +104,35 @@ public class LookupPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the key property value. The key property
      * @param value Value to set for the key property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKey(@javax.annotation.Nullable final String value) {
-        this._key = value;
+        this.key = value;
     }
     /**
      * Sets the resultColumnNames property value. The resultColumnNames property
      * @param value Value to set for the resultColumnNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultColumnNames(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._resultColumnNames = value;
+        this.resultColumnNames = value;
     }
     /**
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._values = value;
+        this.values = value;
     }
 }

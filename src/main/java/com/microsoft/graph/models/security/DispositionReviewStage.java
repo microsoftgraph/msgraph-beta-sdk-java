@@ -4,25 +4,29 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class DispositionReviewStage extends Entity implements Parsable {
-    /** Name representing each stage within a collection. */
-    private String _name;
-    /** A collection of reviewers at each stage. */
-    private java.util.List<String> _reviewersEmailAddresses;
-    /** The sequence number for each stage of the disposition review. */
-    private Integer _stageNumber;
+    /**
+     * Name representing each stage within a collection.
+     */
+    private String name;
+    /**
+     * A collection of reviewers at each stage.
+     */
+    private java.util.List<String> reviewersEmailAddresses;
+    /**
+     * The sequence number for each stage of the disposition review.
+     */
+    private Integer stageNumber;
     /**
      * Instantiates a new dispositionReviewStage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DispositionReviewStage() {
         super();
-        this.setOdataType("#microsoft.graph.security.dispositionReviewStage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,16 +40,15 @@ public class DispositionReviewStage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DispositionReviewStage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("reviewersEmailAddresses", (n) -> { currentObject.setReviewersEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("stageNumber", (n) -> { currentObject.setStageNumber(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("reviewersEmailAddresses", (n) -> { this.setReviewersEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("stageNumber", (n) -> { this.setStageNumber(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name representing each stage within a collection.
@@ -53,7 +56,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the reviewersEmailAddresses property value. A collection of reviewers at each stage.
@@ -61,7 +64,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getReviewersEmailAddresses() {
-        return this._reviewersEmailAddresses;
+        return this.reviewersEmailAddresses;
     }
     /**
      * Gets the stageNumber property value. The sequence number for each stage of the disposition review.
@@ -69,13 +72,14 @@ public class DispositionReviewStage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getStageNumber() {
-        return this._stageNumber;
+        return this.stageNumber;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -88,23 +92,26 @@ public class DispositionReviewStage extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the reviewersEmailAddresses property value. A collection of reviewers at each stage.
      * @param value Value to set for the reviewersEmailAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewersEmailAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._reviewersEmailAddresses = value;
+        this.reviewersEmailAddresses = value;
     }
     /**
      * Sets the stageNumber property value. The sequence number for each stage of the disposition review.
      * @param value Value to set for the stageNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStageNumber(@javax.annotation.Nullable final Integer value) {
-        this._stageNumber = value;
+        this.stageNumber = value;
     }
 }

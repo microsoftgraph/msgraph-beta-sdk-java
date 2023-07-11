@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Flags representing firewall rule interface types.
+ */
 public enum WindowsFirewallRuleInterfaceTypes implements ValuedEnum {
     /** No flags set. */
     NotConfigured("notConfigured"),

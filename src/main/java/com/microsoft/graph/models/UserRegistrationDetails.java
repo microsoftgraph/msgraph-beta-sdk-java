@@ -3,43 +3,82 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class UserRegistrationDetails extends Entity implements Parsable {
-    /** The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue. */
-    private DefaultMfaMethodType _defaultMfaMethod;
-    /** Whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of. */
-    private Boolean _isAdmin;
-    /** Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq). */
-    private Boolean _isMfaCapable;
-    /** Whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy.  Supports $filter (eq). */
-    private Boolean _isMfaRegistered;
-    /** Whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq). */
-    private Boolean _isPasswordlessCapable;
-    /** Whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq). */
-    private Boolean _isSsprCapable;
-    /** Whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq). */
-    private Boolean _isSsprEnabled;
-    /** Whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq). */
-    private Boolean _isSsprRegistered;
-    /** Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq). */
-    private java.util.List<String> _methodsRegistered;
-    /** The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy. */
-    private String _userDisplayName;
-    /** The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy. */
-    private String _userPrincipalName;
-    /** Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue. */
-    private SignInUserType _userType;
+    /**
+     * The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
+     */
+    private DefaultMfaMethodType defaultMfaMethod;
+    /**
+     * Indicates whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
+     */
+    private Boolean isAdmin;
+    /**
+     * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
+     */
+    private Boolean isMfaCapable;
+    /**
+     * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
+     */
+    private Boolean isMfaRegistered;
+    /**
+     * Indicates whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
+     */
+    private Boolean isPasswordlessCapable;
+    /**
+     * Indicates whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
+     */
+    private Boolean isSsprCapable;
+    /**
+     * Indicates whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
+     */
+    private Boolean isSsprEnabled;
+    /**
+     * Indicates whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
+     */
+    private Boolean isSsprRegistered;
+    /**
+     * Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
+     */
+    private Boolean isSystemPreferredAuthenticationMethodEnabled;
+    /**
+     * The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime lastUpdatedDateTime;
+    /**
+     * Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
+     */
+    private java.util.List<String> methodsRegistered;
+    /**
+     * Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
+     */
+    private java.util.List<String> systemPreferredAuthenticationMethods;
+    /**
+     * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
+     */
+    private String userDisplayName;
+    /**
+     * The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
+     */
+    private UserDefaultAuthenticationMethod userPreferredMethodForSecondaryAuthentication;
+    /**
+     * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
+     */
+    private String userPrincipalName;
+    /**
+     * Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
+     */
+    private SignInUserType userType;
     /**
      * Instantiates a new userRegistrationDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserRegistrationDetails() {
         super();
-        this.setOdataType("#microsoft.graph.userRegistrationDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,85 +96,104 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DefaultMfaMethodType getDefaultMfaMethod() {
-        return this._defaultMfaMethod;
+        return this.defaultMfaMethod;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserRegistrationDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultMfaMethod", (n) -> { currentObject.setDefaultMfaMethod(n.getEnumValue(DefaultMfaMethodType.class)); });
-            this.put("isAdmin", (n) -> { currentObject.setIsAdmin(n.getBooleanValue()); });
-            this.put("isMfaCapable", (n) -> { currentObject.setIsMfaCapable(n.getBooleanValue()); });
-            this.put("isMfaRegistered", (n) -> { currentObject.setIsMfaRegistered(n.getBooleanValue()); });
-            this.put("isPasswordlessCapable", (n) -> { currentObject.setIsPasswordlessCapable(n.getBooleanValue()); });
-            this.put("isSsprCapable", (n) -> { currentObject.setIsSsprCapable(n.getBooleanValue()); });
-            this.put("isSsprEnabled", (n) -> { currentObject.setIsSsprEnabled(n.getBooleanValue()); });
-            this.put("isSsprRegistered", (n) -> { currentObject.setIsSsprRegistered(n.getBooleanValue()); });
-            this.put("methodsRegistered", (n) -> { currentObject.setMethodsRegistered(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("userType", (n) -> { currentObject.setUserType(n.getEnumValue(SignInUserType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultMfaMethod", (n) -> { this.setDefaultMfaMethod(n.getEnumValue(DefaultMfaMethodType.class)); });
+        deserializerMap.put("isAdmin", (n) -> { this.setIsAdmin(n.getBooleanValue()); });
+        deserializerMap.put("isMfaCapable", (n) -> { this.setIsMfaCapable(n.getBooleanValue()); });
+        deserializerMap.put("isMfaRegistered", (n) -> { this.setIsMfaRegistered(n.getBooleanValue()); });
+        deserializerMap.put("isPasswordlessCapable", (n) -> { this.setIsPasswordlessCapable(n.getBooleanValue()); });
+        deserializerMap.put("isSsprCapable", (n) -> { this.setIsSsprCapable(n.getBooleanValue()); });
+        deserializerMap.put("isSsprEnabled", (n) -> { this.setIsSsprEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isSsprRegistered", (n) -> { this.setIsSsprRegistered(n.getBooleanValue()); });
+        deserializerMap.put("isSystemPreferredAuthenticationMethodEnabled", (n) -> { this.setIsSystemPreferredAuthenticationMethodEnabled(n.getBooleanValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("methodsRegistered", (n) -> { this.setMethodsRegistered(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("systemPreferredAuthenticationMethods", (n) -> { this.setSystemPreferredAuthenticationMethods(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userPreferredMethodForSecondaryAuthentication", (n) -> { this.setUserPreferredMethodForSecondaryAuthentication(n.getEnumValue(UserDefaultAuthenticationMethod.class)); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(SignInUserType.class)); });
+        return deserializerMap;
     }
     /**
-     * Gets the isAdmin property value. Whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
+     * Gets the isAdmin property value. Indicates whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIsAdmin() {
-        return this._isAdmin;
+        return this.isAdmin;
     }
     /**
-     * Gets the isMfaCapable property value. Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
+     * Gets the isMfaCapable property value. Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIsMfaCapable() {
-        return this._isMfaCapable;
+        return this.isMfaCapable;
     }
     /**
-     * Gets the isMfaRegistered property value. Whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy.  Supports $filter (eq).
+     * Gets the isMfaRegistered property value. Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIsMfaRegistered() {
-        return this._isMfaRegistered;
+        return this.isMfaRegistered;
     }
     /**
-     * Gets the isPasswordlessCapable property value. Whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
+     * Gets the isPasswordlessCapable property value. Indicates whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIsPasswordlessCapable() {
-        return this._isPasswordlessCapable;
+        return this.isPasswordlessCapable;
     }
     /**
-     * Gets the isSsprCapable property value. Whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
+     * Gets the isSsprCapable property value. Indicates whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIsSsprCapable() {
-        return this._isSsprCapable;
+        return this.isSsprCapable;
     }
     /**
-     * Gets the isSsprEnabled property value. Whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
+     * Gets the isSsprEnabled property value. Indicates whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIsSsprEnabled() {
-        return this._isSsprEnabled;
+        return this.isSsprEnabled;
     }
     /**
-     * Gets the isSsprRegistered property value. Whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
+     * Gets the isSsprRegistered property value. Indicates whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getIsSsprRegistered() {
-        return this._isSsprRegistered;
+        return this.isSsprRegistered;
+    }
+    /**
+     * Gets the isSystemPreferredAuthenticationMethodEnabled property value. Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsSystemPreferredAuthenticationMethodEnabled() {
+        return this.isSystemPreferredAuthenticationMethodEnabled;
+    }
+    /**
+     * Gets the lastUpdatedDateTime property value. The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getLastUpdatedDateTime() {
+        return this.lastUpdatedDateTime;
     }
     /**
      * Gets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
@@ -143,7 +201,15 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getMethodsRegistered() {
-        return this._methodsRegistered;
+        return this.methodsRegistered;
+    }
+    /**
+     * Gets the systemPreferredAuthenticationMethods property value. Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getSystemPreferredAuthenticationMethods() {
+        return this.systemPreferredAuthenticationMethods;
     }
     /**
      * Gets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
@@ -151,7 +217,15 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserDisplayName() {
-        return this._userDisplayName;
+        return this.userDisplayName;
+    }
+    /**
+     * Gets the userPreferredMethodForSecondaryAuthentication property value. The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
+     * @return a userDefaultAuthenticationMethod
+     */
+    @javax.annotation.Nullable
+    public UserDefaultAuthenticationMethod getUserPreferredMethodForSecondaryAuthentication() {
+        return this.userPreferredMethodForSecondaryAuthentication;
     }
     /**
      * Gets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
@@ -159,7 +233,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Gets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
@@ -167,13 +241,14 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SignInUserType getUserType() {
-        return this._userType;
+        return this.userType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -185,8 +260,12 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         writer.writeBooleanValue("isSsprCapable", this.getIsSsprCapable());
         writer.writeBooleanValue("isSsprEnabled", this.getIsSsprEnabled());
         writer.writeBooleanValue("isSsprRegistered", this.getIsSsprRegistered());
+        writer.writeBooleanValue("isSystemPreferredAuthenticationMethodEnabled", this.getIsSystemPreferredAuthenticationMethodEnabled());
+        writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeCollectionOfPrimitiveValues("methodsRegistered", this.getMethodsRegistered());
+        writer.writeCollectionOfPrimitiveValues("systemPreferredAuthenticationMethods", this.getSystemPreferredAuthenticationMethods());
         writer.writeStringValue("userDisplayName", this.getUserDisplayName());
+        writer.writeEnumValue("userPreferredMethodForSecondaryAuthentication", this.getUserPreferredMethodForSecondaryAuthentication());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeEnumValue("userType", this.getUserType());
     }
@@ -195,95 +274,143 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the defaultMfaMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultMfaMethod(@javax.annotation.Nullable final DefaultMfaMethodType value) {
-        this._defaultMfaMethod = value;
+        this.defaultMfaMethod = value;
     }
     /**
-     * Sets the isAdmin property value. Whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
+     * Sets the isAdmin property value. Indicates whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
      * @param value Value to set for the isAdmin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAdmin(@javax.annotation.Nullable final Boolean value) {
-        this._isAdmin = value;
+        this.isAdmin = value;
     }
     /**
-     * Sets the isMfaCapable property value. Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
+     * Sets the isMfaCapable property value. Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
      * @param value Value to set for the isMfaCapable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMfaCapable(@javax.annotation.Nullable final Boolean value) {
-        this._isMfaCapable = value;
+        this.isMfaCapable = value;
     }
     /**
-     * Sets the isMfaRegistered property value. Whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy.  Supports $filter (eq).
+     * Sets the isMfaRegistered property value. Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
      * @param value Value to set for the isMfaRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMfaRegistered(@javax.annotation.Nullable final Boolean value) {
-        this._isMfaRegistered = value;
+        this.isMfaRegistered = value;
     }
     /**
-     * Sets the isPasswordlessCapable property value. Whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
+     * Sets the isPasswordlessCapable property value. Indicates whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
      * @param value Value to set for the isPasswordlessCapable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPasswordlessCapable(@javax.annotation.Nullable final Boolean value) {
-        this._isPasswordlessCapable = value;
+        this.isPasswordlessCapable = value;
     }
     /**
-     * Sets the isSsprCapable property value. Whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
+     * Sets the isSsprCapable property value. Indicates whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
      * @param value Value to set for the isSsprCapable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSsprCapable(@javax.annotation.Nullable final Boolean value) {
-        this._isSsprCapable = value;
+        this.isSsprCapable = value;
     }
     /**
-     * Sets the isSsprEnabled property value. Whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
+     * Sets the isSsprEnabled property value. Indicates whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
      * @param value Value to set for the isSsprEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSsprEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isSsprEnabled = value;
+        this.isSsprEnabled = value;
     }
     /**
-     * Sets the isSsprRegistered property value. Whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
+     * Sets the isSsprRegistered property value. Indicates whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
      * @param value Value to set for the isSsprRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSsprRegistered(@javax.annotation.Nullable final Boolean value) {
-        this._isSsprRegistered = value;
+        this.isSsprRegistered = value;
+    }
+    /**
+     * Sets the isSystemPreferredAuthenticationMethodEnabled property value. Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
+     * @param value Value to set for the isSystemPreferredAuthenticationMethodEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsSystemPreferredAuthenticationMethodEnabled(@javax.annotation.Nullable final Boolean value) {
+        this.isSystemPreferredAuthenticationMethodEnabled = value;
+    }
+    /**
+     * Sets the lastUpdatedDateTime property value. The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the lastUpdatedDateTime property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
      * @param value Value to set for the methodsRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMethodsRegistered(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._methodsRegistered = value;
+        this.methodsRegistered = value;
+    }
+    /**
+     * Sets the systemPreferredAuthenticationMethods property value. Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
+     * @param value Value to set for the systemPreferredAuthenticationMethods property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSystemPreferredAuthenticationMethods(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.systemPreferredAuthenticationMethods = value;
     }
     /**
      * Sets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
-        this._userDisplayName = value;
+        this.userDisplayName = value;
+    }
+    /**
+     * Sets the userPreferredMethodForSecondaryAuthentication property value. The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
+     * @param value Value to set for the userPreferredMethodForSecondaryAuthentication property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserPreferredMethodForSecondaryAuthentication(@javax.annotation.Nullable final UserDefaultAuthenticationMethod value) {
+        this.userPreferredMethodForSecondaryAuthentication = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
     /**
      * Sets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
      * @param value Value to set for the userType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserType(@javax.annotation.Nullable final SignInUserType value) {
-        this._userType = value;
+        this.userType = value;
     }
 }

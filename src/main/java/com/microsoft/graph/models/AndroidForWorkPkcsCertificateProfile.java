@@ -3,25 +3,38 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Android For Work PKCS certificate profile
+ */
 public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertificateProfileBase implements Parsable {
-    /** PKCS Certificate Template Name */
-    private String _certificateTemplateName;
-    /** PKCS Certification Authority */
-    private String _certificationAuthority;
-    /** PKCS Certification Authority Name */
-    private String _certificationAuthorityName;
-    /** Certificate state for devices. This collection can contain a maximum of 2147483647 elements. */
-    private java.util.List<ManagedDeviceCertificateState> _managedDeviceCertificateStates;
-    /** Custom String that defines the AAD Attribute. */
-    private String _subjectAlternativeNameFormatString;
     /**
-     * Instantiates a new AndroidForWorkPkcsCertificateProfile and sets the default values.
+     * PKCS Certificate Template Name
+     */
+    private String certificateTemplateName;
+    /**
+     * PKCS Certification Authority
+     */
+    private String certificationAuthority;
+    /**
+     * PKCS Certification Authority Name
+     */
+    private String certificationAuthorityName;
+    /**
+     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
+     */
+    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
+    /**
+     * Custom String that defines the AAD Attribute.
+     */
+    private String subjectAlternativeNameFormatString;
+    /**
+     * Instantiates a new androidForWorkPkcsCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidForWorkPkcsCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.androidForWorkPkcsCertificateProfile");
@@ -29,7 +42,7 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidForWorkPkcsCertificateProfile
+     * @return a androidForWorkPkcsCertificateProfile
      */
     @javax.annotation.Nonnull
     public static AndroidForWorkPkcsCertificateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +55,7 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
      */
     @javax.annotation.Nullable
     public String getCertificateTemplateName() {
-        return this._certificateTemplateName;
+        return this.certificateTemplateName;
     }
     /**
      * Gets the certificationAuthority property value. PKCS Certification Authority
@@ -50,7 +63,7 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
      */
     @javax.annotation.Nullable
     public String getCertificationAuthority() {
-        return this._certificationAuthority;
+        return this.certificationAuthority;
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name
@@ -58,22 +71,21 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
      */
     @javax.annotation.Nullable
     public String getCertificationAuthorityName() {
-        return this._certificationAuthorityName;
+        return this.certificationAuthorityName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidForWorkPkcsCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificateTemplateName", (n) -> { currentObject.setCertificateTemplateName(n.getStringValue()); });
-            this.put("certificationAuthority", (n) -> { currentObject.setCertificationAuthority(n.getStringValue()); });
-            this.put("certificationAuthorityName", (n) -> { currentObject.setCertificationAuthorityName(n.getStringValue()); });
-            this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
-            this.put("subjectAlternativeNameFormatString", (n) -> { currentObject.setSubjectAlternativeNameFormatString(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateTemplateName", (n) -> { this.setCertificateTemplateName(n.getStringValue()); });
+        deserializerMap.put("certificationAuthority", (n) -> { this.setCertificationAuthority(n.getStringValue()); });
+        deserializerMap.put("certificationAuthorityName", (n) -> { this.setCertificationAuthorityName(n.getStringValue()); });
+        deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjectAlternativeNameFormatString", (n) -> { this.setSubjectAlternativeNameFormatString(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
@@ -81,7 +93,7 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this._managedDeviceCertificateStates;
+        return this.managedDeviceCertificateStates;
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
@@ -89,13 +101,14 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
      */
     @javax.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this._subjectAlternativeNameFormatString;
+        return this.subjectAlternativeNameFormatString;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,39 +123,44 @@ public class AndroidForWorkPkcsCertificateProfile extends AndroidForWorkCertific
      * @param value Value to set for the certificateTemplateName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateTemplateName(@javax.annotation.Nullable final String value) {
-        this._certificateTemplateName = value;
+        this.certificateTemplateName = value;
     }
     /**
      * Sets the certificationAuthority property value. PKCS Certification Authority
      * @param value Value to set for the certificationAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthority(@javax.annotation.Nullable final String value) {
-        this._certificationAuthority = value;
+        this.certificationAuthority = value;
     }
     /**
      * Sets the certificationAuthorityName property value. PKCS Certification Authority Name
      * @param value Value to set for the certificationAuthorityName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthorityName(@javax.annotation.Nullable final String value) {
-        this._certificationAuthorityName = value;
+        this.certificationAuthorityName = value;
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this._managedDeviceCertificateStates = value;
+        this.managedDeviceCertificateStates = value;
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
-        this._subjectAlternativeNameFormatString = value;
+        this.subjectAlternativeNameFormatString = value;
     }
 }

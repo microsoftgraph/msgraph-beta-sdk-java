@@ -3,10 +3,9 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum AlertStatus implements ValuedEnum {
     Unknown("unknown"),
-    New_escaped("new_escaped"),
+    New("new"),
     InProgress("inProgress"),
     Resolved("resolved"),
     UnknownFutureValue("unknownFutureValue");
@@ -21,7 +20,7 @@ public enum AlertStatus implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;
-            case "new": return New_escaped;
+            case "new": return New;
             case "inProgress": return InProgress;
             case "resolved": return Resolved;
             case "unknownFutureValue": return UnknownFutureValue;

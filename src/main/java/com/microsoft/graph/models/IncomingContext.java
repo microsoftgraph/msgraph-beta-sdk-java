@@ -4,30 +4,41 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IncomingContext implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The id of the participant that is under observation. Read-only. */
-    private String _observedParticipantId;
-    /** The OdataType property */
-    private String _odataType;
-    /** The identity that the call is happening on behalf of. */
-    private IdentitySet _onBehalfOf;
-    /** The id of the participant that triggered the incoming call. Read-only. */
-    private String _sourceParticipantId;
-    /** The identity that transferred the call. */
-    private IdentitySet _transferor;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The id of the participant that is under observation. Read-only.
+     */
+    private String observedParticipantId;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The identity that the call is happening on behalf of.
+     */
+    private IdentitySet onBehalfOf;
+    /**
+     * The id of the participant that triggered the incoming call. Read-only.
+     */
+    private String sourceParticipantId;
+    /**
+     * The identity that transferred the call.
+     */
+    private IdentitySet transferor;
     /**
      * Instantiates a new incomingContext and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IncomingContext() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.incomingContext");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,22 +56,21 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IncomingContext currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("observedParticipantId", (n) -> { currentObject.setObservedParticipantId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("onBehalfOf", (n) -> { currentObject.setOnBehalfOf(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("sourceParticipantId", (n) -> { currentObject.setSourceParticipantId(n.getStringValue()); });
-            this.put("transferor", (n) -> { currentObject.setTransferor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("observedParticipantId", (n) -> { this.setObservedParticipantId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onBehalfOf", (n) -> { this.setOnBehalfOf(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceParticipantId", (n) -> { this.setSourceParticipantId(n.getStringValue()); });
+        deserializerMap.put("transferor", (n) -> { this.setTransferor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the observedParticipantId property value. The id of the participant that is under observation. Read-only.
@@ -68,7 +78,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getObservedParticipantId() {
-        return this._observedParticipantId;
+        return this.observedParticipantId;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -76,7 +86,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the onBehalfOf property value. The identity that the call is happening on behalf of.
@@ -84,7 +94,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getOnBehalfOf() {
-        return this._onBehalfOf;
+        return this.onBehalfOf;
     }
     /**
      * Gets the sourceParticipantId property value. The id of the participant that triggered the incoming call. Read-only.
@@ -92,7 +102,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSourceParticipantId() {
-        return this._sourceParticipantId;
+        return this.sourceParticipantId;
     }
     /**
      * Gets the transferor property value. The identity that transferred the call.
@@ -100,13 +110,14 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getTransferor() {
-        return this._transferor;
+        return this.transferor;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("observedParticipantId", this.getObservedParticipantId());
@@ -121,47 +132,53 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the observedParticipantId property value. The id of the participant that is under observation. Read-only.
      * @param value Value to set for the observedParticipantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setObservedParticipantId(@javax.annotation.Nullable final String value) {
-        this._observedParticipantId = value;
+        this.observedParticipantId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the onBehalfOf property value. The identity that the call is happening on behalf of.
      * @param value Value to set for the onBehalfOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnBehalfOf(@javax.annotation.Nullable final IdentitySet value) {
-        this._onBehalfOf = value;
+        this.onBehalfOf = value;
     }
     /**
      * Sets the sourceParticipantId property value. The id of the participant that triggered the incoming call. Read-only.
      * @param value Value to set for the sourceParticipantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceParticipantId(@javax.annotation.Nullable final String value) {
-        this._sourceParticipantId = value;
+        this.sourceParticipantId = value;
     }
     /**
      * Sets the transferor property value. The identity that transferred the call.
      * @param value Value to set for the transferor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransferor(@javax.annotation.Nullable final IdentitySet value) {
-        this._transferor = value;
+        this.transferor = value;
     }
 }

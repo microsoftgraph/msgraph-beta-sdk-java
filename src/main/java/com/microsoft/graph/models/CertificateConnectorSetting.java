@@ -5,35 +5,52 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Certificate connector settings. */
+/**
+ * Certificate connector settings.
+ */
 public class CertificateConnectorSetting implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Certificate expire time */
-    private OffsetDateTime _certExpiryTime;
-    /** Version of certificate connector */
-    private String _connectorVersion;
-    /** Certificate connector enrollment error */
-    private String _enrollmentError;
-    /** Last time certificate connector connected */
-    private OffsetDateTime _lastConnectorConnectionTime;
-    /** Version of last uploaded certificate connector */
-    private Long _lastUploadVersion;
-    /** The OdataType property */
-    private String _odataType;
-    /** Certificate connector status */
-    private Integer _status;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Certificate expire time
+     */
+    private OffsetDateTime certExpiryTime;
+    /**
+     * Version of certificate connector
+     */
+    private String connectorVersion;
+    /**
+     * Certificate connector enrollment error
+     */
+    private String enrollmentError;
+    /**
+     * Last time certificate connector connected
+     */
+    private OffsetDateTime lastConnectorConnectionTime;
+    /**
+     * Version of last uploaded certificate connector
+     */
+    private Long lastUploadVersion;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Certificate connector status
+     */
+    private Integer status;
     /**
      * Instantiates a new certificateConnectorSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CertificateConnectorSetting() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.certificateConnectorSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +68,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the certExpiryTime property value. Certificate expire time
@@ -59,7 +76,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCertExpiryTime() {
-        return this._certExpiryTime;
+        return this.certExpiryTime;
     }
     /**
      * Gets the connectorVersion property value. Version of certificate connector
@@ -67,7 +84,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getConnectorVersion() {
-        return this._connectorVersion;
+        return this.connectorVersion;
     }
     /**
      * Gets the enrollmentError property value. Certificate connector enrollment error
@@ -75,24 +92,23 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getEnrollmentError() {
-        return this._enrollmentError;
+        return this.enrollmentError;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CertificateConnectorSetting currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("certExpiryTime", (n) -> { currentObject.setCertExpiryTime(n.getOffsetDateTimeValue()); });
-            this.put("connectorVersion", (n) -> { currentObject.setConnectorVersion(n.getStringValue()); });
-            this.put("enrollmentError", (n) -> { currentObject.setEnrollmentError(n.getStringValue()); });
-            this.put("lastConnectorConnectionTime", (n) -> { currentObject.setLastConnectorConnectionTime(n.getOffsetDateTimeValue()); });
-            this.put("lastUploadVersion", (n) -> { currentObject.setLastUploadVersion(n.getLongValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("certExpiryTime", (n) -> { this.setCertExpiryTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("connectorVersion", (n) -> { this.setConnectorVersion(n.getStringValue()); });
+        deserializerMap.put("enrollmentError", (n) -> { this.setEnrollmentError(n.getStringValue()); });
+        deserializerMap.put("lastConnectorConnectionTime", (n) -> { this.setLastConnectorConnectionTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastUploadVersion", (n) -> { this.setLastUploadVersion(n.getLongValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastConnectorConnectionTime property value. Last time certificate connector connected
@@ -100,7 +116,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastConnectorConnectionTime() {
-        return this._lastConnectorConnectionTime;
+        return this.lastConnectorConnectionTime;
     }
     /**
      * Gets the lastUploadVersion property value. Version of last uploaded certificate connector
@@ -108,7 +124,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Long getLastUploadVersion() {
-        return this._lastUploadVersion;
+        return this.lastUploadVersion;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -116,7 +132,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the status property value. Certificate connector status
@@ -124,13 +140,14 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public Integer getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("certExpiryTime", this.getCertExpiryTime());
@@ -147,63 +164,71 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the certExpiryTime property value. Certificate expire time
      * @param value Value to set for the certExpiryTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertExpiryTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._certExpiryTime = value;
+        this.certExpiryTime = value;
     }
     /**
      * Sets the connectorVersion property value. Version of certificate connector
      * @param value Value to set for the connectorVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectorVersion(@javax.annotation.Nullable final String value) {
-        this._connectorVersion = value;
+        this.connectorVersion = value;
     }
     /**
      * Sets the enrollmentError property value. Certificate connector enrollment error
      * @param value Value to set for the enrollmentError property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentError(@javax.annotation.Nullable final String value) {
-        this._enrollmentError = value;
+        this.enrollmentError = value;
     }
     /**
      * Sets the lastConnectorConnectionTime property value. Last time certificate connector connected
      * @param value Value to set for the lastConnectorConnectionTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastConnectorConnectionTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastConnectorConnectionTime = value;
+        this.lastConnectorConnectionTime = value;
     }
     /**
      * Sets the lastUploadVersion property value. Version of last uploaded certificate connector
      * @param value Value to set for the lastUploadVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUploadVersion(@javax.annotation.Nullable final Long value) {
-        this._lastUploadVersion = value;
+        this.lastUploadVersion = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the status property value. Certificate connector status
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final Integer value) {
-        this._status = value;
+        this.status = value;
     }
 }

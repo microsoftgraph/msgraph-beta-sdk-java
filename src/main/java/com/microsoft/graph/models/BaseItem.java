@@ -1,50 +1,64 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Drive;
-import com.microsoft.graph.models.DriveItem;
-import com.microsoft.graph.models.List;
-import com.microsoft.graph.models.ListItem;
-import com.microsoft.graph.models.SharedDriveItem;
-import com.microsoft.graph.models.Site;
-import com.microsoft.graph.models.SitePage;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BaseItem extends Entity implements Parsable {
-    /** Identity of the user, device, or application which created the item. Read-only. */
-    private IdentitySet _createdBy;
-    /** The createdByUser property */
-    private User _createdByUser;
-    /** Date and time of item creation. Read-only. */
-    private OffsetDateTime _createdDateTime;
-    /** The description property */
-    private String _description;
-    /** ETag for the item. Read-only. */
-    private String _eTag;
-    /** Identity of the user, device, and application which last modified the item. Read-only. */
-    private IdentitySet _lastModifiedBy;
-    /** The lastModifiedByUser property */
-    private User _lastModifiedByUser;
-    /** Date and time the item was last modified. Read-only. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** The name of the item. Read-write. */
-    private String _name;
-    /** Parent information, if the item has a parent. Read-write. */
-    private ItemReference _parentReference;
-    /** URL that displays the resource in the browser. Read-only. */
-    private String _webUrl;
+    /**
+     * Identity of the user, device, or application which created the item. Read-only.
+     */
+    private IdentitySet createdBy;
+    /**
+     * The createdByUser property
+     */
+    private User createdByUser;
+    /**
+     * Date and time of item creation. Read-only.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The description property
+     */
+    private String description;
+    /**
+     * ETag for the item. Read-only.
+     */
+    private String eTag;
+    /**
+     * Identity of the user, device, and application which last modified the item. Read-only.
+     */
+    private IdentitySet lastModifiedBy;
+    /**
+     * The lastModifiedByUser property
+     */
+    private User lastModifiedByUser;
+    /**
+     * Date and time the item was last modified. Read-only.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * The name of the item. Read-write.
+     */
+    private String name;
+    /**
+     * Parent information, if the item has a parent. Read-write.
+     */
+    private ItemReference parentReference;
+    /**
+     * URL that displays the resource in the browser. Read-only.
+     */
+    private String webUrl;
     /**
      * Instantiates a new baseItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BaseItem() {
         super();
-        this.setOdataType("#microsoft.graph.baseItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,7 +89,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdByUser property value. The createdByUser property
@@ -83,7 +97,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public User getCreatedByUser() {
-        return this._createdByUser;
+        return this.createdByUser;
     }
     /**
      * Gets the createdDateTime property value. Date and time of item creation. Read-only.
@@ -91,7 +105,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. The description property
@@ -99,7 +113,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the eTag property value. ETag for the item. Read-only.
@@ -107,28 +121,27 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getETag() {
-        return this._eTag;
+        return this.eTag;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BaseItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdByUser", (n) -> { currentObject.setCreatedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("eTag", (n) -> { currentObject.setETag(n.getStringValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedByUser", (n) -> { currentObject.setLastModifiedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("parentReference", (n) -> { currentObject.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdByUser", (n) -> { this.setCreatedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("eTag", (n) -> { this.setETag(n.getStringValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedByUser", (n) -> { this.setLastModifiedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("parentReference", (n) -> { this.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
@@ -136,7 +149,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedByUser property value. The lastModifiedByUser property
@@ -144,7 +157,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public User getLastModifiedByUser() {
-        return this._lastModifiedByUser;
+        return this.lastModifiedByUser;
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
@@ -152,7 +165,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the name property value. The name of the item. Read-write.
@@ -160,7 +173,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the parentReference property value. Parent information, if the item has a parent. Read-write.
@@ -168,7 +181,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemReference getParentReference() {
-        return this._parentReference;
+        return this.parentReference;
     }
     /**
      * Gets the webUrl property value. URL that displays the resource in the browser. Read-only.
@@ -176,13 +189,14 @@ public class BaseItem extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -203,87 +217,98 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdByUser property value. The createdByUser property
      * @param value Value to set for the createdByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedByUser(@javax.annotation.Nullable final User value) {
-        this._createdByUser = value;
+        this.createdByUser = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time of item creation. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the eTag property value. ETag for the item. Read-only.
      * @param value Value to set for the eTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setETag(@javax.annotation.Nullable final String value) {
-        this._eTag = value;
+        this.eTag = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedByUser property value. The lastModifiedByUser property
      * @param value Value to set for the lastModifiedByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedByUser(@javax.annotation.Nullable final User value) {
-        this._lastModifiedByUser = value;
+        this.lastModifiedByUser = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the name property value. The name of the item. Read-write.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the parentReference property value. Parent information, if the item has a parent. Read-write.
      * @param value Value to set for the parentReference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentReference(@javax.annotation.Nullable final ItemReference value) {
-        this._parentReference = value;
+        this.parentReference = value;
     }
     /**
      * Sets the webUrl property value. URL that displays the resource in the browser. Read-only.
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

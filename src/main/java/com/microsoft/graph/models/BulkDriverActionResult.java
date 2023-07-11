@@ -4,29 +4,40 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** A complex type to represent the result of bulk driver action. */
+/**
+ * A complex type to represent the result of bulk driver action.
+ */
 public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** List of driver Ids where the action is failed. */
-    private java.util.List<String> _failedDriverIds;
-    /** List of driver Ids that are not found. */
-    private java.util.List<String> _notFoundDriverIds;
-    /** The OdataType property */
-    private String _odataType;
-    /** List of driver Ids where the action is successful. */
-    private java.util.List<String> _successfulDriverIds;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * List of driver Ids where the action is failed.
+     */
+    private java.util.List<String> failedDriverIds;
+    /**
+     * List of driver Ids that are not found.
+     */
+    private java.util.List<String> notFoundDriverIds;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * List of driver Ids where the action is successful.
+     */
+    private java.util.List<String> successfulDriverIds;
     /**
      * Instantiates a new bulkDriverActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BulkDriverActionResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bulkDriverActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +55,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the failedDriverIds property value. List of driver Ids where the action is failed.
@@ -52,21 +63,20 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getFailedDriverIds() {
-        return this._failedDriverIds;
+        return this.failedDriverIds;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BulkDriverActionResult currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("failedDriverIds", (n) -> { currentObject.setFailedDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("notFoundDriverIds", (n) -> { currentObject.setNotFoundDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("successfulDriverIds", (n) -> { currentObject.setSuccessfulDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("failedDriverIds", (n) -> { this.setFailedDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notFoundDriverIds", (n) -> { this.setNotFoundDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("successfulDriverIds", (n) -> { this.setSuccessfulDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the notFoundDriverIds property value. List of driver Ids that are not found.
@@ -74,7 +84,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getNotFoundDriverIds() {
-        return this._notFoundDriverIds;
+        return this.notFoundDriverIds;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -82,7 +92,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the successfulDriverIds property value. List of driver Ids where the action is successful.
@@ -90,13 +100,14 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSuccessfulDriverIds() {
-        return this._successfulDriverIds;
+        return this.successfulDriverIds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("failedDriverIds", this.getFailedDriverIds());
@@ -110,39 +121,44 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the failedDriverIds property value. List of driver Ids where the action is failed.
      * @param value Value to set for the failedDriverIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedDriverIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._failedDriverIds = value;
+        this.failedDriverIds = value;
     }
     /**
      * Sets the notFoundDriverIds property value. List of driver Ids that are not found.
      * @param value Value to set for the notFoundDriverIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotFoundDriverIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._notFoundDriverIds = value;
+        this.notFoundDriverIds = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the successfulDriverIds property value. List of driver Ids where the action is successful.
      * @param value Value to set for the successfulDriverIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulDriverIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._successfulDriverIds = value;
+        this.successfulDriverIds = value;
     }
 }

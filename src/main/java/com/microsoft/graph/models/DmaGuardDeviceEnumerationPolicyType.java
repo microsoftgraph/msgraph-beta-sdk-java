@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Possible values of the DmaGuardDeviceEnumerationPolicy.
+ */
 public enum DmaGuardDeviceEnumerationPolicyType implements ValuedEnum {
     /** Default value. Devices with DMA remapping incompatible drivers will only be enumerated after the user unlocks the screen. */
     DeviceDefault("deviceDefault"),

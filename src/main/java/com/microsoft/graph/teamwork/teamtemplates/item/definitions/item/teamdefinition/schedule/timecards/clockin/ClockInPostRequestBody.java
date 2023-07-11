@@ -5,24 +5,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the clockIn method. */
 public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The atApprovedLocation property */
-    private Boolean _atApprovedLocation;
-    /** The notes property */
-    private ItemBody _notes;
-    /** The onBehalfOfUserId property */
-    private String _onBehalfOfUserId;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The atApprovedLocation property
+     */
+    private Boolean atApprovedLocation;
+    /**
+     * The notes property
+     */
+    private ItemBody notes;
+    /**
+     * The onBehalfOfUserId property
+     */
+    private String onBehalfOfUserId;
     /**
      * Instantiates a new clockInPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClockInPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,7 +49,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the atApprovedLocation property value. The atApprovedLocation property
@@ -50,20 +57,19 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAtApprovedLocation() {
-        return this._atApprovedLocation;
+        return this.atApprovedLocation;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ClockInPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("atApprovedLocation", (n) -> { currentObject.setAtApprovedLocation(n.getBooleanValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("onBehalfOfUserId", (n) -> { currentObject.setOnBehalfOfUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("atApprovedLocation", (n) -> { this.setAtApprovedLocation(n.getBooleanValue()); });
+        deserializerMap.put("notes", (n) -> { this.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("onBehalfOfUserId", (n) -> { this.setOnBehalfOfUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notes property value. The notes property
@@ -71,7 +77,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ItemBody getNotes() {
-        return this._notes;
+        return this.notes;
     }
     /**
      * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
@@ -79,13 +85,14 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOnBehalfOfUserId() {
-        return this._onBehalfOfUserId;
+        return this.onBehalfOfUserId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("atApprovedLocation", this.getAtApprovedLocation());
@@ -98,31 +105,35 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the atApprovedLocation property value. The atApprovedLocation property
      * @param value Value to set for the atApprovedLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAtApprovedLocation(@javax.annotation.Nullable final Boolean value) {
-        this._atApprovedLocation = value;
+        this.atApprovedLocation = value;
     }
     /**
      * Sets the notes property value. The notes property
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final ItemBody value) {
-        this._notes = value;
+        this.notes = value;
     }
     /**
      * Sets the onBehalfOfUserId property value. The onBehalfOfUserId property
      * @param value Value to set for the onBehalfOfUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnBehalfOfUserId(@javax.annotation.Nullable final String value) {
-        this._onBehalfOfUserId = value;
+        this.onBehalfOfUserId = value;
     }
 }

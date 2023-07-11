@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Represents various schedule modes for Zebra FOTA deployment.
+ */
 public enum ZebraFotaScheduleMode implements ValuedEnum {
     /** Instructs the device to install the update as soon as it is received. */
     InstallNow("installNow"),

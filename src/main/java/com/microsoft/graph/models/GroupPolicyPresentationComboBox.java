@@ -3,23 +3,34 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents an ADMX comboBox element and an ADMX text element.
+ */
 public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresentation implements Parsable {
-    /** Localized default string displayed in the combo box. The default value is empty. */
-    private String _defaultValue;
-    /** An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023. */
-    private Long _maxLength;
-    /** Specifies whether a value must be specified for the parameter. The default value is false. */
-    private Boolean _required;
-    /** Localized strings listed in the drop-down list of the combo box. The default value is empty. */
-    private java.util.List<String> _suggestions;
     /**
-     * Instantiates a new GroupPolicyPresentationComboBox and sets the default values.
+     * Localized default string displayed in the combo box. The default value is empty.
+     */
+    private String defaultValue;
+    /**
+     * An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
+     */
+    private Long maxLength;
+    /**
+     * Specifies whether a value must be specified for the parameter. The default value is false.
+     */
+    private Boolean required;
+    /**
+     * Localized strings listed in the drop-down list of the combo box. The default value is empty.
+     */
+    private java.util.List<String> suggestions;
+    /**
+     * Instantiates a new groupPolicyPresentationComboBox and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationComboBox() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationComboBox");
@@ -27,7 +38,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyPresentationComboBox
+     * @return a groupPolicyPresentationComboBox
      */
     @javax.annotation.Nonnull
     public static GroupPolicyPresentationComboBox createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -40,21 +51,20 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      */
     @javax.annotation.Nullable
     public String getDefaultValue() {
-        return this._defaultValue;
+        return this.defaultValue;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationComboBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
-            this.put("maxLength", (n) -> { currentObject.setMaxLength(n.getLongValue()); });
-            this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
-            this.put("suggestions", (n) -> { currentObject.setSuggestions(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getStringValue()); });
+        deserializerMap.put("maxLength", (n) -> { this.setMaxLength(n.getLongValue()); });
+        deserializerMap.put("required", (n) -> { this.setRequired(n.getBooleanValue()); });
+        deserializerMap.put("suggestions", (n) -> { this.setSuggestions(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the maxLength property value. An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
@@ -62,7 +72,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      */
     @javax.annotation.Nullable
     public Long getMaxLength() {
-        return this._maxLength;
+        return this.maxLength;
     }
     /**
      * Gets the required property value. Specifies whether a value must be specified for the parameter. The default value is false.
@@ -70,7 +80,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      */
     @javax.annotation.Nullable
     public Boolean getRequired() {
-        return this._required;
+        return this.required;
     }
     /**
      * Gets the suggestions property value. Localized strings listed in the drop-down list of the combo box. The default value is empty.
@@ -78,13 +88,14 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSuggestions() {
-        return this._suggestions;
+        return this.suggestions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,31 +109,35 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final String value) {
-        this._defaultValue = value;
+        this.defaultValue = value;
     }
     /**
      * Sets the maxLength property value. An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
      * @param value Value to set for the maxLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxLength(@javax.annotation.Nullable final Long value) {
-        this._maxLength = value;
+        this.maxLength = value;
     }
     /**
      * Sets the required property value. Specifies whether a value must be specified for the parameter. The default value is false.
      * @param value Value to set for the required property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequired(@javax.annotation.Nullable final Boolean value) {
-        this._required = value;
+        this.required = value;
     }
     /**
      * Sets the suggestions property value. Localized strings listed in the drop-down list of the combo box. The default value is empty.
      * @param value Value to set for the suggestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuggestions(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._suggestions = value;
+        this.suggestions = value;
     }
 }

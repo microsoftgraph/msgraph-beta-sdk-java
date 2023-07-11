@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Determines which content caches other content caches will peer with.
+ */
 public enum MacOSContentCachingPeerPolicy implements ValuedEnum {
     /** Defaults to peers in local network. */
     NotConfigured("notConfigured"),

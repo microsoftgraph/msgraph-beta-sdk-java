@@ -4,55 +4,92 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device operating system summary. */
+/**
+ * Device operating system summary.
+ */
 public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647 */
-    private Integer _androidCorporateWorkProfileCount;
-    /** Number of android device count. */
-    private Integer _androidCount;
-    /** Number of dedicated Android devices. */
-    private Integer _androidDedicatedCount;
-    /** Number of device admin Android devices. */
-    private Integer _androidDeviceAdminCount;
-    /** Number of fully managed Android devices. */
-    private Integer _androidFullyManagedCount;
-    /** Number of work profile Android devices. */
-    private Integer _androidWorkProfileCount;
-    /** Number of AOSP user-associated Android devices. Valid values 0 to 2147483647 */
-    private Integer _aospUserAssociatedCount;
-    /** Number of AOSP userless Android devices. Valid values 0 to 2147483647 */
-    private Integer _aospUserlessCount;
-    /** Number of Chrome OS devices. Valid values 0 to 2147483647 */
-    private Integer _chromeOSCount;
-    /** Number of ConfigMgr managed devices. */
-    private Integer _configMgrDeviceCount;
-    /** Number of iOS device count. */
-    private Integer _iosCount;
-    /** Number of Linux OS devices. Valid values 0 to 2147483647 */
-    private Integer _linuxCount;
-    /** Number of Mac OS X device count. */
-    private Integer _macOSCount;
-    /** The OdataType property */
-    private String _odataType;
-    /** Number of unknown device count. */
-    private Integer _unknownCount;
-    /** Number of Windows device count. */
-    private Integer _windowsCount;
-    /** Number of Windows mobile device count. */
-    private Integer _windowsMobileCount;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
+     */
+    private Integer androidCorporateWorkProfileCount;
+    /**
+     * Number of android device count.
+     */
+    private Integer androidCount;
+    /**
+     * Number of dedicated Android devices.
+     */
+    private Integer androidDedicatedCount;
+    /**
+     * Number of device admin Android devices.
+     */
+    private Integer androidDeviceAdminCount;
+    /**
+     * Number of fully managed Android devices.
+     */
+    private Integer androidFullyManagedCount;
+    /**
+     * Number of work profile Android devices.
+     */
+    private Integer androidWorkProfileCount;
+    /**
+     * Number of AOSP user-associated Android devices. Valid values 0 to 2147483647
+     */
+    private Integer aospUserAssociatedCount;
+    /**
+     * Number of AOSP userless Android devices. Valid values 0 to 2147483647
+     */
+    private Integer aospUserlessCount;
+    /**
+     * Number of Chrome OS devices. Valid values 0 to 2147483647
+     */
+    private Integer chromeOSCount;
+    /**
+     * Number of ConfigMgr managed devices.
+     */
+    private Integer configMgrDeviceCount;
+    /**
+     * Number of iOS device count.
+     */
+    private Integer iosCount;
+    /**
+     * Number of Linux OS devices. Valid values 0 to 2147483647
+     */
+    private Integer linuxCount;
+    /**
+     * Number of Mac OS X device count.
+     */
+    private Integer macOSCount;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Number of unknown device count.
+     */
+    private Integer unknownCount;
+    /**
+     * Number of Windows device count.
+     */
+    private Integer windowsCount;
+    /**
+     * Number of Windows mobile device count.
+     */
+    private Integer windowsMobileCount;
     /**
      * Instantiates a new deviceOperatingSystemSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceOperatingSystemSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceOperatingSystemSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,7 +107,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the androidCorporateWorkProfileCount property value. The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
@@ -78,7 +115,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getAndroidCorporateWorkProfileCount() {
-        return this._androidCorporateWorkProfileCount;
+        return this.androidCorporateWorkProfileCount;
     }
     /**
      * Gets the androidCount property value. Number of android device count.
@@ -86,7 +123,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getAndroidCount() {
-        return this._androidCount;
+        return this.androidCount;
     }
     /**
      * Gets the androidDedicatedCount property value. Number of dedicated Android devices.
@@ -94,7 +131,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getAndroidDedicatedCount() {
-        return this._androidDedicatedCount;
+        return this.androidDedicatedCount;
     }
     /**
      * Gets the androidDeviceAdminCount property value. Number of device admin Android devices.
@@ -102,7 +139,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getAndroidDeviceAdminCount() {
-        return this._androidDeviceAdminCount;
+        return this.androidDeviceAdminCount;
     }
     /**
      * Gets the androidFullyManagedCount property value. Number of fully managed Android devices.
@@ -110,7 +147,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getAndroidFullyManagedCount() {
-        return this._androidFullyManagedCount;
+        return this.androidFullyManagedCount;
     }
     /**
      * Gets the androidWorkProfileCount property value. Number of work profile Android devices.
@@ -118,7 +155,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getAndroidWorkProfileCount() {
-        return this._androidWorkProfileCount;
+        return this.androidWorkProfileCount;
     }
     /**
      * Gets the aospUserAssociatedCount property value. Number of AOSP user-associated Android devices. Valid values 0 to 2147483647
@@ -126,7 +163,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getAospUserAssociatedCount() {
-        return this._aospUserAssociatedCount;
+        return this.aospUserAssociatedCount;
     }
     /**
      * Gets the aospUserlessCount property value. Number of AOSP userless Android devices. Valid values 0 to 2147483647
@@ -134,7 +171,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getAospUserlessCount() {
-        return this._aospUserlessCount;
+        return this.aospUserlessCount;
     }
     /**
      * Gets the chromeOSCount property value. Number of Chrome OS devices. Valid values 0 to 2147483647
@@ -142,7 +179,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getChromeOSCount() {
-        return this._chromeOSCount;
+        return this.chromeOSCount;
     }
     /**
      * Gets the configMgrDeviceCount property value. Number of ConfigMgr managed devices.
@@ -150,34 +187,33 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getConfigMgrDeviceCount() {
-        return this._configMgrDeviceCount;
+        return this.configMgrDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceOperatingSystemSummary currentObject = this;
-        return new HashMap<>(17) {{
-            this.put("androidCorporateWorkProfileCount", (n) -> { currentObject.setAndroidCorporateWorkProfileCount(n.getIntegerValue()); });
-            this.put("androidCount", (n) -> { currentObject.setAndroidCount(n.getIntegerValue()); });
-            this.put("androidDedicatedCount", (n) -> { currentObject.setAndroidDedicatedCount(n.getIntegerValue()); });
-            this.put("androidDeviceAdminCount", (n) -> { currentObject.setAndroidDeviceAdminCount(n.getIntegerValue()); });
-            this.put("androidFullyManagedCount", (n) -> { currentObject.setAndroidFullyManagedCount(n.getIntegerValue()); });
-            this.put("androidWorkProfileCount", (n) -> { currentObject.setAndroidWorkProfileCount(n.getIntegerValue()); });
-            this.put("aospUserAssociatedCount", (n) -> { currentObject.setAospUserAssociatedCount(n.getIntegerValue()); });
-            this.put("aospUserlessCount", (n) -> { currentObject.setAospUserlessCount(n.getIntegerValue()); });
-            this.put("chromeOSCount", (n) -> { currentObject.setChromeOSCount(n.getIntegerValue()); });
-            this.put("configMgrDeviceCount", (n) -> { currentObject.setConfigMgrDeviceCount(n.getIntegerValue()); });
-            this.put("iosCount", (n) -> { currentObject.setIosCount(n.getIntegerValue()); });
-            this.put("linuxCount", (n) -> { currentObject.setLinuxCount(n.getIntegerValue()); });
-            this.put("macOSCount", (n) -> { currentObject.setMacOSCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("unknownCount", (n) -> { currentObject.setUnknownCount(n.getIntegerValue()); });
-            this.put("windowsCount", (n) -> { currentObject.setWindowsCount(n.getIntegerValue()); });
-            this.put("windowsMobileCount", (n) -> { currentObject.setWindowsMobileCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(17);
+        deserializerMap.put("androidCorporateWorkProfileCount", (n) -> { this.setAndroidCorporateWorkProfileCount(n.getIntegerValue()); });
+        deserializerMap.put("androidCount", (n) -> { this.setAndroidCount(n.getIntegerValue()); });
+        deserializerMap.put("androidDedicatedCount", (n) -> { this.setAndroidDedicatedCount(n.getIntegerValue()); });
+        deserializerMap.put("androidDeviceAdminCount", (n) -> { this.setAndroidDeviceAdminCount(n.getIntegerValue()); });
+        deserializerMap.put("androidFullyManagedCount", (n) -> { this.setAndroidFullyManagedCount(n.getIntegerValue()); });
+        deserializerMap.put("androidWorkProfileCount", (n) -> { this.setAndroidWorkProfileCount(n.getIntegerValue()); });
+        deserializerMap.put("aospUserAssociatedCount", (n) -> { this.setAospUserAssociatedCount(n.getIntegerValue()); });
+        deserializerMap.put("aospUserlessCount", (n) -> { this.setAospUserlessCount(n.getIntegerValue()); });
+        deserializerMap.put("chromeOSCount", (n) -> { this.setChromeOSCount(n.getIntegerValue()); });
+        deserializerMap.put("configMgrDeviceCount", (n) -> { this.setConfigMgrDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("iosCount", (n) -> { this.setIosCount(n.getIntegerValue()); });
+        deserializerMap.put("linuxCount", (n) -> { this.setLinuxCount(n.getIntegerValue()); });
+        deserializerMap.put("macOSCount", (n) -> { this.setMacOSCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("unknownCount", (n) -> { this.setUnknownCount(n.getIntegerValue()); });
+        deserializerMap.put("windowsCount", (n) -> { this.setWindowsCount(n.getIntegerValue()); });
+        deserializerMap.put("windowsMobileCount", (n) -> { this.setWindowsMobileCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the iosCount property value. Number of iOS device count.
@@ -185,7 +221,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getIosCount() {
-        return this._iosCount;
+        return this.iosCount;
     }
     /**
      * Gets the linuxCount property value. Number of Linux OS devices. Valid values 0 to 2147483647
@@ -193,7 +229,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getLinuxCount() {
-        return this._linuxCount;
+        return this.linuxCount;
     }
     /**
      * Gets the macOSCount property value. Number of Mac OS X device count.
@@ -201,7 +237,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getMacOSCount() {
-        return this._macOSCount;
+        return this.macOSCount;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -209,7 +245,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the unknownCount property value. Number of unknown device count.
@@ -217,7 +253,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getUnknownCount() {
-        return this._unknownCount;
+        return this.unknownCount;
     }
     /**
      * Gets the windowsCount property value. Number of Windows device count.
@@ -225,7 +261,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getWindowsCount() {
-        return this._windowsCount;
+        return this.windowsCount;
     }
     /**
      * Gets the windowsMobileCount property value. Number of Windows mobile device count.
@@ -233,13 +269,14 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public Integer getWindowsMobileCount() {
-        return this._windowsMobileCount;
+        return this.windowsMobileCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("androidCorporateWorkProfileCount", this.getAndroidCorporateWorkProfileCount());
@@ -266,143 +303,161 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the androidCorporateWorkProfileCount property value. The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
      * @param value Value to set for the androidCorporateWorkProfileCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidCorporateWorkProfileCount(@javax.annotation.Nullable final Integer value) {
-        this._androidCorporateWorkProfileCount = value;
+        this.androidCorporateWorkProfileCount = value;
     }
     /**
      * Sets the androidCount property value. Number of android device count.
      * @param value Value to set for the androidCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidCount(@javax.annotation.Nullable final Integer value) {
-        this._androidCount = value;
+        this.androidCount = value;
     }
     /**
      * Sets the androidDedicatedCount property value. Number of dedicated Android devices.
      * @param value Value to set for the androidDedicatedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidDedicatedCount(@javax.annotation.Nullable final Integer value) {
-        this._androidDedicatedCount = value;
+        this.androidDedicatedCount = value;
     }
     /**
      * Sets the androidDeviceAdminCount property value. Number of device admin Android devices.
      * @param value Value to set for the androidDeviceAdminCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidDeviceAdminCount(@javax.annotation.Nullable final Integer value) {
-        this._androidDeviceAdminCount = value;
+        this.androidDeviceAdminCount = value;
     }
     /**
      * Sets the androidFullyManagedCount property value. Number of fully managed Android devices.
      * @param value Value to set for the androidFullyManagedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidFullyManagedCount(@javax.annotation.Nullable final Integer value) {
-        this._androidFullyManagedCount = value;
+        this.androidFullyManagedCount = value;
     }
     /**
      * Sets the androidWorkProfileCount property value. Number of work profile Android devices.
      * @param value Value to set for the androidWorkProfileCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidWorkProfileCount(@javax.annotation.Nullable final Integer value) {
-        this._androidWorkProfileCount = value;
+        this.androidWorkProfileCount = value;
     }
     /**
      * Sets the aospUserAssociatedCount property value. Number of AOSP user-associated Android devices. Valid values 0 to 2147483647
      * @param value Value to set for the aospUserAssociatedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAospUserAssociatedCount(@javax.annotation.Nullable final Integer value) {
-        this._aospUserAssociatedCount = value;
+        this.aospUserAssociatedCount = value;
     }
     /**
      * Sets the aospUserlessCount property value. Number of AOSP userless Android devices. Valid values 0 to 2147483647
      * @param value Value to set for the aospUserlessCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAospUserlessCount(@javax.annotation.Nullable final Integer value) {
-        this._aospUserlessCount = value;
+        this.aospUserlessCount = value;
     }
     /**
      * Sets the chromeOSCount property value. Number of Chrome OS devices. Valid values 0 to 2147483647
      * @param value Value to set for the chromeOSCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChromeOSCount(@javax.annotation.Nullable final Integer value) {
-        this._chromeOSCount = value;
+        this.chromeOSCount = value;
     }
     /**
      * Sets the configMgrDeviceCount property value. Number of ConfigMgr managed devices.
      * @param value Value to set for the configMgrDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigMgrDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._configMgrDeviceCount = value;
+        this.configMgrDeviceCount = value;
     }
     /**
      * Sets the iosCount property value. Number of iOS device count.
      * @param value Value to set for the iosCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosCount(@javax.annotation.Nullable final Integer value) {
-        this._iosCount = value;
+        this.iosCount = value;
     }
     /**
      * Sets the linuxCount property value. Number of Linux OS devices. Valid values 0 to 2147483647
      * @param value Value to set for the linuxCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinuxCount(@javax.annotation.Nullable final Integer value) {
-        this._linuxCount = value;
+        this.linuxCount = value;
     }
     /**
      * Sets the macOSCount property value. Number of Mac OS X device count.
      * @param value Value to set for the macOSCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOSCount(@javax.annotation.Nullable final Integer value) {
-        this._macOSCount = value;
+        this.macOSCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the unknownCount property value. Number of unknown device count.
      * @param value Value to set for the unknownCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownCount(@javax.annotation.Nullable final Integer value) {
-        this._unknownCount = value;
+        this.unknownCount = value;
     }
     /**
      * Sets the windowsCount property value. Number of Windows device count.
      * @param value Value to set for the windowsCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsCount(@javax.annotation.Nullable final Integer value) {
-        this._windowsCount = value;
+        this.windowsCount = value;
     }
     /**
      * Sets the windowsMobileCount property value. Number of Windows mobile device count.
      * @param value Value to set for the windowsMobileCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsMobileCount(@javax.annotation.Nullable final Integer value) {
-        this._windowsMobileCount = value;
+        this.windowsMobileCount = value;
     }
 }

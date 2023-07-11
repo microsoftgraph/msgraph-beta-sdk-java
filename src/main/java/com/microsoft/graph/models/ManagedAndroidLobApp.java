@@ -3,27 +3,42 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties and inherited properties for Managed Android Line Of Business apps.
+ */
 public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsable {
-    /** The Identity Name. */
-    private String _identityName;
-    /** The identity version. */
-    private String _identityVersion;
-    /** The value for the minimum applicable operating system. */
-    private AndroidMinimumOperatingSystem _minimumSupportedOperatingSystem;
-    /** The package identifier. */
-    private String _packageId;
-    /** The version code of managed Android Line of Business (LoB) app. */
-    private String _versionCode;
-    /** The version name of managed Android Line of Business (LoB) app. */
-    private String _versionName;
     /**
-     * Instantiates a new ManagedAndroidLobApp and sets the default values.
+     * The Identity Name. This property is being deprecated in 2302(February 2023).
+     */
+    private String identityName;
+    /**
+     * The identity version. This property is being deprecated in 2302(February 2023).
+     */
+    private String identityVersion;
+    /**
+     * The value for the minimum applicable operating system.
+     */
+    private AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
+    /**
+     * The package identifier.
+     */
+    private String packageId;
+    /**
+     * The version code of managed Android Line of Business (LoB) app.
+     */
+    private String versionCode;
+    /**
+     * The version name of managed Android Line of Business (LoB) app.
+     */
+    private String versionName;
+    /**
+     * Instantiates a new managedAndroidLobApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAndroidLobApp() {
         super();
         this.setOdataType("#microsoft.graph.managedAndroidLobApp");
@@ -31,7 +46,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAndroidLobApp
+     * @return a managedAndroidLobApp
      */
     @javax.annotation.Nonnull
     public static ManagedAndroidLobApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -40,35 +55,34 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedAndroidLobApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("identityName", (n) -> { currentObject.setIdentityName(n.getStringValue()); });
-            this.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
-            this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
-            this.put("versionCode", (n) -> { currentObject.setVersionCode(n.getStringValue()); });
-            this.put("versionName", (n) -> { currentObject.setVersionName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("identityName", (n) -> { this.setIdentityName(n.getStringValue()); });
+        deserializerMap.put("identityVersion", (n) -> { this.setIdentityVersion(n.getStringValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
+        deserializerMap.put("versionCode", (n) -> { this.setVersionCode(n.getStringValue()); });
+        deserializerMap.put("versionName", (n) -> { this.setVersionName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the identityName property value. The Identity Name.
+     * Gets the identityName property value. The Identity Name. This property is being deprecated in 2302(February 2023).
      * @return a string
      */
     @javax.annotation.Nullable
     public String getIdentityName() {
-        return this._identityName;
+        return this.identityName;
     }
     /**
-     * Gets the identityVersion property value. The identity version.
+     * Gets the identityVersion property value. The identity version. This property is being deprecated in 2302(February 2023).
      * @return a string
      */
     @javax.annotation.Nullable
     public String getIdentityVersion() {
-        return this._identityVersion;
+        return this.identityVersion;
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
@@ -76,7 +90,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      */
     @javax.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this._minimumSupportedOperatingSystem;
+        return this.minimumSupportedOperatingSystem;
     }
     /**
      * Gets the packageId property value. The package identifier.
@@ -84,7 +98,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      */
     @javax.annotation.Nullable
     public String getPackageId() {
-        return this._packageId;
+        return this.packageId;
     }
     /**
      * Gets the versionCode property value. The version code of managed Android Line of Business (LoB) app.
@@ -92,7 +106,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      */
     @javax.annotation.Nullable
     public String getVersionCode() {
-        return this._versionCode;
+        return this.versionCode;
     }
     /**
      * Gets the versionName property value. The version name of managed Android Line of Business (LoB) app.
@@ -100,13 +114,14 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      */
     @javax.annotation.Nullable
     public String getVersionName() {
-        return this._versionName;
+        return this.versionName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,51 +133,57 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
         writer.writeStringValue("versionName", this.getVersionName());
     }
     /**
-     * Sets the identityName property value. The Identity Name.
+     * Sets the identityName property value. The Identity Name. This property is being deprecated in 2302(February 2023).
      * @param value Value to set for the identityName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityName(@javax.annotation.Nullable final String value) {
-        this._identityName = value;
+        this.identityName = value;
     }
     /**
-     * Sets the identityVersion property value. The identity version.
+     * Sets the identityVersion property value. The identity version. This property is being deprecated in 2302(February 2023).
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityVersion(@javax.annotation.Nullable final String value) {
-        this._identityVersion = value;
+        this.identityVersion = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final AndroidMinimumOperatingSystem value) {
-        this._minimumSupportedOperatingSystem = value;
+        this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the packageId property value. The package identifier.
      * @param value Value to set for the packageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
-        this._packageId = value;
+        this.packageId = value;
     }
     /**
      * Sets the versionCode property value. The version code of managed Android Line of Business (LoB) app.
      * @param value Value to set for the versionCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersionCode(@javax.annotation.Nullable final String value) {
-        this._versionCode = value;
+        this.versionCode = value;
     }
     /**
      * Sets the versionName property value. The version name of managed Android Line of Business (LoB) app.
      * @param value Value to set for the versionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersionName(@javax.annotation.Nullable final String value) {
-        this._versionName = value;
+        this.versionName = value;
     }
 }

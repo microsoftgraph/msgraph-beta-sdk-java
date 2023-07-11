@@ -3,21 +3,30 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The security baseline template of the account
+ */
 public class SecurityBaselineTemplate extends DeviceManagementTemplate implements Parsable {
-    /** The security baseline per category device state summary */
-    private java.util.List<SecurityBaselineCategoryStateSummary> _categoryDeviceStateSummaries;
-    /** The security baseline device states */
-    private java.util.List<SecurityBaselineDeviceState> _deviceStates;
-    /** The security baseline device state summary */
-    private SecurityBaselineStateSummary _deviceStateSummary;
     /**
-     * Instantiates a new SecurityBaselineTemplate and sets the default values.
+     * The security baseline per category device state summary
+     */
+    private java.util.List<SecurityBaselineCategoryStateSummary> categoryDeviceStateSummaries;
+    /**
+     * The security baseline device states
+     */
+    private java.util.List<SecurityBaselineDeviceState> deviceStates;
+    /**
+     * The security baseline device state summary
+     */
+    private SecurityBaselineStateSummary deviceStateSummary;
+    /**
+     * Instantiates a new securityBaselineTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityBaselineTemplate() {
         super();
         this.setOdataType("#microsoft.graph.securityBaselineTemplate");
@@ -25,7 +34,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecurityBaselineTemplate
+     * @return a securityBaselineTemplate
      */
     @javax.annotation.Nonnull
     public static SecurityBaselineTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +47,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      */
     @javax.annotation.Nullable
     public java.util.List<SecurityBaselineCategoryStateSummary> getCategoryDeviceStateSummaries() {
-        return this._categoryDeviceStateSummaries;
+        return this.categoryDeviceStateSummaries;
     }
     /**
      * Gets the deviceStates property value. The security baseline device states
@@ -46,7 +55,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      */
     @javax.annotation.Nullable
     public java.util.List<SecurityBaselineDeviceState> getDeviceStates() {
-        return this._deviceStates;
+        return this.deviceStates;
     }
     /**
      * Gets the deviceStateSummary property value. The security baseline device state summary
@@ -54,26 +63,26 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      */
     @javax.annotation.Nullable
     public SecurityBaselineStateSummary getDeviceStateSummary() {
-        return this._deviceStateSummary;
+        return this.deviceStateSummary;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SecurityBaselineTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("categoryDeviceStateSummaries", (n) -> { currentObject.setCategoryDeviceStateSummaries(n.getCollectionOfObjectValues(SecurityBaselineCategoryStateSummary::createFromDiscriminatorValue)); });
-            this.put("deviceStates", (n) -> { currentObject.setDeviceStates(n.getCollectionOfObjectValues(SecurityBaselineDeviceState::createFromDiscriminatorValue)); });
-            this.put("deviceStateSummary", (n) -> { currentObject.setDeviceStateSummary(n.getObjectValue(SecurityBaselineStateSummary::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categoryDeviceStateSummaries", (n) -> { this.setCategoryDeviceStateSummaries(n.getCollectionOfObjectValues(SecurityBaselineCategoryStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStates", (n) -> { this.setDeviceStates(n.getCollectionOfObjectValues(SecurityBaselineDeviceState::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStateSummary", (n) -> { this.setDeviceStateSummary(n.getObjectValue(SecurityBaselineStateSummary::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +95,26 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
      * @param value Value to set for the categoryDeviceStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategoryDeviceStateSummaries(@javax.annotation.Nullable final java.util.List<SecurityBaselineCategoryStateSummary> value) {
-        this._categoryDeviceStateSummaries = value;
+        this.categoryDeviceStateSummaries = value;
     }
     /**
      * Sets the deviceStates property value. The security baseline device states
      * @param value Value to set for the deviceStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStates(@javax.annotation.Nullable final java.util.List<SecurityBaselineDeviceState> value) {
-        this._deviceStates = value;
+        this.deviceStates = value;
     }
     /**
      * Sets the deviceStateSummary property value. The security baseline device state summary
      * @param value Value to set for the deviceStateSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStateSummary(@javax.annotation.Nullable final SecurityBaselineStateSummary value) {
-        this._deviceStateSummary = value;
+        this.deviceStateSummary = value;
     }
 }
