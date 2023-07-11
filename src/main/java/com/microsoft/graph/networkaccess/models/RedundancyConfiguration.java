@@ -40,7 +40,7 @@ public class RedundancyConfiguration implements IJsonBackedObject {
 
     /**
      * The Redundancy Tier.
-     * 
+     * Specifies the Device link SKU .The possible values are: noRedundancy, zoneRedundancy.
      */
     @SerializedName(value = "redundancyTier", alternate = {"RedundancyTier"})
     @Expose
@@ -49,7 +49,7 @@ public class RedundancyConfiguration implements IJsonBackedObject {
 
     /**
      * The Zone Local Ip Address.
-     * 
+     * Indicate the specific IP address used for establishing the Border Gateway Protocol (BGP) connection with Microsoft's network.
      */
     @SerializedName(value = "zoneLocalIpAddress", alternate = {"ZoneLocalIpAddress"})
     @Expose

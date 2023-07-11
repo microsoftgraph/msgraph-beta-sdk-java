@@ -39,7 +39,7 @@ public class CrossTenantSummary implements IJsonBackedObject {
 
     /**
      * The Auth Transaction Count.
-     * 
+     * Total numbers of authentication sessions in the time frame between startDateTime and endDateTime.
      */
     @SerializedName(value = "authTransactionCount", alternate = {"AuthTransactionCount"})
     @Expose
@@ -48,7 +48,7 @@ public class CrossTenantSummary implements IJsonBackedObject {
 
     /**
      * The Device Count.
-     * 
+     * Count of unique devices that performed cross-tenant access, in the time frame between startDateTime and endDateTime.
      */
     @SerializedName(value = "deviceCount", alternate = {"DeviceCount"})
     @Expose
@@ -57,7 +57,7 @@ public class CrossTenantSummary implements IJsonBackedObject {
 
     /**
      * The New Tenant Count.
-     * 
+     * Count of unique tenants that were accessed in the time frame between endDateTime to discoveryPivotDateTime, but haven't been accessed in the time frame between discoveryPivotDateTime to startDateTime.
      */
     @SerializedName(value = "newTenantCount", alternate = {"NewTenantCount"})
     @Expose
@@ -66,7 +66,7 @@ public class CrossTenantSummary implements IJsonBackedObject {
 
     /**
      * The Tenant Count.
-     * 
+     * Count of unique tenants that were accessed, that are different from the device's home tenant, in the time frame between startDateTime and endDateTime.
      */
     @SerializedName(value = "tenantCount", alternate = {"TenantCount"})
     @Expose
@@ -75,7 +75,7 @@ public class CrossTenantSummary implements IJsonBackedObject {
 
     /**
      * The User Count.
-     * 
+     * Count of unique users that performed cross-tenant access, in the time frame between startDateTime and endDateTime.
      */
     @SerializedName(value = "userCount", alternate = {"UserCount"})
     @Expose

@@ -31,7 +31,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
     /**
      * The Content.
-     * The WindowsDefenderApplicationControl supplemental policy content in byte array format.
+     * Indicates the content of the Windows Defender Application Control Supplemental Policy in byte array format.
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
@@ -40,7 +40,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
     /**
      * The Content File Name.
-     * The WindowsDefenderApplicationControl supplemental policy content's file name.
+     * Indicates the file name associated with the content of the Windows Defender Application Control Supplemental Policy.
      */
     @SerializedName(value = "contentFileName", alternate = {"ContentFileName"})
     @Expose
@@ -49,7 +49,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
     /**
      * The Creation Date Time.
-     * The date and time when the WindowsDefenderApplicationControl supplemental policy was uploaded.
+     * Indicates the created date and time when the Windows Defender Application Control Supplemental Policy was uploaded.
      */
     @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
     /**
      * The Description.
-     * The description of WindowsDefenderApplicationControl supplemental policy.
+     * The description of the Windows Defender Application Control Supplemental Policy.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -67,7 +67,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
     /**
      * The Display Name.
-     * The display name of WindowsDefenderApplicationControl supplemental policy.
+     * The display name of the Windows Defender Application Control Supplemental Policy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -76,7 +76,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
     /**
      * The Last Modified Date Time.
-     * The date and time when the WindowsDefenderApplicationControl supplemental policy was last modified.
+     * Indicates the last modified date and time of the Windows Defender Application Control Supplemental Policy.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -85,7 +85,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
     /**
      * The Role Scope Tag Ids.
-     * List of Scope Tags for this WindowsDefenderApplicationControl supplemental policy entity.
+     * List of Scope Tags for the Windows Defender Application Control Supplemental Policy entity.
      */
     @SerializedName(value = "roleScopeTagIds", alternate = {"RoleScopeTagIds"})
     @Expose
@@ -94,7 +94,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
     /**
      * The Version.
-     * The WindowsDefenderApplicationControl supplemental policy's version.
+     * Indicates the Windows Defender Application Control Supplemental Policy's version.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -103,7 +103,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
 
     /**
      * The Assignments.
-     * The associated group assignments for this WindowsDefenderApplicationControl supplemental policy.
+     * The associated group assignments for the Windows Defender Application Control Supplemental Policy.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose

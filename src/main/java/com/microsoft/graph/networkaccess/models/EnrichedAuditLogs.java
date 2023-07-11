@@ -28,7 +28,7 @@ public class EnrichedAuditLogs extends Entity implements IJsonBackedObject {
 
     /**
      * The Exchange.
-     * 
+     * Exchange Online enriched audit logs settings.
      */
     @SerializedName(value = "exchange", alternate = {"Exchange"})
     @Expose
@@ -37,7 +37,7 @@ public class EnrichedAuditLogs extends Entity implements IJsonBackedObject {
 
     /**
      * The Sharepoint.
-     * 
+     * SharePoint Online enriched audit logs settings.
      */
     @SerializedName(value = "sharepoint", alternate = {"Sharepoint"})
     @Expose
@@ -46,7 +46,7 @@ public class EnrichedAuditLogs extends Entity implements IJsonBackedObject {
 
     /**
      * The Teams.
-     * 
+     * Teams enriched audit logs settings.
      */
     @SerializedName(value = "teams", alternate = {"Teams"})
     @Expose

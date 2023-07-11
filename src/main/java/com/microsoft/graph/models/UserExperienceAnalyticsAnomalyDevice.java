@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements IJso
 
     /**
      * The Device Status.
-     * Indicates the device status with respect to the correlation group. At risk devices are devices that share correlation group features but may not yet be affected by an anomaly, such as when a device is experiencing crashes on an application but that application has not been used on the device but is currently installed. This could lead to the device becoming anomalous if the application in question were to be used. Possible values are: anomolous, affected or atRisk
+     * Indicates the device status with respect to the correlation group. At risk devices are devices that share correlation group features but may not yet be affected by an anomaly, such as when a device is experiencing crashes on an application but that application has not been used on the device but is currently installed. This could lead to the device becoming anomalous if the application in question were to be used. Possible values are: anomolous, affected or atRisk. Possible values are: anomalous, affected, atRisk, unknownFutureValue.
      */
     @SerializedName(value = "deviceStatus", alternate = {"DeviceStatus"})
     @Expose

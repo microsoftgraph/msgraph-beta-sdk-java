@@ -10,6 +10,11 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.security.requests.AuthorityTemplateCollectionPage;
+import com.microsoft.graph.security.requests.CategoryTemplateCollectionPage;
+import com.microsoft.graph.security.requests.CitationTemplateCollectionPage;
+import com.microsoft.graph.security.requests.DepartmentTemplateCollectionPage;
+import com.microsoft.graph.security.requests.FilePlanReferenceTemplateCollectionPage;
 import com.microsoft.graph.security.requests.RetentionLabelCollectionPage;
 
 
@@ -28,8 +33,53 @@ public class LabelsRoot extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Authorities.
+     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
+     */
+    @SerializedName(value = "authorities", alternate = {"Authorities"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.AuthorityTemplateCollectionPage authorities;
+
+    /**
+     * The Categories.
+     * Specifies a group of similar types of content in a particular department.
+     */
+    @SerializedName(value = "categories", alternate = {"Categories"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.CategoryTemplateCollectionPage categories;
+
+    /**
+     * The Citations.
+     * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
+     */
+    @SerializedName(value = "citations", alternate = {"Citations"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.CitationTemplateCollectionPage citations;
+
+    /**
+     * The Departments.
+     * Specifies the department or business unit of an organization to which a label belongs.
+     */
+    @SerializedName(value = "departments", alternate = {"Departments"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.DepartmentTemplateCollectionPage departments;
+
+    /**
+     * The File Plan References.
+     * Specifies a unique alpha-numeric identifier for an organization’s retention schedule.
+     */
+    @SerializedName(value = "filePlanReferences", alternate = {"FilePlanReferences"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.FilePlanReferenceTemplateCollectionPage filePlanReferences;
+
+    /**
      * The Retention Labels.
-     * 
+     * Represents how customers can manage their data, whether and for how long to retain or delete it.
      */
     @SerializedName(value = "retentionLabels", alternate = {"RetentionLabels"})
     @Expose
@@ -45,6 +95,26 @@ public class LabelsRoot extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("authorities")) {
+            authorities = serializer.deserializeObject(json.get("authorities"), com.microsoft.graph.security.requests.AuthorityTemplateCollectionPage.class);
+        }
+
+        if (json.has("categories")) {
+            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.security.requests.CategoryTemplateCollectionPage.class);
+        }
+
+        if (json.has("citations")) {
+            citations = serializer.deserializeObject(json.get("citations"), com.microsoft.graph.security.requests.CitationTemplateCollectionPage.class);
+        }
+
+        if (json.has("departments")) {
+            departments = serializer.deserializeObject(json.get("departments"), com.microsoft.graph.security.requests.DepartmentTemplateCollectionPage.class);
+        }
+
+        if (json.has("filePlanReferences")) {
+            filePlanReferences = serializer.deserializeObject(json.get("filePlanReferences"), com.microsoft.graph.security.requests.FilePlanReferenceTemplateCollectionPage.class);
+        }
 
         if (json.has("retentionLabels")) {
             retentionLabels = serializer.deserializeObject(json.get("retentionLabels"), com.microsoft.graph.security.requests.RetentionLabelCollectionPage.class);

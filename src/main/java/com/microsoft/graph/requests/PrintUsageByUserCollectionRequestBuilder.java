@@ -24,7 +24,9 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 
 /**
  * The class for the Print Usage By User Collection Request Builder.
+ * @deprecated The monthlyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByUser navigation property instead of this.
  */
+@Deprecated
 public class PrintUsageByUserCollectionRequestBuilder extends BaseCollectionRequestBuilder<PrintUsageByUser, PrintUsageByUserRequestBuilder, PrintUsageByUserCollectionResponse, PrintUsageByUserCollectionPage, PrintUsageByUserCollectionRequest> {
 
     /**

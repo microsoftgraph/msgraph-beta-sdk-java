@@ -44,6 +44,10 @@ public enum PrintMultipageLayout
     */
     CLOCKWISE_FROM_BOTTOM_RIGHT,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For PrintMultipageLayout values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -17,7 +17,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Printer Get Capabilities Request Builder.
+ * @deprecated The getCapabilities API is deprecated and will stop returning data on July 31, 2023. Please use the capabilities property instead of this.
  */
+@Deprecated
 public class PrinterGetCapabilitiesRequestBuilder extends BaseFunctionRequestBuilder<PrinterCapabilities> {
 
     /**

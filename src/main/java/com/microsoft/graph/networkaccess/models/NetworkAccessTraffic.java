@@ -43,7 +43,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Agent Version.
-     * 
+     * Represents the version of the Global Secure Access client agent software. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "agentVersion", alternate = {"AgentVersion"})
     @Expose
@@ -52,7 +52,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Connection Id.
-     * 
+     * Represents a unique identifier assigned to a connection. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "connectionId", alternate = {"ConnectionId"})
     @Expose
@@ -61,7 +61,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Represents the date and time when a network access traffic log entry was created. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -70,7 +70,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Destination FQDN.
-     * 
+     * Represents the Fully Qualified Domain Name (FQDN) of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "destinationFQDN", alternate = {"DestinationFQDN"})
     @Expose
@@ -79,7 +79,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Destination Ip.
-     * 
+     * Represents the IP address of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "destinationIp", alternate = {"DestinationIp"})
     @Expose
@@ -88,7 +88,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Destination Port.
-     * 
+     * Represents the network port number on the destination host or server in a network communication. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "destinationPort", alternate = {"DestinationPort"})
     @Expose
@@ -97,7 +97,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Device Category.
-     * 
+     * Represents the category classification of a device within a network infrastructure. The possible values are: client, branch, unknownFutureValue. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "deviceCategory", alternate = {"DeviceCategory"})
     @Expose
@@ -106,7 +106,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * 
+     * Represents a unique identifier assigned to a device within a network infrastructure. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -115,7 +115,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Device Operating System.
-     * 
+     * Represents the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "deviceOperatingSystem", alternate = {"DeviceOperatingSystem"})
     @Expose
@@ -124,7 +124,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Device Operating System Version.
-     * 
+     * Represents the version or release number of the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "deviceOperatingSystemVersion", alternate = {"DeviceOperatingSystemVersion"})
     @Expose
@@ -133,7 +133,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Headers.
-     * 
+     * Represents the headers included in a network request or response. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "headers", alternate = {"Headers"})
     @Expose
@@ -142,7 +142,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Network Protocol.
-     * 
+     * Represents the networking protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "networkProtocol", alternate = {"NetworkProtocol"})
     @Expose
@@ -151,7 +151,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Policy Id.
-     * 
+     * Represents a unique identifier assigned to a policy. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "policyId", alternate = {"PolicyId"})
     @Expose
@@ -160,7 +160,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Policy Rule Id.
-     * 
+     * Represents a unique identifier assigned to a policy rule. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "policyRuleId", alternate = {"PolicyRuleId"})
     @Expose
@@ -169,7 +169,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Received Bytes.
-     * 
+     * Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "receivedBytes", alternate = {"ReceivedBytes"})
     @Expose
@@ -178,7 +178,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Sent Bytes.
-     * 
+     * Represents the total number of bytes sent in a network communication or data transfer. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "sentBytes", alternate = {"SentBytes"})
     @Expose
@@ -187,7 +187,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Session Id.
-     * 
+     * Represents a unique identifier assigned to a session or connection within a network infrastructure. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "sessionId", alternate = {"SessionId"})
     @Expose
@@ -196,7 +196,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Source Ip.
-     * 
+     * Represents the source IP address in a network communication. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "sourceIp", alternate = {"SourceIp"})
     @Expose
@@ -205,7 +205,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Source Port.
-     * 
+     * Represents the network port number on the source host or device in a network communication. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "sourcePort", alternate = {"SourcePort"})
     @Expose
@@ -214,7 +214,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * Represents a unique identifier assigned to a tenant within a network infrastructure. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -223,7 +223,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Traffic Type.
-     * 
+     * Represents the type or category of network traffic.The possible values are: internet, private, microsoft365, all, unknownFutureValue. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "trafficType", alternate = {"TrafficType"})
     @Expose
@@ -232,7 +232,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Transaction Id.
-     * 
+     * Represents a unique identifier assigned to a specific transaction or operation. Key. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "transactionId", alternate = {"TransactionId"})
     @Expose
@@ -241,7 +241,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The Transport Protocol.
-     * 
+     * Represents the transport protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "transportProtocol", alternate = {"TransportProtocol"})
     @Expose
@@ -250,7 +250,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * Represents a unique identifier assigned to a user. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -259,7 +259,7 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * Represents the user principal name (UPN) associated with a user. Supports $filter (eq) and $orderby.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

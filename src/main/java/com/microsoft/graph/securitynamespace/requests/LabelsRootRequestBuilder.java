@@ -57,6 +57,106 @@ public class LabelsRootRequestBuilder extends BaseRequestBuilder<LabelsRoot> {
 
 
     /**
+     *  Gets a request builder for the AuthorityTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.AuthorityTemplateCollectionRequestBuilder authorities() {
+        return new com.microsoft.graph.security.requests.AuthorityTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authorities"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AuthorityTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.AuthorityTemplateRequestBuilder authorities(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.AuthorityTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("authorities") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CategoryTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.CategoryTemplateCollectionRequestBuilder categories() {
+        return new com.microsoft.graph.security.requests.CategoryTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CategoryTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.CategoryTemplateRequestBuilder categories(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.CategoryTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CitationTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.CitationTemplateCollectionRequestBuilder citations() {
+        return new com.microsoft.graph.security.requests.CitationTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("citations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CitationTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.CitationTemplateRequestBuilder citations(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.CitationTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("citations") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DepartmentTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.DepartmentTemplateCollectionRequestBuilder departments() {
+        return new com.microsoft.graph.security.requests.DepartmentTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("departments"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DepartmentTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.DepartmentTemplateRequestBuilder departments(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.DepartmentTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("departments") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the FilePlanReferenceTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.FilePlanReferenceTemplateCollectionRequestBuilder filePlanReferences() {
+        return new com.microsoft.graph.security.requests.FilePlanReferenceTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("filePlanReferences"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the FilePlanReferenceTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.FilePlanReferenceTemplateRequestBuilder filePlanReferences(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.FilePlanReferenceTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("filePlanReferences") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the RetentionLabel collection
      *
      * @return the collection request builder

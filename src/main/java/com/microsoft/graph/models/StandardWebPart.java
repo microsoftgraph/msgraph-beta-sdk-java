@@ -37,7 +37,7 @@ public class StandardWebPart extends WebPart implements IJsonBackedObject {
 
     /**
      * The Web Part Type.
-     * A Guid which indicates the type of the webParts
+     * A Guid that indicates the webPart type.
      */
     @SerializedName(value = "webPartType", alternate = {"WebPartType"})
     @Expose

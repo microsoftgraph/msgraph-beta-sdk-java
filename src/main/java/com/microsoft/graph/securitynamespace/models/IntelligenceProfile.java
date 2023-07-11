@@ -9,9 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.security.models.IntelligenceProfileCountryOrRegionOfOrigin;
 import com.microsoft.graph.security.models.FormattedContent;
 import com.microsoft.graph.security.models.IntelligenceProfileKind;
-import com.microsoft.graph.security.models.IntelligenceProfileSponsorState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.security.requests.IntelligenceProfileIndicatorCollectionPage;
 
@@ -40,6 +40,15 @@ public class IntelligenceProfile extends Entity implements IJsonBackedObject {
     public java.util.List<String> aliases;
 
     /**
+     * The Countries Or Regions Of Origin.
+     * 
+     */
+    @SerializedName(value = "countriesOrRegionsOfOrigin", alternate = {"CountriesOrRegionsOfOrigin"})
+    @Expose
+	@Nullable
+    public java.util.List<IntelligenceProfileCountryOrRegionOfOrigin> countriesOrRegionsOfOrigin;
+
+    /**
      * The Description.
      * A synopsis of the threat actor. This property places the threat actor in wider context, tracing its discovery, history, significant campaigns, targeting, techniques of note, affiliations with governments, law enforcement countermeasures, and any areas of dispute among the security community regarding attribution.
      */
@@ -65,15 +74,6 @@ public class IntelligenceProfile extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public IntelligenceProfileKind kind;
-
-    /**
-     * The Sponsor States.
-     * Known states (such as a country or government) who have sponsored threat actors associated with this intelligenceProfile. This is also known as the country/region of origin for the given actor or threat.
-     */
-    @SerializedName(value = "sponsorStates", alternate = {"SponsorStates"})
-    @Expose
-	@Nullable
-    public java.util.List<IntelligenceProfileSponsorState> sponsorStates;
 
     /**
      * The Summary.

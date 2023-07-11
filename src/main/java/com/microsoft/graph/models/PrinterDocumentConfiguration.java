@@ -32,7 +32,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Printer Document Configuration.
+ * @deprecated The printerDocumentConfiguration type is deprecated and will stop returning data on July 31, 2023. Please use the printJobConfiguration instead of this.
  */
+@Deprecated
 public class PrinterDocumentConfiguration implements IJsonBackedObject {
 
     /** the OData type of the object as returned by the service */
@@ -97,7 +99,9 @@ public class PrinterDocumentConfiguration implements IJsonBackedObject {
     /**
      * The Feed Direction.
      * 
+     * @deprecated The printerFeedDirection enum type is deprecated and will stop returning data on July 31, 2023. Please use the printerFeedOrientation enum type instead of this.
      */
+    @Deprecated
     @SerializedName(value = "feedDirection", alternate = {"FeedDirection"})
     @Expose
 	@Nullable

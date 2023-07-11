@@ -27,7 +27,7 @@ public class IpRange extends RuleDestination implements IJsonBackedObject {
 
     /**
      * The Begin Address.
-     * 
+     * Specifies the starting IP address of the IP range.
      */
     @SerializedName(value = "beginAddress", alternate = {"BeginAddress"})
     @Expose
@@ -36,7 +36,7 @@ public class IpRange extends RuleDestination implements IJsonBackedObject {
 
     /**
      * The End Address.
-     * 
+     * Specifies the ending IP address of the IP range.
      */
     @SerializedName(value = "endAddress", alternate = {"EndAddress"})
     @Expose

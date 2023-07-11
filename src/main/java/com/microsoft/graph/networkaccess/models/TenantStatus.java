@@ -28,7 +28,7 @@ public class TenantStatus extends Entity implements IJsonBackedObject {
 
     /**
      * The Onboarding Error Message.
-     * 
+     * Reflects a message to the user in case of an error.
      */
     @SerializedName(value = "onboardingErrorMessage", alternate = {"OnboardingErrorMessage"})
     @Expose
@@ -37,7 +37,7 @@ public class TenantStatus extends Entity implements IJsonBackedObject {
 
     /**
      * The Onboarding Status.
-     * 
+     * Reflects the tenant onboarding status. The possible values are: offboarded, offboardingInProgress, onboardingInProgress, onboarded, onboardingErrorOccurred, offboardingErrorOccurred.
      */
     @SerializedName(value = "onboardingStatus", alternate = {"OnboardingStatus"})
     @Expose

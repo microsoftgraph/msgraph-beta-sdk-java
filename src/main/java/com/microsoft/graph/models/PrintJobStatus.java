@@ -43,7 +43,9 @@ public class PrintJobStatus implements IJsonBackedObject {
     /**
      * The Acquired By Printer.
      * 
+     * @deprecated The acquiredByPrinter property is deprecated and will stop returning data on July 31, 2023. Please use the isAcquiredByPrinter property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "acquiredByPrinter", alternate = {"AcquiredByPrinter"})
     @Expose
 	@Nullable
@@ -79,7 +81,9 @@ public class PrintJobStatus implements IJsonBackedObject {
     /**
      * The Processing State.
      * 
+     * @deprecated The processingState property is deprecated and will stop returning data on July 31, 2023. Please use the state property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "processingState", alternate = {"ProcessingState"})
     @Expose
 	@Nullable
@@ -88,7 +92,9 @@ public class PrintJobStatus implements IJsonBackedObject {
     /**
      * The Processing State Description.
      * 
+     * @deprecated The processingStateDescription property is deprecated and will stop returning data on July 31, 2023. Please use the description property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "processingStateDescription", alternate = {"ProcessingStateDescription"})
     @Expose
 	@Nullable

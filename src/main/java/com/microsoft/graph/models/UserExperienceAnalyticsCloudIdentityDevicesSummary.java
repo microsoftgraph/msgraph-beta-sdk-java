@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsCloudIdentityDevicesSummary implements IJson
 
     /**
      * The Device Without Cloud Identity Count.
-     * The count of devices that are not cloud identity.
+     * The count of devices that are not cloud identity. Read-only.
      */
     @SerializedName(value = "deviceWithoutCloudIdentityCount", alternate = {"DeviceWithoutCloudIdentityCount"})
     @Expose

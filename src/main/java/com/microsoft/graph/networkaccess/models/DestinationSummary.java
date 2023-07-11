@@ -39,7 +39,7 @@ public class DestinationSummary implements IJsonBackedObject {
 
     /**
      * The Count.
-     * 
+     * Count of the aggregation.
      */
     @SerializedName(value = "count", alternate = {"Count"})
     @Expose
@@ -48,7 +48,7 @@ public class DestinationSummary implements IJsonBackedObject {
 
     /**
      * The Destination.
-     * 
+     * Destination FQDN or IP address.
      */
     @SerializedName(value = "destination", alternate = {"Destination"})
     @Expose

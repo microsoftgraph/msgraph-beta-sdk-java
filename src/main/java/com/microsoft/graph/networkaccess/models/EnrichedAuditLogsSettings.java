@@ -40,7 +40,7 @@ public class EnrichedAuditLogsSettings implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Define the current status of the enrichment feature for a particular workload. The possible values are: enabled, disabled, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

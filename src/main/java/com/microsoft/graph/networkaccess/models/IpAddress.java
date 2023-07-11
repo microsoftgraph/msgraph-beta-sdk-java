@@ -27,7 +27,7 @@ public class IpAddress extends RuleDestination implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Defines the IP address used in a destination for a rule.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

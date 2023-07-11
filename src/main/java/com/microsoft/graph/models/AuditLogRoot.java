@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.requests.CustomSecurityAttributeAuditCollectionPage;
 import com.microsoft.graph.requests.DirectoryAuditCollectionPage;
 import com.microsoft.graph.requests.SignInCollectionPage;
 
@@ -39,6 +40,15 @@ public class AuditLogRoot implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Custom Security Attribute Audits.
+     * 
+     */
+    @SerializedName(value = "customSecurityAttributeAudits", alternate = {"CustomSecurityAttributeAudits"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CustomSecurityAttributeAuditCollectionPage customSecurityAttributeAudits;
 
     /**
      * The Directory Audits.
@@ -85,6 +95,10 @@ public class AuditLogRoot implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("customSecurityAttributeAudits")) {
+            customSecurityAttributeAudits = serializer.deserializeObject(json.get("customSecurityAttributeAudits"), com.microsoft.graph.requests.CustomSecurityAttributeAuditCollectionPage.class);
+        }
 
         if (json.has("directoryAudits")) {
             directoryAudits = serializer.deserializeObject(json.get("directoryAudits"), com.microsoft.graph.requests.DirectoryAuditCollectionPage.class);

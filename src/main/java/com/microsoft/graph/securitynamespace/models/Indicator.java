@@ -29,7 +29,7 @@ public class Indicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * The source that provides this indicator. The possible values are: microsoftDefenderThreatIntelligence, openSourceIntelligence, public, unknownFutureValue.
+     * The source that provides this indicator. The possible values are: microsoft, osint, public, unknownFutureValue.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose

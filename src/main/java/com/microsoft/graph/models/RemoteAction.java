@@ -136,6 +136,10 @@ public enum RemoteAction
     */
     ROTATE_LOCAL_ADMIN_PASSWORD,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For RemoteAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -19,7 +19,9 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the Print Job Start Print Job Request.
+ * @deprecated The startPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the start API instead of this.
  */
+@Deprecated
 public class PrintJobStartPrintJobRequest extends BaseRequest<PrintJobStatus> {
     /**
      * The request for this PrintJobStartPrintJob

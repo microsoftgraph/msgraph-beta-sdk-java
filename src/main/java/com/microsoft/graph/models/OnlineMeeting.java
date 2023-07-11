@@ -118,7 +118,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Anonymize Identity For Roles.
-     * 
+     * Specifies whose identity will be anonymized in the meeting. Possible values are: attendee. The attendee value cannot be removed through a PATCH operation once added.
      */
     @SerializedName(value = "anonymizeIdentityForRoles", alternate = {"AnonymizeIdentityForRoles"})
     @Expose

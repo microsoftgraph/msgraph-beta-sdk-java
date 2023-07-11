@@ -18,7 +18,9 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the Print Job Cancel Print Job Request.
+ * @deprecated The cancelPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the cancel API instead of this.
  */
+@Deprecated
 public class PrintJobCancelPrintJobRequest extends BaseRequest<Void> {
     /**
      * The request for this PrintJobCancelPrintJob

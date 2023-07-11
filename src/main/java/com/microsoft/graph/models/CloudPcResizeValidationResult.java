@@ -40,7 +40,7 @@ public class CloudPcResizeValidationResult implements IJsonBackedObject {
 
     /**
      * The Cloud Pc Id.
-     * 
+     * The cloudPC id that corresponds to its unique identifier.
      */
     @SerializedName(value = "cloudPcId", alternate = {"CloudPcId"})
     @Expose
@@ -49,7 +49,7 @@ public class CloudPcResizeValidationResult implements IJsonBackedObject {
 
     /**
      * The Validation Result.
-     * 
+     * Describes a list of the validation result for the Cloud PC resize action. The possible values are: success, cloudPcNotFound, operationCnflict, operationNotSupported, targetLicenseHasAssigned, internalServerError, and unknownFutureValue.
      */
     @SerializedName(value = "validationResult", alternate = {"ValidationResult"})
     @Expose

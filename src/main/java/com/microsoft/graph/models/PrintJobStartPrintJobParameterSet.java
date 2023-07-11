@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Print Job Start Print Job Parameter Set.
+ * @deprecated The startPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the start API instead of this.
  */
+@Deprecated
 public class PrintJobStartPrintJobParameterSet {
 
     /**

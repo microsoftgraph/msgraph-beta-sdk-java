@@ -28,7 +28,7 @@ public class ForwardingPolicy extends Policy implements IJsonBackedObject {
 
     /**
      * The Traffic Forwarding Type.
-     * 
+     * Traffic type for forwarding policy. The possible values are: m365, internet, private.
      */
     @SerializedName(value = "trafficForwardingType", alternate = {"TrafficForwardingType"})
     @Expose

@@ -118,7 +118,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Feed Directions.
      * 
+     * @deprecated The feedDirections property is deprecated and will stop returning data on July 31, 2023. Please use the feedOrientations property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "feedDirections", alternate = {"FeedDirections"})
     @Expose
 	@Nullable
@@ -271,7 +273,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Color Configurations.
      * 
+     * @deprecated The supportedColorConfigurations property is deprecated and will stop returning data on July 31, 2023. Please use the colorModes property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedColorConfigurations", alternate = {"SupportedColorConfigurations"})
     @Expose
 	@Nullable
@@ -280,7 +284,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Copies Per Job.
      * 
+     * @deprecated The supportedCopiesPerJob property is deprecated and will stop returning data on July 31, 2023. Please use the copiesPerJob property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedCopiesPerJob", alternate = {"SupportedCopiesPerJob"})
     @Expose
 	@Nullable
@@ -289,7 +295,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Document Mime Types.
      * 
+     * @deprecated The supportedDocumentMimeTypes property is deprecated and will stop returning data on July 31, 2023. Please use the contentTypes property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedDocumentMimeTypes", alternate = {"SupportedDocumentMimeTypes"})
     @Expose
 	@Nullable
@@ -298,7 +306,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Duplex Configurations.
      * 
+     * @deprecated The supportedDuplexConfigurations property is deprecated and will stop returning data on July 31, 2023. Please use the duplexModes property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedDuplexConfigurations", alternate = {"SupportedDuplexConfigurations"})
     @Expose
 	@Nullable
@@ -307,7 +317,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Finishings.
      * 
+     * @deprecated The supportedFinishings property is deprecated and will stop returning data on July 31, 2023. Please use the finishings property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedFinishings", alternate = {"SupportedFinishings"})
     @Expose
 	@Nullable
@@ -316,7 +328,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Media Colors.
      * 
+     * @deprecated The supportedMediaColors property is deprecated and will stop returning data on July 31, 2023. Please use the mediaColors property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedMediaColors", alternate = {"SupportedMediaColors"})
     @Expose
 	@Nullable
@@ -325,7 +339,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Media Sizes.
      * 
+     * @deprecated The supportedMediaSizes property is deprecated and will stop returning data on July 31, 2023. Please use the mediaSizes property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedMediaSizes", alternate = {"SupportedMediaSizes"})
     @Expose
 	@Nullable
@@ -334,7 +350,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Media Types.
      * 
+     * @deprecated The supportedMediaTypes property is deprecated and will stop returning data on July 31, 2023. Please use the mediaTypes property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedMediaTypes", alternate = {"SupportedMediaTypes"})
     @Expose
 	@Nullable
@@ -343,7 +361,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Orientations.
      * 
+     * @deprecated The supportedOrientations property is deprecated and will stop returning data on July 31, 2023. Please use the orientations property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedOrientations", alternate = {"SupportedOrientations"})
     @Expose
 	@Nullable
@@ -352,7 +372,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Output Bins.
      * 
+     * @deprecated The supportedOutputBins property is deprecated and will stop returning data on July 31, 2023. Please use the outputBins property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedOutputBins", alternate = {"SupportedOutputBins"})
     @Expose
 	@Nullable
@@ -361,7 +383,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Pages Per Sheet.
      * 
+     * @deprecated The supportedPagesPerSheet property is deprecated and will stop returning data on July 31, 2023. Please use the pagesPerSheet property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedPagesPerSheet", alternate = {"SupportedPagesPerSheet"})
     @Expose
 	@Nullable
@@ -370,7 +394,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Presentation Directions.
      * 
+     * @deprecated The supportedPresentationDirections property is deprecated and will stop returning data on July 31, 2023. Please use the multipageLayouts property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedPresentationDirections", alternate = {"SupportedPresentationDirections"})
     @Expose
 	@Nullable
@@ -379,7 +405,9 @@ public class PrinterCapabilities implements IJsonBackedObject {
     /**
      * The Supported Print Qualities.
      * 
+     * @deprecated The supportedPrintQualities property is deprecated and will stop returning data on July 31, 2023. Please use the qualities property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "supportedPrintQualities", alternate = {"SupportedPrintQualities"})
     @Expose
 	@Nullable

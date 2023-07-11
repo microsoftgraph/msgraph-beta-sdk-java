@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
 
     /**
      * The Device Display Name.
-     * The name of the device.
+     * The name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
 
     /**
      * The Device Id.
-     * The id of the device.
+     * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
 
     /**
      * The Processed Date Time.
-     * The date and time when the statistics were last computed.
+     * The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
      */
     @SerializedName(value = "processedDateTime", alternate = {"ProcessedDateTime"})
     @Expose

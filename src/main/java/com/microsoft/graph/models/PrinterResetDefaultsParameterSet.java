@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Printer Reset Defaults Parameter Set.
+ * @deprecated The resetDefaults API is deprecated and will stop returning data on July 31, 2023. Please use the restoreFactoryDefaults API instead of this.
  */
+@Deprecated
 public class PrinterResetDefaultsParameterSet {
 
     /**

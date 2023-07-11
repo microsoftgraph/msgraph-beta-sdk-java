@@ -12,7 +12,9 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 
 /**
  * The class for the Print Usage By Printer Collection Response.
+ * @deprecated The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this.
  */
+@Deprecated
 public class PrintUsageByPrinterCollectionResponse extends BaseCollectionResponse<PrintUsageByPrinter> {
 
 }

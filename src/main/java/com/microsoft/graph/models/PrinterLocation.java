@@ -95,7 +95,9 @@ public class PrinterLocation implements IJsonBackedObject {
     /**
      * The Floor Number.
      * 
+     * @deprecated The floorNumber property is deprecated and will stop returning data on July 31, 2023. Please use the floor property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "floorNumber", alternate = {"FloorNumber"})
     @Expose
 	@Nullable
@@ -158,7 +160,9 @@ public class PrinterLocation implements IJsonBackedObject {
     /**
      * The Room Number.
      * 
+     * @deprecated The roomNumber property is deprecated and will stop returning data on July 31, 2023. Please use the roomName property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "roomNumber", alternate = {"RoomNumber"})
     @Expose
 	@Nullable
