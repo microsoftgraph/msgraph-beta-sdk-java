@@ -29,7 +29,9 @@ public class PrintDocument extends Entity implements IJsonBackedObject {
     /**
      * The Configuration.
      * 
+     * @deprecated The configuration property is deprecated and will stop returning data on July 31, 2023. Please use the printJob entity configuration property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "configuration", alternate = {"Configuration"})
     @Expose
 	@Nullable

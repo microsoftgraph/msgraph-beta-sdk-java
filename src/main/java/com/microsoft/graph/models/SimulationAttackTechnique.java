@@ -40,6 +40,10 @@ public enum SimulationAttackTechnique
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * o Auth Consent Grant
+    */
+    O_AUTH_CONSENT_GRANT,
+    /**
     * For SimulationAttackTechnique values that were not expected from the service
     */
     UNEXPECTED_VALUE

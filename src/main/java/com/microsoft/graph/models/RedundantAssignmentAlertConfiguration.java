@@ -27,7 +27,7 @@ public class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagement
 
     /**
      * The Duration.
-     * 
+     * The number of days without activation to look back on from current timestamp.
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose

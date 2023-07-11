@@ -35,6 +35,17 @@ public class PrintServiceEndpoint extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Name.
+     * 
+     * @deprecated The name property is deprecated and will stop returning data on July 31, 2023. Please use the id property instead of this.
+     */
+    @Deprecated
+    @SerializedName(value = "name", alternate = {"Name"})
+    @Expose
+	@Nullable
+    public String name;
+
+    /**
      * The Uri.
      * The URI that can be used to access the service.
      */

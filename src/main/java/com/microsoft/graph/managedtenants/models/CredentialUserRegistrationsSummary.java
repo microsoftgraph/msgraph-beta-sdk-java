@@ -116,6 +116,15 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
     public String tenantId;
 
     /**
+     * The Tenant License Type.
+     * 
+     */
+    @SerializedName(value = "tenantLicenseType", alternate = {"TenantLicenseType"})
+    @Expose
+	@Nullable
+    public String tenantLicenseType;
+
+    /**
      * The Total User Count.
      * The total number of users in the given managed tenant. Optional. Read-only.
      */

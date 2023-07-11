@@ -19,6 +19,7 @@ import com.microsoft.graph.security.requests.HostTrackerCollectionPage;
 import com.microsoft.graph.security.requests.IntelligenceProfileIndicatorCollectionPage;
 import com.microsoft.graph.security.requests.IntelligenceProfileCollectionPage;
 import com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage;
+import com.microsoft.graph.security.requests.SubdomainCollectionPage;
 import com.microsoft.graph.security.requests.VulnerabilityCollectionPage;
 
 
@@ -118,6 +119,15 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage passiveDnsRecords;
 
     /**
+     * The Subdomains.
+     * Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
+     */
+    @SerializedName(value = "subdomains", alternate = {"Subdomains"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.SubdomainCollectionPage subdomains;
+
+    /**
      * The Vulnerabilities.
      * Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
      */
@@ -170,6 +180,10 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
         if (json.has("passiveDnsRecords")) {
             passiveDnsRecords = serializer.deserializeObject(json.get("passiveDnsRecords"), com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage.class);
+        }
+
+        if (json.has("subdomains")) {
+            subdomains = serializer.deserializeObject(json.get("subdomains"), com.microsoft.graph.security.requests.SubdomainCollectionPage.class);
         }
 
         if (json.has("vulnerabilities")) {

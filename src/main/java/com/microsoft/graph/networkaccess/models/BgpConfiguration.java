@@ -39,7 +39,7 @@ public class BgpConfiguration implements IJsonBackedObject {
 
     /**
      * The Asn.
-     * 
+     * Specifies the ASN of the BGP.
      */
     @SerializedName(value = "asn", alternate = {"Asn"})
     @Expose
@@ -57,7 +57,7 @@ public class BgpConfiguration implements IJsonBackedObject {
 
     /**
      * The Local Ip Address.
-     * 
+     * Specifies the BGP IP address of peer (Microsoft, in this case).
      */
     @SerializedName(value = "localIpAddress", alternate = {"LocalIpAddress"})
     @Expose
@@ -66,7 +66,7 @@ public class BgpConfiguration implements IJsonBackedObject {
 
     /**
      * The Peer Ip Address.
-     * 
+     * Specifies the BGP IP address of customer's on-premise VPN router configuration.
      */
     @SerializedName(value = "peerIpAddress", alternate = {"PeerIpAddress"})
     @Expose

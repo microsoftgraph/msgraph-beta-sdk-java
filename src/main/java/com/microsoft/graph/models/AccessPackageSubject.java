@@ -29,7 +29,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Alt Sec Id.
-     * 
+     * Not Supported.
      */
     @SerializedName(value = "altSecId", alternate = {"AltSecId"})
     @Expose
@@ -65,7 +65,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Object Id.
-     * The object identifier of the subject. null if the subject is not yet a user in the tenant.
+     * The object identifier of the subject. null if the subject is not yet a user in the tenant. Alternate key.
      */
     @SerializedName(value = "objectId", alternate = {"ObjectId"})
     @Expose
@@ -92,7 +92,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject Lifecycle.
-     * 
+     * The lifecycle of the subject user, if a guest. The possible values are: notDefined, notGoverned, governed, unknownFutureValue.
      */
     @SerializedName(value = "subjectLifecycle", alternate = {"SubjectLifecycle"})
     @Expose

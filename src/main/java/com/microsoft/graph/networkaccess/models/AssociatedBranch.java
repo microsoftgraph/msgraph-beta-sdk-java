@@ -27,7 +27,7 @@ public class AssociatedBranch extends Association implements IJsonBackedObject {
 
     /**
      * The Branch Id.
-     * 
+     * Identifier for the branch.
      */
     @SerializedName(value = "branchId", alternate = {"BranchId"})
     @Expose

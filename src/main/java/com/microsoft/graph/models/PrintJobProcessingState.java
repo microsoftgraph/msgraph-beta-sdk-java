@@ -44,6 +44,10 @@ public enum PrintJobProcessingState
     */
     ABORTED,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For PrintJobProcessingState values that were not expected from the service
     */
     UNEXPECTED_VALUE

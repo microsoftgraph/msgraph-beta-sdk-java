@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
 
     /**
      * The Correlation Group Prevalence.
-     * The prevalence of the correlation group. Possible values are: high, medium or low.
+     * The prevalence of the correlation group. Possible values are: high, medium or low. Possible values are: high, medium, low, unknownFutureValue.
      */
     @SerializedName(value = "correlationGroupPrevalence", alternate = {"CorrelationGroupPrevalence"})
     @Expose

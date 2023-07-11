@@ -237,6 +237,26 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder<ThreatI
         return new com.microsoft.graph.security.requests.PassiveDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("passiveDnsRecords") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the Subdomain collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.SubdomainCollectionRequestBuilder subdomains() {
+        return new com.microsoft.graph.security.requests.SubdomainCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subdomains"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Subdomain item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.SubdomainRequestBuilder subdomains(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.SubdomainRequestBuilder(getRequestUrlWithAdditionalSegment("subdomains") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the Vulnerability collection
      *
      * @return the collection request builder

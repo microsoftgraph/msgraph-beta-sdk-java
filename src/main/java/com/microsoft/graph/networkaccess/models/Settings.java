@@ -31,7 +31,7 @@ public class Settings extends Entity implements IJsonBackedObject {
 
     /**
      * The Conditional Access.
-     * 
+     * Defines whether conditional access settings are enabled for traffic profiles. Each tenant has only one conditional access settings object.
      */
     @SerializedName(value = "conditionalAccess", alternate = {"ConditionalAccess"})
     @Expose
@@ -40,7 +40,7 @@ public class Settings extends Entity implements IJsonBackedObject {
 
     /**
      * The Cross Tenant Access.
-     * 
+     * Defines whether the tenant restrictions cross-tenant access settings are enabled for traffic profiles. Each tenant has only one cross-tenant access settings object.
      */
     @SerializedName(value = "crossTenantAccess", alternate = {"CrossTenantAccess"})
     @Expose

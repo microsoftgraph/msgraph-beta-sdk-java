@@ -15,6 +15,7 @@ import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.security.models.DefaultRecordBehavior;
 import com.microsoft.graph.security.models.RetentionDuration;
 import com.microsoft.graph.security.models.RetentionTrigger;
+import com.microsoft.graph.security.models.FilePlanDescriptor;
 import com.microsoft.graph.security.models.RetentionEventType;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.security.requests.DispositionReviewStageCollectionPage;
@@ -161,8 +162,17 @@ public class RetentionLabel extends Entity implements IJsonBackedObject {
     public RetentionTrigger retentionTrigger;
 
     /**
+     * The Descriptors.
+     * Represents out-of-the-box values that provide more options to improve the manageability and organization of the content you need to label.
+     */
+    @SerializedName(value = "descriptors", alternate = {"Descriptors"})
+    @Expose
+	@Nullable
+    public FilePlanDescriptor descriptors;
+
+    /**
      * The Disposition Review Stages.
-     * Review stages during which reviewers are notified to determine whether a document must be deleted or retained.
+     * When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
      */
     @SerializedName(value = "dispositionReviewStages", alternate = {"DispositionReviewStages"})
     @Expose
@@ -171,7 +181,7 @@ public class RetentionLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Retention Event Type.
-     * 
+     * Represents the type associated with a retention event.
      */
     @SerializedName(value = "retentionEventType", alternate = {"RetentionEventType"})
     @Expose

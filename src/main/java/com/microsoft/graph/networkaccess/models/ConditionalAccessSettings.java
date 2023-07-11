@@ -28,7 +28,7 @@ public class ConditionalAccessSettings extends Entity implements IJsonBackedObje
 
     /**
      * The Signaling Status.
-     * 
+     * When SignalingStatus is enabled, the Conditional Access policy includes zero trust network access information.The possible values are: enabled, disabled.
      */
     @SerializedName(value = "signalingStatus", alternate = {"SignalingStatus"})
     @Expose

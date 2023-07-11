@@ -152,7 +152,9 @@ public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated The resetDefaults API is deprecated and will stop returning data on July 31, 2023. Please use the restoreFactoryDefaults API instead of this.
      */
+    @Deprecated
     @Nonnull
     public PrinterResetDefaultsRequestBuilder resetDefaults() {
         return new PrinterResetDefaultsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetDefaults"), getClient(), null);
@@ -170,7 +172,9 @@ public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated The getCapabilities API is deprecated and will stop returning data on July 31, 2023. Please use the capabilities property instead of this.
      */
+    @Deprecated
     @Nonnull
     public PrinterGetCapabilitiesRequestBuilder getCapabilities() {
         return new PrinterGetCapabilitiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCapabilities"), getClient(), null);

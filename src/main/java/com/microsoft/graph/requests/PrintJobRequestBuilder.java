@@ -132,7 +132,9 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder<PrintJob> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated The cancelPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the cancel API instead of this.
      */
+    @Deprecated
     @Nonnull
     public PrintJobCancelPrintJobRequestBuilder cancelPrintJob() {
         return new PrintJobCancelPrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancelPrintJob"), getClient(), null);
@@ -151,7 +153,9 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder<PrintJob> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated The startPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the start API instead of this.
      */
+    @Deprecated
     @Nonnull
     public PrintJobStartPrintJobRequestBuilder startPrintJob() {
         return new PrintJobStartPrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.startPrintJob"), getClient(), null);

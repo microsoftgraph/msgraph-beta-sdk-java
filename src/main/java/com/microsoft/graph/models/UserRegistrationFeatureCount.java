@@ -40,7 +40,7 @@ public class UserRegistrationFeatureCount implements IJsonBackedObject {
 
     /**
      * The Feature.
-     * Number of users registered or capable for Multi-Factor Authentication, Self-Service Password Reset and Passwordless Authentication. Possible values are: ssprRegistered, ssprEnabled, ssprCapable, passwordlessCapable, mfaCapable.
+     * Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.Possible values are: ssprRegistered, ssprEnabled, ssprCapable, passwordlessCapable, mfaCapable, unknownFutureValue.
      */
     @SerializedName(value = "feature", alternate = {"Feature"})
     @Expose

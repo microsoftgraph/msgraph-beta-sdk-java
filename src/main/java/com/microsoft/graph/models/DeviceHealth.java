@@ -20,7 +20,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Device Health.
+ * @deprecated The deviceHealth type is deprecated and will stop returning data on July 31, 2023.
  */
+@Deprecated
 public class DeviceHealth implements IJsonBackedObject {
 
     /** the OData type of the object as returned by the service */

@@ -70,7 +70,7 @@ public class DeviceHealthScript extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Health Script Type.
-     * DeviceHealthScriptType for the script policy
+     * DeviceHealthScriptType for the script policy. Possible values are: deviceHealthScript, managedInstallerScript.
      */
     @SerializedName(value = "deviceHealthScriptType", alternate = {"DeviceHealthScriptType"})
     @Expose

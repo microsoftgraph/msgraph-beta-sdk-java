@@ -40,7 +40,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Admin.
-     * Whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
+     * Indicates whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
      */
     @SerializedName(value = "isAdmin", alternate = {"IsAdmin"})
     @Expose
@@ -49,7 +49,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Mfa Capable.
-     * Whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
+     * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
      */
     @SerializedName(value = "isMfaCapable", alternate = {"IsMfaCapable"})
     @Expose
@@ -58,7 +58,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Mfa Registered.
-     * Whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy.  Supports $filter (eq).
+     * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
      */
     @SerializedName(value = "isMfaRegistered", alternate = {"IsMfaRegistered"})
     @Expose
@@ -67,7 +67,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Passwordless Capable.
-     * Whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
+     * Indicates whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
      */
     @SerializedName(value = "isPasswordlessCapable", alternate = {"IsPasswordlessCapable"})
     @Expose
@@ -76,7 +76,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Sspr Capable.
-     * Whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
+     * Indicates whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
      */
     @SerializedName(value = "isSsprCapable", alternate = {"IsSsprCapable"})
     @Expose
@@ -85,7 +85,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Sspr Enabled.
-     * Whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
+     * Indicates whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
      */
     @SerializedName(value = "isSsprEnabled", alternate = {"IsSsprEnabled"})
     @Expose
@@ -94,7 +94,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Sspr Registered.
-     * Whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
+     * Indicates whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
      */
     @SerializedName(value = "isSsprRegistered", alternate = {"IsSsprRegistered"})
     @Expose
@@ -103,7 +103,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is System Preferred Authentication Method Enabled.
-     * 
+     * Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
      */
     @SerializedName(value = "isSystemPreferredAuthenticationMethodEnabled", alternate = {"IsSystemPreferredAuthenticationMethodEnabled"})
     @Expose
@@ -130,7 +130,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The System Preferred Authentication Methods.
-     * 
+     * Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
      */
     @SerializedName(value = "systemPreferredAuthenticationMethods", alternate = {"SystemPreferredAuthenticationMethods"})
     @Expose
@@ -148,7 +148,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The User Preferred Method For Secondary Authentication.
-     * 
+     * The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
      */
     @SerializedName(value = "userPreferredMethodForSecondaryAuthentication", alternate = {"UserPreferredMethodForSecondaryAuthentication"})
     @Expose
