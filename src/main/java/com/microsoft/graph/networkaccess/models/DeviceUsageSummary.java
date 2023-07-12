@@ -39,7 +39,7 @@ public class DeviceUsageSummary implements IJsonBackedObject {
 
     /**
      * The Active Device Count.
-     * 
+     * The number of distinct device IDs in the time frame between endDateTime and discoveryPivotDateTime.
      */
     @SerializedName(value = "activeDeviceCount", alternate = {"ActiveDeviceCount"})
     @Expose
@@ -48,7 +48,7 @@ public class DeviceUsageSummary implements IJsonBackedObject {
 
     /**
      * The Inactive Device Count.
-     * 
+     * The number of distinct device IDs havn't seen in the time frame between endDateTime and discoveryPivotDateTime but have seen in the time frame between discoveryPivotDateTime and startDateTime.
      */
     @SerializedName(value = "inactiveDeviceCount", alternate = {"InactiveDeviceCount"})
     @Expose
@@ -57,7 +57,7 @@ public class DeviceUsageSummary implements IJsonBackedObject {
 
     /**
      * The Total Device Count.
-     * 
+     * The number of distinct device IDs in the time frame between startDateTime and endDateTime.
      */
     @SerializedName(value = "totalDeviceCount", alternate = {"TotalDeviceCount"})
     @Expose

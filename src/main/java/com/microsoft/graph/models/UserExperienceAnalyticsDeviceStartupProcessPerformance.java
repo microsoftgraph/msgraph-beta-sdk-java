@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
 
     /**
      * The Device Count.
-     * User experience analytics device startup process summarized count.
+     * The count of devices which initiated this process on startup. Supports: $filter, $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceCount", alternate = {"DeviceCount"})
     @Expose
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
 
     /**
      * The Median Impact In Ms.
-     * User experience analytics device startup process median impact in milliseconds.
+     * The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "medianImpactInMs", alternate = {"MedianImpactInMs"})
     @Expose
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
 
     /**
      * The Median Impact In Ms2.
-     * User experience analytics device startup process median impact in milliseconds.
+     * The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "medianImpactInMs2", alternate = {"MedianImpactInMs2"})
     @Expose
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
 
     /**
      * The Process Name.
-     * User experience analytics device startup process name.
+     * The name of the startup process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "processName", alternate = {"ProcessName"})
     @Expose
@@ -63,7 +63,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
 
     /**
      * The Product Name.
-     * The user experience analytics device startup process product name.
+     * The product name of the startup process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "productName", alternate = {"ProductName"})
     @Expose
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
 
     /**
      * The Publisher.
-     * The User experience analytics device startup process publisher.
+     * The publisher of the startup process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
 
     /**
      * The Total Impact In Ms.
-     * User experience analytics device startup process total impact in milliseconds.
+     * The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "totalImpactInMs", alternate = {"TotalImpactInMs"})
     @Expose
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
 
     /**
      * The Total Impact In Ms2.
-     * User experience analytics device startup process total impact in milliseconds.
+     * The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "totalImpactInMs2", alternate = {"TotalImpactInMs2"})
     @Expose

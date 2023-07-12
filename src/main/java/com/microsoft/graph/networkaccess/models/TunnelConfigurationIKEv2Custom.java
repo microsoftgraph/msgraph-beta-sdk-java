@@ -33,7 +33,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
 
     /**
      * The Dh Group.
-     * 
+     * Specifies the DH group identifier for IPSec SA negotiation. The possible values are: dhGroup14, dhGroup24, dhGroup2048, ecp256, ecp384.
      */
     @SerializedName(value = "dhGroup", alternate = {"DhGroup"})
     @Expose
@@ -42,7 +42,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
 
     /**
      * The Ike Encryption.
-     * 
+     * Specifies the IKE encryption protocol. The possible values are: aes128, aes192, aes256, gcmAes128, gcmAes256.
      */
     @SerializedName(value = "ikeEncryption", alternate = {"IkeEncryption"})
     @Expose
@@ -51,7 +51,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
 
     /**
      * The Ike Integrity.
-     * 
+     * Specifies the integration properties of the IKE protocol. The possible values are: sha256, sha384, gcmAes128, gcmAes256.
      */
     @SerializedName(value = "ikeIntegrity", alternate = {"IkeIntegrity"})
     @Expose
@@ -60,7 +60,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
 
     /**
      * The Ip Sec Encryption.
-     * 
+     * Specifies the encryption protocol used for the IPSec tunnel. The possible values are: none, gcmAes128, gcmAes192, gcmAes256.
      */
     @SerializedName(value = "ipSecEncryption", alternate = {"IpSecEncryption"})
     @Expose
@@ -69,7 +69,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
 
     /**
      * The Ip Sec Integrity.
-     * 
+     * Specifies the integrity properties of the IPSec protocol. The possible values are: gcmAes128, gcmAes192, gcmAes256, sha256.
      */
     @SerializedName(value = "ipSecIntegrity", alternate = {"IpSecIntegrity"})
     @Expose
@@ -78,7 +78,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
 
     /**
      * The Pfs Group.
-     * 
+     * Specifies the Phase 2 DH group identifier for IPSec SA negotiation. The possible values are: none, pfs1, pfs2, pfs14, pfs24, pfs2048, pfsmm, ecp256, ecp384.
      */
     @SerializedName(value = "pfsGroup", alternate = {"PfsGroup"})
     @Expose
@@ -87,7 +87,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
 
     /**
      * The Sa Life Time Seconds.
-     * 
+     * a standard specifiying Security Association lifetime with recommended values from an RFC standard.
      */
     @SerializedName(value = "saLifeTimeSeconds", alternate = {"SaLifeTimeSeconds"})
     @Expose

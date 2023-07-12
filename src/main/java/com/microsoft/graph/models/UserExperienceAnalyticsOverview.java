@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsOverview extends Entity implements IJsonBack
 
     /**
      * The Insights.
-     * The user experience analytics insights.
+     * The user experience analytics insights. Read-only.
      */
     @SerializedName(value = "insights", alternate = {"Insights"})
     @Expose

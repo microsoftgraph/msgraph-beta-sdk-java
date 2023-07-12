@@ -39,7 +39,9 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
     /**
      * The Device Health.
      * The connector's device health.
+     * @deprecated The deviceHealth type is deprecated and will stop returning data on July 31, 2023.
      */
+    @Deprecated
     @SerializedName(value = "deviceHealth", alternate = {"DeviceHealth"})
     @Expose
 	@Nullable
@@ -75,7 +77,9 @@ public class PrintConnector extends Entity implements IJsonBackedObject {
     /**
      * The Name.
      * 
+     * @deprecated The name property is deprecated and will stop returning data on July 31, 2023. Please use the displayName property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
 	@Nullable

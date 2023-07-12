@@ -25,7 +25,9 @@ public enum ExportOptions
     PDF_REPLACEMENT,
     /**
     * file Info
+    * @deprecated The fileInfo will be deprecated on July 30, 2023.
     */
+    @Deprecated
     FILE_INFO,
     /**
     * tags

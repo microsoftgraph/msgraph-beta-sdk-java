@@ -16,6 +16,7 @@ import com.microsoft.graph.models.DeviceRegistrationPolicy;
 import com.microsoft.graph.models.CrossTenantAccessPolicy;
 import com.microsoft.graph.models.TenantAppManagementPolicy;
 import com.microsoft.graph.models.ExternalIdentitiesPolicy;
+import com.microsoft.graph.models.FederatedTokenValidationPolicy;
 import com.microsoft.graph.models.AccessReviewPolicy;
 import com.microsoft.graph.models.AdminConsentRequestPolicy;
 import com.microsoft.graph.models.DirectoryRoleAccessReviewPolicy;
@@ -170,6 +171,15 @@ public class PolicyRoot implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ExternalIdentitiesPolicy externalIdentitiesPolicy;
+
+    /**
+     * The Federated Token Validation Policy.
+     * 
+     */
+    @SerializedName(value = "federatedTokenValidationPolicy", alternate = {"FederatedTokenValidationPolicy"})
+    @Expose
+	@Nullable
+    public FederatedTokenValidationPolicy federatedTokenValidationPolicy;
 
     /**
      * The Home Realm Discovery Policies.

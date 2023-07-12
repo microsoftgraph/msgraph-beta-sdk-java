@@ -61,7 +61,7 @@ public class UserRegistrationMethodSummary implements IJsonBackedObject {
 
     /**
      * The User Roles.
-     * User role type. Possible values are: all, privilegedAdmin, admin, user.
+     * The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      */
     @SerializedName(value = "userRoles", alternate = {"UserRoles"})
     @Expose
@@ -70,7 +70,7 @@ public class UserRegistrationMethodSummary implements IJsonBackedObject {
 
     /**
      * The User Types.
-     * User type. Possible values are: all, member, guest.
+     * User type. Possible values are: all, member, guest, unknownFutureValue.
      */
     @SerializedName(value = "userTypes", alternate = {"UserTypes"})
     @Expose

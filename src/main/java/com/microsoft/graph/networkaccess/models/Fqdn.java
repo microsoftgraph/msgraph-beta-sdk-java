@@ -27,7 +27,7 @@ public class Fqdn extends RuleDestination implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Defines the FQDN used in a destination for a rule.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

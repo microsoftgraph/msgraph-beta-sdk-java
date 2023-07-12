@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
 
     /**
      * The Metric Devices.
-     * The work from anywhere metric devices.
+     * The work from anywhere metric devices. Read-only.
      */
     @SerializedName(value = "metricDevices", alternate = {"MetricDevices"})
     @Expose

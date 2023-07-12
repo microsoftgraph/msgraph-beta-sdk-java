@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
 
     /**
      * The Active Device Count.
-     * The number of active devices for the OS version. Valid values -2147483648 to 2147483647
+     * The number of active devices for the OS version. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "activeDeviceCount", alternate = {"ActiveDeviceCount"})
     @Expose
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
 
     /**
      * The Mean Time To Failure In Minutes.
-     * The mean time to failure for the OS version in minutes. Valid values -2147483648 to 2147483647
+     * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "meanTimeToFailureInMinutes", alternate = {"MeanTimeToFailureInMinutes"})
     @Expose
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
 
     /**
      * The Os Build Number.
-     * The OS build number installed on the device.
+     * The OS build number installed on the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "osBuildNumber", alternate = {"OsBuildNumber"})
     @Expose
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
 
     /**
      * The Os Version.
-     * The OS version installed on the device.
+     * The OS version installed on the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
@@ -63,7 +63,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
 
     /**
      * The Os Version App Health Score.
-     * The app health score of the OS version. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The application health score of the OS version. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "osVersionAppHealthScore", alternate = {"OsVersionAppHealthScore"})
     @Expose

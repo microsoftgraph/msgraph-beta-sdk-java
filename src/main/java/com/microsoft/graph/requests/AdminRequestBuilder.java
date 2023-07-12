@@ -98,6 +98,56 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
     }
 
     /**
+     * Gets the request builder for AdminAppsAndServices
+     *
+     * @return the AdminAppsAndServicesRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdminAppsAndServicesRequestBuilder appsAndServices() {
+        return new com.microsoft.graph.requests.AdminAppsAndServicesRequestBuilder(getRequestUrlWithAdditionalSegment("appsAndServices"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AdminDynamics
+     *
+     * @return the AdminDynamicsRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdminDynamicsRequestBuilder dynamics() {
+        return new com.microsoft.graph.requests.AdminDynamicsRequestBuilder(getRequestUrlWithAdditionalSegment("dynamics"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AdminForms
+     *
+     * @return the AdminFormsRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdminFormsRequestBuilder forms() {
+        return new com.microsoft.graph.requests.AdminFormsRequestBuilder(getRequestUrlWithAdditionalSegment("forms"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AdminTodo
+     *
+     * @return the AdminTodoRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AdminTodoRequestBuilder todo() {
+        return new com.microsoft.graph.requests.AdminTodoRequestBuilder(getRequestUrlWithAdditionalSegment("todo"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for PeopleAdminSettings
+     *
+     * @return the PeopleAdminSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PeopleAdminSettingsRequestBuilder people() {
+        return new com.microsoft.graph.requests.PeopleAdminSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("people"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for AdminWindows
      *
      * @return the AdminWindowsRequestBuilder instance

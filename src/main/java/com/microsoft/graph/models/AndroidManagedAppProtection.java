@@ -133,6 +133,15 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     public ManagedAppRemediationAction appActionIfDevicePasscodeComplexityLessThanMedium;
 
     /**
+     * The App Action If Samsung Knox Attestation Required.
+     * Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block &amp; wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured.
+     */
+    @SerializedName(value = "appActionIfSamsungKnoxAttestationRequired", alternate = {"AppActionIfSamsungKnoxAttestationRequired"})
+    @Expose
+	@Nullable
+    public ManagedAppRemediationAction appActionIfSamsungKnoxAttestationRequired;
+
+    /**
      * The Approved Keyboards.
      * If Keyboard Restriction is enabled, only keyboards in this approved list will be allowed. A key should be Android package id for a keyboard and value should be a friendly name
      */

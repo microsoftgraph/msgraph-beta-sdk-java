@@ -65,6 +65,16 @@ public class SynchronizationJobRequestBuilder extends BaseRequestBuilder<Synchro
 
 
     /**
+     * Gets the request builder for BulkUpload
+     *
+     * @return the BulkUploadRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.BulkUploadRequestBuilder bulkUpload() {
+        return new com.microsoft.graph.requests.BulkUploadRequestBuilder(getRequestUrlWithAdditionalSegment("bulkUpload"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for SynchronizationSchema
      *
      * @return the SynchronizationSchemaRequestBuilder instance

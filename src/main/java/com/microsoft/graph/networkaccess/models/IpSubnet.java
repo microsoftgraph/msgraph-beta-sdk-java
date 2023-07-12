@@ -27,7 +27,7 @@ public class IpSubnet extends RuleDestination implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Defines the IP address of the subset used in a destination for a rule.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

@@ -83,7 +83,9 @@ public class Print implements IJsonBackedObject {
     /**
      * The Printer Shares.
      * 
+     * @deprecated The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "printerShares", alternate = {"PrinterShares"})
     @Expose
 	@Nullable

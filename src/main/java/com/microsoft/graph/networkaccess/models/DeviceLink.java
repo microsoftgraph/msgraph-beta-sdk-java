@@ -32,7 +32,7 @@ public class DeviceLink extends Entity implements IJsonBackedObject {
 
     /**
      * The Bandwidth Capacity In Mbps.
-     * 
+     * Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
      */
     @SerializedName(value = "bandwidthCapacityInMbps", alternate = {"BandwidthCapacityInMbps"})
     @Expose
@@ -41,7 +41,7 @@ public class DeviceLink extends Entity implements IJsonBackedObject {
 
     /**
      * The Bgp Configuration.
-     * 
+     * The border gateway protocol specifies the IP address and ASN for directing traffic from a link to the edge.
      */
     @SerializedName(value = "bgpConfiguration", alternate = {"BgpConfiguration"})
     @Expose
@@ -50,7 +50,7 @@ public class DeviceLink extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Vendor.
-     * 
+     * Specifies the manufacturer of the deviceLink. The possible values are: barracudaNetworks, checkPoint, ciscoMeraki, citrix, fortinet, hpeAruba, netFoundry, nuage, openSystems, paloAltoNetworks, riverbedTechnology, silverPeak, vmWareSdWan, versa, other, unknownFutureValue.
      */
     @SerializedName(value = "deviceVendor", alternate = {"DeviceVendor"})
     @Expose
@@ -59,7 +59,7 @@ public class DeviceLink extends Entity implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * 
+     * Specifies the client IPv4 of the link
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
@@ -68,7 +68,7 @@ public class DeviceLink extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * last modified time.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -77,7 +77,7 @@ public class DeviceLink extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -95,7 +95,7 @@ public class DeviceLink extends Entity implements IJsonBackedObject {
 
     /**
      * The Tunnel Configuration.
-     * 
+     * The connectivity settings, including the protocol, IPSec policy, and preshared key, are specified for establishing connectivity.
      */
     @SerializedName(value = "tunnelConfiguration", alternate = {"TunnelConfiguration"})
     @Expose

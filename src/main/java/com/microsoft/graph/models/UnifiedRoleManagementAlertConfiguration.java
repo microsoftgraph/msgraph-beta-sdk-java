@@ -28,7 +28,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements I
 
     /**
      * The Alert Definition Id.
-     * 
+     * The identifier of an alert definition. Supports $filter (eq, ne).
      */
     @SerializedName(value = "alertDefinitionId", alternate = {"AlertDefinitionId"})
     @Expose
@@ -37,7 +37,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements I
 
     /**
      * The Is Enabled.
-     * 
+     * true if the alert is enabled. Setting it to false disables PIM scanning the tenant to identify instances that trigger the alert.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -46,7 +46,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements I
 
     /**
      * The Scope Id.
-     * 
+     * The identifier of the scope to which the alert is related. Only / is supported to represent the tenant scope. Supports $filter (eq, ne).
      */
     @SerializedName(value = "scopeId", alternate = {"ScopeId"})
     @Expose
@@ -55,7 +55,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements I
 
     /**
      * The Scope Type.
-     * 
+     * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
      */
     @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose
@@ -64,7 +64,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements I
 
     /**
      * The Alert Definition.
-     * 
+     * The definition of the alert that contains its description, impact, and measures to mitigate or prevent it. Supports $expand.
      */
     @SerializedName(value = "alertDefinition", alternate = {"AlertDefinition"})
     @Expose

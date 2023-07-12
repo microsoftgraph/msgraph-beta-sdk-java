@@ -49,7 +49,9 @@ public class IntegerRange implements IJsonBackedObject {
     /**
      * The Maximum.
      * 
+     * @deprecated The maximum property is deprecated and will stop returning data on July 31, 2023. Please use the end property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "maximum", alternate = {"Maximum"})
     @Expose
 	@Nullable
@@ -58,7 +60,9 @@ public class IntegerRange implements IJsonBackedObject {
     /**
      * The Minimum.
      * 
+     * @deprecated The minimum property is deprecated and will stop returning data on July 31, 2023. Please use the start property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "minimum", alternate = {"Minimum"})
     @Expose
 	@Nullable

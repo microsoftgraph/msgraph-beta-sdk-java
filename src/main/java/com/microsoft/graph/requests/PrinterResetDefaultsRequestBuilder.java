@@ -17,7 +17,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Printer Reset Defaults Request Builder.
+ * @deprecated The resetDefaults API is deprecated and will stop returning data on July 31, 2023. Please use the restoreFactoryDefaults API instead of this.
  */
+@Deprecated
 public class PrinterResetDefaultsRequestBuilder extends BaseActionRequestBuilder<Printer> {
 
     /**

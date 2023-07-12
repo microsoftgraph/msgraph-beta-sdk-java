@@ -31,7 +31,7 @@ public class ForwardingRule extends PolicyRule implements IJsonBackedObject {
 
     /**
      * The Action.
-     * 
+     * The action to apply to traffic. The possible values are: bypass, forward, unknownFutureValue.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -40,7 +40,7 @@ public class ForwardingRule extends PolicyRule implements IJsonBackedObject {
 
     /**
      * The Destinations.
-     * 
+     * Destinations maintain a list of potential destinations and destination types that the user may access within the context of a network filtering policy. This includes IP addresses and fully qualified domain names (FQDNs)/URLs.
      */
     @SerializedName(value = "destinations", alternate = {"Destinations"})
     @Expose
@@ -49,7 +49,7 @@ public class ForwardingRule extends PolicyRule implements IJsonBackedObject {
 
     /**
      * The Rule Type.
-     * 
+     * The network destination type used by a URL filtering policy is defined, which can include types such as IP (Internet Protocol) or FQDN (Fully Qualified Domain Name). The possible values are: url, fqdn, ipAddress, ipRange, ipSubnet.
      */
     @SerializedName(value = "ruleType", alternate = {"RuleType"})
     @Expose

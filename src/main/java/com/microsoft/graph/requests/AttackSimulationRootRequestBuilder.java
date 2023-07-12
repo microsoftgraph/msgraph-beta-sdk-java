@@ -57,6 +57,66 @@ public class AttackSimulationRootRequestBuilder extends BaseRequestBuilder<Attac
 
 
     /**
+     *  Gets a request builder for the EndUserNotification collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EndUserNotificationCollectionRequestBuilder endUserNotifications() {
+        return new com.microsoft.graph.requests.EndUserNotificationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("endUserNotifications"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the EndUserNotification item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EndUserNotificationRequestBuilder endUserNotifications(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EndUserNotificationRequestBuilder(getRequestUrlWithAdditionalSegment("endUserNotifications") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the LandingPage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.LandingPageCollectionRequestBuilder landingPages() {
+        return new com.microsoft.graph.requests.LandingPageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("landingPages"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the LandingPage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.LandingPageRequestBuilder landingPages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.LandingPageRequestBuilder(getRequestUrlWithAdditionalSegment("landingPages") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the LoginPage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.LoginPageCollectionRequestBuilder loginPages() {
+        return new com.microsoft.graph.requests.LoginPageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("loginPages"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the LoginPage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.LoginPageRequestBuilder loginPages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.LoginPageRequestBuilder(getRequestUrlWithAdditionalSegment("loginPages") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the AttackSimulationOperation collection
      *
      * @return the collection request builder
@@ -135,5 +195,25 @@ public class AttackSimulationRootRequestBuilder extends BaseRequestBuilder<Attac
     @Nonnull
     public com.microsoft.graph.requests.SimulationRequestBuilder simulations(@Nonnull final String id) {
         return new com.microsoft.graph.requests.SimulationRequestBuilder(getRequestUrlWithAdditionalSegment("simulations") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Training collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TrainingCollectionRequestBuilder trainings() {
+        return new com.microsoft.graph.requests.TrainingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("trainings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Training item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TrainingRequestBuilder trainings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TrainingRequestBuilder(getRequestUrlWithAdditionalSegment("trainings") + "/" + id, getClient(), null);
     }
 }

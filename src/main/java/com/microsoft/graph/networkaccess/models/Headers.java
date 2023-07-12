@@ -39,7 +39,7 @@ public class Headers implements IJsonBackedObject {
 
     /**
      * The Origin.
-     * 
+     * Represents the origin or source from which the request is being made.
      */
     @SerializedName(value = "origin", alternate = {"Origin"})
     @Expose
@@ -48,7 +48,7 @@ public class Headers implements IJsonBackedObject {
 
     /**
      * The Referrer.
-     * 
+     * Represents the referring URL or the URL of the web page that the current request originates from.
      */
     @SerializedName(value = "referrer", alternate = {"Referrer"})
     @Expose
@@ -57,7 +57,7 @@ public class Headers implements IJsonBackedObject {
 
     /**
      * The XForwarded For.
-     * 
+     * Represents the information about the client original IP address when the request passes through one or more proxy servers or load balancers.
      */
     @SerializedName(value = "xForwardedFor", alternate = {"XForwardedFor"})
     @Expose

@@ -8,7 +8,9 @@ package com.microsoft.graph.models;
 
 /**
  * The Enum Printer Feed Direction.
+ * @deprecated The printerFeedDirection enum type is deprecated and will stop returning data on July 31, 2023. Please use the printerFeedOrientation enum type instead of this.
 */
+@Deprecated
 public enum PrinterFeedDirection
 {
     /**

@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
 
     /**
      * The Active Device Count.
-     * The number of devices where the app has been active. Valid values -2147483648 to 2147483647
+     * The number of devices where the application has been active. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "activeDeviceCount", alternate = {"ActiveDeviceCount"})
     @Expose
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
 
     /**
      * The App Crash Count.
-     * The number of crashes for the app. Valid values -2147483648 to 2147483647
+     * The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "appCrashCount", alternate = {"AppCrashCount"})
     @Expose
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
 
     /**
      * The App Display Name.
-     * The friendly name of the application.
+     * The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
 
     /**
      * The App Name.
-     * The name of the application.
+     * The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "appName", alternate = {"AppName"})
     @Expose
@@ -63,7 +63,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
 
     /**
      * The App Publisher.
-     * The publisher of the application.
+     * The publisher of the application. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "appPublisher", alternate = {"AppPublisher"})
     @Expose
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
 
     /**
      * The App Usage Duration.
-     * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
+     * The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "appUsageDuration", alternate = {"AppUsageDuration"})
     @Expose
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
 
     /**
      * The Mean Time To Failure In Minutes.
-     * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
+     * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "meanTimeToFailureInMinutes", alternate = {"MeanTimeToFailureInMinutes"})
     @Expose
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
 
     /**
      * The Os Build Number.
-     * The os build number of the application.
+     * The OS build number of the application. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "osBuildNumber", alternate = {"OsBuildNumber"})
     @Expose
@@ -99,7 +99,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends E
 
     /**
      * The Os Version.
-     * The os version of the application.
+     * The OS version of the application. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose

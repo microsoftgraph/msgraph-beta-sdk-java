@@ -35,7 +35,7 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Logs.
-     * 
+     * Represnts network connections that are routed through Global Secure Access.
      */
     @SerializedName(value = "logs", alternate = {"Logs"})
     @Expose
@@ -44,7 +44,7 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Reports.
-     * 
+     * Represents the status of the Global Secure Access services for the tenant.
      */
     @SerializedName(value = "reports", alternate = {"Reports"})
     @Expose
@@ -53,7 +53,7 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Connectivity.
-     * 
+     * Connectivity represents all the connectivity components in Global Secure Access.
      */
     @SerializedName(value = "connectivity", alternate = {"Connectivity"})
     @Expose
@@ -62,7 +62,7 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Forwarding Policies.
-     * 
+     * A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
      */
     @SerializedName(value = "forwardingPolicies", alternate = {"ForwardingPolicies"})
     @Expose
@@ -71,7 +71,7 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Forwarding Profiles.
-     * 
+     * A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
      */
     @SerializedName(value = "forwardingProfiles", alternate = {"ForwardingProfiles"})
     @Expose
@@ -80,7 +80,7 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * 
+     * Global Secure Access settings.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -89,7 +89,7 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Status.
-     * 
+     * Represents the status of the Global Secure Access services for the tenant.
      */
     @SerializedName(value = "tenantStatus", alternate = {"TenantStatus"})
     @Expose

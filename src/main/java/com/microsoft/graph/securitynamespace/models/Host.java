@@ -13,6 +13,7 @@ import com.microsoft.graph.security.models.HostReputation;
 import com.microsoft.graph.security.models.Artifact;
 import com.microsoft.graph.security.requests.HostComponentCollectionPage;
 import com.microsoft.graph.security.requests.HostCookieCollectionPage;
+import com.microsoft.graph.security.requests.SubdomainCollectionPage;
 import com.microsoft.graph.security.requests.HostTrackerCollectionPage;
 
 
@@ -86,6 +87,13 @@ public class Host extends Artifact implements IJsonBackedObject {
     public HostReputation reputation;
 
     /**
+     * The Subdomains.
+     * The subdomains that are associated with this host.
+     */
+	@Nullable
+    public com.microsoft.graph.security.requests.SubdomainCollectionPage subdomains;
+
+    /**
      * The Trackers.
      * The hostTrackers that are associated with this host.
      */
@@ -116,6 +124,10 @@ public class Host extends Artifact implements IJsonBackedObject {
 
         if (json.has("passiveDnsReverse")) {
             passiveDnsReverse = serializer.deserializeObject(json.get("passiveDnsReverse"), com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage.class);
+        }
+
+        if (json.has("subdomains")) {
+            subdomains = serializer.deserializeObject(json.get("subdomains"), com.microsoft.graph.security.requests.SubdomainCollectionPage.class);
         }
 
         if (json.has("trackers")) {

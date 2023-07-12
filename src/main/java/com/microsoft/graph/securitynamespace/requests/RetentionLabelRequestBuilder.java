@@ -56,6 +56,16 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder<RetentionLa
     }
 
 
+
+    /**
+     * Gets the request builder for FilePlanDescriptor
+     *
+     * @return the FilePlanDescriptorRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.FilePlanDescriptorRequestBuilder descriptors() {
+        return new com.microsoft.graph.security.requests.FilePlanDescriptorRequestBuilder(getRequestUrlWithAdditionalSegment("descriptors"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the DispositionReviewStage collection
      *

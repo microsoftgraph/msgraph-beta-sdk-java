@@ -90,6 +90,15 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
     public java.util.List<String> enabledSkipKeys;
 
     /**
+     * The Enrollment Time Azure Ad Group Ids.
+     * EnrollmentTimeAzureAdGroupIds contains list of enrollment time Azure Group Ids to be associated with profile
+     */
+    @SerializedName(value = "enrollmentTimeAzureAdGroupIds", alternate = {"EnrollmentTimeAzureAdGroupIds"})
+    @Expose
+	@Nullable
+    public java.util.List<java.util.UUID> enrollmentTimeAzureAdGroupIds;
+
+    /**
      * The Is Default.
      * Indicates if this is the default profile
      */

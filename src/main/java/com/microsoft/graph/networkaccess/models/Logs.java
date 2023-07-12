@@ -29,7 +29,7 @@ public class Logs extends Entity implements IJsonBackedObject {
 
     /**
      * The Traffic.
-     * 
+     * Represents a collection of log entries in the network access traffic log.
      */
     @SerializedName(value = "traffic", alternate = {"Traffic"})
     @Expose

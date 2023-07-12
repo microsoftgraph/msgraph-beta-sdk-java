@@ -41,7 +41,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupFeature implements IJ
 
     /**
      * The Device Feature Type.
-     * The type of device feature. Possible values are: manufacturer, model, osVersion, application or driver
+     * The type of device feature. Possible values are: manufacturer, model, osVersion, application or driver. Possible values are: manufacturer, model, osVersion, application, driver, unknownFutureValue.
      */
     @SerializedName(value = "deviceFeatureType", alternate = {"DeviceFeatureType"})
     @Expose
