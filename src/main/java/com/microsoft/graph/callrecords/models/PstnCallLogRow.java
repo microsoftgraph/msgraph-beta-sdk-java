@@ -93,6 +93,42 @@ public class PstnCallLogRow implements IJsonBackedObject {
     public java.math.BigDecimal charge;
 
     /**
+     * The Client Local Ip V4Address.
+     * Local IPv4 of the client that is retrieved from the operating system of the client.
+     */
+    @SerializedName(value = "clientLocalIpV4Address", alternate = {"ClientLocalIpV4Address"})
+    @Expose
+	@Nullable
+    public String clientLocalIpV4Address;
+
+    /**
+     * The Client Local Ip V6Address.
+     * Local IPv6 of the client that is retrieved from the operating system of the client.
+     */
+    @SerializedName(value = "clientLocalIpV6Address", alternate = {"ClientLocalIpV6Address"})
+    @Expose
+	@Nullable
+    public String clientLocalIpV6Address;
+
+    /**
+     * The Client Public Ip V4Address.
+     * Public IPv4 of the client that can be used to determine the location of the client.
+     */
+    @SerializedName(value = "clientPublicIpV4Address", alternate = {"ClientPublicIpV4Address"})
+    @Expose
+	@Nullable
+    public String clientPublicIpV4Address;
+
+    /**
+     * The Client Public Ip V6Address.
+     * Public IPv6 of the client that can be used to determine the location of the client.
+     */
+    @SerializedName(value = "clientPublicIpV6Address", alternate = {"ClientPublicIpV6Address"})
+    @Expose
+	@Nullable
+    public String clientPublicIpV6Address;
+
+    /**
      * The Conference Id.
      * ID of the audio conference.
      */

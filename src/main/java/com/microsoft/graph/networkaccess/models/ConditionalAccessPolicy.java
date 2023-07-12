@@ -27,7 +27,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
 
     /**
      * The Created Date Time.
-     * 
+     * Indicates the date and time the conditional access policy was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -36,7 +36,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
 
     /**
      * The Description.
-     * 
+     * Provides a summary of the conditional access policy.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -45,7 +45,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
 
     /**
      * The Display Name.
-     * 
+     * Represents the human-readable name or title assigned to the conditional access policy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -54,7 +54,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
 
     /**
      * The Modified Date Time.
-     * 
+     * Indicates the date and time when the conditional access policy was last modified.
      */
     @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose

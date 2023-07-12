@@ -31,7 +31,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Alert Definition Id.
-     * 
+     * The identifier of an alert definition. Supports $filter (eq, ne).
      */
     @SerializedName(value = "alertDefinitionId", alternate = {"AlertDefinitionId"})
     @Expose
@@ -40,7 +40,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Incident Count.
-     * 
+     * The number of incidents triggered in the tenant and relating to the alert. Can only be a positive integer.
      */
     @SerializedName(value = "incidentCount", alternate = {"IncidentCount"})
     @Expose
@@ -49,7 +49,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Is Active.
-     * 
+     * false by default. true if the alert is active.
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
@@ -58,7 +58,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date time when the alert configuration was updated or new incidents generated.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -67,7 +67,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Last Scanned Date Time.
-     * 
+     * The date time when the tenant was last scanned for incidents that trigger this alert.
      */
     @SerializedName(value = "lastScannedDateTime", alternate = {"LastScannedDateTime"})
     @Expose
@@ -76,7 +76,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Scope Id.
-     * 
+     * The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
      */
     @SerializedName(value = "scopeId", alternate = {"ScopeId"})
     @Expose
@@ -85,7 +85,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Scope Type.
-     * 
+     * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
      */
     @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose
@@ -94,7 +94,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Alert Configuration.
-     * 
+     * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $expand.
      */
     @SerializedName(value = "alertConfiguration", alternate = {"AlertConfiguration"})
     @Expose
@@ -103,7 +103,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Alert Definition.
-     * 
+     * Contains the description, impact, and measures to mitigate or prevent the security alert from being triggered in your tenant. Supports $expand.
      */
     @SerializedName(value = "alertDefinition", alternate = {"AlertDefinition"})
     @Expose
@@ -112,7 +112,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Alert Incidents.
-     * 
+     * Represents the incidents of this alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
      */
     @SerializedName(value = "alertIncidents", alternate = {"AlertIncidents"})
     @Expose

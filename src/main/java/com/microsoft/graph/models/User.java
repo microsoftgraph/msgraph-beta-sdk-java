@@ -73,6 +73,7 @@ import com.microsoft.graph.requests.UserActivityCollectionPage;
 import com.microsoft.graph.requests.OnlineMeetingCollectionPage;
 import com.microsoft.graph.requests.ChatCollectionPage;
 import com.microsoft.graph.requests.TeamCollectionPage;
+import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -361,7 +362,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Management Restricted.
-     * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.
+     * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
      */
     @SerializedName(value = "isManagementRestricted", alternate = {"IsManagementRestricted"})
     @Expose
@@ -956,6 +957,13 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage scopedRoleMemberOf;
 
     /**
+     * The Sponsors.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage sponsors;
+
+    /**
      * The Transitive Member Of.
      * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      */
@@ -1298,7 +1306,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Activities.
-     * 
+     * The user's activities across devices. Read-only. Nullable.
      */
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
@@ -1316,7 +1324,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Online Meetings.
-     * 
+     * Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
      */
     @SerializedName(value = "onlineMeetings", alternate = {"OnlineMeetings"})
     @Expose
@@ -1334,7 +1342,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Authentication.
-     * 
+     * The authentication methods that are supported for the user.
      */
     @SerializedName(value = "authentication", alternate = {"Authentication"})
     @Expose
@@ -1356,6 +1364,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
 	@Nullable
     public com.microsoft.graph.requests.TeamCollectionPage joinedTeams;
+
+    /**
+     * The Permission Grants.
+     * 
+     */
+    @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage permissionGrants;
 
     /**
      * The Teamwork.
@@ -1444,6 +1461,10 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("scopedRoleMemberOf")) {
             scopedRoleMemberOf = serializer.deserializeObject(json.get("scopedRoleMemberOf"), com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage.class);
+        }
+
+        if (json.has("sponsors")) {
+            sponsors = serializer.deserializeObject(json.get("sponsors"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
@@ -1576,6 +1597,10 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("joinedTeams")) {
             joinedTeams = serializer.deserializeObject(json.get("joinedTeams"), com.microsoft.graph.requests.TeamCollectionPage.class);
+        }
+
+        if (json.has("permissionGrants")) {
+            permissionGrants = serializer.deserializeObject(json.get("permissionGrants"), com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage.class);
         }
     }
 }

@@ -37,7 +37,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
 
     /**
      * The Time Based Attribute.
-     * Determines which time-based identity property to reference. The possible values are: employeeHireDate, employeeLeaveDateTime, unknownFutureValue.
+     * Determines which time-based identity property to reference. The possible values are: employeeHireDate, employeeLeaveDateTime, createdDateTime, unknownFutureValue.
      */
     @SerializedName(value = "timeBasedAttribute", alternate = {"TimeBasedAttribute"})
     @Expose

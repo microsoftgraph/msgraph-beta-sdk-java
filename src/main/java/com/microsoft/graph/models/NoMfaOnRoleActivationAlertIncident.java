@@ -27,7 +27,7 @@ public class NoMfaOnRoleActivationAlertIncident extends UnifiedRoleManagementAle
 
     /**
      * The Role Display Name.
-     * 
+     * The name of the Azure AD directory role.
      */
     @SerializedName(value = "roleDisplayName", alternate = {"RoleDisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class NoMfaOnRoleActivationAlertIncident extends UnifiedRoleManagementAle
 
     /**
      * The Role Template Id.
-     * 
+     * The globally unique identifier for a directory role.
      */
     @SerializedName(value = "roleTemplateId", alternate = {"RoleTemplateId"})
     @Expose

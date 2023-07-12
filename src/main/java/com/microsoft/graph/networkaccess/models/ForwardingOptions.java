@@ -28,7 +28,7 @@ public class ForwardingOptions extends Entity implements IJsonBackedObject {
 
     /**
      * The Skip Dns Lookup State.
-     * 
+     * Dns lookup options. The possible values are: enabled, disabled.
      */
     @SerializedName(value = "skipDnsLookupState", alternate = {"SkipDnsLookupState"})
     @Expose

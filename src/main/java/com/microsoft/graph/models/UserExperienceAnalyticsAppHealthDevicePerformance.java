@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The App Crash Count.
-     * The number of app crashes for the device. Valid values -2147483648 to 2147483647
+     * The number of application crashes for the device. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "appCrashCount", alternate = {"AppCrashCount"})
     @Expose
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The App Hang Count.
-     * The number of app hangs for the device. Valid values -2147483648 to 2147483647
+     * The number of application hangs for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "appHangCount", alternate = {"AppHangCount"})
     @Expose
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The Crashed App Count.
-     * The number of distinct app crashes for the device. Valid values -2147483648 to 2147483647
+     * The number of distinct application crashes for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "crashedAppCount", alternate = {"CrashedAppCount"})
     @Expose
@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The Device App Health Score.
-     * The app health score of the device. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The application health score of the device. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "deviceAppHealthScore", alternate = {"DeviceAppHealthScore"})
     @Expose
@@ -64,7 +64,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The Device Display Name.
-     * The name of the device.
+     * The name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The Device Id.
-     * The id of the device.
+     * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The Device Manufacturer.
-     * The manufacturer name of the device.
+     * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceManufacturer", alternate = {"DeviceManufacturer"})
     @Expose
@@ -91,7 +91,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The Device Model.
-     * The model name of the device.
+     * The model name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceModel", alternate = {"DeviceModel"})
     @Expose
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose
@@ -109,7 +109,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The Mean Time To Failure In Minutes.
-     * The mean time to failure for the device in minutes. Valid values -2147483648 to 2147483647
+     * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "meanTimeToFailureInMinutes", alternate = {"MeanTimeToFailureInMinutes"})
     @Expose
@@ -118,7 +118,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The Processed Date Time.
-     * The date and time when the statistics were last computed.
+     * The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
      */
     @SerializedName(value = "processedDateTime", alternate = {"ProcessedDateTime"})
     @Expose

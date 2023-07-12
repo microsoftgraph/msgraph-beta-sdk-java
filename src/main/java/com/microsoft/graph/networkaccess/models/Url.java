@@ -27,7 +27,7 @@ public class Url extends RuleDestination implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * URL Address
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

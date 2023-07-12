@@ -16,6 +16,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.CloudPcReportsGetDailyAggregatedRemoteConnectionReportsParameterSet;
+import com.microsoft.graph.models.CloudPcReportsGetInaccessibleCloudPcReportsParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetRemoteConnectionHistoricalReportsParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetSharedUseLicenseUsageReportParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetTotalAggregatedRemoteConnectionReportsParameterSet;
@@ -92,6 +93,16 @@ public class CloudPcReportsRequestBuilder extends BaseRequestBuilder<CloudPcRepo
     @Nonnull
     public CloudPcReportsGetDailyAggregatedRemoteConnectionReportsRequestBuilder getDailyAggregatedRemoteConnectionReports(@Nonnull final CloudPcReportsGetDailyAggregatedRemoteConnectionReportsParameterSet parameters) {
         return new CloudPcReportsGetDailyAggregatedRemoteConnectionReportsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDailyAggregatedRemoteConnectionReports"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public CloudPcReportsGetInaccessibleCloudPcReportsRequestBuilder getInaccessibleCloudPcReports(@Nonnull final CloudPcReportsGetInaccessibleCloudPcReportsParameterSet parameters) {
+        return new CloudPcReportsGetInaccessibleCloudPcReportsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getInaccessibleCloudPcReports"), getClient(), null, parameters);
     }
 
     /**

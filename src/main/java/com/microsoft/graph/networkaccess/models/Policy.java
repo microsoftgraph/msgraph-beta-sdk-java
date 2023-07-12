@@ -29,7 +29,7 @@ public class Policy extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -38,7 +38,7 @@ public class Policy extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Policy name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -47,7 +47,7 @@ public class Policy extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * 
+     * Version.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -56,7 +56,7 @@ public class Policy extends Entity implements IJsonBackedObject {
 
     /**
      * The Policy Rules.
-     * 
+     * Represents the definition of the policy ruleset that makes up the core definition of a policy.
      */
     @SerializedName(value = "policyRules", alternate = {"PolicyRules"})
     @Expose

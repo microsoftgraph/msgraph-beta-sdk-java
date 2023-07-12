@@ -32,7 +32,7 @@ public class RoleManagementAlert extends Entity implements IJsonBackedObject {
 
     /**
      * The Alert Configurations.
-     * 
+     * The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
      */
     @SerializedName(value = "alertConfigurations", alternate = {"AlertConfigurations"})
     @Expose
@@ -41,7 +41,7 @@ public class RoleManagementAlert extends Entity implements IJsonBackedObject {
 
     /**
      * The Alert Definitions.
-     * 
+     * Defines an alert, its impact, and measures to mitigate or prevent it.
      */
     @SerializedName(value = "alertDefinitions", alternate = {"AlertDefinitions"})
     @Expose
@@ -50,7 +50,7 @@ public class RoleManagementAlert extends Entity implements IJsonBackedObject {
 
     /**
      * The Alerts.
-     * 
+     * Represents the alert entity.
      */
     @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose
@@ -59,7 +59,7 @@ public class RoleManagementAlert extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * Represents operations on resources that take a long time to complete and can run in the background until completion.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose

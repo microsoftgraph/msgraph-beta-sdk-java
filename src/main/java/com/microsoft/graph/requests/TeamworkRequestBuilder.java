@@ -82,6 +82,26 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
         return new com.microsoft.graph.requests.WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the DeletedChat collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeletedChatCollectionRequestBuilder deletedChats() {
+        return new com.microsoft.graph.requests.DeletedChatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedChats"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeletedChat item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeletedChatRequestBuilder deletedChats(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeletedChatRequestBuilder(getRequestUrlWithAdditionalSegment("deletedChats") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the DeletedTeam collection
      *
      * @return the collection request builder

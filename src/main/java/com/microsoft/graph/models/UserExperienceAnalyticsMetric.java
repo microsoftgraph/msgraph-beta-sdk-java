@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsMetric extends Entity implements IJsonBacked
 
     /**
      * The Unit.
-     * The unit of the user experience analytics metric.
+     * The unit of the user experience analytics metric. Examples: none, percentage, count, seconds, score.
      */
     @SerializedName(value = "unit", alternate = {"Unit"})
     @Expose

@@ -32,7 +32,7 @@ public class BranchSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Bandwidth Capacity.
-     * 
+     * Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
      */
     @SerializedName(value = "bandwidthCapacity", alternate = {"BandwidthCapacity"})
     @Expose
@@ -41,7 +41,7 @@ public class BranchSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Connectivity State.
-     * 
+     * Determines the branch site status. The possible values are: pending, connected, inactive, error.
      */
     @SerializedName(value = "connectivityState", alternate = {"ConnectivityState"})
     @Expose
@@ -50,7 +50,7 @@ public class BranchSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Country.
-     * 
+     * The branch site is created in the specified country.
      */
     @SerializedName(value = "country", alternate = {"Country"})
     @Expose
@@ -59,7 +59,7 @@ public class BranchSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * last modified time.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -68,7 +68,7 @@ public class BranchSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -77,7 +77,7 @@ public class BranchSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Region.
-     * 
+     * The branch site is created in the specified location.
      */
     @SerializedName(value = "region", alternate = {"Region"})
     @Expose
@@ -86,7 +86,7 @@ public class BranchSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * 
+     * The branch version.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -95,7 +95,7 @@ public class BranchSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Links.
-     * 
+     * Each unique CPE device associated with a branch is specified. Supports $expand.
      */
     @SerializedName(value = "deviceLinks", alternate = {"DeviceLinks"})
     @Expose
@@ -104,7 +104,7 @@ public class BranchSite extends Entity implements IJsonBackedObject {
 
     /**
      * The Forwarding Profiles.
-     * 
+     * Each forwarding profile associated with a branch site is specified. Supports $expand.
      */
     @SerializedName(value = "forwardingProfiles", alternate = {"ForwardingProfiles"})
     @Expose

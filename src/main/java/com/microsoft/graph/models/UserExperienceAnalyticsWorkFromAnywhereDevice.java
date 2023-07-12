@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Auto Pilot Profile Assigned.
-     * The user experience analytics work from anywhere intune device's autopilotProfileAssigned.
+     * When TRUE, indicates the intune device's autopilot profile is assigned. When FALSE, indicates it's not Assigned. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "autoPilotProfileAssigned", alternate = {"AutoPilotProfileAssigned"})
     @Expose
@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Auto Pilot Registered.
-     * The user experience work from anywhere intune device's autopilotRegistered.
+     * When TRUE, indicates the intune device's autopilot is registered. When FALSE, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "autoPilotRegistered", alternate = {"AutoPilotRegistered"})
     @Expose
@@ -47,7 +47,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Azure Ad Device Id.
-     * The user experience work from anywhere azure Ad device Id.
+     * The Azure Active Directory (Azure AD) device Id. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "azureAdDeviceId", alternate = {"AzureAdDeviceId"})
     @Expose
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Azure Ad Join Type.
-     * The user experience work from anywhere device's azure Ad joinType.
+     * The work from anywhere device's Azure Active Directory (Azure AD) join type. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "azureAdJoinType", alternate = {"AzureAdJoinType"})
     @Expose
@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Azure Ad Registered.
-     * The user experience work from anywhere device's azureAdRegistered.
+     * When TRUE, indicates the device's Azure Active Directory (Azure AD) is registered. When False, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "azureAdRegistered", alternate = {"AzureAdRegistered"})
     @Expose
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Cloud Identity Score.
-     * The user experience work from anywhere per device cloud identity score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Indicates per device cloud identity score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "cloudIdentityScore", alternate = {"CloudIdentityScore"})
     @Expose
@@ -83,7 +83,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Cloud Management Score.
-     * The user experience work from anywhere per device cloud management score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Indicates per device cloud management score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "cloudManagementScore", alternate = {"CloudManagementScore"})
     @Expose
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Cloud Provisioning Score.
-     * The user experience work from anywhere per device cloud provisioning score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Indicates per device cloud provisioning score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "cloudProvisioningScore", alternate = {"CloudProvisioningScore"})
     @Expose
@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Compliance Policy Set To Intune.
-     * The user experience work from anywhere device's compliancePolicySetToIntune.
+     * When TRUE, indicates the device's compliance policy is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "compliancePolicySetToIntune", alternate = {"CompliancePolicySetToIntune"})
     @Expose
@@ -110,7 +110,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Device Id.
-     * The user experience work from anywhere device Id.
+     * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -119,7 +119,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Device Name.
-     * The work from anywhere device's name.
+     * The name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
@@ -128,7 +128,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Health Status.
-     * The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+     * The health state of the user experience analytics work from anywhere device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose
@@ -137,7 +137,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Is Cloud Managed Gateway Enabled.
-     * The user experience work from anywhere device's Cloud Management Gateway for Configuration Manager is enabled.
+     * When TRUE, indicates the device's Cloud Management Gateway for Configuration Manager is enabled. When FALSE, indicates it's not enabled. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "isCloudManagedGatewayEnabled", alternate = {"IsCloudManagedGatewayEnabled"})
     @Expose
@@ -146,7 +146,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Managed By.
-     * The user experience work from anywhere management agent of the device.
+     * The management agent of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "managedBy", alternate = {"ManagedBy"})
     @Expose
@@ -155,7 +155,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Manufacturer.
-     * The user experience work from anywhere device's manufacturer.
+     * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
@@ -164,7 +164,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Model.
-     * The user experience work from anywhere device's model.
+     * The model name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "model", alternate = {"Model"})
     @Expose
@@ -173,7 +173,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Os Check Failed.
-     * The user experience work from anywhere device, Is OS check failed for device to upgrade to the latest version of windows.
+     * When TRUE, indicates OS check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "osCheckFailed", alternate = {"OsCheckFailed"})
     @Expose
@@ -182,7 +182,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Os Description.
-     * The user experience work from anywhere device's OS Description.
+     * The OS description of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "osDescription", alternate = {"OsDescription"})
     @Expose
@@ -191,7 +191,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Os Version.
-     * The user experience work from anywhere device's OS Version.
+     * The OS version of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
@@ -200,7 +200,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Other Workloads Set To Intune.
-     * The user experience work from anywhere device's otherWorkloadsSetToIntune.
+     * When TRUE, indicates the device's other workloads is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "otherWorkloadsSetToIntune", alternate = {"OtherWorkloadsSetToIntune"})
     @Expose
@@ -209,7 +209,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Ownership.
-     * The user experience work from anywhere device's ownership.
+     * Ownership of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "ownership", alternate = {"Ownership"})
     @Expose
@@ -218,7 +218,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Processor64Bit Check Failed.
-     * The user experience work from anywhere device, Is processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows.
+     * When TRUE, indicates processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "processor64BitCheckFailed", alternate = {"Processor64BitCheckFailed"})
     @Expose
@@ -227,7 +227,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Processor Core Count Check Failed.
-     * The user experience work from anywhere device, Is processor hardware core count check failed for device to upgrade to the latest version of windows.
+     * When TRUE, indicates processor hardware core count check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "processorCoreCountCheckFailed", alternate = {"ProcessorCoreCountCheckFailed"})
     @Expose
@@ -236,7 +236,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Processor Family Check Failed.
-     * The user experience work from anywhere device, Is processor hardware family check failed for device to upgrade to the latest version of windows.
+     * When TRUE, indicates processor hardware family check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "processorFamilyCheckFailed", alternate = {"ProcessorFamilyCheckFailed"})
     @Expose
@@ -245,7 +245,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Processor Speed Check Failed.
-     * The user experience work from anywhere device, Is processor hardware speed check failed for device to upgrade to the latest version of windows.
+     * When TRUE, indicates processor hardware speed check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "processorSpeedCheckFailed", alternate = {"ProcessorSpeedCheckFailed"})
     @Expose
@@ -254,7 +254,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Ram Check Failed.
-     * Is the user experience analytics work from anywhere device RAM hardware check failed for device to upgrade to the latest version of windows
+     * When TRUE, indicates RAM hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "ramCheckFailed", alternate = {"RamCheckFailed"})
     @Expose
@@ -263,7 +263,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Secure Boot Check Failed.
-     * The user experience work from anywhere device, Is secure boot hardware check failed for device to upgrade to the latest version of windows.
+     * When TRUE, indicates secure boot hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "secureBootCheckFailed", alternate = {"SecureBootCheckFailed"})
     @Expose
@@ -272,7 +272,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Serial Number.
-     * The user experience work from anywhere device's serial number.
+     * The serial number of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "serialNumber", alternate = {"SerialNumber"})
     @Expose
@@ -281,7 +281,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Storage Check Failed.
-     * The user experience work from anywhere device, Is storage hardware check failed for device to upgrade to the latest version of windows.
+     * When TRUE, indicates storage hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "storageCheckFailed", alternate = {"StorageCheckFailed"})
     @Expose
@@ -290,7 +290,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Tenant Attached.
-     * The user experience work from anywhere device's tenantAttached.
+     * When TRUE, indicates the device is Tenant Attached. When FALSE, indicates it's not Tenant Attached. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "tenantAttached", alternate = {"TenantAttached"})
     @Expose
@@ -299,7 +299,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Tpm Check Failed.
-     * The user experience work from anywhere device, Is Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows.
+     * When TRUE, indicates Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "tpmCheckFailed", alternate = {"TpmCheckFailed"})
     @Expose
@@ -308,7 +308,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Upgrade Eligibility.
-     * The user experience work from anywhere windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable.
+     * The windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: upgraded, unknown, notCapable, capable, unknownFutureValue.
      */
     @SerializedName(value = "upgradeEligibility", alternate = {"UpgradeEligibility"})
     @Expose
@@ -317,7 +317,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Windows Score.
-     * The user experience work from anywhere per device windows score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Indicates per device windows score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "windowsScore", alternate = {"WindowsScore"})
     @Expose
@@ -326,7 +326,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Work From Anywhere Score.
-     * The user experience work from anywhere per device overall score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Indicates work from anywhere per device overall score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "workFromAnywhereScore", alternate = {"WorkFromAnywhereScore"})
     @Expose

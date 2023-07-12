@@ -29,7 +29,7 @@ public class PolicyLink extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * Link status. The possible values are: enabled, disabled.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -38,7 +38,7 @@ public class PolicyLink extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * 
+     * Version.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -47,7 +47,7 @@ public class PolicyLink extends Entity implements IJsonBackedObject {
 
     /**
      * The Policy.
-     * 
+     * Policy.
      */
     @SerializedName(value = "policy", alternate = {"Policy"})
     @Expose

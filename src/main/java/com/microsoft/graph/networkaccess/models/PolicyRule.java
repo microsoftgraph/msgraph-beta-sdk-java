@@ -27,7 +27,7 @@ public class PolicyRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

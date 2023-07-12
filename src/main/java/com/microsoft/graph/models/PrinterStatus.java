@@ -62,7 +62,9 @@ public class PrinterStatus implements IJsonBackedObject {
     /**
      * The Processing State.
      * 
+     * @deprecated The processingState property is deprecated and will stop returning data on July 31, 2023. Please use the state property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "processingState", alternate = {"ProcessingState"})
     @Expose
 	@Nullable
@@ -71,7 +73,9 @@ public class PrinterStatus implements IJsonBackedObject {
     /**
      * The Processing State Description.
      * 
+     * @deprecated The processingStateDescription property is deprecated and will stop returning data on July 31, 2023. Please use the description property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "processingStateDescription", alternate = {"ProcessingStateDescription"})
     @Expose
 	@Nullable
@@ -80,7 +84,9 @@ public class PrinterStatus implements IJsonBackedObject {
     /**
      * The Processing State Reasons.
      * 
+     * @deprecated The printerProcessingStateReason enum type is deprecated and will stop returning data on July 31, 2023. Please use the printerProcessingStateDetail enum type instead of this.
      */
+    @Deprecated
     @SerializedName(value = "processingStateReasons", alternate = {"ProcessingStateReasons"})
     @Expose
 	@Nullable

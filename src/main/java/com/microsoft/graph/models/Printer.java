@@ -32,7 +32,9 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
     /**
      * The Accepting Jobs.
      * 
+     * @deprecated The acceptingJobs property is deprecated and will stop returning data on July 31, 2023. Please use the isAcceptingJobs property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "acceptingJobs", alternate = {"AcceptingJobs"})
     @Expose
 	@Nullable
@@ -84,7 +86,9 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
     /**
      * The Share.
      * 
+     * @deprecated The share navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "share", alternate = {"Share"})
     @Expose
 	@Nullable

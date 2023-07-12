@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AuthenticationMethodsRoot;
+import com.microsoft.graph.models.ServiceLevelAgreementRoot;
 import com.microsoft.graph.models.SecurityReportsRoot;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AppCredentialSignInActivityCollectionPage;
@@ -80,6 +81,15 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.ServicePrincipalSignInActivityCollectionPage servicePrincipalSignInActivities;
 
     /**
+     * The Sla.
+     * A placeholder to allow for the desired URL path for SLA.
+     */
+    @SerializedName(value = "sla", alternate = {"Sla"})
+    @Expose
+	@Nullable
+    public ServiceLevelAgreementRoot sla;
+
+    /**
      * The User Credential Usage Details.
      * Represents the self-service password reset (SSPR) usage for a given tenant.
      */
@@ -99,7 +109,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Daily Print Usage By Printer.
-     * 
+     * Retrieve a list of daily print usage summaries, grouped by printer.
      */
     @SerializedName(value = "dailyPrintUsageByPrinter", alternate = {"DailyPrintUsageByPrinter"})
     @Expose
@@ -108,7 +118,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Daily Print Usage By User.
-     * 
+     * Retrieve a list of daily print usage summaries, grouped by user.
      */
     @SerializedName(value = "dailyPrintUsageByUser", alternate = {"DailyPrintUsageByUser"})
     @Expose
@@ -118,7 +128,9 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     /**
      * The Daily Print Usage Summaries By Printer.
      * 
+     * @deprecated The dailyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsageByPrinter navigation property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "dailyPrintUsageSummariesByPrinter", alternate = {"DailyPrintUsageSummariesByPrinter"})
     @Expose
 	@Nullable
@@ -127,7 +139,9 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     /**
      * The Daily Print Usage Summaries By User.
      * 
+     * @deprecated The dailyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsage navigation property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "dailyPrintUsageSummariesByUser", alternate = {"DailyPrintUsageSummariesByUser"})
     @Expose
 	@Nullable
@@ -135,7 +149,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Monthly Print Usage By Printer.
-     * 
+     * Retrieve a list of monthly print usage summaries, grouped by printer.
      */
     @SerializedName(value = "monthlyPrintUsageByPrinter", alternate = {"MonthlyPrintUsageByPrinter"})
     @Expose
@@ -144,7 +158,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Monthly Print Usage By User.
-     * 
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      */
     @SerializedName(value = "monthlyPrintUsageByUser", alternate = {"MonthlyPrintUsageByUser"})
     @Expose
@@ -154,7 +168,9 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     /**
      * The Monthly Print Usage Summaries By Printer.
      * 
+     * @deprecated The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "monthlyPrintUsageSummariesByPrinter", alternate = {"MonthlyPrintUsageSummariesByPrinter"})
     @Expose
 	@Nullable
@@ -163,7 +179,9 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     /**
      * The Monthly Print Usage Summaries By User.
      * 
+     * @deprecated The monthlyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByUser navigation property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "monthlyPrintUsageSummariesByUser", alternate = {"MonthlyPrintUsageSummariesByUser"})
     @Expose
 	@Nullable

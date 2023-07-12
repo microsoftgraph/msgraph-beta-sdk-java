@@ -83,7 +83,7 @@ public class TeamworkDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Type.
-     * The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, unknownFutureValue.
+     * The type of device. The possible values are: unknown, ipPhone, teamsRoom, surfaceHub, collaborationBar, teamsDisplay, touchConsole, lowCostPhone, teamsPanel, sip, sipAnalog, unknownFutureValue.
      */
     @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose

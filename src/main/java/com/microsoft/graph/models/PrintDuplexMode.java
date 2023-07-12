@@ -24,6 +24,10 @@ public enum PrintDuplexMode
     */
     ONE_SIDED,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For PrintDuplexMode values that were not expected from the service
     */
     UNEXPECTED_VALUE

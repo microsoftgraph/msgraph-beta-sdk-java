@@ -27,7 +27,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
 
     /**
      * The Value.
-     * Not yet documented
+     * The double value of the user experience analytics insight.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

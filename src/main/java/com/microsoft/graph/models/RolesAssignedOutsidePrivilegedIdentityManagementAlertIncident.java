@@ -27,7 +27,7 @@ public class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident exten
 
     /**
      * The Assignee Display Name.
-     * 
+     * Display name of the subject that the incident applies to.
      */
     @SerializedName(value = "assigneeDisplayName", alternate = {"AssigneeDisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident exten
 
     /**
      * The Assignee Id.
-     * 
+     * The identifier of the subject that the incident applies to.
      */
     @SerializedName(value = "assigneeId", alternate = {"AssigneeId"})
     @Expose
@@ -45,7 +45,7 @@ public class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident exten
 
     /**
      * The Assignee User Principal Name.
-     * 
+     * User principal name of the subject that the incident applies to. Applies to user principals.
      */
     @SerializedName(value = "assigneeUserPrincipalName", alternate = {"AssigneeUserPrincipalName"})
     @Expose
@@ -63,7 +63,7 @@ public class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident exten
 
     /**
      * The Role Definition Id.
-     * 
+     * The identifier for the directory role definition that's in scope of this incident.
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -72,7 +72,7 @@ public class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident exten
 
     /**
      * The Role Display Name.
-     * 
+     * The display name for the directory role.
      */
     @SerializedName(value = "roleDisplayName", alternate = {"RoleDisplayName"})
     @Expose
@@ -81,7 +81,7 @@ public class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident exten
 
     /**
      * The Role Template Id.
-     * 
+     * The globally unique identifier for the directory role.
      */
     @SerializedName(value = "roleTemplateId", alternate = {"RoleTemplateId"})
     @Expose

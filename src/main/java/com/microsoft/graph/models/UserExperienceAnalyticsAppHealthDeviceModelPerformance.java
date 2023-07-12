@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
 
     /**
      * The Active Device Count.
-     * The number of active devices for the model. Valid values -2147483648 to 2147483647
+     * The number of active devices for the model. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "activeDeviceCount", alternate = {"ActiveDeviceCount"})
     @Expose
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
 
     /**
      * The Device Manufacturer.
-     * The manufacturer name of the device.
+     * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceManufacturer", alternate = {"DeviceManufacturer"})
     @Expose
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
 
     /**
      * The Device Model.
-     * The model name of the device.
+     * The model name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceModel", alternate = {"DeviceModel"})
     @Expose
@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+     * The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose
@@ -64,7 +64,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
 
     /**
      * The Mean Time To Failure In Minutes.
-     * The mean time to failure for the model device in minutes. Valid values -2147483648 to 2147483647
+     * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "meanTimeToFailureInMinutes", alternate = {"MeanTimeToFailureInMinutes"})
     @Expose
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Enti
 
     /**
      * The Model App Health Score.
-     * The app health score of the device model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The application health score of the device model. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      */
     @SerializedName(value = "modelAppHealthScore", alternate = {"ModelAppHealthScore"})
     @Expose
