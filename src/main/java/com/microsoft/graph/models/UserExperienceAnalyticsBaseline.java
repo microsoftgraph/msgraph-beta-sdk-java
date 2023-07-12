@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 
     /**
      * The Created Date Time.
-     * The date the custom baseline was created.
+     * The date the custom baseline was created. The value cannot be modified and is automatically populated when the baseline is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 
     /**
      * The Display Name.
-     * The name of the user experience analytics baseline.
+     * The name of the baseline.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 
     /**
      * The Is Built In.
-     * Signifies if the current baseline is the commercial median baseline or a custom baseline.
+     * When TRUE, indicates the current baseline is the commercial median baseline. When FALSE, indicates it is a custom baseline. FALSE by default.
      */
     @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
     @Expose
@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 
     /**
      * The App Health Metrics.
-     * The user experience analytics app health metrics.
+     * The scores and insights for the application health metrics.
      */
     @SerializedName(value = "appHealthMetrics", alternate = {"AppHealthMetrics"})
     @Expose
@@ -64,7 +64,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 
     /**
      * The Battery Health Metrics.
-     * The user experience analytics battery health metrics.
+     * The scores and insights for the battery health metrics.
      */
     @SerializedName(value = "batteryHealthMetrics", alternate = {"BatteryHealthMetrics"})
     @Expose
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 
     /**
      * The Best Practices Metrics.
-     * The user experience analytics best practices metrics.
+     * The scores and insights for the best practices metrics.
      */
     @SerializedName(value = "bestPracticesMetrics", alternate = {"BestPracticesMetrics"})
     @Expose
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 
     /**
      * The Device Boot Performance Metrics.
-     * The user experience analytics device boot performance metrics.
+     * The scores and insights for the device boot performance metrics.
      */
     @SerializedName(value = "deviceBootPerformanceMetrics", alternate = {"DeviceBootPerformanceMetrics"})
     @Expose
@@ -91,7 +91,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 
     /**
      * The Reboot Analytics Metrics.
-     * The user experience analytics reboot analytics metrics.
+     * The scores and insights for the reboot analytics metrics.
      */
     @SerializedName(value = "rebootAnalyticsMetrics", alternate = {"RebootAnalyticsMetrics"})
     @Expose
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 
     /**
      * The Resource Performance Metrics.
-     * The user experience analytics resource performance metrics.
+     * The scores and insights for the resource performance metrics.
      */
     @SerializedName(value = "resourcePerformanceMetrics", alternate = {"ResourcePerformanceMetrics"})
     @Expose
@@ -109,7 +109,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 
     /**
      * The Work From Anywhere Metrics.
-     * The user experience analytics work from anywhere metrics.
+     * The scores and insights for the work from anywhere metrics.
      */
     @SerializedName(value = "workFromAnywhereMetrics", alternate = {"WorkFromAnywhereMetrics"})
     @Expose

@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SynchronizationSchedule;
 import com.microsoft.graph.models.SynchronizationStatus;
 import com.microsoft.graph.models.KeyValuePair;
+import com.microsoft.graph.models.BulkUpload;
 import com.microsoft.graph.models.SynchronizationSchema;
 import com.microsoft.graph.models.Entity;
 
@@ -65,6 +66,17 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String templateId;
+
+    /**
+     * The Bulk Upload.
+     * The bulk upload operation for the job.
+     * @deprecated 
+     */
+    @Deprecated
+    @SerializedName(value = "bulkUpload", alternate = {"BulkUpload"})
+    @Expose
+	@Nullable
+    public BulkUpload bulkUpload;
 
     /**
      * The Schema.

@@ -8,7 +8,9 @@ package com.microsoft.graph.models;
 
 /**
  * The Enum Print Color Configuration.
+ * @deprecated The printColorConfiguration enum type is deprecated and will stop returning data on July 31, 2023. Please use the printColorMode enum type instead of this.
 */
+@Deprecated
 public enum PrintColorConfiguration
 {
     /**

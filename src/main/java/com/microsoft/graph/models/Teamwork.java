@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.TeamsAppSettings;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkforceIntegrationCollectionPage;
+import com.microsoft.graph.requests.DeletedChatCollectionPage;
 import com.microsoft.graph.requests.DeletedTeamCollectionPage;
 import com.microsoft.graph.requests.TeamworkDeviceCollectionPage;
 import com.microsoft.graph.requests.TeamTemplateCollectionPage;
@@ -39,6 +40,15 @@ public class Teamwork extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.WorkforceIntegrationCollectionPage workforceIntegrations;
+
+    /**
+     * The Deleted Chats.
+     * 
+     */
+    @SerializedName(value = "deletedChats", alternate = {"DeletedChats"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.DeletedChatCollectionPage deletedChats;
 
     /**
      * The Deleted Teams.
@@ -88,6 +98,10 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
         if (json.has("workforceIntegrations")) {
             workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations"), com.microsoft.graph.requests.WorkforceIntegrationCollectionPage.class);
+        }
+
+        if (json.has("deletedChats")) {
+            deletedChats = serializer.deserializeObject(json.get("deletedChats"), com.microsoft.graph.requests.DeletedChatCollectionPage.class);
         }
 
         if (json.has("deletedTeams")) {

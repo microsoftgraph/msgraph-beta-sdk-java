@@ -40,7 +40,7 @@ public class PolicyRuleDelta implements IJsonBackedObject {
 
     /**
      * The Action.
-     * 
+     * Required. The possible values are: bypass, forward, unknownFutureValue.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -49,7 +49,7 @@ public class PolicyRuleDelta implements IJsonBackedObject {
 
     /**
      * The Rule Id.
-     * 
+     * The identifier of the policy rule to update.
      */
     @SerializedName(value = "ruleId", alternate = {"RuleId"})
     @Expose

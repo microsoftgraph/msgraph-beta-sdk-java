@@ -28,7 +28,7 @@ public class CrossTenantAccessSettings extends Entity implements IJsonBackedObje
 
     /**
      * The Network Packet Tagging Status.
-     * 
+     * Determines if a header with the user tenant ID is inserted into the network traffic. .The possible values are: enabled, disabled.
      */
     @SerializedName(value = "networkPacketTaggingStatus", alternate = {"NetworkPacketTaggingStatus"})
     @Expose

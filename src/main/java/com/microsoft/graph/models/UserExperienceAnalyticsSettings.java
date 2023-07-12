@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsSettings implements IJsonBackedObject {
 
     /**
      * The Configuration Manager Data Connector Configured.
-     * True if Tenant attach is configured. If configured then SCCM tenant attached devices will show up in UXA reporting.
+     * When TRUE, indicates Tenant attach is configured properly and System Center Configuration Manager (SCCM) tenant attached devices will show up in endpoint analytics reporting. When FALSE, indicates Tenant attach is not configured. FALSE by default.
      */
     @SerializedName(value = "configurationManagerDataConnectorConfigured", alternate = {"ConfigurationManagerDataConnectorConfigured"})
     @Expose

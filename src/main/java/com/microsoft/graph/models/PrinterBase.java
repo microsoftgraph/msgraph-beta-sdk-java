@@ -97,7 +97,9 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
     /**
      * The Name.
      * 
+     * @deprecated The name property is deprecated and will stop returning data on July 31, 2023. Please use the displayName property instead of this.
      */
+    @Deprecated
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
 	@Nullable

@@ -12,13 +12,13 @@ package com.microsoft.graph.security.models;
 public enum IndicatorSource
 {
     /**
-    * microsoft Defender Threat Intelligence
+    * microsoft
     */
-    MICROSOFT_DEFENDER_THREAT_INTELLIGENCE,
+    MICROSOFT,
     /**
-    * open Source Intelligence
+    * osint
     */
-    OPEN_SOURCE_INTELLIGENCE,
+    OSINT,
     /**
     * public
     */

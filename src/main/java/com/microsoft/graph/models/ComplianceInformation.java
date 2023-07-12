@@ -41,7 +41,7 @@ public class ComplianceInformation implements IJsonBackedObject {
 
     /**
      * The Certification Controls.
-     * 
+     * Collection of the certification controls associated with the certification.
      */
     @SerializedName(value = "certificationControls", alternate = {"CertificationControls"})
     @Expose
@@ -50,7 +50,7 @@ public class ComplianceInformation implements IJsonBackedObject {
 
     /**
      * The Certification Name.
-     * 
+     * The name of the compliance certification, for example, ISO 27018:2014, GDPR, FedRAMP, and NIST 800-171.
      */
     @SerializedName(value = "certificationName", alternate = {"CertificationName"})
     @Expose

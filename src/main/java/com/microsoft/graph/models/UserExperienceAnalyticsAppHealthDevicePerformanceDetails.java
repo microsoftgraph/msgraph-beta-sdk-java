@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
 
     /**
      * The App Display Name.
-     * The friendly name of the application for which the event occurred.
+     * The friendly name of the application for which the event occurred. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
 
     /**
      * The App Publisher.
-     * The publisher of the application.
+     * The publisher of the application. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "appPublisher", alternate = {"AppPublisher"})
     @Expose
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
 
     /**
      * The App Version.
-     * The version of the application.
+     * The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "appVersion", alternate = {"AppVersion"})
     @Expose
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
 
     /**
      * The Device Display Name.
-     * The name of the device.
+     * The name of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
@@ -63,7 +63,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
 
     /**
      * The Device Id.
-     * The id of the device.
+     * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
 
     /**
      * The Event Date Time.
-     * The time the event occurred.
+     * The time the event occurred. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
      */
     @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
 
     /**
      * The Event Type.
-     * The type of the event.
+     * The type of the event. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "eventType", alternate = {"EventType"})
     @Expose

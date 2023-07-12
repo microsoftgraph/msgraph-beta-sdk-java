@@ -18,7 +18,9 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the Printer Reset Defaults Request.
+ * @deprecated The resetDefaults API is deprecated and will stop returning data on July 31, 2023. Please use the restoreFactoryDefaults API instead of this.
  */
+@Deprecated
 public class PrinterResetDefaultsRequest extends BaseRequest<Void> {
     /**
      * The request for this PrinterResetDefaults

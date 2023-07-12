@@ -30,7 +30,7 @@ public class ForwardingProfile extends Profile implements IJsonBackedObject {
 
     /**
      * The Associations.
-     * 
+     * Specifies the users, groups, devices, and branch locations whose traffic is associated with the given traffic forwarding profile.
      */
     @SerializedName(value = "associations", alternate = {"Associations"})
     @Expose
@@ -39,7 +39,7 @@ public class ForwardingProfile extends Profile implements IJsonBackedObject {
 
     /**
      * The Priority.
-     * 
+     * Profile priority.
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -48,7 +48,7 @@ public class ForwardingProfile extends Profile implements IJsonBackedObject {
 
     /**
      * The Traffic Forwarding Type.
-     * 
+     * Profile traffic type. The possible values are: m365, internet, private.
      */
     @SerializedName(value = "trafficForwardingType", alternate = {"TrafficForwardingType"})
     @Expose

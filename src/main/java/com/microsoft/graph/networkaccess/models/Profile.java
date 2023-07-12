@@ -30,7 +30,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -39,7 +39,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Profile last modified time.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Profile name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -57,7 +57,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * Profile state.The possible values are: enabled, disabled.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -66,7 +66,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * 
+     * Profile version.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -75,7 +75,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Policies.
-     * 
+     * Traffic forwarding policies associated with this profile.
      */
     @SerializedName(value = "policies", alternate = {"Policies"})
     @Expose

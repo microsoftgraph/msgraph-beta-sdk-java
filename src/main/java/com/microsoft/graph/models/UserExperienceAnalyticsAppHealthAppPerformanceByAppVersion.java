@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
 
     /**
      * The App Crash Count.
-     * The number of crashes for the app. Valid values -2147483648 to 2147483647
+     * The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "appCrashCount", alternate = {"AppCrashCount"})
     @Expose
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
 
     /**
      * The App Display Name.
-     * The friendly name of the application.
+     * The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
 
     /**
      * The App Name.
-     * The name of the application.
+     * The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "appName", alternate = {"AppName"})
     @Expose
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
 
     /**
      * The App Publisher.
-     * The publisher of the application.
+     * The publisher of the application. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "appPublisher", alternate = {"AppPublisher"})
     @Expose
@@ -63,7 +63,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
 
     /**
      * The App Usage Duration.
-     * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
+     * The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "appUsageDuration", alternate = {"AppUsageDuration"})
     @Expose
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
 
     /**
      * The Mean Time To Failure In Minutes.
-     * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
+     * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "meanTimeToFailureInMinutes", alternate = {"MeanTimeToFailureInMinutes"})
     @Expose

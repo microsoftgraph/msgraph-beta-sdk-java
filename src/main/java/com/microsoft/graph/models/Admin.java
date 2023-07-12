@@ -12,6 +12,11 @@ import com.microsoft.graph.models.Edge;
 import com.microsoft.graph.models.Sharepoint;
 import com.microsoft.graph.models.ServiceAnnouncement;
 import com.microsoft.graph.models.AdminReportSettings;
+import com.microsoft.graph.models.AdminAppsAndServices;
+import com.microsoft.graph.models.AdminDynamics;
+import com.microsoft.graph.models.AdminForms;
+import com.microsoft.graph.models.AdminTodo;
+import com.microsoft.graph.models.PeopleAdminSettings;
 import com.microsoft.graph.models.AdminWindows;
 
 
@@ -77,6 +82,51 @@ public class Admin implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AdminReportSettings reportSettings;
+
+    /**
+     * The Apps And Services.
+     * 
+     */
+    @SerializedName(value = "appsAndServices", alternate = {"AppsAndServices"})
+    @Expose
+	@Nullable
+    public AdminAppsAndServices appsAndServices;
+
+    /**
+     * The Dynamics.
+     * 
+     */
+    @SerializedName(value = "dynamics", alternate = {"Dynamics"})
+    @Expose
+	@Nullable
+    public AdminDynamics dynamics;
+
+    /**
+     * The Forms.
+     * 
+     */
+    @SerializedName(value = "forms", alternate = {"Forms"})
+    @Expose
+	@Nullable
+    public AdminForms forms;
+
+    /**
+     * The Todo.
+     * 
+     */
+    @SerializedName(value = "todo", alternate = {"Todo"})
+    @Expose
+	@Nullable
+    public AdminTodo todo;
+
+    /**
+     * The People.
+     * 
+     */
+    @SerializedName(value = "people", alternate = {"People"})
+    @Expose
+	@Nullable
+    public PeopleAdminSettings people;
 
     /**
      * The Windows.

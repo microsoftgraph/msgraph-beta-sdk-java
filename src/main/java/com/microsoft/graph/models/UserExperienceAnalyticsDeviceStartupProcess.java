@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
 
     /**
      * The Managed Device Id.
-     * The user experience analytics device id.
+     * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
 
     /**
      * The Process Name.
-     * User experience analytics device startup process name.
+     * The name of the process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "processName", alternate = {"ProcessName"})
     @Expose
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
 
     /**
      * The Product Name.
-     * The user experience analytics device startup process product name.
+     * The product name of the process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "productName", alternate = {"ProductName"})
     @Expose
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
 
     /**
      * The Publisher.
-     * The User experience analytics device startup process publisher.
+     * The publisher of the process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
@@ -63,7 +63,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
 
     /**
      * The Startup Impact In Ms.
-     * User experience analytics device startup process impact in milliseconds.
+     * The impact of startup process on device boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      */
     @SerializedName(value = "startupImpactInMs", alternate = {"StartupImpactInMs"})
     @Expose

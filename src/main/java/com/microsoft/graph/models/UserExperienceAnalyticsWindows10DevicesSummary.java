@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsWindows10DevicesSummary implements IJsonBack
 
     /**
      * The Unsupported OSversion Device Count.
-     * The count of Windows 10 devices that have unsupported OS versions.
+     * The count of Windows 10 devices that have unsupported OS versions. Read-only.
      */
     @SerializedName(value = "unsupportedOSversionDeviceCount", alternate = {"UnsupportedOSversionDeviceCount"})
     @Expose

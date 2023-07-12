@@ -43,6 +43,15 @@ public class TeamsAppSettings extends Entity implements IJsonBackedObject {
 	@Nullable
     public Boolean isChatResourceSpecificConsentEnabled;
 
+    /**
+     * The Is User Personal Scope Resource Specific Consent Enabled.
+     * 
+     */
+    @SerializedName(value = "isUserPersonalScopeResourceSpecificConsentEnabled", alternate = {"IsUserPersonalScopeResourceSpecificConsentEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isUserPersonalScopeResourceSpecificConsentEnabled;
+
 
     /**
      * Sets the raw JSON object

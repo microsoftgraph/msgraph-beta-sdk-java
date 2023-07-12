@@ -17,7 +17,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Print Job Start Print Job Request Builder.
+ * @deprecated The startPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the start API instead of this.
  */
+@Deprecated
 public class PrintJobStartPrintJobRequestBuilder extends BaseActionRequestBuilder<PrintJobStatus> {
 
     /**

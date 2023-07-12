@@ -165,7 +165,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Subjects.
-     * 
+     * Represents the subjects within entitlement management.
      */
     @SerializedName(value = "subjects", alternate = {"Subjects"})
     @Expose

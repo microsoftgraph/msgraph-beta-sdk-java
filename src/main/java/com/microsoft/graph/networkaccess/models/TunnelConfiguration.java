@@ -39,7 +39,7 @@ public class TunnelConfiguration implements IJsonBackedObject {
 
     /**
      * The Pre Shared Key.
-     * 
+     * A key to establish secure connection between the link and VPN tunnel on the edge.
      */
     @SerializedName(value = "preSharedKey", alternate = {"PreSharedKey"})
     @Expose

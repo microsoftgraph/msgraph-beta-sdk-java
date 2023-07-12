@@ -27,7 +27,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
 
     /**
      * The Global Admin Count Threshold.
-     * 
+     * The threshold for the number of accounts assigned the Global Administrator role in the tenant. Triggers an alert if the number of global administrators in the tenant reaches or crosses this threshold value.
      */
     @SerializedName(value = "globalAdminCountThreshold", alternate = {"GlobalAdminCountThreshold"})
     @Expose
@@ -36,7 +36,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
 
     /**
      * The Percentage Of Global Admins Out Of Roles Threshold.
-     * 
+     * Threshold of the percentage of global administrators out of all the role assignments in the tenant. Triggers an alert if the percentage in the tenant reaches or crosses this threshold value.
      */
     @SerializedName(value = "percentageOfGlobalAdminsOutOfRolesThreshold", alternate = {"PercentageOfGlobalAdminsOutOfRolesThreshold"})
     @Expose

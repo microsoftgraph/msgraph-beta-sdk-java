@@ -19,7 +19,9 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the Printer Get Capabilities Request.
+ * @deprecated The getCapabilities API is deprecated and will stop returning data on July 31, 2023. Please use the capabilities property instead of this.
  */
+@Deprecated
 public class PrinterGetCapabilitiesRequest extends BaseRequest<PrinterCapabilities> {
     /**
      * The request for this PrinterGetCapabilities

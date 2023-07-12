@@ -258,6 +258,16 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     public com.microsoft.graph.requests.ServicePrincipalSignInActivityRequestBuilder servicePrincipalSignInActivities(@Nonnull final String id) {
         return new com.microsoft.graph.requests.ServicePrincipalSignInActivityRequestBuilder(getRequestUrlWithAdditionalSegment("servicePrincipalSignInActivities") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for ServiceLevelAgreementRoot
+     *
+     * @return the ServiceLevelAgreementRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ServiceLevelAgreementRootRequestBuilder sla() {
+        return new com.microsoft.graph.requests.ServiceLevelAgreementRootRequestBuilder(getRequestUrlWithAdditionalSegment("sla"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the UserCredentialUsageDetails collection
      *
