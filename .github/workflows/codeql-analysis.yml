@@ -24,7 +24,7 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: 1es-ubuntu-msgraph-beta-sdk-java-mem-latest
+    runs-on: [1es-ubuntu-msgraph-beta-sdk-java-mem-latest]
     #timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
     permissions:
       actions: read
