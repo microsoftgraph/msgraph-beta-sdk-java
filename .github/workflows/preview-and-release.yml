@@ -49,7 +49,7 @@ jobs:
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: drop
+          name: kiota-drop
           path: |
             **/libs/*
             build/generated-pom.xml
@@ -74,7 +74,7 @@ jobs:
         run: .\Scripts\getLatestVersion.ps1
         shell: pwsh    
       - name: Create tag
-        uses: rickstaa/action-create-tag@v1.6.1
+        uses: rickstaa/action-create-tag@v1.6.2
         with:
           tag: ${{ steps.GetVersion.outputs.tag }}
       - name: Queue Git Release
