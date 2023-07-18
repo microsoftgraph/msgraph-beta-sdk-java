@@ -3,17 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Setting instance within policy
+ */
 public class DeviceManagementConfigurationChoiceSettingCollectionInstance extends DeviceManagementConfigurationSettingInstance implements Parsable {
-    /** Choice setting collection value */
-    private java.util.List<DeviceManagementConfigurationChoiceSettingValue> _choiceSettingCollectionValue;
     /**
-     * Instantiates a new DeviceManagementConfigurationChoiceSettingCollectionInstance and sets the default values.
+     * Choice setting collection value
+     */
+    private java.util.List<DeviceManagementConfigurationChoiceSettingValue> choiceSettingCollectionValue;
+    /**
+     * Instantiates a new deviceManagementConfigurationChoiceSettingCollectionInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingCollectionInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionInstance");
@@ -21,7 +26,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationChoiceSettingCollectionInstance
+     * @return a deviceManagementConfigurationChoiceSettingCollectionInstance
      */
     @javax.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingCollectionInstance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -34,24 +39,24 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationChoiceSettingValue> getChoiceSettingCollectionValue() {
-        return this._choiceSettingCollectionValue;
+        return this.choiceSettingCollectionValue;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationChoiceSettingCollectionInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("choiceSettingCollectionValue", (n) -> { currentObject.setChoiceSettingCollectionValue(n.getCollectionOfObjectValues(DeviceManagementConfigurationChoiceSettingValue::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("choiceSettingCollectionValue", (n) -> { this.setChoiceSettingCollectionValue(n.getCollectionOfObjectValues(DeviceManagementConfigurationChoiceSettingValue::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +67,8 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
      * @param value Value to set for the choiceSettingCollectionValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChoiceSettingCollectionValue(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationChoiceSettingValue> value) {
-        this._choiceSettingCollectionValue = value;
+        this.choiceSettingCollectionValue = value;
     }
 }

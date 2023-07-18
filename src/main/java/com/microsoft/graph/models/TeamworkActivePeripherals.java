@@ -4,32 +4,45 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The communicationSpeaker property */
-    private TeamworkPeripheral _communicationSpeaker;
-    /** The contentCamera property */
-    private TeamworkPeripheral _contentCamera;
-    /** The microphone property */
-    private TeamworkPeripheral _microphone;
-    /** The OdataType property */
-    private String _odataType;
-    /** The roomCamera property */
-    private TeamworkPeripheral _roomCamera;
-    /** The speaker property */
-    private TeamworkPeripheral _speaker;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The communicationSpeaker property
+     */
+    private TeamworkPeripheral communicationSpeaker;
+    /**
+     * The contentCamera property
+     */
+    private TeamworkPeripheral contentCamera;
+    /**
+     * The microphone property
+     */
+    private TeamworkPeripheral microphone;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The roomCamera property
+     */
+    private TeamworkPeripheral roomCamera;
+    /**
+     * The speaker property
+     */
+    private TeamworkPeripheral speaker;
     /**
      * Instantiates a new teamworkActivePeripherals and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkActivePeripherals() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkActivePeripherals");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +60,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the communicationSpeaker property value. The communicationSpeaker property
@@ -55,7 +68,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public TeamworkPeripheral getCommunicationSpeaker() {
-        return this._communicationSpeaker;
+        return this.communicationSpeaker;
     }
     /**
      * Gets the contentCamera property value. The contentCamera property
@@ -63,23 +76,22 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public TeamworkPeripheral getContentCamera() {
-        return this._contentCamera;
+        return this.contentCamera;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkActivePeripherals currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("communicationSpeaker", (n) -> { currentObject.setCommunicationSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("contentCamera", (n) -> { currentObject.setContentCamera(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("microphone", (n) -> { currentObject.setMicrophone(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("roomCamera", (n) -> { currentObject.setRoomCamera(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("speaker", (n) -> { currentObject.setSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("communicationSpeaker", (n) -> { this.setCommunicationSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentCamera", (n) -> { this.setContentCamera(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("microphone", (n) -> { this.setMicrophone(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("roomCamera", (n) -> { this.setRoomCamera(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("speaker", (n) -> { this.setSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the microphone property value. The microphone property
@@ -87,7 +99,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public TeamworkPeripheral getMicrophone() {
-        return this._microphone;
+        return this.microphone;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -95,7 +107,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the roomCamera property value. The roomCamera property
@@ -103,7 +115,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public TeamworkPeripheral getRoomCamera() {
-        return this._roomCamera;
+        return this.roomCamera;
     }
     /**
      * Gets the speaker property value. The speaker property
@@ -111,13 +123,14 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public TeamworkPeripheral getSpeaker() {
-        return this._speaker;
+        return this.speaker;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("communicationSpeaker", this.getCommunicationSpeaker());
@@ -133,55 +146,62 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the communicationSpeaker property value. The communicationSpeaker property
      * @param value Value to set for the communicationSpeaker property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCommunicationSpeaker(@javax.annotation.Nullable final TeamworkPeripheral value) {
-        this._communicationSpeaker = value;
+        this.communicationSpeaker = value;
     }
     /**
      * Sets the contentCamera property value. The contentCamera property
      * @param value Value to set for the contentCamera property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCamera(@javax.annotation.Nullable final TeamworkPeripheral value) {
-        this._contentCamera = value;
+        this.contentCamera = value;
     }
     /**
      * Sets the microphone property value. The microphone property
      * @param value Value to set for the microphone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrophone(@javax.annotation.Nullable final TeamworkPeripheral value) {
-        this._microphone = value;
+        this.microphone = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the roomCamera property value. The roomCamera property
      * @param value Value to set for the roomCamera property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoomCamera(@javax.annotation.Nullable final TeamworkPeripheral value) {
-        this._roomCamera = value;
+        this.roomCamera = value;
     }
     /**
      * Sets the speaker property value. The speaker property
      * @param value Value to set for the speaker property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpeaker(@javax.annotation.Nullable final TeamworkPeripheral value) {
-        this._speaker = value;
+        this.speaker = value;
     }
 }

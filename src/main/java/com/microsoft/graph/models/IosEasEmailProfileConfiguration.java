@@ -3,69 +3,126 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * By providing configurations in this profile you can instruct the native email client on iOS devices to communicate with an Exchange server and get email, contacts, calendar, reminders, and notes. Furthermore, you can also specify how much email to sync and how often the device should sync.
+ */
 public class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase implements Parsable {
-    /** Account name. */
-    private String _accountName;
-    /** Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential. */
-    private EasAuthenticationMethod _authenticationMethod;
-    /** Indicates whether or not to block moving messages to other email accounts. */
-    private Boolean _blockMovingMessagesToOtherEmailAccounts;
-    /** Indicates whether or not to block sending email from third party apps. */
-    private Boolean _blockSendingEmailFromThirdPartyApps;
-    /** Indicates whether or not to block syncing recently used email addresses, for instance - when composing new email. */
-    private Boolean _blockSyncingRecentlyUsedEmailAddresses;
-    /** Tenant level settings for the Derived Credentials to be used for authentication. */
-    private DeviceManagementDerivedCredentialSettings _derivedCredentialSettings;
-    /** Possible values for email sync duration. */
-    private EmailSyncDuration _durationOfEmailToSync;
-    /** Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders. */
-    private EasServices _easServices;
-    /** Allow users to change sync settings. */
-    private Boolean _easServicesUserOverrideEnabled;
-    /** Possible values for username source or email source. */
-    private UserEmailSource _emailAddressSource;
-    /** Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential. */
-    private EmailCertificateType _encryptionCertificateType;
-    /** Exchange location that (URL) that the native mail app connects to. */
-    private String _hostName;
-    /** Identity certificate. */
-    private IosCertificateProfileBase _identityCertificate;
-    /** Profile ID of the Per-App VPN policy to be used to access emails from the native Mail client */
-    private String _perAppVPNProfileId;
-    /** Indicates whether or not to use S/MIME certificate. */
-    private Boolean _requireSmime;
-    /** Indicates whether or not to use SSL. */
-    private Boolean _requireSsl;
-    /** Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential. */
-    private EmailCertificateType _signingCertificateType;
-    /** Indicates whether or not to allow unencrypted emails. */
-    private Boolean _smimeEnablePerMessageSwitch;
-    /** If set to true S/MIME encryption is enabled by default. */
-    private Boolean _smimeEncryptByDefaultEnabled;
-    /** If set to true, the user can toggle the encryption by default setting. */
-    private Boolean _smimeEncryptByDefaultUserOverrideEnabled;
-    /** S/MIME encryption certificate. */
-    private IosCertificateProfile _smimeEncryptionCertificate;
-    /** If set to true the user can select the S/MIME encryption identity. */
-    private Boolean _smimeEncryptionCertificateUserOverrideEnabled;
-    /** S/MIME signing certificate. */
-    private IosCertificateProfile _smimeSigningCertificate;
-    /** If set to true, the user can select the signing identity. */
-    private Boolean _smimeSigningCertificateUserOverrideEnabled;
-    /** If set to true S/MIME signing is enabled for this account */
-    private Boolean _smimeSigningEnabled;
-    /** If set to true, the user can toggle S/MIME signing on or off. */
-    private Boolean _smimeSigningUserOverrideEnabled;
-    /** Specifies whether the connection should use OAuth for authentication. */
-    private Boolean _useOAuth;
     /**
-     * Instantiates a new IosEasEmailProfileConfiguration and sets the default values.
+     * Account name.
+     */
+    private String accountName;
+    /**
+     * Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
+     */
+    private EasAuthenticationMethod authenticationMethod;
+    /**
+     * Indicates whether or not to block moving messages to other email accounts.
+     */
+    private Boolean blockMovingMessagesToOtherEmailAccounts;
+    /**
+     * Indicates whether or not to block sending email from third party apps.
+     */
+    private Boolean blockSendingEmailFromThirdPartyApps;
+    /**
+     * Indicates whether or not to block syncing recently used email addresses, for instance - when composing new email.
+     */
+    private Boolean blockSyncingRecentlyUsedEmailAddresses;
+    /**
+     * Tenant level settings for the Derived Credentials to be used for authentication.
+     */
+    private DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
+    /**
+     * Possible values for email sync duration.
+     */
+    private EmailSyncDuration durationOfEmailToSync;
+    /**
+     * Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
+     */
+    private EasServices easServices;
+    /**
+     * Allow users to change sync settings.
+     */
+    private Boolean easServicesUserOverrideEnabled;
+    /**
+     * Possible values for username source or email source.
+     */
+    private UserEmailSource emailAddressSource;
+    /**
+     * Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+     */
+    private EmailCertificateType encryptionCertificateType;
+    /**
+     * Exchange location that (URL) that the native mail app connects to.
+     */
+    private String hostName;
+    /**
+     * Identity certificate.
+     */
+    private IosCertificateProfileBase identityCertificate;
+    /**
+     * Profile ID of the Per-App VPN policy to be used to access emails from the native Mail client
+     */
+    private String perAppVPNProfileId;
+    /**
+     * Indicates whether or not to use S/MIME certificate.
+     */
+    private Boolean requireSmime;
+    /**
+     * Indicates whether or not to use SSL.
+     */
+    private Boolean requireSsl;
+    /**
+     * Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+     */
+    private EmailCertificateType signingCertificateType;
+    /**
+     * Indicates whether or not to allow unencrypted emails.
+     */
+    private Boolean smimeEnablePerMessageSwitch;
+    /**
+     * If set to true S/MIME encryption is enabled by default.
+     */
+    private Boolean smimeEncryptByDefaultEnabled;
+    /**
+     * If set to true, the user can toggle the encryption by default setting.
+     */
+    private Boolean smimeEncryptByDefaultUserOverrideEnabled;
+    /**
+     * S/MIME encryption certificate.
+     */
+    private IosCertificateProfile smimeEncryptionCertificate;
+    /**
+     * If set to true the user can select the S/MIME encryption identity.
+     */
+    private Boolean smimeEncryptionCertificateUserOverrideEnabled;
+    /**
+     * S/MIME signing certificate.
+     */
+    private IosCertificateProfile smimeSigningCertificate;
+    /**
+     * If set to true, the user can select the signing identity.
+     */
+    private Boolean smimeSigningCertificateUserOverrideEnabled;
+    /**
+     * If set to true S/MIME signing is enabled for this account
+     */
+    private Boolean smimeSigningEnabled;
+    /**
+     * If set to true, the user can toggle S/MIME signing on or off.
+     */
+    private Boolean smimeSigningUserOverrideEnabled;
+    /**
+     * Specifies whether the connection should use OAuth for authentication.
+     */
+    private Boolean useOAuth;
+    /**
+     * Instantiates a new iosEasEmailProfileConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosEasEmailProfileConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosEasEmailProfileConfiguration");
@@ -73,7 +130,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosEasEmailProfileConfiguration
+     * @return a iosEasEmailProfileConfiguration
      */
     @javax.annotation.Nonnull
     public static IosEasEmailProfileConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -86,7 +143,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public String getAccountName() {
-        return this._accountName;
+        return this.accountName;
     }
     /**
      * Gets the authenticationMethod property value. Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
@@ -94,7 +151,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public EasAuthenticationMethod getAuthenticationMethod() {
-        return this._authenticationMethod;
+        return this.authenticationMethod;
     }
     /**
      * Gets the blockMovingMessagesToOtherEmailAccounts property value. Indicates whether or not to block moving messages to other email accounts.
@@ -102,7 +159,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getBlockMovingMessagesToOtherEmailAccounts() {
-        return this._blockMovingMessagesToOtherEmailAccounts;
+        return this.blockMovingMessagesToOtherEmailAccounts;
     }
     /**
      * Gets the blockSendingEmailFromThirdPartyApps property value. Indicates whether or not to block sending email from third party apps.
@@ -110,7 +167,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getBlockSendingEmailFromThirdPartyApps() {
-        return this._blockSendingEmailFromThirdPartyApps;
+        return this.blockSendingEmailFromThirdPartyApps;
     }
     /**
      * Gets the blockSyncingRecentlyUsedEmailAddresses property value. Indicates whether or not to block syncing recently used email addresses, for instance - when composing new email.
@@ -118,7 +175,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getBlockSyncingRecentlyUsedEmailAddresses() {
-        return this._blockSyncingRecentlyUsedEmailAddresses;
+        return this.blockSyncingRecentlyUsedEmailAddresses;
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
@@ -126,7 +183,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
-        return this._derivedCredentialSettings;
+        return this.derivedCredentialSettings;
     }
     /**
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
@@ -134,7 +191,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
-        return this._durationOfEmailToSync;
+        return this.durationOfEmailToSync;
     }
     /**
      * Gets the easServices property value. Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
@@ -142,7 +199,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public EasServices getEasServices() {
-        return this._easServices;
+        return this.easServices;
     }
     /**
      * Gets the easServicesUserOverrideEnabled property value. Allow users to change sync settings.
@@ -150,7 +207,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getEasServicesUserOverrideEnabled() {
-        return this._easServicesUserOverrideEnabled;
+        return this.easServicesUserOverrideEnabled;
     }
     /**
      * Gets the emailAddressSource property value. Possible values for username source or email source.
@@ -158,7 +215,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
-        return this._emailAddressSource;
+        return this.emailAddressSource;
     }
     /**
      * Gets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
@@ -166,44 +223,43 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public EmailCertificateType getEncryptionCertificateType() {
-        return this._encryptionCertificateType;
+        return this.encryptionCertificateType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosEasEmailProfileConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod.class)); });
-            this.put("blockMovingMessagesToOtherEmailAccounts", (n) -> { currentObject.setBlockMovingMessagesToOtherEmailAccounts(n.getBooleanValue()); });
-            this.put("blockSendingEmailFromThirdPartyApps", (n) -> { currentObject.setBlockSendingEmailFromThirdPartyApps(n.getBooleanValue()); });
-            this.put("blockSyncingRecentlyUsedEmailAddresses", (n) -> { currentObject.setBlockSyncingRecentlyUsedEmailAddresses(n.getBooleanValue()); });
-            this.put("derivedCredentialSettings", (n) -> { currentObject.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
-            this.put("durationOfEmailToSync", (n) -> { currentObject.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
-            this.put("easServices", (n) -> { currentObject.setEasServices(n.getEnumValue(EasServices.class)); });
-            this.put("easServicesUserOverrideEnabled", (n) -> { currentObject.setEasServicesUserOverrideEnabled(n.getBooleanValue()); });
-            this.put("emailAddressSource", (n) -> { currentObject.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
-            this.put("encryptionCertificateType", (n) -> { currentObject.setEncryptionCertificateType(n.getEnumValue(EmailCertificateType.class)); });
-            this.put("hostName", (n) -> { currentObject.setHostName(n.getStringValue()); });
-            this.put("identityCertificate", (n) -> { currentObject.setIdentityCertificate(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("perAppVPNProfileId", (n) -> { currentObject.setPerAppVPNProfileId(n.getStringValue()); });
-            this.put("requireSmime", (n) -> { currentObject.setRequireSmime(n.getBooleanValue()); });
-            this.put("requireSsl", (n) -> { currentObject.setRequireSsl(n.getBooleanValue()); });
-            this.put("signingCertificateType", (n) -> { currentObject.setSigningCertificateType(n.getEnumValue(EmailCertificateType.class)); });
-            this.put("smimeEnablePerMessageSwitch", (n) -> { currentObject.setSmimeEnablePerMessageSwitch(n.getBooleanValue()); });
-            this.put("smimeEncryptByDefaultEnabled", (n) -> { currentObject.setSmimeEncryptByDefaultEnabled(n.getBooleanValue()); });
-            this.put("smimeEncryptByDefaultUserOverrideEnabled", (n) -> { currentObject.setSmimeEncryptByDefaultUserOverrideEnabled(n.getBooleanValue()); });
-            this.put("smimeEncryptionCertificate", (n) -> { currentObject.setSmimeEncryptionCertificate(n.getObjectValue(IosCertificateProfile::createFromDiscriminatorValue)); });
-            this.put("smimeEncryptionCertificateUserOverrideEnabled", (n) -> { currentObject.setSmimeEncryptionCertificateUserOverrideEnabled(n.getBooleanValue()); });
-            this.put("smimeSigningCertificate", (n) -> { currentObject.setSmimeSigningCertificate(n.getObjectValue(IosCertificateProfile::createFromDiscriminatorValue)); });
-            this.put("smimeSigningCertificateUserOverrideEnabled", (n) -> { currentObject.setSmimeSigningCertificateUserOverrideEnabled(n.getBooleanValue()); });
-            this.put("smimeSigningEnabled", (n) -> { currentObject.setSmimeSigningEnabled(n.getBooleanValue()); });
-            this.put("smimeSigningUserOverrideEnabled", (n) -> { currentObject.setSmimeSigningUserOverrideEnabled(n.getBooleanValue()); });
-            this.put("useOAuth", (n) -> { currentObject.setUseOAuth(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod.class)); });
+        deserializerMap.put("blockMovingMessagesToOtherEmailAccounts", (n) -> { this.setBlockMovingMessagesToOtherEmailAccounts(n.getBooleanValue()); });
+        deserializerMap.put("blockSendingEmailFromThirdPartyApps", (n) -> { this.setBlockSendingEmailFromThirdPartyApps(n.getBooleanValue()); });
+        deserializerMap.put("blockSyncingRecentlyUsedEmailAddresses", (n) -> { this.setBlockSyncingRecentlyUsedEmailAddresses(n.getBooleanValue()); });
+        deserializerMap.put("derivedCredentialSettings", (n) -> { this.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("durationOfEmailToSync", (n) -> { this.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
+        deserializerMap.put("easServices", (n) -> { this.setEasServices(n.getEnumValue(EasServices.class)); });
+        deserializerMap.put("easServicesUserOverrideEnabled", (n) -> { this.setEasServicesUserOverrideEnabled(n.getBooleanValue()); });
+        deserializerMap.put("emailAddressSource", (n) -> { this.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
+        deserializerMap.put("encryptionCertificateType", (n) -> { this.setEncryptionCertificateType(n.getEnumValue(EmailCertificateType.class)); });
+        deserializerMap.put("hostName", (n) -> { this.setHostName(n.getStringValue()); });
+        deserializerMap.put("identityCertificate", (n) -> { this.setIdentityCertificate(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("perAppVPNProfileId", (n) -> { this.setPerAppVPNProfileId(n.getStringValue()); });
+        deserializerMap.put("requireSmime", (n) -> { this.setRequireSmime(n.getBooleanValue()); });
+        deserializerMap.put("requireSsl", (n) -> { this.setRequireSsl(n.getBooleanValue()); });
+        deserializerMap.put("signingCertificateType", (n) -> { this.setSigningCertificateType(n.getEnumValue(EmailCertificateType.class)); });
+        deserializerMap.put("smimeEnablePerMessageSwitch", (n) -> { this.setSmimeEnablePerMessageSwitch(n.getBooleanValue()); });
+        deserializerMap.put("smimeEncryptByDefaultEnabled", (n) -> { this.setSmimeEncryptByDefaultEnabled(n.getBooleanValue()); });
+        deserializerMap.put("smimeEncryptByDefaultUserOverrideEnabled", (n) -> { this.setSmimeEncryptByDefaultUserOverrideEnabled(n.getBooleanValue()); });
+        deserializerMap.put("smimeEncryptionCertificate", (n) -> { this.setSmimeEncryptionCertificate(n.getObjectValue(IosCertificateProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("smimeEncryptionCertificateUserOverrideEnabled", (n) -> { this.setSmimeEncryptionCertificateUserOverrideEnabled(n.getBooleanValue()); });
+        deserializerMap.put("smimeSigningCertificate", (n) -> { this.setSmimeSigningCertificate(n.getObjectValue(IosCertificateProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("smimeSigningCertificateUserOverrideEnabled", (n) -> { this.setSmimeSigningCertificateUserOverrideEnabled(n.getBooleanValue()); });
+        deserializerMap.put("smimeSigningEnabled", (n) -> { this.setSmimeSigningEnabled(n.getBooleanValue()); });
+        deserializerMap.put("smimeSigningUserOverrideEnabled", (n) -> { this.setSmimeSigningUserOverrideEnabled(n.getBooleanValue()); });
+        deserializerMap.put("useOAuth", (n) -> { this.setUseOAuth(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hostName property value. Exchange location that (URL) that the native mail app connects to.
@@ -211,7 +267,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public String getHostName() {
-        return this._hostName;
+        return this.hostName;
     }
     /**
      * Gets the identityCertificate property value. Identity certificate.
@@ -219,7 +275,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public IosCertificateProfileBase getIdentityCertificate() {
-        return this._identityCertificate;
+        return this.identityCertificate;
     }
     /**
      * Gets the perAppVPNProfileId property value. Profile ID of the Per-App VPN policy to be used to access emails from the native Mail client
@@ -227,7 +283,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public String getPerAppVPNProfileId() {
-        return this._perAppVPNProfileId;
+        return this.perAppVPNProfileId;
     }
     /**
      * Gets the requireSmime property value. Indicates whether or not to use S/MIME certificate.
@@ -235,7 +291,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getRequireSmime() {
-        return this._requireSmime;
+        return this.requireSmime;
     }
     /**
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
@@ -243,7 +299,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getRequireSsl() {
-        return this._requireSsl;
+        return this.requireSsl;
     }
     /**
      * Gets the signingCertificateType property value. Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
@@ -251,7 +307,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public EmailCertificateType getSigningCertificateType() {
-        return this._signingCertificateType;
+        return this.signingCertificateType;
     }
     /**
      * Gets the smimeEnablePerMessageSwitch property value. Indicates whether or not to allow unencrypted emails.
@@ -259,7 +315,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getSmimeEnablePerMessageSwitch() {
-        return this._smimeEnablePerMessageSwitch;
+        return this.smimeEnablePerMessageSwitch;
     }
     /**
      * Gets the smimeEncryptByDefaultEnabled property value. If set to true S/MIME encryption is enabled by default.
@@ -267,7 +323,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getSmimeEncryptByDefaultEnabled() {
-        return this._smimeEncryptByDefaultEnabled;
+        return this.smimeEncryptByDefaultEnabled;
     }
     /**
      * Gets the smimeEncryptByDefaultUserOverrideEnabled property value. If set to true, the user can toggle the encryption by default setting.
@@ -275,7 +331,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getSmimeEncryptByDefaultUserOverrideEnabled() {
-        return this._smimeEncryptByDefaultUserOverrideEnabled;
+        return this.smimeEncryptByDefaultUserOverrideEnabled;
     }
     /**
      * Gets the smimeEncryptionCertificate property value. S/MIME encryption certificate.
@@ -283,7 +339,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public IosCertificateProfile getSmimeEncryptionCertificate() {
-        return this._smimeEncryptionCertificate;
+        return this.smimeEncryptionCertificate;
     }
     /**
      * Gets the smimeEncryptionCertificateUserOverrideEnabled property value. If set to true the user can select the S/MIME encryption identity.
@@ -291,7 +347,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getSmimeEncryptionCertificateUserOverrideEnabled() {
-        return this._smimeEncryptionCertificateUserOverrideEnabled;
+        return this.smimeEncryptionCertificateUserOverrideEnabled;
     }
     /**
      * Gets the smimeSigningCertificate property value. S/MIME signing certificate.
@@ -299,7 +355,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public IosCertificateProfile getSmimeSigningCertificate() {
-        return this._smimeSigningCertificate;
+        return this.smimeSigningCertificate;
     }
     /**
      * Gets the smimeSigningCertificateUserOverrideEnabled property value. If set to true, the user can select the signing identity.
@@ -307,7 +363,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getSmimeSigningCertificateUserOverrideEnabled() {
-        return this._smimeSigningCertificateUserOverrideEnabled;
+        return this.smimeSigningCertificateUserOverrideEnabled;
     }
     /**
      * Gets the smimeSigningEnabled property value. If set to true S/MIME signing is enabled for this account
@@ -315,7 +371,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getSmimeSigningEnabled() {
-        return this._smimeSigningEnabled;
+        return this.smimeSigningEnabled;
     }
     /**
      * Gets the smimeSigningUserOverrideEnabled property value. If set to true, the user can toggle S/MIME signing on or off.
@@ -323,7 +379,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getSmimeSigningUserOverrideEnabled() {
-        return this._smimeSigningUserOverrideEnabled;
+        return this.smimeSigningUserOverrideEnabled;
     }
     /**
      * Gets the useOAuth property value. Specifies whether the connection should use OAuth for authentication.
@@ -331,13 +387,14 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nullable
     public Boolean getUseOAuth() {
-        return this._useOAuth;
+        return this.useOAuth;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -374,215 +431,242 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the accountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountName(@javax.annotation.Nullable final String value) {
-        this._accountName = value;
+        this.accountName = value;
     }
     /**
      * Sets the authenticationMethod property value. Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final EasAuthenticationMethod value) {
-        this._authenticationMethod = value;
+        this.authenticationMethod = value;
     }
     /**
      * Sets the blockMovingMessagesToOtherEmailAccounts property value. Indicates whether or not to block moving messages to other email accounts.
      * @param value Value to set for the blockMovingMessagesToOtherEmailAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockMovingMessagesToOtherEmailAccounts(@javax.annotation.Nullable final Boolean value) {
-        this._blockMovingMessagesToOtherEmailAccounts = value;
+        this.blockMovingMessagesToOtherEmailAccounts = value;
     }
     /**
      * Sets the blockSendingEmailFromThirdPartyApps property value. Indicates whether or not to block sending email from third party apps.
      * @param value Value to set for the blockSendingEmailFromThirdPartyApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockSendingEmailFromThirdPartyApps(@javax.annotation.Nullable final Boolean value) {
-        this._blockSendingEmailFromThirdPartyApps = value;
+        this.blockSendingEmailFromThirdPartyApps = value;
     }
     /**
      * Sets the blockSyncingRecentlyUsedEmailAddresses property value. Indicates whether or not to block syncing recently used email addresses, for instance - when composing new email.
      * @param value Value to set for the blockSyncingRecentlyUsedEmailAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockSyncingRecentlyUsedEmailAddresses(@javax.annotation.Nullable final Boolean value) {
-        this._blockSyncingRecentlyUsedEmailAddresses = value;
+        this.blockSyncingRecentlyUsedEmailAddresses = value;
     }
     /**
      * Sets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
-        this._derivedCredentialSettings = value;
+        this.derivedCredentialSettings = value;
     }
     /**
      * Sets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationOfEmailToSync(@javax.annotation.Nullable final EmailSyncDuration value) {
-        this._durationOfEmailToSync = value;
+        this.durationOfEmailToSync = value;
     }
     /**
      * Sets the easServices property value. Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
      * @param value Value to set for the easServices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEasServices(@javax.annotation.Nullable final EasServices value) {
-        this._easServices = value;
+        this.easServices = value;
     }
     /**
      * Sets the easServicesUserOverrideEnabled property value. Allow users to change sync settings.
      * @param value Value to set for the easServicesUserOverrideEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEasServicesUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._easServicesUserOverrideEnabled = value;
+        this.easServicesUserOverrideEnabled = value;
     }
     /**
      * Sets the emailAddressSource property value. Possible values for username source or email source.
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddressSource(@javax.annotation.Nullable final UserEmailSource value) {
-        this._emailAddressSource = value;
+        this.emailAddressSource = value;
     }
     /**
      * Sets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
      * @param value Value to set for the encryptionCertificateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionCertificateType(@javax.annotation.Nullable final EmailCertificateType value) {
-        this._encryptionCertificateType = value;
+        this.encryptionCertificateType = value;
     }
     /**
      * Sets the hostName property value. Exchange location that (URL) that the native mail app connects to.
      * @param value Value to set for the hostName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostName(@javax.annotation.Nullable final String value) {
-        this._hostName = value;
+        this.hostName = value;
     }
     /**
      * Sets the identityCertificate property value. Identity certificate.
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final IosCertificateProfileBase value) {
-        this._identityCertificate = value;
+        this.identityCertificate = value;
     }
     /**
      * Sets the perAppVPNProfileId property value. Profile ID of the Per-App VPN policy to be used to access emails from the native Mail client
      * @param value Value to set for the perAppVPNProfileId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPerAppVPNProfileId(@javax.annotation.Nullable final String value) {
-        this._perAppVPNProfileId = value;
+        this.perAppVPNProfileId = value;
     }
     /**
      * Sets the requireSmime property value. Indicates whether or not to use S/MIME certificate.
      * @param value Value to set for the requireSmime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireSmime(@javax.annotation.Nullable final Boolean value) {
-        this._requireSmime = value;
+        this.requireSmime = value;
     }
     /**
      * Sets the requireSsl property value. Indicates whether or not to use SSL.
      * @param value Value to set for the requireSsl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireSsl(@javax.annotation.Nullable final Boolean value) {
-        this._requireSsl = value;
+        this.requireSsl = value;
     }
     /**
      * Sets the signingCertificateType property value. Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
      * @param value Value to set for the signingCertificateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSigningCertificateType(@javax.annotation.Nullable final EmailCertificateType value) {
-        this._signingCertificateType = value;
+        this.signingCertificateType = value;
     }
     /**
      * Sets the smimeEnablePerMessageSwitch property value. Indicates whether or not to allow unencrypted emails.
      * @param value Value to set for the smimeEnablePerMessageSwitch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeEnablePerMessageSwitch(@javax.annotation.Nullable final Boolean value) {
-        this._smimeEnablePerMessageSwitch = value;
+        this.smimeEnablePerMessageSwitch = value;
     }
     /**
      * Sets the smimeEncryptByDefaultEnabled property value. If set to true S/MIME encryption is enabled by default.
      * @param value Value to set for the smimeEncryptByDefaultEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeEncryptByDefaultEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._smimeEncryptByDefaultEnabled = value;
+        this.smimeEncryptByDefaultEnabled = value;
     }
     /**
      * Sets the smimeEncryptByDefaultUserOverrideEnabled property value. If set to true, the user can toggle the encryption by default setting.
      * @param value Value to set for the smimeEncryptByDefaultUserOverrideEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeEncryptByDefaultUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._smimeEncryptByDefaultUserOverrideEnabled = value;
+        this.smimeEncryptByDefaultUserOverrideEnabled = value;
     }
     /**
      * Sets the smimeEncryptionCertificate property value. S/MIME encryption certificate.
      * @param value Value to set for the smimeEncryptionCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeEncryptionCertificate(@javax.annotation.Nullable final IosCertificateProfile value) {
-        this._smimeEncryptionCertificate = value;
+        this.smimeEncryptionCertificate = value;
     }
     /**
      * Sets the smimeEncryptionCertificateUserOverrideEnabled property value. If set to true the user can select the S/MIME encryption identity.
      * @param value Value to set for the smimeEncryptionCertificateUserOverrideEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeEncryptionCertificateUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._smimeEncryptionCertificateUserOverrideEnabled = value;
+        this.smimeEncryptionCertificateUserOverrideEnabled = value;
     }
     /**
      * Sets the smimeSigningCertificate property value. S/MIME signing certificate.
      * @param value Value to set for the smimeSigningCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeSigningCertificate(@javax.annotation.Nullable final IosCertificateProfile value) {
-        this._smimeSigningCertificate = value;
+        this.smimeSigningCertificate = value;
     }
     /**
      * Sets the smimeSigningCertificateUserOverrideEnabled property value. If set to true, the user can select the signing identity.
      * @param value Value to set for the smimeSigningCertificateUserOverrideEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeSigningCertificateUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._smimeSigningCertificateUserOverrideEnabled = value;
+        this.smimeSigningCertificateUserOverrideEnabled = value;
     }
     /**
      * Sets the smimeSigningEnabled property value. If set to true S/MIME signing is enabled for this account
      * @param value Value to set for the smimeSigningEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeSigningEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._smimeSigningEnabled = value;
+        this.smimeSigningEnabled = value;
     }
     /**
      * Sets the smimeSigningUserOverrideEnabled property value. If set to true, the user can toggle S/MIME signing on or off.
      * @param value Value to set for the smimeSigningUserOverrideEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeSigningUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._smimeSigningUserOverrideEnabled = value;
+        this.smimeSigningUserOverrideEnabled = value;
     }
     /**
      * Sets the useOAuth property value. Specifies whether the connection should use OAuth for authentication.
      * @param value Value to set for the useOAuth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseOAuth(@javax.annotation.Nullable final Boolean value) {
-        this._useOAuth = value;
+        this.useOAuth = value;
     }
 }

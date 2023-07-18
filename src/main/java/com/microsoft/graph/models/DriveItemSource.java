@@ -4,26 +4,33 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DriveItemSource implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Enumeration value that indicates the source application where the file was created. */
-    private DriveItemSourceApplication _application;
-    /** The external identifier for the drive item from the source. */
-    private String _externalId;
-    /** The OdataType property */
-    private String _odataType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Enumeration value that indicates the source application where the file was created.
+     */
+    private DriveItemSourceApplication application;
+    /**
+     * The external identifier for the drive item from the source.
+     */
+    private String externalId;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
     /**
      * Instantiates a new driveItemSource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DriveItemSource() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.driveItemSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +48,7 @@ public class DriveItemSource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the application property value. Enumeration value that indicates the source application where the file was created.
@@ -49,7 +56,7 @@ public class DriveItemSource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public DriveItemSourceApplication getApplication() {
-        return this._application;
+        return this.application;
     }
     /**
      * Gets the externalId property value. The external identifier for the drive item from the source.
@@ -57,20 +64,19 @@ public class DriveItemSource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalId() {
-        return this._externalId;
+        return this.externalId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DriveItemSource currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("application", (n) -> { currentObject.setApplication(n.getEnumValue(DriveItemSourceApplication.class)); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("application", (n) -> { this.setApplication(n.getEnumValue(DriveItemSourceApplication.class)); });
+        deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -78,13 +84,14 @@ public class DriveItemSource implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("application", this.getApplication());
@@ -97,31 +104,35 @@ public class DriveItemSource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the application property value. Enumeration value that indicates the source application where the file was created.
      * @param value Value to set for the application property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplication(@javax.annotation.Nullable final DriveItemSourceApplication value) {
-        this._application = value;
+        this.application = value;
     }
     /**
      * Sets the externalId property value. The external identifier for the drive item from the source.
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
-        this._externalId = value;
+        this.externalId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

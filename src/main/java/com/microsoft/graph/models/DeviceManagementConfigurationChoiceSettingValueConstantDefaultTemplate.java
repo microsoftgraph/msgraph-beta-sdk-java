@@ -3,19 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Choice Setting Value Constant Default Template
+ */
 public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate extends DeviceManagementConfigurationChoiceSettingValueDefaultTemplate implements Parsable {
-    /** Option Children */
-    private java.util.List<DeviceManagementConfigurationSettingInstanceTemplate> _children;
-    /** Default Constant Value */
-    private String _settingDefinitionOptionId;
     /**
-     * Instantiates a new DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate and sets the default values.
+     * Option Children
+     */
+    private java.util.List<DeviceManagementConfigurationSettingInstanceTemplate> children;
+    /**
+     * Default Constant Value
+     */
+    private String settingDefinitionOptionId;
+    /**
+     * Instantiates a new deviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate");
@@ -23,7 +30,7 @@ public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTempl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate
+     * @return a deviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate
      */
     @javax.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,19 +43,18 @@ public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTempl
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingInstanceTemplate> getChildren() {
-        return this._children;
+        return this.children;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstanceTemplate::createFromDiscriminatorValue)); });
-            this.put("settingDefinitionOptionId", (n) -> { currentObject.setSettingDefinitionOptionId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstanceTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("settingDefinitionOptionId", (n) -> { this.setSettingDefinitionOptionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the settingDefinitionOptionId property value. Default Constant Value
@@ -56,13 +62,14 @@ public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTempl
      */
     @javax.annotation.Nullable
     public String getSettingDefinitionOptionId() {
-        return this._settingDefinitionOptionId;
+        return this.settingDefinitionOptionId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +81,17 @@ public class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTempl
      * @param value Value to set for the children property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildren(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingInstanceTemplate> value) {
-        this._children = value;
+        this.children = value;
     }
     /**
      * Sets the settingDefinitionOptionId property value. Default Constant Value
      * @param value Value to set for the settingDefinitionOptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingDefinitionOptionId(@javax.annotation.Nullable final String value) {
-        this._settingDefinitionOptionId = value;
+        this.settingDefinitionOptionId = value;
     }
 }

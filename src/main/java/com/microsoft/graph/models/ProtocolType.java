@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum ProtocolType implements ValuedEnum {
     None("none"),
     OAuth2("oAuth2"),
@@ -11,7 +10,8 @@ public enum ProtocolType implements ValuedEnum {
     WsFederation("wsFederation"),
     Saml20("saml20"),
     DeviceCode("deviceCode"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    AuthenticationTransfer("authenticationTransfer");
     public final String value;
     ProtocolType(final String value) {
         this.value = value;
@@ -29,6 +29,7 @@ public enum ProtocolType implements ValuedEnum {
             case "saml20": return Saml20;
             case "deviceCode": return DeviceCode;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "authenticationTransfer": return AuthenticationTransfer;
             default: return null;
         }
     }

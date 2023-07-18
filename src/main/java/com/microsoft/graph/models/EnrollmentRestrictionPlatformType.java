@@ -3,22 +3,28 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * This enum indicates the platform type for which the enrollment restriction applies.
+ */
 public enum EnrollmentRestrictionPlatformType implements ValuedEnum {
-    /** Applies to all platforms */
+    /** Indicates that the enrollment configuration applies to all platforms */
     AllPlatforms("allPlatforms"),
-    /** iOS/iPadOS devices */
+    /** Indicates that the enrollment configuration applies only to iOS/iPadOS devices */
     Ios("ios"),
-    /** Windows devices */
+    /** Indicates that the enrollment configuration applies only to Windows devices */
     Windows("windows"),
-    /** Windows Phone devices */
+    /** Indicates that the enrollment configuration applies only to Windows Phone devices */
     WindowsPhone("windowsPhone"),
-    /** Android devices */
+    /** Indicates that the enrollment configuration applies only to Android devices */
     Android("android"),
-    /** Android for Work devices */
+    /** Indicates that the enrollment configuration applies only to Android for Work devices */
     AndroidForWork("androidForWork"),
-    /** macOS devices */
-    Mac("mac");
+    /** Indicates that the enrollment configuration applies only to macOS devices */
+    Mac("mac"),
+    /** Indicates that the enrollment configuration applies only to Linux devices */
+    Linux("linux"),
+    /** Evolvable enumeration sentinel value. Do not use */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     EnrollmentRestrictionPlatformType(final String value) {
         this.value = value;
@@ -36,6 +42,8 @@ public enum EnrollmentRestrictionPlatformType implements ValuedEnum {
             case "android": return Android;
             case "androidForWork": return AndroidForWork;
             case "mac": return Mac;
+            case "linux": return Linux;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

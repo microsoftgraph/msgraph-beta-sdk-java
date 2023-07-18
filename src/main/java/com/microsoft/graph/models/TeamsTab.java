@@ -3,33 +3,45 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class TeamsTab extends Entity implements Parsable {
-    /** Container for custom settings applied to a tab. The tab is considered configured only once this property is set. */
-    private TeamsTabConfiguration _configuration;
-    /** Name of the tab. */
-    private String _displayName;
-    /** The messageId property */
-    private String _messageId;
-    /** Index of the order used for sorting tabs. */
-    private String _sortOrderIndex;
-    /** The application that is linked to the tab. */
-    private TeamsApp _teamsApp;
-    /** The teamsAppId property */
-    private String _teamsAppId;
-    /** Deep link URL of the tab instance. Read only. */
-    private String _webUrl;
+    /**
+     * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
+     */
+    private TeamsTabConfiguration configuration;
+    /**
+     * Name of the tab.
+     */
+    private String displayName;
+    /**
+     * The messageId property
+     */
+    private String messageId;
+    /**
+     * Index of the order used for sorting tabs.
+     */
+    private String sortOrderIndex;
+    /**
+     * The application that is linked to the tab.
+     */
+    private TeamsApp teamsApp;
+    /**
+     * The teamsAppId property
+     */
+    private String teamsAppId;
+    /**
+     * Deep link URL of the tab instance. Read only.
+     */
+    private String webUrl;
     /**
      * Instantiates a new teamsTab and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsTab() {
         super();
-        this.setOdataType("#microsoft.graph.teamsTab");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +59,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamsTabConfiguration getConfiguration() {
-        return this._configuration;
+        return this.configuration;
     }
     /**
      * Gets the displayName property value. Name of the tab.
@@ -55,24 +67,23 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamsTab currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("configuration", (n) -> { currentObject.setConfiguration(n.getObjectValue(TeamsTabConfiguration::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("messageId", (n) -> { currentObject.setMessageId(n.getStringValue()); });
-            this.put("sortOrderIndex", (n) -> { currentObject.setSortOrderIndex(n.getStringValue()); });
-            this.put("teamsApp", (n) -> { currentObject.setTeamsApp(n.getObjectValue(TeamsApp::createFromDiscriminatorValue)); });
-            this.put("teamsAppId", (n) -> { currentObject.setTeamsAppId(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(TeamsTabConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("messageId", (n) -> { this.setMessageId(n.getStringValue()); });
+        deserializerMap.put("sortOrderIndex", (n) -> { this.setSortOrderIndex(n.getStringValue()); });
+        deserializerMap.put("teamsApp", (n) -> { this.setTeamsApp(n.getObjectValue(TeamsApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the messageId property value. The messageId property
@@ -80,7 +91,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMessageId() {
-        return this._messageId;
+        return this.messageId;
     }
     /**
      * Gets the sortOrderIndex property value. Index of the order used for sorting tabs.
@@ -88,7 +99,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSortOrderIndex() {
-        return this._sortOrderIndex;
+        return this.sortOrderIndex;
     }
     /**
      * Gets the teamsApp property value. The application that is linked to the tab.
@@ -96,7 +107,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamsApp getTeamsApp() {
-        return this._teamsApp;
+        return this.teamsApp;
     }
     /**
      * Gets the teamsAppId property value. The teamsAppId property
@@ -104,7 +115,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTeamsAppId() {
-        return this._teamsAppId;
+        return this.teamsAppId;
     }
     /**
      * Gets the webUrl property value. Deep link URL of the tab instance. Read only.
@@ -112,13 +123,14 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,55 +147,62 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the configuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfiguration(@javax.annotation.Nullable final TeamsTabConfiguration value) {
-        this._configuration = value;
+        this.configuration = value;
     }
     /**
      * Sets the displayName property value. Name of the tab.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the messageId property value. The messageId property
      * @param value Value to set for the messageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageId(@javax.annotation.Nullable final String value) {
-        this._messageId = value;
+        this.messageId = value;
     }
     /**
      * Sets the sortOrderIndex property value. Index of the order used for sorting tabs.
      * @param value Value to set for the sortOrderIndex property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSortOrderIndex(@javax.annotation.Nullable final String value) {
-        this._sortOrderIndex = value;
+        this.sortOrderIndex = value;
     }
     /**
      * Sets the teamsApp property value. The application that is linked to the tab.
      * @param value Value to set for the teamsApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsApp(@javax.annotation.Nullable final TeamsApp value) {
-        this._teamsApp = value;
+        this.teamsApp = value;
     }
     /**
      * Sets the teamsAppId property value. The teamsAppId property
      * @param value Value to set for the teamsAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
-        this._teamsAppId = value;
+        this.teamsAppId = value;
     }
     /**
      * Sets the webUrl property value. Deep link URL of the tab instance. Read only.
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

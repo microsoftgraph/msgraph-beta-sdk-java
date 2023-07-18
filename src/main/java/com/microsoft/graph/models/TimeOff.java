@@ -3,23 +3,31 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeOff extends ChangeTrackedEntity implements Parsable {
-    /** The draft version of this timeOff that is viewable by managers. Required. */
-    private TimeOffItem _draftTimeOff;
-    /** The isStagedForDeletion property */
-    private Boolean _isStagedForDeletion;
-    /** The shared version of this timeOff that is viewable by both employees and managers. Required. */
-    private TimeOffItem _sharedTimeOff;
-    /** ID of the user assigned to the timeOff. Required. */
-    private String _userId;
     /**
-     * Instantiates a new TimeOff and sets the default values.
+     * The draft version of this timeOff that is viewable by managers. Required.
+     */
+    private TimeOffItem draftTimeOff;
+    /**
+     * The isStagedForDeletion property
+     */
+    private Boolean isStagedForDeletion;
+    /**
+     * The shared version of this timeOff that is viewable by both employees and managers. Required.
+     */
+    private TimeOffItem sharedTimeOff;
+    /**
+     * ID of the user assigned to the timeOff. Required.
+     */
+    private String userId;
+    /**
+     * Instantiates a new timeOff and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TimeOff() {
         super();
         this.setOdataType("#microsoft.graph.timeOff");
@@ -27,7 +35,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TimeOff
+     * @return a timeOff
      */
     @javax.annotation.Nonnull
     public static TimeOff createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -40,21 +48,20 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public TimeOffItem getDraftTimeOff() {
-        return this._draftTimeOff;
+        return this.draftTimeOff;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TimeOff currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("draftTimeOff", (n) -> { currentObject.setDraftTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
-            this.put("isStagedForDeletion", (n) -> { currentObject.setIsStagedForDeletion(n.getBooleanValue()); });
-            this.put("sharedTimeOff", (n) -> { currentObject.setSharedTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("draftTimeOff", (n) -> { this.setDraftTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isStagedForDeletion", (n) -> { this.setIsStagedForDeletion(n.getBooleanValue()); });
+        deserializerMap.put("sharedTimeOff", (n) -> { this.setSharedTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isStagedForDeletion property value. The isStagedForDeletion property
@@ -62,7 +69,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsStagedForDeletion() {
-        return this._isStagedForDeletion;
+        return this.isStagedForDeletion;
     }
     /**
      * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
@@ -70,7 +77,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public TimeOffItem getSharedTimeOff() {
-        return this._sharedTimeOff;
+        return this.sharedTimeOff;
     }
     /**
      * Gets the userId property value. ID of the user assigned to the timeOff. Required.
@@ -78,13 +85,14 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,31 +106,35 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the draftTimeOff property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDraftTimeOff(@javax.annotation.Nullable final TimeOffItem value) {
-        this._draftTimeOff = value;
+        this.draftTimeOff = value;
     }
     /**
      * Sets the isStagedForDeletion property value. The isStagedForDeletion property
      * @param value Value to set for the isStagedForDeletion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsStagedForDeletion(@javax.annotation.Nullable final Boolean value) {
-        this._isStagedForDeletion = value;
+        this.isStagedForDeletion = value;
     }
     /**
      * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
      * @param value Value to set for the sharedTimeOff property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedTimeOff(@javax.annotation.Nullable final TimeOffItem value) {
-        this._sharedTimeOff = value;
+        this.sharedTimeOff = value;
     }
     /**
      * Sets the userId property value. ID of the user assigned to the timeOff. Required.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

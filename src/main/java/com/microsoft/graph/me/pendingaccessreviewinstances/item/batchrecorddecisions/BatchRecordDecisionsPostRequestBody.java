@@ -4,26 +4,35 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the batchRecordDecisions method. */
 public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The decision property */
-    private String _decision;
-    /** The justification property */
-    private String _justification;
-    /** The principalId property */
-    private String _principalId;
-    /** The resourceId property */
-    private String _resourceId;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The decision property
+     */
+    private String decision;
+    /**
+     * The justification property
+     */
+    private String justification;
+    /**
+     * The principalId property
+     */
+    private String principalId;
+    /**
+     * The resourceId property
+     */
+    private String resourceId;
     /**
      * Instantiates a new batchRecordDecisionsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BatchRecordDecisionsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -43,7 +52,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the decision property value. The decision property
@@ -51,21 +60,20 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getDecision() {
-        return this._decision;
+        return this.decision;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BatchRecordDecisionsPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("decision", (n) -> { currentObject.setDecision(n.getStringValue()); });
-            this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
-            this.put("principalId", (n) -> { currentObject.setPrincipalId(n.getStringValue()); });
-            this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("decision", (n) -> { this.setDecision(n.getStringValue()); });
+        deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
+        deserializerMap.put("principalId", (n) -> { this.setPrincipalId(n.getStringValue()); });
+        deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the justification property value. The justification property
@@ -73,7 +81,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getJustification() {
-        return this._justification;
+        return this.justification;
     }
     /**
      * Gets the principalId property value. The principalId property
@@ -81,7 +89,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getPrincipalId() {
-        return this._principalId;
+        return this.principalId;
     }
     /**
      * Gets the resourceId property value. The resourceId property
@@ -89,13 +97,14 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nullable
     public String getResourceId() {
-        return this._resourceId;
+        return this.resourceId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("decision", this.getDecision());
@@ -109,39 +118,44 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the decision property value. The decision property
      * @param value Value to set for the decision property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecision(@javax.annotation.Nullable final String value) {
-        this._decision = value;
+        this.decision = value;
     }
     /**
      * Sets the justification property value. The justification property
      * @param value Value to set for the justification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
-        this._justification = value;
+        this.justification = value;
     }
     /**
      * Sets the principalId property value. The principalId property
      * @param value Value to set for the principalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalId(@javax.annotation.Nullable final String value) {
-        this._principalId = value;
+        this.principalId = value;
     }
     /**
      * Sets the resourceId property value. The resourceId property
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
-        this._resourceId = value;
+        this.resourceId = value;
     }
 }

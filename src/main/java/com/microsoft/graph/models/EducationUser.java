@@ -4,95 +4,169 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class EducationUser extends Entity implements Parsable {
-    /** True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter. */
-    private Boolean _accountEnabled;
-    /** The licenses that are assigned to the user. Not nullable. */
-    private java.util.List<AssignedLicense> _assignedLicenses;
-    /** The plans that are assigned to the user. Read-only. Not nullable. */
-    private java.util.List<AssignedPlan> _assignedPlans;
-    /** List of assignments for the user. Nullable. */
-    private java.util.List<EducationAssignment> _assignments;
-    /** The telephone numbers for the user. Note: Although this is a string collection, only one number can be set for this property. */
-    private java.util.List<String> _businessPhones;
-    /** Classes to which the user belongs. Nullable. */
-    private java.util.List<EducationClass> _classes;
-    /** Entity who created the user. */
-    private IdentitySet _createdBy;
-    /** The name for the department in which the user works. Supports /$filter. */
-    private String _department;
-    /** The name displayed in the address book for the user. Supports $filter and $orderby. */
-    private String _displayName;
-    /** The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual. */
-    private EducationExternalSource _externalSource;
-    /** The name of the external source this resources was generated from. */
-    private String _externalSourceDetail;
-    /** The given name (first name) of the user. Supports /$filter. */
-    private String _givenName;
-    /** The SMTP address for the user; for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports /$filter. */
-    private String _mail;
-    /** Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources. */
-    private PhysicalAddress _mailingAddress;
-    /** The mail alias for the user. This property must be specified when a user is created. Supports /$filter. */
-    private String _mailNickname;
-    /** The middle name of user. */
-    private String _middleName;
-    /** The primary cellular telephone number for the user. */
-    private String _mobilePhone;
-    /** The officeLocation property */
-    private String _officeLocation;
-    /** Additional information used to associate the AAD user with it's Active Directory counterpart. */
-    private EducationOnPremisesInfo _onPremisesInfo;
-    /** Specifies password policies for the user. See standard [user] resource for additional details. */
-    private String _passwordPolicies;
-    /** Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details. */
-    private PasswordProfile _passwordProfile;
-    /** The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'. */
-    private String _preferredLanguage;
-    /** The primaryRole property */
-    private EducationUserRole _primaryRole;
-    /** The plans that are provisioned for the user. Read-only. Not nullable. */
-    private java.util.List<ProvisionedPlan> _provisionedPlans;
-    /** The refreshTokensValidFromDateTime property */
-    private OffsetDateTime _refreshTokensValidFromDateTime;
-    /** Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue */
-    private java.util.List<RelatedContact> _relatedContacts;
-    /** Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources. */
-    private PhysicalAddress _residenceAddress;
-    /** When set, the grading rubric attached to the assignment. */
-    private java.util.List<EducationRubric> _rubrics;
-    /** Schools to which the user belongs. Nullable. */
-    private java.util.List<EducationSchool> _schools;
-    /** The showInAddressList property */
-    private Boolean _showInAddressList;
-    /** If the primary role is student, this block will contain student specific data. */
-    private EducationStudent _student;
-    /** The user's surname (family name or last name). Supports /$filter. */
-    private String _surname;
-    /** Classes for which the user is a teacher. */
-    private java.util.List<EducationClass> _taughtClasses;
-    /** If the primary role is teacher, this block will contain teacher specific data. */
-    private EducationTeacher _teacher;
-    /** A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter. */
-    private String _usageLocation;
-    /** The user property */
-    private User _user;
-    /** The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details. */
-    private String _userPrincipalName;
-    /** A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter. */
-    private String _userType;
+    /**
+     * True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter.
+     */
+    private Boolean accountEnabled;
+    /**
+     * The licenses that are assigned to the user. Not nullable.
+     */
+    private java.util.List<AssignedLicense> assignedLicenses;
+    /**
+     * The plans that are assigned to the user. Read-only. Not nullable.
+     */
+    private java.util.List<AssignedPlan> assignedPlans;
+    /**
+     * List of assignments for the user. Nullable.
+     */
+    private java.util.List<EducationAssignment> assignments;
+    /**
+     * The telephone numbers for the user. Note: Although this is a string collection, only one number can be set for this property.
+     */
+    private java.util.List<String> businessPhones;
+    /**
+     * Classes to which the user belongs. Nullable.
+     */
+    private java.util.List<EducationClass> classes;
+    /**
+     * Entity who created the user.
+     */
+    private IdentitySet createdBy;
+    /**
+     * The name for the department in which the user works. Supports /$filter.
+     */
+    private String department;
+    /**
+     * The name displayed in the address book for the user. Supports $filter and $orderby.
+     */
+    private String displayName;
+    /**
+     * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+     */
+    private EducationExternalSource externalSource;
+    /**
+     * The name of the external source this resources was generated from.
+     */
+    private String externalSourceDetail;
+    /**
+     * The given name (first name) of the user. Supports /$filter.
+     */
+    private String givenName;
+    /**
+     * The SMTP address for the user; for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports /$filter.
+     */
+    private String mail;
+    /**
+     * Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
+     */
+    private PhysicalAddress mailingAddress;
+    /**
+     * The mail alias for the user. This property must be specified when a user is created. Supports /$filter.
+     */
+    private String mailNickname;
+    /**
+     * The middle name of user.
+     */
+    private String middleName;
+    /**
+     * The primary cellular telephone number for the user.
+     */
+    private String mobilePhone;
+    /**
+     * The officeLocation property
+     */
+    private String officeLocation;
+    /**
+     * Additional information used to associate the AAD user with it's Active Directory counterpart.
+     */
+    private EducationOnPremisesInfo onPremisesInfo;
+    /**
+     * Specifies password policies for the user. See standard [user] resource for additional details.
+     */
+    private String passwordPolicies;
+    /**
+     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
+     */
+    private PasswordProfile passwordProfile;
+    /**
+     * The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
+     */
+    private String preferredLanguage;
+    /**
+     * The primaryRole property
+     */
+    private EducationUserRole primaryRole;
+    /**
+     * The plans that are provisioned for the user. Read-only. Not nullable.
+     */
+    private java.util.List<ProvisionedPlan> provisionedPlans;
+    /**
+     * The refreshTokensValidFromDateTime property
+     */
+    private OffsetDateTime refreshTokensValidFromDateTime;
+    /**
+     * Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
+     */
+    private java.util.List<RelatedContact> relatedContacts;
+    /**
+     * Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
+     */
+    private PhysicalAddress residenceAddress;
+    /**
+     * When set, the grading rubric attached to the assignment.
+     */
+    private java.util.List<EducationRubric> rubrics;
+    /**
+     * Schools to which the user belongs. Nullable.
+     */
+    private java.util.List<EducationSchool> schools;
+    /**
+     * The showInAddressList property
+     */
+    private Boolean showInAddressList;
+    /**
+     * If the primary role is student, this block will contain student specific data.
+     */
+    private EducationStudent student;
+    /**
+     * The user's surname (family name or last name). Supports /$filter.
+     */
+    private String surname;
+    /**
+     * Classes for which the user is a teacher.
+     */
+    private java.util.List<EducationClass> taughtClasses;
+    /**
+     * If the primary role is teacher, this block will contain teacher specific data.
+     */
+    private EducationTeacher teacher;
+    /**
+     * A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.
+     */
+    private String usageLocation;
+    /**
+     * The user property
+     */
+    private User user;
+    /**
+     * The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.
+     */
+    private String userPrincipalName;
+    /**
+     * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter.
+     */
+    private String userType;
     /**
      * Instantiates a new educationUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationUser() {
         super();
-        this.setOdataType("#microsoft.graph.educationUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -110,7 +184,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getAccountEnabled() {
-        return this._accountEnabled;
+        return this.accountEnabled;
     }
     /**
      * Gets the assignedLicenses property value. The licenses that are assigned to the user. Not nullable.
@@ -118,7 +192,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedLicense> getAssignedLicenses() {
-        return this._assignedLicenses;
+        return this.assignedLicenses;
     }
     /**
      * Gets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable.
@@ -126,7 +200,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
-        return this._assignedPlans;
+        return this.assignedPlans;
     }
     /**
      * Gets the assignments property value. List of assignments for the user. Nullable.
@@ -134,7 +208,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EducationAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the businessPhones property value. The telephone numbers for the user. Note: Although this is a string collection, only one number can be set for this property.
@@ -142,7 +216,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getBusinessPhones() {
-        return this._businessPhones;
+        return this.businessPhones;
     }
     /**
      * Gets the classes property value. Classes to which the user belongs. Nullable.
@@ -150,7 +224,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EducationClass> getClasses() {
-        return this._classes;
+        return this.classes;
     }
     /**
      * Gets the createdBy property value. Entity who created the user.
@@ -158,7 +232,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the department property value. The name for the department in which the user works. Supports /$filter.
@@ -166,7 +240,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDepartment() {
-        return this._department;
+        return this.department;
     }
     /**
      * Gets the displayName property value. The name displayed in the address book for the user. Supports $filter and $orderby.
@@ -174,7 +248,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
@@ -182,7 +256,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EducationExternalSource getExternalSource() {
-        return this._externalSource;
+        return this.externalSource;
     }
     /**
      * Gets the externalSourceDetail property value. The name of the external source this resources was generated from.
@@ -190,55 +264,54 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalSourceDetail() {
-        return this._externalSourceDetail;
+        return this.externalSourceDetail;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
-            this.put("assignedLicenses", (n) -> { currentObject.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
-            this.put("assignedPlans", (n) -> { currentObject.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(EducationAssignment::createFromDiscriminatorValue)); });
-            this.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("classes", (n) -> { currentObject.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("externalSource", (n) -> { currentObject.setExternalSource(n.getEnumValue(EducationExternalSource.class)); });
-            this.put("externalSourceDetail", (n) -> { currentObject.setExternalSourceDetail(n.getStringValue()); });
-            this.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
-            this.put("mail", (n) -> { currentObject.setMail(n.getStringValue()); });
-            this.put("mailingAddress", (n) -> { currentObject.setMailingAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("middleName", (n) -> { currentObject.setMiddleName(n.getStringValue()); });
-            this.put("mobilePhone", (n) -> { currentObject.setMobilePhone(n.getStringValue()); });
-            this.put("officeLocation", (n) -> { currentObject.setOfficeLocation(n.getStringValue()); });
-            this.put("onPremisesInfo", (n) -> { currentObject.setOnPremisesInfo(n.getObjectValue(EducationOnPremisesInfo::createFromDiscriminatorValue)); });
-            this.put("passwordPolicies", (n) -> { currentObject.setPasswordPolicies(n.getStringValue()); });
-            this.put("passwordProfile", (n) -> { currentObject.setPasswordProfile(n.getObjectValue(PasswordProfile::createFromDiscriminatorValue)); });
-            this.put("preferredLanguage", (n) -> { currentObject.setPreferredLanguage(n.getStringValue()); });
-            this.put("primaryRole", (n) -> { currentObject.setPrimaryRole(n.getEnumValue(EducationUserRole.class)); });
-            this.put("provisionedPlans", (n) -> { currentObject.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
-            this.put("refreshTokensValidFromDateTime", (n) -> { currentObject.setRefreshTokensValidFromDateTime(n.getOffsetDateTimeValue()); });
-            this.put("relatedContacts", (n) -> { currentObject.setRelatedContacts(n.getCollectionOfObjectValues(RelatedContact::createFromDiscriminatorValue)); });
-            this.put("residenceAddress", (n) -> { currentObject.setResidenceAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("rubrics", (n) -> { currentObject.setRubrics(n.getCollectionOfObjectValues(EducationRubric::createFromDiscriminatorValue)); });
-            this.put("schools", (n) -> { currentObject.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
-            this.put("showInAddressList", (n) -> { currentObject.setShowInAddressList(n.getBooleanValue()); });
-            this.put("student", (n) -> { currentObject.setStudent(n.getObjectValue(EducationStudent::createFromDiscriminatorValue)); });
-            this.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
-            this.put("taughtClasses", (n) -> { currentObject.setTaughtClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
-            this.put("teacher", (n) -> { currentObject.setTeacher(n.getObjectValue(EducationTeacher::createFromDiscriminatorValue)); });
-            this.put("usageLocation", (n) -> { currentObject.setUsageLocation(n.getStringValue()); });
-            this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("userType", (n) -> { currentObject.setUserType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
+        deserializerMap.put("assignedLicenses", (n) -> { this.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedPlans", (n) -> { this.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(EducationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("businessPhones", (n) -> { this.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("classes", (n) -> { this.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationExternalSource.class)); });
+        deserializerMap.put("externalSourceDetail", (n) -> { this.setExternalSourceDetail(n.getStringValue()); });
+        deserializerMap.put("givenName", (n) -> { this.setGivenName(n.getStringValue()); });
+        deserializerMap.put("mail", (n) -> { this.setMail(n.getStringValue()); });
+        deserializerMap.put("mailingAddress", (n) -> { this.setMailingAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("middleName", (n) -> { this.setMiddleName(n.getStringValue()); });
+        deserializerMap.put("mobilePhone", (n) -> { this.setMobilePhone(n.getStringValue()); });
+        deserializerMap.put("officeLocation", (n) -> { this.setOfficeLocation(n.getStringValue()); });
+        deserializerMap.put("onPremisesInfo", (n) -> { this.setOnPremisesInfo(n.getObjectValue(EducationOnPremisesInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("passwordPolicies", (n) -> { this.setPasswordPolicies(n.getStringValue()); });
+        deserializerMap.put("passwordProfile", (n) -> { this.setPasswordProfile(n.getObjectValue(PasswordProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("preferredLanguage", (n) -> { this.setPreferredLanguage(n.getStringValue()); });
+        deserializerMap.put("primaryRole", (n) -> { this.setPrimaryRole(n.getEnumValue(EducationUserRole.class)); });
+        deserializerMap.put("provisionedPlans", (n) -> { this.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("refreshTokensValidFromDateTime", (n) -> { this.setRefreshTokensValidFromDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("relatedContacts", (n) -> { this.setRelatedContacts(n.getCollectionOfObjectValues(RelatedContact::createFromDiscriminatorValue)); });
+        deserializerMap.put("residenceAddress", (n) -> { this.setResidenceAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("rubrics", (n) -> { this.setRubrics(n.getCollectionOfObjectValues(EducationRubric::createFromDiscriminatorValue)); });
+        deserializerMap.put("schools", (n) -> { this.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
+        deserializerMap.put("showInAddressList", (n) -> { this.setShowInAddressList(n.getBooleanValue()); });
+        deserializerMap.put("student", (n) -> { this.setStudent(n.getObjectValue(EducationStudent::createFromDiscriminatorValue)); });
+        deserializerMap.put("surname", (n) -> { this.setSurname(n.getStringValue()); });
+        deserializerMap.put("taughtClasses", (n) -> { this.setTaughtClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
+        deserializerMap.put("teacher", (n) -> { this.setTeacher(n.getObjectValue(EducationTeacher::createFromDiscriminatorValue)); });
+        deserializerMap.put("usageLocation", (n) -> { this.setUsageLocation(n.getStringValue()); });
+        deserializerMap.put("user", (n) -> { this.setUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("userType", (n) -> { this.setUserType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the givenName property value. The given name (first name) of the user. Supports /$filter.
@@ -246,7 +319,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getGivenName() {
-        return this._givenName;
+        return this.givenName;
     }
     /**
      * Gets the mail property value. The SMTP address for the user; for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports /$filter.
@@ -254,7 +327,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMail() {
-        return this._mail;
+        return this.mail;
     }
     /**
      * Gets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
@@ -262,7 +335,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PhysicalAddress getMailingAddress() {
-        return this._mailingAddress;
+        return this.mailingAddress;
     }
     /**
      * Gets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Supports /$filter.
@@ -270,7 +343,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMailNickname() {
-        return this._mailNickname;
+        return this.mailNickname;
     }
     /**
      * Gets the middleName property value. The middle name of user.
@@ -278,7 +351,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMiddleName() {
-        return this._middleName;
+        return this.middleName;
     }
     /**
      * Gets the mobilePhone property value. The primary cellular telephone number for the user.
@@ -286,7 +359,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMobilePhone() {
-        return this._mobilePhone;
+        return this.mobilePhone;
     }
     /**
      * Gets the officeLocation property value. The officeLocation property
@@ -294,7 +367,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOfficeLocation() {
-        return this._officeLocation;
+        return this.officeLocation;
     }
     /**
      * Gets the onPremisesInfo property value. Additional information used to associate the AAD user with it's Active Directory counterpart.
@@ -302,7 +375,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EducationOnPremisesInfo getOnPremisesInfo() {
-        return this._onPremisesInfo;
+        return this.onPremisesInfo;
     }
     /**
      * Gets the passwordPolicies property value. Specifies password policies for the user. See standard [user] resource for additional details.
@@ -310,7 +383,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPasswordPolicies() {
-        return this._passwordPolicies;
+        return this.passwordPolicies;
     }
     /**
      * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
@@ -318,7 +391,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PasswordProfile getPasswordProfile() {
-        return this._passwordProfile;
+        return this.passwordProfile;
     }
     /**
      * Gets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
@@ -326,7 +399,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPreferredLanguage() {
-        return this._preferredLanguage;
+        return this.preferredLanguage;
     }
     /**
      * Gets the primaryRole property value. The primaryRole property
@@ -334,7 +407,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EducationUserRole getPrimaryRole() {
-        return this._primaryRole;
+        return this.primaryRole;
     }
     /**
      * Gets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable.
@@ -342,7 +415,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {
-        return this._provisionedPlans;
+        return this.provisionedPlans;
     }
     /**
      * Gets the refreshTokensValidFromDateTime property value. The refreshTokensValidFromDateTime property
@@ -350,7 +423,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRefreshTokensValidFromDateTime() {
-        return this._refreshTokensValidFromDateTime;
+        return this.refreshTokensValidFromDateTime;
     }
     /**
      * Gets the relatedContacts property value. Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
@@ -358,7 +431,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RelatedContact> getRelatedContacts() {
-        return this._relatedContacts;
+        return this.relatedContacts;
     }
     /**
      * Gets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
@@ -366,7 +439,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PhysicalAddress getResidenceAddress() {
-        return this._residenceAddress;
+        return this.residenceAddress;
     }
     /**
      * Gets the rubrics property value. When set, the grading rubric attached to the assignment.
@@ -374,7 +447,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EducationRubric> getRubrics() {
-        return this._rubrics;
+        return this.rubrics;
     }
     /**
      * Gets the schools property value. Schools to which the user belongs. Nullable.
@@ -382,7 +455,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EducationSchool> getSchools() {
-        return this._schools;
+        return this.schools;
     }
     /**
      * Gets the showInAddressList property value. The showInAddressList property
@@ -390,7 +463,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getShowInAddressList() {
-        return this._showInAddressList;
+        return this.showInAddressList;
     }
     /**
      * Gets the student property value. If the primary role is student, this block will contain student specific data.
@@ -398,7 +471,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EducationStudent getStudent() {
-        return this._student;
+        return this.student;
     }
     /**
      * Gets the surname property value. The user's surname (family name or last name). Supports /$filter.
@@ -406,7 +479,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSurname() {
-        return this._surname;
+        return this.surname;
     }
     /**
      * Gets the taughtClasses property value. Classes for which the user is a teacher.
@@ -414,7 +487,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EducationClass> getTaughtClasses() {
-        return this._taughtClasses;
+        return this.taughtClasses;
     }
     /**
      * Gets the teacher property value. If the primary role is teacher, this block will contain teacher specific data.
@@ -422,7 +495,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EducationTeacher getTeacher() {
-        return this._teacher;
+        return this.teacher;
     }
     /**
      * Gets the usageLocation property value. A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.
@@ -430,7 +503,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUsageLocation() {
-        return this._usageLocation;
+        return this.usageLocation;
     }
     /**
      * Gets the user property value. The user property
@@ -438,7 +511,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public User getUser() {
-        return this._user;
+        return this.user;
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.
@@ -446,7 +519,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Gets the userType property value. A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter.
@@ -454,13 +527,14 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserType() {
-        return this._userType;
+        return this.userType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -508,303 +582,341 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._accountEnabled = value;
+        this.accountEnabled = value;
     }
     /**
      * Sets the assignedLicenses property value. The licenses that are assigned to the user. Not nullable.
      * @param value Value to set for the assignedLicenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedLicenses(@javax.annotation.Nullable final java.util.List<AssignedLicense> value) {
-        this._assignedLicenses = value;
+        this.assignedLicenses = value;
     }
     /**
      * Sets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable.
      * @param value Value to set for the assignedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedPlans(@javax.annotation.Nullable final java.util.List<AssignedPlan> value) {
-        this._assignedPlans = value;
+        this.assignedPlans = value;
     }
     /**
      * Sets the assignments property value. List of assignments for the user. Nullable.
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<EducationAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the businessPhones property value. The telephone numbers for the user. Note: Although this is a string collection, only one number can be set for this property.
      * @param value Value to set for the businessPhones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessPhones(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._businessPhones = value;
+        this.businessPhones = value;
     }
     /**
      * Sets the classes property value. Classes to which the user belongs. Nullable.
      * @param value Value to set for the classes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClasses(@javax.annotation.Nullable final java.util.List<EducationClass> value) {
-        this._classes = value;
+        this.classes = value;
     }
     /**
      * Sets the createdBy property value. Entity who created the user.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the department property value. The name for the department in which the user works. Supports /$filter.
      * @param value Value to set for the department property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDepartment(@javax.annotation.Nullable final String value) {
-        this._department = value;
+        this.department = value;
     }
     /**
      * Sets the displayName property value. The name displayed in the address book for the user. Supports $filter and $orderby.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
      * @param value Value to set for the externalSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalSource(@javax.annotation.Nullable final EducationExternalSource value) {
-        this._externalSource = value;
+        this.externalSource = value;
     }
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
      * @param value Value to set for the externalSourceDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalSourceDetail(@javax.annotation.Nullable final String value) {
-        this._externalSourceDetail = value;
+        this.externalSourceDetail = value;
     }
     /**
      * Sets the givenName property value. The given name (first name) of the user. Supports /$filter.
      * @param value Value to set for the givenName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGivenName(@javax.annotation.Nullable final String value) {
-        this._givenName = value;
+        this.givenName = value;
     }
     /**
      * Sets the mail property value. The SMTP address for the user; for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports /$filter.
      * @param value Value to set for the mail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMail(@javax.annotation.Nullable final String value) {
-        this._mail = value;
+        this.mail = value;
     }
     /**
      * Sets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
      * @param value Value to set for the mailingAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailingAddress(@javax.annotation.Nullable final PhysicalAddress value) {
-        this._mailingAddress = value;
+        this.mailingAddress = value;
     }
     /**
      * Sets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Supports /$filter.
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNickname(@javax.annotation.Nullable final String value) {
-        this._mailNickname = value;
+        this.mailNickname = value;
     }
     /**
      * Sets the middleName property value. The middle name of user.
      * @param value Value to set for the middleName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMiddleName(@javax.annotation.Nullable final String value) {
-        this._middleName = value;
+        this.middleName = value;
     }
     /**
      * Sets the mobilePhone property value. The primary cellular telephone number for the user.
      * @param value Value to set for the mobilePhone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobilePhone(@javax.annotation.Nullable final String value) {
-        this._mobilePhone = value;
+        this.mobilePhone = value;
     }
     /**
      * Sets the officeLocation property value. The officeLocation property
      * @param value Value to set for the officeLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeLocation(@javax.annotation.Nullable final String value) {
-        this._officeLocation = value;
+        this.officeLocation = value;
     }
     /**
      * Sets the onPremisesInfo property value. Additional information used to associate the AAD user with it's Active Directory counterpart.
      * @param value Value to set for the onPremisesInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesInfo(@javax.annotation.Nullable final EducationOnPremisesInfo value) {
-        this._onPremisesInfo = value;
+        this.onPremisesInfo = value;
     }
     /**
      * Sets the passwordPolicies property value. Specifies password policies for the user. See standard [user] resource for additional details.
      * @param value Value to set for the passwordPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPolicies(@javax.annotation.Nullable final String value) {
-        this._passwordPolicies = value;
+        this.passwordPolicies = value;
     }
     /**
      * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
      * @param value Value to set for the passwordProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordProfile(@javax.annotation.Nullable final PasswordProfile value) {
-        this._passwordProfile = value;
+        this.passwordProfile = value;
     }
     /**
      * Sets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
      * @param value Value to set for the preferredLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredLanguage(@javax.annotation.Nullable final String value) {
-        this._preferredLanguage = value;
+        this.preferredLanguage = value;
     }
     /**
      * Sets the primaryRole property value. The primaryRole property
      * @param value Value to set for the primaryRole property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryRole(@javax.annotation.Nullable final EducationUserRole value) {
-        this._primaryRole = value;
+        this.primaryRole = value;
     }
     /**
      * Sets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable.
      * @param value Value to set for the provisionedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisionedPlans(@javax.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
-        this._provisionedPlans = value;
+        this.provisionedPlans = value;
     }
     /**
      * Sets the refreshTokensValidFromDateTime property value. The refreshTokensValidFromDateTime property
      * @param value Value to set for the refreshTokensValidFromDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRefreshTokensValidFromDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._refreshTokensValidFromDateTime = value;
+        this.refreshTokensValidFromDateTime = value;
     }
     /**
      * Sets the relatedContacts property value. Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
      * @param value Value to set for the relatedContacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelatedContacts(@javax.annotation.Nullable final java.util.List<RelatedContact> value) {
-        this._relatedContacts = value;
+        this.relatedContacts = value;
     }
     /**
      * Sets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
      * @param value Value to set for the residenceAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResidenceAddress(@javax.annotation.Nullable final PhysicalAddress value) {
-        this._residenceAddress = value;
+        this.residenceAddress = value;
     }
     /**
      * Sets the rubrics property value. When set, the grading rubric attached to the assignment.
      * @param value Value to set for the rubrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRubrics(@javax.annotation.Nullable final java.util.List<EducationRubric> value) {
-        this._rubrics = value;
+        this.rubrics = value;
     }
     /**
      * Sets the schools property value. Schools to which the user belongs. Nullable.
      * @param value Value to set for the schools property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchools(@javax.annotation.Nullable final java.util.List<EducationSchool> value) {
-        this._schools = value;
+        this.schools = value;
     }
     /**
      * Sets the showInAddressList property value. The showInAddressList property
      * @param value Value to set for the showInAddressList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowInAddressList(@javax.annotation.Nullable final Boolean value) {
-        this._showInAddressList = value;
+        this.showInAddressList = value;
     }
     /**
      * Sets the student property value. If the primary role is student, this block will contain student specific data.
      * @param value Value to set for the student property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStudent(@javax.annotation.Nullable final EducationStudent value) {
-        this._student = value;
+        this.student = value;
     }
     /**
      * Sets the surname property value. The user's surname (family name or last name). Supports /$filter.
      * @param value Value to set for the surname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurname(@javax.annotation.Nullable final String value) {
-        this._surname = value;
+        this.surname = value;
     }
     /**
      * Sets the taughtClasses property value. Classes for which the user is a teacher.
      * @param value Value to set for the taughtClasses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaughtClasses(@javax.annotation.Nullable final java.util.List<EducationClass> value) {
-        this._taughtClasses = value;
+        this.taughtClasses = value;
     }
     /**
      * Sets the teacher property value. If the primary role is teacher, this block will contain teacher specific data.
      * @param value Value to set for the teacher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeacher(@javax.annotation.Nullable final EducationTeacher value) {
-        this._teacher = value;
+        this.teacher = value;
     }
     /**
      * Sets the usageLocation property value. A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.
      * @param value Value to set for the usageLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsageLocation(@javax.annotation.Nullable final String value) {
-        this._usageLocation = value;
+        this.usageLocation = value;
     }
     /**
      * Sets the user property value. The user property
      * @param value Value to set for the user property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final User value) {
-        this._user = value;
+        this.user = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
     /**
      * Sets the userType property value. A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter.
      * @param value Value to set for the userType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserType(@javax.annotation.Nullable final String value) {
-        this._userType = value;
+        this.userType = value;
     }
 }

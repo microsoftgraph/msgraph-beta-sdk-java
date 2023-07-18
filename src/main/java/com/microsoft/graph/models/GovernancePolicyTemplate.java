@@ -3,25 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of approvalWorkflowProvider entities. */
 public class GovernancePolicyTemplate extends Entity implements Parsable {
-    /** The displayName property */
-    private String _displayName;
-    /** The policy property */
-    private GovernancePolicy _policy;
-    /** The settings property */
-    private BusinessFlowSettings _settings;
+    /**
+     * The displayName property
+     */
+    private String displayName;
+    /**
+     * The policy property
+     */
+    private GovernancePolicy policy;
+    /**
+     * The settings property
+     */
+    private BusinessFlowSettings settings;
     /**
      * Instantiates a new governancePolicyTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GovernancePolicyTemplate() {
         super();
-        this.setOdataType("#microsoft.graph.governancePolicyTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,20 +43,19 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GovernancePolicyTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("policy", (n) -> { currentObject.setPolicy(n.getObjectValue(GovernancePolicy::createFromDiscriminatorValue)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(BusinessFlowSettings::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(GovernancePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(BusinessFlowSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the policy property value. The policy property
@@ -60,7 +63,7 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public GovernancePolicy getPolicy() {
-        return this._policy;
+        return this.policy;
     }
     /**
      * Gets the settings property value. The settings property
@@ -68,13 +71,14 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BusinessFlowSettings getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,23 +91,26 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the policy property value. The policy property
      * @param value Value to set for the policy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicy(@javax.annotation.Nullable final GovernancePolicy value) {
-        this._policy = value;
+        this.policy = value;
     }
     /**
      * Sets the settings property value. The settings property
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final BusinessFlowSettings value) {
-        this._settings = value;
+        this.settings = value;
     }
 }

@@ -1,66 +1,104 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidManagedAppRegistration;
-import com.microsoft.graph.models.IosManagedAppRegistration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The ManagedAppEntity is the base entity type for all other entity types under app management workflow.
+ */
 public class ManagedAppRegistration extends Entity implements Parsable {
-    /** The app package Identifier */
-    private MobileAppIdentifier _appIdentifier;
-    /** App version */
-    private String _applicationVersion;
-    /** Zero or more policys already applied on the registered app when it last synchronized with managment service. */
-    private java.util.List<ManagedAppPolicy> _appliedPolicies;
-    /** The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered. */
-    private String _azureADDeviceId;
-    /** Date and time of creation */
-    private OffsetDateTime _createdDateTime;
-    /** The device manufacturer for the current app registration */
-    private String _deviceManufacturer;
-    /** The device model for the current app registration */
-    private String _deviceModel;
-    /** Host device name */
-    private String _deviceName;
-    /** App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions. */
-    private String _deviceTag;
-    /** Host device type */
-    private String _deviceType;
-    /** Zero or more reasons an app registration is flagged. E.g. app running on rooted device */
-    private java.util.List<String> _flaggedReasons;
-    /** Zero or more policies admin intended for the app as of now. */
-    private java.util.List<ManagedAppPolicy> _intendedPolicies;
-    /** Date and time of last the app synced with management service. */
-    private OffsetDateTime _lastSyncDateTime;
-    /** The Managed Device identifier of the host device. Value could be empty even when the host device is managed. */
-    private String _managedDeviceId;
-    /** App management SDK version */
-    private String _managementSdkVersion;
-    /** Zero or more long running operations triggered on the app registration. */
-    private java.util.List<ManagedAppOperation> _operations;
-    /** Operating System version */
-    private String _platformVersion;
-    /** The user Id to who this app registration belongs. */
-    private String _userId;
-    /** Version of the entity. */
-    private String _version;
     /**
-     * Instantiates a new ManagedAppRegistration and sets the default values.
+     * The app package Identifier
+     */
+    private MobileAppIdentifier appIdentifier;
+    /**
+     * App version
+     */
+    private String applicationVersion;
+    /**
+     * Zero or more policys already applied on the registered app when it last synchronized with managment service.
+     */
+    private java.util.List<ManagedAppPolicy> appliedPolicies;
+    /**
+     * The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered.
+     */
+    private String azureADDeviceId;
+    /**
+     * Date and time of creation
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The device manufacturer for the current app registration
+     */
+    private String deviceManufacturer;
+    /**
+     * The device model for the current app registration
+     */
+    private String deviceModel;
+    /**
+     * Host device name
+     */
+    private String deviceName;
+    /**
+     * App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
+     */
+    private String deviceTag;
+    /**
+     * Host device type
+     */
+    private String deviceType;
+    /**
+     * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
+     */
+    private java.util.List<ManagedAppFlaggedReason> flaggedReasons;
+    /**
+     * Zero or more policies admin intended for the app as of now.
+     */
+    private java.util.List<ManagedAppPolicy> intendedPolicies;
+    /**
+     * Date and time of last the app synced with management service.
+     */
+    private OffsetDateTime lastSyncDateTime;
+    /**
+     * The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
+     */
+    private String managedDeviceId;
+    /**
+     * App management SDK version
+     */
+    private String managementSdkVersion;
+    /**
+     * Zero or more long running operations triggered on the app registration.
+     */
+    private java.util.List<ManagedAppOperation> operations;
+    /**
+     * Operating System version
+     */
+    private String platformVersion;
+    /**
+     * The user Id to who this app registration belongs.
+     */
+    private String userId;
+    /**
+     * Version of the entity.
+     */
+    private String version;
+    /**
+     * Instantiates a new managedAppRegistration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAppRegistration() {
         super();
-        this.setOdataType("#microsoft.graph.managedAppRegistration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAppRegistration
+     * @return a managedAppRegistration
      */
     @javax.annotation.Nonnull
     public static ManagedAppRegistration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -81,7 +119,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public MobileAppIdentifier getAppIdentifier() {
-        return this._appIdentifier;
+        return this.appIdentifier;
     }
     /**
      * Gets the applicationVersion property value. App version
@@ -89,7 +127,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getApplicationVersion() {
-        return this._applicationVersion;
+        return this.applicationVersion;
     }
     /**
      * Gets the appliedPolicies property value. Zero or more policys already applied on the registered app when it last synchronized with managment service.
@@ -97,7 +135,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getAppliedPolicies() {
-        return this._appliedPolicies;
+        return this.appliedPolicies;
     }
     /**
      * Gets the azureADDeviceId property value. The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered.
@@ -105,7 +143,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureADDeviceId() {
-        return this._azureADDeviceId;
+        return this.azureADDeviceId;
     }
     /**
      * Gets the createdDateTime property value. Date and time of creation
@@ -113,7 +151,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the deviceManufacturer property value. The device manufacturer for the current app registration
@@ -121,7 +159,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceManufacturer() {
-        return this._deviceManufacturer;
+        return this.deviceManufacturer;
     }
     /**
      * Gets the deviceModel property value. The device model for the current app registration
@@ -129,7 +167,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceModel() {
-        return this._deviceModel;
+        return this.deviceModel;
     }
     /**
      * Gets the deviceName property value. Host device name
@@ -137,7 +175,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * Gets the deviceTag property value. App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
@@ -145,7 +183,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceTag() {
-        return this._deviceTag;
+        return this.deviceTag;
     }
     /**
      * Gets the deviceType property value. Host device type
@@ -153,44 +191,43 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceType() {
-        return this._deviceType;
+        return this.deviceType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedAppRegistration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appIdentifier", (n) -> { currentObject.setAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
-            this.put("applicationVersion", (n) -> { currentObject.setApplicationVersion(n.getStringValue()); });
-            this.put("appliedPolicies", (n) -> { currentObject.setAppliedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
-            this.put("azureADDeviceId", (n) -> { currentObject.setAzureADDeviceId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceManufacturer", (n) -> { currentObject.setDeviceManufacturer(n.getStringValue()); });
-            this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("deviceTag", (n) -> { currentObject.setDeviceTag(n.getStringValue()); });
-            this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getStringValue()); });
-            this.put("flaggedReasons", (n) -> { currentObject.setFlaggedReasons(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("intendedPolicies", (n) -> { currentObject.setIntendedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("managementSdkVersion", (n) -> { currentObject.setManagementSdkVersion(n.getStringValue()); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(ManagedAppOperation::createFromDiscriminatorValue)); });
-            this.put("platformVersion", (n) -> { currentObject.setPlatformVersion(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appIdentifier", (n) -> { this.setAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
+        deserializerMap.put("applicationVersion", (n) -> { this.setApplicationVersion(n.getStringValue()); });
+        deserializerMap.put("appliedPolicies", (n) -> { this.setAppliedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("azureADDeviceId", (n) -> { this.setAzureADDeviceId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceManufacturer", (n) -> { this.setDeviceManufacturer(n.getStringValue()); });
+        deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("deviceTag", (n) -> { this.setDeviceTag(n.getStringValue()); });
+        deserializerMap.put("deviceType", (n) -> { this.setDeviceType(n.getStringValue()); });
+        deserializerMap.put("flaggedReasons", (n) -> { this.setFlaggedReasons(n.getCollectionOfEnumValues(ManagedAppFlaggedReason.class)); });
+        deserializerMap.put("intendedPolicies", (n) -> { this.setIntendedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("managementSdkVersion", (n) -> { this.setManagementSdkVersion(n.getStringValue()); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(ManagedAppOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("platformVersion", (n) -> { this.setPlatformVersion(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device
-     * @return a string
+     * @return a managedAppFlaggedReason
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getFlaggedReasons() {
-        return this._flaggedReasons;
+    public java.util.List<ManagedAppFlaggedReason> getFlaggedReasons() {
+        return this.flaggedReasons;
     }
     /**
      * Gets the intendedPolicies property value. Zero or more policies admin intended for the app as of now.
@@ -198,7 +235,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getIntendedPolicies() {
-        return this._intendedPolicies;
+        return this.intendedPolicies;
     }
     /**
      * Gets the lastSyncDateTime property value. Date and time of last the app synced with management service.
@@ -206,7 +243,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this._lastSyncDateTime;
+        return this.lastSyncDateTime;
     }
     /**
      * Gets the managedDeviceId property value. The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
@@ -214,7 +251,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManagedDeviceId() {
-        return this._managedDeviceId;
+        return this.managedDeviceId;
     }
     /**
      * Gets the managementSdkVersion property value. App management SDK version
@@ -222,7 +259,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManagementSdkVersion() {
-        return this._managementSdkVersion;
+        return this.managementSdkVersion;
     }
     /**
      * Gets the operations property value. Zero or more long running operations triggered on the app registration.
@@ -230,7 +267,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppOperation> getOperations() {
-        return this._operations;
+        return this.operations;
     }
     /**
      * Gets the platformVersion property value. Operating System version
@@ -238,7 +275,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPlatformVersion() {
-        return this._platformVersion;
+        return this.platformVersion;
     }
     /**
      * Gets the userId property value. The user Id to who this app registration belongs.
@@ -246,7 +283,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -254,13 +291,14 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -274,7 +312,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeStringValue("deviceTag", this.getDeviceTag());
         writer.writeStringValue("deviceType", this.getDeviceType());
-        writer.writeCollectionOfPrimitiveValues("flaggedReasons", this.getFlaggedReasons());
+        writer.writeCollectionOfEnumValues("flaggedReasons", this.getFlaggedReasons());
         writer.writeCollectionOfObjectValues("intendedPolicies", this.getIntendedPolicies());
         writer.writeOffsetDateTimeValue("lastSyncDateTime", this.getLastSyncDateTime());
         writer.writeStringValue("managedDeviceId", this.getManagedDeviceId());
@@ -289,151 +327,170 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the appIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppIdentifier(@javax.annotation.Nullable final MobileAppIdentifier value) {
-        this._appIdentifier = value;
+        this.appIdentifier = value;
     }
     /**
      * Sets the applicationVersion property value. App version
      * @param value Value to set for the applicationVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationVersion(@javax.annotation.Nullable final String value) {
-        this._applicationVersion = value;
+        this.applicationVersion = value;
     }
     /**
      * Sets the appliedPolicies property value. Zero or more policys already applied on the registered app when it last synchronized with managment service.
      * @param value Value to set for the appliedPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliedPolicies(@javax.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
-        this._appliedPolicies = value;
+        this.appliedPolicies = value;
     }
     /**
      * Sets the azureADDeviceId property value. The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered.
      * @param value Value to set for the azureADDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureADDeviceId(@javax.annotation.Nullable final String value) {
-        this._azureADDeviceId = value;
+        this.azureADDeviceId = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time of creation
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the deviceManufacturer property value. The device manufacturer for the current app registration
      * @param value Value to set for the deviceManufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManufacturer(@javax.annotation.Nullable final String value) {
-        this._deviceManufacturer = value;
+        this.deviceManufacturer = value;
     }
     /**
      * Sets the deviceModel property value. The device model for the current app registration
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
-        this._deviceModel = value;
+        this.deviceModel = value;
     }
     /**
      * Sets the deviceName property value. Host device name
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the deviceTag property value. App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
      * @param value Value to set for the deviceTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceTag(@javax.annotation.Nullable final String value) {
-        this._deviceTag = value;
+        this.deviceTag = value;
     }
     /**
      * Sets the deviceType property value. Host device type
      * @param value Value to set for the deviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceType(@javax.annotation.Nullable final String value) {
-        this._deviceType = value;
+        this.deviceType = value;
     }
     /**
      * Sets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device
      * @param value Value to set for the flaggedReasons property.
      * @return a void
      */
-    public void setFlaggedReasons(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._flaggedReasons = value;
+    @javax.annotation.Nonnull
+    public void setFlaggedReasons(@javax.annotation.Nullable final java.util.List<ManagedAppFlaggedReason> value) {
+        this.flaggedReasons = value;
     }
     /**
      * Sets the intendedPolicies property value. Zero or more policies admin intended for the app as of now.
      * @param value Value to set for the intendedPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntendedPolicies(@javax.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
-        this._intendedPolicies = value;
+        this.intendedPolicies = value;
     }
     /**
      * Sets the lastSyncDateTime property value. Date and time of last the app synced with management service.
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSyncDateTime = value;
+        this.lastSyncDateTime = value;
     }
     /**
      * Sets the managedDeviceId property value. The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
-        this._managedDeviceId = value;
+        this.managedDeviceId = value;
     }
     /**
      * Sets the managementSdkVersion property value. App management SDK version
      * @param value Value to set for the managementSdkVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementSdkVersion(@javax.annotation.Nullable final String value) {
-        this._managementSdkVersion = value;
+        this.managementSdkVersion = value;
     }
     /**
      * Sets the operations property value. Zero or more long running operations triggered on the app registration.
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<ManagedAppOperation> value) {
-        this._operations = value;
+        this.operations = value;
     }
     /**
      * Sets the platformVersion property value. Operating System version
      * @param value Value to set for the platformVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformVersion(@javax.annotation.Nullable final String value) {
-        this._platformVersion = value;
+        this.platformVersion = value;
     }
     /**
      * Sets the userId property value. The user Id to who this app registration belongs.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

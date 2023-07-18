@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Bind status of the tenant with the Google EMM API
+ */
 public enum AndroidManagedStoreAccountBindStatus implements ValuedEnum {
     NotBound("notBound"),
     Bound("bound"),

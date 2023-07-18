@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
-    /** Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored. */
-    private String _contentData;
-    /** The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk. */
-    private MailDestinationRoutingReason _destinationRoutingReason;
-    /** The mail recipient whose policies are used to assess the mail. */
-    private String _recipientEmail;
     /**
-     * Instantiates a new EmailFileAssessmentRequest and sets the default values.
+     * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
+     */
+    private String contentData;
+    /**
+     * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
+     */
+    private MailDestinationRoutingReason destinationRoutingReason;
+    /**
+     * The mail recipient whose policies are used to assess the mail.
+     */
+    private String recipientEmail;
+    /**
+     * Instantiates a new emailFileAssessmentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmailFileAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.emailFileAssessmentRequest");
@@ -25,7 +31,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EmailFileAssessmentRequest
+     * @return a emailFileAssessmentRequest
      */
     @javax.annotation.Nonnull
     public static EmailFileAssessmentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +44,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      */
     @javax.annotation.Nullable
     public String getContentData() {
-        return this._contentData;
+        return this.contentData;
     }
     /**
      * Gets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
@@ -46,20 +52,19 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      */
     @javax.annotation.Nullable
     public MailDestinationRoutingReason getDestinationRoutingReason() {
-        return this._destinationRoutingReason;
+        return this.destinationRoutingReason;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EmailFileAssessmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contentData", (n) -> { currentObject.setContentData(n.getStringValue()); });
-            this.put("destinationRoutingReason", (n) -> { currentObject.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
-            this.put("recipientEmail", (n) -> { currentObject.setRecipientEmail(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentData", (n) -> { this.setContentData(n.getStringValue()); });
+        deserializerMap.put("destinationRoutingReason", (n) -> { this.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
+        deserializerMap.put("recipientEmail", (n) -> { this.setRecipientEmail(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
@@ -67,13 +72,14 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      */
     @javax.annotation.Nullable
     public String getRecipientEmail() {
-        return this._recipientEmail;
+        return this.recipientEmail;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * @param value Value to set for the contentData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentData(@javax.annotation.Nullable final String value) {
-        this._contentData = value;
+        this.contentData = value;
     }
     /**
      * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      * @param value Value to set for the destinationRoutingReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationRoutingReason(@javax.annotation.Nullable final MailDestinationRoutingReason value) {
-        this._destinationRoutingReason = value;
+        this.destinationRoutingReason = value;
     }
     /**
      * Sets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
      * @param value Value to set for the recipientEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientEmail(@javax.annotation.Nullable final String value) {
-        this._recipientEmail = value;
+        this.recipientEmail = value;
     }
 }

@@ -4,25 +4,29 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ManagementActionTenantDeploymentStatus extends Entity implements Parsable {
-    /** The collection of deployment status for each instance of a management action. Optional. */
-    private java.util.List<ManagementActionDeploymentStatus> _statuses;
-    /** The identifier for the tenant group that is associated with the management action. Required. Read-only. */
-    private String _tenantGroupId;
-    /** The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only. */
-    private String _tenantId;
+    /**
+     * The collection of deployment status for each instance of a management action. Optional.
+     */
+    private java.util.List<ManagementActionDeploymentStatus> statuses;
+    /**
+     * The identifier for the tenant group that is associated with the management action. Required. Read-only.
+     */
+    private String tenantGroupId;
+    /**
+     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+     */
+    private String tenantId;
     /**
      * Instantiates a new managementActionTenantDeploymentStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagementActionTenantDeploymentStatus() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.managementActionTenantDeploymentStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,16 +40,15 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagementActionTenantDeploymentStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("statuses", (n) -> { currentObject.setStatuses(n.getCollectionOfObjectValues(ManagementActionDeploymentStatus::createFromDiscriminatorValue)); });
-            this.put("tenantGroupId", (n) -> { currentObject.setTenantGroupId(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("statuses", (n) -> { this.setStatuses(n.getCollectionOfObjectValues(ManagementActionDeploymentStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantGroupId", (n) -> { this.setTenantGroupId(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the statuses property value. The collection of deployment status for each instance of a management action. Optional.
@@ -53,7 +56,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public java.util.List<ManagementActionDeploymentStatus> getStatuses() {
-        return this._statuses;
+        return this.statuses;
     }
     /**
      * Gets the tenantGroupId property value. The identifier for the tenant group that is associated with the management action. Required. Read-only.
@@ -61,7 +64,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public String getTenantGroupId() {
-        return this._tenantGroupId;
+        return this.tenantGroupId;
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
@@ -69,13 +72,14 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -88,23 +92,26 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      * @param value Value to set for the statuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatuses(@javax.annotation.Nullable final java.util.List<ManagementActionDeploymentStatus> value) {
-        this._statuses = value;
+        this.statuses = value;
     }
     /**
      * Sets the tenantGroupId property value. The identifier for the tenant group that is associated with the management action. Required. Read-only.
      * @param value Value to set for the tenantGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantGroupId(@javax.annotation.Nullable final String value) {
-        this._tenantGroupId = value;
+        this.tenantGroupId = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
 }

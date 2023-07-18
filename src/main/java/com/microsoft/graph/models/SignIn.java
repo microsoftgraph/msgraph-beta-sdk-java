@@ -1,158 +1,285 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.RestrictedSignIn;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SignIn extends Entity implements Parsable {
-    /** The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only). */
-    private String _appDisplayName;
-    /** The application identifier in Azure Active Directory. Supports $filter (eq operator only). */
-    private String _appId;
-    /** A list of conditional access policies that are triggered by the corresponding sign-in activity. */
-    private java.util.List<AppliedConditionalAccessPolicy> _appliedConditionalAccessPolicies;
-    /** Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in. */
-    private java.util.List<AuthenticationContext> _authenticationContextClassReferences;
-    /** The result of the authentication attempt and additional details on the authentication method. */
-    private java.util.List<AuthenticationDetail> _authenticationDetails;
-    /** The authentication methods used. Possible values: SMS, Authenticator App, App Verification code, Password, FIDO, PTA, or PHS. */
-    private java.util.List<String> _authenticationMethodsUsed;
-    /** Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication. */
-    private java.util.List<KeyValue> _authenticationProcessingDetails;
-    /** Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none. */
-    private ProtocolType _authenticationProtocol;
-    /** This holds the highest level of authentication needed through all the sign-in steps, for sign-in to succeed. Supports $filter (eq and startsWith operators only). */
-    private String _authenticationRequirement;
-    /** Sources of authentication requirement, such as conditional access, per-user MFA, identity protection, and security defaults. */
-    private java.util.List<AuthenticationRequirementPolicy> _authenticationRequirementPolicies;
-    /** The Autonomous System Number (ASN) of the network used by the actor. */
-    private Integer _autonomousSystemNumber;
-    /** Contains a fully qualified Azure Resource Manager ID of an Azure resource accessed during the sign-in. */
-    private String _azureResourceId;
-    /** The legacy client used for sign-in activity. For example: Browser, Exchange ActiveSync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only). */
-    private String _clientAppUsed;
-    /** Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue. */
-    private ClientCredentialType _clientCredentialType;
-    /** The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only). */
-    private ConditionalAccessStatus _conditionalAccessStatus;
-    /** The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only). */
-    private String _correlationId;
-    /** The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only). */
-    private OffsetDateTime _createdDateTime;
-    /** Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none. */
-    private SignInAccessType _crossTenantAccessType;
-    /** The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSystem properties. */
-    private DeviceDetail _deviceDetail;
-    /** Contains the identifier of an application's federated identity credential, if a federated identity credential was used to sign in. */
-    private String _federatedCredentialId;
-    /** During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true. */
-    private Boolean _flaggedForReview;
-    /** The tenant identifier of the user initiating the sign in. Not applicable in Managed Identity or service principal sign ins. */
-    private String _homeTenantId;
-    /** For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content. */
-    private String _homeTenantName;
-    /** Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken. */
-    private IncomingTokenType _incomingTokenType;
-    /** The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only). */
-    private String _ipAddress;
-    /** The IP address a user used to reach a resource provider, used to determine Conditional Access compliance for some policies. For example, when a user interacts with Exchange Online, the IP address Exchange receives from the user may be recorded here. This value is often null. */
-    private String _ipAddressFromResourceProvider;
-    /** Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user. */
-    private Boolean _isInteractive;
-    /** Shows whether the sign in event was subject to an Azure AD tenant restriction policy. */
-    private Boolean _isTenantRestricted;
-    /** The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties. */
-    private SignInLocation _location;
-    /** The mfaDetail property */
-    private MfaDetail _mfaDetail;
-    /** The network location details including the type of network used and its names. */
-    private java.util.List<NetworkLocationDetail> _networkLocationDetails;
-    /** The request identifier of the first request in the authentication sequence. Supports $filter (eq operator only). */
-    private String _originalRequestId;
-    /** Contains information about the Azure AD Private Link policy that is associated with the sign in event. */
-    private PrivateLinkDetails _privateLinkDetails;
-    /** The request processing time in milliseconds in AD STS. */
-    private Integer _processingTimeInMilliseconds;
-    /** The name of the resource that the user signed in to. Supports $filter (eq operator only). */
-    private String _resourceDisplayName;
-    /** The identifier of the resource that the user signed in to. Supports $filter (eq operator only). */
-    private String _resourceId;
-    /** The identifier of the service principal representing the target resource in the sign-in event. */
-    private String _resourceServicePrincipalId;
-    /** The tenant identifier of the resource referenced in the sign in. */
-    private String _resourceTenantId;
-    /** The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden. */
-    private RiskDetail _riskDetail;
-    /** The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only). */
-    private java.util.List<String> _riskEventTypes_v2;
-    /** The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden. */
-    private RiskLevel _riskLevelAggregated;
-    /** The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden. */
-    private RiskLevel _riskLevelDuringSignIn;
-    /** The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only). */
-    private RiskState _riskState;
-    /** The unique identifier of the key credential used by the service principal to authenticate. */
-    private String _servicePrincipalCredentialKeyId;
-    /** The certificate thumbprint of the certificate used by the service principal to authenticate. */
-    private String _servicePrincipalCredentialThumbprint;
-    /** The application identifier used for sign-in. This field is populated when you are signing in using an application. Supports $filter (eq and startsWith operators only). */
-    private String _servicePrincipalId;
-    /** The application name used for sign-in. This field is populated when you are signing in using an application. Supports $filter (eq and startsWith operators only). */
-    private String _servicePrincipalName;
-    /** Any conditional access session management policies that were applied during the sign-in event. */
-    private java.util.List<SessionLifetimePolicy> _sessionLifetimePolicies;
-    /** Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue. Supports $filter (eq, ne). */
-    private java.util.List<String> _signInEventTypes;
-    /** The identification that the user provided to sign in. It may be the userPrincipalName but it's also populated when a user signs in using other identifiers. */
-    private String _signInIdentifier;
-    /** The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue. */
-    private SignInIdentifierType _signInIdentifierType;
-    /** The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property. */
-    private SignInStatus _status;
-    /** The name of the identity provider. For example, sts.microsoft.com. Supports $filter (eq operator only). */
-    private String _tokenIssuerName;
-    /** The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension. */
-    private TokenIssuerType _tokenIssuerType;
-    /** A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers. */
-    private String _uniqueTokenIdentifier;
-    /** The user agent information related to sign-in. Supports $filter (eq and startsWith operators only). */
-    private String _userAgent;
-    /** The display name of the user. Supports $filter (eq and startsWith operators only). */
-    private String _userDisplayName;
-    /** The identifier of the user. Supports $filter (eq operator only). */
-    private String _userId;
-    /** The UPN of the user. Supports $filter (eq and startsWith operators only). */
-    private String _userPrincipalName;
-    /** Identifies whether the user is a member or guest in the tenant. Possible values are: member, guest, unknownFutureValue. */
-    private SignInUserType _userType;
     /**
-     * Instantiates a new SignIn and sets the default values.
+     * The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).
+     */
+    private String appDisplayName;
+    /**
+     * The application identifier in Azure Active Directory. Supports $filter (eq operator only).
+     */
+    private String appId;
+    /**
+     * A list of conditional access policies that are triggered by the corresponding sign-in activity.
+     */
+    private java.util.List<AppliedConditionalAccessPolicy> appliedConditionalAccessPolicies;
+    /**
+     * Detailed information about the listeners, such as Azure Logic Apps and Azure Functions, that were triggered by the corresponding events in the sign-in event.
+     */
+    private java.util.List<AppliedAuthenticationEventListener> appliedEventListeners;
+    /**
+     * Provides details about the app and device used during an Azure AD authentication step.
+     */
+    private AuthenticationAppDeviceDetails authenticationAppDeviceDetails;
+    /**
+     * Provides details of the Azure AD policies applied to a user and client authentication app during an authentication step.
+     */
+    private java.util.List<AuthenticationAppPolicyDetails> authenticationAppPolicyEvaluationDetails;
+    /**
+     * Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in.
+     */
+    private java.util.List<AuthenticationContext> authenticationContextClassReferences;
+    /**
+     * The result of the authentication attempt and additional details on the authentication method.
+     */
+    private java.util.List<AuthenticationDetail> authenticationDetails;
+    /**
+     * The authentication methods used. Possible values: SMS, Authenticator App, App Verification code, Password, FIDO, PTA, or PHS.
+     */
+    private java.util.List<String> authenticationMethodsUsed;
+    /**
+     * Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication.
+     */
+    private java.util.List<KeyValue> authenticationProcessingDetails;
+    /**
+     * Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
+     */
+    private ProtocolType authenticationProtocol;
+    /**
+     * This holds the highest level of authentication needed through all the sign-in steps, for sign-in to succeed. Supports $filter (eq and startsWith operators only).
+     */
+    private String authenticationRequirement;
+    /**
+     * Sources of authentication requirement, such as conditional access, per-user MFA, identity protection, and security defaults.
+     */
+    private java.util.List<AuthenticationRequirementPolicy> authenticationRequirementPolicies;
+    /**
+     * The Autonomous System Number (ASN) of the network used by the actor.
+     */
+    private Integer autonomousSystemNumber;
+    /**
+     * Contains a fully qualified Azure Resource Manager ID of an Azure resource accessed during the sign-in.
+     */
+    private String azureResourceId;
+    /**
+     * The legacy client used for sign-in activity. For example: Browser, Exchange ActiveSync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).
+     */
+    private String clientAppUsed;
+    /**
+     * Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
+     */
+    private ClientCredentialType clientCredentialType;
+    /**
+     * The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only).
+     */
+    private ConditionalAccessStatus conditionalAccessStatus;
+    /**
+     * The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only).
+     */
+    private String correlationId;
+    /**
+     * The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none.
+     */
+    private SignInAccessType crossTenantAccessType;
+    /**
+     * The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSystem properties.
+     */
+    private DeviceDetail deviceDetail;
+    /**
+     * Contains the identifier of an application's federated identity credential, if a federated identity credential was used to sign in.
+     */
+    private String federatedCredentialId;
+    /**
+     * During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
+     */
+    private Boolean flaggedForReview;
+    /**
+     * The tenant identifier of the user initiating the sign in. Not applicable in Managed Identity or service principal sign ins.
+     */
+    private String homeTenantId;
+    /**
+     * For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
+     */
+    private String homeTenantName;
+    /**
+     * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
+     */
+    private IncomingTokenType incomingTokenType;
+    /**
+     * The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only).
+     */
+    private String ipAddress;
+    /**
+     * The IP address a user used to reach a resource provider, used to determine Conditional Access compliance for some policies. For example, when a user interacts with Exchange Online, the IP address Exchange receives from the user may be recorded here. This value is often null.
+     */
+    private String ipAddressFromResourceProvider;
+    /**
+     * Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
+     */
+    private Boolean isInteractive;
+    /**
+     * Shows whether the sign in event was subject to an Azure AD tenant restriction policy.
+     */
+    private Boolean isTenantRestricted;
+    /**
+     * The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
+     */
+    private SignInLocation location;
+    /**
+     * Contains information about the managed identity used for the sign in, including its type and associated Azure Resource Manager (ARM) resource ID.
+     */
+    private ManagedIdentity managedServiceIdentity;
+    /**
+     * The mfaDetail property
+     */
+    private MfaDetail mfaDetail;
+    /**
+     * The network location details including the type of network used and its names.
+     */
+    private java.util.List<NetworkLocationDetail> networkLocationDetails;
+    /**
+     * The request identifier of the first request in the authentication sequence. Supports $filter (eq operator only).
+     */
+    private String originalRequestId;
+    /**
+     * Contains information about the Azure AD Private Link policy that is associated with the sign in event.
+     */
+    private PrivateLinkDetails privateLinkDetails;
+    /**
+     * The request processing time in milliseconds in AD STS.
+     */
+    private Integer processingTimeInMilliseconds;
+    /**
+     * The name of the resource that the user signed in to. Supports $filter (eq operator only).
+     */
+    private String resourceDisplayName;
+    /**
+     * The identifier of the resource that the user signed in to. Supports $filter (eq operator only).
+     */
+    private String resourceId;
+    /**
+     * The identifier of the service principal representing the target resource in the sign-in event.
+     */
+    private String resourceServicePrincipalId;
+    /**
+     * The tenant identifier of the resource referenced in the sign in.
+     */
+    private String resourceTenantId;
+    /**
+     * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     */
+    private RiskDetail riskDetail;
+    /**
+     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
+     */
+    private java.util.List<String> riskEventTypesV2;
+    /**
+     * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     */
+    private RiskLevel riskLevelAggregated;
+    /**
+     * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     */
+    private RiskLevel riskLevelDuringSignIn;
+    /**
+     * The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only).
+     */
+    private RiskState riskState;
+    /**
+     * The unique identifier of the key credential used by the service principal to authenticate.
+     */
+    private String servicePrincipalCredentialKeyId;
+    /**
+     * The certificate thumbprint of the certificate used by the service principal to authenticate.
+     */
+    private String servicePrincipalCredentialThumbprint;
+    /**
+     * The application identifier used for sign-in. This field is populated when you are signing in using an application. Supports $filter (eq and startsWith operators only).
+     */
+    private String servicePrincipalId;
+    /**
+     * The application name used for sign-in. This field is populated when you are signing in using an application. Supports $filter (eq and startsWith operators only).
+     */
+    private String servicePrincipalName;
+    /**
+     * Any conditional access session management policies that were applied during the sign-in event.
+     */
+    private java.util.List<SessionLifetimePolicy> sessionLifetimePolicies;
+    /**
+     * Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue. Supports $filter (eq, ne).
+     */
+    private java.util.List<String> signInEventTypes;
+    /**
+     * The identification that the user provided to sign in. It may be the userPrincipalName but it's also populated when a user signs in using other identifiers.
+     */
+    private String signInIdentifier;
+    /**
+     * The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
+     */
+    private SignInIdentifierType signInIdentifierType;
+    /**
+     * The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.
+     */
+    private SignInStatus status;
+    /**
+     * The name of the identity provider. For example, sts.microsoft.com. Supports $filter (eq operator only).
+     */
+    private String tokenIssuerName;
+    /**
+     * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
+     */
+    private TokenIssuerType tokenIssuerType;
+    /**
+     * A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers.
+     */
+    private String uniqueTokenIdentifier;
+    /**
+     * The user agent information related to sign-in. Supports $filter (eq and startsWith operators only).
+     */
+    private String userAgent;
+    /**
+     * The display name of the user. Supports $filter (eq and startsWith operators only).
+     */
+    private String userDisplayName;
+    /**
+     * The identifier of the user. Supports $filter (eq operator only).
+     */
+    private String userId;
+    /**
+     * The UPN of the user. Supports $filter (eq and startsWith operators only).
+     */
+    private String userPrincipalName;
+    /**
+     * Identifies whether the user is a member or guest in the tenant. Possible values are: member, guest, unknownFutureValue.
+     */
+    private SignInUserType userType;
+    /**
+     * Instantiates a new signIn and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SignIn() {
         super();
-        this.setOdataType("#microsoft.graph.signIn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SignIn
+     * @return a signIn
      */
     @javax.annotation.Nonnull
     public static SignIn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.restrictedSignIn": return new RestrictedSignIn();
-            }
-        }
         return new SignIn();
     }
     /**
@@ -161,7 +288,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppDisplayName() {
-        return this._appDisplayName;
+        return this.appDisplayName;
     }
     /**
      * Gets the appId property value. The application identifier in Azure Active Directory. Supports $filter (eq operator only).
@@ -169,7 +296,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppId() {
-        return this._appId;
+        return this.appId;
     }
     /**
      * Gets the appliedConditionalAccessPolicies property value. A list of conditional access policies that are triggered by the corresponding sign-in activity.
@@ -177,7 +304,31 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AppliedConditionalAccessPolicy> getAppliedConditionalAccessPolicies() {
-        return this._appliedConditionalAccessPolicies;
+        return this.appliedConditionalAccessPolicies;
+    }
+    /**
+     * Gets the appliedEventListeners property value. Detailed information about the listeners, such as Azure Logic Apps and Azure Functions, that were triggered by the corresponding events in the sign-in event.
+     * @return a appliedAuthenticationEventListener
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AppliedAuthenticationEventListener> getAppliedEventListeners() {
+        return this.appliedEventListeners;
+    }
+    /**
+     * Gets the authenticationAppDeviceDetails property value. Provides details about the app and device used during an Azure AD authentication step.
+     * @return a authenticationAppDeviceDetails
+     */
+    @javax.annotation.Nullable
+    public AuthenticationAppDeviceDetails getAuthenticationAppDeviceDetails() {
+        return this.authenticationAppDeviceDetails;
+    }
+    /**
+     * Gets the authenticationAppPolicyEvaluationDetails property value. Provides details of the Azure AD policies applied to a user and client authentication app during an authentication step.
+     * @return a authenticationAppPolicyDetails
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AuthenticationAppPolicyDetails> getAuthenticationAppPolicyEvaluationDetails() {
+        return this.authenticationAppPolicyEvaluationDetails;
     }
     /**
      * Gets the authenticationContextClassReferences property value. Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in.
@@ -185,7 +336,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationContext> getAuthenticationContextClassReferences() {
-        return this._authenticationContextClassReferences;
+        return this.authenticationContextClassReferences;
     }
     /**
      * Gets the authenticationDetails property value. The result of the authentication attempt and additional details on the authentication method.
@@ -193,7 +344,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationDetail> getAuthenticationDetails() {
-        return this._authenticationDetails;
+        return this.authenticationDetails;
     }
     /**
      * Gets the authenticationMethodsUsed property value. The authentication methods used. Possible values: SMS, Authenticator App, App Verification code, Password, FIDO, PTA, or PHS.
@@ -201,7 +352,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAuthenticationMethodsUsed() {
-        return this._authenticationMethodsUsed;
+        return this.authenticationMethodsUsed;
     }
     /**
      * Gets the authenticationProcessingDetails property value. Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication.
@@ -209,7 +360,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValue> getAuthenticationProcessingDetails() {
-        return this._authenticationProcessingDetails;
+        return this.authenticationProcessingDetails;
     }
     /**
      * Gets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
@@ -217,7 +368,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ProtocolType getAuthenticationProtocol() {
-        return this._authenticationProtocol;
+        return this.authenticationProtocol;
     }
     /**
      * Gets the authenticationRequirement property value. This holds the highest level of authentication needed through all the sign-in steps, for sign-in to succeed. Supports $filter (eq and startsWith operators only).
@@ -225,7 +376,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAuthenticationRequirement() {
-        return this._authenticationRequirement;
+        return this.authenticationRequirement;
     }
     /**
      * Gets the authenticationRequirementPolicies property value. Sources of authentication requirement, such as conditional access, per-user MFA, identity protection, and security defaults.
@@ -233,7 +384,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationRequirementPolicy> getAuthenticationRequirementPolicies() {
-        return this._authenticationRequirementPolicies;
+        return this.authenticationRequirementPolicies;
     }
     /**
      * Gets the autonomousSystemNumber property value. The Autonomous System Number (ASN) of the network used by the actor.
@@ -241,7 +392,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getAutonomousSystemNumber() {
-        return this._autonomousSystemNumber;
+        return this.autonomousSystemNumber;
     }
     /**
      * Gets the azureResourceId property value. Contains a fully qualified Azure Resource Manager ID of an Azure resource accessed during the sign-in.
@@ -249,7 +400,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureResourceId() {
-        return this._azureResourceId;
+        return this.azureResourceId;
     }
     /**
      * Gets the clientAppUsed property value. The legacy client used for sign-in activity. For example: Browser, Exchange ActiveSync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).
@@ -257,7 +408,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getClientAppUsed() {
-        return this._clientAppUsed;
+        return this.clientAppUsed;
     }
     /**
      * Gets the clientCredentialType property value. Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
@@ -265,7 +416,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ClientCredentialType getClientCredentialType() {
-        return this._clientCredentialType;
+        return this.clientCredentialType;
     }
     /**
      * Gets the conditionalAccessStatus property value. The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only).
@@ -273,7 +424,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ConditionalAccessStatus getConditionalAccessStatus() {
-        return this._conditionalAccessStatus;
+        return this.conditionalAccessStatus;
     }
     /**
      * Gets the correlationId property value. The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only).
@@ -281,7 +432,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCorrelationId() {
-        return this._correlationId;
+        return this.correlationId;
     }
     /**
      * Gets the createdDateTime property value. The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).
@@ -289,7 +440,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none.
@@ -297,7 +448,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SignInAccessType getCrossTenantAccessType() {
-        return this._crossTenantAccessType;
+        return this.crossTenantAccessType;
     }
     /**
      * Gets the deviceDetail property value. The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSystem properties.
@@ -305,7 +456,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceDetail getDeviceDetail() {
-        return this._deviceDetail;
+        return this.deviceDetail;
     }
     /**
      * Gets the federatedCredentialId property value. Contains the identifier of an application's federated identity credential, if a federated identity credential was used to sign in.
@@ -313,77 +464,80 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFederatedCredentialId() {
-        return this._federatedCredentialId;
+        return this.federatedCredentialId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SignIn currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("appliedConditionalAccessPolicies", (n) -> { currentObject.setAppliedConditionalAccessPolicies(n.getCollectionOfObjectValues(AppliedConditionalAccessPolicy::createFromDiscriminatorValue)); });
-            this.put("authenticationContextClassReferences", (n) -> { currentObject.setAuthenticationContextClassReferences(n.getCollectionOfObjectValues(AuthenticationContext::createFromDiscriminatorValue)); });
-            this.put("authenticationDetails", (n) -> { currentObject.setAuthenticationDetails(n.getCollectionOfObjectValues(AuthenticationDetail::createFromDiscriminatorValue)); });
-            this.put("authenticationMethodsUsed", (n) -> { currentObject.setAuthenticationMethodsUsed(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("authenticationProcessingDetails", (n) -> { currentObject.setAuthenticationProcessingDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-            this.put("authenticationProtocol", (n) -> { currentObject.setAuthenticationProtocol(n.getEnumValue(ProtocolType.class)); });
-            this.put("authenticationRequirement", (n) -> { currentObject.setAuthenticationRequirement(n.getStringValue()); });
-            this.put("authenticationRequirementPolicies", (n) -> { currentObject.setAuthenticationRequirementPolicies(n.getCollectionOfObjectValues(AuthenticationRequirementPolicy::createFromDiscriminatorValue)); });
-            this.put("autonomousSystemNumber", (n) -> { currentObject.setAutonomousSystemNumber(n.getIntegerValue()); });
-            this.put("azureResourceId", (n) -> { currentObject.setAzureResourceId(n.getStringValue()); });
-            this.put("clientAppUsed", (n) -> { currentObject.setClientAppUsed(n.getStringValue()); });
-            this.put("clientCredentialType", (n) -> { currentObject.setClientCredentialType(n.getEnumValue(ClientCredentialType.class)); });
-            this.put("conditionalAccessStatus", (n) -> { currentObject.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus.class)); });
-            this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("crossTenantAccessType", (n) -> { currentObject.setCrossTenantAccessType(n.getEnumValue(SignInAccessType.class)); });
-            this.put("deviceDetail", (n) -> { currentObject.setDeviceDetail(n.getObjectValue(DeviceDetail::createFromDiscriminatorValue)); });
-            this.put("federatedCredentialId", (n) -> { currentObject.setFederatedCredentialId(n.getStringValue()); });
-            this.put("flaggedForReview", (n) -> { currentObject.setFlaggedForReview(n.getBooleanValue()); });
-            this.put("homeTenantId", (n) -> { currentObject.setHomeTenantId(n.getStringValue()); });
-            this.put("homeTenantName", (n) -> { currentObject.setHomeTenantName(n.getStringValue()); });
-            this.put("incomingTokenType", (n) -> { currentObject.setIncomingTokenType(n.getEnumValue(IncomingTokenType.class)); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("ipAddressFromResourceProvider", (n) -> { currentObject.setIpAddressFromResourceProvider(n.getStringValue()); });
-            this.put("isInteractive", (n) -> { currentObject.setIsInteractive(n.getBooleanValue()); });
-            this.put("isTenantRestricted", (n) -> { currentObject.setIsTenantRestricted(n.getBooleanValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
-            this.put("mfaDetail", (n) -> { currentObject.setMfaDetail(n.getObjectValue(MfaDetail::createFromDiscriminatorValue)); });
-            this.put("networkLocationDetails", (n) -> { currentObject.setNetworkLocationDetails(n.getCollectionOfObjectValues(NetworkLocationDetail::createFromDiscriminatorValue)); });
-            this.put("originalRequestId", (n) -> { currentObject.setOriginalRequestId(n.getStringValue()); });
-            this.put("privateLinkDetails", (n) -> { currentObject.setPrivateLinkDetails(n.getObjectValue(PrivateLinkDetails::createFromDiscriminatorValue)); });
-            this.put("processingTimeInMilliseconds", (n) -> { currentObject.setProcessingTimeInMilliseconds(n.getIntegerValue()); });
-            this.put("resourceDisplayName", (n) -> { currentObject.setResourceDisplayName(n.getStringValue()); });
-            this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-            this.put("resourceServicePrincipalId", (n) -> { currentObject.setResourceServicePrincipalId(n.getStringValue()); });
-            this.put("resourceTenantId", (n) -> { currentObject.setResourceTenantId(n.getStringValue()); });
-            this.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
-            this.put("riskEventTypes_v2", (n) -> { currentObject.setRiskEventTypes_v2(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("riskLevelAggregated", (n) -> { currentObject.setRiskLevelAggregated(n.getEnumValue(RiskLevel.class)); });
-            this.put("riskLevelDuringSignIn", (n) -> { currentObject.setRiskLevelDuringSignIn(n.getEnumValue(RiskLevel.class)); });
-            this.put("riskState", (n) -> { currentObject.setRiskState(n.getEnumValue(RiskState.class)); });
-            this.put("servicePrincipalCredentialKeyId", (n) -> { currentObject.setServicePrincipalCredentialKeyId(n.getStringValue()); });
-            this.put("servicePrincipalCredentialThumbprint", (n) -> { currentObject.setServicePrincipalCredentialThumbprint(n.getStringValue()); });
-            this.put("servicePrincipalId", (n) -> { currentObject.setServicePrincipalId(n.getStringValue()); });
-            this.put("servicePrincipalName", (n) -> { currentObject.setServicePrincipalName(n.getStringValue()); });
-            this.put("sessionLifetimePolicies", (n) -> { currentObject.setSessionLifetimePolicies(n.getCollectionOfObjectValues(SessionLifetimePolicy::createFromDiscriminatorValue)); });
-            this.put("signInEventTypes", (n) -> { currentObject.setSignInEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("signInIdentifier", (n) -> { currentObject.setSignInIdentifier(n.getStringValue()); });
-            this.put("signInIdentifierType", (n) -> { currentObject.setSignInIdentifierType(n.getEnumValue(SignInIdentifierType.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
-            this.put("tokenIssuerName", (n) -> { currentObject.setTokenIssuerName(n.getStringValue()); });
-            this.put("tokenIssuerType", (n) -> { currentObject.setTokenIssuerType(n.getEnumValue(TokenIssuerType.class)); });
-            this.put("uniqueTokenIdentifier", (n) -> { currentObject.setUniqueTokenIdentifier(n.getStringValue()); });
-            this.put("userAgent", (n) -> { currentObject.setUserAgent(n.getStringValue()); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("userType", (n) -> { currentObject.setUserType(n.getEnumValue(SignInUserType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("appliedConditionalAccessPolicies", (n) -> { this.setAppliedConditionalAccessPolicies(n.getCollectionOfObjectValues(AppliedConditionalAccessPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("appliedEventListeners", (n) -> { this.setAppliedEventListeners(n.getCollectionOfObjectValues(AppliedAuthenticationEventListener::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationAppDeviceDetails", (n) -> { this.setAuthenticationAppDeviceDetails(n.getObjectValue(AuthenticationAppDeviceDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationAppPolicyEvaluationDetails", (n) -> { this.setAuthenticationAppPolicyEvaluationDetails(n.getCollectionOfObjectValues(AuthenticationAppPolicyDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationContextClassReferences", (n) -> { this.setAuthenticationContextClassReferences(n.getCollectionOfObjectValues(AuthenticationContext::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationDetails", (n) -> { this.setAuthenticationDetails(n.getCollectionOfObjectValues(AuthenticationDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationMethodsUsed", (n) -> { this.setAuthenticationMethodsUsed(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("authenticationProcessingDetails", (n) -> { this.setAuthenticationProcessingDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationProtocol", (n) -> { this.setAuthenticationProtocol(n.getEnumValue(ProtocolType.class)); });
+        deserializerMap.put("authenticationRequirement", (n) -> { this.setAuthenticationRequirement(n.getStringValue()); });
+        deserializerMap.put("authenticationRequirementPolicies", (n) -> { this.setAuthenticationRequirementPolicies(n.getCollectionOfObjectValues(AuthenticationRequirementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("autonomousSystemNumber", (n) -> { this.setAutonomousSystemNumber(n.getIntegerValue()); });
+        deserializerMap.put("azureResourceId", (n) -> { this.setAzureResourceId(n.getStringValue()); });
+        deserializerMap.put("clientAppUsed", (n) -> { this.setClientAppUsed(n.getStringValue()); });
+        deserializerMap.put("clientCredentialType", (n) -> { this.setClientCredentialType(n.getEnumValue(ClientCredentialType.class)); });
+        deserializerMap.put("conditionalAccessStatus", (n) -> { this.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus.class)); });
+        deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("crossTenantAccessType", (n) -> { this.setCrossTenantAccessType(n.getEnumValue(SignInAccessType.class)); });
+        deserializerMap.put("deviceDetail", (n) -> { this.setDeviceDetail(n.getObjectValue(DeviceDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("federatedCredentialId", (n) -> { this.setFederatedCredentialId(n.getStringValue()); });
+        deserializerMap.put("flaggedForReview", (n) -> { this.setFlaggedForReview(n.getBooleanValue()); });
+        deserializerMap.put("homeTenantId", (n) -> { this.setHomeTenantId(n.getStringValue()); });
+        deserializerMap.put("homeTenantName", (n) -> { this.setHomeTenantName(n.getStringValue()); });
+        deserializerMap.put("incomingTokenType", (n) -> { this.setIncomingTokenType(n.getEnumValue(IncomingTokenType.class)); });
+        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("ipAddressFromResourceProvider", (n) -> { this.setIpAddressFromResourceProvider(n.getStringValue()); });
+        deserializerMap.put("isInteractive", (n) -> { this.setIsInteractive(n.getBooleanValue()); });
+        deserializerMap.put("isTenantRestricted", (n) -> { this.setIsTenantRestricted(n.getBooleanValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedServiceIdentity", (n) -> { this.setManagedServiceIdentity(n.getObjectValue(ManagedIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("mfaDetail", (n) -> { this.setMfaDetail(n.getObjectValue(MfaDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("networkLocationDetails", (n) -> { this.setNetworkLocationDetails(n.getCollectionOfObjectValues(NetworkLocationDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("originalRequestId", (n) -> { this.setOriginalRequestId(n.getStringValue()); });
+        deserializerMap.put("privateLinkDetails", (n) -> { this.setPrivateLinkDetails(n.getObjectValue(PrivateLinkDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("processingTimeInMilliseconds", (n) -> { this.setProcessingTimeInMilliseconds(n.getIntegerValue()); });
+        deserializerMap.put("resourceDisplayName", (n) -> { this.setResourceDisplayName(n.getStringValue()); });
+        deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
+        deserializerMap.put("resourceServicePrincipalId", (n) -> { this.setResourceServicePrincipalId(n.getStringValue()); });
+        deserializerMap.put("resourceTenantId", (n) -> { this.setResourceTenantId(n.getStringValue()); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("riskEventTypes_v2", (n) -> { this.setRiskEventTypesV2(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("riskLevelAggregated", (n) -> { this.setRiskLevelAggregated(n.getEnumValue(RiskLevel.class)); });
+        deserializerMap.put("riskLevelDuringSignIn", (n) -> { this.setRiskLevelDuringSignIn(n.getEnumValue(RiskLevel.class)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState.class)); });
+        deserializerMap.put("servicePrincipalCredentialKeyId", (n) -> { this.setServicePrincipalCredentialKeyId(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalCredentialThumbprint", (n) -> { this.setServicePrincipalCredentialThumbprint(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalName", (n) -> { this.setServicePrincipalName(n.getStringValue()); });
+        deserializerMap.put("sessionLifetimePolicies", (n) -> { this.setSessionLifetimePolicies(n.getCollectionOfObjectValues(SessionLifetimePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("signInEventTypes", (n) -> { this.setSignInEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("signInIdentifier", (n) -> { this.setSignInIdentifier(n.getStringValue()); });
+        deserializerMap.put("signInIdentifierType", (n) -> { this.setSignInIdentifierType(n.getEnumValue(SignInIdentifierType.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("tokenIssuerName", (n) -> { this.setTokenIssuerName(n.getStringValue()); });
+        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(TokenIssuerType.class)); });
+        deserializerMap.put("uniqueTokenIdentifier", (n) -> { this.setUniqueTokenIdentifier(n.getStringValue()); });
+        deserializerMap.put("userAgent", (n) -> { this.setUserAgent(n.getStringValue()); });
+        deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(SignInUserType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the flaggedForReview property value. During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
@@ -391,7 +545,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getFlaggedForReview() {
-        return this._flaggedForReview;
+        return this.flaggedForReview;
     }
     /**
      * Gets the homeTenantId property value. The tenant identifier of the user initiating the sign in. Not applicable in Managed Identity or service principal sign ins.
@@ -399,7 +553,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getHomeTenantId() {
-        return this._homeTenantId;
+        return this.homeTenantId;
     }
     /**
      * Gets the homeTenantName property value. For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
@@ -407,7 +561,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getHomeTenantName() {
-        return this._homeTenantName;
+        return this.homeTenantName;
     }
     /**
      * Gets the incomingTokenType property value. Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
@@ -415,7 +569,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IncomingTokenType getIncomingTokenType() {
-        return this._incomingTokenType;
+        return this.incomingTokenType;
     }
     /**
      * Gets the ipAddress property value. The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only).
@@ -423,7 +577,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIpAddress() {
-        return this._ipAddress;
+        return this.ipAddress;
     }
     /**
      * Gets the ipAddressFromResourceProvider property value. The IP address a user used to reach a resource provider, used to determine Conditional Access compliance for some policies. For example, when a user interacts with Exchange Online, the IP address Exchange receives from the user may be recorded here. This value is often null.
@@ -431,7 +585,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIpAddressFromResourceProvider() {
-        return this._ipAddressFromResourceProvider;
+        return this.ipAddressFromResourceProvider;
     }
     /**
      * Gets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
@@ -439,7 +593,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsInteractive() {
-        return this._isInteractive;
+        return this.isInteractive;
     }
     /**
      * Gets the isTenantRestricted property value. Shows whether the sign in event was subject to an Azure AD tenant restriction policy.
@@ -447,7 +601,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsTenantRestricted() {
-        return this._isTenantRestricted;
+        return this.isTenantRestricted;
     }
     /**
      * Gets the location property value. The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
@@ -455,7 +609,15 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SignInLocation getLocation() {
-        return this._location;
+        return this.location;
+    }
+    /**
+     * Gets the managedServiceIdentity property value. Contains information about the managed identity used for the sign in, including its type and associated Azure Resource Manager (ARM) resource ID.
+     * @return a managedIdentity
+     */
+    @javax.annotation.Nullable
+    public ManagedIdentity getManagedServiceIdentity() {
+        return this.managedServiceIdentity;
     }
     /**
      * Gets the mfaDetail property value. The mfaDetail property
@@ -463,7 +625,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public MfaDetail getMfaDetail() {
-        return this._mfaDetail;
+        return this.mfaDetail;
     }
     /**
      * Gets the networkLocationDetails property value. The network location details including the type of network used and its names.
@@ -471,7 +633,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<NetworkLocationDetail> getNetworkLocationDetails() {
-        return this._networkLocationDetails;
+        return this.networkLocationDetails;
     }
     /**
      * Gets the originalRequestId property value. The request identifier of the first request in the authentication sequence. Supports $filter (eq operator only).
@@ -479,7 +641,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOriginalRequestId() {
-        return this._originalRequestId;
+        return this.originalRequestId;
     }
     /**
      * Gets the privateLinkDetails property value. Contains information about the Azure AD Private Link policy that is associated with the sign in event.
@@ -487,7 +649,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrivateLinkDetails getPrivateLinkDetails() {
-        return this._privateLinkDetails;
+        return this.privateLinkDetails;
     }
     /**
      * Gets the processingTimeInMilliseconds property value. The request processing time in milliseconds in AD STS.
@@ -495,7 +657,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getProcessingTimeInMilliseconds() {
-        return this._processingTimeInMilliseconds;
+        return this.processingTimeInMilliseconds;
     }
     /**
      * Gets the resourceDisplayName property value. The name of the resource that the user signed in to. Supports $filter (eq operator only).
@@ -503,7 +665,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceDisplayName() {
-        return this._resourceDisplayName;
+        return this.resourceDisplayName;
     }
     /**
      * Gets the resourceId property value. The identifier of the resource that the user signed in to. Supports $filter (eq operator only).
@@ -511,7 +673,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceId() {
-        return this._resourceId;
+        return this.resourceId;
     }
     /**
      * Gets the resourceServicePrincipalId property value. The identifier of the service principal representing the target resource in the sign-in event.
@@ -519,7 +681,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceServicePrincipalId() {
-        return this._resourceServicePrincipalId;
+        return this.resourceServicePrincipalId;
     }
     /**
      * Gets the resourceTenantId property value. The tenant identifier of the resource referenced in the sign in.
@@ -527,7 +689,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceTenantId() {
-        return this._resourceTenantId;
+        return this.resourceTenantId;
     }
     /**
      * Gets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
@@ -535,15 +697,15 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RiskDetail getRiskDetail() {
-        return this._riskDetail;
+        return this.riskDetail;
     }
     /**
      * Gets the riskEventTypes_v2 property value. The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
      * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getRiskEventTypes_v2() {
-        return this._riskEventTypes_v2;
+    public java.util.List<String> getRiskEventTypesV2() {
+        return this.riskEventTypesV2;
     }
     /**
      * Gets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
@@ -551,7 +713,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RiskLevel getRiskLevelAggregated() {
-        return this._riskLevelAggregated;
+        return this.riskLevelAggregated;
     }
     /**
      * Gets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
@@ -559,7 +721,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RiskLevel getRiskLevelDuringSignIn() {
-        return this._riskLevelDuringSignIn;
+        return this.riskLevelDuringSignIn;
     }
     /**
      * Gets the riskState property value. The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only).
@@ -567,7 +729,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RiskState getRiskState() {
-        return this._riskState;
+        return this.riskState;
     }
     /**
      * Gets the servicePrincipalCredentialKeyId property value. The unique identifier of the key credential used by the service principal to authenticate.
@@ -575,7 +737,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getServicePrincipalCredentialKeyId() {
-        return this._servicePrincipalCredentialKeyId;
+        return this.servicePrincipalCredentialKeyId;
     }
     /**
      * Gets the servicePrincipalCredentialThumbprint property value. The certificate thumbprint of the certificate used by the service principal to authenticate.
@@ -583,7 +745,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getServicePrincipalCredentialThumbprint() {
-        return this._servicePrincipalCredentialThumbprint;
+        return this.servicePrincipalCredentialThumbprint;
     }
     /**
      * Gets the servicePrincipalId property value. The application identifier used for sign-in. This field is populated when you are signing in using an application. Supports $filter (eq and startsWith operators only).
@@ -591,7 +753,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getServicePrincipalId() {
-        return this._servicePrincipalId;
+        return this.servicePrincipalId;
     }
     /**
      * Gets the servicePrincipalName property value. The application name used for sign-in. This field is populated when you are signing in using an application. Supports $filter (eq and startsWith operators only).
@@ -599,7 +761,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getServicePrincipalName() {
-        return this._servicePrincipalName;
+        return this.servicePrincipalName;
     }
     /**
      * Gets the sessionLifetimePolicies property value. Any conditional access session management policies that were applied during the sign-in event.
@@ -607,7 +769,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SessionLifetimePolicy> getSessionLifetimePolicies() {
-        return this._sessionLifetimePolicies;
+        return this.sessionLifetimePolicies;
     }
     /**
      * Gets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue. Supports $filter (eq, ne).
@@ -615,7 +777,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSignInEventTypes() {
-        return this._signInEventTypes;
+        return this.signInEventTypes;
     }
     /**
      * Gets the signInIdentifier property value. The identification that the user provided to sign in. It may be the userPrincipalName but it's also populated when a user signs in using other identifiers.
@@ -623,7 +785,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSignInIdentifier() {
-        return this._signInIdentifier;
+        return this.signInIdentifier;
     }
     /**
      * Gets the signInIdentifierType property value. The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
@@ -631,7 +793,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SignInIdentifierType getSignInIdentifierType() {
-        return this._signInIdentifierType;
+        return this.signInIdentifierType;
     }
     /**
      * Gets the status property value. The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.
@@ -639,7 +801,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SignInStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the tokenIssuerName property value. The name of the identity provider. For example, sts.microsoft.com. Supports $filter (eq operator only).
@@ -647,7 +809,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTokenIssuerName() {
-        return this._tokenIssuerName;
+        return this.tokenIssuerName;
     }
     /**
      * Gets the tokenIssuerType property value. The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
@@ -655,7 +817,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TokenIssuerType getTokenIssuerType() {
-        return this._tokenIssuerType;
+        return this.tokenIssuerType;
     }
     /**
      * Gets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers.
@@ -663,7 +825,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUniqueTokenIdentifier() {
-        return this._uniqueTokenIdentifier;
+        return this.uniqueTokenIdentifier;
     }
     /**
      * Gets the userAgent property value. The user agent information related to sign-in. Supports $filter (eq and startsWith operators only).
@@ -671,7 +833,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserAgent() {
-        return this._userAgent;
+        return this.userAgent;
     }
     /**
      * Gets the userDisplayName property value. The display name of the user. Supports $filter (eq and startsWith operators only).
@@ -679,7 +841,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserDisplayName() {
-        return this._userDisplayName;
+        return this.userDisplayName;
     }
     /**
      * Gets the userId property value. The identifier of the user. Supports $filter (eq operator only).
@@ -687,7 +849,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Gets the userPrincipalName property value. The UPN of the user. Supports $filter (eq and startsWith operators only).
@@ -695,7 +857,7 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Gets the userType property value. Identifies whether the user is a member or guest in the tenant. Possible values are: member, guest, unknownFutureValue.
@@ -703,19 +865,23 @@ public class SignIn extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SignInUserType getUserType() {
-        return this._userType;
+        return this.userType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appDisplayName", this.getAppDisplayName());
         writer.writeStringValue("appId", this.getAppId());
         writer.writeCollectionOfObjectValues("appliedConditionalAccessPolicies", this.getAppliedConditionalAccessPolicies());
+        writer.writeCollectionOfObjectValues("appliedEventListeners", this.getAppliedEventListeners());
+        writer.writeObjectValue("authenticationAppDeviceDetails", this.getAuthenticationAppDeviceDetails());
+        writer.writeCollectionOfObjectValues("authenticationAppPolicyEvaluationDetails", this.getAuthenticationAppPolicyEvaluationDetails());
         writer.writeCollectionOfObjectValues("authenticationContextClassReferences", this.getAuthenticationContextClassReferences());
         writer.writeCollectionOfObjectValues("authenticationDetails", this.getAuthenticationDetails());
         writer.writeCollectionOfPrimitiveValues("authenticationMethodsUsed", this.getAuthenticationMethodsUsed());
@@ -742,6 +908,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeBooleanValue("isInteractive", this.getIsInteractive());
         writer.writeBooleanValue("isTenantRestricted", this.getIsTenantRestricted());
         writer.writeObjectValue("location", this.getLocation());
+        writer.writeObjectValue("managedServiceIdentity", this.getManagedServiceIdentity());
         writer.writeObjectValue("mfaDetail", this.getMfaDetail());
         writer.writeCollectionOfObjectValues("networkLocationDetails", this.getNetworkLocationDetails());
         writer.writeStringValue("originalRequestId", this.getOriginalRequestId());
@@ -752,7 +919,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("resourceServicePrincipalId", this.getResourceServicePrincipalId());
         writer.writeStringValue("resourceTenantId", this.getResourceTenantId());
         writer.writeEnumValue("riskDetail", this.getRiskDetail());
-        writer.writeCollectionOfPrimitiveValues("riskEventTypes_v2", this.getRiskEventTypes_v2());
+        writer.writeCollectionOfPrimitiveValues("riskEventTypes_v2", this.getRiskEventTypesV2());
         writer.writeEnumValue("riskLevelAggregated", this.getRiskLevelAggregated());
         writer.writeEnumValue("riskLevelDuringSignIn", this.getRiskLevelDuringSignIn());
         writer.writeEnumValue("riskState", this.getRiskState());
@@ -779,479 +946,575 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
-        this._appDisplayName = value;
+        this.appDisplayName = value;
     }
     /**
      * Sets the appId property value. The application identifier in Azure Active Directory. Supports $filter (eq operator only).
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
-        this._appId = value;
+        this.appId = value;
     }
     /**
      * Sets the appliedConditionalAccessPolicies property value. A list of conditional access policies that are triggered by the corresponding sign-in activity.
      * @param value Value to set for the appliedConditionalAccessPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliedConditionalAccessPolicies(@javax.annotation.Nullable final java.util.List<AppliedConditionalAccessPolicy> value) {
-        this._appliedConditionalAccessPolicies = value;
+        this.appliedConditionalAccessPolicies = value;
+    }
+    /**
+     * Sets the appliedEventListeners property value. Detailed information about the listeners, such as Azure Logic Apps and Azure Functions, that were triggered by the corresponding events in the sign-in event.
+     * @param value Value to set for the appliedEventListeners property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAppliedEventListeners(@javax.annotation.Nullable final java.util.List<AppliedAuthenticationEventListener> value) {
+        this.appliedEventListeners = value;
+    }
+    /**
+     * Sets the authenticationAppDeviceDetails property value. Provides details about the app and device used during an Azure AD authentication step.
+     * @param value Value to set for the authenticationAppDeviceDetails property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthenticationAppDeviceDetails(@javax.annotation.Nullable final AuthenticationAppDeviceDetails value) {
+        this.authenticationAppDeviceDetails = value;
+    }
+    /**
+     * Sets the authenticationAppPolicyEvaluationDetails property value. Provides details of the Azure AD policies applied to a user and client authentication app during an authentication step.
+     * @param value Value to set for the authenticationAppPolicyEvaluationDetails property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthenticationAppPolicyEvaluationDetails(@javax.annotation.Nullable final java.util.List<AuthenticationAppPolicyDetails> value) {
+        this.authenticationAppPolicyEvaluationDetails = value;
     }
     /**
      * Sets the authenticationContextClassReferences property value. Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in.
      * @param value Value to set for the authenticationContextClassReferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationContextClassReferences(@javax.annotation.Nullable final java.util.List<AuthenticationContext> value) {
-        this._authenticationContextClassReferences = value;
+        this.authenticationContextClassReferences = value;
     }
     /**
      * Sets the authenticationDetails property value. The result of the authentication attempt and additional details on the authentication method.
      * @param value Value to set for the authenticationDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationDetails(@javax.annotation.Nullable final java.util.List<AuthenticationDetail> value) {
-        this._authenticationDetails = value;
+        this.authenticationDetails = value;
     }
     /**
      * Sets the authenticationMethodsUsed property value. The authentication methods used. Possible values: SMS, Authenticator App, App Verification code, Password, FIDO, PTA, or PHS.
      * @param value Value to set for the authenticationMethodsUsed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethodsUsed(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._authenticationMethodsUsed = value;
+        this.authenticationMethodsUsed = value;
     }
     /**
      * Sets the authenticationProcessingDetails property value. Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication.
      * @param value Value to set for the authenticationProcessingDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationProcessingDetails(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
-        this._authenticationProcessingDetails = value;
+        this.authenticationProcessingDetails = value;
     }
     /**
      * Sets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
      * @param value Value to set for the authenticationProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationProtocol(@javax.annotation.Nullable final ProtocolType value) {
-        this._authenticationProtocol = value;
+        this.authenticationProtocol = value;
     }
     /**
      * Sets the authenticationRequirement property value. This holds the highest level of authentication needed through all the sign-in steps, for sign-in to succeed. Supports $filter (eq and startsWith operators only).
      * @param value Value to set for the authenticationRequirement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationRequirement(@javax.annotation.Nullable final String value) {
-        this._authenticationRequirement = value;
+        this.authenticationRequirement = value;
     }
     /**
      * Sets the authenticationRequirementPolicies property value. Sources of authentication requirement, such as conditional access, per-user MFA, identity protection, and security defaults.
      * @param value Value to set for the authenticationRequirementPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationRequirementPolicies(@javax.annotation.Nullable final java.util.List<AuthenticationRequirementPolicy> value) {
-        this._authenticationRequirementPolicies = value;
+        this.authenticationRequirementPolicies = value;
     }
     /**
      * Sets the autonomousSystemNumber property value. The Autonomous System Number (ASN) of the network used by the actor.
      * @param value Value to set for the autonomousSystemNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutonomousSystemNumber(@javax.annotation.Nullable final Integer value) {
-        this._autonomousSystemNumber = value;
+        this.autonomousSystemNumber = value;
     }
     /**
      * Sets the azureResourceId property value. Contains a fully qualified Azure Resource Manager ID of an Azure resource accessed during the sign-in.
      * @param value Value to set for the azureResourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureResourceId(@javax.annotation.Nullable final String value) {
-        this._azureResourceId = value;
+        this.azureResourceId = value;
     }
     /**
      * Sets the clientAppUsed property value. The legacy client used for sign-in activity. For example: Browser, Exchange ActiveSync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).
      * @param value Value to set for the clientAppUsed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientAppUsed(@javax.annotation.Nullable final String value) {
-        this._clientAppUsed = value;
+        this.clientAppUsed = value;
     }
     /**
      * Sets the clientCredentialType property value. Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
      * @param value Value to set for the clientCredentialType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientCredentialType(@javax.annotation.Nullable final ClientCredentialType value) {
-        this._clientCredentialType = value;
+        this.clientCredentialType = value;
     }
     /**
      * Sets the conditionalAccessStatus property value. The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only).
      * @param value Value to set for the conditionalAccessStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessStatus(@javax.annotation.Nullable final ConditionalAccessStatus value) {
-        this._conditionalAccessStatus = value;
+        this.conditionalAccessStatus = value;
     }
     /**
      * Sets the correlationId property value. The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only).
      * @param value Value to set for the correlationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCorrelationId(@javax.annotation.Nullable final String value) {
-        this._correlationId = value;
+        this.correlationId = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none.
      * @param value Value to set for the crossTenantAccessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCrossTenantAccessType(@javax.annotation.Nullable final SignInAccessType value) {
-        this._crossTenantAccessType = value;
+        this.crossTenantAccessType = value;
     }
     /**
      * Sets the deviceDetail property value. The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSystem properties.
      * @param value Value to set for the deviceDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDetail(@javax.annotation.Nullable final DeviceDetail value) {
-        this._deviceDetail = value;
+        this.deviceDetail = value;
     }
     /**
      * Sets the federatedCredentialId property value. Contains the identifier of an application's federated identity credential, if a federated identity credential was used to sign in.
      * @param value Value to set for the federatedCredentialId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFederatedCredentialId(@javax.annotation.Nullable final String value) {
-        this._federatedCredentialId = value;
+        this.federatedCredentialId = value;
     }
     /**
      * Sets the flaggedForReview property value. During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
      * @param value Value to set for the flaggedForReview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlaggedForReview(@javax.annotation.Nullable final Boolean value) {
-        this._flaggedForReview = value;
+        this.flaggedForReview = value;
     }
     /**
      * Sets the homeTenantId property value. The tenant identifier of the user initiating the sign in. Not applicable in Managed Identity or service principal sign ins.
      * @param value Value to set for the homeTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeTenantId(@javax.annotation.Nullable final String value) {
-        this._homeTenantId = value;
+        this.homeTenantId = value;
     }
     /**
      * Sets the homeTenantName property value. For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
      * @param value Value to set for the homeTenantName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeTenantName(@javax.annotation.Nullable final String value) {
-        this._homeTenantName = value;
+        this.homeTenantName = value;
     }
     /**
      * Sets the incomingTokenType property value. Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
      * @param value Value to set for the incomingTokenType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncomingTokenType(@javax.annotation.Nullable final IncomingTokenType value) {
-        this._incomingTokenType = value;
+        this.incomingTokenType = value;
     }
     /**
      * Sets the ipAddress property value. The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only).
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
-        this._ipAddress = value;
+        this.ipAddress = value;
     }
     /**
      * Sets the ipAddressFromResourceProvider property value. The IP address a user used to reach a resource provider, used to determine Conditional Access compliance for some policies. For example, when a user interacts with Exchange Online, the IP address Exchange receives from the user may be recorded here. This value is often null.
      * @param value Value to set for the ipAddressFromResourceProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddressFromResourceProvider(@javax.annotation.Nullable final String value) {
-        this._ipAddressFromResourceProvider = value;
+        this.ipAddressFromResourceProvider = value;
     }
     /**
      * Sets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
      * @param value Value to set for the isInteractive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsInteractive(@javax.annotation.Nullable final Boolean value) {
-        this._isInteractive = value;
+        this.isInteractive = value;
     }
     /**
      * Sets the isTenantRestricted property value. Shows whether the sign in event was subject to an Azure AD tenant restriction policy.
      * @param value Value to set for the isTenantRestricted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsTenantRestricted(@javax.annotation.Nullable final Boolean value) {
-        this._isTenantRestricted = value;
+        this.isTenantRestricted = value;
     }
     /**
      * Sets the location property value. The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final SignInLocation value) {
-        this._location = value;
+        this.location = value;
+    }
+    /**
+     * Sets the managedServiceIdentity property value. Contains information about the managed identity used for the sign in, including its type and associated Azure Resource Manager (ARM) resource ID.
+     * @param value Value to set for the managedServiceIdentity property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setManagedServiceIdentity(@javax.annotation.Nullable final ManagedIdentity value) {
+        this.managedServiceIdentity = value;
     }
     /**
      * Sets the mfaDetail property value. The mfaDetail property
      * @param value Value to set for the mfaDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaDetail(@javax.annotation.Nullable final MfaDetail value) {
-        this._mfaDetail = value;
+        this.mfaDetail = value;
     }
     /**
      * Sets the networkLocationDetails property value. The network location details including the type of network used and its names.
      * @param value Value to set for the networkLocationDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkLocationDetails(@javax.annotation.Nullable final java.util.List<NetworkLocationDetail> value) {
-        this._networkLocationDetails = value;
+        this.networkLocationDetails = value;
     }
     /**
      * Sets the originalRequestId property value. The request identifier of the first request in the authentication sequence. Supports $filter (eq operator only).
      * @param value Value to set for the originalRequestId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginalRequestId(@javax.annotation.Nullable final String value) {
-        this._originalRequestId = value;
+        this.originalRequestId = value;
     }
     /**
      * Sets the privateLinkDetails property value. Contains information about the Azure AD Private Link policy that is associated with the sign in event.
      * @param value Value to set for the privateLinkDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivateLinkDetails(@javax.annotation.Nullable final PrivateLinkDetails value) {
-        this._privateLinkDetails = value;
+        this.privateLinkDetails = value;
     }
     /**
      * Sets the processingTimeInMilliseconds property value. The request processing time in milliseconds in AD STS.
      * @param value Value to set for the processingTimeInMilliseconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessingTimeInMilliseconds(@javax.annotation.Nullable final Integer value) {
-        this._processingTimeInMilliseconds = value;
+        this.processingTimeInMilliseconds = value;
     }
     /**
      * Sets the resourceDisplayName property value. The name of the resource that the user signed in to. Supports $filter (eq operator only).
      * @param value Value to set for the resourceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceDisplayName(@javax.annotation.Nullable final String value) {
-        this._resourceDisplayName = value;
+        this.resourceDisplayName = value;
     }
     /**
      * Sets the resourceId property value. The identifier of the resource that the user signed in to. Supports $filter (eq operator only).
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
-        this._resourceId = value;
+        this.resourceId = value;
     }
     /**
      * Sets the resourceServicePrincipalId property value. The identifier of the service principal representing the target resource in the sign-in event.
      * @param value Value to set for the resourceServicePrincipalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceServicePrincipalId(@javax.annotation.Nullable final String value) {
-        this._resourceServicePrincipalId = value;
+        this.resourceServicePrincipalId = value;
     }
     /**
      * Sets the resourceTenantId property value. The tenant identifier of the resource referenced in the sign in.
      * @param value Value to set for the resourceTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceTenantId(@javax.annotation.Nullable final String value) {
-        this._resourceTenantId = value;
+        this.resourceTenantId = value;
     }
     /**
      * Sets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskDetail(@javax.annotation.Nullable final RiskDetail value) {
-        this._riskDetail = value;
+        this.riskDetail = value;
     }
     /**
      * Sets the riskEventTypes_v2 property value. The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
-     * @param value Value to set for the riskEventTypes_v2 property.
+     * @param value Value to set for the riskEventTypesV2 property.
      * @return a void
      */
-    public void setRiskEventTypes_v2(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._riskEventTypes_v2 = value;
+    @javax.annotation.Nonnull
+    public void setRiskEventTypesV2(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.riskEventTypesV2 = value;
     }
     /**
      * Sets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelAggregated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLevelAggregated(@javax.annotation.Nullable final RiskLevel value) {
-        this._riskLevelAggregated = value;
+        this.riskLevelAggregated = value;
     }
     /**
      * Sets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelDuringSignIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLevelDuringSignIn(@javax.annotation.Nullable final RiskLevel value) {
-        this._riskLevelDuringSignIn = value;
+        this.riskLevelDuringSignIn = value;
     }
     /**
      * Sets the riskState property value. The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only).
      * @param value Value to set for the riskState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskState(@javax.annotation.Nullable final RiskState value) {
-        this._riskState = value;
+        this.riskState = value;
     }
     /**
      * Sets the servicePrincipalCredentialKeyId property value. The unique identifier of the key credential used by the service principal to authenticate.
      * @param value Value to set for the servicePrincipalCredentialKeyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalCredentialKeyId(@javax.annotation.Nullable final String value) {
-        this._servicePrincipalCredentialKeyId = value;
+        this.servicePrincipalCredentialKeyId = value;
     }
     /**
      * Sets the servicePrincipalCredentialThumbprint property value. The certificate thumbprint of the certificate used by the service principal to authenticate.
      * @param value Value to set for the servicePrincipalCredentialThumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalCredentialThumbprint(@javax.annotation.Nullable final String value) {
-        this._servicePrincipalCredentialThumbprint = value;
+        this.servicePrincipalCredentialThumbprint = value;
     }
     /**
      * Sets the servicePrincipalId property value. The application identifier used for sign-in. This field is populated when you are signing in using an application. Supports $filter (eq and startsWith operators only).
      * @param value Value to set for the servicePrincipalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalId(@javax.annotation.Nullable final String value) {
-        this._servicePrincipalId = value;
+        this.servicePrincipalId = value;
     }
     /**
      * Sets the servicePrincipalName property value. The application name used for sign-in. This field is populated when you are signing in using an application. Supports $filter (eq and startsWith operators only).
      * @param value Value to set for the servicePrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalName(@javax.annotation.Nullable final String value) {
-        this._servicePrincipalName = value;
+        this.servicePrincipalName = value;
     }
     /**
      * Sets the sessionLifetimePolicies property value. Any conditional access session management policies that were applied during the sign-in event.
      * @param value Value to set for the sessionLifetimePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionLifetimePolicies(@javax.annotation.Nullable final java.util.List<SessionLifetimePolicy> value) {
-        this._sessionLifetimePolicies = value;
+        this.sessionLifetimePolicies = value;
     }
     /**
      * Sets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue. Supports $filter (eq, ne).
      * @param value Value to set for the signInEventTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInEventTypes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._signInEventTypes = value;
+        this.signInEventTypes = value;
     }
     /**
      * Sets the signInIdentifier property value. The identification that the user provided to sign in. It may be the userPrincipalName but it's also populated when a user signs in using other identifiers.
      * @param value Value to set for the signInIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInIdentifier(@javax.annotation.Nullable final String value) {
-        this._signInIdentifier = value;
+        this.signInIdentifier = value;
     }
     /**
      * Sets the signInIdentifierType property value. The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
      * @param value Value to set for the signInIdentifierType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInIdentifierType(@javax.annotation.Nullable final SignInIdentifierType value) {
-        this._signInIdentifierType = value;
+        this.signInIdentifierType = value;
     }
     /**
      * Sets the status property value. The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SignInStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the tokenIssuerName property value. The name of the identity provider. For example, sts.microsoft.com. Supports $filter (eq operator only).
      * @param value Value to set for the tokenIssuerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenIssuerName(@javax.annotation.Nullable final String value) {
-        this._tokenIssuerName = value;
+        this.tokenIssuerName = value;
     }
     /**
      * Sets the tokenIssuerType property value. The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
      * @param value Value to set for the tokenIssuerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenIssuerType(@javax.annotation.Nullable final TokenIssuerType value) {
-        this._tokenIssuerType = value;
+        this.tokenIssuerType = value;
     }
     /**
      * Sets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers.
      * @param value Value to set for the uniqueTokenIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueTokenIdentifier(@javax.annotation.Nullable final String value) {
-        this._uniqueTokenIdentifier = value;
+        this.uniqueTokenIdentifier = value;
     }
     /**
      * Sets the userAgent property value. The user agent information related to sign-in. Supports $filter (eq and startsWith operators only).
      * @param value Value to set for the userAgent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAgent(@javax.annotation.Nullable final String value) {
-        this._userAgent = value;
+        this.userAgent = value;
     }
     /**
      * Sets the userDisplayName property value. The display name of the user. Supports $filter (eq and startsWith operators only).
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
-        this._userDisplayName = value;
+        this.userDisplayName = value;
     }
     /**
      * Sets the userId property value. The identifier of the user. Supports $filter (eq operator only).
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. The UPN of the user. Supports $filter (eq and startsWith operators only).
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
     /**
      * Sets the userType property value. Identifies whether the user is a member or guest in the tenant. Possible values are: member, guest, unknownFutureValue.
      * @param value Value to set for the userType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserType(@javax.annotation.Nullable final SignInUserType value) {
-        this._userType = value;
+        this.userType = value;
     }
 }

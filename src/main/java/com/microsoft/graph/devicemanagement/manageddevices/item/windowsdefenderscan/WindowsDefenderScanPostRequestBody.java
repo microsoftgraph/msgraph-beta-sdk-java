@@ -4,20 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the windowsDefenderScan method. */
 public class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The quickScan property */
-    private Boolean _quickScan;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The quickScan property
+     */
+    private Boolean quickScan;
     /**
      * Instantiates a new windowsDefenderScanPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDefenderScanPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,18 +40,17 @@ public class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDefenderScanPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("quickScan", (n) -> { currentObject.setQuickScan(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("quickScan", (n) -> { this.setQuickScan(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the quickScan property value. The quickScan property
@@ -56,13 +58,14 @@ public class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Boolean getQuickScan() {
-        return this._quickScan;
+        return this.quickScan;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("quickScan", this.getQuickScan());
@@ -73,15 +76,17 @@ public class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the quickScan property value. The quickScan property
      * @param value Value to set for the quickScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuickScan(@javax.annotation.Nullable final Boolean value) {
-        this._quickScan = value;
+        this.quickScan = value;
     }
 }

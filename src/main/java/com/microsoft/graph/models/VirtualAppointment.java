@@ -3,28 +3,37 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class VirtualAppointment extends Entity implements Parsable {
-    /** The join web URL of the virtual appointment for clients with waiting room and browser join. Optional. */
-    private String _appointmentClientJoinWebUrl;
-    /** The client information for the virtual appointment, including name, email, and SMS phone number. Optional. */
-    private java.util.List<VirtualAppointmentUser> _appointmentClients;
-    /** The identifier of the appointment from the scheduling system, associated with the current virtual appointment. Optional. */
-    private String _externalAppointmentId;
-    /** The URL of the appointment resource from the scheduling system, associated with the current virtual appointment. Optional. */
-    private String _externalAppointmentUrl;
-    /** The settings associated with the virtual appointment resource. Optional. */
-    private VirtualAppointmentSettings _settings;
+    /**
+     * The join web URL of the virtual appointment for clients with waiting room and browser join. Optional.
+     */
+    private String appointmentClientJoinWebUrl;
+    /**
+     * The client information for the virtual appointment, including name, email, and SMS phone number. Optional.
+     */
+    private java.util.List<VirtualAppointmentUser> appointmentClients;
+    /**
+     * The identifier of the appointment from the scheduling system, associated with the current virtual appointment. Optional.
+     */
+    private String externalAppointmentId;
+    /**
+     * The URL of the appointment resource from the scheduling system, associated with the current virtual appointment. Optional.
+     */
+    private String externalAppointmentUrl;
+    /**
+     * The settings associated with the virtual appointment resource. Optional.
+     */
+    private VirtualAppointmentSettings settings;
     /**
      * Instantiates a new virtualAppointment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VirtualAppointment() {
         super();
-        this.setOdataType("#microsoft.graph.virtualAppointment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,7 +51,7 @@ public class VirtualAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppointmentClientJoinWebUrl() {
-        return this._appointmentClientJoinWebUrl;
+        return this.appointmentClientJoinWebUrl;
     }
     /**
      * Gets the appointmentClients property value. The client information for the virtual appointment, including name, email, and SMS phone number. Optional.
@@ -50,7 +59,7 @@ public class VirtualAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<VirtualAppointmentUser> getAppointmentClients() {
-        return this._appointmentClients;
+        return this.appointmentClients;
     }
     /**
      * Gets the externalAppointmentId property value. The identifier of the appointment from the scheduling system, associated with the current virtual appointment. Optional.
@@ -58,7 +67,7 @@ public class VirtualAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalAppointmentId() {
-        return this._externalAppointmentId;
+        return this.externalAppointmentId;
     }
     /**
      * Gets the externalAppointmentUrl property value. The URL of the appointment resource from the scheduling system, associated with the current virtual appointment. Optional.
@@ -66,22 +75,21 @@ public class VirtualAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalAppointmentUrl() {
-        return this._externalAppointmentUrl;
+        return this.externalAppointmentUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VirtualAppointment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appointmentClientJoinWebUrl", (n) -> { currentObject.setAppointmentClientJoinWebUrl(n.getStringValue()); });
-            this.put("appointmentClients", (n) -> { currentObject.setAppointmentClients(n.getCollectionOfObjectValues(VirtualAppointmentUser::createFromDiscriminatorValue)); });
-            this.put("externalAppointmentId", (n) -> { currentObject.setExternalAppointmentId(n.getStringValue()); });
-            this.put("externalAppointmentUrl", (n) -> { currentObject.setExternalAppointmentUrl(n.getStringValue()); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(VirtualAppointmentSettings::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appointmentClientJoinWebUrl", (n) -> { this.setAppointmentClientJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("appointmentClients", (n) -> { this.setAppointmentClients(n.getCollectionOfObjectValues(VirtualAppointmentUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalAppointmentId", (n) -> { this.setExternalAppointmentId(n.getStringValue()); });
+        deserializerMap.put("externalAppointmentUrl", (n) -> { this.setExternalAppointmentUrl(n.getStringValue()); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(VirtualAppointmentSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the settings property value. The settings associated with the virtual appointment resource. Optional.
@@ -89,13 +97,14 @@ public class VirtualAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public VirtualAppointmentSettings getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,39 +119,44 @@ public class VirtualAppointment extends Entity implements Parsable {
      * @param value Value to set for the appointmentClientJoinWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppointmentClientJoinWebUrl(@javax.annotation.Nullable final String value) {
-        this._appointmentClientJoinWebUrl = value;
+        this.appointmentClientJoinWebUrl = value;
     }
     /**
      * Sets the appointmentClients property value. The client information for the virtual appointment, including name, email, and SMS phone number. Optional.
      * @param value Value to set for the appointmentClients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppointmentClients(@javax.annotation.Nullable final java.util.List<VirtualAppointmentUser> value) {
-        this._appointmentClients = value;
+        this.appointmentClients = value;
     }
     /**
      * Sets the externalAppointmentId property value. The identifier of the appointment from the scheduling system, associated with the current virtual appointment. Optional.
      * @param value Value to set for the externalAppointmentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalAppointmentId(@javax.annotation.Nullable final String value) {
-        this._externalAppointmentId = value;
+        this.externalAppointmentId = value;
     }
     /**
      * Sets the externalAppointmentUrl property value. The URL of the appointment resource from the scheduling system, associated with the current virtual appointment. Optional.
      * @param value Value to set for the externalAppointmentUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalAppointmentUrl(@javax.annotation.Nullable final String value) {
-        this._externalAppointmentUrl = value;
+        this.externalAppointmentUrl = value;
     }
     /**
      * Sets the settings property value. The settings associated with the virtual appointment resource. Optional.
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final VirtualAppointmentSettings value) {
-        this._settings = value;
+        this.settings = value;
     }
 }

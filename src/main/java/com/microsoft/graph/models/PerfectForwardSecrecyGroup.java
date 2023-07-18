@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Forward Secrecy Group values for Windows10 VPN policies with IKEv2 connection type.
+ */
 public enum PerfectForwardSecrecyGroup implements ValuedEnum {
     /** PFS1 */
     Pfs1("pfs1"),

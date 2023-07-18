@@ -6,26 +6,35 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the update method. */
 public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** The addedPolicySetItems property */
-    private java.util.List<PolicySetItem> _addedPolicySetItems;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The assignments property */
-    private java.util.List<PolicySetAssignment> _assignments;
-    /** The deletedPolicySetItems property */
-    private java.util.List<String> _deletedPolicySetItems;
-    /** The updatedPolicySetItems property */
-    private java.util.List<PolicySetItem> _updatedPolicySetItems;
+    /**
+     * The addedPolicySetItems property
+     */
+    private java.util.List<PolicySetItem> addedPolicySetItems;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The assignments property
+     */
+    private java.util.List<PolicySetAssignment> assignments;
+    /**
+     * The deletedPolicySetItems property
+     */
+    private java.util.List<String> deletedPolicySetItems;
+    /**
+     * The updatedPolicySetItems property
+     */
+    private java.util.List<PolicySetItem> updatedPolicySetItems;
     /**
      * Instantiates a new updatePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,7 +54,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PolicySetItem> getAddedPolicySetItems() {
-        return this._addedPolicySetItems;
+        return this.addedPolicySetItems;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -53,7 +62,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the assignments property value. The assignments property
@@ -61,7 +70,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PolicySetAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the deletedPolicySetItems property value. The deletedPolicySetItems property
@@ -69,21 +78,20 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDeletedPolicySetItems() {
-        return this._deletedPolicySetItems;
+        return this.deletedPolicySetItems;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdatePostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("addedPolicySetItems", (n) -> { currentObject.setAddedPolicySetItems(n.getCollectionOfObjectValues(PolicySetItem::createFromDiscriminatorValue)); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(PolicySetAssignment::createFromDiscriminatorValue)); });
-            this.put("deletedPolicySetItems", (n) -> { currentObject.setDeletedPolicySetItems(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("updatedPolicySetItems", (n) -> { currentObject.setUpdatedPolicySetItems(n.getCollectionOfObjectValues(PolicySetItem::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("addedPolicySetItems", (n) -> { this.setAddedPolicySetItems(n.getCollectionOfObjectValues(PolicySetItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(PolicySetAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("deletedPolicySetItems", (n) -> { this.setDeletedPolicySetItems(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("updatedPolicySetItems", (n) -> { this.setUpdatedPolicySetItems(n.getCollectionOfObjectValues(PolicySetItem::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the updatedPolicySetItems property value. The updatedPolicySetItems property
@@ -91,13 +99,14 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PolicySetItem> getUpdatedPolicySetItems() {
-        return this._updatedPolicySetItems;
+        return this.updatedPolicySetItems;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("addedPolicySetItems", this.getAddedPolicySetItems());
@@ -111,39 +120,44 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the addedPolicySetItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddedPolicySetItems(@javax.annotation.Nullable final java.util.List<PolicySetItem> value) {
-        this._addedPolicySetItems = value;
+        this.addedPolicySetItems = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the assignments property value. The assignments property
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<PolicySetAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the deletedPolicySetItems property value. The deletedPolicySetItems property
      * @param value Value to set for the deletedPolicySetItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedPolicySetItems(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._deletedPolicySetItems = value;
+        this.deletedPolicySetItems = value;
     }
     /**
      * Sets the updatedPolicySetItems property value. The updatedPolicySetItems property
      * @param value Value to set for the updatedPolicySetItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdatedPolicySetItems(@javax.annotation.Nullable final java.util.List<PolicySetItem> value) {
-        this._updatedPolicySetItems = value;
+        this.updatedPolicySetItems = value;
     }
 }

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Android For Work cross profile data sharing type.
+ */
 public enum AndroidForWorkCrossProfileDataSharingType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),

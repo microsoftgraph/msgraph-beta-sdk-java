@@ -4,53 +4,85 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents a custom attribute script for macOS.
+ */
 public class DeviceCustomAttributeShellScript extends Entity implements Parsable {
-    /** The list of group assignments for the device management script. */
-    private java.util.List<DeviceManagementScriptAssignment> _assignments;
-    /** The date and time the device management script was created. This property is read-only. */
-    private OffsetDateTime _createdDateTime;
-    /** The name of the custom attribute. */
-    private String _customAttributeName;
-    /** Represents the expected type for a macOS custom attribute script value. */
-    private DeviceCustomAttributeValueType _customAttributeType;
-    /** Optional description for the device management script. */
-    private String _description;
-    /** List of run states for this script across all devices. */
-    private java.util.List<DeviceManagementScriptDeviceState> _deviceRunStates;
-    /** Name of the device management script. */
-    private String _displayName;
-    /** Script file name. */
-    private String _fileName;
-    /** The list of group assignments for the device management script. */
-    private java.util.List<DeviceManagementScriptGroupAssignment> _groupAssignments;
-    /** The date and time the device management script was last modified. This property is read-only. */
-    private OffsetDateTime _lastModifiedDateTime;
-    /** List of Scope Tag IDs for this PowerShellScript instance. */
-    private java.util.List<String> _roleScopeTagIds;
-    /** Indicates the type of execution context the app runs in. */
-    private RunAsAccountType _runAsAccount;
-    /** Run summary for device management script. */
-    private DeviceManagementScriptRunSummary _runSummary;
-    /** The script content. */
-    private byte[] _scriptContent;
-    /** List of run states for this script across all users. */
-    private java.util.List<DeviceManagementScriptUserState> _userRunStates;
     /**
-     * Instantiates a new DeviceCustomAttributeShellScript and sets the default values.
+     * The list of group assignments for the device management script.
+     */
+    private java.util.List<DeviceManagementScriptAssignment> assignments;
+    /**
+     * The date and time the device management script was created. This property is read-only.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The name of the custom attribute.
+     */
+    private String customAttributeName;
+    /**
+     * Represents the expected type for a macOS custom attribute script value.
+     */
+    private DeviceCustomAttributeValueType customAttributeType;
+    /**
+     * Optional description for the device management script.
+     */
+    private String description;
+    /**
+     * List of run states for this script across all devices.
+     */
+    private java.util.List<DeviceManagementScriptDeviceState> deviceRunStates;
+    /**
+     * Name of the device management script.
+     */
+    private String displayName;
+    /**
+     * Script file name.
+     */
+    private String fileName;
+    /**
+     * The list of group assignments for the device management script.
+     */
+    private java.util.List<DeviceManagementScriptGroupAssignment> groupAssignments;
+    /**
+     * The date and time the device management script was last modified. This property is read-only.
+     */
+    private OffsetDateTime lastModifiedDateTime;
+    /**
+     * List of Scope Tag IDs for this PowerShellScript instance.
+     */
+    private java.util.List<String> roleScopeTagIds;
+    /**
+     * Indicates the type of execution context the app runs in.
+     */
+    private RunAsAccountType runAsAccount;
+    /**
+     * Run summary for device management script.
+     */
+    private DeviceManagementScriptRunSummary runSummary;
+    /**
+     * The script content.
+     */
+    private byte[] scriptContent;
+    /**
+     * List of run states for this script across all users.
+     */
+    private java.util.List<DeviceManagementScriptUserState> userRunStates;
+    /**
+     * Instantiates a new deviceCustomAttributeShellScript and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceCustomAttributeShellScript() {
         super();
-        this.setOdataType("#microsoft.graph.deviceCustomAttributeShellScript");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceCustomAttributeShellScript
+     * @return a deviceCustomAttributeShellScript
      */
     @javax.annotation.Nonnull
     public static DeviceCustomAttributeShellScript createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +95,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementScriptAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the createdDateTime property value. The date and time the device management script was created. This property is read-only.
@@ -71,7 +103,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the customAttributeName property value. The name of the custom attribute.
@@ -79,7 +111,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCustomAttributeName() {
-        return this._customAttributeName;
+        return this.customAttributeName;
     }
     /**
      * Gets the customAttributeType property value. Represents the expected type for a macOS custom attribute script value.
@@ -87,7 +119,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public DeviceCustomAttributeValueType getCustomAttributeType() {
-        return this._customAttributeType;
+        return this.customAttributeType;
     }
     /**
      * Gets the description property value. Optional description for the device management script.
@@ -95,7 +127,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the deviceRunStates property value. List of run states for this script across all devices.
@@ -103,7 +135,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementScriptDeviceState> getDeviceRunStates() {
-        return this._deviceRunStates;
+        return this.deviceRunStates;
     }
     /**
      * Gets the displayName property value. Name of the device management script.
@@ -111,32 +143,31 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceCustomAttributeShellScript currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceManagementScriptAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("customAttributeName", (n) -> { currentObject.setCustomAttributeName(n.getStringValue()); });
-            this.put("customAttributeType", (n) -> { currentObject.setCustomAttributeType(n.getEnumValue(DeviceCustomAttributeValueType.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceRunStates", (n) -> { currentObject.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptDeviceState::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-            this.put("groupAssignments", (n) -> { currentObject.setGroupAssignments(n.getCollectionOfObjectValues(DeviceManagementScriptGroupAssignment::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("runAsAccount", (n) -> { currentObject.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
-            this.put("runSummary", (n) -> { currentObject.setRunSummary(n.getObjectValue(DeviceManagementScriptRunSummary::createFromDiscriminatorValue)); });
-            this.put("scriptContent", (n) -> { currentObject.setScriptContent(n.getByteArrayValue()); });
-            this.put("userRunStates", (n) -> { currentObject.setUserRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptUserState::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(DeviceManagementScriptAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customAttributeName", (n) -> { this.setCustomAttributeName(n.getStringValue()); });
+        deserializerMap.put("customAttributeType", (n) -> { this.setCustomAttributeType(n.getEnumValue(DeviceCustomAttributeValueType.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceRunStates", (n) -> { this.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptDeviceState::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
+        deserializerMap.put("groupAssignments", (n) -> { this.setGroupAssignments(n.getCollectionOfObjectValues(DeviceManagementScriptGroupAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("runAsAccount", (n) -> { this.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
+        deserializerMap.put("runSummary", (n) -> { this.setRunSummary(n.getObjectValue(DeviceManagementScriptRunSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("scriptContent", (n) -> { this.setScriptContent(n.getByteArrayValue()); });
+        deserializerMap.put("userRunStates", (n) -> { this.setUserRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptUserState::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fileName property value. Script file name.
@@ -144,7 +175,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getFileName() {
-        return this._fileName;
+        return this.fileName;
     }
     /**
      * Gets the groupAssignments property value. The list of group assignments for the device management script.
@@ -152,7 +183,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementScriptGroupAssignment> getGroupAssignments() {
-        return this._groupAssignments;
+        return this.groupAssignments;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the device management script was last modified. This property is read-only.
@@ -160,7 +191,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tag IDs for this PowerShellScript instance.
@@ -168,7 +199,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this._roleScopeTagIds;
+        return this.roleScopeTagIds;
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
@@ -176,7 +207,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
-        return this._runAsAccount;
+        return this.runAsAccount;
     }
     /**
      * Gets the runSummary property value. Run summary for device management script.
@@ -184,15 +215,15 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public DeviceManagementScriptRunSummary getRunSummary() {
-        return this._runSummary;
+        return this.runSummary;
     }
     /**
      * Gets the scriptContent property value. The script content.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getScriptContent() {
-        return this._scriptContent;
+        return this.scriptContent;
     }
     /**
      * Gets the userRunStates property value. List of run states for this script across all users.
@@ -200,18 +231,18 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementScriptUserState> getUserRunStates() {
-        return this._userRunStates;
+        return this.userRunStates;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("customAttributeName", this.getCustomAttributeName());
         writer.writeEnumValue("customAttributeType", this.getCustomAttributeType());
         writer.writeStringValue("description", this.getDescription());
@@ -219,7 +250,6 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("fileName", this.getFileName());
         writer.writeCollectionOfObjectValues("groupAssignments", this.getGroupAssignments());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeEnumValue("runAsAccount", this.getRunAsAccount());
         writer.writeObjectValue("runSummary", this.getRunSummary());
@@ -231,119 +261,134 @@ public class DeviceCustomAttributeShellScript extends Entity implements Parsable
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceManagementScriptAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the device management script was created. This property is read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the customAttributeName property value. The name of the custom attribute.
      * @param value Value to set for the customAttributeName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomAttributeName(@javax.annotation.Nullable final String value) {
-        this._customAttributeName = value;
+        this.customAttributeName = value;
     }
     /**
      * Sets the customAttributeType property value. Represents the expected type for a macOS custom attribute script value.
      * @param value Value to set for the customAttributeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomAttributeType(@javax.annotation.Nullable final DeviceCustomAttributeValueType value) {
-        this._customAttributeType = value;
+        this.customAttributeType = value;
     }
     /**
      * Sets the description property value. Optional description for the device management script.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the deviceRunStates property value. List of run states for this script across all devices.
      * @param value Value to set for the deviceRunStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceRunStates(@javax.annotation.Nullable final java.util.List<DeviceManagementScriptDeviceState> value) {
-        this._deviceRunStates = value;
+        this.deviceRunStates = value;
     }
     /**
      * Sets the displayName property value. Name of the device management script.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the fileName property value. Script file name.
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
-        this._fileName = value;
+        this.fileName = value;
     }
     /**
      * Sets the groupAssignments property value. The list of group assignments for the device management script.
      * @param value Value to set for the groupAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupAssignments(@javax.annotation.Nullable final java.util.List<DeviceManagementScriptGroupAssignment> value) {
-        this._groupAssignments = value;
+        this.groupAssignments = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the device management script was last modified. This property is read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tag IDs for this PowerShellScript instance.
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roleScopeTagIds = value;
+        this.roleScopeTagIds = value;
     }
     /**
      * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAsAccount(@javax.annotation.Nullable final RunAsAccountType value) {
-        this._runAsAccount = value;
+        this.runAsAccount = value;
     }
     /**
      * Sets the runSummary property value. Run summary for device management script.
      * @param value Value to set for the runSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunSummary(@javax.annotation.Nullable final DeviceManagementScriptRunSummary value) {
-        this._runSummary = value;
+        this.runSummary = value;
     }
     /**
      * Sets the scriptContent property value. The script content.
      * @param value Value to set for the scriptContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScriptContent(@javax.annotation.Nullable final byte[] value) {
-        this._scriptContent = value;
+        this.scriptContent = value;
     }
     /**
      * Sets the userRunStates property value. List of run states for this script across all users.
      * @param value Value to set for the userRunStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRunStates(@javax.annotation.Nullable final java.util.List<DeviceManagementScriptUserState> value) {
-        this._userRunStates = value;
+        this.userRunStates = value;
     }
 }

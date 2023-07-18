@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Defines the permission level granted to users to enable them change Uefi settings
+ */
 public enum ChangeUefiSettingsPermission implements ValuedEnum {
     /** Device default value, no intent. */
     NotConfiguredOnly("notConfiguredOnly"),

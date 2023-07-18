@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum CloudPcStatus implements ValuedEnum {
     NotProvisioned("notProvisioned"),
     Provisioning("provisioning"),
@@ -15,7 +14,10 @@ public enum CloudPcStatus implements ValuedEnum {
     Resizing("resizing"),
     Restoring("restoring"),
     PendingProvision("pendingProvision"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    MovingRegion("movingRegion"),
+    ResizePendingLicense("resizePendingLicense"),
+    UpdatingSingleSignOn("updatingSingleSignOn");
     public final String value;
     CloudPcStatus(final String value) {
         this.value = value;
@@ -37,6 +39,9 @@ public enum CloudPcStatus implements ValuedEnum {
             case "restoring": return Restoring;
             case "pendingProvision": return PendingProvision;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "movingRegion": return MovingRegion;
+            case "resizePendingLicense": return ResizePendingLicense;
+            case "updatingSingleSignOn": return UpdatingSingleSignOn;
             default: return null;
         }
     }

@@ -3,21 +3,30 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The base class for a type of apps
+ */
 public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsable {
-    /** Define the DesktopApplicationID of the app */
-    private String _desktopApplicationId;
-    /** Define the DesktopApplicationLinkPath of the app */
-    private String _desktopApplicationLinkPath;
-    /** Define the path of a desktop app */
-    private String _path;
     /**
-     * Instantiates a new WindowsKioskDesktopApp and sets the default values.
+     * Define the DesktopApplicationID of the app
+     */
+    private String desktopApplicationId;
+    /**
+     * Define the DesktopApplicationLinkPath of the app
+     */
+    private String desktopApplicationLinkPath;
+    /**
+     * Define the path of a desktop app
+     */
+    private String path;
+    /**
+     * Instantiates a new windowsKioskDesktopApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskDesktopApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskDesktopApp");
@@ -25,7 +34,7 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsKioskDesktopApp
+     * @return a windowsKioskDesktopApp
      */
     @javax.annotation.Nonnull
     public static WindowsKioskDesktopApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +47,7 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsa
      */
     @javax.annotation.Nullable
     public String getDesktopApplicationId() {
-        return this._desktopApplicationId;
+        return this.desktopApplicationId;
     }
     /**
      * Gets the desktopApplicationLinkPath property value. Define the DesktopApplicationLinkPath of the app
@@ -46,20 +55,19 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsa
      */
     @javax.annotation.Nullable
     public String getDesktopApplicationLinkPath() {
-        return this._desktopApplicationLinkPath;
+        return this.desktopApplicationLinkPath;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsKioskDesktopApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("desktopApplicationId", (n) -> { currentObject.setDesktopApplicationId(n.getStringValue()); });
-            this.put("desktopApplicationLinkPath", (n) -> { currentObject.setDesktopApplicationLinkPath(n.getStringValue()); });
-            this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("desktopApplicationId", (n) -> { this.setDesktopApplicationId(n.getStringValue()); });
+        deserializerMap.put("desktopApplicationLinkPath", (n) -> { this.setDesktopApplicationLinkPath(n.getStringValue()); });
+        deserializerMap.put("path", (n) -> { this.setPath(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the path property value. Define the path of a desktop app
@@ -67,13 +75,14 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsa
      */
     @javax.annotation.Nullable
     public String getPath() {
-        return this._path;
+        return this.path;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +95,26 @@ public class WindowsKioskDesktopApp extends WindowsKioskAppBase implements Parsa
      * @param value Value to set for the desktopApplicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDesktopApplicationId(@javax.annotation.Nullable final String value) {
-        this._desktopApplicationId = value;
+        this.desktopApplicationId = value;
     }
     /**
      * Sets the desktopApplicationLinkPath property value. Define the DesktopApplicationLinkPath of the app
      * @param value Value to set for the desktopApplicationLinkPath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDesktopApplicationLinkPath(@javax.annotation.Nullable final String value) {
-        this._desktopApplicationLinkPath = value;
+        this.desktopApplicationLinkPath = value;
     }
     /**
      * Sets the path property value. Define the path of a desktop app
      * @param value Value to set for the path property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPath(@javax.annotation.Nullable final String value) {
-        this._path = value;
+        this.path = value;
     }
 }

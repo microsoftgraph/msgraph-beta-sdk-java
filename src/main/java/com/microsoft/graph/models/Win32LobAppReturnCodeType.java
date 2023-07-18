@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Indicates the type of return code.
+ */
 public enum Win32LobAppReturnCodeType implements ValuedEnum {
     /** Failed. */
     Failed("failed"),

@@ -4,32 +4,49 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Count of devices already Co-Managed */
-    private Integer _comanagedCount;
-    /** Count of devices eligible for Co-Management but not yet joined to Azure Active Directory */
-    private Integer _eligibleButNotAzureAdJoinedCount;
-    /** Count of devices fully eligible for Co-Management */
-    private Integer _eligibleCount;
-    /** Count of devices ineligible for Co-Management */
-    private Integer _ineligibleCount;
-    /** Count of devices that will be eligible for Co-Management after an OS update */
-    private Integer _needsOsUpdateCount;
-    /** The OdataType property */
-    private String _odataType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Count of devices already Co-Managed
+     */
+    private Integer comanagedCount;
+    /**
+     * Count of devices eligible for Co-Management but not yet joined to Azure Active Directory
+     */
+    private Integer eligibleButNotAzureAdJoinedCount;
+    /**
+     * Count of devices fully eligible for Co-Management
+     */
+    private Integer eligibleCount;
+    /**
+     * Count of devices ineligible for Co-Management
+     */
+    private Integer ineligibleCount;
+    /**
+     * Count of devices that will be eligible for Co-Management after an OS update
+     */
+    private Integer needsOsUpdateCount;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Count of devices scheduled for Co-Management enrollment. Valid values 0 to 9999999
+     */
+    private Integer scheduledForEnrollmentCount;
     /**
      * Instantiates a new comanagementEligibleDevicesSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ComanagementEligibleDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.comanagementEligibleDevicesSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +64,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the comanagedCount property value. Count of devices already Co-Managed
@@ -55,7 +72,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Integer getComanagedCount() {
-        return this._comanagedCount;
+        return this.comanagedCount;
     }
     /**
      * Gets the eligibleButNotAzureAdJoinedCount property value. Count of devices eligible for Co-Management but not yet joined to Azure Active Directory
@@ -63,7 +80,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Integer getEligibleButNotAzureAdJoinedCount() {
-        return this._eligibleButNotAzureAdJoinedCount;
+        return this.eligibleButNotAzureAdJoinedCount;
     }
     /**
      * Gets the eligibleCount property value. Count of devices fully eligible for Co-Management
@@ -71,23 +88,23 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Integer getEligibleCount() {
-        return this._eligibleCount;
+        return this.eligibleCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ComanagementEligibleDevicesSummary currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("comanagedCount", (n) -> { currentObject.setComanagedCount(n.getIntegerValue()); });
-            this.put("eligibleButNotAzureAdJoinedCount", (n) -> { currentObject.setEligibleButNotAzureAdJoinedCount(n.getIntegerValue()); });
-            this.put("eligibleCount", (n) -> { currentObject.setEligibleCount(n.getIntegerValue()); });
-            this.put("ineligibleCount", (n) -> { currentObject.setIneligibleCount(n.getIntegerValue()); });
-            this.put("needsOsUpdateCount", (n) -> { currentObject.setNeedsOsUpdateCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("comanagedCount", (n) -> { this.setComanagedCount(n.getIntegerValue()); });
+        deserializerMap.put("eligibleButNotAzureAdJoinedCount", (n) -> { this.setEligibleButNotAzureAdJoinedCount(n.getIntegerValue()); });
+        deserializerMap.put("eligibleCount", (n) -> { this.setEligibleCount(n.getIntegerValue()); });
+        deserializerMap.put("ineligibleCount", (n) -> { this.setIneligibleCount(n.getIntegerValue()); });
+        deserializerMap.put("needsOsUpdateCount", (n) -> { this.setNeedsOsUpdateCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("scheduledForEnrollmentCount", (n) -> { this.setScheduledForEnrollmentCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ineligibleCount property value. Count of devices ineligible for Co-Management
@@ -95,7 +112,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Integer getIneligibleCount() {
-        return this._ineligibleCount;
+        return this.ineligibleCount;
     }
     /**
      * Gets the needsOsUpdateCount property value. Count of devices that will be eligible for Co-Management after an OS update
@@ -103,7 +120,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public Integer getNeedsOsUpdateCount() {
-        return this._needsOsUpdateCount;
+        return this.needsOsUpdateCount;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -111,13 +128,22 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
+    }
+    /**
+     * Gets the scheduledForEnrollmentCount property value. Count of devices scheduled for Co-Management enrollment. Valid values 0 to 9999999
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getScheduledForEnrollmentCount() {
+        return this.scheduledForEnrollmentCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("comanagedCount", this.getComanagedCount());
@@ -126,6 +152,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
         writer.writeIntegerValue("ineligibleCount", this.getIneligibleCount());
         writer.writeIntegerValue("needsOsUpdateCount", this.getNeedsOsUpdateCount());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeIntegerValue("scheduledForEnrollmentCount", this.getScheduledForEnrollmentCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -133,55 +160,71 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the comanagedCount property value. Count of devices already Co-Managed
      * @param value Value to set for the comanagedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComanagedCount(@javax.annotation.Nullable final Integer value) {
-        this._comanagedCount = value;
+        this.comanagedCount = value;
     }
     /**
      * Sets the eligibleButNotAzureAdJoinedCount property value. Count of devices eligible for Co-Management but not yet joined to Azure Active Directory
      * @param value Value to set for the eligibleButNotAzureAdJoinedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEligibleButNotAzureAdJoinedCount(@javax.annotation.Nullable final Integer value) {
-        this._eligibleButNotAzureAdJoinedCount = value;
+        this.eligibleButNotAzureAdJoinedCount = value;
     }
     /**
      * Sets the eligibleCount property value. Count of devices fully eligible for Co-Management
      * @param value Value to set for the eligibleCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEligibleCount(@javax.annotation.Nullable final Integer value) {
-        this._eligibleCount = value;
+        this.eligibleCount = value;
     }
     /**
      * Sets the ineligibleCount property value. Count of devices ineligible for Co-Management
      * @param value Value to set for the ineligibleCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIneligibleCount(@javax.annotation.Nullable final Integer value) {
-        this._ineligibleCount = value;
+        this.ineligibleCount = value;
     }
     /**
      * Sets the needsOsUpdateCount property value. Count of devices that will be eligible for Co-Management after an OS update
      * @param value Value to set for the needsOsUpdateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNeedsOsUpdateCount(@javax.annotation.Nullable final Integer value) {
-        this._needsOsUpdateCount = value;
+        this.needsOsUpdateCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
+    }
+    /**
+     * Sets the scheduledForEnrollmentCount property value. Count of devices scheduled for Co-Management enrollment. Valid values 0 to 9999999
+     * @param value Value to set for the scheduledForEnrollmentCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setScheduledForEnrollmentCount(@javax.annotation.Nullable final Integer value) {
+        this.scheduledForEnrollmentCount = value;
     }
 }

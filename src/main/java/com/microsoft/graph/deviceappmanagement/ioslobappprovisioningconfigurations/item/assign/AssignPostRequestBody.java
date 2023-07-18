@@ -6,22 +6,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the assign method. */
 public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The appProvisioningConfigurationGroupAssignments property */
-    private java.util.List<MobileAppProvisioningConfigGroupAssignment> _appProvisioningConfigurationGroupAssignments;
-    /** The iOSLobAppProvisioningConfigAssignments property */
-    private java.util.List<IosLobAppProvisioningConfigurationAssignment> _iOSLobAppProvisioningConfigAssignments;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The appProvisioningConfigurationGroupAssignments property
+     */
+    private java.util.List<MobileAppProvisioningConfigGroupAssignment> appProvisioningConfigurationGroupAssignments;
+    /**
+     * The iOSLobAppProvisioningConfigAssignments property
+     */
+    private java.util.List<IosLobAppProvisioningConfigurationAssignment> iOSLobAppProvisioningConfigAssignments;
     /**
      * Instantiates a new assignPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,7 +46,7 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the appProvisioningConfigurationGroupAssignments property value. The appProvisioningConfigurationGroupAssignments property
@@ -49,19 +54,18 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileAppProvisioningConfigGroupAssignment> getAppProvisioningConfigurationGroupAssignments() {
-        return this._appProvisioningConfigurationGroupAssignments;
+        return this.appProvisioningConfigurationGroupAssignments;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AssignPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("appProvisioningConfigurationGroupAssignments", (n) -> { currentObject.setAppProvisioningConfigurationGroupAssignments(n.getCollectionOfObjectValues(MobileAppProvisioningConfigGroupAssignment::createFromDiscriminatorValue)); });
-            this.put("iOSLobAppProvisioningConfigAssignments", (n) -> { currentObject.setIOSLobAppProvisioningConfigAssignments(n.getCollectionOfObjectValues(IosLobAppProvisioningConfigurationAssignment::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("appProvisioningConfigurationGroupAssignments", (n) -> { this.setAppProvisioningConfigurationGroupAssignments(n.getCollectionOfObjectValues(MobileAppProvisioningConfigGroupAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("iOSLobAppProvisioningConfigAssignments", (n) -> { this.setIOSLobAppProvisioningConfigAssignments(n.getCollectionOfObjectValues(IosLobAppProvisioningConfigurationAssignment::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the iOSLobAppProvisioningConfigAssignments property value. The iOSLobAppProvisioningConfigAssignments property
@@ -69,13 +73,14 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IosLobAppProvisioningConfigurationAssignment> getIOSLobAppProvisioningConfigAssignments() {
-        return this._iOSLobAppProvisioningConfigAssignments;
+        return this.iOSLobAppProvisioningConfigAssignments;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("appProvisioningConfigurationGroupAssignments", this.getAppProvisioningConfigurationGroupAssignments());
@@ -87,23 +92,26 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the appProvisioningConfigurationGroupAssignments property value. The appProvisioningConfigurationGroupAssignments property
      * @param value Value to set for the appProvisioningConfigurationGroupAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppProvisioningConfigurationGroupAssignments(@javax.annotation.Nullable final java.util.List<MobileAppProvisioningConfigGroupAssignment> value) {
-        this._appProvisioningConfigurationGroupAssignments = value;
+        this.appProvisioningConfigurationGroupAssignments = value;
     }
     /**
      * Sets the iOSLobAppProvisioningConfigAssignments property value. The iOSLobAppProvisioningConfigAssignments property
      * @param value Value to set for the iOSLobAppProvisioningConfigAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIOSLobAppProvisioningConfigAssignments(@javax.annotation.Nullable final java.util.List<IosLobAppProvisioningConfigurationAssignment> value) {
-        this._iOSLobAppProvisioningConfigAssignments = value;
+        this.iOSLobAppProvisioningConfigAssignments = value;
     }
 }

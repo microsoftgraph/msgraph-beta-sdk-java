@@ -3,133 +3,258 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the macOSGeneralDeviceConfiguration resource.
+ */
 public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
-    /** Yes prevents users from adding friends to Game Center. Available for devices running macOS versions 10.13 and later. */
-    private Boolean _addingGameCenterFriendsBlocked;
-    /** Indicates whether or not to allow AirDrop. */
-    private Boolean _airDropBlocked;
-    /** Indicates whether or to block users from unlocking their Mac with Apple Watch. */
-    private Boolean _appleWatchBlockAutoUnlock;
-    /** Indicates whether or not to block the user from accessing the camera of the device. */
-    private Boolean _cameraBlocked;
-    /** Indicates whether or not to allow remote screen observation by Classroom app. Requires MDM enrollment via Apple School Manager or Apple Business Manager. */
-    private Boolean _classroomAppBlockRemoteScreenObservation;
-    /** Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager. */
-    private Boolean _classroomAppForceUnpromptedScreenObservation;
-    /** Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager. */
-    private Boolean _classroomForceAutomaticallyJoinClasses;
-    /** Indicates whether a student enrolled in an unmanaged course via Classroom will be required to request permission from the teacher when attempting to leave the course. Requires MDM enrollment via Apple School Manager or Apple Business Manager. */
-    private Boolean _classroomForceRequestPermissionToLeaveClasses;
-    /** Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager. */
-    private Boolean _classroomForceUnpromptedAppAndDeviceLock;
-    /** Possible values of the compliance app list. */
-    private AppListType _compliantAppListType;
-    /** List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements. */
-    private java.util.List<AppListItem> _compliantAppsList;
-    /** Indicates whether or not to allow content caching. */
-    private Boolean _contentCachingBlocked;
-    /** Indicates whether or not to block definition lookup. */
-    private Boolean _definitionLookupBlocked;
-    /** An email address lacking a suffix that matches any of these strings will be considered out-of-domain. */
-    private java.util.List<String> _emailInDomainSuffixes;
-    /** TRUE disables the reset option on supervised devices. FALSE enables the reset option on supervised devices. Available for devices running macOS versions 12.0 and later. */
-    private Boolean _eraseContentAndSettingsBlocked;
-    /** Yes disables Game Center, and the Game Center icon is removed from the Home screen. Available for devices running macOS versions 10.13 and later. */
-    private Boolean _gameCenterBlocked;
-    /** Indicates whether or not to block the user from continuing work that they started on a MacOS device on another iOS or MacOS device (MacOS 10.15 or later). */
-    private Boolean _iCloudBlockActivityContinuation;
-    /** Indicates whether or not to block iCloud from syncing contacts. */
-    private Boolean _iCloudBlockAddressBook;
-    /** Indicates whether or not to block iCloud from syncing bookmarks. */
-    private Boolean _iCloudBlockBookmarks;
-    /** Indicates whether or not to block iCloud from syncing calendars. */
-    private Boolean _iCloudBlockCalendar;
-    /** Indicates whether or not to block iCloud document sync. */
-    private Boolean _iCloudBlockDocumentSync;
-    /** Indicates whether or not to block iCloud from syncing mail. */
-    private Boolean _iCloudBlockMail;
-    /** Indicates whether or not to block iCloud from syncing notes. */
-    private Boolean _iCloudBlockNotes;
-    /** Indicates whether or not to block iCloud Photo Library. */
-    private Boolean _iCloudBlockPhotoLibrary;
-    /** Indicates whether or not to block iCloud from syncing reminders. */
-    private Boolean _iCloudBlockReminders;
-    /** When TRUE the synchronization of cloud desktop and documents is blocked. When FALSE, synchronization of the cloud desktop and documents are allowed. Available for devices running macOS 10.12.4 and later. */
-    private Boolean _iCloudDesktopAndDocumentsBlocked;
-    /** iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later. */
-    private Boolean _iCloudPrivateRelayBlocked;
-    /** Indicates whether or not to block files from being transferred using iTunes. */
-    private Boolean _iTunesBlockFileSharing;
-    /** Indicates whether or not to block Music service and revert Music app to classic mode. */
-    private Boolean _iTunesBlockMusicService;
-    /** Indicates whether or not to block the user from using dictation input. */
-    private Boolean _keyboardBlockDictation;
-    /** Indicates whether or not iCloud keychain synchronization is blocked (macOS 10.12 and later). */
-    private Boolean _keychainBlockCloudSync;
-    /** TRUE prevents multiplayer gaming when using Game Center. FALSE allows multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later. */
-    private Boolean _multiplayerGamingBlocked;
-    /** Indicates whether or not to block sharing passwords with the AirDrop passwords feature. */
-    private Boolean _passwordBlockAirDropSharing;
-    /** Indicates whether or not to block the AutoFill Passwords feature. */
-    private Boolean _passwordBlockAutoFill;
-    /** Indicates whether or not to block fingerprint unlock. */
-    private Boolean _passwordBlockFingerprintUnlock;
-    /** Indicates whether or not to allow passcode modification. */
-    private Boolean _passwordBlockModification;
-    /** Indicates whether or not to block requesting passwords from nearby devices. */
-    private Boolean _passwordBlockProximityRequests;
-    /** Block simple passwords. */
-    private Boolean _passwordBlockSimple;
-    /** Number of days before the password expires. */
-    private Integer _passwordExpirationDays;
-    /** The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11 */
-    private Integer _passwordMaximumAttemptCount;
-    /** Number of character sets a password must contain. Valid values 0 to 4 */
-    private Integer _passwordMinimumCharacterSetCount;
-    /** Minimum length of passwords. */
-    private Integer _passwordMinimumLength;
-    /** Minutes of inactivity required before a password is required. */
-    private Integer _passwordMinutesOfInactivityBeforeLock;
-    /** Minutes of inactivity required before the screen times out. */
-    private Integer _passwordMinutesOfInactivityBeforeScreenTimeout;
-    /** The number of minutes before the login is reset after the maximum number of unsuccessful login attempts is reached. */
-    private Integer _passwordMinutesUntilFailedLoginReset;
-    /** Number of previous passwords to block. */
-    private Integer _passwordPreviousPasswordBlockCount;
-    /** Whether or not to require a password. */
-    private Boolean _passwordRequired;
-    /** Possible values of required passwords. */
-    private RequiredPasswordType _passwordRequiredType;
-    /** List of privacy preference policy controls. This collection can contain a maximum of 10000 elements. */
-    private java.util.List<MacOSPrivacyAccessControlItem> _privacyAccessControls;
-    /** Indicates whether or not to block the user from using Auto fill in Safari. */
-    private Boolean _safariBlockAutofill;
-    /** Indicates whether or not to block the user from taking Screenshots. */
-    private Boolean _screenCaptureBlocked;
-    /** Specify the number of days (1-90) to delay visibility of major OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90 */
-    private Integer _softwareUpdateMajorOSDeferredInstallDelayInDays;
-    /** Specify the number of days (1-90) to delay visibility of minor OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90 */
-    private Integer _softwareUpdateMinorOSDeferredInstallDelayInDays;
-    /** Specify the number of days (1-90) to delay visibility of non-OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90 */
-    private Integer _softwareUpdateNonOSDeferredInstallDelayInDays;
-    /** Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90 */
-    private Integer _softwareUpdatesEnforcedDelayInDays;
-    /** Indicates whether or not to block Spotlight from returning any results from an Internet search. */
-    private Boolean _spotlightBlockInternetResults;
-    /** Maximum hours after which the user must enter their password to unlock the device instead of using Touch ID. Available for devices running macOS 12 and later. Valid values 0 to 2147483647 */
-    private Integer _touchIdTimeoutInHours;
-    /** Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility. */
-    private MacOSSoftwareUpdateDelayPolicy _updateDelayPolicy;
-    /** TRUE prevents the wallpaper from being changed. FALSE allows the wallpaper to be changed. Available for devices running macOS versions 10.13 and later. */
-    private Boolean _wallpaperModificationBlocked;
     /**
-     * Instantiates a new MacOSGeneralDeviceConfiguration and sets the default values.
+     * When TRUE, activation lock is allowed when the devices is in the supervised mode. When FALSE, activation lock is not allowed. Default is false.
+     */
+    private Boolean activationLockWhenSupervisedAllowed;
+    /**
+     * Yes prevents users from adding friends to Game Center. Available for devices running macOS versions 10.13 and later.
+     */
+    private Boolean addingGameCenterFriendsBlocked;
+    /**
+     * Indicates whether or not to allow AirDrop.
+     */
+    private Boolean airDropBlocked;
+    /**
+     * Indicates whether or to block users from unlocking their Mac with Apple Watch.
+     */
+    private Boolean appleWatchBlockAutoUnlock;
+    /**
+     * Indicates whether or not to block the user from accessing the camera of the device.
+     */
+    private Boolean cameraBlocked;
+    /**
+     * Indicates whether or not to allow remote screen observation by Classroom app. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     */
+    private Boolean classroomAppBlockRemoteScreenObservation;
+    /**
+     * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     */
+    private Boolean classroomAppForceUnpromptedScreenObservation;
+    /**
+     * Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     */
+    private Boolean classroomForceAutomaticallyJoinClasses;
+    /**
+     * Indicates whether a student enrolled in an unmanaged course via Classroom will be required to request permission from the teacher when attempting to leave the course. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     */
+    private Boolean classroomForceRequestPermissionToLeaveClasses;
+    /**
+     * Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     */
+    private Boolean classroomForceUnpromptedAppAndDeviceLock;
+    /**
+     * Possible values of the compliance app list.
+     */
+    private AppListType compliantAppListType;
+    /**
+     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     */
+    private java.util.List<AppListItem> compliantAppsList;
+    /**
+     * Indicates whether or not to allow content caching.
+     */
+    private Boolean contentCachingBlocked;
+    /**
+     * Indicates whether or not to block definition lookup.
+     */
+    private Boolean definitionLookupBlocked;
+    /**
+     * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
+     */
+    private java.util.List<String> emailInDomainSuffixes;
+    /**
+     * TRUE disables the reset option on supervised devices. FALSE enables the reset option on supervised devices. Available for devices running macOS versions 12.0 and later.
+     */
+    private Boolean eraseContentAndSettingsBlocked;
+    /**
+     * Yes disables Game Center, and the Game Center icon is removed from the Home screen. Available for devices running macOS versions 10.13 and later.
+     */
+    private Boolean gameCenterBlocked;
+    /**
+     * Indicates whether or not to block the user from continuing work that they started on a MacOS device on another iOS or MacOS device (MacOS 10.15 or later).
+     */
+    private Boolean iCloudBlockActivityContinuation;
+    /**
+     * Indicates whether or not to block iCloud from syncing contacts.
+     */
+    private Boolean iCloudBlockAddressBook;
+    /**
+     * Indicates whether or not to block iCloud from syncing bookmarks.
+     */
+    private Boolean iCloudBlockBookmarks;
+    /**
+     * Indicates whether or not to block iCloud from syncing calendars.
+     */
+    private Boolean iCloudBlockCalendar;
+    /**
+     * Indicates whether or not to block iCloud document sync.
+     */
+    private Boolean iCloudBlockDocumentSync;
+    /**
+     * Indicates whether or not to block iCloud from syncing mail.
+     */
+    private Boolean iCloudBlockMail;
+    /**
+     * Indicates whether or not to block iCloud from syncing notes.
+     */
+    private Boolean iCloudBlockNotes;
+    /**
+     * Indicates whether or not to block iCloud Photo Library.
+     */
+    private Boolean iCloudBlockPhotoLibrary;
+    /**
+     * Indicates whether or not to block iCloud from syncing reminders.
+     */
+    private Boolean iCloudBlockReminders;
+    /**
+     * When TRUE the synchronization of cloud desktop and documents is blocked. When FALSE, synchronization of the cloud desktop and documents are allowed. Available for devices running macOS 10.12.4 and later.
+     */
+    private Boolean iCloudDesktopAndDocumentsBlocked;
+    /**
+     * iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
+     */
+    private Boolean iCloudPrivateRelayBlocked;
+    /**
+     * Indicates whether or not to block files from being transferred using iTunes.
+     */
+    private Boolean iTunesBlockFileSharing;
+    /**
+     * Indicates whether or not to block Music service and revert Music app to classic mode.
+     */
+    private Boolean iTunesBlockMusicService;
+    /**
+     * Indicates whether or not to block the user from using dictation input.
+     */
+    private Boolean keyboardBlockDictation;
+    /**
+     * Indicates whether or not iCloud keychain synchronization is blocked (macOS 10.12 and later).
+     */
+    private Boolean keychainBlockCloudSync;
+    /**
+     * TRUE prevents multiplayer gaming when using Game Center. FALSE allows multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.
+     */
+    private Boolean multiplayerGamingBlocked;
+    /**
+     * Indicates whether or not to block sharing passwords with the AirDrop passwords feature.
+     */
+    private Boolean passwordBlockAirDropSharing;
+    /**
+     * Indicates whether or not to block the AutoFill Passwords feature.
+     */
+    private Boolean passwordBlockAutoFill;
+    /**
+     * Indicates whether or not to block fingerprint unlock.
+     */
+    private Boolean passwordBlockFingerprintUnlock;
+    /**
+     * Indicates whether or not to allow passcode modification.
+     */
+    private Boolean passwordBlockModification;
+    /**
+     * Indicates whether or not to block requesting passwords from nearby devices.
+     */
+    private Boolean passwordBlockProximityRequests;
+    /**
+     * Block simple passwords.
+     */
+    private Boolean passwordBlockSimple;
+    /**
+     * Number of days before the password expires.
+     */
+    private Integer passwordExpirationDays;
+    /**
+     * The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11
+     */
+    private Integer passwordMaximumAttemptCount;
+    /**
+     * Number of character sets a password must contain. Valid values 0 to 4
+     */
+    private Integer passwordMinimumCharacterSetCount;
+    /**
+     * Minimum length of passwords.
+     */
+    private Integer passwordMinimumLength;
+    /**
+     * Minutes of inactivity required before a password is required.
+     */
+    private Integer passwordMinutesOfInactivityBeforeLock;
+    /**
+     * Minutes of inactivity required before the screen times out.
+     */
+    private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
+    /**
+     * The number of minutes before the login is reset after the maximum number of unsuccessful login attempts is reached.
+     */
+    private Integer passwordMinutesUntilFailedLoginReset;
+    /**
+     * Number of previous passwords to block.
+     */
+    private Integer passwordPreviousPasswordBlockCount;
+    /**
+     * Whether or not to require a password.
+     */
+    private Boolean passwordRequired;
+    /**
+     * Possible values of required passwords.
+     */
+    private RequiredPasswordType passwordRequiredType;
+    /**
+     * List of privacy preference policy controls. This collection can contain a maximum of 10000 elements.
+     */
+    private java.util.List<MacOSPrivacyAccessControlItem> privacyAccessControls;
+    /**
+     * Indicates whether or not to block the user from using Auto fill in Safari.
+     */
+    private Boolean safariBlockAutofill;
+    /**
+     * Indicates whether or not to block the user from taking Screenshots.
+     */
+    private Boolean screenCaptureBlocked;
+    /**
+     * Specify the number of days (1-90) to delay visibility of major OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
+     */
+    private Integer softwareUpdateMajorOSDeferredInstallDelayInDays;
+    /**
+     * Specify the number of days (1-90) to delay visibility of minor OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
+     */
+    private Integer softwareUpdateMinorOSDeferredInstallDelayInDays;
+    /**
+     * Specify the number of days (1-90) to delay visibility of non-OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
+     */
+    private Integer softwareUpdateNonOSDeferredInstallDelayInDays;
+    /**
+     * Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
+     */
+    private Integer softwareUpdatesEnforcedDelayInDays;
+    /**
+     * Indicates whether or not to block Spotlight from returning any results from an Internet search.
+     */
+    private Boolean spotlightBlockInternetResults;
+    /**
+     * Maximum hours after which the user must enter their password to unlock the device instead of using Touch ID. Available for devices running macOS 12 and later. Valid values 0 to 2147483647
+     */
+    private Integer touchIdTimeoutInHours;
+    /**
+     * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
+     */
+    private MacOSSoftwareUpdateDelayPolicy updateDelayPolicy;
+    /**
+     * TRUE prevents the wallpaper from being changed. FALSE allows the wallpaper to be changed. Available for devices running macOS versions 10.13 and later.
+     */
+    private Boolean wallpaperModificationBlocked;
+    /**
+     * Instantiates a new macOSGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSGeneralDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSGeneralDeviceConfiguration");
@@ -137,7 +262,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSGeneralDeviceConfiguration
+     * @return a macOSGeneralDeviceConfiguration
      */
     @javax.annotation.Nonnull
     public static MacOSGeneralDeviceConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -145,12 +270,20 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         return new MacOSGeneralDeviceConfiguration();
     }
     /**
+     * Gets the activationLockWhenSupervisedAllowed property value. When TRUE, activation lock is allowed when the devices is in the supervised mode. When FALSE, activation lock is not allowed. Default is false.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getActivationLockWhenSupervisedAllowed() {
+        return this.activationLockWhenSupervisedAllowed;
+    }
+    /**
      * Gets the addingGameCenterFriendsBlocked property value. Yes prevents users from adding friends to Game Center. Available for devices running macOS versions 10.13 and later.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getAddingGameCenterFriendsBlocked() {
-        return this._addingGameCenterFriendsBlocked;
+        return this.addingGameCenterFriendsBlocked;
     }
     /**
      * Gets the airDropBlocked property value. Indicates whether or not to allow AirDrop.
@@ -158,7 +291,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getAirDropBlocked() {
-        return this._airDropBlocked;
+        return this.airDropBlocked;
     }
     /**
      * Gets the appleWatchBlockAutoUnlock property value. Indicates whether or to block users from unlocking their Mac with Apple Watch.
@@ -166,7 +299,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getAppleWatchBlockAutoUnlock() {
-        return this._appleWatchBlockAutoUnlock;
+        return this.appleWatchBlockAutoUnlock;
     }
     /**
      * Gets the cameraBlocked property value. Indicates whether or not to block the user from accessing the camera of the device.
@@ -174,7 +307,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getCameraBlocked() {
-        return this._cameraBlocked;
+        return this.cameraBlocked;
     }
     /**
      * Gets the classroomAppBlockRemoteScreenObservation property value. Indicates whether or not to allow remote screen observation by Classroom app. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -182,7 +315,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getClassroomAppBlockRemoteScreenObservation() {
-        return this._classroomAppBlockRemoteScreenObservation;
+        return this.classroomAppBlockRemoteScreenObservation;
     }
     /**
      * Gets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -190,7 +323,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getClassroomAppForceUnpromptedScreenObservation() {
-        return this._classroomAppForceUnpromptedScreenObservation;
+        return this.classroomAppForceUnpromptedScreenObservation;
     }
     /**
      * Gets the classroomForceAutomaticallyJoinClasses property value. Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -198,7 +331,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getClassroomForceAutomaticallyJoinClasses() {
-        return this._classroomForceAutomaticallyJoinClasses;
+        return this.classroomForceAutomaticallyJoinClasses;
     }
     /**
      * Gets the classroomForceRequestPermissionToLeaveClasses property value. Indicates whether a student enrolled in an unmanaged course via Classroom will be required to request permission from the teacher when attempting to leave the course. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -206,7 +339,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getClassroomForceRequestPermissionToLeaveClasses() {
-        return this._classroomForceRequestPermissionToLeaveClasses;
+        return this.classroomForceRequestPermissionToLeaveClasses;
     }
     /**
      * Gets the classroomForceUnpromptedAppAndDeviceLock property value. Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -214,7 +347,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getClassroomForceUnpromptedAppAndDeviceLock() {
-        return this._classroomForceUnpromptedAppAndDeviceLock;
+        return this.classroomForceUnpromptedAppAndDeviceLock;
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
@@ -222,7 +355,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public AppListType getCompliantAppListType() {
-        return this._compliantAppListType;
+        return this.compliantAppListType;
     }
     /**
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
@@ -230,7 +363,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
-        return this._compliantAppsList;
+        return this.compliantAppsList;
     }
     /**
      * Gets the contentCachingBlocked property value. Indicates whether or not to allow content caching.
@@ -238,7 +371,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getContentCachingBlocked() {
-        return this._contentCachingBlocked;
+        return this.contentCachingBlocked;
     }
     /**
      * Gets the definitionLookupBlocked property value. Indicates whether or not to block definition lookup.
@@ -246,7 +379,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getDefinitionLookupBlocked() {
-        return this._definitionLookupBlocked;
+        return this.definitionLookupBlocked;
     }
     /**
      * Gets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
@@ -254,7 +387,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public java.util.List<String> getEmailInDomainSuffixes() {
-        return this._emailInDomainSuffixes;
+        return this.emailInDomainSuffixes;
     }
     /**
      * Gets the eraseContentAndSettingsBlocked property value. TRUE disables the reset option on supervised devices. FALSE enables the reset option on supervised devices. Available for devices running macOS versions 12.0 and later.
@@ -262,76 +395,76 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getEraseContentAndSettingsBlocked() {
-        return this._eraseContentAndSettingsBlocked;
+        return this.eraseContentAndSettingsBlocked;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("addingGameCenterFriendsBlocked", (n) -> { currentObject.setAddingGameCenterFriendsBlocked(n.getBooleanValue()); });
-            this.put("airDropBlocked", (n) -> { currentObject.setAirDropBlocked(n.getBooleanValue()); });
-            this.put("appleWatchBlockAutoUnlock", (n) -> { currentObject.setAppleWatchBlockAutoUnlock(n.getBooleanValue()); });
-            this.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
-            this.put("classroomAppBlockRemoteScreenObservation", (n) -> { currentObject.setClassroomAppBlockRemoteScreenObservation(n.getBooleanValue()); });
-            this.put("classroomAppForceUnpromptedScreenObservation", (n) -> { currentObject.setClassroomAppForceUnpromptedScreenObservation(n.getBooleanValue()); });
-            this.put("classroomForceAutomaticallyJoinClasses", (n) -> { currentObject.setClassroomForceAutomaticallyJoinClasses(n.getBooleanValue()); });
-            this.put("classroomForceRequestPermissionToLeaveClasses", (n) -> { currentObject.setClassroomForceRequestPermissionToLeaveClasses(n.getBooleanValue()); });
-            this.put("classroomForceUnpromptedAppAndDeviceLock", (n) -> { currentObject.setClassroomForceUnpromptedAppAndDeviceLock(n.getBooleanValue()); });
-            this.put("compliantAppListType", (n) -> { currentObject.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
-            this.put("compliantAppsList", (n) -> { currentObject.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("contentCachingBlocked", (n) -> { currentObject.setContentCachingBlocked(n.getBooleanValue()); });
-            this.put("definitionLookupBlocked", (n) -> { currentObject.setDefinitionLookupBlocked(n.getBooleanValue()); });
-            this.put("emailInDomainSuffixes", (n) -> { currentObject.setEmailInDomainSuffixes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("eraseContentAndSettingsBlocked", (n) -> { currentObject.setEraseContentAndSettingsBlocked(n.getBooleanValue()); });
-            this.put("gameCenterBlocked", (n) -> { currentObject.setGameCenterBlocked(n.getBooleanValue()); });
-            this.put("iCloudBlockActivityContinuation", (n) -> { currentObject.setICloudBlockActivityContinuation(n.getBooleanValue()); });
-            this.put("iCloudBlockAddressBook", (n) -> { currentObject.setICloudBlockAddressBook(n.getBooleanValue()); });
-            this.put("iCloudBlockBookmarks", (n) -> { currentObject.setICloudBlockBookmarks(n.getBooleanValue()); });
-            this.put("iCloudBlockCalendar", (n) -> { currentObject.setICloudBlockCalendar(n.getBooleanValue()); });
-            this.put("iCloudBlockDocumentSync", (n) -> { currentObject.setICloudBlockDocumentSync(n.getBooleanValue()); });
-            this.put("iCloudBlockMail", (n) -> { currentObject.setICloudBlockMail(n.getBooleanValue()); });
-            this.put("iCloudBlockNotes", (n) -> { currentObject.setICloudBlockNotes(n.getBooleanValue()); });
-            this.put("iCloudBlockPhotoLibrary", (n) -> { currentObject.setICloudBlockPhotoLibrary(n.getBooleanValue()); });
-            this.put("iCloudBlockReminders", (n) -> { currentObject.setICloudBlockReminders(n.getBooleanValue()); });
-            this.put("iCloudDesktopAndDocumentsBlocked", (n) -> { currentObject.setICloudDesktopAndDocumentsBlocked(n.getBooleanValue()); });
-            this.put("iCloudPrivateRelayBlocked", (n) -> { currentObject.setICloudPrivateRelayBlocked(n.getBooleanValue()); });
-            this.put("iTunesBlockFileSharing", (n) -> { currentObject.setITunesBlockFileSharing(n.getBooleanValue()); });
-            this.put("iTunesBlockMusicService", (n) -> { currentObject.setITunesBlockMusicService(n.getBooleanValue()); });
-            this.put("keyboardBlockDictation", (n) -> { currentObject.setKeyboardBlockDictation(n.getBooleanValue()); });
-            this.put("keychainBlockCloudSync", (n) -> { currentObject.setKeychainBlockCloudSync(n.getBooleanValue()); });
-            this.put("multiplayerGamingBlocked", (n) -> { currentObject.setMultiplayerGamingBlocked(n.getBooleanValue()); });
-            this.put("passwordBlockAirDropSharing", (n) -> { currentObject.setPasswordBlockAirDropSharing(n.getBooleanValue()); });
-            this.put("passwordBlockAutoFill", (n) -> { currentObject.setPasswordBlockAutoFill(n.getBooleanValue()); });
-            this.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
-            this.put("passwordBlockModification", (n) -> { currentObject.setPasswordBlockModification(n.getBooleanValue()); });
-            this.put("passwordBlockProximityRequests", (n) -> { currentObject.setPasswordBlockProximityRequests(n.getBooleanValue()); });
-            this.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMaximumAttemptCount", (n) -> { currentObject.setPasswordMaximumAttemptCount(n.getIntegerValue()); });
-            this.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordMinutesUntilFailedLoginReset", (n) -> { currentObject.setPasswordMinutesUntilFailedLoginReset(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("privacyAccessControls", (n) -> { currentObject.setPrivacyAccessControls(n.getCollectionOfObjectValues(MacOSPrivacyAccessControlItem::createFromDiscriminatorValue)); });
-            this.put("safariBlockAutofill", (n) -> { currentObject.setSafariBlockAutofill(n.getBooleanValue()); });
-            this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
-            this.put("softwareUpdateMajorOSDeferredInstallDelayInDays", (n) -> { currentObject.setSoftwareUpdateMajorOSDeferredInstallDelayInDays(n.getIntegerValue()); });
-            this.put("softwareUpdateMinorOSDeferredInstallDelayInDays", (n) -> { currentObject.setSoftwareUpdateMinorOSDeferredInstallDelayInDays(n.getIntegerValue()); });
-            this.put("softwareUpdateNonOSDeferredInstallDelayInDays", (n) -> { currentObject.setSoftwareUpdateNonOSDeferredInstallDelayInDays(n.getIntegerValue()); });
-            this.put("softwareUpdatesEnforcedDelayInDays", (n) -> { currentObject.setSoftwareUpdatesEnforcedDelayInDays(n.getIntegerValue()); });
-            this.put("spotlightBlockInternetResults", (n) -> { currentObject.setSpotlightBlockInternetResults(n.getBooleanValue()); });
-            this.put("touchIdTimeoutInHours", (n) -> { currentObject.setTouchIdTimeoutInHours(n.getIntegerValue()); });
-            this.put("updateDelayPolicy", (n) -> { currentObject.setUpdateDelayPolicy(n.getEnumValue(MacOSSoftwareUpdateDelayPolicy.class)); });
-            this.put("wallpaperModificationBlocked", (n) -> { currentObject.setWallpaperModificationBlocked(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activationLockWhenSupervisedAllowed", (n) -> { this.setActivationLockWhenSupervisedAllowed(n.getBooleanValue()); });
+        deserializerMap.put("addingGameCenterFriendsBlocked", (n) -> { this.setAddingGameCenterFriendsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("airDropBlocked", (n) -> { this.setAirDropBlocked(n.getBooleanValue()); });
+        deserializerMap.put("appleWatchBlockAutoUnlock", (n) -> { this.setAppleWatchBlockAutoUnlock(n.getBooleanValue()); });
+        deserializerMap.put("cameraBlocked", (n) -> { this.setCameraBlocked(n.getBooleanValue()); });
+        deserializerMap.put("classroomAppBlockRemoteScreenObservation", (n) -> { this.setClassroomAppBlockRemoteScreenObservation(n.getBooleanValue()); });
+        deserializerMap.put("classroomAppForceUnpromptedScreenObservation", (n) -> { this.setClassroomAppForceUnpromptedScreenObservation(n.getBooleanValue()); });
+        deserializerMap.put("classroomForceAutomaticallyJoinClasses", (n) -> { this.setClassroomForceAutomaticallyJoinClasses(n.getBooleanValue()); });
+        deserializerMap.put("classroomForceRequestPermissionToLeaveClasses", (n) -> { this.setClassroomForceRequestPermissionToLeaveClasses(n.getBooleanValue()); });
+        deserializerMap.put("classroomForceUnpromptedAppAndDeviceLock", (n) -> { this.setClassroomForceUnpromptedAppAndDeviceLock(n.getBooleanValue()); });
+        deserializerMap.put("compliantAppListType", (n) -> { this.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
+        deserializerMap.put("compliantAppsList", (n) -> { this.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentCachingBlocked", (n) -> { this.setContentCachingBlocked(n.getBooleanValue()); });
+        deserializerMap.put("definitionLookupBlocked", (n) -> { this.setDefinitionLookupBlocked(n.getBooleanValue()); });
+        deserializerMap.put("emailInDomainSuffixes", (n) -> { this.setEmailInDomainSuffixes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("eraseContentAndSettingsBlocked", (n) -> { this.setEraseContentAndSettingsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("gameCenterBlocked", (n) -> { this.setGameCenterBlocked(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockActivityContinuation", (n) -> { this.setICloudBlockActivityContinuation(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockAddressBook", (n) -> { this.setICloudBlockAddressBook(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockBookmarks", (n) -> { this.setICloudBlockBookmarks(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockCalendar", (n) -> { this.setICloudBlockCalendar(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockDocumentSync", (n) -> { this.setICloudBlockDocumentSync(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockMail", (n) -> { this.setICloudBlockMail(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockNotes", (n) -> { this.setICloudBlockNotes(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockPhotoLibrary", (n) -> { this.setICloudBlockPhotoLibrary(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockReminders", (n) -> { this.setICloudBlockReminders(n.getBooleanValue()); });
+        deserializerMap.put("iCloudDesktopAndDocumentsBlocked", (n) -> { this.setICloudDesktopAndDocumentsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("iCloudPrivateRelayBlocked", (n) -> { this.setICloudPrivateRelayBlocked(n.getBooleanValue()); });
+        deserializerMap.put("iTunesBlockFileSharing", (n) -> { this.setITunesBlockFileSharing(n.getBooleanValue()); });
+        deserializerMap.put("iTunesBlockMusicService", (n) -> { this.setITunesBlockMusicService(n.getBooleanValue()); });
+        deserializerMap.put("keyboardBlockDictation", (n) -> { this.setKeyboardBlockDictation(n.getBooleanValue()); });
+        deserializerMap.put("keychainBlockCloudSync", (n) -> { this.setKeychainBlockCloudSync(n.getBooleanValue()); });
+        deserializerMap.put("multiplayerGamingBlocked", (n) -> { this.setMultiplayerGamingBlocked(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockAirDropSharing", (n) -> { this.setPasswordBlockAirDropSharing(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockAutoFill", (n) -> { this.setPasswordBlockAutoFill(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockFingerprintUnlock", (n) -> { this.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockModification", (n) -> { this.setPasswordBlockModification(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockProximityRequests", (n) -> { this.setPasswordBlockProximityRequests(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockSimple", (n) -> { this.setPasswordBlockSimple(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMaximumAttemptCount", (n) -> { this.setPasswordMaximumAttemptCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumCharacterSetCount", (n) -> { this.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { this.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesUntilFailedLoginReset", (n) -> { this.setPasswordMinutesUntilFailedLoginReset(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("privacyAccessControls", (n) -> { this.setPrivacyAccessControls(n.getCollectionOfObjectValues(MacOSPrivacyAccessControlItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("safariBlockAutofill", (n) -> { this.setSafariBlockAutofill(n.getBooleanValue()); });
+        deserializerMap.put("screenCaptureBlocked", (n) -> { this.setScreenCaptureBlocked(n.getBooleanValue()); });
+        deserializerMap.put("softwareUpdateMajorOSDeferredInstallDelayInDays", (n) -> { this.setSoftwareUpdateMajorOSDeferredInstallDelayInDays(n.getIntegerValue()); });
+        deserializerMap.put("softwareUpdateMinorOSDeferredInstallDelayInDays", (n) -> { this.setSoftwareUpdateMinorOSDeferredInstallDelayInDays(n.getIntegerValue()); });
+        deserializerMap.put("softwareUpdateNonOSDeferredInstallDelayInDays", (n) -> { this.setSoftwareUpdateNonOSDeferredInstallDelayInDays(n.getIntegerValue()); });
+        deserializerMap.put("softwareUpdatesEnforcedDelayInDays", (n) -> { this.setSoftwareUpdatesEnforcedDelayInDays(n.getIntegerValue()); });
+        deserializerMap.put("spotlightBlockInternetResults", (n) -> { this.setSpotlightBlockInternetResults(n.getBooleanValue()); });
+        deserializerMap.put("touchIdTimeoutInHours", (n) -> { this.setTouchIdTimeoutInHours(n.getIntegerValue()); });
+        deserializerMap.put("updateDelayPolicy", (n) -> { this.setUpdateDelayPolicy(n.getEnumValue(MacOSSoftwareUpdateDelayPolicy.class)); });
+        deserializerMap.put("wallpaperModificationBlocked", (n) -> { this.setWallpaperModificationBlocked(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the gameCenterBlocked property value. Yes disables Game Center, and the Game Center icon is removed from the Home screen. Available for devices running macOS versions 10.13 and later.
@@ -339,7 +472,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getGameCenterBlocked() {
-        return this._gameCenterBlocked;
+        return this.gameCenterBlocked;
     }
     /**
      * Gets the iCloudBlockActivityContinuation property value. Indicates whether or not to block the user from continuing work that they started on a MacOS device on another iOS or MacOS device (MacOS 10.15 or later).
@@ -347,7 +480,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockActivityContinuation() {
-        return this._iCloudBlockActivityContinuation;
+        return this.iCloudBlockActivityContinuation;
     }
     /**
      * Gets the iCloudBlockAddressBook property value. Indicates whether or not to block iCloud from syncing contacts.
@@ -355,7 +488,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockAddressBook() {
-        return this._iCloudBlockAddressBook;
+        return this.iCloudBlockAddressBook;
     }
     /**
      * Gets the iCloudBlockBookmarks property value. Indicates whether or not to block iCloud from syncing bookmarks.
@@ -363,7 +496,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockBookmarks() {
-        return this._iCloudBlockBookmarks;
+        return this.iCloudBlockBookmarks;
     }
     /**
      * Gets the iCloudBlockCalendar property value. Indicates whether or not to block iCloud from syncing calendars.
@@ -371,7 +504,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockCalendar() {
-        return this._iCloudBlockCalendar;
+        return this.iCloudBlockCalendar;
     }
     /**
      * Gets the iCloudBlockDocumentSync property value. Indicates whether or not to block iCloud document sync.
@@ -379,7 +512,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockDocumentSync() {
-        return this._iCloudBlockDocumentSync;
+        return this.iCloudBlockDocumentSync;
     }
     /**
      * Gets the iCloudBlockMail property value. Indicates whether or not to block iCloud from syncing mail.
@@ -387,7 +520,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockMail() {
-        return this._iCloudBlockMail;
+        return this.iCloudBlockMail;
     }
     /**
      * Gets the iCloudBlockNotes property value. Indicates whether or not to block iCloud from syncing notes.
@@ -395,7 +528,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockNotes() {
-        return this._iCloudBlockNotes;
+        return this.iCloudBlockNotes;
     }
     /**
      * Gets the iCloudBlockPhotoLibrary property value. Indicates whether or not to block iCloud Photo Library.
@@ -403,7 +536,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockPhotoLibrary() {
-        return this._iCloudBlockPhotoLibrary;
+        return this.iCloudBlockPhotoLibrary;
     }
     /**
      * Gets the iCloudBlockReminders property value. Indicates whether or not to block iCloud from syncing reminders.
@@ -411,7 +544,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getICloudBlockReminders() {
-        return this._iCloudBlockReminders;
+        return this.iCloudBlockReminders;
     }
     /**
      * Gets the iCloudDesktopAndDocumentsBlocked property value. When TRUE the synchronization of cloud desktop and documents is blocked. When FALSE, synchronization of the cloud desktop and documents are allowed. Available for devices running macOS 10.12.4 and later.
@@ -419,7 +552,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getICloudDesktopAndDocumentsBlocked() {
-        return this._iCloudDesktopAndDocumentsBlocked;
+        return this.iCloudDesktopAndDocumentsBlocked;
     }
     /**
      * Gets the iCloudPrivateRelayBlocked property value. iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
@@ -427,7 +560,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getICloudPrivateRelayBlocked() {
-        return this._iCloudPrivateRelayBlocked;
+        return this.iCloudPrivateRelayBlocked;
     }
     /**
      * Gets the iTunesBlockFileSharing property value. Indicates whether or not to block files from being transferred using iTunes.
@@ -435,7 +568,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getITunesBlockFileSharing() {
-        return this._iTunesBlockFileSharing;
+        return this.iTunesBlockFileSharing;
     }
     /**
      * Gets the iTunesBlockMusicService property value. Indicates whether or not to block Music service and revert Music app to classic mode.
@@ -443,7 +576,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getITunesBlockMusicService() {
-        return this._iTunesBlockMusicService;
+        return this.iTunesBlockMusicService;
     }
     /**
      * Gets the keyboardBlockDictation property value. Indicates whether or not to block the user from using dictation input.
@@ -451,7 +584,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getKeyboardBlockDictation() {
-        return this._keyboardBlockDictation;
+        return this.keyboardBlockDictation;
     }
     /**
      * Gets the keychainBlockCloudSync property value. Indicates whether or not iCloud keychain synchronization is blocked (macOS 10.12 and later).
@@ -459,7 +592,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getKeychainBlockCloudSync() {
-        return this._keychainBlockCloudSync;
+        return this.keychainBlockCloudSync;
     }
     /**
      * Gets the multiplayerGamingBlocked property value. TRUE prevents multiplayer gaming when using Game Center. FALSE allows multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.
@@ -467,7 +600,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getMultiplayerGamingBlocked() {
-        return this._multiplayerGamingBlocked;
+        return this.multiplayerGamingBlocked;
     }
     /**
      * Gets the passwordBlockAirDropSharing property value. Indicates whether or not to block sharing passwords with the AirDrop passwords feature.
@@ -475,7 +608,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockAirDropSharing() {
-        return this._passwordBlockAirDropSharing;
+        return this.passwordBlockAirDropSharing;
     }
     /**
      * Gets the passwordBlockAutoFill property value. Indicates whether or not to block the AutoFill Passwords feature.
@@ -483,7 +616,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockAutoFill() {
-        return this._passwordBlockAutoFill;
+        return this.passwordBlockAutoFill;
     }
     /**
      * Gets the passwordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
@@ -491,7 +624,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockFingerprintUnlock() {
-        return this._passwordBlockFingerprintUnlock;
+        return this.passwordBlockFingerprintUnlock;
     }
     /**
      * Gets the passwordBlockModification property value. Indicates whether or not to allow passcode modification.
@@ -499,7 +632,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockModification() {
-        return this._passwordBlockModification;
+        return this.passwordBlockModification;
     }
     /**
      * Gets the passwordBlockProximityRequests property value. Indicates whether or not to block requesting passwords from nearby devices.
@@ -507,7 +640,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockProximityRequests() {
-        return this._passwordBlockProximityRequests;
+        return this.passwordBlockProximityRequests;
     }
     /**
      * Gets the passwordBlockSimple property value. Block simple passwords.
@@ -515,7 +648,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
-        return this._passwordBlockSimple;
+        return this.passwordBlockSimple;
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires.
@@ -523,7 +656,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getPasswordExpirationDays() {
-        return this._passwordExpirationDays;
+        return this.passwordExpirationDays;
     }
     /**
      * Gets the passwordMaximumAttemptCount property value. The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11
@@ -531,7 +664,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getPasswordMaximumAttemptCount() {
-        return this._passwordMaximumAttemptCount;
+        return this.passwordMaximumAttemptCount;
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain. Valid values 0 to 4
@@ -539,7 +672,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
-        return this._passwordMinimumCharacterSetCount;
+        return this.passwordMinimumCharacterSetCount;
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of passwords.
@@ -547,7 +680,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinimumLength() {
-        return this._passwordMinimumLength;
+        return this.passwordMinimumLength;
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity required before a password is required.
@@ -555,7 +688,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
-        return this._passwordMinutesOfInactivityBeforeLock;
+        return this.passwordMinutesOfInactivityBeforeLock;
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity required before the screen times out.
@@ -563,7 +696,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
-        return this._passwordMinutesOfInactivityBeforeScreenTimeout;
+        return this.passwordMinutesOfInactivityBeforeScreenTimeout;
     }
     /**
      * Gets the passwordMinutesUntilFailedLoginReset property value. The number of minutes before the login is reset after the maximum number of unsuccessful login attempts is reached.
@@ -571,7 +704,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getPasswordMinutesUntilFailedLoginReset() {
-        return this._passwordMinutesUntilFailedLoginReset;
+        return this.passwordMinutesUntilFailedLoginReset;
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block.
@@ -579,7 +712,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
-        return this._passwordPreviousPasswordBlockCount;
+        return this.passwordPreviousPasswordBlockCount;
     }
     /**
      * Gets the passwordRequired property value. Whether or not to require a password.
@@ -587,7 +720,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getPasswordRequired() {
-        return this._passwordRequired;
+        return this.passwordRequired;
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
@@ -595,7 +728,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
-        return this._passwordRequiredType;
+        return this.passwordRequiredType;
     }
     /**
      * Gets the privacyAccessControls property value. List of privacy preference policy controls. This collection can contain a maximum of 10000 elements.
@@ -603,7 +736,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public java.util.List<MacOSPrivacyAccessControlItem> getPrivacyAccessControls() {
-        return this._privacyAccessControls;
+        return this.privacyAccessControls;
     }
     /**
      * Gets the safariBlockAutofill property value. Indicates whether or not to block the user from using Auto fill in Safari.
@@ -611,7 +744,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getSafariBlockAutofill() {
-        return this._safariBlockAutofill;
+        return this.safariBlockAutofill;
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether or not to block the user from taking Screenshots.
@@ -619,7 +752,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
-        return this._screenCaptureBlocked;
+        return this.screenCaptureBlocked;
     }
     /**
      * Gets the softwareUpdateMajorOSDeferredInstallDelayInDays property value. Specify the number of days (1-90) to delay visibility of major OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
@@ -627,7 +760,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getSoftwareUpdateMajorOSDeferredInstallDelayInDays() {
-        return this._softwareUpdateMajorOSDeferredInstallDelayInDays;
+        return this.softwareUpdateMajorOSDeferredInstallDelayInDays;
     }
     /**
      * Gets the softwareUpdateMinorOSDeferredInstallDelayInDays property value. Specify the number of days (1-90) to delay visibility of minor OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
@@ -635,7 +768,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getSoftwareUpdateMinorOSDeferredInstallDelayInDays() {
-        return this._softwareUpdateMinorOSDeferredInstallDelayInDays;
+        return this.softwareUpdateMinorOSDeferredInstallDelayInDays;
     }
     /**
      * Gets the softwareUpdateNonOSDeferredInstallDelayInDays property value. Specify the number of days (1-90) to delay visibility of non-OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
@@ -643,7 +776,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getSoftwareUpdateNonOSDeferredInstallDelayInDays() {
-        return this._softwareUpdateNonOSDeferredInstallDelayInDays;
+        return this.softwareUpdateNonOSDeferredInstallDelayInDays;
     }
     /**
      * Gets the softwareUpdatesEnforcedDelayInDays property value. Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
@@ -651,7 +784,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getSoftwareUpdatesEnforcedDelayInDays() {
-        return this._softwareUpdatesEnforcedDelayInDays;
+        return this.softwareUpdatesEnforcedDelayInDays;
     }
     /**
      * Gets the spotlightBlockInternetResults property value. Indicates whether or not to block Spotlight from returning any results from an Internet search.
@@ -659,7 +792,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getSpotlightBlockInternetResults() {
-        return this._spotlightBlockInternetResults;
+        return this.spotlightBlockInternetResults;
     }
     /**
      * Gets the touchIdTimeoutInHours property value. Maximum hours after which the user must enter their password to unlock the device instead of using Touch ID. Available for devices running macOS 12 and later. Valid values 0 to 2147483647
@@ -667,7 +800,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Integer getTouchIdTimeoutInHours() {
-        return this._touchIdTimeoutInHours;
+        return this.touchIdTimeoutInHours;
     }
     /**
      * Gets the updateDelayPolicy property value. Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
@@ -675,7 +808,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public MacOSSoftwareUpdateDelayPolicy getUpdateDelayPolicy() {
-        return this._updateDelayPolicy;
+        return this.updateDelayPolicy;
     }
     /**
      * Gets the wallpaperModificationBlocked property value. TRUE prevents the wallpaper from being changed. FALSE allows the wallpaper to be changed. Available for devices running macOS versions 10.13 and later.
@@ -683,16 +816,18 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     @javax.annotation.Nullable
     public Boolean getWallpaperModificationBlocked() {
-        return this._wallpaperModificationBlocked;
+        return this.wallpaperModificationBlocked;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeBooleanValue("activationLockWhenSupervisedAllowed", this.getActivationLockWhenSupervisedAllowed());
         writer.writeBooleanValue("addingGameCenterFriendsBlocked", this.getAddingGameCenterFriendsBlocked());
         writer.writeBooleanValue("airDropBlocked", this.getAirDropBlocked());
         writer.writeBooleanValue("appleWatchBlockAutoUnlock", this.getAppleWatchBlockAutoUnlock());
@@ -754,475 +889,543 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         writer.writeBooleanValue("wallpaperModificationBlocked", this.getWallpaperModificationBlocked());
     }
     /**
+     * Sets the activationLockWhenSupervisedAllowed property value. When TRUE, activation lock is allowed when the devices is in the supervised mode. When FALSE, activation lock is not allowed. Default is false.
+     * @param value Value to set for the activationLockWhenSupervisedAllowed property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setActivationLockWhenSupervisedAllowed(@javax.annotation.Nullable final Boolean value) {
+        this.activationLockWhenSupervisedAllowed = value;
+    }
+    /**
      * Sets the addingGameCenterFriendsBlocked property value. Yes prevents users from adding friends to Game Center. Available for devices running macOS versions 10.13 and later.
      * @param value Value to set for the addingGameCenterFriendsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddingGameCenterFriendsBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._addingGameCenterFriendsBlocked = value;
+        this.addingGameCenterFriendsBlocked = value;
     }
     /**
      * Sets the airDropBlocked property value. Indicates whether or not to allow AirDrop.
      * @param value Value to set for the airDropBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAirDropBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._airDropBlocked = value;
+        this.airDropBlocked = value;
     }
     /**
      * Sets the appleWatchBlockAutoUnlock property value. Indicates whether or to block users from unlocking their Mac with Apple Watch.
      * @param value Value to set for the appleWatchBlockAutoUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleWatchBlockAutoUnlock(@javax.annotation.Nullable final Boolean value) {
-        this._appleWatchBlockAutoUnlock = value;
+        this.appleWatchBlockAutoUnlock = value;
     }
     /**
      * Sets the cameraBlocked property value. Indicates whether or not to block the user from accessing the camera of the device.
      * @param value Value to set for the cameraBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._cameraBlocked = value;
+        this.cameraBlocked = value;
     }
     /**
      * Sets the classroomAppBlockRemoteScreenObservation property value. Indicates whether or not to allow remote screen observation by Classroom app. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
      * @param value Value to set for the classroomAppBlockRemoteScreenObservation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomAppBlockRemoteScreenObservation(@javax.annotation.Nullable final Boolean value) {
-        this._classroomAppBlockRemoteScreenObservation = value;
+        this.classroomAppBlockRemoteScreenObservation = value;
     }
     /**
      * Sets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
      * @param value Value to set for the classroomAppForceUnpromptedScreenObservation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomAppForceUnpromptedScreenObservation(@javax.annotation.Nullable final Boolean value) {
-        this._classroomAppForceUnpromptedScreenObservation = value;
+        this.classroomAppForceUnpromptedScreenObservation = value;
     }
     /**
      * Sets the classroomForceAutomaticallyJoinClasses property value. Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
      * @param value Value to set for the classroomForceAutomaticallyJoinClasses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomForceAutomaticallyJoinClasses(@javax.annotation.Nullable final Boolean value) {
-        this._classroomForceAutomaticallyJoinClasses = value;
+        this.classroomForceAutomaticallyJoinClasses = value;
     }
     /**
      * Sets the classroomForceRequestPermissionToLeaveClasses property value. Indicates whether a student enrolled in an unmanaged course via Classroom will be required to request permission from the teacher when attempting to leave the course. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
      * @param value Value to set for the classroomForceRequestPermissionToLeaveClasses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomForceRequestPermissionToLeaveClasses(@javax.annotation.Nullable final Boolean value) {
-        this._classroomForceRequestPermissionToLeaveClasses = value;
+        this.classroomForceRequestPermissionToLeaveClasses = value;
     }
     /**
      * Sets the classroomForceUnpromptedAppAndDeviceLock property value. Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
      * @param value Value to set for the classroomForceUnpromptedAppAndDeviceLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomForceUnpromptedAppAndDeviceLock(@javax.annotation.Nullable final Boolean value) {
-        this._classroomForceUnpromptedAppAndDeviceLock = value;
+        this.classroomForceUnpromptedAppAndDeviceLock = value;
     }
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppListType(@javax.annotation.Nullable final AppListType value) {
-        this._compliantAppListType = value;
+        this.compliantAppListType = value;
     }
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      * @param value Value to set for the compliantAppsList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._compliantAppsList = value;
+        this.compliantAppsList = value;
     }
     /**
      * Sets the contentCachingBlocked property value. Indicates whether or not to allow content caching.
      * @param value Value to set for the contentCachingBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._contentCachingBlocked = value;
+        this.contentCachingBlocked = value;
     }
     /**
      * Sets the definitionLookupBlocked property value. Indicates whether or not to block definition lookup.
      * @param value Value to set for the definitionLookupBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionLookupBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._definitionLookupBlocked = value;
+        this.definitionLookupBlocked = value;
     }
     /**
      * Sets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
      * @param value Value to set for the emailInDomainSuffixes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailInDomainSuffixes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._emailInDomainSuffixes = value;
+        this.emailInDomainSuffixes = value;
     }
     /**
      * Sets the eraseContentAndSettingsBlocked property value. TRUE disables the reset option on supervised devices. FALSE enables the reset option on supervised devices. Available for devices running macOS versions 12.0 and later.
      * @param value Value to set for the eraseContentAndSettingsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEraseContentAndSettingsBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._eraseContentAndSettingsBlocked = value;
+        this.eraseContentAndSettingsBlocked = value;
     }
     /**
      * Sets the gameCenterBlocked property value. Yes disables Game Center, and the Game Center icon is removed from the Home screen. Available for devices running macOS versions 10.13 and later.
      * @param value Value to set for the gameCenterBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGameCenterBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._gameCenterBlocked = value;
+        this.gameCenterBlocked = value;
     }
     /**
      * Sets the iCloudBlockActivityContinuation property value. Indicates whether or not to block the user from continuing work that they started on a MacOS device on another iOS or MacOS device (MacOS 10.15 or later).
      * @param value Value to set for the iCloudBlockActivityContinuation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockActivityContinuation(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockActivityContinuation = value;
+        this.iCloudBlockActivityContinuation = value;
     }
     /**
      * Sets the iCloudBlockAddressBook property value. Indicates whether or not to block iCloud from syncing contacts.
      * @param value Value to set for the iCloudBlockAddressBook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockAddressBook(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockAddressBook = value;
+        this.iCloudBlockAddressBook = value;
     }
     /**
      * Sets the iCloudBlockBookmarks property value. Indicates whether or not to block iCloud from syncing bookmarks.
      * @param value Value to set for the iCloudBlockBookmarks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockBookmarks(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockBookmarks = value;
+        this.iCloudBlockBookmarks = value;
     }
     /**
      * Sets the iCloudBlockCalendar property value. Indicates whether or not to block iCloud from syncing calendars.
      * @param value Value to set for the iCloudBlockCalendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockCalendar(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockCalendar = value;
+        this.iCloudBlockCalendar = value;
     }
     /**
      * Sets the iCloudBlockDocumentSync property value. Indicates whether or not to block iCloud document sync.
      * @param value Value to set for the iCloudBlockDocumentSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockDocumentSync(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockDocumentSync = value;
+        this.iCloudBlockDocumentSync = value;
     }
     /**
      * Sets the iCloudBlockMail property value. Indicates whether or not to block iCloud from syncing mail.
      * @param value Value to set for the iCloudBlockMail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockMail(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockMail = value;
+        this.iCloudBlockMail = value;
     }
     /**
      * Sets the iCloudBlockNotes property value. Indicates whether or not to block iCloud from syncing notes.
      * @param value Value to set for the iCloudBlockNotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockNotes(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockNotes = value;
+        this.iCloudBlockNotes = value;
     }
     /**
      * Sets the iCloudBlockPhotoLibrary property value. Indicates whether or not to block iCloud Photo Library.
      * @param value Value to set for the iCloudBlockPhotoLibrary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockPhotoLibrary(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockPhotoLibrary = value;
+        this.iCloudBlockPhotoLibrary = value;
     }
     /**
      * Sets the iCloudBlockReminders property value. Indicates whether or not to block iCloud from syncing reminders.
      * @param value Value to set for the iCloudBlockReminders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockReminders(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudBlockReminders = value;
+        this.iCloudBlockReminders = value;
     }
     /**
      * Sets the iCloudDesktopAndDocumentsBlocked property value. When TRUE the synchronization of cloud desktop and documents is blocked. When FALSE, synchronization of the cloud desktop and documents are allowed. Available for devices running macOS 10.12.4 and later.
      * @param value Value to set for the iCloudDesktopAndDocumentsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudDesktopAndDocumentsBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudDesktopAndDocumentsBlocked = value;
+        this.iCloudDesktopAndDocumentsBlocked = value;
     }
     /**
      * Sets the iCloudPrivateRelayBlocked property value. iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
      * @param value Value to set for the iCloudPrivateRelayBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudPrivateRelayBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._iCloudPrivateRelayBlocked = value;
+        this.iCloudPrivateRelayBlocked = value;
     }
     /**
      * Sets the iTunesBlockFileSharing property value. Indicates whether or not to block files from being transferred using iTunes.
      * @param value Value to set for the iTunesBlockFileSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setITunesBlockFileSharing(@javax.annotation.Nullable final Boolean value) {
-        this._iTunesBlockFileSharing = value;
+        this.iTunesBlockFileSharing = value;
     }
     /**
      * Sets the iTunesBlockMusicService property value. Indicates whether or not to block Music service and revert Music app to classic mode.
      * @param value Value to set for the iTunesBlockMusicService property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setITunesBlockMusicService(@javax.annotation.Nullable final Boolean value) {
-        this._iTunesBlockMusicService = value;
+        this.iTunesBlockMusicService = value;
     }
     /**
      * Sets the keyboardBlockDictation property value. Indicates whether or not to block the user from using dictation input.
      * @param value Value to set for the keyboardBlockDictation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyboardBlockDictation(@javax.annotation.Nullable final Boolean value) {
-        this._keyboardBlockDictation = value;
+        this.keyboardBlockDictation = value;
     }
     /**
      * Sets the keychainBlockCloudSync property value. Indicates whether or not iCloud keychain synchronization is blocked (macOS 10.12 and later).
      * @param value Value to set for the keychainBlockCloudSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeychainBlockCloudSync(@javax.annotation.Nullable final Boolean value) {
-        this._keychainBlockCloudSync = value;
+        this.keychainBlockCloudSync = value;
     }
     /**
      * Sets the multiplayerGamingBlocked property value. TRUE prevents multiplayer gaming when using Game Center. FALSE allows multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.
      * @param value Value to set for the multiplayerGamingBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiplayerGamingBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._multiplayerGamingBlocked = value;
+        this.multiplayerGamingBlocked = value;
     }
     /**
      * Sets the passwordBlockAirDropSharing property value. Indicates whether or not to block sharing passwords with the AirDrop passwords feature.
      * @param value Value to set for the passwordBlockAirDropSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockAirDropSharing(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockAirDropSharing = value;
+        this.passwordBlockAirDropSharing = value;
     }
     /**
      * Sets the passwordBlockAutoFill property value. Indicates whether or not to block the AutoFill Passwords feature.
      * @param value Value to set for the passwordBlockAutoFill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockAutoFill(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockAutoFill = value;
+        this.passwordBlockAutoFill = value;
     }
     /**
      * Sets the passwordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
      * @param value Value to set for the passwordBlockFingerprintUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockFingerprintUnlock = value;
+        this.passwordBlockFingerprintUnlock = value;
     }
     /**
      * Sets the passwordBlockModification property value. Indicates whether or not to allow passcode modification.
      * @param value Value to set for the passwordBlockModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockModification(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockModification = value;
+        this.passwordBlockModification = value;
     }
     /**
      * Sets the passwordBlockProximityRequests property value. Indicates whether or not to block requesting passwords from nearby devices.
      * @param value Value to set for the passwordBlockProximityRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockProximityRequests(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockProximityRequests = value;
+        this.passwordBlockProximityRequests = value;
     }
     /**
      * Sets the passwordBlockSimple property value. Block simple passwords.
      * @param value Value to set for the passwordBlockSimple property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
-        this._passwordBlockSimple = value;
+        this.passwordBlockSimple = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires.
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
-        this._passwordExpirationDays = value;
+        this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMaximumAttemptCount property value. The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11
      * @param value Value to set for the passwordMaximumAttemptCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMaximumAttemptCount(@javax.annotation.Nullable final Integer value) {
-        this._passwordMaximumAttemptCount = value;
+        this.passwordMaximumAttemptCount = value;
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain. Valid values 0 to 4
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinimumCharacterSetCount = value;
+        this.passwordMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords.
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinimumLength = value;
+        this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity required before a password is required.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinutesOfInactivityBeforeLock = value;
+        this.passwordMinutesOfInactivityBeforeLock = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity required before the screen times out.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
+        this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passwordMinutesUntilFailedLoginReset property value. The number of minutes before the login is reset after the maximum number of unsuccessful login attempts is reached.
      * @param value Value to set for the passwordMinutesUntilFailedLoginReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesUntilFailedLoginReset(@javax.annotation.Nullable final Integer value) {
-        this._passwordMinutesUntilFailedLoginReset = value;
+        this.passwordMinutesUntilFailedLoginReset = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block.
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
-        this._passwordPreviousPasswordBlockCount = value;
+        this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequired property value. Whether or not to require a password.
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
-        this._passwordRequired = value;
+        this.passwordRequired = value;
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
-        this._passwordRequiredType = value;
+        this.passwordRequiredType = value;
     }
     /**
      * Sets the privacyAccessControls property value. List of privacy preference policy controls. This collection can contain a maximum of 10000 elements.
      * @param value Value to set for the privacyAccessControls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyAccessControls(@javax.annotation.Nullable final java.util.List<MacOSPrivacyAccessControlItem> value) {
-        this._privacyAccessControls = value;
+        this.privacyAccessControls = value;
     }
     /**
      * Sets the safariBlockAutofill property value. Indicates whether or not to block the user from using Auto fill in Safari.
      * @param value Value to set for the safariBlockAutofill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafariBlockAutofill(@javax.annotation.Nullable final Boolean value) {
-        this._safariBlockAutofill = value;
+        this.safariBlockAutofill = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to block the user from taking Screenshots.
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._screenCaptureBlocked = value;
+        this.screenCaptureBlocked = value;
     }
     /**
      * Sets the softwareUpdateMajorOSDeferredInstallDelayInDays property value. Specify the number of days (1-90) to delay visibility of major OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
      * @param value Value to set for the softwareUpdateMajorOSDeferredInstallDelayInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdateMajorOSDeferredInstallDelayInDays(@javax.annotation.Nullable final Integer value) {
-        this._softwareUpdateMajorOSDeferredInstallDelayInDays = value;
+        this.softwareUpdateMajorOSDeferredInstallDelayInDays = value;
     }
     /**
      * Sets the softwareUpdateMinorOSDeferredInstallDelayInDays property value. Specify the number of days (1-90) to delay visibility of minor OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
      * @param value Value to set for the softwareUpdateMinorOSDeferredInstallDelayInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdateMinorOSDeferredInstallDelayInDays(@javax.annotation.Nullable final Integer value) {
-        this._softwareUpdateMinorOSDeferredInstallDelayInDays = value;
+        this.softwareUpdateMinorOSDeferredInstallDelayInDays = value;
     }
     /**
      * Sets the softwareUpdateNonOSDeferredInstallDelayInDays property value. Specify the number of days (1-90) to delay visibility of non-OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
      * @param value Value to set for the softwareUpdateNonOSDeferredInstallDelayInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdateNonOSDeferredInstallDelayInDays(@javax.annotation.Nullable final Integer value) {
-        this._softwareUpdateNonOSDeferredInstallDelayInDays = value;
+        this.softwareUpdateNonOSDeferredInstallDelayInDays = value;
     }
     /**
      * Sets the softwareUpdatesEnforcedDelayInDays property value. Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
      * @param value Value to set for the softwareUpdatesEnforcedDelayInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdatesEnforcedDelayInDays(@javax.annotation.Nullable final Integer value) {
-        this._softwareUpdatesEnforcedDelayInDays = value;
+        this.softwareUpdatesEnforcedDelayInDays = value;
     }
     /**
      * Sets the spotlightBlockInternetResults property value. Indicates whether or not to block Spotlight from returning any results from an Internet search.
      * @param value Value to set for the spotlightBlockInternetResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpotlightBlockInternetResults(@javax.annotation.Nullable final Boolean value) {
-        this._spotlightBlockInternetResults = value;
+        this.spotlightBlockInternetResults = value;
     }
     /**
      * Sets the touchIdTimeoutInHours property value. Maximum hours after which the user must enter their password to unlock the device instead of using Touch ID. Available for devices running macOS 12 and later. Valid values 0 to 2147483647
      * @param value Value to set for the touchIdTimeoutInHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTouchIdTimeoutInHours(@javax.annotation.Nullable final Integer value) {
-        this._touchIdTimeoutInHours = value;
+        this.touchIdTimeoutInHours = value;
     }
     /**
      * Sets the updateDelayPolicy property value. Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
      * @param value Value to set for the updateDelayPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateDelayPolicy(@javax.annotation.Nullable final MacOSSoftwareUpdateDelayPolicy value) {
-        this._updateDelayPolicy = value;
+        this.updateDelayPolicy = value;
     }
     /**
      * Sets the wallpaperModificationBlocked property value. TRUE prevents the wallpaper from being changed. FALSE allows the wallpaper to be changed. Available for devices running macOS versions 10.13 and later.
      * @param value Value to set for the wallpaperModificationBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWallpaperModificationBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._wallpaperModificationBlocked = value;
+        this.wallpaperModificationBlocked = value;
     }
 }

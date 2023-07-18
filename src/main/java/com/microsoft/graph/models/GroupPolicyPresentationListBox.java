@@ -3,19 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents an ADMX listBox element and an ADMX list element.
+ */
 public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentation implements Parsable {
-    /** If this option is specified true the user must specify the registry subkey value and the registry subkey name. The list box shows two columns, one for the name and one for the data. The default value is false. */
-    private Boolean _explicitValue;
-    /** Not yet documented */
-    private String _valuePrefix;
     /**
-     * Instantiates a new GroupPolicyPresentationListBox and sets the default values.
+     * If this option is specified true the user must specify the registry subkey value and the registry subkey name. The list box shows two columns, one for the name and one for the data. The default value is false.
+     */
+    private Boolean explicitValue;
+    /**
+     * Not yet documented
+     */
+    private String valuePrefix;
+    /**
+     * Instantiates a new groupPolicyPresentationListBox and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationListBox() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationListBox");
@@ -23,7 +30,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyPresentationListBox
+     * @return a groupPolicyPresentationListBox
      */
     @javax.annotation.Nonnull
     public static GroupPolicyPresentationListBox createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,19 +43,18 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
      */
     @javax.annotation.Nullable
     public Boolean getExplicitValue() {
-        return this._explicitValue;
+        return this.explicitValue;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationListBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("explicitValue", (n) -> { currentObject.setExplicitValue(n.getBooleanValue()); });
-            this.put("valuePrefix", (n) -> { currentObject.setValuePrefix(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("explicitValue", (n) -> { this.setExplicitValue(n.getBooleanValue()); });
+        deserializerMap.put("valuePrefix", (n) -> { this.setValuePrefix(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the valuePrefix property value. Not yet documented
@@ -56,13 +62,14 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
      */
     @javax.annotation.Nullable
     public String getValuePrefix() {
-        return this._valuePrefix;
+        return this.valuePrefix;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +81,17 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
      * @param value Value to set for the explicitValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExplicitValue(@javax.annotation.Nullable final Boolean value) {
-        this._explicitValue = value;
+        this.explicitValue = value;
     }
     /**
      * Sets the valuePrefix property value. Not yet documented
      * @param value Value to set for the valuePrefix property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValuePrefix(@javax.annotation.Nullable final String value) {
-        this._valuePrefix = value;
+        this.valuePrefix = value;
     }
 }

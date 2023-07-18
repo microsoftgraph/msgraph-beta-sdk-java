@@ -4,43 +4,68 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** ATP onboarding State for a given device. */
+/**
+ * ATP onboarding State for a given device.
+ */
 public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity implements Parsable {
-    /** The DateTime when device compliance grace period expires */
-    private OffsetDateTime _complianceGracePeriodExpirationDateTime;
-    /** The Device Id that is being reported */
-    private String _deviceId;
-    /** The device model that is being reported */
-    private String _deviceModel;
-    /** The Device Name that is being reported */
-    private String _deviceName;
-    /** Device type. */
-    private DeviceType _platformType;
-    /** The setting class name and property name. */
-    private String _setting;
-    /** The Setting Name that is being reported */
-    private String _settingName;
-    /** The state property */
-    private ComplianceStatus _state;
-    /** The User email address that is being reported */
-    private String _userEmail;
-    /** The user Id that is being reported */
-    private String _userId;
-    /** The User Name that is being reported */
-    private String _userName;
-    /** The User PrincipalName that is being reported */
-    private String _userPrincipalName;
+    /**
+     * The DateTime when device compliance grace period expires
+     */
+    private OffsetDateTime complianceGracePeriodExpirationDateTime;
+    /**
+     * The Device Id that is being reported
+     */
+    private String deviceId;
+    /**
+     * The device model that is being reported
+     */
+    private String deviceModel;
+    /**
+     * The Device Name that is being reported
+     */
+    private String deviceName;
+    /**
+     * Device type.
+     */
+    private DeviceType platformType;
+    /**
+     * The setting class name and property name.
+     */
+    private String setting;
+    /**
+     * The Setting Name that is being reported
+     */
+    private String settingName;
+    /**
+     * The state property
+     */
+    private ComplianceStatus state;
+    /**
+     * The User email address that is being reported
+     */
+    private String userEmail;
+    /**
+     * The user Id that is being reported
+     */
+    private String userId;
+    /**
+     * The User Name that is being reported
+     */
+    private String userName;
+    /**
+     * The User PrincipalName that is being reported
+     */
+    private String userPrincipalName;
     /**
      * Instantiates a new advancedThreatProtectionOnboardingDeviceSettingState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AdvancedThreatProtectionOnboardingDeviceSettingState() {
         super();
-        this.setOdataType("#microsoft.graph.advancedThreatProtectionOnboardingDeviceSettingState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +83,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
-        return this._complianceGracePeriodExpirationDateTime;
+        return this.complianceGracePeriodExpirationDateTime;
     }
     /**
      * Gets the deviceId property value. The Device Id that is being reported
@@ -66,7 +91,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
@@ -74,7 +99,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public String getDeviceModel() {
-        return this._deviceModel;
+        return this.deviceModel;
     }
     /**
      * Gets the deviceName property value. The Device Name that is being reported
@@ -82,29 +107,28 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AdvancedThreatProtectionOnboardingDeviceSettingState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("complianceGracePeriodExpirationDateTime", (n) -> { currentObject.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(DeviceType.class)); });
-            this.put("setting", (n) -> { currentObject.setSetting(n.getStringValue()); });
-            this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ComplianceStatus.class)); });
-            this.put("userEmail", (n) -> { currentObject.setUserEmail(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("complianceGracePeriodExpirationDateTime", (n) -> { this.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("platformType", (n) -> { this.setPlatformType(n.getEnumValue(DeviceType.class)); });
+        deserializerMap.put("setting", (n) -> { this.setSetting(n.getStringValue()); });
+        deserializerMap.put("settingName", (n) -> { this.setSettingName(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("userEmail", (n) -> { this.setUserEmail(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userName", (n) -> { this.setUserName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the platformType property value. Device type.
@@ -112,7 +136,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public DeviceType getPlatformType() {
-        return this._platformType;
+        return this.platformType;
     }
     /**
      * Gets the setting property value. The setting class name and property name.
@@ -120,7 +144,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public String getSetting() {
-        return this._setting;
+        return this.setting;
     }
     /**
      * Gets the settingName property value. The Setting Name that is being reported
@@ -128,7 +152,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public String getSettingName() {
-        return this._settingName;
+        return this.settingName;
     }
     /**
      * Gets the state property value. The state property
@@ -136,7 +160,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public ComplianceStatus getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the userEmail property value. The User email address that is being reported
@@ -144,7 +168,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public String getUserEmail() {
-        return this._userEmail;
+        return this.userEmail;
     }
     /**
      * Gets the userId property value. The user Id that is being reported
@@ -152,7 +176,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Gets the userName property value. The User Name that is being reported
@@ -160,7 +184,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public String getUserName() {
-        return this._userName;
+        return this.userName;
     }
     /**
      * Gets the userPrincipalName property value. The User PrincipalName that is being reported
@@ -168,13 +192,14 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -196,95 +221,107 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceGracePeriodExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._complianceGracePeriodExpirationDateTime = value;
+        this.complianceGracePeriodExpirationDateTime = value;
     }
     /**
      * Sets the deviceId property value. The Device Id that is being reported
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the deviceModel property value. The device model that is being reported
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
-        this._deviceModel = value;
+        this.deviceModel = value;
     }
     /**
      * Sets the deviceName property value. The Device Name that is being reported
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the platformType property value. Device type.
      * @param value Value to set for the platformType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformType(@javax.annotation.Nullable final DeviceType value) {
-        this._platformType = value;
+        this.platformType = value;
     }
     /**
      * Sets the setting property value. The setting class name and property name.
      * @param value Value to set for the setting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSetting(@javax.annotation.Nullable final String value) {
-        this._setting = value;
+        this.setting = value;
     }
     /**
      * Sets the settingName property value. The Setting Name that is being reported
      * @param value Value to set for the settingName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
-        this._settingName = value;
+        this.settingName = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the userEmail property value. The User email address that is being reported
      * @param value Value to set for the userEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEmail(@javax.annotation.Nullable final String value) {
-        this._userEmail = value;
+        this.userEmail = value;
     }
     /**
      * Sets the userId property value. The user Id that is being reported
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
      * Sets the userName property value. The User Name that is being reported
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
-        this._userName = value;
+        this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. The User PrincipalName that is being reported
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

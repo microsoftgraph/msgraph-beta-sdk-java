@@ -3,33 +3,55 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
+/**
+ * A class containing the properties for iOS Vpp eBook.
+ */
 public class IosVppEBook extends ManagedEBook implements Parsable {
-    /** The Apple ID associated with Vpp token. */
-    private String _appleId;
-    /** Genres. */
-    private java.util.List<String> _genres;
-    /** Language. */
-    private String _language;
-    /** List of Scope Tags for this Entity instance. */
-    private java.util.List<String> _roleScopeTagIds;
-    /** Seller. */
-    private String _seller;
-    /** Total license count. */
-    private Integer _totalLicenseCount;
-    /** Used license count. */
-    private Integer _usedLicenseCount;
-    /** The Vpp token's organization name. */
-    private String _vppOrganizationName;
-    /** The Vpp token ID. */
-    private String _vppTokenId;
     /**
-     * Instantiates a new IosVppEBook and sets the default values.
+     * The Apple ID associated with Vpp token.
+     */
+    private String appleId;
+    /**
+     * Genres.
+     */
+    private java.util.List<String> genres;
+    /**
+     * Language.
+     */
+    private String language;
+    /**
+     * List of Scope Tags for this Entity instance.
+     */
+    private java.util.List<String> roleScopeTagIds;
+    /**
+     * Seller.
+     */
+    private String seller;
+    /**
+     * Total license count.
+     */
+    private Integer totalLicenseCount;
+    /**
+     * Used license count.
+     */
+    private Integer usedLicenseCount;
+    /**
+     * The Vpp token's organization name.
+     */
+    private String vppOrganizationName;
+    /**
+     * The Vpp token ID.
+     */
+    private UUID vppTokenId;
+    /**
+     * Instantiates a new iosVppEBook and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosVppEBook() {
         super();
         this.setOdataType("#microsoft.graph.iosVppEBook");
@@ -37,7 +59,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosVppEBook
+     * @return a iosVppEBook
      */
     @javax.annotation.Nonnull
     public static IosVppEBook createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -50,26 +72,25 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppleId() {
-        return this._appleId;
+        return this.appleId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosVppEBook currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
-            this.put("genres", (n) -> { currentObject.setGenres(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("seller", (n) -> { currentObject.setSeller(n.getStringValue()); });
-            this.put("totalLicenseCount", (n) -> { currentObject.setTotalLicenseCount(n.getIntegerValue()); });
-            this.put("usedLicenseCount", (n) -> { currentObject.setUsedLicenseCount(n.getIntegerValue()); });
-            this.put("vppOrganizationName", (n) -> { currentObject.setVppOrganizationName(n.getStringValue()); });
-            this.put("vppTokenId", (n) -> { currentObject.setVppTokenId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appleId", (n) -> { this.setAppleId(n.getStringValue()); });
+        deserializerMap.put("genres", (n) -> { this.setGenres(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("seller", (n) -> { this.setSeller(n.getStringValue()); });
+        deserializerMap.put("totalLicenseCount", (n) -> { this.setTotalLicenseCount(n.getIntegerValue()); });
+        deserializerMap.put("usedLicenseCount", (n) -> { this.setUsedLicenseCount(n.getIntegerValue()); });
+        deserializerMap.put("vppOrganizationName", (n) -> { this.setVppOrganizationName(n.getStringValue()); });
+        deserializerMap.put("vppTokenId", (n) -> { this.setVppTokenId(n.getUUIDValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the genres property value. Genres.
@@ -77,7 +98,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getGenres() {
-        return this._genres;
+        return this.genres;
     }
     /**
      * Gets the language property value. Language.
@@ -85,7 +106,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLanguage() {
-        return this._language;
+        return this.language;
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
@@ -93,7 +114,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this._roleScopeTagIds;
+        return this.roleScopeTagIds;
     }
     /**
      * Gets the seller property value. Seller.
@@ -101,7 +122,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSeller() {
-        return this._seller;
+        return this.seller;
     }
     /**
      * Gets the totalLicenseCount property value. Total license count.
@@ -109,7 +130,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTotalLicenseCount() {
-        return this._totalLicenseCount;
+        return this.totalLicenseCount;
     }
     /**
      * Gets the usedLicenseCount property value. Used license count.
@@ -117,7 +138,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getUsedLicenseCount() {
-        return this._usedLicenseCount;
+        return this.usedLicenseCount;
     }
     /**
      * Gets the vppOrganizationName property value. The Vpp token's organization name.
@@ -125,21 +146,22 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVppOrganizationName() {
-        return this._vppOrganizationName;
+        return this.vppOrganizationName;
     }
     /**
      * Gets the vppTokenId property value. The Vpp token ID.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getVppTokenId() {
-        return this._vppTokenId;
+    public UUID getVppTokenId() {
+        return this.vppTokenId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -151,78 +173,87 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
         writer.writeIntegerValue("totalLicenseCount", this.getTotalLicenseCount());
         writer.writeIntegerValue("usedLicenseCount", this.getUsedLicenseCount());
         writer.writeStringValue("vppOrganizationName", this.getVppOrganizationName());
-        writer.writeStringValue("vppTokenId", this.getVppTokenId());
+        writer.writeUUIDValue("vppTokenId", this.getVppTokenId());
     }
     /**
      * Sets the appleId property value. The Apple ID associated with Vpp token.
      * @param value Value to set for the appleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleId(@javax.annotation.Nullable final String value) {
-        this._appleId = value;
+        this.appleId = value;
     }
     /**
      * Sets the genres property value. Genres.
      * @param value Value to set for the genres property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGenres(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._genres = value;
+        this.genres = value;
     }
     /**
      * Sets the language property value. Language.
      * @param value Value to set for the language property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguage(@javax.annotation.Nullable final String value) {
-        this._language = value;
+        this.language = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roleScopeTagIds = value;
+        this.roleScopeTagIds = value;
     }
     /**
      * Sets the seller property value. Seller.
      * @param value Value to set for the seller property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeller(@javax.annotation.Nullable final String value) {
-        this._seller = value;
+        this.seller = value;
     }
     /**
      * Sets the totalLicenseCount property value. Total license count.
      * @param value Value to set for the totalLicenseCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalLicenseCount(@javax.annotation.Nullable final Integer value) {
-        this._totalLicenseCount = value;
+        this.totalLicenseCount = value;
     }
     /**
      * Sets the usedLicenseCount property value. Used license count.
      * @param value Value to set for the usedLicenseCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsedLicenseCount(@javax.annotation.Nullable final Integer value) {
-        this._usedLicenseCount = value;
+        this.usedLicenseCount = value;
     }
     /**
      * Sets the vppOrganizationName property value. The Vpp token's organization name.
      * @param value Value to set for the vppOrganizationName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVppOrganizationName(@javax.annotation.Nullable final String value) {
-        this._vppOrganizationName = value;
+        this.vppOrganizationName = value;
     }
     /**
      * Sets the vppTokenId property value. The Vpp token ID.
      * @param value Value to set for the vppTokenId property.
      * @return a void
      */
-    public void setVppTokenId(@javax.annotation.Nullable final String value) {
-        this._vppTokenId = value;
+    @javax.annotation.Nonnull
+    public void setVppTokenId(@javax.annotation.Nullable final UUID value) {
+        this.vppTokenId = value;
     }
 }

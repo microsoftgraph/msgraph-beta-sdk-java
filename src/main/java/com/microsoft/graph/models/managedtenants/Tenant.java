@@ -5,31 +5,41 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class Tenant extends Entity implements Parsable {
-    /** The relationship details for the tenant with the managing entity. */
-    private TenantContract _contract;
-    /** The date and time the tenant was created in the multi-tenant management platform. Optional. Read-only. */
-    private OffsetDateTime _createdDateTime;
-    /** The display name for the tenant. Required. Read-only. */
-    private String _displayName;
-    /** The date and time the tenant was last updated within the multi-tenant management platform. Optional. Read-only. */
-    private OffsetDateTime _lastUpdatedDateTime;
-    /** The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only. */
-    private String _tenantId;
-    /** The onboarding status information for the tenant. Optional. Read-only. */
-    private TenantStatusInformation _tenantStatusInformation;
+    /**
+     * The relationship details for the tenant with the managing entity.
+     */
+    private TenantContract contract;
+    /**
+     * The date and time the tenant was created in the multi-tenant management platform. Optional. Read-only.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * The display name for the tenant. Required. Read-only.
+     */
+    private String displayName;
+    /**
+     * The date and time the tenant was last updated within the multi-tenant management platform. Optional. Read-only.
+     */
+    private OffsetDateTime lastUpdatedDateTime;
+    /**
+     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     */
+    private String tenantId;
+    /**
+     * The onboarding status information for the tenant. Optional. Read-only.
+     */
+    private TenantStatusInformation tenantStatusInformation;
     /**
      * Instantiates a new tenant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Tenant() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.tenant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +57,7 @@ public class Tenant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TenantContract getContract() {
-        return this._contract;
+        return this.contract;
     }
     /**
      * Gets the createdDateTime property value. The date and time the tenant was created in the multi-tenant management platform. Optional. Read-only.
@@ -55,7 +65,7 @@ public class Tenant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the displayName property value. The display name for the tenant. Required. Read-only.
@@ -63,23 +73,22 @@ public class Tenant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Tenant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contract", (n) -> { currentObject.setContract(n.getObjectValue(TenantContract::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("tenantStatusInformation", (n) -> { currentObject.setTenantStatusInformation(n.getObjectValue(TenantStatusInformation::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contract", (n) -> { this.setContract(n.getObjectValue(TenantContract::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("tenantStatusInformation", (n) -> { this.setTenantStatusInformation(n.getObjectValue(TenantStatusInformation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastUpdatedDateTime property value. The date and time the tenant was last updated within the multi-tenant management platform. Optional. Read-only.
@@ -87,7 +96,7 @@ public class Tenant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this._lastUpdatedDateTime;
+        return this.lastUpdatedDateTime;
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -95,7 +104,7 @@ public class Tenant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Gets the tenantStatusInformation property value. The onboarding status information for the tenant. Optional. Read-only.
@@ -103,13 +112,14 @@ public class Tenant extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TenantStatusInformation getTenantStatusInformation() {
-        return this._tenantStatusInformation;
+        return this.tenantStatusInformation;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -125,47 +135,53 @@ public class Tenant extends Entity implements Parsable {
      * @param value Value to set for the contract property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContract(@javax.annotation.Nullable final TenantContract value) {
-        this._contract = value;
+        this.contract = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the tenant was created in the multi-tenant management platform. Optional. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. The display name for the tenant. Required. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. The date and time the tenant was last updated within the multi-tenant management platform. Optional. Read-only.
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastUpdatedDateTime = value;
+        this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
     /**
      * Sets the tenantStatusInformation property value. The onboarding status information for the tenant. Optional. Read-only.
      * @param value Value to set for the tenantStatusInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantStatusInformation(@javax.annotation.Nullable final TenantStatusInformation value) {
-        this._tenantStatusInformation = value;
+        this.tenantStatusInformation = value;
     }
 }

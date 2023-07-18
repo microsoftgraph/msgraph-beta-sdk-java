@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum PrintJobProcessingState implements ValuedEnum {
     Unknown("unknown"),
     Pending("pending"),
@@ -12,7 +11,8 @@ public enum PrintJobProcessingState implements ValuedEnum {
     Stopped("stopped"),
     Completed("completed"),
     Canceled("canceled"),
-    Aborted("aborted");
+    Aborted("aborted"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     PrintJobProcessingState(final String value) {
         this.value = value;
@@ -31,6 +31,7 @@ public enum PrintJobProcessingState implements ValuedEnum {
             case "completed": return Completed;
             case "canceled": return Canceled;
             case "aborted": return Aborted;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

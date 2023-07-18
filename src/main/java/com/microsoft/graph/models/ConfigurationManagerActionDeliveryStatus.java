@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Delivery state of Configuration Manager device action
+ */
 public enum ConfigurationManagerActionDeliveryStatus implements ValuedEnum {
     /** Pending to deliver the action to ConfigurationManager */
     Unknown("unknown"),

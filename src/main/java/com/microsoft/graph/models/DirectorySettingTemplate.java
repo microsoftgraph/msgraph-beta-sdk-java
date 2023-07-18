@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DirectorySettingTemplate extends DirectoryObject implements Parsable {
-    /** Description of the template. Read-only. */
-    private String _description;
-    /** Display name of the template. Read-only. */
-    private String _displayName;
-    /** Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only. */
-    private java.util.List<SettingTemplateValue> _values;
     /**
-     * Instantiates a new DirectorySettingTemplate and sets the default values.
+     * Description of the template. Read-only.
+     */
+    private String description;
+    /**
+     * Display name of the template. Read-only.
+     */
+    private String displayName;
+    /**
+     * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
+     */
+    private java.util.List<SettingTemplateValue> values;
+    /**
+     * Instantiates a new directorySettingTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectorySettingTemplate() {
         super();
         this.setOdataType("#microsoft.graph.directorySettingTemplate");
@@ -25,7 +31,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DirectorySettingTemplate
+     * @return a directorySettingTemplate
      */
     @javax.annotation.Nonnull
     public static DirectorySettingTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +44,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Display name of the template. Read-only.
@@ -46,20 +52,19 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DirectorySettingTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(SettingTemplateValue::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getCollectionOfObjectValues(SettingTemplateValue::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
@@ -67,13 +72,14 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<SettingTemplateValue> getValues() {
-        return this._values;
+        return this.values;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Display name of the template. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final java.util.List<SettingTemplateValue> value) {
-        this._values = value;
+        this.values = value;
     }
 }

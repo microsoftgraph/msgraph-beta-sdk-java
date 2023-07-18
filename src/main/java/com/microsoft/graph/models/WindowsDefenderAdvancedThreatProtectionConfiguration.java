@@ -3,29 +3,46 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Windows Defender AdvancedThreatProtection Configuration.
+ */
 public class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfiguration implements Parsable {
-    /** Auto populate onboarding blob programmatically from Advanced Threat protection service */
-    private Boolean _advancedThreatProtectionAutoPopulateOnboardingBlob;
-    /** Windows Defender AdvancedThreatProtection Offboarding Blob. */
-    private String _advancedThreatProtectionOffboardingBlob;
-    /** Name of the file from which AdvancedThreatProtectionOffboardingBlob was obtained. */
-    private String _advancedThreatProtectionOffboardingFilename;
-    /** Windows Defender AdvancedThreatProtection Onboarding Blob. */
-    private String _advancedThreatProtectionOnboardingBlob;
-    /** Name of the file from which AdvancedThreatProtectionOnboardingBlob was obtained. */
-    private String _advancedThreatProtectionOnboardingFilename;
-    /** Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule */
-    private Boolean _allowSampleSharing;
-    /** Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency. */
-    private Boolean _enableExpeditedTelemetryReporting;
     /**
-     * Instantiates a new WindowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.
+     * Auto populate onboarding blob programmatically from Advanced Threat protection service
+     */
+    private Boolean advancedThreatProtectionAutoPopulateOnboardingBlob;
+    /**
+     * Windows Defender AdvancedThreatProtection Offboarding Blob.
+     */
+    private String advancedThreatProtectionOffboardingBlob;
+    /**
+     * Name of the file from which AdvancedThreatProtectionOffboardingBlob was obtained.
+     */
+    private String advancedThreatProtectionOffboardingFilename;
+    /**
+     * Windows Defender AdvancedThreatProtection Onboarding Blob.
+     */
+    private String advancedThreatProtectionOnboardingBlob;
+    /**
+     * Name of the file from which AdvancedThreatProtectionOnboardingBlob was obtained.
+     */
+    private String advancedThreatProtectionOnboardingFilename;
+    /**
+     * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
+     */
+    private Boolean allowSampleSharing;
+    /**
+     * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
+     */
+    private Boolean enableExpeditedTelemetryReporting;
+    /**
+     * Instantiates a new windowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDefenderAdvancedThreatProtectionConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsDefenderAdvancedThreatProtectionConfiguration");
@@ -33,7 +50,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsDefenderAdvancedThreatProtectionConfiguration
+     * @return a windowsDefenderAdvancedThreatProtectionConfiguration
      */
     @javax.annotation.Nonnull
     public static WindowsDefenderAdvancedThreatProtectionConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +63,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @javax.annotation.Nullable
     public Boolean getAdvancedThreatProtectionAutoPopulateOnboardingBlob() {
-        return this._advancedThreatProtectionAutoPopulateOnboardingBlob;
+        return this.advancedThreatProtectionAutoPopulateOnboardingBlob;
     }
     /**
      * Gets the advancedThreatProtectionOffboardingBlob property value. Windows Defender AdvancedThreatProtection Offboarding Blob.
@@ -54,7 +71,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @javax.annotation.Nullable
     public String getAdvancedThreatProtectionOffboardingBlob() {
-        return this._advancedThreatProtectionOffboardingBlob;
+        return this.advancedThreatProtectionOffboardingBlob;
     }
     /**
      * Gets the advancedThreatProtectionOffboardingFilename property value. Name of the file from which AdvancedThreatProtectionOffboardingBlob was obtained.
@@ -62,7 +79,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @javax.annotation.Nullable
     public String getAdvancedThreatProtectionOffboardingFilename() {
-        return this._advancedThreatProtectionOffboardingFilename;
+        return this.advancedThreatProtectionOffboardingFilename;
     }
     /**
      * Gets the advancedThreatProtectionOnboardingBlob property value. Windows Defender AdvancedThreatProtection Onboarding Blob.
@@ -70,7 +87,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @javax.annotation.Nullable
     public String getAdvancedThreatProtectionOnboardingBlob() {
-        return this._advancedThreatProtectionOnboardingBlob;
+        return this.advancedThreatProtectionOnboardingBlob;
     }
     /**
      * Gets the advancedThreatProtectionOnboardingFilename property value. Name of the file from which AdvancedThreatProtectionOnboardingBlob was obtained.
@@ -78,7 +95,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @javax.annotation.Nullable
     public String getAdvancedThreatProtectionOnboardingFilename() {
-        return this._advancedThreatProtectionOnboardingFilename;
+        return this.advancedThreatProtectionOnboardingFilename;
     }
     /**
      * Gets the allowSampleSharing property value. Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
@@ -86,7 +103,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @javax.annotation.Nullable
     public Boolean getAllowSampleSharing() {
-        return this._allowSampleSharing;
+        return this.allowSampleSharing;
     }
     /**
      * Gets the enableExpeditedTelemetryReporting property value. Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
@@ -94,30 +111,30 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     @javax.annotation.Nullable
     public Boolean getEnableExpeditedTelemetryReporting() {
-        return this._enableExpeditedTelemetryReporting;
+        return this.enableExpeditedTelemetryReporting;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDefenderAdvancedThreatProtectionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("advancedThreatProtectionAutoPopulateOnboardingBlob", (n) -> { currentObject.setAdvancedThreatProtectionAutoPopulateOnboardingBlob(n.getBooleanValue()); });
-            this.put("advancedThreatProtectionOffboardingBlob", (n) -> { currentObject.setAdvancedThreatProtectionOffboardingBlob(n.getStringValue()); });
-            this.put("advancedThreatProtectionOffboardingFilename", (n) -> { currentObject.setAdvancedThreatProtectionOffboardingFilename(n.getStringValue()); });
-            this.put("advancedThreatProtectionOnboardingBlob", (n) -> { currentObject.setAdvancedThreatProtectionOnboardingBlob(n.getStringValue()); });
-            this.put("advancedThreatProtectionOnboardingFilename", (n) -> { currentObject.setAdvancedThreatProtectionOnboardingFilename(n.getStringValue()); });
-            this.put("allowSampleSharing", (n) -> { currentObject.setAllowSampleSharing(n.getBooleanValue()); });
-            this.put("enableExpeditedTelemetryReporting", (n) -> { currentObject.setEnableExpeditedTelemetryReporting(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("advancedThreatProtectionAutoPopulateOnboardingBlob", (n) -> { this.setAdvancedThreatProtectionAutoPopulateOnboardingBlob(n.getBooleanValue()); });
+        deserializerMap.put("advancedThreatProtectionOffboardingBlob", (n) -> { this.setAdvancedThreatProtectionOffboardingBlob(n.getStringValue()); });
+        deserializerMap.put("advancedThreatProtectionOffboardingFilename", (n) -> { this.setAdvancedThreatProtectionOffboardingFilename(n.getStringValue()); });
+        deserializerMap.put("advancedThreatProtectionOnboardingBlob", (n) -> { this.setAdvancedThreatProtectionOnboardingBlob(n.getStringValue()); });
+        deserializerMap.put("advancedThreatProtectionOnboardingFilename", (n) -> { this.setAdvancedThreatProtectionOnboardingFilename(n.getStringValue()); });
+        deserializerMap.put("allowSampleSharing", (n) -> { this.setAllowSampleSharing(n.getBooleanValue()); });
+        deserializerMap.put("enableExpeditedTelemetryReporting", (n) -> { this.setEnableExpeditedTelemetryReporting(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,55 +151,62 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * @param value Value to set for the advancedThreatProtectionAutoPopulateOnboardingBlob property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionAutoPopulateOnboardingBlob(@javax.annotation.Nullable final Boolean value) {
-        this._advancedThreatProtectionAutoPopulateOnboardingBlob = value;
+        this.advancedThreatProtectionAutoPopulateOnboardingBlob = value;
     }
     /**
      * Sets the advancedThreatProtectionOffboardingBlob property value. Windows Defender AdvancedThreatProtection Offboarding Blob.
      * @param value Value to set for the advancedThreatProtectionOffboardingBlob property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionOffboardingBlob(@javax.annotation.Nullable final String value) {
-        this._advancedThreatProtectionOffboardingBlob = value;
+        this.advancedThreatProtectionOffboardingBlob = value;
     }
     /**
      * Sets the advancedThreatProtectionOffboardingFilename property value. Name of the file from which AdvancedThreatProtectionOffboardingBlob was obtained.
      * @param value Value to set for the advancedThreatProtectionOffboardingFilename property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionOffboardingFilename(@javax.annotation.Nullable final String value) {
-        this._advancedThreatProtectionOffboardingFilename = value;
+        this.advancedThreatProtectionOffboardingFilename = value;
     }
     /**
      * Sets the advancedThreatProtectionOnboardingBlob property value. Windows Defender AdvancedThreatProtection Onboarding Blob.
      * @param value Value to set for the advancedThreatProtectionOnboardingBlob property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionOnboardingBlob(@javax.annotation.Nullable final String value) {
-        this._advancedThreatProtectionOnboardingBlob = value;
+        this.advancedThreatProtectionOnboardingBlob = value;
     }
     /**
      * Sets the advancedThreatProtectionOnboardingFilename property value. Name of the file from which AdvancedThreatProtectionOnboardingBlob was obtained.
      * @param value Value to set for the advancedThreatProtectionOnboardingFilename property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionOnboardingFilename(@javax.annotation.Nullable final String value) {
-        this._advancedThreatProtectionOnboardingFilename = value;
+        this.advancedThreatProtectionOnboardingFilename = value;
     }
     /**
      * Sets the allowSampleSharing property value. Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
      * @param value Value to set for the allowSampleSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowSampleSharing(@javax.annotation.Nullable final Boolean value) {
-        this._allowSampleSharing = value;
+        this.allowSampleSharing = value;
     }
     /**
      * Sets the enableExpeditedTelemetryReporting property value. Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
      * @param value Value to set for the enableExpeditedTelemetryReporting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableExpeditedTelemetryReporting(@javax.annotation.Nullable final Boolean value) {
-        this._enableExpeditedTelemetryReporting = value;
+        this.enableExpeditedTelemetryReporting = value;
     }
 }

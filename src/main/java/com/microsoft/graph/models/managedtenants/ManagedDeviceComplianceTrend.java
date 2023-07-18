@@ -4,37 +4,53 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
-    /** The number of devices with a compliant status. Required. Read-only. */
-    private Integer _compliantDeviceCount;
-    /** The number of devices manged by Configuration Manager. Required. Read-only. */
-    private Integer _configManagerDeviceCount;
-    /** The date and time compliance snapshot was performed. Required. Read-only. */
-    private String _countDateTime;
-    /** The number of devices with an error status. Required. Read-only. */
-    private Integer _errorDeviceCount;
-    /** The number of devices that are in a grace period status. Required. Read-only. */
-    private Integer _inGracePeriodDeviceCount;
-    /** The number of devices that are in a non-compliant status. Required. Read-only. */
-    private Integer _noncompliantDeviceCount;
-    /** The display name for the managed tenant. Optional. Read-only. */
-    private String _tenantDisplayName;
-    /** The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only. */
-    private String _tenantId;
-    /** The number of devices in an unknown status. Required. Read-only. */
-    private Integer _unknownDeviceCount;
+    /**
+     * The number of devices with a compliant status. Required. Read-only.
+     */
+    private Integer compliantDeviceCount;
+    /**
+     * The number of devices manged by Configuration Manager. Required. Read-only.
+     */
+    private Integer configManagerDeviceCount;
+    /**
+     * The date and time compliance snapshot was performed. Required. Read-only.
+     */
+    private String countDateTime;
+    /**
+     * The number of devices with an error status. Required. Read-only.
+     */
+    private Integer errorDeviceCount;
+    /**
+     * The number of devices that are in a grace period status. Required. Read-only.
+     */
+    private Integer inGracePeriodDeviceCount;
+    /**
+     * The number of devices that are in a non-compliant status. Required. Read-only.
+     */
+    private Integer noncompliantDeviceCount;
+    /**
+     * The display name for the managed tenant. Optional. Read-only.
+     */
+    private String tenantDisplayName;
+    /**
+     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     */
+    private String tenantId;
+    /**
+     * The number of devices in an unknown status. Required. Read-only.
+     */
+    private Integer unknownDeviceCount;
     /**
      * Instantiates a new managedDeviceComplianceTrend and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceComplianceTrend() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.managedDeviceComplianceTrend");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +68,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getCompliantDeviceCount() {
-        return this._compliantDeviceCount;
+        return this.compliantDeviceCount;
     }
     /**
      * Gets the configManagerDeviceCount property value. The number of devices manged by Configuration Manager. Required. Read-only.
@@ -60,7 +76,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getConfigManagerDeviceCount() {
-        return this._configManagerDeviceCount;
+        return this.configManagerDeviceCount;
     }
     /**
      * Gets the countDateTime property value. The date and time compliance snapshot was performed. Required. Read-only.
@@ -68,7 +84,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCountDateTime() {
-        return this._countDateTime;
+        return this.countDateTime;
     }
     /**
      * Gets the errorDeviceCount property value. The number of devices with an error status. Required. Read-only.
@@ -76,26 +92,25 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getErrorDeviceCount() {
-        return this._errorDeviceCount;
+        return this.errorDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedDeviceComplianceTrend currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("configManagerDeviceCount", (n) -> { currentObject.setConfigManagerDeviceCount(n.getIntegerValue()); });
-            this.put("countDateTime", (n) -> { currentObject.setCountDateTime(n.getStringValue()); });
-            this.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
-            this.put("inGracePeriodDeviceCount", (n) -> { currentObject.setInGracePeriodDeviceCount(n.getIntegerValue()); });
-            this.put("noncompliantDeviceCount", (n) -> { currentObject.setNoncompliantDeviceCount(n.getIntegerValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("compliantDeviceCount", (n) -> { this.setCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("configManagerDeviceCount", (n) -> { this.setConfigManagerDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("countDateTime", (n) -> { this.setCountDateTime(n.getStringValue()); });
+        deserializerMap.put("errorDeviceCount", (n) -> { this.setErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("inGracePeriodDeviceCount", (n) -> { this.setInGracePeriodDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("noncompliantDeviceCount", (n) -> { this.setNoncompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { this.setTenantDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("unknownDeviceCount", (n) -> { this.setUnknownDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the inGracePeriodDeviceCount property value. The number of devices that are in a grace period status. Required. Read-only.
@@ -103,7 +118,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getInGracePeriodDeviceCount() {
-        return this._inGracePeriodDeviceCount;
+        return this.inGracePeriodDeviceCount;
     }
     /**
      * Gets the noncompliantDeviceCount property value. The number of devices that are in a non-compliant status. Required. Read-only.
@@ -111,7 +126,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getNoncompliantDeviceCount() {
-        return this._noncompliantDeviceCount;
+        return this.noncompliantDeviceCount;
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
@@ -119,7 +134,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantDisplayName() {
-        return this._tenantDisplayName;
+        return this.tenantDisplayName;
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -127,7 +142,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Gets the unknownDeviceCount property value. The number of devices in an unknown status. Required. Read-only.
@@ -135,13 +150,14 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getUnknownDeviceCount() {
-        return this._unknownDeviceCount;
+        return this.unknownDeviceCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,71 +176,80 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._compliantDeviceCount = value;
+        this.compliantDeviceCount = value;
     }
     /**
      * Sets the configManagerDeviceCount property value. The number of devices manged by Configuration Manager. Required. Read-only.
      * @param value Value to set for the configManagerDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigManagerDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._configManagerDeviceCount = value;
+        this.configManagerDeviceCount = value;
     }
     /**
      * Sets the countDateTime property value. The date and time compliance snapshot was performed. Required. Read-only.
      * @param value Value to set for the countDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountDateTime(@javax.annotation.Nullable final String value) {
-        this._countDateTime = value;
+        this.countDateTime = value;
     }
     /**
      * Sets the errorDeviceCount property value. The number of devices with an error status. Required. Read-only.
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._errorDeviceCount = value;
+        this.errorDeviceCount = value;
     }
     /**
      * Sets the inGracePeriodDeviceCount property value. The number of devices that are in a grace period status. Required. Read-only.
      * @param value Value to set for the inGracePeriodDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInGracePeriodDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._inGracePeriodDeviceCount = value;
+        this.inGracePeriodDeviceCount = value;
     }
     /**
      * Sets the noncompliantDeviceCount property value. The number of devices that are in a non-compliant status. Required. Read-only.
      * @param value Value to set for the noncompliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNoncompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._noncompliantDeviceCount = value;
+        this.noncompliantDeviceCount = value;
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
-        this._tenantDisplayName = value;
+        this.tenantDisplayName = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
     /**
      * Sets the unknownDeviceCount property value. The number of devices in an unknown status. Required. Read-only.
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._unknownDeviceCount = value;
+        this.unknownDeviceCount = value;
     }
 }

@@ -3,29 +3,37 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The user experience analytics battery health runtime history entity contains the trend of runtime of a device over a period of 30 days
+ */
 public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity implements Parsable {
-    /** The unique identifier of the device, Intune DeviceID or SCCM device id. */
-    private String _deviceId;
-    /** The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647 */
-    private Integer _estimatedRuntimeInMinutes;
-    /** The datetime for the instance of runtime history. */
-    private String _runtimeDateTime;
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory and sets the default values.
+     * The unique identifier of the device, Intune DeviceID or SCCM device id.
+     */
+    private String deviceId;
+    /**
+     * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
+     */
+    private Integer estimatedRuntimeInMinutes;
+    /**
+     * The datetime for the instance of runtime history.
+     */
+    private String runtimeDateTime;
+    /**
+     * Instantiates a new userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     * @return a userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +46,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the estimatedRuntimeInMinutes property value. The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
@@ -46,20 +54,19 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
      */
     @javax.annotation.Nullable
     public Integer getEstimatedRuntimeInMinutes() {
-        return this._estimatedRuntimeInMinutes;
+        return this.estimatedRuntimeInMinutes;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("estimatedRuntimeInMinutes", (n) -> { currentObject.setEstimatedRuntimeInMinutes(n.getIntegerValue()); });
-            this.put("runtimeDateTime", (n) -> { currentObject.setRuntimeDateTime(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("estimatedRuntimeInMinutes", (n) -> { this.setEstimatedRuntimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("runtimeDateTime", (n) -> { this.setRuntimeDateTime(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the runtimeDateTime property value. The datetime for the instance of runtime history.
@@ -67,13 +74,14 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
      */
     @javax.annotation.Nullable
     public String getRuntimeDateTime() {
-        return this._runtimeDateTime;
+        return this.runtimeDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +94,26 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the estimatedRuntimeInMinutes property value. The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
      * @param value Value to set for the estimatedRuntimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEstimatedRuntimeInMinutes(@javax.annotation.Nullable final Integer value) {
-        this._estimatedRuntimeInMinutes = value;
+        this.estimatedRuntimeInMinutes = value;
     }
     /**
      * Sets the runtimeDateTime property value. The datetime for the instance of runtime history.
      * @param value Value to set for the runtimeDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRuntimeDateTime(@javax.annotation.Nullable final String value) {
-        this._runtimeDateTime = value;
+        this.runtimeDateTime = value;
     }
 }

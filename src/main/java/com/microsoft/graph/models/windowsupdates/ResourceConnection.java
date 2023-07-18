@@ -1,25 +1,24 @@
 package com.microsoft.graph.models.windowsupdates;
 
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.models.windowsupdates.OperationalInsightsConnection;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class ResourceConnection extends Entity implements Parsable {
-    /** The state of the connection. The possible values are: connected, notAuthorized, notFound, unknownFutureValue. */
-    private ResourceConnectionState _state;
+    /**
+     * The state of the connection. The possible values are: connected, notAuthorized, notFound, unknownFutureValue.
+     */
+    private ResourceConnectionState state;
     /**
      * Instantiates a new resourceConnection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResourceConnection() {
         super();
-        this.setOdataType("#microsoft.graph.windowsUpdates.resourceConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,14 +39,13 @@ public class ResourceConnection extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ResourceConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ResourceConnectionState.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ResourceConnectionState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the state property value. The state of the connection. The possible values are: connected, notAuthorized, notFound, unknownFutureValue.
@@ -55,13 +53,14 @@ public class ResourceConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ResourceConnectionState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -72,7 +71,8 @@ public class ResourceConnection extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ResourceConnectionState value) {
-        this._state = value;
+        this.state = value;
     }
 }

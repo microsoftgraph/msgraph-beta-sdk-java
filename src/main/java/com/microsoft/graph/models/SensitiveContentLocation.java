@@ -4,32 +4,45 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SensitiveContentLocation implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The confidence property */
-    private Integer _confidence;
-    /** The evidences property */
-    private java.util.List<SensitiveContentEvidence> _evidences;
-    /** The idMatch property */
-    private String _idMatch;
-    /** The length property */
-    private Integer _length;
-    /** The OdataType property */
-    private String _odataType;
-    /** The offset property */
-    private Integer _offset;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The confidence property
+     */
+    private Integer confidence;
+    /**
+     * The evidences property
+     */
+    private java.util.List<SensitiveContentEvidence> evidences;
+    /**
+     * The idMatch property
+     */
+    private String idMatch;
+    /**
+     * The length property
+     */
+    private Integer length;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The offset property
+     */
+    private Integer offset;
     /**
      * Instantiates a new sensitiveContentLocation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SensitiveContentLocation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sensitiveContentLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +60,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the confidence property value. The confidence property
@@ -55,7 +68,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Integer getConfidence() {
-        return this._confidence;
+        return this.confidence;
     }
     /**
      * Gets the evidences property value. The evidences property
@@ -63,23 +76,22 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public java.util.List<SensitiveContentEvidence> getEvidences() {
-        return this._evidences;
+        return this.evidences;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SensitiveContentLocation currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
-            this.put("evidences", (n) -> { currentObject.setEvidences(n.getCollectionOfObjectValues(SensitiveContentEvidence::createFromDiscriminatorValue)); });
-            this.put("idMatch", (n) -> { currentObject.setIdMatch(n.getStringValue()); });
-            this.put("length", (n) -> { currentObject.setLength(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("offset", (n) -> { currentObject.setOffset(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("confidence", (n) -> { this.setConfidence(n.getIntegerValue()); });
+        deserializerMap.put("evidences", (n) -> { this.setEvidences(n.getCollectionOfObjectValues(SensitiveContentEvidence::createFromDiscriminatorValue)); });
+        deserializerMap.put("idMatch", (n) -> { this.setIdMatch(n.getStringValue()); });
+        deserializerMap.put("length", (n) -> { this.setLength(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("offset", (n) -> { this.setOffset(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the idMatch property value. The idMatch property
@@ -87,7 +99,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getIdMatch() {
-        return this._idMatch;
+        return this.idMatch;
     }
     /**
      * Gets the length property value. The length property
@@ -95,7 +107,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Integer getLength() {
-        return this._length;
+        return this.length;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -103,7 +115,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the offset property value. The offset property
@@ -111,13 +123,14 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public Integer getOffset() {
-        return this._offset;
+        return this.offset;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("confidence", this.getConfidence());
@@ -133,55 +146,62 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the confidence property value. The confidence property
      * @param value Value to set for the confidence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfidence(@javax.annotation.Nullable final Integer value) {
-        this._confidence = value;
+        this.confidence = value;
     }
     /**
      * Sets the evidences property value. The evidences property
      * @param value Value to set for the evidences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvidences(@javax.annotation.Nullable final java.util.List<SensitiveContentEvidence> value) {
-        this._evidences = value;
+        this.evidences = value;
     }
     /**
      * Sets the idMatch property value. The idMatch property
      * @param value Value to set for the idMatch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdMatch(@javax.annotation.Nullable final String value) {
-        this._idMatch = value;
+        this.idMatch = value;
     }
     /**
      * Sets the length property value. The length property
      * @param value Value to set for the length property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLength(@javax.annotation.Nullable final Integer value) {
-        this._length = value;
+        this.length = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the offset property value. The offset property
      * @param value Value to set for the offset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffset(@javax.annotation.Nullable final Integer value) {
-        this._offset = value;
+        this.offset = value;
     }
 }

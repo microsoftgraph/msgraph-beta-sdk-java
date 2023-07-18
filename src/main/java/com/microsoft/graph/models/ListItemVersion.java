@@ -1,20 +1,21 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DocumentSetVersion;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ListItemVersion extends BaseItemVersion implements Parsable {
-    /** A collection of the fields and values for this version of the list item. */
-    private FieldValueSet _fields;
     /**
-     * Instantiates a new ListItemVersion and sets the default values.
+     * A collection of the fields and values for this version of the list item.
+     */
+    private FieldValueSet fields;
+    /**
+     * Instantiates a new listItemVersion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ListItemVersion() {
         super();
         this.setOdataType("#microsoft.graph.listItemVersion");
@@ -22,7 +23,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ListItemVersion
+     * @return a listItemVersion
      */
     @javax.annotation.Nonnull
     public static ListItemVersion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,14 +39,13 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ListItemVersion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("fields", (n) -> { currentObject.setFields(n.getObjectValue(FieldValueSet::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fields", (n) -> { this.setFields(n.getObjectValue(FieldValueSet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fields property value. A collection of the fields and values for this version of the list item.
@@ -53,13 +53,14 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
      */
     @javax.annotation.Nullable
     public FieldValueSet getFields() {
-        return this._fields;
+        return this.fields;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,7 +71,8 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
      * @param value Value to set for the fields property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFields(@javax.annotation.Nullable final FieldValueSet value) {
-        this._fields = value;
+        this.fields = value;
     }
 }

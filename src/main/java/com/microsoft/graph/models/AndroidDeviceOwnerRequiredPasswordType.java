@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Android Device Owner policy required password type.
+ */
 public enum AndroidDeviceOwnerRequiredPasswordType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),

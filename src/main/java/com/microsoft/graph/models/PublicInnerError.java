@@ -4,30 +4,41 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PublicInnerError implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The error code. */
-    private String _code;
-    /** A collection of error details. */
-    private java.util.List<PublicErrorDetail> _details;
-    /** The error message. */
-    private String _message;
-    /** The OdataType property */
-    private String _odataType;
-    /** The target of the error. */
-    private String _target;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The error code.
+     */
+    private String code;
+    /**
+     * A collection of error details.
+     */
+    private java.util.List<PublicErrorDetail> details;
+    /**
+     * The error message.
+     */
+    private String message;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The target of the error.
+     */
+    private String target;
     /**
      * Instantiates a new publicInnerError and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PublicInnerError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.publicInnerError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +56,7 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the code property value. The error code.
@@ -53,7 +64,7 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCode() {
-        return this._code;
+        return this.code;
     }
     /**
      * Gets the details property value. A collection of error details.
@@ -61,22 +72,21 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PublicErrorDetail> getDetails() {
-        return this._details;
+        return this.details;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PublicInnerError currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(PublicErrorDetail::createFromDiscriminatorValue)); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfObjectValues(PublicErrorDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The error message.
@@ -84,7 +94,7 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getMessage() {
-        return this._message;
+        return this.message;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -92,7 +102,7 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the target property value. The target of the error.
@@ -100,13 +110,14 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTarget() {
-        return this._target;
+        return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("code", this.getCode());
@@ -121,47 +132,53 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the code property value. The error code.
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
-        this._code = value;
+        this.code = value;
     }
     /**
      * Sets the details property value. A collection of error details.
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final java.util.List<PublicErrorDetail> value) {
-        this._details = value;
+        this.details = value;
     }
     /**
      * Sets the message property value. The error message.
      * @param value Value to set for the message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
-        this._message = value;
+        this.message = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the target property value. The target of the error.
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final String value) {
-        this._target = value;
+        this.target = value;
     }
 }

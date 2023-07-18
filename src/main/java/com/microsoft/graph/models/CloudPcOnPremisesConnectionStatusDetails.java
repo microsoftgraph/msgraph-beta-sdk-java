@@ -5,28 +5,37 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcOnPremisesConnectionStatusDetails implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The end time of the connection health check. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _endDateTime;
-    /** All checks that are done on the connection. */
-    private java.util.List<CloudPcOnPremisesConnectionHealthCheck> _healthChecks;
-    /** The OdataType property */
-    private String _odataType;
-    /** The start time of the connection health check. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _startDateTime;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The end time of the connection health check. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime endDateTime;
+    /**
+     * All checks that are done on the connection.
+     */
+    private java.util.List<CloudPcOnPremisesConnectionHealthCheck> healthChecks;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The start time of the connection health check. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime startDateTime;
     /**
      * Instantiates a new cloudPcOnPremisesConnectionStatusDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcOnPremisesConnectionStatusDetails() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.cloudPcOnPremisesConnectionStatusDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +53,7 @@ public class CloudPcOnPremisesConnectionStatusDetails implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the endDateTime property value. The end time of the connection health check. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -52,21 +61,20 @@ public class CloudPcOnPremisesConnectionStatusDetails implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcOnPremisesConnectionStatusDetails currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("healthChecks", (n) -> { currentObject.setHealthChecks(n.getCollectionOfObjectValues(CloudPcOnPremisesConnectionHealthCheck::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("healthChecks", (n) -> { this.setHealthChecks(n.getCollectionOfObjectValues(CloudPcOnPremisesConnectionHealthCheck::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the healthChecks property value. All checks that are done on the connection.
@@ -74,7 +82,7 @@ public class CloudPcOnPremisesConnectionStatusDetails implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcOnPremisesConnectionHealthCheck> getHealthChecks() {
-        return this._healthChecks;
+        return this.healthChecks;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -82,7 +90,7 @@ public class CloudPcOnPremisesConnectionStatusDetails implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the startDateTime property value. The start time of the connection health check. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -90,13 +98,14 @@ public class CloudPcOnPremisesConnectionStatusDetails implements AdditionalDataH
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
@@ -110,39 +119,44 @@ public class CloudPcOnPremisesConnectionStatusDetails implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the endDateTime property value. The end time of the connection health check. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the healthChecks property value. All checks that are done on the connection.
      * @param value Value to set for the healthChecks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthChecks(@javax.annotation.Nullable final java.util.List<CloudPcOnPremisesConnectionHealthCheck> value) {
-        this._healthChecks = value;
+        this.healthChecks = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the startDateTime property value. The start time of the connection health check. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
 }

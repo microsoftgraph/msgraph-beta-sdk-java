@@ -1,28 +1,29 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
-import com.microsoft.graph.models.ClaimsMappingPolicy;
-import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
-import com.microsoft.graph.models.TokenIssuancePolicy;
-import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class StsPolicy extends PolicyBase implements Parsable {
-    /** The appliesTo property */
-    private java.util.List<DirectoryObject> _appliesTo;
-    /** A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required. */
-    private java.util.List<String> _definition;
-    /** If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false. */
-    private Boolean _isOrganizationDefault;
     /**
-     * Instantiates a new StsPolicy and sets the default values.
+     * The appliesTo property
+     */
+    private java.util.List<DirectoryObject> appliesTo;
+    /**
+     * A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
+     */
+    private java.util.List<String> definition;
+    /**
+     * If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
+     */
+    private Boolean isOrganizationDefault;
+    /**
+     * Instantiates a new stsPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public StsPolicy() {
         super();
         this.setOdataType("#microsoft.graph.stsPolicy");
@@ -30,7 +31,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a StsPolicy
+     * @return a stsPolicy
      */
     @javax.annotation.Nonnull
     public static StsPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +55,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
-        return this._appliesTo;
+        return this.appliesTo;
     }
     /**
      * Gets the definition property value. A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
@@ -62,20 +63,19 @@ public class StsPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDefinition() {
-        return this._definition;
+        return this.definition;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final StsPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("definition", (n) -> { currentObject.setDefinition(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isOrganizationDefault", (n) -> { currentObject.setIsOrganizationDefault(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("definition", (n) -> { this.setDefinition(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isOrganizationDefault", (n) -> { this.setIsOrganizationDefault(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isOrganizationDefault property value. If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
@@ -83,13 +83,14 @@ public class StsPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsOrganizationDefault() {
-        return this._isOrganizationDefault;
+        return this.isOrganizationDefault;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -102,23 +103,26 @@ public class StsPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._appliesTo = value;
+        this.appliesTo = value;
     }
     /**
      * Sets the definition property value. A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
      * @param value Value to set for the definition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinition(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._definition = value;
+        this.definition = value;
     }
     /**
      * Sets the isOrganizationDefault property value. If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
      * @param value Value to set for the isOrganizationDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOrganizationDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isOrganizationDefault = value;
+        this.isOrganizationDefault = value;
     }
 }

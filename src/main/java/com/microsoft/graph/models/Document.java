@@ -3,25 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Document extends Entity implements Parsable {
-    /** The comments property */
-    private java.util.List<DocumentComment> _comments;
     /**
-     * Instantiates a new Document and sets the default values.
+     * The comments property
+     */
+    private java.util.List<DocumentComment> comments;
+    /**
+     * Instantiates a new document and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Document() {
         super();
-        this.setOdataType("#microsoft.graph.document");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Document
+     * @return a document
      */
     @javax.annotation.Nonnull
     public static Document createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -34,24 +35,24 @@ public class Document extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DocumentComment> getComments() {
-        return this._comments;
+        return this.comments;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Document currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfObjectValues(DocumentComment::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfObjectValues(DocumentComment::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +63,8 @@ public class Document extends Entity implements Parsable {
      * @param value Value to set for the comments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComments(@javax.annotation.Nullable final java.util.List<DocumentComment> value) {
-        this._comments = value;
+        this.comments = value;
     }
 }

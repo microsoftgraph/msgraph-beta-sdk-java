@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * This enum indicates the Template type for which the enrollment notification applies.
+ */
 public enum EnrollmentNotificationTemplateType implements ValuedEnum {
     /** Email Notification */
     Email("email"),

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Type of Group Policy File or Definition.
+ */
 public enum GroupPolicyType implements ValuedEnum {
     /** Group Policy administrative templates built-in to the Policy configuration service provider (CSP). */
     AdmxBacked("admxBacked"),

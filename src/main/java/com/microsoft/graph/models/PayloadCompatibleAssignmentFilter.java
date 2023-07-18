@@ -3,17 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * A class containing the properties used for Payload Compatible Assignment Filter.
+ */
 public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAssignmentFilter implements Parsable {
-    /** Represents the payload type AssignmentFilter is being assigned to. */
-    private AssignmentFilterPayloadType _payloadType;
     /**
-     * Instantiates a new PayloadCompatibleAssignmentFilter and sets the default values.
+     * Represents the payload type AssignmentFilter is being assigned to.
+     */
+    private AssignmentFilterPayloadType payloadType;
+    /**
+     * Instantiates a new payloadCompatibleAssignmentFilter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PayloadCompatibleAssignmentFilter() {
         super();
         this.setOdataType("#microsoft.graph.payloadCompatibleAssignmentFilter");
@@ -21,7 +26,7 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PayloadCompatibleAssignmentFilter
+     * @return a payloadCompatibleAssignmentFilter
      */
     @javax.annotation.Nonnull
     public static PayloadCompatibleAssignmentFilter createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,14 +35,13 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PayloadCompatibleAssignmentFilter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("payloadType", (n) -> { currentObject.setPayloadType(n.getEnumValue(AssignmentFilterPayloadType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("payloadType", (n) -> { this.setPayloadType(n.getEnumValue(AssignmentFilterPayloadType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the payloadType property value. Represents the payload type AssignmentFilter is being assigned to.
@@ -45,13 +49,14 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
      */
     @javax.annotation.Nullable
     public AssignmentFilterPayloadType getPayloadType() {
-        return this._payloadType;
+        return this.payloadType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +67,8 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
      * @param value Value to set for the payloadType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadType(@javax.annotation.Nullable final AssignmentFilterPayloadType value) {
-        this._payloadType = value;
+        this.payloadType = value;
     }
 }

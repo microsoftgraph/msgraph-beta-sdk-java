@@ -1,269 +1,136 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.AccessPackageAssignmentApprovalsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.ApprovalItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentpolicies.AccessPackageAssignmentPoliciesRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentpolicies.item.AccessPackageAssignmentPolicyItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.AccessPackageAssignmentRequestsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentrequests.item.AccessPackageAssignmentRequestItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentresourceroles.AccessPackageAssignmentResourceRolesRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentresourceroles.item.AccessPackageAssignmentResourceRoleItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.AccessPackageAssignmentsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignments.item.AccessPackageAssignmentItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.AccessPackageCatalogsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.AccessPackageCatalogItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourceenvironments.AccessPackageResourceEnvironmentsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourceenvironments.item.AccessPackageResourceEnvironmentItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.AccessPackageResourceRequestsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerequests.item.AccessPackageResourceRequestItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerolescopes.AccessPackageResourceRoleScopesRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresourcerolescopes.item.AccessPackageResourceRoleScopeItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresources.AccessPackageResourcesRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageresources.item.AccessPackageResourceItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.AccessPackagesRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.AccessPackageItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.ConnectedOrganizationItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
-import com.microsoft.graph.identitygovernance.entitlementmanagement.subjects.item.AccessPackageSubjectItemRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.subjects.SubjectsRequestBuilder;
 import com.microsoft.graph.models.EntitlementManagement;
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.kiota.BaseRequestBuilder;
+import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity. */
-public class EntitlementManagementRequestBuilder {
-    /** The accessPackageAssignmentApprovals property */
+/**
+ * Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity.
+ */
+public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentApprovalsRequestBuilder accessPackageAssignmentApprovals() {
         return new AccessPackageAssignmentApprovalsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The accessPackageAssignmentPolicies property */
+    /**
+     * Provides operations to manage the accessPackageAssignmentPolicies property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentPoliciesRequestBuilder accessPackageAssignmentPolicies() {
         return new AccessPackageAssignmentPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The accessPackageAssignmentRequests property */
+    /**
+     * Provides operations to manage the accessPackageAssignmentRequests property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentRequestsRequestBuilder accessPackageAssignmentRequests() {
         return new AccessPackageAssignmentRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The accessPackageAssignmentResourceRoles property */
+    /**
+     * Provides operations to manage the accessPackageAssignmentResourceRoles property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentResourceRolesRequestBuilder accessPackageAssignmentResourceRoles() {
         return new AccessPackageAssignmentResourceRolesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The accessPackageAssignments property */
+    /**
+     * Provides operations to manage the accessPackageAssignments property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentsRequestBuilder accessPackageAssignments() {
         return new AccessPackageAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The accessPackageCatalogs property */
+    /**
+     * Provides operations to manage the accessPackageCatalogs property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageCatalogsRequestBuilder accessPackageCatalogs() {
         return new AccessPackageCatalogsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The accessPackageResourceEnvironments property */
+    /**
+     * Provides operations to manage the accessPackageResourceEnvironments property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageResourceEnvironmentsRequestBuilder accessPackageResourceEnvironments() {
         return new AccessPackageResourceEnvironmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The accessPackageResourceRequests property */
+    /**
+     * Provides operations to manage the accessPackageResourceRequests property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageResourceRequestsRequestBuilder accessPackageResourceRequests() {
         return new AccessPackageResourceRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The accessPackageResourceRoleScopes property */
+    /**
+     * Provides operations to manage the accessPackageResourceRoleScopes property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageResourceRoleScopesRequestBuilder accessPackageResourceRoleScopes() {
         return new AccessPackageResourceRoleScopesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The accessPackageResources property */
+    /**
+     * Provides operations to manage the accessPackageResources property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageResourcesRequestBuilder accessPackageResources() {
         return new AccessPackageResourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The accessPackages property */
+    /**
+     * Provides operations to manage the accessPackages property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackagesRequestBuilder accessPackages() {
         return new AccessPackagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The connectedOrganizations property */
+    /**
+     * Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public ConnectedOrganizationsRequestBuilder connectedOrganizations() {
         return new ConnectedOrganizationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The settings property */
+    /**
+     * Provides operations to manage the settings property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The subjects property */
+    /**
+     * Provides operations to manage the subjects property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public SubjectsRequestBuilder subjects() {
         return new SubjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item collection
-     * @param id Unique identifier of the item
-     * @return a ApprovalItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ApprovalItemRequestBuilder accessPackageAssignmentApprovals(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("approval%2Did", id);
-        return new ApprovalItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentPolicies.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageAssignmentPolicyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageAssignmentPolicyItemRequestBuilder accessPackageAssignmentPolicies(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageAssignmentPolicy%2Did", id);
-        return new AccessPackageAssignmentPolicyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentRequests.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageAssignmentRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageAssignmentRequestItemRequestBuilder accessPackageAssignmentRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageAssignmentRequest%2Did", id);
-        return new AccessPackageAssignmentRequestItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentResourceRoles.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageAssignmentResourceRoleItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageAssignmentResourceRoleItemRequestBuilder accessPackageAssignmentResourceRoles(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageAssignmentResourceRole%2Did", id);
-        return new AccessPackageAssignmentResourceRoleItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignments.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageAssignmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageAssignmentItemRequestBuilder accessPackageAssignments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageAssignment%2Did", id);
-        return new AccessPackageAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageCatalogs.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageCatalogItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageCatalogItemRequestBuilder accessPackageCatalogs(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageCatalog%2Did", id);
-        return new AccessPackageCatalogItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceEnvironments.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageResourceEnvironmentItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageResourceEnvironmentItemRequestBuilder accessPackageResourceEnvironments(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageResourceEnvironment%2Did", id);
-        return new AccessPackageResourceEnvironmentItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceRequests.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageResourceRequestItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageResourceRequestItemRequestBuilder accessPackageResourceRequests(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageResourceRequest%2Did", id);
-        return new AccessPackageResourceRequestItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResourceRoleScopes.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageResourceRoleScopeItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageResourceRoleScopeItemRequestBuilder accessPackageResourceRoleScopes(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageResourceRoleScope%2Did", id);
-        return new AccessPackageResourceRoleScopeItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageResources.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageResourceItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageResourceItemRequestBuilder accessPackageResources(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageResource%2Did", id);
-        return new AccessPackageResourceItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public AccessPackageItemRequestBuilder accessPackages(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackage%2Did", id);
-        return new AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item collection
-     * @param id Unique identifier of the item
-     * @return a ConnectedOrganizationItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ConnectedOrganizationItemRequestBuilder connectedOrganizations(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("connectedOrganization%2Did", id);
-        return new ConnectedOrganizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new EntitlementManagementRequestBuilder and sets the default values.
@@ -271,13 +138,9 @@ public class EntitlementManagementRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EntitlementManagementRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        Objects.requireNonNull(pathParameters);
-        Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/identityGovernance/entitlementManagement{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new EntitlementManagementRequestBuilder and sets the default values.
@@ -285,329 +148,247 @@ public class EntitlementManagementRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EntitlementManagementRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/identityGovernance/entitlementManagement{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
-        urlTplParams.put("request-raw-url", rawUrl);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
-    }
-    /**
-     * Delete navigation property entitlementManagement for identityGovernance
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation() throws URISyntaxException {
-        return createDeleteRequestInformation(null);
-    }
-    /**
-     * Delete navigation property entitlementManagement for identityGovernance
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<EntitlementManagementRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.DELETE;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final EntitlementManagementRequestBuilderDeleteRequestConfiguration requestConfig = new EntitlementManagementRequestBuilderDeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Get entitlementManagement from identityGovernance
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * Get entitlementManagement from identityGovernance
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<EntitlementManagementRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final EntitlementManagementRequestBuilderGetRequestConfiguration requestConfig = new EntitlementManagementRequestBuilderGetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Update the navigation property entitlementManagement in identityGovernance
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final EntitlementManagement body) throws URISyntaxException {
-        return createPatchRequestInformation(body, null);
-    }
-    /**
-     * Update the navigation property entitlementManagement in identityGovernance
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final EntitlementManagement body, @javax.annotation.Nullable final java.util.function.Consumer<EntitlementManagementRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.PATCH;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final EntitlementManagementRequestBuilderPatchRequestConfiguration requestConfig = new EntitlementManagementRequestBuilderPatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property entitlementManagement for identityGovernance
      * @return a CompletableFuture of void
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final RequestInformation requestInfo = toDeleteRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
      * Delete navigation property entitlementManagement for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<EntitlementManagementRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property entitlementManagement for identityGovernance
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<EntitlementManagementRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Get entitlementManagement from identityGovernance
-     * @return a CompletableFuture of entitlementManagement
-     */
-    public java.util.concurrent.CompletableFuture<EntitlementManagement> get() {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, EntitlementManagement::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Get entitlementManagement from identityGovernance
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of entitlementManagement
-     */
-    public java.util.concurrent.CompletableFuture<EntitlementManagement> get(@javax.annotation.Nullable final java.util.function.Consumer<EntitlementManagementRequestBuilderGetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, EntitlementManagement::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Get entitlementManagement from identityGovernance
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of entitlementManagement
-     */
-    public java.util.concurrent.CompletableFuture<EntitlementManagement> get(@javax.annotation.Nullable final java.util.function.Consumer<EntitlementManagementRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, EntitlementManagement::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property entitlementManagement in identityGovernance
-     * @param body 
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final EntitlementManagement body) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property entitlementManagement in identityGovernance
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final EntitlementManagement body, @javax.annotation.Nullable final java.util.function.Consumer<EntitlementManagementRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update the navigation property entitlementManagement in identityGovernance
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final EntitlementManagement body, @javax.annotation.Nullable final java.util.function.Consumer<EntitlementManagementRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.subjects.item collection
-     * @param id Unique identifier of the item
-     * @return a AccessPackageSubjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public AccessPackageSubjectItemRequestBuilder subjects(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("accessPackageSubject%2Did", id);
-        return new AccessPackageSubjectItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class EntitlementManagementRequestBuilderDeleteRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new entitlementManagementRequestBuilderDeleteRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public EntitlementManagementRequestBuilderDeleteRequestConfiguration() {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        try {
+            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
-    /** Get entitlementManagement from identityGovernance */
-    public class EntitlementManagementRequestBuilderGetQueryParameters {
-        /** Expand related entities */
+    /**
+     * Get entitlementManagement from identityGovernance
+     * @return a CompletableFuture of entitlementManagement
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EntitlementManagement> get() {
+        try {
+            final RequestInformation requestInfo = toGetRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, EntitlementManagement::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<EntitlementManagement> executionException = new java.util.concurrent.CompletableFuture<EntitlementManagement>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Get entitlementManagement from identityGovernance
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of entitlementManagement
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EntitlementManagement> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        try {
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, EntitlementManagement::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<EntitlementManagement> executionException = new java.util.concurrent.CompletableFuture<EntitlementManagement>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Update the navigation property entitlementManagement in identityGovernance
+     * @param body The request body
+     * @return a CompletableFuture of entitlementManagement
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EntitlementManagement> patch(@javax.annotation.Nonnull final EntitlementManagement body) {
+        try {
+            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, EntitlementManagement::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<EntitlementManagement> executionException = new java.util.concurrent.CompletableFuture<EntitlementManagement>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Update the navigation property entitlementManagement in identityGovernance
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of entitlementManagement
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<EntitlementManagement> patch(@javax.annotation.Nonnull final EntitlementManagement body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        try {
+            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, EntitlementManagement::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<EntitlementManagement> executionException = new java.util.concurrent.CompletableFuture<EntitlementManagement>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Delete navigation property entitlementManagement for identityGovernance
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+        return toDeleteRequestInformation(null);
+    }
+    /**
+     * Delete navigation property entitlementManagement for identityGovernance
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        if (requestConfiguration != null) {
+            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Get entitlementManagement from identityGovernance
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Get entitlementManagement from identityGovernance
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Update the navigation property entitlementManagement in identityGovernance
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final EntitlementManagement body) throws URISyntaxException {
+        return toPatchRequestInformation(body, null);
+    }
+    /**
+     * Update the navigation property entitlementManagement in identityGovernance
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final EntitlementManagement body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
+    }
+    /**
+     * Get entitlementManagement from identityGovernance
+     */
+    public class GetQueryParameters {
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class EntitlementManagementRequestBuilderGetRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /** Request query parameters */
-        @javax.annotation.Nullable
-        public EntitlementManagementRequestBuilderGetQueryParameters queryParameters = new EntitlementManagementRequestBuilderGetQueryParameters();
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class GetRequestConfiguration extends BaseRequestConfiguration {
         /**
-         * Instantiates a new entitlementManagementRequestBuilderGetRequestConfiguration and sets the default values.
-         * @return a void
+         * Request query parameters
          */
-        public EntitlementManagementRequestBuilderGetRequestConfiguration() {
-        }
+        @javax.annotation.Nullable
+        public GetQueryParameters queryParameters = new GetQueryParameters();
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class EntitlementManagementRequestBuilderPatchRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new entitlementManagementRequestBuilderPatchRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public EntitlementManagementRequestBuilderPatchRequestConfiguration() {
-        }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

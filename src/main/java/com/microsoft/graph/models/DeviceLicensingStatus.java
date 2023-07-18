@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Indicates the device licensing status after Windows device based subscription has been enabled.
+ */
 public enum DeviceLicensingStatus implements ValuedEnum {
     /** Default. Set to unknown when status cannot be determined. */
     Unknown("unknown"),
@@ -18,9 +20,9 @@ public enum DeviceLicensingStatus implements ValuedEnum {
     /** This status is set when the Microsoft device identity verification fails. */
     DeviceIdentityVerificationFailed("deviceIdentityVerificationFailed"),
     /** This status is set when the Microsoft account identity is being verified. */
-    VerifyingMirosoftAccountIdentity("verifyingMirosoftAccountIdentity"),
+    VerifyingMicrosoftAccountIdentity("verifyingMicrosoftAccountIdentity"),
     /** This status is set when the Microsoft account identity verification fails. */
-    MirosoftAccountVerificationFailed("mirosoftAccountVerificationFailed"),
+    MicrosoftAccountVerificationFailed("microsoftAccountVerificationFailed"),
     /** This status is set when the device license is being acquired. */
     AcquiringDeviceLicense("acquiringDeviceLicense"),
     /** This status is set when the device license is being refreshed. */
@@ -53,8 +55,8 @@ public enum DeviceLicensingStatus implements ValuedEnum {
             case "deviceIsNotAzureActiveDirectoryJoined": return DeviceIsNotAzureActiveDirectoryJoined;
             case "verifyingMicrosoftDeviceIdentity": return VerifyingMicrosoftDeviceIdentity;
             case "deviceIdentityVerificationFailed": return DeviceIdentityVerificationFailed;
-            case "verifyingMirosoftAccountIdentity": return VerifyingMirosoftAccountIdentity;
-            case "mirosoftAccountVerificationFailed": return MirosoftAccountVerificationFailed;
+            case "verifyingMicrosoftAccountIdentity": return VerifyingMicrosoftAccountIdentity;
+            case "microsoftAccountVerificationFailed": return MicrosoftAccountVerificationFailed;
             case "acquiringDeviceLicense": return AcquiringDeviceLicense;
             case "refreshingDeviceLicense": return RefreshingDeviceLicense;
             case "deviceLicenseRefreshSucceed": return DeviceLicenseRefreshSucceed;

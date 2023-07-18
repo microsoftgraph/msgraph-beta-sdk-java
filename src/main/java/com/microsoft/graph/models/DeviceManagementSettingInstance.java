@@ -1,31 +1,30 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DeviceManagementAbstractComplexSettingInstance;
-import com.microsoft.graph.models.DeviceManagementBooleanSettingInstance;
-import com.microsoft.graph.models.DeviceManagementCollectionSettingInstance;
-import com.microsoft.graph.models.DeviceManagementComplexSettingInstance;
-import com.microsoft.graph.models.DeviceManagementIntegerSettingInstance;
-import com.microsoft.graph.models.DeviceManagementStringSettingInstance;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Base type for a setting instance */
+/**
+ * Base type for a setting instance
+ */
 public class DeviceManagementSettingInstance extends Entity implements Parsable {
-    /** The ID of the setting definition for this instance */
-    private String _definitionId;
-    /** JSON representation of the value */
-    private String _valueJson;
+    /**
+     * The ID of the setting definition for this instance
+     */
+    private String definitionId;
+    /**
+     * JSON representation of the value
+     */
+    private String valueJson;
     /**
      * Instantiates a new deviceManagementSettingInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingInstance() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementSettingInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,19 +54,18 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getDefinitionId() {
-        return this._definitionId;
+        return this.definitionId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementSettingInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("definitionId", (n) -> { currentObject.setDefinitionId(n.getStringValue()); });
-            this.put("valueJson", (n) -> { currentObject.setValueJson(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("definitionId", (n) -> { this.setDefinitionId(n.getStringValue()); });
+        deserializerMap.put("valueJson", (n) -> { this.setValueJson(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the valueJson property value. JSON representation of the value
@@ -75,13 +73,14 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getValueJson() {
-        return this._valueJson;
+        return this.valueJson;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -93,15 +92,17 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
      * @param value Value to set for the definitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionId(@javax.annotation.Nullable final String value) {
-        this._definitionId = value;
+        this.definitionId = value;
     }
     /**
      * Sets the valueJson property value. JSON representation of the value
      * @param value Value to set for the valueJson property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueJson(@javax.annotation.Nullable final String value) {
-        this._valueJson = value;
+        this.valueJson = value;
     }
 }

@@ -3,26 +3,36 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties for the run summary of a device management script.
+ */
 public class DeviceManagementScriptRunSummary extends Entity implements Parsable {
-    /** Error device count. */
-    private Integer _errorDeviceCount;
-    /** Error user count. */
-    private Integer _errorUserCount;
-    /** Success device count. */
-    private Integer _successDeviceCount;
-    /** Success user count. */
-    private Integer _successUserCount;
+    /**
+     * Error device count.
+     */
+    private Integer errorDeviceCount;
+    /**
+     * Error user count.
+     */
+    private Integer errorUserCount;
+    /**
+     * Success device count.
+     */
+    private Integer successDeviceCount;
+    /**
+     * Success user count.
+     */
+    private Integer successUserCount;
     /**
      * Instantiates a new deviceManagementScriptRunSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementScriptRunSummary() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementScriptRunSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,7 +50,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public Integer getErrorDeviceCount() {
-        return this._errorDeviceCount;
+        return this.errorDeviceCount;
     }
     /**
      * Gets the errorUserCount property value. Error user count.
@@ -48,21 +58,20 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public Integer getErrorUserCount() {
-        return this._errorUserCount;
+        return this.errorUserCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementScriptRunSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
-            this.put("errorUserCount", (n) -> { currentObject.setErrorUserCount(n.getIntegerValue()); });
-            this.put("successDeviceCount", (n) -> { currentObject.setSuccessDeviceCount(n.getIntegerValue()); });
-            this.put("successUserCount", (n) -> { currentObject.setSuccessUserCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("errorDeviceCount", (n) -> { this.setErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("errorUserCount", (n) -> { this.setErrorUserCount(n.getIntegerValue()); });
+        deserializerMap.put("successDeviceCount", (n) -> { this.setSuccessDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("successUserCount", (n) -> { this.setSuccessUserCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the successDeviceCount property value. Success device count.
@@ -70,7 +79,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public Integer getSuccessDeviceCount() {
-        return this._successDeviceCount;
+        return this.successDeviceCount;
     }
     /**
      * Gets the successUserCount property value. Success user count.
@@ -78,13 +87,14 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public Integer getSuccessUserCount() {
-        return this._successUserCount;
+        return this.successUserCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,31 +108,35 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._errorDeviceCount = value;
+        this.errorDeviceCount = value;
     }
     /**
      * Sets the errorUserCount property value. Error user count.
      * @param value Value to set for the errorUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorUserCount(@javax.annotation.Nullable final Integer value) {
-        this._errorUserCount = value;
+        this.errorUserCount = value;
     }
     /**
      * Sets the successDeviceCount property value. Success device count.
      * @param value Value to set for the successDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._successDeviceCount = value;
+        this.successDeviceCount = value;
     }
     /**
      * Sets the successUserCount property value. Success user count.
      * @param value Value to set for the successUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessUserCount(@javax.annotation.Nullable final Integer value) {
-        this._successUserCount = value;
+        this.successUserCount = value;
     }
 }

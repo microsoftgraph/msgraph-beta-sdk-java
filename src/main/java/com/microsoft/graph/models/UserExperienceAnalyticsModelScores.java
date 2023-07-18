@@ -3,41 +3,61 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The user experience analytics model scores entity consolidates the various Endpoint Analytics scores.
+ */
 public class UserExperienceAnalyticsModelScores extends Entity implements Parsable {
-    /** The user experience analytics model app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _appReliabilityScore;
-    /** The user experience analytics model battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _batteryHealthScore;
-    /** The user experience analytics model score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _endpointAnalyticsScore;
-    /** The healthStatus property */
-    private UserExperienceAnalyticsHealthState _healthStatus;
-    /** A unique identifier of the user experience analytics model scores: device manufacturer. */
-    private String _manufacturer;
-    /** A unique identifier of the user experience analytics model scores: device model. */
-    private String _model;
-    /** The user experience analytics model device count. Valid values -9.22337203685478E+18 to 9.22337203685478E+18 */
-    private Long _modelDeviceCount;
-    /** The user experience analytics model startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _startupPerformanceScore;
-    /** The user experience analytics model work from anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
-    private Double _workFromAnywhereScore;
     /**
-     * Instantiates a new UserExperienceAnalyticsModelScores and sets the default values.
+     * Indicates a score calculated from application health data to indicate when a device is having problems running one or more applications. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    private Double appReliabilityScore;
+    /**
+     * Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    private Double batteryHealthScore;
+    /**
+     * Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    private Double endpointAnalyticsScore;
+    /**
+     * The healthStatus property
+     */
+    private UserExperienceAnalyticsHealthState healthStatus;
+    /**
+     * The manufacturer name of the device. Examples: Microsoft Corporation, HP, Lenovo. Supports: $select, $OrderBy. Read-only.
+     */
+    private String manufacturer;
+    /**
+     * The model name of the device. Supports: $select, $OrderBy. Read-only.
+     */
+    private String model;
+    /**
+     * Indicates unique devices count of given model in a consolidated report. Supports: $select, $OrderBy. Read-only. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
+     */
+    private Long modelDeviceCount;
+    /**
+     * Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    private Double startupPerformanceScore;
+    /**
+     * Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    private Double workFromAnywhereScore;
+    /**
+     * Instantiates a new userExperienceAnalyticsModelScores and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsModelScores() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsModelScores");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsModelScores
+     * @return a userExperienceAnalyticsModelScores
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsModelScores createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,47 +65,46 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
         return new UserExperienceAnalyticsModelScores();
     }
     /**
-     * Gets the appReliabilityScore property value. The user experience analytics model app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Gets the appReliabilityScore property value. Indicates a score calculated from application health data to indicate when a device is having problems running one or more applications. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
     @javax.annotation.Nullable
     public Double getAppReliabilityScore() {
-        return this._appReliabilityScore;
+        return this.appReliabilityScore;
     }
     /**
-     * Gets the batteryHealthScore property value. The user experience analytics model battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Gets the batteryHealthScore property value. Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
     @javax.annotation.Nullable
     public Double getBatteryHealthScore() {
-        return this._batteryHealthScore;
+        return this.batteryHealthScore;
     }
     /**
-     * Gets the endpointAnalyticsScore property value. The user experience analytics model score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Gets the endpointAnalyticsScore property value. Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
     @javax.annotation.Nullable
     public Double getEndpointAnalyticsScore() {
-        return this._endpointAnalyticsScore;
+        return this.endpointAnalyticsScore;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsModelScores currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appReliabilityScore", (n) -> { currentObject.setAppReliabilityScore(n.getDoubleValue()); });
-            this.put("batteryHealthScore", (n) -> { currentObject.setBatteryHealthScore(n.getDoubleValue()); });
-            this.put("endpointAnalyticsScore", (n) -> { currentObject.setEndpointAnalyticsScore(n.getDoubleValue()); });
-            this.put("healthStatus", (n) -> { currentObject.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("modelDeviceCount", (n) -> { currentObject.setModelDeviceCount(n.getLongValue()); });
-            this.put("startupPerformanceScore", (n) -> { currentObject.setStartupPerformanceScore(n.getDoubleValue()); });
-            this.put("workFromAnywhereScore", (n) -> { currentObject.setWorkFromAnywhereScore(n.getDoubleValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appReliabilityScore", (n) -> { this.setAppReliabilityScore(n.getDoubleValue()); });
+        deserializerMap.put("batteryHealthScore", (n) -> { this.setBatteryHealthScore(n.getDoubleValue()); });
+        deserializerMap.put("endpointAnalyticsScore", (n) -> { this.setEndpointAnalyticsScore(n.getDoubleValue()); });
+        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("modelDeviceCount", (n) -> { this.setModelDeviceCount(n.getLongValue()); });
+        deserializerMap.put("startupPerformanceScore", (n) -> { this.setStartupPerformanceScore(n.getDoubleValue()); });
+        deserializerMap.put("workFromAnywhereScore", (n) -> { this.setWorkFromAnywhereScore(n.getDoubleValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
@@ -93,53 +112,54 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
-        return this._healthStatus;
+        return this.healthStatus;
     }
     /**
-     * Gets the manufacturer property value. A unique identifier of the user experience analytics model scores: device manufacturer.
+     * Gets the manufacturer property value. The manufacturer name of the device. Examples: Microsoft Corporation, HP, Lenovo. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
-     * Gets the model property value. A unique identifier of the user experience analytics model scores: device model.
+     * Gets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
-     * Gets the modelDeviceCount property value. The user experience analytics model device count. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
+     * Gets the modelDeviceCount property value. Indicates unique devices count of given model in a consolidated report. Supports: $select, $OrderBy. Read-only. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
      * @return a int64
      */
     @javax.annotation.Nullable
     public Long getModelDeviceCount() {
-        return this._modelDeviceCount;
+        return this.modelDeviceCount;
     }
     /**
-     * Gets the startupPerformanceScore property value. The user experience analytics model startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Gets the startupPerformanceScore property value. Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
     @javax.annotation.Nullable
     public Double getStartupPerformanceScore() {
-        return this._startupPerformanceScore;
+        return this.startupPerformanceScore;
     }
     /**
-     * Gets the workFromAnywhereScore property value. The user experience analytics model work from anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Gets the workFromAnywhereScore property value. Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
     @javax.annotation.Nullable
     public Double getWorkFromAnywhereScore() {
-        return this._workFromAnywhereScore;
+        return this.workFromAnywhereScore;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -154,75 +174,84 @@ public class UserExperienceAnalyticsModelScores extends Entity implements Parsab
         writer.writeDoubleValue("workFromAnywhereScore", this.getWorkFromAnywhereScore());
     }
     /**
-     * Sets the appReliabilityScore property value. The user experience analytics model app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Sets the appReliabilityScore property value. Indicates a score calculated from application health data to indicate when a device is having problems running one or more applications. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the appReliabilityScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppReliabilityScore(@javax.annotation.Nullable final Double value) {
-        this._appReliabilityScore = value;
+        this.appReliabilityScore = value;
     }
     /**
-     * Sets the batteryHealthScore property value. The user experience analytics model battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Sets the batteryHealthScore property value. Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the batteryHealthScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryHealthScore(@javax.annotation.Nullable final Double value) {
-        this._batteryHealthScore = value;
+        this.batteryHealthScore = value;
     }
     /**
-     * Sets the endpointAnalyticsScore property value. The user experience analytics model score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Sets the endpointAnalyticsScore property value. Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the endpointAnalyticsScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointAnalyticsScore(@javax.annotation.Nullable final Double value) {
-        this._endpointAnalyticsScore = value;
+        this.endpointAnalyticsScore = value;
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
-        this._healthStatus = value;
+        this.healthStatus = value;
     }
     /**
-     * Sets the manufacturer property value. A unique identifier of the user experience analytics model scores: device manufacturer.
+     * Sets the manufacturer property value. The manufacturer name of the device. Examples: Microsoft Corporation, HP, Lenovo. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
-     * Sets the model property value. A unique identifier of the user experience analytics model scores: device model.
+     * Sets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
-     * Sets the modelDeviceCount property value. The user experience analytics model device count. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
+     * Sets the modelDeviceCount property value. Indicates unique devices count of given model in a consolidated report. Supports: $select, $OrderBy. Read-only. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
      * @param value Value to set for the modelDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModelDeviceCount(@javax.annotation.Nullable final Long value) {
-        this._modelDeviceCount = value;
+        this.modelDeviceCount = value;
     }
     /**
-     * Sets the startupPerformanceScore property value. The user experience analytics model startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Sets the startupPerformanceScore property value. Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the startupPerformanceScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartupPerformanceScore(@javax.annotation.Nullable final Double value) {
-        this._startupPerformanceScore = value;
+        this.startupPerformanceScore = value;
     }
     /**
-     * Sets the workFromAnywhereScore property value. The user experience analytics model work from anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Sets the workFromAnywhereScore property value. Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the workFromAnywhereScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkFromAnywhereScore(@javax.annotation.Nullable final Double value) {
-        this._workFromAnywhereScore = value;
+        this.workFromAnywhereScore = value;
     }
 }

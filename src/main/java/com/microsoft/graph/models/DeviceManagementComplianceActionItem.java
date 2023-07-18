@@ -3,27 +3,36 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Scheduled Action for Rule */
+/**
+ * Scheduled Action for Rule
+ */
 public class DeviceManagementComplianceActionItem extends Entity implements Parsable {
-    /** Scheduled Action Type Enum */
-    private DeviceManagementComplianceActionType _actionType;
-    /** Number of hours to wait till the action will be enforced. Valid values 0 to 8760 */
-    private Integer _gracePeriodHours;
-    /** A list of group IDs to speicify who to CC this notification message to. This collection can contain a maximum of 100 elements. */
-    private java.util.List<String> _notificationMessageCCList;
-    /** What notification Message template to use */
-    private String _notificationTemplateId;
+    /**
+     * Scheduled Action Type Enum
+     */
+    private DeviceManagementComplianceActionType actionType;
+    /**
+     * Number of hours to wait till the action will be enforced. Valid values 0 to 8760
+     */
+    private Integer gracePeriodHours;
+    /**
+     * A list of group IDs to speicify who to CC this notification message to. This collection can contain a maximum of 100 elements.
+     */
+    private java.util.List<String> notificationMessageCCList;
+    /**
+     * What notification Message template to use
+     */
+    private String notificationTemplateId;
     /**
      * Instantiates a new deviceManagementComplianceActionItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementComplianceActionItem() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementComplianceActionItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,21 +50,20 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      */
     @javax.annotation.Nullable
     public DeviceManagementComplianceActionType getActionType() {
-        return this._actionType;
+        return this.actionType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementComplianceActionItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actionType", (n) -> { currentObject.setActionType(n.getEnumValue(DeviceManagementComplianceActionType.class)); });
-            this.put("gracePeriodHours", (n) -> { currentObject.setGracePeriodHours(n.getIntegerValue()); });
-            this.put("notificationMessageCCList", (n) -> { currentObject.setNotificationMessageCCList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("notificationTemplateId", (n) -> { currentObject.setNotificationTemplateId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(DeviceManagementComplianceActionType.class)); });
+        deserializerMap.put("gracePeriodHours", (n) -> { this.setGracePeriodHours(n.getIntegerValue()); });
+        deserializerMap.put("notificationMessageCCList", (n) -> { this.setNotificationMessageCCList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notificationTemplateId", (n) -> { this.setNotificationTemplateId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
@@ -63,7 +71,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      */
     @javax.annotation.Nullable
     public Integer getGracePeriodHours() {
-        return this._gracePeriodHours;
+        return this.gracePeriodHours;
     }
     /**
      * Gets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to. This collection can contain a maximum of 100 elements.
@@ -71,7 +79,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      */
     @javax.annotation.Nullable
     public java.util.List<String> getNotificationMessageCCList() {
-        return this._notificationMessageCCList;
+        return this.notificationMessageCCList;
     }
     /**
      * Gets the notificationTemplateId property value. What notification Message template to use
@@ -79,13 +87,14 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      */
     @javax.annotation.Nullable
     public String getNotificationTemplateId() {
-        return this._notificationTemplateId;
+        return this.notificationTemplateId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,31 +108,35 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param value Value to set for the actionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionType(@javax.annotation.Nullable final DeviceManagementComplianceActionType value) {
-        this._actionType = value;
+        this.actionType = value;
     }
     /**
      * Sets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
      * @param value Value to set for the gracePeriodHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGracePeriodHours(@javax.annotation.Nullable final Integer value) {
-        this._gracePeriodHours = value;
+        this.gracePeriodHours = value;
     }
     /**
      * Sets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to. This collection can contain a maximum of 100 elements.
      * @param value Value to set for the notificationMessageCCList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationMessageCCList(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._notificationMessageCCList = value;
+        this.notificationMessageCCList = value;
     }
     /**
      * Sets the notificationTemplateId property value. What notification Message template to use
      * @param value Value to set for the notificationTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationTemplateId(@javax.annotation.Nullable final String value) {
-        this._notificationTemplateId = value;
+        this.notificationTemplateId = value;
     }
 }

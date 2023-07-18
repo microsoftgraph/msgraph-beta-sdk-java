@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Represents source of assignment.
+ */
 public enum DeviceAndAppManagementAssignmentSource implements ValuedEnum {
     /** Direct indicates a direct assignment. */
     Direct("direct"),

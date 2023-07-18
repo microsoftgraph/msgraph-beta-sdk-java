@@ -1,0 +1,131 @@
+package com.microsoft.graph.models.security;
+
+import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.models.IdentitySet;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class FilePlanDescriptorTemplate extends Entity implements Parsable {
+    /**
+     * Represents the user who created the filePlanDescriptorTemplate column.
+     */
+    private IdentitySet createdBy;
+    /**
+     * Represents the date and time in which the filePlanDescriptorTemplate is created.
+     */
+    private OffsetDateTime createdDateTime;
+    /**
+     * Unique string that defines a filePlanDescriptorTemplate name.
+     */
+    private String displayName;
+    /**
+     * Instantiates a new filePlanDescriptorTemplate and sets the default values.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public FilePlanDescriptorTemplate() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a filePlanDescriptorTemplate
+     */
+    @javax.annotation.Nonnull
+    public static FilePlanDescriptorTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.security.authorityTemplate": return new AuthorityTemplate();
+                case "#microsoft.graph.security.categoryTemplate": return new CategoryTemplate();
+                case "#microsoft.graph.security.citationTemplate": return new CitationTemplate();
+                case "#microsoft.graph.security.departmentTemplate": return new DepartmentTemplate();
+                case "#microsoft.graph.security.filePlanReferenceTemplate": return new FilePlanReferenceTemplate();
+                case "#microsoft.graph.security.subCategoryTemplate": return new SubCategoryTemplate();
+            }
+        }
+        return new FilePlanDescriptorTemplate();
+    }
+    /**
+     * Gets the createdBy property value. Represents the user who created the filePlanDescriptorTemplate column.
+     * @return a identitySet
+     */
+    @javax.annotation.Nullable
+    public IdentitySet getCreatedBy() {
+        return this.createdBy;
+    }
+    /**
+     * Gets the createdDateTime property value. Represents the date and time in which the filePlanDescriptorTemplate is created.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.createdDateTime;
+    }
+    /**
+     * Gets the displayName property value. Unique string that defines a filePlanDescriptorTemplate name.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDisplayName() {
+        return this.displayName;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeObjectValue("createdBy", this.getCreatedBy());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeStringValue("displayName", this.getDisplayName());
+    }
+    /**
+     * Sets the createdBy property value. Represents the user who created the filePlanDescriptorTemplate column.
+     * @param value Value to set for the createdBy property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+        this.createdBy = value;
+    }
+    /**
+     * Sets the createdDateTime property value. Represents the date and time in which the filePlanDescriptorTemplate is created.
+     * @param value Value to set for the createdDateTime property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this.createdDateTime = value;
+    }
+    /**
+     * Sets the displayName property value. Unique string that defines a filePlanDescriptorTemplate name.
+     * @param value Value to set for the displayName property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDisplayName(@javax.annotation.Nullable final String value) {
+        this.displayName = value;
+    }
+}

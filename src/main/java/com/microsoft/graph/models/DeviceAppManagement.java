@@ -4,85 +4,145 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Singleton entity that acts as a container for all device app management functionality.
+ */
 public class DeviceAppManagement extends Entity implements Parsable {
-    /** Android managed app policies. */
-    private java.util.List<AndroidManagedAppProtection> _androidManagedAppProtections;
-    /** Default managed app policies. */
-    private java.util.List<DefaultManagedAppProtection> _defaultManagedAppProtections;
-    /** Device app management tasks. */
-    private java.util.List<DeviceAppManagementTask> _deviceAppManagementTasks;
-    /** The Windows Enterprise Code Signing Certificate. */
-    private java.util.List<EnterpriseCodeSigningCertificate> _enterpriseCodeSigningCertificates;
-    /** The IOS Lob App Provisioning Configurations. */
-    private java.util.List<IosLobAppProvisioningConfiguration> _iosLobAppProvisioningConfigurations;
-    /** iOS managed app policies. */
-    private java.util.List<IosManagedAppProtection> _iosManagedAppProtections;
-    /** Whether the account is enabled for syncing applications from the Microsoft Store for Business. */
-    private Boolean _isEnabledForMicrosoftStoreForBusiness;
-    /** Managed app policies. */
-    private java.util.List<ManagedAppPolicy> _managedAppPolicies;
-    /** The managed app registrations. */
-    private java.util.List<ManagedAppRegistration> _managedAppRegistrations;
-    /** The managed app statuses. */
-    private java.util.List<ManagedAppStatus> _managedAppStatuses;
-    /** The mobile eBook categories. */
-    private java.util.List<ManagedEBookCategory> _managedEBookCategories;
-    /** The Managed eBook. */
-    private java.util.List<ManagedEBook> _managedEBooks;
-    /** Windows information protection for apps running on devices which are MDM enrolled. */
-    private java.util.List<MdmWindowsInformationProtectionPolicy> _mdmWindowsInformationProtectionPolicies;
-    /** The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture. */
-    private String _microsoftStoreForBusinessLanguage;
-    /** The last time an application sync from the Microsoft Store for Business was completed. */
-    private OffsetDateTime _microsoftStoreForBusinessLastCompletedApplicationSyncTime;
-    /** The last time the apps from the Microsoft Store for Business were synced successfully for the account. */
-    private OffsetDateTime _microsoftStoreForBusinessLastSuccessfulSyncDateTime;
-    /** Portal to which admin syncs available Microsoft Store for Business apps. This is available in the Intune Admin Console. */
-    private MicrosoftStoreForBusinessPortalSelectionOptions _microsoftStoreForBusinessPortalSelection;
-    /** The mobile app categories. */
-    private java.util.List<MobileAppCategory> _mobileAppCategories;
-    /** The Managed Device Mobile Application Configurations. */
-    private java.util.List<ManagedDeviceMobileAppConfiguration> _mobileAppConfigurations;
-    /** The mobile apps. */
-    private java.util.List<MobileApp> _mobileApps;
-    /** The PolicySet of Policies and Applications */
-    private java.util.List<PolicySet> _policySets;
-    /** Side Loading Keys that are required for the Windows 8 and 8.1 Apps installation. */
-    private java.util.List<SideLoadingKey> _sideLoadingKeys;
-    /** The WinPhone Symantec Code Signing Certificate. */
-    private SymantecCodeSigningCertificate _symantecCodeSigningCertificate;
-    /** Targeted managed app configurations. */
-    private java.util.List<TargetedManagedAppConfiguration> _targetedManagedAppConfigurations;
-    /** List of Vpp tokens for this organization. */
-    private java.util.List<VppToken> _vppTokens;
-    /** The collection of Windows Defender Application Control Supplemental Policies. */
-    private java.util.List<WindowsDefenderApplicationControlSupplementalPolicy> _wdacSupplementalPolicies;
-    /** Windows information protection device registrations that are not MDM enrolled. */
-    private java.util.List<WindowsInformationProtectionDeviceRegistration> _windowsInformationProtectionDeviceRegistrations;
-    /** Windows information protection for apps running on devices which are not MDM enrolled. */
-    private java.util.List<WindowsInformationProtectionPolicy> _windowsInformationProtectionPolicies;
-    /** Windows information protection wipe actions. */
-    private java.util.List<WindowsInformationProtectionWipeAction> _windowsInformationProtectionWipeActions;
-    /** Windows managed app policies. */
-    private java.util.List<WindowsManagedAppProtection> _windowsManagedAppProtections;
-    /** Windows management app. */
-    private WindowsManagementApp _windowsManagementApp;
     /**
-     * Instantiates a new DeviceAppManagement and sets the default values.
+     * Android managed app policies.
+     */
+    private java.util.List<AndroidManagedAppProtection> androidManagedAppProtections;
+    /**
+     * Default managed app policies.
+     */
+    private java.util.List<DefaultManagedAppProtection> defaultManagedAppProtections;
+    /**
+     * Device app management tasks.
+     */
+    private java.util.List<DeviceAppManagementTask> deviceAppManagementTasks;
+    /**
+     * The Windows Enterprise Code Signing Certificate.
+     */
+    private java.util.List<EnterpriseCodeSigningCertificate> enterpriseCodeSigningCertificates;
+    /**
+     * The IOS Lob App Provisioning Configurations.
+     */
+    private java.util.List<IosLobAppProvisioningConfiguration> iosLobAppProvisioningConfigurations;
+    /**
+     * iOS managed app policies.
+     */
+    private java.util.List<IosManagedAppProtection> iosManagedAppProtections;
+    /**
+     * Whether the account is enabled for syncing applications from the Microsoft Store for Business.
+     */
+    private Boolean isEnabledForMicrosoftStoreForBusiness;
+    /**
+     * Managed app policies.
+     */
+    private java.util.List<ManagedAppPolicy> managedAppPolicies;
+    /**
+     * The managed app registrations.
+     */
+    private java.util.List<ManagedAppRegistration> managedAppRegistrations;
+    /**
+     * The managed app statuses.
+     */
+    private java.util.List<ManagedAppStatus> managedAppStatuses;
+    /**
+     * The mobile eBook categories.
+     */
+    private java.util.List<ManagedEBookCategory> managedEBookCategories;
+    /**
+     * The Managed eBook.
+     */
+    private java.util.List<ManagedEBook> managedEBooks;
+    /**
+     * Windows information protection for apps running on devices which are MDM enrolled.
+     */
+    private java.util.List<MdmWindowsInformationProtectionPolicy> mdmWindowsInformationProtectionPolicies;
+    /**
+     * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
+     */
+    private String microsoftStoreForBusinessLanguage;
+    /**
+     * The last time an application sync from the Microsoft Store for Business was completed.
+     */
+    private OffsetDateTime microsoftStoreForBusinessLastCompletedApplicationSyncTime;
+    /**
+     * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
+     */
+    private OffsetDateTime microsoftStoreForBusinessLastSuccessfulSyncDateTime;
+    /**
+     * Portal to which admin syncs available Microsoft Store for Business apps. This is available in the Intune Admin Console.
+     */
+    private MicrosoftStoreForBusinessPortalSelectionOptions microsoftStoreForBusinessPortalSelection;
+    /**
+     * The mobile app categories.
+     */
+    private java.util.List<MobileAppCategory> mobileAppCategories;
+    /**
+     * The Managed Device Mobile Application Configurations.
+     */
+    private java.util.List<ManagedDeviceMobileAppConfiguration> mobileAppConfigurations;
+    /**
+     * The mobile apps.
+     */
+    private java.util.List<MobileApp> mobileApps;
+    /**
+     * The PolicySet of Policies and Applications
+     */
+    private java.util.List<PolicySet> policySets;
+    /**
+     * The WinPhone Symantec Code Signing Certificate.
+     */
+    private SymantecCodeSigningCertificate symantecCodeSigningCertificate;
+    /**
+     * Targeted managed app configurations.
+     */
+    private java.util.List<TargetedManagedAppConfiguration> targetedManagedAppConfigurations;
+    /**
+     * List of Vpp tokens for this organization.
+     */
+    private java.util.List<VppToken> vppTokens;
+    /**
+     * The collection of Windows Defender Application Control Supplemental Policies.
+     */
+    private java.util.List<WindowsDefenderApplicationControlSupplementalPolicy> wdacSupplementalPolicies;
+    /**
+     * Windows information protection device registrations that are not MDM enrolled.
+     */
+    private java.util.List<WindowsInformationProtectionDeviceRegistration> windowsInformationProtectionDeviceRegistrations;
+    /**
+     * Windows information protection for apps running on devices which are not MDM enrolled.
+     */
+    private java.util.List<WindowsInformationProtectionPolicy> windowsInformationProtectionPolicies;
+    /**
+     * Windows information protection wipe actions.
+     */
+    private java.util.List<WindowsInformationProtectionWipeAction> windowsInformationProtectionWipeActions;
+    /**
+     * Windows managed app policies.
+     */
+    private java.util.List<WindowsManagedAppProtection> windowsManagedAppProtections;
+    /**
+     * Windows management app.
+     */
+    private WindowsManagementApp windowsManagementApp;
+    /**
+     * Instantiates a new deviceAppManagement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceAppManagement() {
         super();
-        this.setOdataType("#microsoft.graph.deviceAppManagement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceAppManagement
+     * @return a deviceAppManagement
      */
     @javax.annotation.Nonnull
     public static DeviceAppManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -95,7 +155,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AndroidManagedAppProtection> getAndroidManagedAppProtections() {
-        return this._androidManagedAppProtections;
+        return this.androidManagedAppProtections;
     }
     /**
      * Gets the defaultManagedAppProtections property value. Default managed app policies.
@@ -103,7 +163,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DefaultManagedAppProtection> getDefaultManagedAppProtections() {
-        return this._defaultManagedAppProtections;
+        return this.defaultManagedAppProtections;
     }
     /**
      * Gets the deviceAppManagementTasks property value. Device app management tasks.
@@ -111,7 +171,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceAppManagementTask> getDeviceAppManagementTasks() {
-        return this._deviceAppManagementTasks;
+        return this.deviceAppManagementTasks;
     }
     /**
      * Gets the enterpriseCodeSigningCertificates property value. The Windows Enterprise Code Signing Certificate.
@@ -119,48 +179,46 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EnterpriseCodeSigningCertificate> getEnterpriseCodeSigningCertificates() {
-        return this._enterpriseCodeSigningCertificates;
+        return this.enterpriseCodeSigningCertificates;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceAppManagement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("androidManagedAppProtections", (n) -> { currentObject.setAndroidManagedAppProtections(n.getCollectionOfObjectValues(AndroidManagedAppProtection::createFromDiscriminatorValue)); });
-            this.put("defaultManagedAppProtections", (n) -> { currentObject.setDefaultManagedAppProtections(n.getCollectionOfObjectValues(DefaultManagedAppProtection::createFromDiscriminatorValue)); });
-            this.put("deviceAppManagementTasks", (n) -> { currentObject.setDeviceAppManagementTasks(n.getCollectionOfObjectValues(DeviceAppManagementTask::createFromDiscriminatorValue)); });
-            this.put("enterpriseCodeSigningCertificates", (n) -> { currentObject.setEnterpriseCodeSigningCertificates(n.getCollectionOfObjectValues(EnterpriseCodeSigningCertificate::createFromDiscriminatorValue)); });
-            this.put("iosLobAppProvisioningConfigurations", (n) -> { currentObject.setIosLobAppProvisioningConfigurations(n.getCollectionOfObjectValues(IosLobAppProvisioningConfiguration::createFromDiscriminatorValue)); });
-            this.put("iosManagedAppProtections", (n) -> { currentObject.setIosManagedAppProtections(n.getCollectionOfObjectValues(IosManagedAppProtection::createFromDiscriminatorValue)); });
-            this.put("isEnabledForMicrosoftStoreForBusiness", (n) -> { currentObject.setIsEnabledForMicrosoftStoreForBusiness(n.getBooleanValue()); });
-            this.put("managedAppPolicies", (n) -> { currentObject.setManagedAppPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
-            this.put("managedAppRegistrations", (n) -> { currentObject.setManagedAppRegistrations(n.getCollectionOfObjectValues(ManagedAppRegistration::createFromDiscriminatorValue)); });
-            this.put("managedAppStatuses", (n) -> { currentObject.setManagedAppStatuses(n.getCollectionOfObjectValues(ManagedAppStatus::createFromDiscriminatorValue)); });
-            this.put("managedEBookCategories", (n) -> { currentObject.setManagedEBookCategories(n.getCollectionOfObjectValues(ManagedEBookCategory::createFromDiscriminatorValue)); });
-            this.put("managedEBooks", (n) -> { currentObject.setManagedEBooks(n.getCollectionOfObjectValues(ManagedEBook::createFromDiscriminatorValue)); });
-            this.put("mdmWindowsInformationProtectionPolicies", (n) -> { currentObject.setMdmWindowsInformationProtectionPolicies(n.getCollectionOfObjectValues(MdmWindowsInformationProtectionPolicy::createFromDiscriminatorValue)); });
-            this.put("microsoftStoreForBusinessLanguage", (n) -> { currentObject.setMicrosoftStoreForBusinessLanguage(n.getStringValue()); });
-            this.put("microsoftStoreForBusinessLastCompletedApplicationSyncTime", (n) -> { currentObject.setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(n.getOffsetDateTimeValue()); });
-            this.put("microsoftStoreForBusinessLastSuccessfulSyncDateTime", (n) -> { currentObject.setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("microsoftStoreForBusinessPortalSelection", (n) -> { currentObject.setMicrosoftStoreForBusinessPortalSelection(n.getEnumValue(MicrosoftStoreForBusinessPortalSelectionOptions.class)); });
-            this.put("mobileAppCategories", (n) -> { currentObject.setMobileAppCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
-            this.put("mobileAppConfigurations", (n) -> { currentObject.setMobileAppConfigurations(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue)); });
-            this.put("mobileApps", (n) -> { currentObject.setMobileApps(n.getCollectionOfObjectValues(MobileApp::createFromDiscriminatorValue)); });
-            this.put("policySets", (n) -> { currentObject.setPolicySets(n.getCollectionOfObjectValues(PolicySet::createFromDiscriminatorValue)); });
-            this.put("sideLoadingKeys", (n) -> { currentObject.setSideLoadingKeys(n.getCollectionOfObjectValues(SideLoadingKey::createFromDiscriminatorValue)); });
-            this.put("symantecCodeSigningCertificate", (n) -> { currentObject.setSymantecCodeSigningCertificate(n.getObjectValue(SymantecCodeSigningCertificate::createFromDiscriminatorValue)); });
-            this.put("targetedManagedAppConfigurations", (n) -> { currentObject.setTargetedManagedAppConfigurations(n.getCollectionOfObjectValues(TargetedManagedAppConfiguration::createFromDiscriminatorValue)); });
-            this.put("vppTokens", (n) -> { currentObject.setVppTokens(n.getCollectionOfObjectValues(VppToken::createFromDiscriminatorValue)); });
-            this.put("wdacSupplementalPolicies", (n) -> { currentObject.setWdacSupplementalPolicies(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicy::createFromDiscriminatorValue)); });
-            this.put("windowsInformationProtectionDeviceRegistrations", (n) -> { currentObject.setWindowsInformationProtectionDeviceRegistrations(n.getCollectionOfObjectValues(WindowsInformationProtectionDeviceRegistration::createFromDiscriminatorValue)); });
-            this.put("windowsInformationProtectionPolicies", (n) -> { currentObject.setWindowsInformationProtectionPolicies(n.getCollectionOfObjectValues(WindowsInformationProtectionPolicy::createFromDiscriminatorValue)); });
-            this.put("windowsInformationProtectionWipeActions", (n) -> { currentObject.setWindowsInformationProtectionWipeActions(n.getCollectionOfObjectValues(WindowsInformationProtectionWipeAction::createFromDiscriminatorValue)); });
-            this.put("windowsManagedAppProtections", (n) -> { currentObject.setWindowsManagedAppProtections(n.getCollectionOfObjectValues(WindowsManagedAppProtection::createFromDiscriminatorValue)); });
-            this.put("windowsManagementApp", (n) -> { currentObject.setWindowsManagementApp(n.getObjectValue(WindowsManagementApp::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("androidManagedAppProtections", (n) -> { this.setAndroidManagedAppProtections(n.getCollectionOfObjectValues(AndroidManagedAppProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultManagedAppProtections", (n) -> { this.setDefaultManagedAppProtections(n.getCollectionOfObjectValues(DefaultManagedAppProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceAppManagementTasks", (n) -> { this.setDeviceAppManagementTasks(n.getCollectionOfObjectValues(DeviceAppManagementTask::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseCodeSigningCertificates", (n) -> { this.setEnterpriseCodeSigningCertificates(n.getCollectionOfObjectValues(EnterpriseCodeSigningCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("iosLobAppProvisioningConfigurations", (n) -> { this.setIosLobAppProvisioningConfigurations(n.getCollectionOfObjectValues(IosLobAppProvisioningConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("iosManagedAppProtections", (n) -> { this.setIosManagedAppProtections(n.getCollectionOfObjectValues(IosManagedAppProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("isEnabledForMicrosoftStoreForBusiness", (n) -> { this.setIsEnabledForMicrosoftStoreForBusiness(n.getBooleanValue()); });
+        deserializerMap.put("managedAppPolicies", (n) -> { this.setManagedAppPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedAppRegistrations", (n) -> { this.setManagedAppRegistrations(n.getCollectionOfObjectValues(ManagedAppRegistration::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedAppStatuses", (n) -> { this.setManagedAppStatuses(n.getCollectionOfObjectValues(ManagedAppStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedEBookCategories", (n) -> { this.setManagedEBookCategories(n.getCollectionOfObjectValues(ManagedEBookCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedEBooks", (n) -> { this.setManagedEBooks(n.getCollectionOfObjectValues(ManagedEBook::createFromDiscriminatorValue)); });
+        deserializerMap.put("mdmWindowsInformationProtectionPolicies", (n) -> { this.setMdmWindowsInformationProtectionPolicies(n.getCollectionOfObjectValues(MdmWindowsInformationProtectionPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftStoreForBusinessLanguage", (n) -> { this.setMicrosoftStoreForBusinessLanguage(n.getStringValue()); });
+        deserializerMap.put("microsoftStoreForBusinessLastCompletedApplicationSyncTime", (n) -> { this.setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("microsoftStoreForBusinessLastSuccessfulSyncDateTime", (n) -> { this.setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("microsoftStoreForBusinessPortalSelection", (n) -> { this.setMicrosoftStoreForBusinessPortalSelection(n.getEnumValue(MicrosoftStoreForBusinessPortalSelectionOptions.class)); });
+        deserializerMap.put("mobileAppCategories", (n) -> { this.setMobileAppCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileAppConfigurations", (n) -> { this.setMobileAppConfigurations(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileApps", (n) -> { this.setMobileApps(n.getCollectionOfObjectValues(MobileApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("policySets", (n) -> { this.setPolicySets(n.getCollectionOfObjectValues(PolicySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("symantecCodeSigningCertificate", (n) -> { this.setSymantecCodeSigningCertificate(n.getObjectValue(SymantecCodeSigningCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetedManagedAppConfigurations", (n) -> { this.setTargetedManagedAppConfigurations(n.getCollectionOfObjectValues(TargetedManagedAppConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("vppTokens", (n) -> { this.setVppTokens(n.getCollectionOfObjectValues(VppToken::createFromDiscriminatorValue)); });
+        deserializerMap.put("wdacSupplementalPolicies", (n) -> { this.setWdacSupplementalPolicies(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsInformationProtectionDeviceRegistrations", (n) -> { this.setWindowsInformationProtectionDeviceRegistrations(n.getCollectionOfObjectValues(WindowsInformationProtectionDeviceRegistration::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsInformationProtectionPolicies", (n) -> { this.setWindowsInformationProtectionPolicies(n.getCollectionOfObjectValues(WindowsInformationProtectionPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsInformationProtectionWipeActions", (n) -> { this.setWindowsInformationProtectionWipeActions(n.getCollectionOfObjectValues(WindowsInformationProtectionWipeAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsManagedAppProtections", (n) -> { this.setWindowsManagedAppProtections(n.getCollectionOfObjectValues(WindowsManagedAppProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsManagementApp", (n) -> { this.setWindowsManagementApp(n.getObjectValue(WindowsManagementApp::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the iosLobAppProvisioningConfigurations property value. The IOS Lob App Provisioning Configurations.
@@ -168,7 +226,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IosLobAppProvisioningConfiguration> getIosLobAppProvisioningConfigurations() {
-        return this._iosLobAppProvisioningConfigurations;
+        return this.iosLobAppProvisioningConfigurations;
     }
     /**
      * Gets the iosManagedAppProtections property value. iOS managed app policies.
@@ -176,7 +234,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IosManagedAppProtection> getIosManagedAppProtections() {
-        return this._iosManagedAppProtections;
+        return this.iosManagedAppProtections;
     }
     /**
      * Gets the isEnabledForMicrosoftStoreForBusiness property value. Whether the account is enabled for syncing applications from the Microsoft Store for Business.
@@ -184,7 +242,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabledForMicrosoftStoreForBusiness() {
-        return this._isEnabledForMicrosoftStoreForBusiness;
+        return this.isEnabledForMicrosoftStoreForBusiness;
     }
     /**
      * Gets the managedAppPolicies property value. Managed app policies.
@@ -192,7 +250,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getManagedAppPolicies() {
-        return this._managedAppPolicies;
+        return this.managedAppPolicies;
     }
     /**
      * Gets the managedAppRegistrations property value. The managed app registrations.
@@ -200,7 +258,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppRegistration> getManagedAppRegistrations() {
-        return this._managedAppRegistrations;
+        return this.managedAppRegistrations;
     }
     /**
      * Gets the managedAppStatuses property value. The managed app statuses.
@@ -208,7 +266,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppStatus> getManagedAppStatuses() {
-        return this._managedAppStatuses;
+        return this.managedAppStatuses;
     }
     /**
      * Gets the managedEBookCategories property value. The mobile eBook categories.
@@ -216,7 +274,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedEBookCategory> getManagedEBookCategories() {
-        return this._managedEBookCategories;
+        return this.managedEBookCategories;
     }
     /**
      * Gets the managedEBooks property value. The Managed eBook.
@@ -224,7 +282,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedEBook> getManagedEBooks() {
-        return this._managedEBooks;
+        return this.managedEBooks;
     }
     /**
      * Gets the mdmWindowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are MDM enrolled.
@@ -232,7 +290,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MdmWindowsInformationProtectionPolicy> getMdmWindowsInformationProtectionPolicies() {
-        return this._mdmWindowsInformationProtectionPolicies;
+        return this.mdmWindowsInformationProtectionPolicies;
     }
     /**
      * Gets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
@@ -240,7 +298,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMicrosoftStoreForBusinessLanguage() {
-        return this._microsoftStoreForBusinessLanguage;
+        return this.microsoftStoreForBusinessLanguage;
     }
     /**
      * Gets the microsoftStoreForBusinessLastCompletedApplicationSyncTime property value. The last time an application sync from the Microsoft Store for Business was completed.
@@ -248,7 +306,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getMicrosoftStoreForBusinessLastCompletedApplicationSyncTime() {
-        return this._microsoftStoreForBusinessLastCompletedApplicationSyncTime;
+        return this.microsoftStoreForBusinessLastCompletedApplicationSyncTime;
     }
     /**
      * Gets the microsoftStoreForBusinessLastSuccessfulSyncDateTime property value. The last time the apps from the Microsoft Store for Business were synced successfully for the account.
@@ -256,7 +314,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getMicrosoftStoreForBusinessLastSuccessfulSyncDateTime() {
-        return this._microsoftStoreForBusinessLastSuccessfulSyncDateTime;
+        return this.microsoftStoreForBusinessLastSuccessfulSyncDateTime;
     }
     /**
      * Gets the microsoftStoreForBusinessPortalSelection property value. Portal to which admin syncs available Microsoft Store for Business apps. This is available in the Intune Admin Console.
@@ -264,7 +322,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public MicrosoftStoreForBusinessPortalSelectionOptions getMicrosoftStoreForBusinessPortalSelection() {
-        return this._microsoftStoreForBusinessPortalSelection;
+        return this.microsoftStoreForBusinessPortalSelection;
     }
     /**
      * Gets the mobileAppCategories property value. The mobile app categories.
@@ -272,7 +330,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileAppCategory> getMobileAppCategories() {
-        return this._mobileAppCategories;
+        return this.mobileAppCategories;
     }
     /**
      * Gets the mobileAppConfigurations property value. The Managed Device Mobile Application Configurations.
@@ -280,7 +338,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfiguration> getMobileAppConfigurations() {
-        return this._mobileAppConfigurations;
+        return this.mobileAppConfigurations;
     }
     /**
      * Gets the mobileApps property value. The mobile apps.
@@ -288,7 +346,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileApp> getMobileApps() {
-        return this._mobileApps;
+        return this.mobileApps;
     }
     /**
      * Gets the policySets property value. The PolicySet of Policies and Applications
@@ -296,15 +354,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PolicySet> getPolicySets() {
-        return this._policySets;
-    }
-    /**
-     * Gets the sideLoadingKeys property value. Side Loading Keys that are required for the Windows 8 and 8.1 Apps installation.
-     * @return a sideLoadingKey
-     */
-    @javax.annotation.Nullable
-    public java.util.List<SideLoadingKey> getSideLoadingKeys() {
-        return this._sideLoadingKeys;
+        return this.policySets;
     }
     /**
      * Gets the symantecCodeSigningCertificate property value. The WinPhone Symantec Code Signing Certificate.
@@ -312,7 +362,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SymantecCodeSigningCertificate getSymantecCodeSigningCertificate() {
-        return this._symantecCodeSigningCertificate;
+        return this.symantecCodeSigningCertificate;
     }
     /**
      * Gets the targetedManagedAppConfigurations property value. Targeted managed app configurations.
@@ -320,7 +370,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TargetedManagedAppConfiguration> getTargetedManagedAppConfigurations() {
-        return this._targetedManagedAppConfigurations;
+        return this.targetedManagedAppConfigurations;
     }
     /**
      * Gets the vppTokens property value. List of Vpp tokens for this organization.
@@ -328,7 +378,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<VppToken> getVppTokens() {
-        return this._vppTokens;
+        return this.vppTokens;
     }
     /**
      * Gets the wdacSupplementalPolicies property value. The collection of Windows Defender Application Control Supplemental Policies.
@@ -336,7 +386,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsDefenderApplicationControlSupplementalPolicy> getWdacSupplementalPolicies() {
-        return this._wdacSupplementalPolicies;
+        return this.wdacSupplementalPolicies;
     }
     /**
      * Gets the windowsInformationProtectionDeviceRegistrations property value. Windows information protection device registrations that are not MDM enrolled.
@@ -344,7 +394,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsInformationProtectionDeviceRegistration> getWindowsInformationProtectionDeviceRegistrations() {
-        return this._windowsInformationProtectionDeviceRegistrations;
+        return this.windowsInformationProtectionDeviceRegistrations;
     }
     /**
      * Gets the windowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are not MDM enrolled.
@@ -352,7 +402,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsInformationProtectionPolicy> getWindowsInformationProtectionPolicies() {
-        return this._windowsInformationProtectionPolicies;
+        return this.windowsInformationProtectionPolicies;
     }
     /**
      * Gets the windowsInformationProtectionWipeActions property value. Windows information protection wipe actions.
@@ -360,7 +410,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsInformationProtectionWipeAction> getWindowsInformationProtectionWipeActions() {
-        return this._windowsInformationProtectionWipeActions;
+        return this.windowsInformationProtectionWipeActions;
     }
     /**
      * Gets the windowsManagedAppProtections property value. Windows managed app policies.
@@ -368,7 +418,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WindowsManagedAppProtection> getWindowsManagedAppProtections() {
-        return this._windowsManagedAppProtections;
+        return this.windowsManagedAppProtections;
     }
     /**
      * Gets the windowsManagementApp property value. Windows management app.
@@ -376,13 +426,14 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WindowsManagementApp getWindowsManagementApp() {
-        return this._windowsManagementApp;
+        return this.windowsManagementApp;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -407,7 +458,6 @@ public class DeviceAppManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("mobileAppConfigurations", this.getMobileAppConfigurations());
         writer.writeCollectionOfObjectValues("mobileApps", this.getMobileApps());
         writer.writeCollectionOfObjectValues("policySets", this.getPolicySets());
-        writer.writeCollectionOfObjectValues("sideLoadingKeys", this.getSideLoadingKeys());
         writer.writeObjectValue("symantecCodeSigningCertificate", this.getSymantecCodeSigningCertificate());
         writer.writeCollectionOfObjectValues("targetedManagedAppConfigurations", this.getTargetedManagedAppConfigurations());
         writer.writeCollectionOfObjectValues("vppTokens", this.getVppTokens());
@@ -423,247 +473,269 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the androidManagedAppProtections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidManagedAppProtections(@javax.annotation.Nullable final java.util.List<AndroidManagedAppProtection> value) {
-        this._androidManagedAppProtections = value;
+        this.androidManagedAppProtections = value;
     }
     /**
      * Sets the defaultManagedAppProtections property value. Default managed app policies.
      * @param value Value to set for the defaultManagedAppProtections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultManagedAppProtections(@javax.annotation.Nullable final java.util.List<DefaultManagedAppProtection> value) {
-        this._defaultManagedAppProtections = value;
+        this.defaultManagedAppProtections = value;
     }
     /**
      * Sets the deviceAppManagementTasks property value. Device app management tasks.
      * @param value Value to set for the deviceAppManagementTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceAppManagementTasks(@javax.annotation.Nullable final java.util.List<DeviceAppManagementTask> value) {
-        this._deviceAppManagementTasks = value;
+        this.deviceAppManagementTasks = value;
     }
     /**
      * Sets the enterpriseCodeSigningCertificates property value. The Windows Enterprise Code Signing Certificate.
      * @param value Value to set for the enterpriseCodeSigningCertificates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseCodeSigningCertificates(@javax.annotation.Nullable final java.util.List<EnterpriseCodeSigningCertificate> value) {
-        this._enterpriseCodeSigningCertificates = value;
+        this.enterpriseCodeSigningCertificates = value;
     }
     /**
      * Sets the iosLobAppProvisioningConfigurations property value. The IOS Lob App Provisioning Configurations.
      * @param value Value to set for the iosLobAppProvisioningConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosLobAppProvisioningConfigurations(@javax.annotation.Nullable final java.util.List<IosLobAppProvisioningConfiguration> value) {
-        this._iosLobAppProvisioningConfigurations = value;
+        this.iosLobAppProvisioningConfigurations = value;
     }
     /**
      * Sets the iosManagedAppProtections property value. iOS managed app policies.
      * @param value Value to set for the iosManagedAppProtections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosManagedAppProtections(@javax.annotation.Nullable final java.util.List<IosManagedAppProtection> value) {
-        this._iosManagedAppProtections = value;
+        this.iosManagedAppProtections = value;
     }
     /**
      * Sets the isEnabledForMicrosoftStoreForBusiness property value. Whether the account is enabled for syncing applications from the Microsoft Store for Business.
      * @param value Value to set for the isEnabledForMicrosoftStoreForBusiness property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabledForMicrosoftStoreForBusiness(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabledForMicrosoftStoreForBusiness = value;
+        this.isEnabledForMicrosoftStoreForBusiness = value;
     }
     /**
      * Sets the managedAppPolicies property value. Managed app policies.
      * @param value Value to set for the managedAppPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedAppPolicies(@javax.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
-        this._managedAppPolicies = value;
+        this.managedAppPolicies = value;
     }
     /**
      * Sets the managedAppRegistrations property value. The managed app registrations.
      * @param value Value to set for the managedAppRegistrations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedAppRegistrations(@javax.annotation.Nullable final java.util.List<ManagedAppRegistration> value) {
-        this._managedAppRegistrations = value;
+        this.managedAppRegistrations = value;
     }
     /**
      * Sets the managedAppStatuses property value. The managed app statuses.
      * @param value Value to set for the managedAppStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedAppStatuses(@javax.annotation.Nullable final java.util.List<ManagedAppStatus> value) {
-        this._managedAppStatuses = value;
+        this.managedAppStatuses = value;
     }
     /**
      * Sets the managedEBookCategories property value. The mobile eBook categories.
      * @param value Value to set for the managedEBookCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedEBookCategories(@javax.annotation.Nullable final java.util.List<ManagedEBookCategory> value) {
-        this._managedEBookCategories = value;
+        this.managedEBookCategories = value;
     }
     /**
      * Sets the managedEBooks property value. The Managed eBook.
      * @param value Value to set for the managedEBooks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedEBooks(@javax.annotation.Nullable final java.util.List<ManagedEBook> value) {
-        this._managedEBooks = value;
+        this.managedEBooks = value;
     }
     /**
      * Sets the mdmWindowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are MDM enrolled.
      * @param value Value to set for the mdmWindowsInformationProtectionPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmWindowsInformationProtectionPolicies(@javax.annotation.Nullable final java.util.List<MdmWindowsInformationProtectionPolicy> value) {
-        this._mdmWindowsInformationProtectionPolicies = value;
+        this.mdmWindowsInformationProtectionPolicies = value;
     }
     /**
      * Sets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
      * @param value Value to set for the microsoftStoreForBusinessLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftStoreForBusinessLanguage(@javax.annotation.Nullable final String value) {
-        this._microsoftStoreForBusinessLanguage = value;
+        this.microsoftStoreForBusinessLanguage = value;
     }
     /**
      * Sets the microsoftStoreForBusinessLastCompletedApplicationSyncTime property value. The last time an application sync from the Microsoft Store for Business was completed.
      * @param value Value to set for the microsoftStoreForBusinessLastCompletedApplicationSyncTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._microsoftStoreForBusinessLastCompletedApplicationSyncTime = value;
+        this.microsoftStoreForBusinessLastCompletedApplicationSyncTime = value;
     }
     /**
      * Sets the microsoftStoreForBusinessLastSuccessfulSyncDateTime property value. The last time the apps from the Microsoft Store for Business were synced successfully for the account.
      * @param value Value to set for the microsoftStoreForBusinessLastSuccessfulSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._microsoftStoreForBusinessLastSuccessfulSyncDateTime = value;
+        this.microsoftStoreForBusinessLastSuccessfulSyncDateTime = value;
     }
     /**
      * Sets the microsoftStoreForBusinessPortalSelection property value. Portal to which admin syncs available Microsoft Store for Business apps. This is available in the Intune Admin Console.
      * @param value Value to set for the microsoftStoreForBusinessPortalSelection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftStoreForBusinessPortalSelection(@javax.annotation.Nullable final MicrosoftStoreForBusinessPortalSelectionOptions value) {
-        this._microsoftStoreForBusinessPortalSelection = value;
+        this.microsoftStoreForBusinessPortalSelection = value;
     }
     /**
      * Sets the mobileAppCategories property value. The mobile app categories.
      * @param value Value to set for the mobileAppCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppCategories(@javax.annotation.Nullable final java.util.List<MobileAppCategory> value) {
-        this._mobileAppCategories = value;
+        this.mobileAppCategories = value;
     }
     /**
      * Sets the mobileAppConfigurations property value. The Managed Device Mobile Application Configurations.
      * @param value Value to set for the mobileAppConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppConfigurations(@javax.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfiguration> value) {
-        this._mobileAppConfigurations = value;
+        this.mobileAppConfigurations = value;
     }
     /**
      * Sets the mobileApps property value. The mobile apps.
      * @param value Value to set for the mobileApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileApps(@javax.annotation.Nullable final java.util.List<MobileApp> value) {
-        this._mobileApps = value;
+        this.mobileApps = value;
     }
     /**
      * Sets the policySets property value. The PolicySet of Policies and Applications
      * @param value Value to set for the policySets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicySets(@javax.annotation.Nullable final java.util.List<PolicySet> value) {
-        this._policySets = value;
-    }
-    /**
-     * Sets the sideLoadingKeys property value. Side Loading Keys that are required for the Windows 8 and 8.1 Apps installation.
-     * @param value Value to set for the sideLoadingKeys property.
-     * @return a void
-     */
-    public void setSideLoadingKeys(@javax.annotation.Nullable final java.util.List<SideLoadingKey> value) {
-        this._sideLoadingKeys = value;
+        this.policySets = value;
     }
     /**
      * Sets the symantecCodeSigningCertificate property value. The WinPhone Symantec Code Signing Certificate.
      * @param value Value to set for the symantecCodeSigningCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSymantecCodeSigningCertificate(@javax.annotation.Nullable final SymantecCodeSigningCertificate value) {
-        this._symantecCodeSigningCertificate = value;
+        this.symantecCodeSigningCertificate = value;
     }
     /**
      * Sets the targetedManagedAppConfigurations property value. Targeted managed app configurations.
      * @param value Value to set for the targetedManagedAppConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedManagedAppConfigurations(@javax.annotation.Nullable final java.util.List<TargetedManagedAppConfiguration> value) {
-        this._targetedManagedAppConfigurations = value;
+        this.targetedManagedAppConfigurations = value;
     }
     /**
      * Sets the vppTokens property value. List of Vpp tokens for this organization.
      * @param value Value to set for the vppTokens property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVppTokens(@javax.annotation.Nullable final java.util.List<VppToken> value) {
-        this._vppTokens = value;
+        this.vppTokens = value;
     }
     /**
      * Sets the wdacSupplementalPolicies property value. The collection of Windows Defender Application Control Supplemental Policies.
      * @param value Value to set for the wdacSupplementalPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWdacSupplementalPolicies(@javax.annotation.Nullable final java.util.List<WindowsDefenderApplicationControlSupplementalPolicy> value) {
-        this._wdacSupplementalPolicies = value;
+        this.wdacSupplementalPolicies = value;
     }
     /**
      * Sets the windowsInformationProtectionDeviceRegistrations property value. Windows information protection device registrations that are not MDM enrolled.
      * @param value Value to set for the windowsInformationProtectionDeviceRegistrations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsInformationProtectionDeviceRegistrations(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionDeviceRegistration> value) {
-        this._windowsInformationProtectionDeviceRegistrations = value;
+        this.windowsInformationProtectionDeviceRegistrations = value;
     }
     /**
      * Sets the windowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are not MDM enrolled.
      * @param value Value to set for the windowsInformationProtectionPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsInformationProtectionPolicies(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionPolicy> value) {
-        this._windowsInformationProtectionPolicies = value;
+        this.windowsInformationProtectionPolicies = value;
     }
     /**
      * Sets the windowsInformationProtectionWipeActions property value. Windows information protection wipe actions.
      * @param value Value to set for the windowsInformationProtectionWipeActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsInformationProtectionWipeActions(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionWipeAction> value) {
-        this._windowsInformationProtectionWipeActions = value;
+        this.windowsInformationProtectionWipeActions = value;
     }
     /**
      * Sets the windowsManagedAppProtections property value. Windows managed app policies.
      * @param value Value to set for the windowsManagedAppProtections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsManagedAppProtections(@javax.annotation.Nullable final java.util.List<WindowsManagedAppProtection> value) {
-        this._windowsManagedAppProtections = value;
+        this.windowsManagedAppProtections = value;
     }
     /**
      * Sets the windowsManagementApp property value. Windows management app.
      * @param value Value to set for the windowsManagementApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsManagementApp(@javax.annotation.Nullable final WindowsManagementApp value) {
-        this._windowsManagementApp = value;
+        this.windowsManagementApp = value;
     }
 }
