@@ -19,7 +19,9 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 
 /**
  * The class for the Cloud Pc Shared Use Service Plan Request Builder.
+ * @deprecated The cloudPcSharedUseServicePlan is deprecated and will not be supported starting October 08, 2023. This entity will not be included in the API response.
  */
+@Deprecated
 public class CloudPcSharedUseServicePlanRequestBuilder extends BaseRequestBuilder<CloudPcSharedUseServicePlan> {
 
     /**

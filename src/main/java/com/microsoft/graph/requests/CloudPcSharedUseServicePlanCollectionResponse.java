@@ -12,7 +12,9 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 
 /**
  * The class for the Cloud Pc Shared Use Service Plan Collection Response.
+ * @deprecated The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response.
  */
+@Deprecated
 public class CloudPcSharedUseServicePlanCollectionResponse extends BaseCollectionResponse<CloudPcSharedUseServicePlan> {
 
 }

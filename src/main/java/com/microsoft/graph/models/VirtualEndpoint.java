@@ -18,6 +18,7 @@ import com.microsoft.graph.requests.CloudPcBulkActionCollectionPage;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionPage;
+import com.microsoft.graph.requests.CloudPcFrontLineServicePlanCollectionPage;
 import com.microsoft.graph.requests.CloudPcGalleryImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionPage;
@@ -97,6 +98,15 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionPage externalPartnerSettings;
 
     /**
+     * The Front Line Service Plans.
+     * 
+     */
+    @SerializedName(value = "frontLineServicePlans", alternate = {"FrontLineServicePlans"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CloudPcFrontLineServicePlanCollectionPage frontLineServicePlans;
+
+    /**
      * The Gallery Images.
      * The gallery image resource on Cloud PC.
      */
@@ -155,7 +165,9 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     /**
      * The Shared Use Service Plans.
      * Cloud PC shared-use service plans.
+     * @deprecated The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response.
      */
+    @Deprecated
     @SerializedName(value = "sharedUseServicePlans", alternate = {"SharedUseServicePlans"})
     @Expose
 	@Nullable
@@ -216,6 +228,10 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
         if (json.has("externalPartnerSettings")) {
             externalPartnerSettings = serializer.deserializeObject(json.get("externalPartnerSettings"), com.microsoft.graph.requests.CloudPcExternalPartnerSettingCollectionPage.class);
+        }
+
+        if (json.has("frontLineServicePlans")) {
+            frontLineServicePlans = serializer.deserializeObject(json.get("frontLineServicePlans"), com.microsoft.graph.requests.CloudPcFrontLineServicePlanCollectionPage.class);
         }
 
         if (json.has("galleryImages")) {

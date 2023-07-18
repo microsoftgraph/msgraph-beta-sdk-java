@@ -28,6 +28,15 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Commerce Subscription Id.
+     * 
+     */
+    @SerializedName(value = "commerceSubscriptionId", alternate = {"CommerceSubscriptionId"})
+    @Expose
+	@Nullable
+    public String commerceSubscriptionId;
+
+    /**
      * The Created Date Time.
      * 
      */
@@ -62,6 +71,33 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String ocpSubscriptionId;
+
+    /**
+     * The Owner Id.
+     * 
+     */
+    @SerializedName(value = "ownerId", alternate = {"OwnerId"})
+    @Expose
+	@Nullable
+    public String ownerId;
+
+    /**
+     * The Owner Tenant Id.
+     * 
+     */
+    @SerializedName(value = "ownerTenantId", alternate = {"OwnerTenantId"})
+    @Expose
+	@Nullable
+    public String ownerTenantId;
+
+    /**
+     * The Owner Type.
+     * 
+     */
+    @SerializedName(value = "ownerType", alternate = {"OwnerType"})
+    @Expose
+	@Nullable
+    public String ownerType;
 
     /**
      * The Service Status.

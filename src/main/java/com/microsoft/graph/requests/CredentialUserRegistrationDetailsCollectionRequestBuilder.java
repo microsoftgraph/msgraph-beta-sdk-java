@@ -24,7 +24,9 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 
 /**
  * The class for the Credential User Registration Details Collection Request Builder.
+ * @deprecated The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API.
  */
+@Deprecated
 public class CredentialUserRegistrationDetailsCollectionRequestBuilder extends BaseCollectionRequestBuilder<CredentialUserRegistrationDetails, CredentialUserRegistrationDetailsRequestBuilder, CredentialUserRegistrationDetailsCollectionResponse, CredentialUserRegistrationDetailsCollectionPage, CredentialUserRegistrationDetailsCollectionRequest> {
 
     /**

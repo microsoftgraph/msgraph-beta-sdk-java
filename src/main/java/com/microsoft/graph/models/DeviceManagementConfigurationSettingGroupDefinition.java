@@ -30,7 +30,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
 
     /**
      * The Child Ids.
-     * Dependent child settings to this group of settings.
+     * Dependent child settings to this group of settings
      */
     @SerializedName(value = "childIds", alternate = {"ChildIds"})
     @Expose

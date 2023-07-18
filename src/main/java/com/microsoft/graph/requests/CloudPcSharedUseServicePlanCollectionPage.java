@@ -15,7 +15,9 @@ import com.microsoft.graph.http.BaseCollectionPage;
 
 /**
  * The class for the Cloud Pc Shared Use Service Plan Collection Page.
+ * @deprecated The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response.
  */
+@Deprecated
 public class CloudPcSharedUseServicePlanCollectionPage extends BaseCollectionPage<CloudPcSharedUseServicePlan, CloudPcSharedUseServicePlanCollectionRequestBuilder> {
 
     /**

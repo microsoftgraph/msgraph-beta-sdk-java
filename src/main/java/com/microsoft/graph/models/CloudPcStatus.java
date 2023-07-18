@@ -64,6 +64,10 @@ public enum CloudPcStatus
     */
     RESIZE_PENDING_LICENSE,
     /**
+    * updating Single Sign On
+    */
+    UPDATING_SINGLE_SIGN_ON,
+    /**
     * For CloudPcStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

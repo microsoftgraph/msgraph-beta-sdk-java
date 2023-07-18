@@ -23,7 +23,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Credential User Registration Details.
+ * @deprecated The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API.
  */
+@Deprecated
 public class CredentialUserRegistrationDetails extends Entity implements IJsonBackedObject {
 
 
