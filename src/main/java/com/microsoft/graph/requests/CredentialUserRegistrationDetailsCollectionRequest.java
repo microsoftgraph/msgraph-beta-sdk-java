@@ -25,7 +25,9 @@ import com.microsoft.graph.requests.CredentialUserRegistrationDetailsCollectionR
 
 /**
  * The class for the Credential User Registration Details Collection Request.
+ * @deprecated The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API.
  */
+@Deprecated
 public class CredentialUserRegistrationDetailsCollectionRequest extends BaseEntityCollectionRequest<CredentialUserRegistrationDetails, CredentialUserRegistrationDetailsCollectionResponse, CredentialUserRegistrationDetailsCollectionPage> {
 
     /**

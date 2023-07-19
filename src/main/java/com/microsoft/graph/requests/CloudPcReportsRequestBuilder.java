@@ -15,6 +15,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.models.CloudPcReportsGetConnectionQualityReportsParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetDailyAggregatedRemoteConnectionReportsParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetInaccessibleCloudPcReportsParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetRemoteConnectionHistoricalReportsParameterSet;
@@ -83,6 +84,16 @@ public class CloudPcReportsRequestBuilder extends BaseRequestBuilder<CloudPcRepo
     @Nonnull
     public com.microsoft.graph.requests.CloudPcExportJobRequestBuilder exportJobs(@Nonnull final String id) {
         return new com.microsoft.graph.requests.CloudPcExportJobRequestBuilder(getRequestUrlWithAdditionalSegment("exportJobs") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public CloudPcReportsGetConnectionQualityReportsRequestBuilder getConnectionQualityReports(@Nonnull final CloudPcReportsGetConnectionQualityReportsParameterSet parameters) {
+        return new CloudPcReportsGetConnectionQualityReportsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConnectionQualityReports"), getClient(), null, parameters);
     }
 
     /**

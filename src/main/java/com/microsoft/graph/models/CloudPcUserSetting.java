@@ -65,6 +65,15 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
     public Boolean localAdminEnabled;
 
     /**
+     * The Reset Enabled.
+     * 
+     */
+    @SerializedName(value = "resetEnabled", alternate = {"ResetEnabled"})
+    @Expose
+	@Nullable
+    public Boolean resetEnabled;
+
+    /**
      * The Restore Point Setting.
      * Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
      */

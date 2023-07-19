@@ -112,7 +112,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Alert Incidents.
-     * Represents the incidents of this alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
+     * Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
      */
     @SerializedName(value = "alertIncidents", alternate = {"AlertIncidents"})
     @Expose

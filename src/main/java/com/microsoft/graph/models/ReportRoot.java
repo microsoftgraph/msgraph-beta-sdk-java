@@ -65,7 +65,9 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     /**
      * The Credential User Registration Details.
      * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
+     * @deprecated The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API.
      */
+    @Deprecated
     @SerializedName(value = "credentialUserRegistrationDetails", alternate = {"CredentialUserRegistrationDetails"})
     @Expose
 	@Nullable

@@ -40,6 +40,10 @@ public enum CloudPcReportName
     */
     NO_LICENSE_AVAILABLE_CONNECTIVITY_FAILURE_REPORT,
     /**
+    * remote Connection Quality Reports
+    */
+    REMOTE_CONNECTION_QUALITY_REPORTS,
+    /**
     * For CloudPcReportName values that were not expected from the service
     */
     UNEXPECTED_VALUE

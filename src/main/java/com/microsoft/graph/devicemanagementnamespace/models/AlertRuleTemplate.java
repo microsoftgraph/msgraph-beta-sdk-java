@@ -28,6 +28,10 @@ public enum AlertRuleTemplate
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * cloud Pc In Grace Period Scenario
+    */
+    CLOUD_PC_IN_GRACE_PERIOD_SCENARIO,
+    /**
     * For AlertRuleTemplate values that were not expected from the service
     */
     UNEXPECTED_VALUE

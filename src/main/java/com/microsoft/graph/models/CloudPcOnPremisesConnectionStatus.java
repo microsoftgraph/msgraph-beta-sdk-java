@@ -32,6 +32,10 @@ public enum CloudPcOnPremisesConnectionStatus
     */
     WARNING,
     /**
+    * informational
+    */
+    INFORMATIONAL,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
