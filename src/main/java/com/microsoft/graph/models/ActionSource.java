@@ -3,12 +3,11 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the evaluateApplication method. */
 public enum ActionSource implements ValuedEnum {
     Manual("manual"),
     Automatic("automatic"),
     Recommended("recommended"),
-    Default_escaped("default_escaped");
+    Default("default");
     public final String value;
     ActionSource(final String value) {
         this.value = value;
@@ -22,7 +21,7 @@ public enum ActionSource implements ValuedEnum {
             case "manual": return Manual;
             case "automatic": return Automatic;
             case "recommended": return Recommended;
-            case "default": return Default_escaped;
+            case "default": return Default;
             default: return null;
         }
     }

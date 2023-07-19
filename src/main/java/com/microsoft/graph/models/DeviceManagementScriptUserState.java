@@ -3,27 +3,36 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for user run state of the device management script. */
+/**
+ * Contains properties for user run state of the device management script.
+ */
 public class DeviceManagementScriptUserState extends Entity implements Parsable {
-    /** List of run states for this script across all devices of specific user. */
-    private java.util.List<DeviceManagementScriptDeviceState> _deviceRunStates;
-    /** Error device count for specific user. */
-    private Integer _errorDeviceCount;
-    /** Success device count for specific user. */
-    private Integer _successDeviceCount;
-    /** User principle name of specific user. */
-    private String _userPrincipalName;
+    /**
+     * List of run states for this script across all devices of specific user.
+     */
+    private java.util.List<DeviceManagementScriptDeviceState> deviceRunStates;
+    /**
+     * Error device count for specific user.
+     */
+    private Integer errorDeviceCount;
+    /**
+     * Success device count for specific user.
+     */
+    private Integer successDeviceCount;
+    /**
+     * User principle name of specific user.
+     */
+    private String userPrincipalName;
     /**
      * Instantiates a new deviceManagementScriptUserState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementScriptUserState() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementScriptUserState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +50,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementScriptDeviceState> getDeviceRunStates() {
-        return this._deviceRunStates;
+        return this.deviceRunStates;
     }
     /**
      * Gets the errorDeviceCount property value. Error device count for specific user.
@@ -49,21 +58,20 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public Integer getErrorDeviceCount() {
-        return this._errorDeviceCount;
+        return this.errorDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementScriptUserState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceRunStates", (n) -> { currentObject.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptDeviceState::createFromDiscriminatorValue)); });
-            this.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
-            this.put("successDeviceCount", (n) -> { currentObject.setSuccessDeviceCount(n.getIntegerValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceRunStates", (n) -> { this.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptDeviceState::createFromDiscriminatorValue)); });
+        deserializerMap.put("errorDeviceCount", (n) -> { this.setErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("successDeviceCount", (n) -> { this.setSuccessDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the successDeviceCount property value. Success device count for specific user.
@@ -71,7 +79,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public Integer getSuccessDeviceCount() {
-        return this._successDeviceCount;
+        return this.successDeviceCount;
     }
     /**
      * Gets the userPrincipalName property value. User principle name of specific user.
@@ -79,13 +87,14 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,31 +108,35 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      * @param value Value to set for the deviceRunStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceRunStates(@javax.annotation.Nullable final java.util.List<DeviceManagementScriptDeviceState> value) {
-        this._deviceRunStates = value;
+        this.deviceRunStates = value;
     }
     /**
      * Sets the errorDeviceCount property value. Error device count for specific user.
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._errorDeviceCount = value;
+        this.errorDeviceCount = value;
     }
     /**
      * Sets the successDeviceCount property value. Success device count for specific user.
      * @param value Value to set for the successDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._successDeviceCount = value;
+        this.successDeviceCount = value;
     }
     /**
      * Sets the userPrincipalName property value. User principle name of specific user.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

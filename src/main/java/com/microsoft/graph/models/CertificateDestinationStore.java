@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Possible values for the Certificate Destination Store.
+ */
 public enum CertificateDestinationStore implements ValuedEnum {
     /** Computer Certificate Store - Root. */
     ComputerCertStoreRoot("computerCertStoreRoot"),

@@ -4,38 +4,57 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The color property */
-    private String _color;
-    /** The criterion1 property */
-    private String _criterion1;
-    /** The criterion2 property */
-    private String _criterion2;
-    /** The dynamicCriteria property */
-    private String _dynamicCriteria;
-    /** The filterOn property */
-    private String _filterOn;
-    /** The icon property */
-    private WorkbookIcon _icon;
-    /** The OdataType property */
-    private String _odataType;
-    /** The operator property */
-    private String _operator;
-    /** The values property */
-    private Json _values;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The color property
+     */
+    private String color;
+    /**
+     * The criterion1 property
+     */
+    private String criterion1;
+    /**
+     * The criterion2 property
+     */
+    private String criterion2;
+    /**
+     * The dynamicCriteria property
+     */
+    private String dynamicCriteria;
+    /**
+     * The filterOn property
+     */
+    private String filterOn;
+    /**
+     * The icon property
+     */
+    private WorkbookIcon icon;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The operator property
+     */
+    private String operator;
+    /**
+     * The values property
+     */
+    private Json values;
     /**
      * Instantiates a new workbookFilterCriteria and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookFilterCriteria() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookFilterCriteria");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +72,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the color property value. The color property
@@ -61,7 +80,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getColor() {
-        return this._color;
+        return this.color;
     }
     /**
      * Gets the criterion1 property value. The criterion1 property
@@ -69,7 +88,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCriterion1() {
-        return this._criterion1;
+        return this.criterion1;
     }
     /**
      * Gets the criterion2 property value. The criterion2 property
@@ -77,7 +96,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCriterion2() {
-        return this._criterion2;
+        return this.criterion2;
     }
     /**
      * Gets the dynamicCriteria property value. The dynamicCriteria property
@@ -85,26 +104,25 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDynamicCriteria() {
-        return this._dynamicCriteria;
+        return this.dynamicCriteria;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookFilterCriteria currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-            this.put("criterion1", (n) -> { currentObject.setCriterion1(n.getStringValue()); });
-            this.put("criterion2", (n) -> { currentObject.setCriterion2(n.getStringValue()); });
-            this.put("dynamicCriteria", (n) -> { currentObject.setDynamicCriteria(n.getStringValue()); });
-            this.put("filterOn", (n) -> { currentObject.setFilterOn(n.getStringValue()); });
-            this.put("icon", (n) -> { currentObject.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getStringValue()); });
-            this.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
+        deserializerMap.put("criterion1", (n) -> { this.setCriterion1(n.getStringValue()); });
+        deserializerMap.put("criterion2", (n) -> { this.setCriterion2(n.getStringValue()); });
+        deserializerMap.put("dynamicCriteria", (n) -> { this.setDynamicCriteria(n.getStringValue()); });
+        deserializerMap.put("filterOn", (n) -> { this.setFilterOn(n.getStringValue()); });
+        deserializerMap.put("icon", (n) -> { this.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getStringValue()); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the filterOn property value. The filterOn property
@@ -112,7 +130,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getFilterOn() {
-        return this._filterOn;
+        return this.filterOn;
     }
     /**
      * Gets the icon property value. The icon property
@@ -120,7 +138,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookIcon getIcon() {
-        return this._icon;
+        return this.icon;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -128,7 +146,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the operator property value. The operator property
@@ -136,7 +154,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOperator() {
-        return this._operator;
+        return this.operator;
     }
     /**
      * Gets the values property value. The values property
@@ -144,13 +162,14 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Json getValues() {
-        return this._values;
+        return this.values;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("color", this.getColor());
@@ -169,79 +188,89 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the color property value. The color property
      * @param value Value to set for the color property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final String value) {
-        this._color = value;
+        this.color = value;
     }
     /**
      * Sets the criterion1 property value. The criterion1 property
      * @param value Value to set for the criterion1 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCriterion1(@javax.annotation.Nullable final String value) {
-        this._criterion1 = value;
+        this.criterion1 = value;
     }
     /**
      * Sets the criterion2 property value. The criterion2 property
      * @param value Value to set for the criterion2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCriterion2(@javax.annotation.Nullable final String value) {
-        this._criterion2 = value;
+        this.criterion2 = value;
     }
     /**
      * Sets the dynamicCriteria property value. The dynamicCriteria property
      * @param value Value to set for the dynamicCriteria property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDynamicCriteria(@javax.annotation.Nullable final String value) {
-        this._dynamicCriteria = value;
+        this.dynamicCriteria = value;
     }
     /**
      * Sets the filterOn property value. The filterOn property
      * @param value Value to set for the filterOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilterOn(@javax.annotation.Nullable final String value) {
-        this._filterOn = value;
+        this.filterOn = value;
     }
     /**
      * Sets the icon property value. The icon property
      * @param value Value to set for the icon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIcon(@javax.annotation.Nullable final WorkbookIcon value) {
-        this._icon = value;
+        this.icon = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the operator property value. The operator property
      * @param value Value to set for the operator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final String value) {
-        this._operator = value;
+        this.operator = value;
     }
     /**
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final Json value) {
-        this._values = value;
+        this.values = value;
     }
 }

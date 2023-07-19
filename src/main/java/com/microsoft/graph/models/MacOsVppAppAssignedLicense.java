@@ -3,27 +3,36 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** MacOS Volume Purchase Program license assignment. This class does not support Create, Delete, or Update. */
+/**
+ * MacOS Volume Purchase Program license assignment. This class does not support Create, Delete, or Update.
+ */
 public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
-    /** The user email address. */
-    private String _userEmailAddress;
-    /** The user ID. */
-    private String _userId;
-    /** The user name. */
-    private String _userName;
-    /** The user principal name. */
-    private String _userPrincipalName;
+    /**
+     * The user email address.
+     */
+    private String userEmailAddress;
+    /**
+     * The user ID.
+     */
+    private String userId;
+    /**
+     * The user name.
+     */
+    private String userName;
+    /**
+     * The user principal name.
+     */
+    private String userPrincipalName;
     /**
      * Instantiates a new macOsVppAppAssignedLicense and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOsVppAppAssignedLicense() {
         super();
-        this.setOdataType("#microsoft.graph.macOsVppAppAssignedLicense");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,17 +46,16 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOsVppAppAssignedLicense currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("userEmailAddress", (n) -> { currentObject.setUserEmailAddress(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userEmailAddress", (n) -> { this.setUserEmailAddress(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userName", (n) -> { this.setUserName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the userEmailAddress property value. The user email address.
@@ -55,7 +63,7 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserEmailAddress() {
-        return this._userEmailAddress;
+        return this.userEmailAddress;
     }
     /**
      * Gets the userId property value. The user ID.
@@ -63,7 +71,7 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Gets the userName property value. The user name.
@@ -71,7 +79,7 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserName() {
-        return this._userName;
+        return this.userName;
     }
     /**
      * Gets the userPrincipalName property value. The user principal name.
@@ -79,13 +87,14 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,31 +108,35 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
      * @param value Value to set for the userEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEmailAddress(@javax.annotation.Nullable final String value) {
-        this._userEmailAddress = value;
+        this.userEmailAddress = value;
     }
     /**
      * Sets the userId property value. The user ID.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
      * Sets the userName property value. The user name.
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
-        this._userName = value;
+        this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

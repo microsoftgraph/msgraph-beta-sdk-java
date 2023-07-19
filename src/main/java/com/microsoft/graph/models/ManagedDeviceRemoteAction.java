@@ -3,17 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the executeAction method. */
 public enum ManagedDeviceRemoteAction implements ValuedEnum {
+    /** Name of the retire action. */
     Retire("retire"),
+    /** Name of the delete action. */
     Delete("delete"),
+    /** Name of the full Scan action. */
     FullScan("fullScan"),
+    /** Name of the Quick Scan action. */
     QuickScan("quickScan"),
+    /** Signature Update action */
     SignatureUpdate("signatureUpdate"),
+    /** Name of the wipe action. */
     Wipe("wipe"),
+    /** Name of the Custom Text Notification action. */
     CustomTextNotification("customTextNotification"),
+    /** Name of the reboot now action. */
     RebootNow("rebootNow"),
+    /** Set Device Name action. */
     SetDeviceName("setDeviceName"),
+    /** Sync Device action. */
     SyncDevice("syncDevice"),
     /** Name of the deprovision action. */
     Deprovision("deprovision"),
@@ -26,7 +35,13 @@ public enum ManagedDeviceRemoteAction implements ValuedEnum {
     /** Name of action to Activate eSIM on the device. */
     ActivateDeviceEsim("activateDeviceEsim"),
     /** Name of the collectDiagnostics action. */
-    CollectDiagnostics("collectDiagnostics");
+    CollectDiagnostics("collectDiagnostics"),
+    /** Name of action to initiate MDM key recovery */
+    InitiateMobileDeviceManagementKeyRecovery("initiateMobileDeviceManagementKeyRecovery"),
+    /** Name of action to initiate On Demand Proactive Remediation */
+    InitiateOnDemandProactiveRemediation("initiateOnDemandProactiveRemediation"),
+    /** Evolvable enum member */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     ManagedDeviceRemoteAction(final String value) {
         this.value = value;
@@ -53,6 +68,9 @@ public enum ManagedDeviceRemoteAction implements ValuedEnum {
             case "moveDeviceToOrganizationalUnit": return MoveDeviceToOrganizationalUnit;
             case "activateDeviceEsim": return ActivateDeviceEsim;
             case "collectDiagnostics": return CollectDiagnostics;
+            case "initiateMobileDeviceManagementKeyRecovery": return InitiateMobileDeviceManagementKeyRecovery;
+            case "initiateOnDemandProactiveRemediation": return InitiateOnDemandProactiveRemediation;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

@@ -3,21 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemAddress extends ItemFacet implements Parsable {
-    /** The detail property */
-    private PhysicalAddress _detail;
-    /** Friendly name the user has assigned to this address. */
-    private String _displayName;
-    /** The geocoordinates of the address. */
-    private GeoCoordinates _geoCoordinates;
     /**
-     * Instantiates a new ItemAddress and sets the default values.
+     * The detail property
+     */
+    private PhysicalAddress detail;
+    /**
+     * Friendly name the user has assigned to this address.
+     */
+    private String displayName;
+    /**
+     * The geocoordinates of the address.
+     */
+    private GeoCoordinates geoCoordinates;
+    /**
+     * Instantiates a new itemAddress and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemAddress() {
         super();
         this.setOdataType("#microsoft.graph.itemAddress");
@@ -25,7 +31,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemAddress
+     * @return a itemAddress
      */
     @javax.annotation.Nonnull
     public static ItemAddress createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +44,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public PhysicalAddress getDetail() {
-        return this._detail;
+        return this.detail;
     }
     /**
      * Gets the displayName property value. Friendly name the user has assigned to this address.
@@ -46,20 +52,19 @@ public class ItemAddress extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ItemAddress currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("detail", (n) -> { currentObject.setDetail(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("geoCoordinates", (n) -> { currentObject.setGeoCoordinates(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("detail", (n) -> { this.setDetail(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("geoCoordinates", (n) -> { this.setGeoCoordinates(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the geoCoordinates property value. The geocoordinates of the address.
@@ -67,13 +72,14 @@ public class ItemAddress extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public GeoCoordinates getGeoCoordinates() {
-        return this._geoCoordinates;
+        return this.geoCoordinates;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +92,26 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * @param value Value to set for the detail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetail(@javax.annotation.Nullable final PhysicalAddress value) {
-        this._detail = value;
+        this.detail = value;
     }
     /**
      * Sets the displayName property value. Friendly name the user has assigned to this address.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the geoCoordinates property value. The geocoordinates of the address.
      * @param value Value to set for the geoCoordinates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGeoCoordinates(@javax.annotation.Nullable final GeoCoordinates value) {
-        this._geoCoordinates = value;
+        this.geoCoordinates = value;
     }
 }

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Represents various states for Zebra FOTA connector.
+ */
 public enum ZebraFotaConnectorState implements ValuedEnum {
     /** Default value when the connector has not been setup (the feature has not been used yet). */
     None("none"),

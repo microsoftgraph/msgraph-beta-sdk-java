@@ -4,42 +4,65 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemActionSet implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** A comment was added to the item. */
-    private CommentAction _comment;
-    /** An item was created. */
-    private CreateAction _create;
-    /** An item was deleted. */
-    private DeleteAction _delete;
-    /** An item was edited. */
-    private EditAction _edit;
-    /** A user was mentioned in the item. */
-    private MentionAction _mention;
-    /** An item was moved. */
-    private MoveAction _move;
-    /** The OdataType property */
-    private String _odataType;
-    /** An item was renamed. */
-    private RenameAction _rename;
-    /** An item was restored. */
-    private RestoreAction _restore;
-    /** An item was shared. */
-    private ShareAction _share;
-    /** An item was versioned. */
-    private VersionAction _version;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * A comment was added to the item.
+     */
+    private CommentAction comment;
+    /**
+     * An item was created.
+     */
+    private CreateAction create;
+    /**
+     * An item was deleted.
+     */
+    private DeleteAction delete;
+    /**
+     * An item was edited.
+     */
+    private EditAction edit;
+    /**
+     * A user was mentioned in the item.
+     */
+    private MentionAction mention;
+    /**
+     * An item was moved.
+     */
+    private MoveAction move;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * An item was renamed.
+     */
+    private RenameAction rename;
+    /**
+     * An item was restored.
+     */
+    private RestoreAction restore;
+    /**
+     * An item was shared.
+     */
+    private ShareAction share;
+    /**
+     * An item was versioned.
+     */
+    private VersionAction version;
     /**
      * Instantiates a new itemActionSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemActionSet() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.itemActionSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,7 +80,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the comment property value. A comment was added to the item.
@@ -65,7 +88,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public CommentAction getComment() {
-        return this._comment;
+        return this.comment;
     }
     /**
      * Gets the create property value. An item was created.
@@ -73,7 +96,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public CreateAction getCreate() {
-        return this._create;
+        return this.create;
     }
     /**
      * Gets the delete property value. An item was deleted.
@@ -81,7 +104,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public DeleteAction getDelete() {
-        return this._delete;
+        return this.delete;
     }
     /**
      * Gets the edit property value. An item was edited.
@@ -89,28 +112,27 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public EditAction getEdit() {
-        return this._edit;
+        return this.edit;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ItemActionSet currentObject = this;
-        return new HashMap<>(11) {{
-            this.put("comment", (n) -> { currentObject.setComment(n.getObjectValue(CommentAction::createFromDiscriminatorValue)); });
-            this.put("create", (n) -> { currentObject.setCreate(n.getObjectValue(CreateAction::createFromDiscriminatorValue)); });
-            this.put("delete", (n) -> { currentObject.setDelete(n.getObjectValue(DeleteAction::createFromDiscriminatorValue)); });
-            this.put("edit", (n) -> { currentObject.setEdit(n.getObjectValue(EditAction::createFromDiscriminatorValue)); });
-            this.put("mention", (n) -> { currentObject.setMention(n.getObjectValue(MentionAction::createFromDiscriminatorValue)); });
-            this.put("move", (n) -> { currentObject.setMove(n.getObjectValue(MoveAction::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("rename", (n) -> { currentObject.setRename(n.getObjectValue(RenameAction::createFromDiscriminatorValue)); });
-            this.put("restore", (n) -> { currentObject.setRestore(n.getObjectValue(RestoreAction::createFromDiscriminatorValue)); });
-            this.put("share", (n) -> { currentObject.setShare(n.getObjectValue(ShareAction::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getObjectValue(VersionAction::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        deserializerMap.put("comment", (n) -> { this.setComment(n.getObjectValue(CommentAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("create", (n) -> { this.setCreate(n.getObjectValue(CreateAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("delete", (n) -> { this.setDelete(n.getObjectValue(DeleteAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("edit", (n) -> { this.setEdit(n.getObjectValue(EditAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("mention", (n) -> { this.setMention(n.getObjectValue(MentionAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("move", (n) -> { this.setMove(n.getObjectValue(MoveAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("rename", (n) -> { this.setRename(n.getObjectValue(RenameAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("restore", (n) -> { this.setRestore(n.getObjectValue(RestoreAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("share", (n) -> { this.setShare(n.getObjectValue(ShareAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getObjectValue(VersionAction::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the mention property value. A user was mentioned in the item.
@@ -118,7 +140,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public MentionAction getMention() {
-        return this._mention;
+        return this.mention;
     }
     /**
      * Gets the move property value. An item was moved.
@@ -126,7 +148,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public MoveAction getMove() {
-        return this._move;
+        return this.move;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -134,7 +156,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the rename property value. An item was renamed.
@@ -142,7 +164,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RenameAction getRename() {
-        return this._rename;
+        return this.rename;
     }
     /**
      * Gets the restore property value. An item was restored.
@@ -150,7 +172,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RestoreAction getRestore() {
-        return this._restore;
+        return this.restore;
     }
     /**
      * Gets the share property value. An item was shared.
@@ -158,7 +180,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ShareAction getShare() {
-        return this._share;
+        return this.share;
     }
     /**
      * Gets the version property value. An item was versioned.
@@ -166,13 +188,14 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public VersionAction getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("comment", this.getComment());
@@ -193,95 +216,107 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the comment property value. A comment was added to the item.
      * @param value Value to set for the comment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final CommentAction value) {
-        this._comment = value;
+        this.comment = value;
     }
     /**
      * Sets the create property value. An item was created.
      * @param value Value to set for the create property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreate(@javax.annotation.Nullable final CreateAction value) {
-        this._create = value;
+        this.create = value;
     }
     /**
      * Sets the delete property value. An item was deleted.
      * @param value Value to set for the delete property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDelete(@javax.annotation.Nullable final DeleteAction value) {
-        this._delete = value;
+        this.delete = value;
     }
     /**
      * Sets the edit property value. An item was edited.
      * @param value Value to set for the edit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdit(@javax.annotation.Nullable final EditAction value) {
-        this._edit = value;
+        this.edit = value;
     }
     /**
      * Sets the mention property value. A user was mentioned in the item.
      * @param value Value to set for the mention property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMention(@javax.annotation.Nullable final MentionAction value) {
-        this._mention = value;
+        this.mention = value;
     }
     /**
      * Sets the move property value. An item was moved.
      * @param value Value to set for the move property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMove(@javax.annotation.Nullable final MoveAction value) {
-        this._move = value;
+        this.move = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the rename property value. An item was renamed.
      * @param value Value to set for the rename property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRename(@javax.annotation.Nullable final RenameAction value) {
-        this._rename = value;
+        this.rename = value;
     }
     /**
      * Sets the restore property value. An item was restored.
      * @param value Value to set for the restore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestore(@javax.annotation.Nullable final RestoreAction value) {
-        this._restore = value;
+        this.restore = value;
     }
     /**
      * Sets the share property value. An item was shared.
      * @param value Value to set for the share property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShare(@javax.annotation.Nullable final ShareAction value) {
-        this._share = value;
+        this.share = value;
     }
     /**
      * Sets the version property value. An item was versioned.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final VersionAction value) {
-        this._version = value;
+        this.version = value;
     }
 }

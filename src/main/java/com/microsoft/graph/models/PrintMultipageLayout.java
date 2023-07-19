@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum PrintMultipageLayout implements ValuedEnum {
     ClockwiseFromTopLeft("clockwiseFromTopLeft"),
     CounterclockwiseFromTopLeft("counterclockwiseFromTopLeft"),
@@ -12,7 +11,8 @@ public enum PrintMultipageLayout implements ValuedEnum {
     CounterclockwiseFromBottomLeft("counterclockwiseFromBottomLeft"),
     ClockwiseFromBottomLeft("clockwiseFromBottomLeft"),
     CounterclockwiseFromBottomRight("counterclockwiseFromBottomRight"),
-    ClockwiseFromBottomRight("clockwiseFromBottomRight");
+    ClockwiseFromBottomRight("clockwiseFromBottomRight"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     PrintMultipageLayout(final String value) {
         this.value = value;
@@ -31,6 +31,7 @@ public enum PrintMultipageLayout implements ValuedEnum {
             case "clockwiseFromBottomLeft": return ClockwiseFromBottomLeft;
             case "counterclockwiseFromBottomRight": return CounterclockwiseFromBottomRight;
             case "clockwiseFromBottomRight": return ClockwiseFromBottomRight;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

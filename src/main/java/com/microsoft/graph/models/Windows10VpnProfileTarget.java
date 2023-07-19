@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Windows 10 VPN profile target types.
+ */
 public enum Windows10VpnProfileTarget implements ValuedEnum {
     /** User targeted VPN profile. */
     User("user"),

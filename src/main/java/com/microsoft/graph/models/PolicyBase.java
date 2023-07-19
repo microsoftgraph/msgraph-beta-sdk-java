@@ -1,37 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
-import com.microsoft.graph.models.AppManagementPolicy;
-import com.microsoft.graph.models.AuthorizationPolicy;
-import com.microsoft.graph.models.ClaimsMappingPolicy;
-import com.microsoft.graph.models.CrossTenantAccessPolicy;
-import com.microsoft.graph.models.ExternalIdentitiesPolicy;
-import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
-import com.microsoft.graph.models.IdentitySecurityDefaultsEnforcementPolicy;
-import com.microsoft.graph.models.PermissionGrantPolicy;
-import com.microsoft.graph.models.ServicePrincipalCreationPolicy;
-import com.microsoft.graph.models.StsPolicy;
-import com.microsoft.graph.models.TenantAppManagementPolicy;
-import com.microsoft.graph.models.TenantRelationshipAccessPolicyBase;
-import com.microsoft.graph.models.TokenIssuancePolicy;
-import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class PolicyBase extends DirectoryObject implements Parsable {
-    /** Description for this policy. Required. */
-    private String _description;
-    /** Display name for this policy. Required. */
-    private String _displayName;
+    /**
+     * Description for this policy. Required.
+     */
+    private String description;
+    /**
+     * Display name for this policy. Required.
+     */
+    private String displayName;
     /**
      * Instantiates a new policyBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PolicyBase() {
         super();
         this.setOdataType("#microsoft.graph.policyBase");
@@ -73,7 +61,7 @@ public class PolicyBase extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Display name for this policy. Required.
@@ -81,25 +69,25 @@ public class PolicyBase extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PolicyBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,15 +99,17 @@ public class PolicyBase extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Display name for this policy. Required.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
 }

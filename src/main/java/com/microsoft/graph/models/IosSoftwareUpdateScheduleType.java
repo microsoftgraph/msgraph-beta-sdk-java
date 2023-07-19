@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Updatescheduletypefor iOS software updates.
+ */
 public enum IosSoftwareUpdateScheduleType implements ValuedEnum {
     /** Update outside of active hours. */
     UpdateOutsideOfActiveHours("updateOutsideOfActiveHours"),

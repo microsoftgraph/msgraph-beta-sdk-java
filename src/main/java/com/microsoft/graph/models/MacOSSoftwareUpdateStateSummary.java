@@ -4,31 +4,44 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** MacOS software update state summary for a device and user */
+/**
+ * MacOS software update state summary for a device and user
+ */
 public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable {
-    /** Human readable name of the software update */
-    private String _displayName;
-    /** Last date time the report for this device and product key was updated. */
-    private OffsetDateTime _lastUpdatedDateTime;
-    /** Product key of the software update. */
-    private String _productKey;
-    /** MacOS Software Update State */
-    private MacOSSoftwareUpdateState _state;
-    /** MacOS Software Update Category */
-    private MacOSSoftwareUpdateCategory _updateCategory;
-    /** Version of the software update */
-    private String _updateVersion;
+    /**
+     * Human readable name of the software update
+     */
+    private String displayName;
+    /**
+     * Last date time the report for this device and product key was updated.
+     */
+    private OffsetDateTime lastUpdatedDateTime;
+    /**
+     * Product key of the software update.
+     */
+    private String productKey;
+    /**
+     * MacOS Software Update State
+     */
+    private MacOSSoftwareUpdateState state;
+    /**
+     * MacOS Software Update Category
+     */
+    private MacOSSoftwareUpdateCategory updateCategory;
+    /**
+     * Version of the software update
+     */
+    private String updateVersion;
     /**
      * Instantiates a new macOSSoftwareUpdateStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSSoftwareUpdateStateSummary() {
         super();
-        this.setOdataType("#microsoft.graph.macOSSoftwareUpdateStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,23 +59,22 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSSoftwareUpdateStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(MacOSSoftwareUpdateState.class)); });
-            this.put("updateCategory", (n) -> { currentObject.setUpdateCategory(n.getEnumValue(MacOSSoftwareUpdateCategory.class)); });
-            this.put("updateVersion", (n) -> { currentObject.setUpdateVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("productKey", (n) -> { this.setProductKey(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(MacOSSoftwareUpdateState.class)); });
+        deserializerMap.put("updateCategory", (n) -> { this.setUpdateCategory(n.getEnumValue(MacOSSoftwareUpdateCategory.class)); });
+        deserializerMap.put("updateVersion", (n) -> { this.setUpdateVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastUpdatedDateTime property value. Last date time the report for this device and product key was updated.
@@ -70,7 +82,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this._lastUpdatedDateTime;
+        return this.lastUpdatedDateTime;
     }
     /**
      * Gets the productKey property value. Product key of the software update.
@@ -78,7 +90,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getProductKey() {
-        return this._productKey;
+        return this.productKey;
     }
     /**
      * Gets the state property value. MacOS Software Update State
@@ -86,7 +98,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public MacOSSoftwareUpdateState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the updateCategory property value. MacOS Software Update Category
@@ -94,7 +106,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public MacOSSoftwareUpdateCategory getUpdateCategory() {
-        return this._updateCategory;
+        return this.updateCategory;
     }
     /**
      * Gets the updateVersion property value. Version of the software update
@@ -102,13 +114,14 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getUpdateVersion() {
-        return this._updateVersion;
+        return this.updateVersion;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,47 +137,53 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. Last date time the report for this device and product key was updated.
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastUpdatedDateTime = value;
+        this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the productKey property value. Product key of the software update.
      * @param value Value to set for the productKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductKey(@javax.annotation.Nullable final String value) {
-        this._productKey = value;
+        this.productKey = value;
     }
     /**
      * Sets the state property value. MacOS Software Update State
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final MacOSSoftwareUpdateState value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the updateCategory property value. MacOS Software Update Category
      * @param value Value to set for the updateCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateCategory(@javax.annotation.Nullable final MacOSSoftwareUpdateCategory value) {
-        this._updateCategory = value;
+        this.updateCategory = value;
     }
     /**
      * Sets the updateVersion property value. Version of the software update
      * @param value Value to set for the updateVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateVersion(@javax.annotation.Nullable final String value) {
-        this._updateVersion = value;
+        this.updateVersion = value;
     }
 }

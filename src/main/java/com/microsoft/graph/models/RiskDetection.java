@@ -4,63 +4,102 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RiskDetection extends Entity implements Parsable {
-    /** Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue. */
-    private ActivityType _activity;
-    /** Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _activityDateTime;
-    /** Additional information associated with the risk detection in JSON format. */
-    private String _additionalInfo;
-    /** Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in. */
-    private String _correlationId;
-    /** Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _detectedDateTime;
-    /** Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue. */
-    private RiskDetectionTimingType _detectionTimingType;
-    /** Provides the IP address of the client from where the risk occurred. */
-    private String _ipAddress;
-    /** Date and time that the risk detection was last updated. */
-    private OffsetDateTime _lastUpdatedDateTime;
-    /** Location of the sign-in. */
-    private SignInLocation _location;
-    /** Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in. */
-    private String _requestId;
-    /** Details of the detected risk. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden. */
-    private RiskDetail _riskDetail;
-    /** The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.  For more information about each value, see riskEventType values. */
-    private String _riskEventType;
-    /** Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden. */
-    private RiskLevel _riskLevel;
-    /** The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue. */
-    private RiskState _riskState;
-    /** The riskType property */
-    private RiskEventType _riskType;
-    /** Source of the risk detection. For example, activeDirectory. */
-    private String _source;
-    /** Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue. */
-    private TokenIssuerType _tokenIssuerType;
-    /** Name of the user. */
-    private String _userDisplayName;
-    /** Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private String _userId;
-    /** The user principal name (UPN) of the user. */
-    private String _userPrincipalName;
     /**
-     * Instantiates a new RiskDetection and sets the default values.
+     * Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue.
+     */
+    private ActivityType activity;
+    /**
+     * Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
+    private OffsetDateTime activityDateTime;
+    /**
+     * Additional information associated with the risk detection in JSON format.
+     */
+    private String additionalInfo;
+    /**
+     * Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
+     */
+    private String correlationId;
+    /**
+     * Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
+    private OffsetDateTime detectedDateTime;
+    /**
+     * Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     */
+    private RiskDetectionTimingType detectionTimingType;
+    /**
+     * Provides the IP address of the client from where the risk occurred.
+     */
+    private String ipAddress;
+    /**
+     * Date and time that the risk detection was last updated.
+     */
+    private OffsetDateTime lastUpdatedDateTime;
+    /**
+     * Location of the sign-in.
+     */
+    private SignInLocation location;
+    /**
+     * Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
+     */
+    private String requestId;
+    /**
+     * Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal , m365DAdminDismissedDetection. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     */
+    private RiskDetail riskDetail;
+    /**
+     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, anomalousUserActivity, userReportedSuspiciousActivity.  For more information about each value, see riskEventType values.
+     */
+    private String riskEventType;
+    /**
+     * Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     */
+    private RiskLevel riskLevel;
+    /**
+     * The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue.
+     */
+    private RiskState riskState;
+    /**
+     * The riskType property
+     */
+    private RiskEventType riskType;
+    /**
+     * Source of the risk detection. For example, activeDirectory.
+     */
+    private String source;
+    /**
+     * Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue.
+     */
+    private TokenIssuerType tokenIssuerType;
+    /**
+     * Name of the user.
+     */
+    private String userDisplayName;
+    /**
+     * Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
+    private String userId;
+    /**
+     * The user principal name (UPN) of the user.
+     */
+    private String userPrincipalName;
+    /**
+     * Instantiates a new riskDetection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RiskDetection() {
         super();
-        this.setOdataType("#microsoft.graph.riskDetection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RiskDetection
+     * @return a riskDetection
      */
     @javax.annotation.Nonnull
     public static RiskDetection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -73,7 +112,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ActivityType getActivity() {
-        return this._activity;
+        return this.activity;
     }
     /**
      * Gets the activityDateTime property value. Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -81,7 +120,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
-        return this._activityDateTime;
+        return this.activityDateTime;
     }
     /**
      * Gets the additionalInfo property value. Additional information associated with the risk detection in JSON format.
@@ -89,7 +128,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAdditionalInfo() {
-        return this._additionalInfo;
+        return this.additionalInfo;
     }
     /**
      * Gets the correlationId property value. Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
@@ -97,7 +136,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCorrelationId() {
-        return this._correlationId;
+        return this.correlationId;
     }
     /**
      * Gets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -105,7 +144,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getDetectedDateTime() {
-        return this._detectedDateTime;
+        return this.detectedDateTime;
     }
     /**
      * Gets the detectionTimingType property value. Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue.
@@ -113,37 +152,36 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RiskDetectionTimingType getDetectionTimingType() {
-        return this._detectionTimingType;
+        return this.detectionTimingType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RiskDetection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getEnumValue(ActivityType.class)); });
-            this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("additionalInfo", (n) -> { currentObject.setAdditionalInfo(n.getStringValue()); });
-            this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
-            this.put("detectedDateTime", (n) -> { currentObject.setDetectedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("detectionTimingType", (n) -> { currentObject.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType.class)); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
-            this.put("requestId", (n) -> { currentObject.setRequestId(n.getStringValue()); });
-            this.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
-            this.put("riskEventType", (n) -> { currentObject.setRiskEventType(n.getStringValue()); });
-            this.put("riskLevel", (n) -> { currentObject.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
-            this.put("riskState", (n) -> { currentObject.setRiskState(n.getEnumValue(RiskState.class)); });
-            this.put("riskType", (n) -> { currentObject.setRiskType(n.getEnumValue(RiskEventType.class)); });
-            this.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
-            this.put("tokenIssuerType", (n) -> { currentObject.setTokenIssuerType(n.getEnumValue(TokenIssuerType.class)); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(ActivityType.class)); });
+        deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("additionalInfo", (n) -> { this.setAdditionalInfo(n.getStringValue()); });
+        deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
+        deserializerMap.put("detectedDateTime", (n) -> { this.setDetectedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("detectionTimingType", (n) -> { this.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType.class)); });
+        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestId", (n) -> { this.setRequestId(n.getStringValue()); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("riskEventType", (n) -> { this.setRiskEventType(n.getStringValue()); });
+        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState.class)); });
+        deserializerMap.put("riskType", (n) -> { this.setRiskType(n.getEnumValue(RiskEventType.class)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
+        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(TokenIssuerType.class)); });
+        deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddress property value. Provides the IP address of the client from where the risk occurred.
@@ -151,7 +189,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIpAddress() {
-        return this._ipAddress;
+        return this.ipAddress;
     }
     /**
      * Gets the lastUpdatedDateTime property value. Date and time that the risk detection was last updated.
@@ -159,7 +197,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this._lastUpdatedDateTime;
+        return this.lastUpdatedDateTime;
     }
     /**
      * Gets the location property value. Location of the sign-in.
@@ -167,7 +205,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SignInLocation getLocation() {
-        return this._location;
+        return this.location;
     }
     /**
      * Gets the requestId property value. Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
@@ -175,23 +213,23 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRequestId() {
-        return this._requestId;
+        return this.requestId;
     }
     /**
-     * Gets the riskDetail property value. Details of the detected risk. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * Gets the riskDetail property value. Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal , m365DAdminDismissedDetection. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
      * @return a riskDetail
      */
     @javax.annotation.Nullable
     public RiskDetail getRiskDetail() {
-        return this._riskDetail;
+        return this.riskDetail;
     }
     /**
-     * Gets the riskEventType property value. The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.  For more information about each value, see riskEventType values.
+     * Gets the riskEventType property value. The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, anomalousUserActivity, userReportedSuspiciousActivity.  For more information about each value, see riskEventType values.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getRiskEventType() {
-        return this._riskEventType;
+        return this.riskEventType;
     }
     /**
      * Gets the riskLevel property value. Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
@@ -199,7 +237,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RiskLevel getRiskLevel() {
-        return this._riskLevel;
+        return this.riskLevel;
     }
     /**
      * Gets the riskState property value. The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue.
@@ -207,7 +245,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RiskState getRiskState() {
-        return this._riskState;
+        return this.riskState;
     }
     /**
      * Gets the riskType property value. The riskType property
@@ -215,7 +253,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RiskEventType getRiskType() {
-        return this._riskType;
+        return this.riskType;
     }
     /**
      * Gets the source property value. Source of the risk detection. For example, activeDirectory.
@@ -223,7 +261,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSource() {
-        return this._source;
+        return this.source;
     }
     /**
      * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue.
@@ -231,7 +269,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TokenIssuerType getTokenIssuerType() {
-        return this._tokenIssuerType;
+        return this.tokenIssuerType;
     }
     /**
      * Gets the userDisplayName property value. Name of the user.
@@ -239,7 +277,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserDisplayName() {
-        return this._userDisplayName;
+        return this.userDisplayName;
     }
     /**
      * Gets the userId property value. Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -247,7 +285,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user.
@@ -255,13 +293,14 @@ public class RiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -291,159 +330,179 @@ public class RiskDetection extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final ActivityType value) {
-        this._activity = value;
+        this.activity = value;
     }
     /**
      * Sets the activityDateTime property value. Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._activityDateTime = value;
+        this.activityDateTime = value;
     }
     /**
      * Sets the additionalInfo property value. Additional information associated with the risk detection in JSON format.
      * @param value Value to set for the additionalInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalInfo(@javax.annotation.Nullable final String value) {
-        this._additionalInfo = value;
+        this.additionalInfo = value;
     }
     /**
      * Sets the correlationId property value. Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
      * @param value Value to set for the correlationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCorrelationId(@javax.annotation.Nullable final String value) {
-        this._correlationId = value;
+        this.correlationId = value;
     }
     /**
      * Sets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the detectedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._detectedDateTime = value;
+        this.detectedDateTime = value;
     }
     /**
      * Sets the detectionTimingType property value. Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      * @param value Value to set for the detectionTimingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionTimingType(@javax.annotation.Nullable final RiskDetectionTimingType value) {
-        this._detectionTimingType = value;
+        this.detectionTimingType = value;
     }
     /**
      * Sets the ipAddress property value. Provides the IP address of the client from where the risk occurred.
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
-        this._ipAddress = value;
+        this.ipAddress = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. Date and time that the risk detection was last updated.
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastUpdatedDateTime = value;
+        this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the location property value. Location of the sign-in.
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final SignInLocation value) {
-        this._location = value;
+        this.location = value;
     }
     /**
      * Sets the requestId property value. Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
      * @param value Value to set for the requestId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestId(@javax.annotation.Nullable final String value) {
-        this._requestId = value;
+        this.requestId = value;
     }
     /**
-     * Sets the riskDetail property value. Details of the detected risk. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * Sets the riskDetail property value. Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal , m365DAdminDismissedDetection. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
      * @param value Value to set for the riskDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskDetail(@javax.annotation.Nullable final RiskDetail value) {
-        this._riskDetail = value;
+        this.riskDetail = value;
     }
     /**
-     * Sets the riskEventType property value. The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.  For more information about each value, see riskEventType values.
+     * Sets the riskEventType property value. The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, anomalousUserActivity, userReportedSuspiciousActivity.  For more information about each value, see riskEventType values.
      * @param value Value to set for the riskEventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskEventType(@javax.annotation.Nullable final String value) {
-        this._riskEventType = value;
+        this.riskEventType = value;
     }
     /**
      * Sets the riskLevel property value. Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
      * @param value Value to set for the riskLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLevel(@javax.annotation.Nullable final RiskLevel value) {
-        this._riskLevel = value;
+        this.riskLevel = value;
     }
     /**
      * Sets the riskState property value. The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue.
      * @param value Value to set for the riskState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskState(@javax.annotation.Nullable final RiskState value) {
-        this._riskState = value;
+        this.riskState = value;
     }
     /**
      * Sets the riskType property value. The riskType property
      * @param value Value to set for the riskType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskType(@javax.annotation.Nullable final RiskEventType value) {
-        this._riskType = value;
+        this.riskType = value;
     }
     /**
      * Sets the source property value. Source of the risk detection. For example, activeDirectory.
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final String value) {
-        this._source = value;
+        this.source = value;
     }
     /**
      * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue.
      * @param value Value to set for the tokenIssuerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenIssuerType(@javax.annotation.Nullable final TokenIssuerType value) {
-        this._tokenIssuerType = value;
+        this.tokenIssuerType = value;
     }
     /**
      * Sets the userDisplayName property value. Name of the user.
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
-        this._userDisplayName = value;
+        this.userDisplayName = value;
     }
     /**
      * Sets the userId property value. Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) of the user.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

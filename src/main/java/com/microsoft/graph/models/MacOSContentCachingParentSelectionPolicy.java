@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Determines how content caches select a parent cache.
+ */
 public enum MacOSContentCachingParentSelectionPolicy implements ValuedEnum {
     /** Defaults to round-robin strategy. */
     NotConfigured("notConfigured"),

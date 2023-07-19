@@ -5,22 +5,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getMailTips method. */
 public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The EmailAddresses property */
-    private java.util.List<String> _emailAddresses;
-    /** The MailTipsOptions property */
-    private MailTipsType _mailTipsOptions;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The EmailAddresses property
+     */
+    private java.util.List<String> emailAddresses;
+    /**
+     * The MailTipsOptions property
+     */
+    private MailTipsType mailTipsOptions;
     /**
      * Instantiates a new getMailTipsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetMailTipsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -40,7 +45,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the emailAddresses property value. The EmailAddresses property
@@ -48,19 +53,18 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<String> getEmailAddresses() {
-        return this._emailAddresses;
+        return this.emailAddresses;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GetMailTipsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("emailAddresses", (n) -> { currentObject.setEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("mailTipsOptions", (n) -> { currentObject.setMailTipsOptions(n.getEnumValue(MailTipsType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("EmailAddresses", (n) -> { this.setEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("MailTipsOptions", (n) -> { this.setMailTipsOptions(n.getEnumValue(MailTipsType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the mailTipsOptions property value. The MailTipsOptions property
@@ -68,17 +72,18 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public MailTipsType getMailTipsOptions() {
-        return this._mailTipsOptions;
+        return this.mailTipsOptions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfPrimitiveValues("emailAddresses", this.getEmailAddresses());
-        writer.writeEnumValue("mailTipsOptions", this.getMailTipsOptions());
+        writer.writeCollectionOfPrimitiveValues("EmailAddresses", this.getEmailAddresses());
+        writer.writeEnumValue("MailTipsOptions", this.getMailTipsOptions());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -86,23 +91,26 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the emailAddresses property value. The EmailAddresses property
      * @param value Value to set for the EmailAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._emailAddresses = value;
+        this.emailAddresses = value;
     }
     /**
      * Sets the mailTipsOptions property value. The MailTipsOptions property
      * @param value Value to set for the MailTipsOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailTipsOptions(@javax.annotation.Nullable final MailTipsType value) {
-        this._mailTipsOptions = value;
+        this.mailTipsOptions = value;
     }
 }

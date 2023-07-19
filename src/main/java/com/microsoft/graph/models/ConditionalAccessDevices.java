@@ -4,32 +4,45 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set. */
-    private ConditionalAccessFilter _deviceFilter;
-    /** States excluded from the scope of the policy. Possible values: Compliant, DomainJoined. Cannot be set if deviceFIlter is set. */
-    private java.util.List<String> _excludeDevices;
-    /** The excludeDeviceStates property */
-    private java.util.List<String> _excludeDeviceStates;
-    /** States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFIlter is set. */
-    private java.util.List<String> _includeDevices;
-    /** The includeDeviceStates property */
-    private java.util.List<String> _includeDeviceStates;
-    /** The OdataType property */
-    private String _odataType;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
+     */
+    private ConditionalAccessFilter deviceFilter;
+    /**
+     * States excluded from the scope of the policy. Possible values: Compliant, DomainJoined. Cannot be set if deviceFIlter is set.
+     */
+    private java.util.List<String> excludeDevices;
+    /**
+     * The excludeDeviceStates property
+     */
+    private java.util.List<String> excludeDeviceStates;
+    /**
+     * States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFIlter is set.
+     */
+    private java.util.List<String> includeDevices;
+    /**
+     * The includeDeviceStates property
+     */
+    private java.util.List<String> includeDeviceStates;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
     /**
      * Instantiates a new conditionalAccessDevices and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessDevices() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessDevices");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +60,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
@@ -55,7 +68,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public ConditionalAccessFilter getDeviceFilter() {
-        return this._deviceFilter;
+        return this.deviceFilter;
     }
     /**
      * Gets the excludeDevices property value. States excluded from the scope of the policy. Possible values: Compliant, DomainJoined. Cannot be set if deviceFIlter is set.
@@ -63,7 +76,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public java.util.List<String> getExcludeDevices() {
-        return this._excludeDevices;
+        return this.excludeDevices;
     }
     /**
      * Gets the excludeDeviceStates property value. The excludeDeviceStates property
@@ -71,23 +84,22 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public java.util.List<String> getExcludeDeviceStates() {
-        return this._excludeDeviceStates;
+        return this.excludeDeviceStates;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessDevices currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("deviceFilter", (n) -> { currentObject.setDeviceFilter(n.getObjectValue(ConditionalAccessFilter::createFromDiscriminatorValue)); });
-            this.put("excludeDevices", (n) -> { currentObject.setExcludeDevices(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("excludeDeviceStates", (n) -> { currentObject.setExcludeDeviceStates(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeDevices", (n) -> { currentObject.setIncludeDevices(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeDeviceStates", (n) -> { currentObject.setIncludeDeviceStates(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("deviceFilter", (n) -> { this.setDeviceFilter(n.getObjectValue(ConditionalAccessFilter::createFromDiscriminatorValue)); });
+        deserializerMap.put("excludeDevices", (n) -> { this.setExcludeDevices(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("excludeDeviceStates", (n) -> { this.setExcludeDeviceStates(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeDevices", (n) -> { this.setIncludeDevices(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeDeviceStates", (n) -> { this.setIncludeDeviceStates(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includeDevices property value. States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFIlter is set.
@@ -95,7 +107,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIncludeDevices() {
-        return this._includeDevices;
+        return this.includeDevices;
     }
     /**
      * Gets the includeDeviceStates property value. The includeDeviceStates property
@@ -103,7 +115,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public java.util.List<String> getIncludeDeviceStates() {
-        return this._includeDeviceStates;
+        return this.includeDeviceStates;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -111,13 +123,14 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("deviceFilter", this.getDeviceFilter());
@@ -133,55 +146,62 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
      * @param value Value to set for the deviceFilter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceFilter(@javax.annotation.Nullable final ConditionalAccessFilter value) {
-        this._deviceFilter = value;
+        this.deviceFilter = value;
     }
     /**
      * Sets the excludeDevices property value. States excluded from the scope of the policy. Possible values: Compliant, DomainJoined. Cannot be set if deviceFIlter is set.
      * @param value Value to set for the excludeDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludeDevices(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._excludeDevices = value;
+        this.excludeDevices = value;
     }
     /**
      * Sets the excludeDeviceStates property value. The excludeDeviceStates property
      * @param value Value to set for the excludeDeviceStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludeDeviceStates(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._excludeDeviceStates = value;
+        this.excludeDeviceStates = value;
     }
     /**
      * Sets the includeDevices property value. States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFIlter is set.
      * @param value Value to set for the includeDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeDevices(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._includeDevices = value;
+        this.includeDevices = value;
     }
     /**
      * Sets the includeDeviceStates property value. The includeDeviceStates property
      * @param value Value to set for the includeDeviceStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeDeviceStates(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._includeDeviceStates = value;
+        this.includeDeviceStates = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

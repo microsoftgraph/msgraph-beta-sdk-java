@@ -4,36 +4,53 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharingLink implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The app the link is associated with. */
-    private Identity _application;
-    /** The configuratorUrl property */
-    private String _configuratorUrl;
-    /** The OdataType property */
-    private String _odataType;
-    /** If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint. */
-    private Boolean _preventsDownload;
-    /** The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant. */
-    private String _scope;
-    /** The type of the link created. */
-    private String _type;
-    /** For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage. */
-    private String _webHtml;
-    /** A URL that opens the item in the browser on the OneDrive website. */
-    private String _webUrl;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The app the link is associated with.
+     */
+    private Identity application;
+    /**
+     * The configuratorUrl property
+     */
+    private String configuratorUrl;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
+     */
+    private Boolean preventsDownload;
+    /**
+     * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
+     */
+    private String scope;
+    /**
+     * The type of the link created.
+     */
+    private String type;
+    /**
+     * For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
+     */
+    private String webHtml;
+    /**
+     * A URL that opens the item in the browser on the OneDrive website.
+     */
+    private String webUrl;
     /**
      * Instantiates a new sharingLink and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharingLink() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sharingLink");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +68,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the application property value. The app the link is associated with.
@@ -59,7 +76,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Identity getApplication() {
-        return this._application;
+        return this.application;
     }
     /**
      * Gets the configuratorUrl property value. The configuratorUrl property
@@ -67,25 +84,24 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getConfiguratorUrl() {
-        return this._configuratorUrl;
+        return this.configuratorUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharingLink currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("configuratorUrl", (n) -> { currentObject.setConfiguratorUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("preventsDownload", (n) -> { currentObject.setPreventsDownload(n.getBooleanValue()); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("webHtml", (n) -> { currentObject.setWebHtml(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        deserializerMap.put("application", (n) -> { this.setApplication(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("configuratorUrl", (n) -> { this.setConfiguratorUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("preventsDownload", (n) -> { this.setPreventsDownload(n.getBooleanValue()); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        deserializerMap.put("webHtml", (n) -> { this.setWebHtml(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +109,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the preventsDownload property value. If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
@@ -101,7 +117,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getPreventsDownload() {
-        return this._preventsDownload;
+        return this.preventsDownload;
     }
     /**
      * Gets the scope property value. The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
@@ -109,7 +125,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getScope() {
-        return this._scope;
+        return this.scope;
     }
     /**
      * Gets the type property value. The type of the link created.
@@ -117,7 +133,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Gets the webHtml property value. For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
@@ -125,7 +141,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getWebHtml() {
-        return this._webHtml;
+        return this.webHtml;
     }
     /**
      * Gets the webUrl property value. A URL that opens the item in the browser on the OneDrive website.
@@ -133,13 +149,14 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("application", this.getApplication());
@@ -157,71 +174,80 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the application property value. The app the link is associated with.
      * @param value Value to set for the application property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplication(@javax.annotation.Nullable final Identity value) {
-        this._application = value;
+        this.application = value;
     }
     /**
      * Sets the configuratorUrl property value. The configuratorUrl property
      * @param value Value to set for the configuratorUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfiguratorUrl(@javax.annotation.Nullable final String value) {
-        this._configuratorUrl = value;
+        this.configuratorUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the preventsDownload property value. If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
      * @param value Value to set for the preventsDownload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreventsDownload(@javax.annotation.Nullable final Boolean value) {
-        this._preventsDownload = value;
+        this.preventsDownload = value;
     }
     /**
      * Sets the scope property value. The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final String value) {
-        this._scope = value;
+        this.scope = value;
     }
     /**
      * Sets the type property value. The type of the link created.
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
     /**
      * Sets the webHtml property value. For embed links, this property contains the HTML code for an <iframe> element that will embed the item in a webpage.
      * @param value Value to set for the webHtml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebHtml(@javax.annotation.Nullable final String value) {
-        this._webHtml = value;
+        this.webHtml = value;
     }
     /**
      * Sets the webUrl property value. A URL that opens the item in the browser on the OneDrive website.
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

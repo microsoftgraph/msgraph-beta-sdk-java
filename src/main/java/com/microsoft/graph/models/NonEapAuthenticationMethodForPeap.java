@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Non-EAP methods for authentication when PEAP is the selected EAP type.
+ */
 public enum NonEapAuthenticationMethodForPeap implements ValuedEnum {
     /** None. */
     None("none"),

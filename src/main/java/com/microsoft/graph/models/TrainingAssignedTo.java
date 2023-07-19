@@ -1,0 +1,36 @@
+package com.microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
+
+public enum TrainingAssignedTo implements ValuedEnum {
+    None("none"),
+    AllUsers("allUsers"),
+    ClickedPayload("clickedPayload"),
+    Compromised("compromised"),
+    ReportedPhish("reportedPhish"),
+    ReadButNotClicked("readButNotClicked"),
+    DidNothing("didNothing"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    TrainingAssignedTo(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TrainingAssignedTo forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "allUsers": return AllUsers;
+            case "clickedPayload": return ClickedPayload;
+            case "compromised": return Compromised;
+            case "reportedPhish": return ReportedPhish;
+            case "readButNotClicked": return ReadButNotClicked;
+            case "didNothing": return DidNothing;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
+}

@@ -3,27 +3,42 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties, inherited properties and actions for Android Enterprise mobile app configurations.
+ */
 public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable {
-    /** Whether or not this AppConfig is an OEMConfig policy. */
-    private Boolean _appSupportsOemConfig;
-    /** Setting to specify whether to allow ConnectedApps experience for this app. */
-    private Boolean _connectedAppsEnabled;
-    /** Android Enterprise app configuration package id. */
-    private String _packageId;
-    /** Android Enterprise app configuration JSON payload. */
-    private String _payloadJson;
-    /** List of Android app permissions and corresponding permission actions. */
-    private java.util.List<AndroidPermissionAction> _permissionActions;
-    /** Android profile applicability */
-    private AndroidProfileApplicability _profileApplicability;
     /**
-     * Instantiates a new AndroidManagedStoreAppConfiguration and sets the default values.
+     * Whether or not this AppConfig is an OEMConfig policy.
+     */
+    private Boolean appSupportsOemConfig;
+    /**
+     * Setting to specify whether to allow ConnectedApps experience for this app.
+     */
+    private Boolean connectedAppsEnabled;
+    /**
+     * Android Enterprise app configuration package id.
+     */
+    private String packageId;
+    /**
+     * Android Enterprise app configuration JSON payload.
+     */
+    private String payloadJson;
+    /**
+     * List of Android app permissions and corresponding permission actions.
+     */
+    private java.util.List<AndroidPermissionAction> permissionActions;
+    /**
+     * Android profile applicability
+     */
+    private AndroidProfileApplicability profileApplicability;
+    /**
+     * Instantiates a new androidManagedStoreAppConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedStoreAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedStoreAppConfiguration");
@@ -31,7 +46,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidManagedStoreAppConfiguration
+     * @return a androidManagedStoreAppConfiguration
      */
     @javax.annotation.Nonnull
     public static AndroidManagedStoreAppConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +59,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      */
     @javax.annotation.Nullable
     public Boolean getAppSupportsOemConfig() {
-        return this._appSupportsOemConfig;
+        return this.appSupportsOemConfig;
     }
     /**
      * Gets the connectedAppsEnabled property value. Setting to specify whether to allow ConnectedApps experience for this app.
@@ -52,23 +67,22 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      */
     @javax.annotation.Nullable
     public Boolean getConnectedAppsEnabled() {
-        return this._connectedAppsEnabled;
+        return this.connectedAppsEnabled;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidManagedStoreAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appSupportsOemConfig", (n) -> { currentObject.setAppSupportsOemConfig(n.getBooleanValue()); });
-            this.put("connectedAppsEnabled", (n) -> { currentObject.setConnectedAppsEnabled(n.getBooleanValue()); });
-            this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
-            this.put("payloadJson", (n) -> { currentObject.setPayloadJson(n.getStringValue()); });
-            this.put("permissionActions", (n) -> { currentObject.setPermissionActions(n.getCollectionOfObjectValues(AndroidPermissionAction::createFromDiscriminatorValue)); });
-            this.put("profileApplicability", (n) -> { currentObject.setProfileApplicability(n.getEnumValue(AndroidProfileApplicability.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appSupportsOemConfig", (n) -> { this.setAppSupportsOemConfig(n.getBooleanValue()); });
+        deserializerMap.put("connectedAppsEnabled", (n) -> { this.setConnectedAppsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
+        deserializerMap.put("payloadJson", (n) -> { this.setPayloadJson(n.getStringValue()); });
+        deserializerMap.put("permissionActions", (n) -> { this.setPermissionActions(n.getCollectionOfObjectValues(AndroidPermissionAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("profileApplicability", (n) -> { this.setProfileApplicability(n.getEnumValue(AndroidProfileApplicability.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the packageId property value. Android Enterprise app configuration package id.
@@ -76,7 +90,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      */
     @javax.annotation.Nullable
     public String getPackageId() {
-        return this._packageId;
+        return this.packageId;
     }
     /**
      * Gets the payloadJson property value. Android Enterprise app configuration JSON payload.
@@ -84,7 +98,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      */
     @javax.annotation.Nullable
     public String getPayloadJson() {
-        return this._payloadJson;
+        return this.payloadJson;
     }
     /**
      * Gets the permissionActions property value. List of Android app permissions and corresponding permission actions.
@@ -92,7 +106,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      */
     @javax.annotation.Nullable
     public java.util.List<AndroidPermissionAction> getPermissionActions() {
-        return this._permissionActions;
+        return this.permissionActions;
     }
     /**
      * Gets the profileApplicability property value. Android profile applicability
@@ -100,13 +114,14 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      */
     @javax.annotation.Nullable
     public AndroidProfileApplicability getProfileApplicability() {
-        return this._profileApplicability;
+        return this.profileApplicability;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,47 +137,53 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the appSupportsOemConfig property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppSupportsOemConfig(@javax.annotation.Nullable final Boolean value) {
-        this._appSupportsOemConfig = value;
+        this.appSupportsOemConfig = value;
     }
     /**
      * Sets the connectedAppsEnabled property value. Setting to specify whether to allow ConnectedApps experience for this app.
      * @param value Value to set for the connectedAppsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectedAppsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._connectedAppsEnabled = value;
+        this.connectedAppsEnabled = value;
     }
     /**
      * Sets the packageId property value. Android Enterprise app configuration package id.
      * @param value Value to set for the packageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
-        this._packageId = value;
+        this.packageId = value;
     }
     /**
      * Sets the payloadJson property value. Android Enterprise app configuration JSON payload.
      * @param value Value to set for the payloadJson property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadJson(@javax.annotation.Nullable final String value) {
-        this._payloadJson = value;
+        this.payloadJson = value;
     }
     /**
      * Sets the permissionActions property value. List of Android app permissions and corresponding permission actions.
      * @param value Value to set for the permissionActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionActions(@javax.annotation.Nullable final java.util.List<AndroidPermissionAction> value) {
-        this._permissionActions = value;
+        this.permissionActions = value;
     }
     /**
      * Sets the profileApplicability property value. Android profile applicability
      * @param value Value to set for the profileApplicability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileApplicability(@javax.annotation.Nullable final AndroidProfileApplicability value) {
-        this._profileApplicability = value;
+        this.profileApplicability = value;
     }
 }

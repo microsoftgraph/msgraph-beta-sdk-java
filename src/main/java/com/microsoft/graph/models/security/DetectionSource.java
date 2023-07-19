@@ -3,7 +3,6 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum DetectionSource implements ValuedEnum {
     Unknown("unknown"),
     MicrosoftDefenderForEndpoint("microsoftDefenderForEndpoint"),
@@ -22,7 +21,8 @@ public enum DetectionSource implements ValuedEnum {
     MicrosoftDataLossPrevention("microsoftDataLossPrevention"),
     AppGovernancePolicy("appGovernancePolicy"),
     AppGovernanceDetection("appGovernanceDetection"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    MicrosoftDefenderForCloud("microsoftDefenderForCloud");
     public final String value;
     DetectionSource(final String value) {
         this.value = value;
@@ -51,6 +51,7 @@ public enum DetectionSource implements ValuedEnum {
             case "appGovernancePolicy": return AppGovernancePolicy;
             case "appGovernanceDetection": return AppGovernanceDetection;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "microsoftDefenderForCloud": return MicrosoftDefenderForCloud;
             default: return null;
         }
     }

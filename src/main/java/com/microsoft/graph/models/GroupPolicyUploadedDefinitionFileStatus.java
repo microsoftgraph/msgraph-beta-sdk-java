@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Type of Group Policy uploaded definition file status.
+ */
 public enum GroupPolicyUploadedDefinitionFileStatus implements ValuedEnum {
     /** Group Policy uploaded definition file invalid upload status. */
     None("none"),

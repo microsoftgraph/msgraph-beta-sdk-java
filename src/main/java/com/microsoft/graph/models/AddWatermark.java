@@ -3,17 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AddWatermark extends MarkContent implements Parsable {
-    /** The orientation property */
-    private PageOrientation _orientation;
     /**
-     * Instantiates a new AddWatermark and sets the default values.
+     * The orientation property
+     */
+    private PageOrientation orientation;
+    /**
+     * Instantiates a new addWatermark and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddWatermark() {
         super();
         this.setOdataType("#microsoft.graph.addWatermark");
@@ -21,7 +23,7 @@ public class AddWatermark extends MarkContent implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AddWatermark
+     * @return a addWatermark
      */
     @javax.annotation.Nonnull
     public static AddWatermark createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,14 +32,13 @@ public class AddWatermark extends MarkContent implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AddWatermark currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("orientation", (n) -> { currentObject.setOrientation(n.getEnumValue(PageOrientation.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("orientation", (n) -> { this.setOrientation(n.getEnumValue(PageOrientation.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the orientation property value. The orientation property
@@ -45,13 +46,14 @@ public class AddWatermark extends MarkContent implements Parsable {
      */
     @javax.annotation.Nullable
     public PageOrientation getOrientation() {
-        return this._orientation;
+        return this.orientation;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +64,8 @@ public class AddWatermark extends MarkContent implements Parsable {
      * @param value Value to set for the orientation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrientation(@javax.annotation.Nullable final PageOrientation value) {
-        this._orientation = value;
+        this.orientation = value;
     }
 }

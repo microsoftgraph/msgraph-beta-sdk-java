@@ -1,0 +1,26 @@
+package com.microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
+
+public enum PrivilegedAccessGroupMemberType implements ValuedEnum {
+    Direct("direct"),
+    Group("group"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    PrivilegedAccessGroupMemberType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PrivilegedAccessGroupMemberType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "direct": return Direct;
+            case "group": return Group;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
+}

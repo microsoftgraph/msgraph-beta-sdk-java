@@ -3,41 +3,64 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Encryption report per device */
+/**
+ * Encryption report per device
+ */
 public class ManagedDeviceEncryptionState extends Entity implements Parsable {
-    /** Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError. */
-    private AdvancedBitLockerState _advancedBitLockerStates;
-    /** Device name */
-    private String _deviceName;
-    /** Device type. */
-    private DeviceTypes _deviceType;
-    /** The encryptionPolicySettingState property */
-    private ComplianceStatus _encryptionPolicySettingState;
-    /** Encryption readiness state */
-    private EncryptionReadinessState _encryptionReadinessState;
-    /** Encryption state */
-    private EncryptionState _encryptionState;
-    /** FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled. */
-    private FileVaultState _fileVaultStates;
-    /** Operating system version of the device */
-    private String _osVersion;
-    /** Policy Details */
-    private java.util.List<EncryptionReportPolicyDetails> _policyDetails;
-    /** Device TPM Version */
-    private String _tpmSpecificationVersion;
-    /** User name */
-    private String _userPrincipalName;
+    /**
+     * Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
+     */
+    private AdvancedBitLockerState advancedBitLockerStates;
+    /**
+     * Device name
+     */
+    private String deviceName;
+    /**
+     * Device type.
+     */
+    private DeviceTypes deviceType;
+    /**
+     * The encryptionPolicySettingState property
+     */
+    private ComplianceStatus encryptionPolicySettingState;
+    /**
+     * Encryption readiness state
+     */
+    private EncryptionReadinessState encryptionReadinessState;
+    /**
+     * Encryption state
+     */
+    private EncryptionState encryptionState;
+    /**
+     * FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
+     */
+    private FileVaultState fileVaultStates;
+    /**
+     * Operating system version of the device
+     */
+    private String osVersion;
+    /**
+     * Policy Details
+     */
+    private java.util.List<EncryptionReportPolicyDetails> policyDetails;
+    /**
+     * Device TPM Version
+     */
+    private String tpmSpecificationVersion;
+    /**
+     * User name
+     */
+    private String userPrincipalName;
     /**
      * Instantiates a new managedDeviceEncryptionState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceEncryptionState() {
         super();
-        this.setOdataType("#microsoft.graph.managedDeviceEncryptionState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,7 +78,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AdvancedBitLockerState getAdvancedBitLockerStates() {
-        return this._advancedBitLockerStates;
+        return this.advancedBitLockerStates;
     }
     /**
      * Gets the deviceName property value. Device name
@@ -63,7 +86,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * Gets the deviceType property value. Device type.
@@ -71,7 +94,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceTypes getDeviceType() {
-        return this._deviceType;
+        return this.deviceType;
     }
     /**
      * Gets the encryptionPolicySettingState property value. The encryptionPolicySettingState property
@@ -79,7 +102,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ComplianceStatus getEncryptionPolicySettingState() {
-        return this._encryptionPolicySettingState;
+        return this.encryptionPolicySettingState;
     }
     /**
      * Gets the encryptionReadinessState property value. Encryption readiness state
@@ -87,7 +110,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EncryptionReadinessState getEncryptionReadinessState() {
-        return this._encryptionReadinessState;
+        return this.encryptionReadinessState;
     }
     /**
      * Gets the encryptionState property value. Encryption state
@@ -95,28 +118,27 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public EncryptionState getEncryptionState() {
-        return this._encryptionState;
+        return this.encryptionState;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedDeviceEncryptionState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("advancedBitLockerStates", (n) -> { currentObject.setAdvancedBitLockerStates(n.getEnumValue(AdvancedBitLockerState.class)); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getEnumValue(DeviceTypes.class)); });
-            this.put("encryptionPolicySettingState", (n) -> { currentObject.setEncryptionPolicySettingState(n.getEnumValue(ComplianceStatus.class)); });
-            this.put("encryptionReadinessState", (n) -> { currentObject.setEncryptionReadinessState(n.getEnumValue(EncryptionReadinessState.class)); });
-            this.put("encryptionState", (n) -> { currentObject.setEncryptionState(n.getEnumValue(EncryptionState.class)); });
-            this.put("fileVaultStates", (n) -> { currentObject.setFileVaultStates(n.getEnumValue(FileVaultState.class)); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("policyDetails", (n) -> { currentObject.setPolicyDetails(n.getCollectionOfObjectValues(EncryptionReportPolicyDetails::createFromDiscriminatorValue)); });
-            this.put("tpmSpecificationVersion", (n) -> { currentObject.setTpmSpecificationVersion(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("advancedBitLockerStates", (n) -> { this.setAdvancedBitLockerStates(n.getEnumValue(AdvancedBitLockerState.class)); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("deviceType", (n) -> { this.setDeviceType(n.getEnumValue(DeviceTypes.class)); });
+        deserializerMap.put("encryptionPolicySettingState", (n) -> { this.setEncryptionPolicySettingState(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("encryptionReadinessState", (n) -> { this.setEncryptionReadinessState(n.getEnumValue(EncryptionReadinessState.class)); });
+        deserializerMap.put("encryptionState", (n) -> { this.setEncryptionState(n.getEnumValue(EncryptionState.class)); });
+        deserializerMap.put("fileVaultStates", (n) -> { this.setFileVaultStates(n.getEnumValue(FileVaultState.class)); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("policyDetails", (n) -> { this.setPolicyDetails(n.getCollectionOfObjectValues(EncryptionReportPolicyDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("tpmSpecificationVersion", (n) -> { this.setTpmSpecificationVersion(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileVaultStates property value. FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
@@ -124,7 +146,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public FileVaultState getFileVaultStates() {
-        return this._fileVaultStates;
+        return this.fileVaultStates;
     }
     /**
      * Gets the osVersion property value. Operating system version of the device
@@ -132,7 +154,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOsVersion() {
-        return this._osVersion;
+        return this.osVersion;
     }
     /**
      * Gets the policyDetails property value. Policy Details
@@ -140,7 +162,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EncryptionReportPolicyDetails> getPolicyDetails() {
-        return this._policyDetails;
+        return this.policyDetails;
     }
     /**
      * Gets the tpmSpecificationVersion property value. Device TPM Version
@@ -148,7 +170,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTpmSpecificationVersion() {
-        return this._tpmSpecificationVersion;
+        return this.tpmSpecificationVersion;
     }
     /**
      * Gets the userPrincipalName property value. User name
@@ -156,13 +178,14 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,87 +206,98 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * @param value Value to set for the advancedBitLockerStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedBitLockerStates(@javax.annotation.Nullable final AdvancedBitLockerState value) {
-        this._advancedBitLockerStates = value;
+        this.advancedBitLockerStates = value;
     }
     /**
      * Sets the deviceName property value. Device name
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the deviceType property value. Device type.
      * @param value Value to set for the deviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceType(@javax.annotation.Nullable final DeviceTypes value) {
-        this._deviceType = value;
+        this.deviceType = value;
     }
     /**
      * Sets the encryptionPolicySettingState property value. The encryptionPolicySettingState property
      * @param value Value to set for the encryptionPolicySettingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionPolicySettingState(@javax.annotation.Nullable final ComplianceStatus value) {
-        this._encryptionPolicySettingState = value;
+        this.encryptionPolicySettingState = value;
     }
     /**
      * Sets the encryptionReadinessState property value. Encryption readiness state
      * @param value Value to set for the encryptionReadinessState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionReadinessState(@javax.annotation.Nullable final EncryptionReadinessState value) {
-        this._encryptionReadinessState = value;
+        this.encryptionReadinessState = value;
     }
     /**
      * Sets the encryptionState property value. Encryption state
      * @param value Value to set for the encryptionState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionState(@javax.annotation.Nullable final EncryptionState value) {
-        this._encryptionState = value;
+        this.encryptionState = value;
     }
     /**
      * Sets the fileVaultStates property value. FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
      * @param value Value to set for the fileVaultStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultStates(@javax.annotation.Nullable final FileVaultState value) {
-        this._fileVaultStates = value;
+        this.fileVaultStates = value;
     }
     /**
      * Sets the osVersion property value. Operating system version of the device
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
-        this._osVersion = value;
+        this.osVersion = value;
     }
     /**
      * Sets the policyDetails property value. Policy Details
      * @param value Value to set for the policyDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyDetails(@javax.annotation.Nullable final java.util.List<EncryptionReportPolicyDetails> value) {
-        this._policyDetails = value;
+        this.policyDetails = value;
     }
     /**
      * Sets the tpmSpecificationVersion property value. Device TPM Version
      * @param value Value to set for the tpmSpecificationVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTpmSpecificationVersion(@javax.annotation.Nullable final String value) {
-        this._tpmSpecificationVersion = value;
+        this.tpmSpecificationVersion = value;
     }
     /**
      * Sets the userPrincipalName property value. User name
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

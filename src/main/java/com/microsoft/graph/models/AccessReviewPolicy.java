@@ -3,24 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewPolicy extends Entity implements Parsable {
-    /** Description for this policy. Read-only. */
-    private String _description;
-    /** Display name for this policy. Read-only. */
-    private String _displayName;
-    /** If true, group owners can create and manage access reviews on groups they own. */
-    private Boolean _isGroupOwnerManagementEnabled;
+    /**
+     * Description for this policy. Read-only.
+     */
+    private String description;
+    /**
+     * Display name for this policy. Read-only.
+     */
+    private String displayName;
+    /**
+     * If true, group owners can create and manage access reviews on groups they own.
+     */
+    private Boolean isGroupOwnerManagementEnabled;
     /**
      * Instantiates a new accessReviewPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.accessReviewPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,7 +43,7 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Display name for this policy. Read-only.
@@ -46,20 +51,19 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isGroupOwnerManagementEnabled", (n) -> { currentObject.setIsGroupOwnerManagementEnabled(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isGroupOwnerManagementEnabled", (n) -> { this.setIsGroupOwnerManagementEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isGroupOwnerManagementEnabled property value. If true, group owners can create and manage access reviews on groups they own.
@@ -67,13 +71,14 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsGroupOwnerManagementEnabled() {
-        return this._isGroupOwnerManagementEnabled;
+        return this.isGroupOwnerManagementEnabled;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +91,26 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Display name for this policy. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the isGroupOwnerManagementEnabled property value. If true, group owners can create and manage access reviews on groups they own.
      * @param value Value to set for the isGroupOwnerManagementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsGroupOwnerManagementEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isGroupOwnerManagementEnabled = value;
+        this.isGroupOwnerManagementEnabled = value;
     }
 }

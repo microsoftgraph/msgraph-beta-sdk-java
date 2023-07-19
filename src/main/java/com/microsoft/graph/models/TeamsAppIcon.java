@@ -3,22 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsAppIcon extends Entity implements Parsable {
-    /** The contents of the app icon if the icon is hosted within the Teams infrastructure. */
-    private TeamworkHostedContent _hostedContent;
-    /** The web URL that can be used for downloading the image. */
-    private String _webUrl;
+    /**
+     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
+     */
+    private TeamworkHostedContent hostedContent;
+    /**
+     * The web URL that can be used for downloading the image.
+     */
+    private String webUrl;
     /**
      * Instantiates a new teamsAppIcon and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsAppIcon() {
         super();
-        this.setOdataType("#microsoft.graph.teamsAppIcon");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +35,14 @@ public class TeamsAppIcon extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamsAppIcon currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("hostedContent", (n) -> { currentObject.setHostedContent(n.getObjectValue(TeamworkHostedContent::createFromDiscriminatorValue)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("hostedContent", (n) -> { this.setHostedContent(n.getObjectValue(TeamworkHostedContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hostedContent property value. The contents of the app icon if the icon is hosted within the Teams infrastructure.
@@ -48,7 +50,7 @@ public class TeamsAppIcon extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamworkHostedContent getHostedContent() {
-        return this._hostedContent;
+        return this.hostedContent;
     }
     /**
      * Gets the webUrl property value. The web URL that can be used for downloading the image.
@@ -56,13 +58,14 @@ public class TeamsAppIcon extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebUrl() {
-        return this._webUrl;
+        return this.webUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +77,17 @@ public class TeamsAppIcon extends Entity implements Parsable {
      * @param value Value to set for the hostedContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostedContent(@javax.annotation.Nullable final TeamworkHostedContent value) {
-        this._hostedContent = value;
+        this.hostedContent = value;
     }
     /**
      * Sets the webUrl property value. The web URL that can be used for downloading the image.
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
-        this._webUrl = value;
+        this.webUrl = value;
     }
 }

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Describes the OfficeSuiteApp file format types that can be selected.
+ */
 public enum OfficeSuiteDefaultFileFormatType implements ValuedEnum {
     /** No file format selected */
     NotConfigured("notConfigured"),

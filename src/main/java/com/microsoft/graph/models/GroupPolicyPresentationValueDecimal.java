@@ -3,25 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The entity represents an unsigned integer value of a decimal text box presentation on a policy definition.
+ */
 public class GroupPolicyPresentationValueDecimal extends GroupPolicyPresentationValue implements Parsable {
-    /** An unsigned integer value for the associated presentation. */
-    private Long _value;
     /**
-     * Instantiates a new GroupPolicyPresentationValueDecimal and sets the default values.
+     * An unsigned integer value for the associated presentation.
+     */
+    private Long value;
+    /**
+     * Instantiates a new groupPolicyPresentationValueDecimal and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationValueDecimal() {
         super();
-        this.setOdataType("#microsoft.graph.groupPolicyPresentationValueDecimal");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyPresentationValueDecimal
+     * @return a groupPolicyPresentationValueDecimal
      */
     @javax.annotation.Nonnull
     public static GroupPolicyPresentationValueDecimal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,14 +34,13 @@ public class GroupPolicyPresentationValueDecimal extends GroupPolicyPresentation
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationValueDecimal currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getLongValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { this.setValue(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. An unsigned integer value for the associated presentation.
@@ -45,13 +48,14 @@ public class GroupPolicyPresentationValueDecimal extends GroupPolicyPresentation
      */
     @javax.annotation.Nullable
     public Long getValue() {
-        return this._value;
+        return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +66,8 @@ public class GroupPolicyPresentationValueDecimal extends GroupPolicyPresentation
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Long value) {
-        this._value = value;
+        this.value = value;
     }
 }

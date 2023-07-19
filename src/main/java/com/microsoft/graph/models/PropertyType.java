@@ -3,13 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum PropertyType implements ValuedEnum {
     String("string"),
     Int64("int64"),
-    Double_escaped("double_escaped"),
+    Double("double"),
     DateTime("dateTime"),
-    Boolean_escaped("boolean_escaped"),
+    Boolean("boolean"),
     StringCollection("stringCollection"),
     Int64Collection("int64Collection"),
     DoubleCollection("doubleCollection"),
@@ -26,9 +25,9 @@ public enum PropertyType implements ValuedEnum {
         switch(searchValue) {
             case "string": return String;
             case "int64": return Int64;
-            case "double": return Double_escaped;
+            case "double": return Double;
             case "dateTime": return DateTime;
-            case "boolean": return Boolean_escaped;
+            case "boolean": return Boolean;
             case "stringCollection": return StringCollection;
             case "int64Collection": return Int64Collection;
             case "doubleCollection": return DoubleCollection;

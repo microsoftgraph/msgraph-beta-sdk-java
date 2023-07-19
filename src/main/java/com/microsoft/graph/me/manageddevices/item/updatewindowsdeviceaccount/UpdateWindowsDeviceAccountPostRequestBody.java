@@ -5,20 +5,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the updateWindowsDeviceAccount method. */
 public class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The updateWindowsDeviceAccountActionParameter property */
-    private UpdateWindowsDeviceAccountActionParameter _updateWindowsDeviceAccountActionParameter;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The updateWindowsDeviceAccountActionParameter property
+     */
+    private UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter;
     /**
      * Instantiates a new updateWindowsDeviceAccountPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateWindowsDeviceAccountPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,18 +41,17 @@ public class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalData
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdateWindowsDeviceAccountPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("updateWindowsDeviceAccountActionParameter", (n) -> { currentObject.setUpdateWindowsDeviceAccountActionParameter(n.getObjectValue(UpdateWindowsDeviceAccountActionParameter::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("updateWindowsDeviceAccountActionParameter", (n) -> { this.setUpdateWindowsDeviceAccountActionParameter(n.getObjectValue(UpdateWindowsDeviceAccountActionParameter::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the updateWindowsDeviceAccountActionParameter property value. The updateWindowsDeviceAccountActionParameter property
@@ -57,13 +59,14 @@ public class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalData
      */
     @javax.annotation.Nullable
     public UpdateWindowsDeviceAccountActionParameter getUpdateWindowsDeviceAccountActionParameter() {
-        return this._updateWindowsDeviceAccountActionParameter;
+        return this.updateWindowsDeviceAccountActionParameter;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("updateWindowsDeviceAccountActionParameter", this.getUpdateWindowsDeviceAccountActionParameter());
@@ -74,15 +77,17 @@ public class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalData
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the updateWindowsDeviceAccountActionParameter property value. The updateWindowsDeviceAccountActionParameter property
      * @param value Value to set for the updateWindowsDeviceAccountActionParameter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateWindowsDeviceAccountActionParameter(@javax.annotation.Nullable final UpdateWindowsDeviceAccountActionParameter value) {
-        this._updateWindowsDeviceAccountActionParameter = value;
+        this.updateWindowsDeviceAccountActionParameter = value;
     }
 }

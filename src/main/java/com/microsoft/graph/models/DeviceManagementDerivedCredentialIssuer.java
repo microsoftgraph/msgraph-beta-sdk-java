@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Supported values for the derived credential issuer.
+ */
 public enum DeviceManagementDerivedCredentialIssuer implements ValuedEnum {
     /** Intercede */
     Intercede("intercede"),

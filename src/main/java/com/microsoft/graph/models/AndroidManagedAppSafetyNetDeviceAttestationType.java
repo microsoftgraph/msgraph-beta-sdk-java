@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
+ */
 public enum AndroidManagedAppSafetyNetDeviceAttestationType implements ValuedEnum {
     /** no requirement set */
     None("none"),

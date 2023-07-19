@@ -3,16 +3,18 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the validateComplianceScript method. */
+/**
+ * Data types for rules.
+ */
 public enum DeviceComplianceScriptRuleDataType implements ValuedEnum {
     /** None data type. */
     None("none"),
     /** Boolean data type. */
-    Boolean_escaped("boolean_escaped"),
+    Boolean("boolean"),
     /** Int64 data type. */
     Int64("int64"),
     /** Double data type. */
-    Double_escaped("double_escaped"),
+    Double("double"),
     /** String data type. */
     String("string"),
     /** DateTime data type. */
@@ -46,9 +48,9 @@ public enum DeviceComplianceScriptRuleDataType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;
-            case "boolean": return Boolean_escaped;
+            case "boolean": return Boolean;
             case "int64": return Int64;
-            case "double": return Double_escaped;
+            case "double": return Double;
             case "string": return String;
             case "dateTime": return DateTime;
             case "version": return Version;

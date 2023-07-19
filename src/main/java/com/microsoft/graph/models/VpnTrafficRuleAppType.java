@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Indicates the type of app that a VPN traffic rule is associated with.
+ */
 public enum VpnTrafficRuleAppType implements ValuedEnum {
     /** The traffic rule is not associated with an app. */
     None("none"),

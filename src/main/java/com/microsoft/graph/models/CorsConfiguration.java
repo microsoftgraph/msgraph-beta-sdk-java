@@ -4,32 +4,45 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CorsConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The request headers that the origin domain may specify on the CORS request. The wildcard character * indicates that any header beginning with the specified prefix is allowed. */
-    private java.util.List<String> _allowedHeaders;
-    /** The HTTP request methods that the origin domain may use for a CORS request. */
-    private java.util.List<String> _allowedMethods;
-    /** The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user age sends to the service. */
-    private java.util.List<String> _allowedOrigins;
-    /** The maximum amount of time that a browser should cache the response to the preflight OPTIONS request. */
-    private Integer _maxAgeInSeconds;
-    /** The OdataType property */
-    private String _odataType;
-    /** Resource within the application segment for which CORS permissions are granted. / grants permission for whole app segment. */
-    private String _resource;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The request headers that the origin domain may specify on the CORS request. The wildcard character * indicates that any header beginning with the specified prefix is allowed.
+     */
+    private java.util.List<String> allowedHeaders;
+    /**
+     * The HTTP request methods that the origin domain may use for a CORS request.
+     */
+    private java.util.List<String> allowedMethods;
+    /**
+     * The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user age sends to the service.
+     */
+    private java.util.List<String> allowedOrigins;
+    /**
+     * The maximum amount of time that a browser should cache the response to the preflight OPTIONS request.
+     */
+    private Integer maxAgeInSeconds;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Resource within the application segment for which CORS permissions are granted. / grants permission for whole app segment.
+     */
+    private String resource;
     /**
      * Instantiates a new corsConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CorsConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.corsConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +60,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the allowedHeaders property value. The request headers that the origin domain may specify on the CORS request. The wildcard character * indicates that any header beginning with the specified prefix is allowed.
@@ -55,7 +68,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAllowedHeaders() {
-        return this._allowedHeaders;
+        return this.allowedHeaders;
     }
     /**
      * Gets the allowedMethods property value. The HTTP request methods that the origin domain may use for a CORS request.
@@ -63,7 +76,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAllowedMethods() {
-        return this._allowedMethods;
+        return this.allowedMethods;
     }
     /**
      * Gets the allowedOrigins property value. The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user age sends to the service.
@@ -71,23 +84,22 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAllowedOrigins() {
-        return this._allowedOrigins;
+        return this.allowedOrigins;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CorsConfiguration currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("allowedHeaders", (n) -> { currentObject.setAllowedHeaders(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("allowedMethods", (n) -> { currentObject.setAllowedMethods(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("allowedOrigins", (n) -> { currentObject.setAllowedOrigins(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("maxAgeInSeconds", (n) -> { currentObject.setMaxAgeInSeconds(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("allowedHeaders", (n) -> { this.setAllowedHeaders(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("allowedMethods", (n) -> { this.setAllowedMethods(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("allowedOrigins", (n) -> { this.setAllowedOrigins(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("maxAgeInSeconds", (n) -> { this.setMaxAgeInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("resource", (n) -> { this.setResource(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maxAgeInSeconds property value. The maximum amount of time that a browser should cache the response to the preflight OPTIONS request.
@@ -95,7 +107,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMaxAgeInSeconds() {
-        return this._maxAgeInSeconds;
+        return this.maxAgeInSeconds;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -103,7 +115,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the resource property value. Resource within the application segment for which CORS permissions are granted. / grants permission for whole app segment.
@@ -111,13 +123,14 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getResource() {
-        return this._resource;
+        return this.resource;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("allowedHeaders", this.getAllowedHeaders());
@@ -133,55 +146,62 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the allowedHeaders property value. The request headers that the origin domain may specify on the CORS request. The wildcard character * indicates that any header beginning with the specified prefix is allowed.
      * @param value Value to set for the allowedHeaders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedHeaders(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._allowedHeaders = value;
+        this.allowedHeaders = value;
     }
     /**
      * Sets the allowedMethods property value. The HTTP request methods that the origin domain may use for a CORS request.
      * @param value Value to set for the allowedMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedMethods(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._allowedMethods = value;
+        this.allowedMethods = value;
     }
     /**
      * Sets the allowedOrigins property value. The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user age sends to the service.
      * @param value Value to set for the allowedOrigins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedOrigins(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._allowedOrigins = value;
+        this.allowedOrigins = value;
     }
     /**
      * Sets the maxAgeInSeconds property value. The maximum amount of time that a browser should cache the response to the preflight OPTIONS request.
      * @param value Value to set for the maxAgeInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxAgeInSeconds(@javax.annotation.Nullable final Integer value) {
-        this._maxAgeInSeconds = value;
+        this.maxAgeInSeconds = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the resource property value. Resource within the application segment for which CORS permissions are granted. / grants permission for whole app segment.
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final String value) {
-        this._resource = value;
+        this.resource = value;
     }
 }

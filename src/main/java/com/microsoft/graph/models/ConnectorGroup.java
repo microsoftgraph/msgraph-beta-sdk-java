@@ -3,30 +3,41 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConnectorGroup extends Entity implements Parsable {
-    /** The applications property */
-    private java.util.List<Application> _applications;
-    /** The connectorGroupType property */
-    private ConnectorGroupType _connectorGroupType;
-    /** Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only. */
-    private Boolean _isDefault;
-    /** The members property */
-    private java.util.List<Connector> _members;
-    /** The name associated with the connectorGroup. */
-    private String _name;
-    /** The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue. */
-    private ConnectorGroupRegion _region;
+    /**
+     * The applications property
+     */
+    private java.util.List<Application> applications;
+    /**
+     * The connectorGroupType property
+     */
+    private ConnectorGroupType connectorGroupType;
+    /**
+     * Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
+     */
+    private Boolean isDefault;
+    /**
+     * The members property
+     */
+    private java.util.List<Connector> members;
+    /**
+     * The name associated with the connectorGroup.
+     */
+    private String name;
+    /**
+     * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue.
+     */
+    private ConnectorGroupRegion region;
     /**
      * Instantiates a new connectorGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConnectorGroup() {
         super();
-        this.setOdataType("#microsoft.graph.connectorGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +55,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Application> getApplications() {
-        return this._applications;
+        return this.applications;
     }
     /**
      * Gets the connectorGroupType property value. The connectorGroupType property
@@ -52,23 +63,22 @@ public class ConnectorGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ConnectorGroupType getConnectorGroupType() {
-        return this._connectorGroupType;
+        return this.connectorGroupType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConnectorGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applications", (n) -> { currentObject.setApplications(n.getCollectionOfObjectValues(Application::createFromDiscriminatorValue)); });
-            this.put("connectorGroupType", (n) -> { currentObject.setConnectorGroupType(n.getEnumValue(ConnectorGroupType.class)); });
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(Connector::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("region", (n) -> { currentObject.setRegion(n.getEnumValue(ConnectorGroupRegion.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applications", (n) -> { this.setApplications(n.getCollectionOfObjectValues(Application::createFromDiscriminatorValue)); });
+        deserializerMap.put("connectorGroupType", (n) -> { this.setConnectorGroupType(n.getEnumValue(ConnectorGroupType.class)); });
+        deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(Connector::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("region", (n) -> { this.setRegion(n.getEnumValue(ConnectorGroupRegion.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefault property value. Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
@@ -76,7 +86,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDefault() {
-        return this._isDefault;
+        return this.isDefault;
     }
     /**
      * Gets the members property value. The members property
@@ -84,7 +94,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Connector> getMembers() {
-        return this._members;
+        return this.members;
     }
     /**
      * Gets the name property value. The name associated with the connectorGroup.
@@ -92,7 +102,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the region property value. The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue.
@@ -100,13 +110,14 @@ public class ConnectorGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ConnectorGroupRegion getRegion() {
-        return this._region;
+        return this.region;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,47 +133,53 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the applications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplications(@javax.annotation.Nullable final java.util.List<Application> value) {
-        this._applications = value;
+        this.applications = value;
     }
     /**
      * Sets the connectorGroupType property value. The connectorGroupType property
      * @param value Value to set for the connectorGroupType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectorGroupType(@javax.annotation.Nullable final ConnectorGroupType value) {
-        this._connectorGroupType = value;
+        this.connectorGroupType = value;
     }
     /**
      * Sets the isDefault property value. Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isDefault = value;
+        this.isDefault = value;
     }
     /**
      * Sets the members property value. The members property
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<Connector> value) {
-        this._members = value;
+        this.members = value;
     }
     /**
      * Sets the name property value. The name associated with the connectorGroup.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the region property value. The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue.
      * @param value Value to set for the region property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegion(@javax.annotation.Nullable final ConnectorGroupRegion value) {
-        this._region = value;
+        this.region = value;
     }
 }

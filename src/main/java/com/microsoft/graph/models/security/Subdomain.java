@@ -1,0 +1,95 @@
+package com.microsoft.graph.models.security;
+
+import com.microsoft.graph.models.Entity;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class Subdomain extends Entity implements Parsable {
+    /**
+     * The first date and time when Microsoft Defender Threat Intelligence observed the subdomain. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime firstSeenDateTime;
+    /**
+     * The host property
+     */
+    private Host host;
+    /**
+     * Instantiates a new subdomain and sets the default values.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public Subdomain() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a subdomain
+     */
+    @javax.annotation.Nonnull
+    public static Subdomain createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new Subdomain();
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("host", (n) -> { this.setHost(n.getObjectValue(Host::createFromDiscriminatorValue)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed the subdomain. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getFirstSeenDateTime() {
+        return this.firstSeenDateTime;
+    }
+    /**
+     * Gets the host property value. The host property
+     * @return a host
+     */
+    @javax.annotation.Nullable
+    public Host getHost() {
+        return this.host;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
+        writer.writeObjectValue("host", this.getHost());
+    }
+    /**
+     * Sets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed the subdomain. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the firstSeenDateTime property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this.firstSeenDateTime = value;
+    }
+    /**
+     * Sets the host property value. The host property
+     * @param value Value to set for the host property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setHost(@javax.annotation.Nullable final Host value) {
+        this.host = value;
+    }
+}

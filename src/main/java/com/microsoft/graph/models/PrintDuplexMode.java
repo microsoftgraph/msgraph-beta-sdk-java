@@ -3,11 +3,11 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum PrintDuplexMode implements ValuedEnum {
     FlipOnLongEdge("flipOnLongEdge"),
     FlipOnShortEdge("flipOnShortEdge"),
-    OneSided("oneSided");
+    OneSided("oneSided"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     PrintDuplexMode(final String value) {
         this.value = value;
@@ -21,6 +21,7 @@ public enum PrintDuplexMode implements ValuedEnum {
             case "flipOnLongEdge": return FlipOnLongEdge;
             case "flipOnShortEdge": return FlipOnShortEdge;
             case "oneSided": return OneSided;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

@@ -1,45 +1,61 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.RiskyUserHistoryItem;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RiskyUser extends Entity implements Parsable {
-    /** The history property */
-    private java.util.List<RiskyUserHistoryItem> _history;
-    /** Indicates whether the user is deleted. Possible values are: true, false. */
-    private Boolean _isDeleted;
-    /** Indicates whether a user's risky state is being processed by the backend. */
-    private Boolean _isProcessing;
-    /** The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. */
-    private RiskDetail _riskDetail;
-    /** The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _riskLastUpdatedDateTime;
-    /** Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue. */
-    private RiskLevel _riskLevel;
-    /** State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. */
-    private RiskState _riskState;
-    /** Risky user display name. */
-    private String _userDisplayName;
-    /** Risky user principal name. */
-    private String _userPrincipalName;
     /**
-     * Instantiates a new RiskyUser and sets the default values.
+     * The history property
+     */
+    private java.util.List<RiskyUserHistoryItem> history;
+    /**
+     * Indicates whether the user is deleted. Possible values are: true, false.
+     */
+    private Boolean isDeleted;
+    /**
+     * Indicates whether a user's risky state is being processed by the backend.
+     */
+    private Boolean isProcessing;
+    /**
+     * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     */
+    private RiskDetail riskDetail;
+    /**
+     * The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime riskLastUpdatedDateTime;
+    /**
+     * Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
+     */
+    private RiskLevel riskLevel;
+    /**
+     * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     */
+    private RiskState riskState;
+    /**
+     * Risky user display name.
+     */
+    private String userDisplayName;
+    /**
+     * Risky user principal name.
+     */
+    private String userPrincipalName;
+    /**
+     * Instantiates a new riskyUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RiskyUser() {
         super();
-        this.setOdataType("#microsoft.graph.riskyUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RiskyUser
+     * @return a riskyUser
      */
     @javax.annotation.Nonnull
     public static RiskyUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -55,22 +71,21 @@ public class RiskyUser extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RiskyUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(RiskyUserHistoryItem::createFromDiscriminatorValue)); });
-            this.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
-            this.put("isProcessing", (n) -> { currentObject.setIsProcessing(n.getBooleanValue()); });
-            this.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
-            this.put("riskLastUpdatedDateTime", (n) -> { currentObject.setRiskLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("riskLevel", (n) -> { currentObject.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
-            this.put("riskState", (n) -> { currentObject.setRiskState(n.getEnumValue(RiskState.class)); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(RiskyUserHistoryItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isDeleted", (n) -> { this.setIsDeleted(n.getBooleanValue()); });
+        deserializerMap.put("isProcessing", (n) -> { this.setIsProcessing(n.getBooleanValue()); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("riskLastUpdatedDateTime", (n) -> { this.setRiskLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState.class)); });
+        deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the history property value. The history property
@@ -78,7 +93,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RiskyUserHistoryItem> getHistory() {
-        return this._history;
+        return this.history;
     }
     /**
      * Gets the isDeleted property value. Indicates whether the user is deleted. Possible values are: true, false.
@@ -86,7 +101,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDeleted() {
-        return this._isDeleted;
+        return this.isDeleted;
     }
     /**
      * Gets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
@@ -94,7 +109,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsProcessing() {
-        return this._isProcessing;
+        return this.isProcessing;
     }
     /**
      * Gets the riskDetail property value. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
@@ -102,7 +117,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RiskDetail getRiskDetail() {
-        return this._riskDetail;
+        return this.riskDetail;
     }
     /**
      * Gets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -110,7 +125,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getRiskLastUpdatedDateTime() {
-        return this._riskLastUpdatedDateTime;
+        return this.riskLastUpdatedDateTime;
     }
     /**
      * Gets the riskLevel property value. Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
@@ -118,7 +133,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RiskLevel getRiskLevel() {
-        return this._riskLevel;
+        return this.riskLevel;
     }
     /**
      * Gets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
@@ -126,7 +141,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RiskState getRiskState() {
-        return this._riskState;
+        return this.riskState;
     }
     /**
      * Gets the userDisplayName property value. Risky user display name.
@@ -134,7 +149,7 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserDisplayName() {
-        return this._userDisplayName;
+        return this.userDisplayName;
     }
     /**
      * Gets the userPrincipalName property value. Risky user principal name.
@@ -142,13 +157,14 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -167,71 +183,80 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the history property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistory(@javax.annotation.Nullable final java.util.List<RiskyUserHistoryItem> value) {
-        this._history = value;
+        this.history = value;
     }
     /**
      * Sets the isDeleted property value. Indicates whether the user is deleted. Possible values are: true, false.
      * @param value Value to set for the isDeleted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeleted(@javax.annotation.Nullable final Boolean value) {
-        this._isDeleted = value;
+        this.isDeleted = value;
     }
     /**
      * Sets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
      * @param value Value to set for the isProcessing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsProcessing(@javax.annotation.Nullable final Boolean value) {
-        this._isProcessing = value;
+        this.isProcessing = value;
     }
     /**
      * Sets the riskDetail property value. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @param value Value to set for the riskDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskDetail(@javax.annotation.Nullable final RiskDetail value) {
-        this._riskDetail = value;
+        this.riskDetail = value;
     }
     /**
      * Sets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the riskLastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._riskLastUpdatedDateTime = value;
+        this.riskLastUpdatedDateTime = value;
     }
     /**
      * Sets the riskLevel property value. Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
      * @param value Value to set for the riskLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLevel(@javax.annotation.Nullable final RiskLevel value) {
-        this._riskLevel = value;
+        this.riskLevel = value;
     }
     /**
      * Sets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param value Value to set for the riskState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskState(@javax.annotation.Nullable final RiskState value) {
-        this._riskState = value;
+        this.riskState = value;
     }
     /**
      * Sets the userDisplayName property value. Risky user display name.
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
-        this._userDisplayName = value;
+        this.userDisplayName = value;
     }
     /**
      * Sets the userPrincipalName property value. Risky user principal name.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

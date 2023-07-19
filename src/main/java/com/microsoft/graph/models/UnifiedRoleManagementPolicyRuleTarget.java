@@ -4,34 +4,49 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser. */
-    private String _caller;
-    /** The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings. */
-    private java.util.List<String> _enforcedSettings;
-    /** The list of role settings that can be inherited by child scopes. Use All for all settings. */
-    private java.util.List<String> _inheritableSettings;
-    /** The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment. */
-    private String _level;
-    /** The OdataType property */
-    private String _odataType;
-    /** The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew. */
-    private java.util.List<String> _operations;
-    /** The targetObjects property */
-    private java.util.List<DirectoryObject> _targetObjects;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
+     */
+    private String caller;
+    /**
+     * The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
+     */
+    private java.util.List<String> enforcedSettings;
+    /**
+     * The list of role settings that can be inherited by child scopes. Use All for all settings.
+     */
+    private java.util.List<String> inheritableSettings;
+    /**
+     * The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
+     */
+    private String level;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
+     */
+    private java.util.List<String> operations;
+    /**
+     * The targetObjects property
+     */
+    private java.util.List<DirectoryObject> targetObjects;
     /**
      * Instantiates a new unifiedRoleManagementPolicyRuleTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyRuleTarget() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyRuleTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,7 +64,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
@@ -57,7 +72,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getCaller() {
-        return this._caller;
+        return this.caller;
     }
     /**
      * Gets the enforcedSettings property value. The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
@@ -65,24 +80,23 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public java.util.List<String> getEnforcedSettings() {
-        return this._enforcedSettings;
+        return this.enforcedSettings;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnifiedRoleManagementPolicyRuleTarget currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("caller", (n) -> { currentObject.setCaller(n.getStringValue()); });
-            this.put("enforcedSettings", (n) -> { currentObject.setEnforcedSettings(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("inheritableSettings", (n) -> { currentObject.setInheritableSettings(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("level", (n) -> { currentObject.setLevel(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("targetObjects", (n) -> { currentObject.setTargetObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("caller", (n) -> { this.setCaller(n.getStringValue()); });
+        deserializerMap.put("enforcedSettings", (n) -> { this.setEnforcedSettings(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("inheritableSettings", (n) -> { this.setInheritableSettings(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("level", (n) -> { this.setLevel(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("targetObjects", (n) -> { this.setTargetObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the inheritableSettings property value. The list of role settings that can be inherited by child scopes. Use All for all settings.
@@ -90,7 +104,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public java.util.List<String> getInheritableSettings() {
-        return this._inheritableSettings;
+        return this.inheritableSettings;
     }
     /**
      * Gets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
@@ -98,7 +112,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getLevel() {
-        return this._level;
+        return this.level;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -106,7 +120,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
@@ -114,7 +128,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public java.util.List<String> getOperations() {
-        return this._operations;
+        return this.operations;
     }
     /**
      * Gets the targetObjects property value. The targetObjects property
@@ -122,13 +136,14 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getTargetObjects() {
-        return this._targetObjects;
+        return this.targetObjects;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("caller", this.getCaller());
@@ -145,63 +160,71 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
      * @param value Value to set for the caller property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCaller(@javax.annotation.Nullable final String value) {
-        this._caller = value;
+        this.caller = value;
     }
     /**
      * Sets the enforcedSettings property value. The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
      * @param value Value to set for the enforcedSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforcedSettings(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._enforcedSettings = value;
+        this.enforcedSettings = value;
     }
     /**
      * Sets the inheritableSettings property value. The list of role settings that can be inherited by child scopes. Use All for all settings.
      * @param value Value to set for the inheritableSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInheritableSettings(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._inheritableSettings = value;
+        this.inheritableSettings = value;
     }
     /**
      * Sets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
      * @param value Value to set for the level property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLevel(@javax.annotation.Nullable final String value) {
-        this._level = value;
+        this.level = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._operations = value;
+        this.operations = value;
     }
     /**
      * Sets the targetObjects property value. The targetObjects property
      * @param value Value to set for the targetObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._targetObjects = value;
+        this.targetObjects = value;
     }
 }

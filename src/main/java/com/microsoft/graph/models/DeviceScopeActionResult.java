@@ -4,31 +4,44 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The result of the triggered device scope action. */
+/**
+ * The result of the triggered device scope action.
+ */
 public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** Trigger on the service to either START or STOP computing metrics data based on a device scope configuration. */
-    private String _deviceScopeAction;
-    /** The unique identifier of the device scope the action was triggered on. */
-    private String _deviceScopeId;
-    /** The message indicates the reason the device scope action failed to trigger. */
-    private String _failedMessage;
-    /** The OdataType property */
-    private String _odataType;
-    /** Indicates the status of the attempted device scope action */
-    private DeviceScopeActionStatus _status;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * Trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
+     */
+    private String deviceScopeAction;
+    /**
+     * The unique identifier of the device scope the action was triggered on.
+     */
+    private String deviceScopeId;
+    /**
+     * The message indicates the reason the device scope action failed to trigger.
+     */
+    private String failedMessage;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Indicates the status of the attempted device scope action
+     */
+    private DeviceScopeActionStatus status;
     /**
      * Instantiates a new deviceScopeActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceScopeActionResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceScopeActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +59,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the deviceScopeAction property value. Trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
@@ -54,7 +67,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceScopeAction() {
-        return this._deviceScopeAction;
+        return this.deviceScopeAction;
     }
     /**
      * Gets the deviceScopeId property value. The unique identifier of the device scope the action was triggered on.
@@ -62,7 +75,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceScopeId() {
-        return this._deviceScopeId;
+        return this.deviceScopeId;
     }
     /**
      * Gets the failedMessage property value. The message indicates the reason the device scope action failed to trigger.
@@ -70,22 +83,21 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getFailedMessage() {
-        return this._failedMessage;
+        return this.failedMessage;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceScopeActionResult currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("deviceScopeAction", (n) -> { currentObject.setDeviceScopeAction(n.getStringValue()); });
-            this.put("deviceScopeId", (n) -> { currentObject.setDeviceScopeId(n.getStringValue()); });
-            this.put("failedMessage", (n) -> { currentObject.setFailedMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceScopeActionStatus.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("deviceScopeAction", (n) -> { this.setDeviceScopeAction(n.getStringValue()); });
+        deserializerMap.put("deviceScopeId", (n) -> { this.setDeviceScopeId(n.getStringValue()); });
+        deserializerMap.put("failedMessage", (n) -> { this.setFailedMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DeviceScopeActionStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +105,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the status property value. Indicates the status of the attempted device scope action
@@ -101,13 +113,14 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public DeviceScopeActionStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceScopeAction", this.getDeviceScopeAction());
@@ -122,47 +135,53 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the deviceScopeAction property value. Trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
      * @param value Value to set for the deviceScopeAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceScopeAction(@javax.annotation.Nullable final String value) {
-        this._deviceScopeAction = value;
+        this.deviceScopeAction = value;
     }
     /**
      * Sets the deviceScopeId property value. The unique identifier of the device scope the action was triggered on.
      * @param value Value to set for the deviceScopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceScopeId(@javax.annotation.Nullable final String value) {
-        this._deviceScopeId = value;
+        this.deviceScopeId = value;
     }
     /**
      * Sets the failedMessage property value. The message indicates the reason the device scope action failed to trigger.
      * @param value Value to set for the failedMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedMessage(@javax.annotation.Nullable final String value) {
-        this._failedMessage = value;
+        this.failedMessage = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the status property value. Indicates the status of the attempted device scope action
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DeviceScopeActionStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

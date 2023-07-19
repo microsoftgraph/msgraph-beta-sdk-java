@@ -5,32 +5,45 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RecurrenceRange implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate. */
-    private LocalDate _endDate;
-    /** The number of times to repeat the event. Required and must be positive if type is numbered. */
-    private Integer _numberOfOccurrences;
-    /** The OdataType property */
-    private String _odataType;
-    /** Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used. */
-    private String _recurrenceTimeZone;
-    /** The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required. */
-    private LocalDate _startDate;
-    /** The recurrence range. Possible values are: endDate, noEnd, numbered. Required. */
-    private RecurrenceRangeType _type;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
+     */
+    private LocalDate endDate;
+    /**
+     * The number of times to repeat the event. Required and must be positive if type is numbered.
+     */
+    private Integer numberOfOccurrences;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
+     */
+    private String recurrenceTimeZone;
+    /**
+     * The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
+     */
+    private LocalDate startDate;
+    /**
+     * The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
+     */
+    private RecurrenceRangeType type;
     /**
      * Instantiates a new recurrenceRange and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RecurrenceRange() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recurrenceRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +61,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the endDate property value. The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
@@ -56,23 +69,22 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getEndDate() {
-        return this._endDate;
+        return this.endDate;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RecurrenceRange currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
-            this.put("numberOfOccurrences", (n) -> { currentObject.setNumberOfOccurrences(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recurrenceTimeZone", (n) -> { currentObject.setRecurrenceTimeZone(n.getStringValue()); });
-            this.put("startDate", (n) -> { currentObject.setStartDate(n.getLocalDateValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(RecurrenceRangeType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getLocalDateValue()); });
+        deserializerMap.put("numberOfOccurrences", (n) -> { this.setNumberOfOccurrences(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recurrenceTimeZone", (n) -> { this.setRecurrenceTimeZone(n.getStringValue()); });
+        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getLocalDateValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(RecurrenceRangeType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the numberOfOccurrences property value. The number of times to repeat the event. Required and must be positive if type is numbered.
@@ -80,7 +92,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getNumberOfOccurrences() {
-        return this._numberOfOccurrences;
+        return this.numberOfOccurrences;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -88,7 +100,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the recurrenceTimeZone property value. Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
@@ -96,7 +108,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRecurrenceTimeZone() {
-        return this._recurrenceTimeZone;
+        return this.recurrenceTimeZone;
     }
     /**
      * Gets the startDate property value. The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
@@ -104,7 +116,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getStartDate() {
-        return this._startDate;
+        return this.startDate;
     }
     /**
      * Gets the type property value. The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
@@ -112,13 +124,14 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RecurrenceRangeType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLocalDateValue("endDate", this.getEndDate());
@@ -134,55 +147,62 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the endDate property value. The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
      * @param value Value to set for the endDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDate(@javax.annotation.Nullable final LocalDate value) {
-        this._endDate = value;
+        this.endDate = value;
     }
     /**
      * Sets the numberOfOccurrences property value. The number of times to repeat the event. Required and must be positive if type is numbered.
      * @param value Value to set for the numberOfOccurrences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfOccurrences(@javax.annotation.Nullable final Integer value) {
-        this._numberOfOccurrences = value;
+        this.numberOfOccurrences = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the recurrenceTimeZone property value. Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
      * @param value Value to set for the recurrenceTimeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrenceTimeZone(@javax.annotation.Nullable final String value) {
-        this._recurrenceTimeZone = value;
+        this.recurrenceTimeZone = value;
     }
     /**
      * Sets the startDate property value. The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
      * @param value Value to set for the startDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDate(@javax.annotation.Nullable final LocalDate value) {
-        this._startDate = value;
+        this.startDate = value;
     }
     /**
      * Sets the type property value. The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final RecurrenceRangeType value) {
-        this._type = value;
+        this.type = value;
     }
 }

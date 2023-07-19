@@ -1,33 +1,42 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.MobileAppDependency;
-import com.microsoft.graph.models.MobileAppSupersedence;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Describes a relationship between two mobile apps. */
+/**
+ * Describes a relationship between two mobile apps.
+ */
 public class MobileAppRelationship extends Entity implements Parsable {
-    /** The target mobile app's display name. */
-    private String _targetDisplayName;
-    /** The target mobile app's display version. */
-    private String _targetDisplayVersion;
-    /** The target mobile app's app id. */
-    private String _targetId;
-    /** The target mobile app's publisher. */
-    private String _targetPublisher;
-    /** Indicates whether the target of a relationship is the parent or the child in the relationship. */
-    private MobileAppRelationshipType _targetType;
+    /**
+     * The target mobile app's display name.
+     */
+    private String targetDisplayName;
+    /**
+     * The target mobile app's display version.
+     */
+    private String targetDisplayVersion;
+    /**
+     * The target mobile app's app id.
+     */
+    private String targetId;
+    /**
+     * The target mobile app's publisher.
+     */
+    private String targetPublisher;
+    /**
+     * Indicates whether the target of a relationship is the parent or the child in the relationship.
+     */
+    private MobileAppRelationshipType targetType;
     /**
      * Instantiates a new mobileAppRelationship and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppRelationship() {
         super();
-        this.setOdataType("#microsoft.graph.mobileAppRelationship");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,18 +58,17 @@ public class MobileAppRelationship extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileAppRelationship currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("targetDisplayName", (n) -> { currentObject.setTargetDisplayName(n.getStringValue()); });
-            this.put("targetDisplayVersion", (n) -> { currentObject.setTargetDisplayVersion(n.getStringValue()); });
-            this.put("targetId", (n) -> { currentObject.setTargetId(n.getStringValue()); });
-            this.put("targetPublisher", (n) -> { currentObject.setTargetPublisher(n.getStringValue()); });
-            this.put("targetType", (n) -> { currentObject.setTargetType(n.getEnumValue(MobileAppRelationshipType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("targetDisplayName", (n) -> { this.setTargetDisplayName(n.getStringValue()); });
+        deserializerMap.put("targetDisplayVersion", (n) -> { this.setTargetDisplayVersion(n.getStringValue()); });
+        deserializerMap.put("targetId", (n) -> { this.setTargetId(n.getStringValue()); });
+        deserializerMap.put("targetPublisher", (n) -> { this.setTargetPublisher(n.getStringValue()); });
+        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(MobileAppRelationshipType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the targetDisplayName property value. The target mobile app's display name.
@@ -68,7 +76,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTargetDisplayName() {
-        return this._targetDisplayName;
+        return this.targetDisplayName;
     }
     /**
      * Gets the targetDisplayVersion property value. The target mobile app's display version.
@@ -76,7 +84,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTargetDisplayVersion() {
-        return this._targetDisplayVersion;
+        return this.targetDisplayVersion;
     }
     /**
      * Gets the targetId property value. The target mobile app's app id.
@@ -84,7 +92,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTargetId() {
-        return this._targetId;
+        return this.targetId;
     }
     /**
      * Gets the targetPublisher property value. The target mobile app's publisher.
@@ -92,7 +100,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTargetPublisher() {
-        return this._targetPublisher;
+        return this.targetPublisher;
     }
     /**
      * Gets the targetType property value. Indicates whether the target of a relationship is the parent or the child in the relationship.
@@ -100,13 +108,14 @@ public class MobileAppRelationship extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public MobileAppRelationshipType getTargetType() {
-        return this._targetType;
+        return this.targetType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -121,39 +130,44 @@ public class MobileAppRelationship extends Entity implements Parsable {
      * @param value Value to set for the targetDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetDisplayName(@javax.annotation.Nullable final String value) {
-        this._targetDisplayName = value;
+        this.targetDisplayName = value;
     }
     /**
      * Sets the targetDisplayVersion property value. The target mobile app's display version.
      * @param value Value to set for the targetDisplayVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetDisplayVersion(@javax.annotation.Nullable final String value) {
-        this._targetDisplayVersion = value;
+        this.targetDisplayVersion = value;
     }
     /**
      * Sets the targetId property value. The target mobile app's app id.
      * @param value Value to set for the targetId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetId(@javax.annotation.Nullable final String value) {
-        this._targetId = value;
+        this.targetId = value;
     }
     /**
      * Sets the targetPublisher property value. The target mobile app's publisher.
      * @param value Value to set for the targetPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetPublisher(@javax.annotation.Nullable final String value) {
-        this._targetPublisher = value;
+        this.targetPublisher = value;
     }
     /**
      * Sets the targetType property value. Indicates whether the target of a relationship is the parent or the child in the relationship.
      * @param value Value to set for the targetType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetType(@javax.annotation.Nullable final MobileAppRelationshipType value) {
-        this._targetType = value;
+        this.targetType = value;
     }
 }

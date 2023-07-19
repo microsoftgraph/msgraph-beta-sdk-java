@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/**
+ * Describes applicability for the mode the device is in
+ */
 public enum DeviceManagementConfigurationDeviceMode implements ValuedEnum {
     /** No Device Mode specified */
     None("none"),

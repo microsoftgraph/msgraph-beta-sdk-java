@@ -3,25 +3,26 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeOffItem extends ScheduleEntity implements Parsable {
-    /** ID of the timeOffReason for this timeOffItem. Required. */
-    private String _timeOffReasonId;
     /**
-     * Instantiates a new TimeOffItem and sets the default values.
+     * ID of the timeOffReason for this timeOffItem. Required.
+     */
+    private String timeOffReasonId;
+    /**
+     * Instantiates a new timeOffItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TimeOffItem() {
         super();
-        this.setOdataType("#microsoft.graph.timeOffItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TimeOffItem
+     * @return a timeOffItem
      */
     @javax.annotation.Nonnull
     public static TimeOffItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -30,14 +31,13 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TimeOffItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("timeOffReasonId", (n) -> { currentObject.setTimeOffReasonId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("timeOffReasonId", (n) -> { this.setTimeOffReasonId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the timeOffReasonId property value. ID of the timeOffReason for this timeOffItem. Required.
@@ -45,13 +45,14 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTimeOffReasonId() {
-        return this._timeOffReasonId;
+        return this.timeOffReasonId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +63,8 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
      * @param value Value to set for the timeOffReasonId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeOffReasonId(@javax.annotation.Nullable final String value) {
-        this._timeOffReasonId = value;
+        this.timeOffReasonId = value;
     }
 }

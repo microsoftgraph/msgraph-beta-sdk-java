@@ -4,28 +4,37 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The compute property */
-    private TeamworkPeripheral _compute;
-    /** The hdmiIngest property */
-    private TeamworkPeripheral _hdmiIngest;
-    /** The OdataType property */
-    private String _odataType;
-    /** The CPU model on the device. */
-    private String _processorModel;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The compute property
+     */
+    private TeamworkPeripheral compute;
+    /**
+     * The hdmiIngest property
+     */
+    private TeamworkPeripheral hdmiIngest;
+    /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
+     * The CPU model on the device.
+     */
+    private String processorModel;
     /**
      * Instantiates a new teamworkHardwareConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkHardwareConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkHardwareConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,7 +52,7 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the compute property value. The compute property
@@ -51,21 +60,20 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public TeamworkPeripheral getCompute() {
-        return this._compute;
+        return this.compute;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkHardwareConfiguration currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("compute", (n) -> { currentObject.setCompute(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("hdmiIngest", (n) -> { currentObject.setHdmiIngest(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("processorModel", (n) -> { currentObject.setProcessorModel(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("compute", (n) -> { this.setCompute(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("hdmiIngest", (n) -> { this.setHdmiIngest(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("processorModel", (n) -> { this.setProcessorModel(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hdmiIngest property value. The hdmiIngest property
@@ -73,7 +81,7 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public TeamworkPeripheral getHdmiIngest() {
-        return this._hdmiIngest;
+        return this.hdmiIngest;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -81,7 +89,7 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the processorModel property value. The CPU model on the device.
@@ -89,13 +97,14 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nullable
     public String getProcessorModel() {
-        return this._processorModel;
+        return this.processorModel;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("compute", this.getCompute());
@@ -109,39 +118,44 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the compute property value. The compute property
      * @param value Value to set for the compute property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompute(@javax.annotation.Nullable final TeamworkPeripheral value) {
-        this._compute = value;
+        this.compute = value;
     }
     /**
      * Sets the hdmiIngest property value. The hdmiIngest property
      * @param value Value to set for the hdmiIngest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHdmiIngest(@javax.annotation.Nullable final TeamworkPeripheral value) {
-        this._hdmiIngest = value;
+        this.hdmiIngest = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the processorModel property value. The CPU model on the device.
      * @param value Value to set for the processorModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessorModel(@javax.annotation.Nullable final String value) {
-        this._processorModel = value;
+        this.processorModel = value;
     }
 }

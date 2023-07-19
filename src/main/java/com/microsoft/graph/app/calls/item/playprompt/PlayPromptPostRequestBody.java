@@ -5,24 +5,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the playPrompt method. */
 public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
-    /** The clientContext property */
-    private String _clientContext;
-    /** The loop property */
-    private Boolean _loop;
-    /** The prompts property */
-    private java.util.List<Prompt> _prompts;
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
+    private Map<String, Object> additionalData;
+    /**
+     * The clientContext property
+     */
+    private String clientContext;
+    /**
+     * The loop property
+     */
+    private Boolean loop;
+    /**
+     * The prompts property
+     */
+    private java.util.List<Prompt> prompts;
     /**
      * Instantiates a new playPromptPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlayPromptPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,7 +49,7 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the clientContext property value. The clientContext property
@@ -50,20 +57,19 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getClientContext() {
-        return this._clientContext;
+        return this.clientContext;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlayPromptPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
-            this.put("loop", (n) -> { currentObject.setLoop(n.getBooleanValue()); });
-            this.put("prompts", (n) -> { currentObject.setPrompts(n.getCollectionOfObjectValues(Prompt::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("clientContext", (n) -> { this.setClientContext(n.getStringValue()); });
+        deserializerMap.put("loop", (n) -> { this.setLoop(n.getBooleanValue()); });
+        deserializerMap.put("prompts", (n) -> { this.setPrompts(n.getCollectionOfObjectValues(Prompt::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the loop property value. The loop property
@@ -71,7 +77,7 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public Boolean getLoop() {
-        return this._loop;
+        return this.loop;
     }
     /**
      * Gets the prompts property value. The prompts property
@@ -79,13 +85,14 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<Prompt> getPrompts() {
-        return this._prompts;
+        return this.prompts;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("clientContext", this.getClientContext());
@@ -98,31 +105,35 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the clientContext property value. The clientContext property
      * @param value Value to set for the clientContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
-        this._clientContext = value;
+        this.clientContext = value;
     }
     /**
      * Sets the loop property value. The loop property
      * @param value Value to set for the loop property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoop(@javax.annotation.Nullable final Boolean value) {
-        this._loop = value;
+        this.loop = value;
     }
     /**
      * Sets the prompts property value. The prompts property
      * @param value Value to set for the prompts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrompts(@javax.annotation.Nullable final java.util.List<Prompt> value) {
-        this._prompts = value;
+        this.prompts = value;
     }
 }

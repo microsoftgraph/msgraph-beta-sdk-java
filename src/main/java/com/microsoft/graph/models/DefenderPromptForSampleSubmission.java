@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/**
+ * Possible values for prompting user for samples submission.
+ */
 public enum DefenderPromptForSampleSubmission implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),
