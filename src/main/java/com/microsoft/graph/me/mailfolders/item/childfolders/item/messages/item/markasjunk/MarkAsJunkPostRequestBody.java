@@ -53,7 +53,7 @@ public class MarkAsJunkPostRequestBody implements AdditionalDataHolder, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the moveToJunk property value. The MoveToJunk property
+     * Gets the MoveToJunk property value. The MoveToJunk property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class MarkAsJunkPostRequestBody implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -81,7 +81,7 @@ public class MarkAsJunkPostRequestBody implements AdditionalDataHolder, Parsable
         this.additionalData = value;
     }
     /**
-     * Sets the moveToJunk property value. The MoveToJunk property
+     * Sets the MoveToJunk property value. The MoveToJunk property
      * @param value Value to set for the MoveToJunk property.
      * @return a void
      */

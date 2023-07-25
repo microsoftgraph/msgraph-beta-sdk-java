@@ -61,9 +61,9 @@ public class Site extends BaseItem implements Parsable {
      */
     private java.util.List<RichLongRunningOperation> operations;
     /**
-     * The collection of pages in the SitePages list in this site.
+     * The collection of pages in the baseSitePages list in this site.
      */
-    private java.util.List<SitePage> pages;
+    private java.util.List<BaseSitePage> pages;
     /**
      * The permissions associated with the site. Nullable.
      */
@@ -195,7 +195,7 @@ public class Site extends BaseItem implements Parsable {
         deserializerMap.put("lists", (n) -> { this.setLists(n.getCollectionOfObjectValues(List::createFromDiscriminatorValue)); });
         deserializerMap.put("onenote", (n) -> { this.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
-        deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(SitePage::createFromDiscriminatorValue)); });
+        deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(BaseSitePage::createFromDiscriminatorValue)); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
         deserializerMap.put("root", (n) -> { this.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(SiteSettings::createFromDiscriminatorValue)); });
@@ -246,11 +246,11 @@ public class Site extends BaseItem implements Parsable {
         return this.operations;
     }
     /**
-     * Gets the pages property value. The collection of pages in the SitePages list in this site.
-     * @return a sitePage
+     * Gets the pages property value. The collection of pages in the baseSitePages list in this site.
+     * @return a baseSitePage
      */
     @javax.annotation.Nullable
-    public java.util.List<SitePage> getPages() {
+    public java.util.List<BaseSitePage> getPages() {
         return this.pages;
     }
     /**
@@ -458,12 +458,12 @@ public class Site extends BaseItem implements Parsable {
         this.operations = value;
     }
     /**
-     * Sets the pages property value. The collection of pages in the SitePages list in this site.
+     * Sets the pages property value. The collection of pages in the baseSitePages list in this site.
      * @param value Value to set for the pages property.
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPages(@javax.annotation.Nullable final java.util.List<SitePage> value) {
+    public void setPages(@javax.annotation.Nullable final java.util.List<BaseSitePage> value) {
         this.pages = value;
     }
     /**

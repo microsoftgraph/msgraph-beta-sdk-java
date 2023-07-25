@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
     /**
      * Time interval between activations to trigger an alert.
      */
-    private Period timeIntervalBetweenActivations;
+    private PeriodAndDuration timeIntervalBetweenActivations;
     /**
      * Instantiates a new sequentialActivationRenewalsAlertConfiguration and sets the default values.
      * @return a void
@@ -43,7 +43,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("sequentialActivationCounterThreshold", (n) -> { this.setSequentialActivationCounterThreshold(n.getIntegerValue()); });
-        deserializerMap.put("timeIntervalBetweenActivations", (n) -> { this.setTimeIntervalBetweenActivations(n.getPeriodValue()); });
+        deserializerMap.put("timeIntervalBetweenActivations", (n) -> { this.setTimeIntervalBetweenActivations(n.getPeriodAndDurationValue()); });
         return deserializerMap;
     }
     /**
@@ -56,10 +56,10 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
     }
     /**
      * Gets the timeIntervalBetweenActivations property value. Time interval between activations to trigger an alert.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getTimeIntervalBetweenActivations() {
+    public PeriodAndDuration getTimeIntervalBetweenActivations() {
         return this.timeIntervalBetweenActivations;
     }
     /**
@@ -72,7 +72,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("sequentialActivationCounterThreshold", this.getSequentialActivationCounterThreshold());
-        writer.writePeriodValue("timeIntervalBetweenActivations", this.getTimeIntervalBetweenActivations());
+        writer.writePeriodAndDurationValue("timeIntervalBetweenActivations", this.getTimeIntervalBetweenActivations());
     }
     /**
      * Sets the sequentialActivationCounterThreshold property value. The minimum number of activations within the timeIntervalBetweenActivations period to trigger an alert.
@@ -89,7 +89,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setTimeIntervalBetweenActivations(@javax.annotation.Nullable final Period value) {
+    public void setTimeIntervalBetweenActivations(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.timeIntervalBetweenActivations = value;
     }
 }

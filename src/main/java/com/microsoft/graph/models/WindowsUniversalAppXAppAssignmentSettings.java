@@ -11,7 +11,7 @@ import java.util.Objects;
  */
 public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * If true, uses device execution context for Windows Universal AppX mobile app. Device-context install is not allowed when this type of app is targeted with Available intent. Defaults to false.
+     * Whether or not to use device execution context for Windows Universal AppX mobile app.
      */
     private Boolean useDeviceContext;
     /**
@@ -44,7 +44,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
         return deserializerMap;
     }
     /**
-     * Gets the useDeviceContext property value. If true, uses device execution context for Windows Universal AppX mobile app. Device-context install is not allowed when this type of app is targeted with Available intent. Defaults to false.
+     * Gets the useDeviceContext property value. Whether or not to use device execution context for Windows Universal AppX mobile app.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
         writer.writeBooleanValue("useDeviceContext", this.getUseDeviceContext());
     }
     /**
-     * Sets the useDeviceContext property value. If true, uses device execution context for Windows Universal AppX mobile app. Device-context install is not allowed when this type of app is targeted with Available intent. Defaults to false.
+     * Sets the useDeviceContext property value. Whether or not to use device execution context for Windows Universal AppX mobile app.
      * @param value Value to set for the useDeviceContext property.
      * @return a void
      */

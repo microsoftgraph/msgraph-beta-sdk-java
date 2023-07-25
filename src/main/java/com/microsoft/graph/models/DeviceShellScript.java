@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -39,7 +39,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     /**
      * The interval for script to run. If not defined the script will run once
      */
-    private Period executionFrequency;
+    private PeriodAndDuration executionFrequency;
     /**
      * Script file name.
      */
@@ -144,10 +144,10 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the executionFrequency property value. The interval for script to run. If not defined the script will run once
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getExecutionFrequency() {
+    public PeriodAndDuration getExecutionFrequency() {
         return this.executionFrequency;
     }
     /**
@@ -163,7 +163,7 @@ public class DeviceShellScript extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("deviceRunStates", (n) -> { this.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptDeviceState::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("executionFrequency", (n) -> { this.setExecutionFrequency(n.getPeriodValue()); });
+        deserializerMap.put("executionFrequency", (n) -> { this.setExecutionFrequency(n.getPeriodAndDurationValue()); });
         deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
         deserializerMap.put("groupAssignments", (n) -> { this.setGroupAssignments(n.getCollectionOfObjectValues(DeviceManagementScriptGroupAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -261,7 +261,7 @@ public class DeviceShellScript extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfObjectValues("deviceRunStates", this.getDeviceRunStates());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writePeriodValue("executionFrequency", this.getExecutionFrequency());
+        writer.writePeriodAndDurationValue("executionFrequency", this.getExecutionFrequency());
         writer.writeStringValue("fileName", this.getFileName());
         writer.writeCollectionOfObjectValues("groupAssignments", this.getGroupAssignments());
         writer.writeIntegerValue("retryCount", this.getRetryCount());
@@ -331,7 +331,7 @@ public class DeviceShellScript extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setExecutionFrequency(@javax.annotation.Nullable final Period value) {
+    public void setExecutionFrequency(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.executionFrequency = value;
     }
     /**

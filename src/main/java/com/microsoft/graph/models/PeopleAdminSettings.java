@@ -8,6 +8,10 @@ import java.util.Map;
 import java.util.Objects;
 public class PeopleAdminSettings extends Entity implements Parsable {
     /**
+     * The profileCardProperties property
+     */
+    private java.util.List<ProfileCardProperty> profileCardProperties;
+    /**
      * Represents administrator settings that manage the support of pronouns in an organization.
      */
     private PronounsSettings pronouns;
@@ -36,8 +40,17 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("profileCardProperties", (n) -> { this.setProfileCardProperties(n.getCollectionOfObjectValues(ProfileCardProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("pronouns", (n) -> { this.setPronouns(n.getObjectValue(PronounsSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the profileCardProperties property value. The profileCardProperties property
+     * @return a profileCardProperty
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ProfileCardProperty> getProfileCardProperties() {
+        return this.profileCardProperties;
     }
     /**
      * Gets the pronouns property value. Represents administrator settings that manage the support of pronouns in an organization.
@@ -56,7 +69,17 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("profileCardProperties", this.getProfileCardProperties());
         writer.writeObjectValue("pronouns", this.getPronouns());
+    }
+    /**
+     * Sets the profileCardProperties property value. The profileCardProperties property
+     * @param value Value to set for the profileCardProperties property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setProfileCardProperties(@javax.annotation.Nullable final java.util.List<ProfileCardProperty> value) {
+        this.profileCardProperties = value;
     }
     /**
      * Sets the pronouns property value. Represents administrator settings that manage the support of pronouns in an organization.

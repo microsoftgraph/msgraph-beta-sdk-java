@@ -25,7 +25,10 @@ import java.util.Objects;
 public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
+    @Deprecated
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -34,8 +37,11 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
      * Provides operations to manage the credentialUserRegistrationDetails property of the microsoft.graph.reportRoot entity.
      * @param credentialUserRegistrationDetailsId Unique identifier of the item
      * @return a CredentialUserRegistrationDetailsItemRequestBuilder
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public CredentialUserRegistrationDetailsItemRequestBuilder byCredentialUserRegistrationDetailsId(@javax.annotation.Nonnull final String credentialUserRegistrationDetailsId) {
         Objects.requireNonNull(credentialUserRegistrationDetailsId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -65,9 +71,12 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
     /**
      * Get a list of credentialUserRegistrationDetails objects for a given tenant.
      * @return a CompletableFuture of credentialUserRegistrationDetailsCollectionResponse
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      * @see <a href="https://docs.microsoft.com/graph/api/reportroot-list-credentialuserregistrationdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationDetailsCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -85,9 +94,12 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
      * Get a list of credentialUserRegistrationDetails objects for a given tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of credentialUserRegistrationDetailsCollectionResponse
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      * @see <a href="https://docs.microsoft.com/graph/api/reportroot-list-credentialuserregistrationdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationDetailsCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
@@ -105,8 +117,11 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
      * Create new navigation property to credentialUserRegistrationDetails for reports
      * @param body The request body
      * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationDetails> post(@javax.annotation.Nonnull final CredentialUserRegistrationDetails body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
@@ -125,8 +140,11 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationDetails> post(@javax.annotation.Nonnull final CredentialUserRegistrationDetails body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
@@ -144,8 +162,11 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
     /**
      * Get a list of credentialUserRegistrationDetails objects for a given tenant.
      * @return a RequestInformation
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -153,8 +174,11 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
      * Get a list of credentialUserRegistrationDetails objects for a given tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
@@ -174,8 +198,11 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
      * Create new navigation property to credentialUserRegistrationDetails for reports
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final CredentialUserRegistrationDetails body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
@@ -184,8 +211,11 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final CredentialUserRegistrationDetails body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();

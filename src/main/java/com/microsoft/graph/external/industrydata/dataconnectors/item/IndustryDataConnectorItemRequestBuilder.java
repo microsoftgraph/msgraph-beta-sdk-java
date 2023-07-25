@@ -57,9 +57,9 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/external/industryData/dataConnectors/{industryDataConnector%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an azureDataLakeConnector object.
+     * Delete an industryDataConnector object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-azuredatalakeconnector-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-industrydataconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -76,10 +76,10 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Delete an azureDataLakeConnector object.
+     * Delete an industryDataConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-azuredatalakeconnector-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-industrydataconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,9 +96,9 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object.
      * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-industrydataconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> get() {
@@ -115,10 +115,10 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-industrydataconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -177,7 +177,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Delete an azureDataLakeConnector object.
+     * Delete an industryDataConnector object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -185,7 +185,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an azureDataLakeConnector object.
+     * Delete an industryDataConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -204,7 +204,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -212,7 +212,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -270,7 +270,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object.
      */
     public class GetQueryParameters {
         /**

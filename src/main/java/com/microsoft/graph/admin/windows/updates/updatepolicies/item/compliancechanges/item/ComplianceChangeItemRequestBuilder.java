@@ -88,9 +88,9 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of a contentApproval object.
+     * Read the properties and relationships of a complianceChange object.
      * @return a CompletableFuture of complianceChange
-     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-contentapproval-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-compliancechange-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceChange> get() {
@@ -107,10 +107,10 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of a contentApproval object.
+     * Read the properties and relationships of a complianceChange object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of complianceChange
-     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-contentapproval-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-compliancechange-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceChange> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -196,7 +196,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a contentApproval object.
+     * Read the properties and relationships of a complianceChange object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -204,7 +204,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a contentApproval object.
+     * Read the properties and relationships of a complianceChange object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -262,7 +262,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a contentApproval object.
+     * Read the properties and relationships of a complianceChange object.
      */
     public class GetQueryParameters {
         /**

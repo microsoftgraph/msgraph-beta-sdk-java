@@ -25,7 +25,10 @@ import java.util.Objects;
 public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
+    @Deprecated
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -34,8 +37,11 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the sharedUseServicePlans property of the microsoft.graph.virtualEndpoint entity.
      * @param cloudPcSharedUseServicePlanId Unique identifier of the item
      * @return a CloudPcSharedUseServicePlanItemRequestBuilder
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public CloudPcSharedUseServicePlanItemRequestBuilder byCloudPcSharedUseServicePlanId(@javax.annotation.Nonnull final String cloudPcSharedUseServicePlanId) {
         Objects.requireNonNull(cloudPcSharedUseServicePlanId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -65,9 +71,12 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @return a CompletableFuture of cloudPcSharedUseServicePlanCollectionResponse
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-shareduseserviceplans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CloudPcSharedUseServicePlanCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -85,9 +94,12 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcSharedUseServicePlanCollectionResponse
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-shareduseserviceplans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CloudPcSharedUseServicePlanCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
@@ -105,8 +117,11 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sharedUseServicePlans for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of cloudPcSharedUseServicePlan
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CloudPcSharedUseServicePlan> post(@javax.annotation.Nonnull final CloudPcSharedUseServicePlan body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
@@ -125,8 +140,11 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcSharedUseServicePlan
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CloudPcSharedUseServicePlan> post(@javax.annotation.Nonnull final CloudPcSharedUseServicePlan body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
@@ -144,8 +162,11 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @return a RequestInformation
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -153,8 +174,11 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
@@ -174,8 +198,11 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sharedUseServicePlans for deviceManagement
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final CloudPcSharedUseServicePlan body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
@@ -184,8 +211,11 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final CloudPcSharedUseServicePlan body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();

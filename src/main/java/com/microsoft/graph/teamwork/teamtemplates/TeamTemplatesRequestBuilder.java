@@ -63,9 +63,9 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of teamTemplate objects that are available for a tenant. 
+     * List the teamTemplateDefinition objects associated with a teamTemplate. 
      * @return a CompletableFuture of teamTemplateCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/teamwork-list-teamtemplates?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/teamtemplate-list-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateCollectionResponse> get() {
@@ -82,10 +82,10 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of teamTemplate objects that are available for a tenant. 
+     * List the teamTemplateDefinition objects associated with a teamTemplate. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamTemplateCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/teamwork-list-teamtemplates?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/teamtemplate-list-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -142,7 +142,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the list of teamTemplate objects that are available for a tenant. 
+     * List the teamTemplateDefinition objects associated with a teamTemplate. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +150,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of teamTemplate objects that are available for a tenant. 
+     * List the teamTemplateDefinition objects associated with a teamTemplate. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -203,7 +203,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the list of teamTemplate objects that are available for a tenant. 
+     * List the teamTemplateDefinition objects associated with a teamTemplate. 
      */
     public class GetQueryParameters {
         /**

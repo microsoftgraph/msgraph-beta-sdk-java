@@ -131,12 +131,12 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
+     * Update the user synchronization policy of a partner-specific configuration.
      * @param body The request body
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @deprecated
      *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -154,13 +154,13 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
+     * Update the user synchronization policy of a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @deprecated
      *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -247,7 +247,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
+     * Update the user synchronization policy of a partner-specific configuration.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -259,7 +259,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
+     * Update the user synchronization policy of a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

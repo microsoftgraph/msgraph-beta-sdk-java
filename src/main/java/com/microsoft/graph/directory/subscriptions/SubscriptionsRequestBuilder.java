@@ -63,8 +63,9 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/subscriptions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization has acquired.
      * @return a CompletableFuture of companySubscriptionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/directory-list-subscriptions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanySubscriptionCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of companySubscriptionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/directory-list-subscriptions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanySubscriptionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +142,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization has acquired.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +150,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +203,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization has acquired.
      */
     public class GetQueryParameters {
         /**

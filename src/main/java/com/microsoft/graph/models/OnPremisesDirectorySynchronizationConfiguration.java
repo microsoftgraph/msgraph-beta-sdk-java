@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -32,7 +32,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     /**
      * Interval of time that the customer requested the sync client waits between sync cycles.
      */
-    private Period customerRequestedSynchronizationInterval;
+    private PeriodAndDuration customerRequestedSynchronizationInterval;
     /**
      * The OdataType property
      */
@@ -44,7 +44,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     /**
      * Interval of time the sync client should honor between sync cycles
      */
-    private Period synchronizationInterval;
+    private PeriodAndDuration synchronizationInterval;
     /**
      * Configuration to control how cloud created or owned objects are synchronized back to the on-premises directory.
      */
@@ -109,10 +109,10 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the customerRequestedSynchronizationInterval property value. Interval of time that the customer requested the sync client waits between sync cycles.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getCustomerRequestedSynchronizationInterval() {
+    public PeriodAndDuration getCustomerRequestedSynchronizationInterval() {
         return this.customerRequestedSynchronizationInterval;
     }
     /**
@@ -126,10 +126,10 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
         deserializerMap.put("anchorAttribute", (n) -> { this.setAnchorAttribute(n.getStringValue()); });
         deserializerMap.put("applicationId", (n) -> { this.setApplicationId(n.getStringValue()); });
         deserializerMap.put("currentExportData", (n) -> { this.setCurrentExportData(n.getObjectValue(OnPremisesCurrentExportData::createFromDiscriminatorValue)); });
-        deserializerMap.put("customerRequestedSynchronizationInterval", (n) -> { this.setCustomerRequestedSynchronizationInterval(n.getPeriodValue()); });
+        deserializerMap.put("customerRequestedSynchronizationInterval", (n) -> { this.setCustomerRequestedSynchronizationInterval(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("synchronizationClientVersion", (n) -> { this.setSynchronizationClientVersion(n.getStringValue()); });
-        deserializerMap.put("synchronizationInterval", (n) -> { this.setSynchronizationInterval(n.getPeriodValue()); });
+        deserializerMap.put("synchronizationInterval", (n) -> { this.setSynchronizationInterval(n.getPeriodAndDurationValue()); });
         deserializerMap.put("writebackConfiguration", (n) -> { this.setWritebackConfiguration(n.getObjectValue(OnPremisesWritebackConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -151,10 +151,10 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the synchronizationInterval property value. Interval of time the sync client should honor between sync cycles
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getSynchronizationInterval() {
+    public PeriodAndDuration getSynchronizationInterval() {
         return this.synchronizationInterval;
     }
     /**
@@ -177,10 +177,10 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
         writer.writeStringValue("anchorAttribute", this.getAnchorAttribute());
         writer.writeStringValue("applicationId", this.getApplicationId());
         writer.writeObjectValue("currentExportData", this.getCurrentExportData());
-        writer.writePeriodValue("customerRequestedSynchronizationInterval", this.getCustomerRequestedSynchronizationInterval());
+        writer.writePeriodAndDurationValue("customerRequestedSynchronizationInterval", this.getCustomerRequestedSynchronizationInterval());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("synchronizationClientVersion", this.getSynchronizationClientVersion());
-        writer.writePeriodValue("synchronizationInterval", this.getSynchronizationInterval());
+        writer.writePeriodAndDurationValue("synchronizationInterval", this.getSynchronizationInterval());
         writer.writeObjectValue("writebackConfiguration", this.getWritebackConfiguration());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -195,7 +195,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -235,12 +235,12 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setCustomerRequestedSynchronizationInterval(@javax.annotation.Nullable final Period value) {
+    public void setCustomerRequestedSynchronizationInterval(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.customerRequestedSynchronizationInterval = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -262,7 +262,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setSynchronizationInterval(@javax.annotation.Nullable final Period value) {
+    public void setSynchronizationInterval(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.synchronizationInterval = value;
     }
     /**

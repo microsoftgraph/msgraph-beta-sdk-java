@@ -62,8 +62,9 @@ public class SponsorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/sponsors{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get sponsors from users
+     * Get a user's sponsors. Sponsors are users and groups that are responsible for this guest user's privileges in the tenant and for keeping the guest user's information and access up to date.
      * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-sponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -80,9 +81,10 @@ public class SponsorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get sponsors from users
+     * Get a user's sponsors. Sponsors are users and groups that are responsible for this guest user's privileges in the tenant and for keeping the guest user's information and access up to date.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-sponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,7 +101,7 @@ public class SponsorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get sponsors from users
+     * Get a user's sponsors. Sponsors are users and groups that are responsible for this guest user's privileges in the tenant and for keeping the guest user's information and access up to date.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +109,7 @@ public class SponsorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sponsors from users
+     * Get a user's sponsors. Sponsors are users and groups that are responsible for this guest user's privileges in the tenant and for keeping the guest user's information and access up to date.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +130,7 @@ public class SponsorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get sponsors from users
+     * Get a user's sponsors. Sponsors are users and groups that are responsible for this guest user's privileges in the tenant and for keeping the guest user's information and access up to date.
      */
     public class GetQueryParameters {
         /**

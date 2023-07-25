@@ -19,6 +19,7 @@ import com.microsoft.graph.drives.item.items.item.getactivitiesbyintervalwithsta
 import com.microsoft.graph.drives.item.items.item.invite.InviteRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.listitem.ListItemRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.preview.PreviewRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.restore.RestoreRequestBuilder;
@@ -168,6 +169,13 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the permanentDelete method.
+     */
+    @javax.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the permissions property of the microsoft.graph.driveItem entity.

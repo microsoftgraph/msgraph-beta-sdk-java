@@ -167,10 +167,10 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of an **educationuser** object.
+     * Update the relatedContact collection of an educationUser object.
      * @param body The request body
      * @return a CompletableFuture of educationUser
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/relatedcontact-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> patch(@javax.annotation.Nonnull final EducationUser body) {
@@ -187,11 +187,11 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of an **educationuser** object.
+     * Update the relatedContact collection of an educationUser object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationUser
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/relatedcontact-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> patch(@javax.annotation.Nonnull final EducationUser body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -265,7 +265,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an **educationuser** object.
+     * Update the relatedContact collection of an educationUser object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -274,7 +274,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an **educationuser** object.
+     * Update the relatedContact collection of an educationUser object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

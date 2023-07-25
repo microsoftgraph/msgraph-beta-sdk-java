@@ -96,9 +96,9 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @return a CompletableFuture of meetingRegistration
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/externalmeetingregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistration> get() {
@@ -115,10 +115,10 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of meetingRegistration
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/externalmeetingregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -204,7 +204,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -212,7 +212,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -270,7 +270,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      */
     public class GetQueryParameters {
         /**

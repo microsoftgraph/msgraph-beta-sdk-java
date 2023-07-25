@@ -53,7 +53,7 @@ public class MarkAsNotJunkPostRequestBody implements AdditionalDataHolder, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the moveToInbox property value. The MoveToInbox property
+     * Gets the MoveToInbox property value. The MoveToInbox property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class MarkAsNotJunkPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -81,7 +81,7 @@ public class MarkAsNotJunkPostRequestBody implements AdditionalDataHolder, Parsa
         this.additionalData = value;
     }
     /**
-     * Sets the moveToInbox property value. The MoveToInbox property
+     * Sets the MoveToInbox property value. The MoveToInbox property
      * @param value Value to set for the MoveToInbox property.
      * @return a void
      */

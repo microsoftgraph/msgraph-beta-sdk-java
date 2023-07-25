@@ -7,12 +7,13 @@ import com.microsoft.graph.models.devicemanagement.AlertRecord;
 import com.microsoft.graph.models.devicemanagement.AlertRule;
 import com.microsoft.graph.models.devicemanagement.Monitoring;
 import com.microsoft.graph.models.ediscovery.AddToReviewSetOperation;
-import com.microsoft.graph.models.ediscovery.CaseEscaped;
 import com.microsoft.graph.models.ediscovery.CaseExportOperation;
 import com.microsoft.graph.models.ediscovery.CaseHoldOperation;
 import com.microsoft.graph.models.ediscovery.CaseIndexOperation;
+import com.microsoft.graph.models.ediscovery.CaseOperation;
 import com.microsoft.graph.models.ediscovery.CaseSettings;
 import com.microsoft.graph.models.ediscovery.Custodian;
+import com.microsoft.graph.models.ediscovery.DataSource;
 import com.microsoft.graph.models.ediscovery.Ediscoveryroot;
 import com.microsoft.graph.models.ediscovery.EstimateStatisticsOperation;
 import com.microsoft.graph.models.ediscovery.LegalHold;
@@ -22,8 +23,9 @@ import com.microsoft.graph.models.ediscovery.ReviewSet;
 import com.microsoft.graph.models.ediscovery.ReviewSetQuery;
 import com.microsoft.graph.models.ediscovery.SiteSource;
 import com.microsoft.graph.models.ediscovery.SourceCollection;
+import com.microsoft.graph.models.ediscovery.Tag;
 import com.microsoft.graph.models.ediscovery.TagOperation;
-import com.microsoft.graph.models.ediscovery.UnifiedGroupSource;
+import com.microsoft.graph.models.ediscovery.UserSource;
 import com.microsoft.graph.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.models.externalconnectors.ConnectionQuota;
 import com.microsoft.graph.models.externalconnectors.ExternalActivity;
@@ -130,14 +132,14 @@ import com.microsoft.graph.models.security.Article;
 import com.microsoft.graph.models.security.ArticleIndicator;
 import com.microsoft.graph.models.security.Artifact;
 import com.microsoft.graph.models.security.AuthorityTemplate;
-import com.microsoft.graph.models.security.CaseOperation;
+import com.microsoft.graph.models.security.CaseEscaped;
 import com.microsoft.graph.models.security.CasesRoot;
 import com.microsoft.graph.models.security.CategoryTemplate;
 import com.microsoft.graph.models.security.CitationTemplate;
 import com.microsoft.graph.models.security.DataSet;
-import com.microsoft.graph.models.security.DataSource;
 import com.microsoft.graph.models.security.DataSourceContainer;
 import com.microsoft.graph.models.security.DepartmentTemplate;
+import com.microsoft.graph.models.security.DetectionRule;
 import com.microsoft.graph.models.security.DispositionReviewStage;
 import com.microsoft.graph.models.security.EdiscoveryAddToReviewSetOperation;
 import com.microsoft.graph.models.security.EdiscoveryCase;
@@ -183,6 +185,7 @@ import com.microsoft.graph.models.security.IpAddress;
 import com.microsoft.graph.models.security.LabelsRoot;
 import com.microsoft.graph.models.security.PassiveDnsRecord;
 import com.microsoft.graph.models.security.PolicyBase;
+import com.microsoft.graph.models.security.ProtectionRule;
 import com.microsoft.graph.models.security.RetentionEvent;
 import com.microsoft.graph.models.security.RetentionEventType;
 import com.microsoft.graph.models.security.RetentionLabel;
@@ -191,15 +194,14 @@ import com.microsoft.graph.models.security.Security;
 import com.microsoft.graph.models.security.SensitivityLabel;
 import com.microsoft.graph.models.security.SubCategoryTemplate;
 import com.microsoft.graph.models.security.Subdomain;
-import com.microsoft.graph.models.security.Tag;
 import com.microsoft.graph.models.security.ThreatIntelligence;
 import com.microsoft.graph.models.security.ThreatSubmission;
 import com.microsoft.graph.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.models.security.TriggersRoot;
 import com.microsoft.graph.models.security.TriggerTypesRoot;
 import com.microsoft.graph.models.security.UnclassifiedArtifact;
+import com.microsoft.graph.models.security.UnifiedGroupSource;
 import com.microsoft.graph.models.security.UrlThreatSubmission;
-import com.microsoft.graph.models.security.UserSource;
 import com.microsoft.graph.models.security.Vulnerability;
 import com.microsoft.graph.models.security.VulnerabilityComponent;
 import com.microsoft.graph.models.termstore.Group;
@@ -483,6 +485,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.b2xIdentityUserFlow": return new B2xIdentityUserFlow();
             case "#microsoft.graph.baseItem": return new BaseItem();
             case "#microsoft.graph.baseItemVersion": return new BaseItemVersion();
+            case "#microsoft.graph.baseSitePage": return new BaseSitePage();
             case "#microsoft.graph.bitlocker": return new Bitlocker();
             case "#microsoft.graph.bitlockerRecoveryKey": return new BitlockerRecoveryKey();
             case "#microsoft.graph.bookingAppointment": return new BookingAppointment();
@@ -546,6 +549,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.cloudPcDeviceImage": return new CloudPcDeviceImage();
             case "#microsoft.graph.cloudPcExportJob": return new CloudPcExportJob();
             case "#microsoft.graph.cloudPcExternalPartnerSetting": return new CloudPcExternalPartnerSetting();
+            case "#microsoft.graph.cloudPcFrontLineServicePlan": return new CloudPcFrontLineServicePlan();
             case "#microsoft.graph.cloudPcGalleryImage": return new CloudPcGalleryImage();
             case "#microsoft.graph.cloudPcOnPremisesConnection": return new CloudPcOnPremisesConnection();
             case "#microsoft.graph.cloudPcOrganizationSettings": return new CloudPcOrganizationSettings();
@@ -787,8 +791,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.ediscovery.noncustodialDataSource": return new NoncustodialDataSource();
             case "#microsoft.graph.ediscovery.purgeDataOperation": return new PurgeDataOperation();
             case "#microsoft.graph.ediscovery.reviewSet": return new ReviewSet();
-            case "#microsoft.graph.ediscovery.reviewSetQuery": return new ReviewSetQuery();
-            case "#microsoft.graph.ediscovery.siteSource": return new SiteSource();
         }
         return null;
     }
@@ -800,6 +802,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.ediscovery.reviewSetQuery": return new ReviewSetQuery();
+            case "#microsoft.graph.ediscovery.siteSource": return new SiteSource();
             case "#microsoft.graph.ediscovery.sourceCollection": return new SourceCollection();
             case "#microsoft.graph.ediscovery.tag": return new Tag();
             case "#microsoft.graph.ediscovery.tagOperation": return new TagOperation();
@@ -1298,8 +1302,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.participant": return new Participant();
             case "#microsoft.graph.participantJoiningNotification": return new ParticipantJoiningNotification();
             case "#microsoft.graph.participantLeftNotification": return new ParticipantLeftNotification();
-            case "#microsoft.graph.passwordAuthenticationMethod": return new PasswordAuthenticationMethod();
-            case "#microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod": return new PasswordlessMicrosoftAuthenticatorAuthenticationMethod();
         }
         return null;
     }
@@ -1311,6 +1313,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@javax.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.passwordAuthenticationMethod": return new PasswordAuthenticationMethod();
+            case "#microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod": return new PasswordlessMicrosoftAuthenticatorAuthenticationMethod();
             case "#microsoft.graph.payload": return new Payload();
             case "#microsoft.graph.payloadCompatibleAssignmentFilter": return new PayloadCompatibleAssignmentFilter();
             case "#microsoft.graph.payloadResponse": return new PayloadResponse();
@@ -1473,6 +1477,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.security.dataSource": return new DataSource();
             case "#microsoft.graph.security.dataSourceContainer": return new DataSourceContainer();
             case "#microsoft.graph.security.departmentTemplate": return new DepartmentTemplate();
+            case "#microsoft.graph.security.detectionRule": return new DetectionRule();
             case "#microsoft.graph.security.dispositionReviewStage": return new DispositionReviewStage();
             case "#microsoft.graph.security.ediscoveryAddToReviewSetOperation": return new EdiscoveryAddToReviewSetOperation();
             case "#microsoft.graph.security.ediscoveryCase": return new EdiscoveryCase();
@@ -1518,6 +1523,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.security.labelsRoot": return new LabelsRoot();
             case "#microsoft.graph.security.passiveDnsRecord": return new PassiveDnsRecord();
             case "#microsoft.graph.security.policyBase": return new PolicyBase();
+            case "#microsoft.graph.security.protectionRule": return new ProtectionRule();
             case "#microsoft.graph.security.retentionEvent": return new RetentionEvent();
             case "#microsoft.graph.security.retentionEventType": return new RetentionEventType();
             case "#microsoft.graph.security.retentionLabel": return new RetentionLabel();
@@ -1807,10 +1813,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.windows10EnrollmentCompletionPageConfiguration": return new Windows10EnrollmentCompletionPageConfiguration();
             case "#microsoft.graph.windows10EnrollmentCompletionPageConfigurationPolicySetItem": return new Windows10EnrollmentCompletionPageConfigurationPolicySetItem();
             case "#microsoft.graph.windows10EnterpriseModernAppManagementConfiguration": return new Windows10EnterpriseModernAppManagementConfiguration();
-            case "#microsoft.graph.windows10GeneralConfiguration": return new Windows10GeneralConfiguration();
-            case "#microsoft.graph.windows10ImportedPFXCertificateProfile": return new Windows10ImportedPFXCertificateProfile();
-            case "#microsoft.graph.windows10MobileCompliancePolicy": return new Windows10MobileCompliancePolicy();
-            case "#microsoft.graph.windows10NetworkBoundaryConfiguration": return new Windows10NetworkBoundaryConfiguration();
         }
         return null;
     }
@@ -1822,6 +1824,10 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_3(@javax.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.windows10GeneralConfiguration": return new Windows10GeneralConfiguration();
+            case "#microsoft.graph.windows10ImportedPFXCertificateProfile": return new Windows10ImportedPFXCertificateProfile();
+            case "#microsoft.graph.windows10MobileCompliancePolicy": return new Windows10MobileCompliancePolicy();
+            case "#microsoft.graph.windows10NetworkBoundaryConfiguration": return new Windows10NetworkBoundaryConfiguration();
             case "#microsoft.graph.windows10PFXImportCertificateProfile": return new Windows10PFXImportCertificateProfile();
             case "#microsoft.graph.windows10PkcsCertificateProfile": return new Windows10PkcsCertificateProfile();
             case "#microsoft.graph.windows10SecureAssessmentConfiguration": return new Windows10SecureAssessmentConfiguration();
@@ -2031,7 +2037,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -2049,7 +2055,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
