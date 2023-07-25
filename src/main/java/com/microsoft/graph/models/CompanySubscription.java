@@ -29,7 +29,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Commerce Subscription Id.
-     * 
+     * The ID of this subscription in the commerce system. Alternate key.
      */
     @SerializedName(value = "commerceSubscriptionId", alternate = {"CommerceSubscriptionId"})
     @Expose
@@ -38,7 +38,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time when this subscription was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -47,7 +47,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Trial.
-     * 
+     * Whether the subscription is a free trial or purchased.
      */
     @SerializedName(value = "isTrial", alternate = {"IsTrial"})
     @Expose
@@ -56,7 +56,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Next Lifecycle Date Time.
-     * 
+     * The date and time when the subscription will move to the next state (as defined by the status property) if not renewed by the tenant. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "nextLifecycleDateTime", alternate = {"NextLifecycleDateTime"})
     @Expose
@@ -74,7 +74,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner Id.
-     * 
+     * The object ID of the account admin.
      */
     @SerializedName(value = "ownerId", alternate = {"OwnerId"})
     @Expose
@@ -83,7 +83,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner Tenant Id.
-     * 
+     * The unique identifier for the Microsoft partner tenant that created the subscription on a customer tenant.
      */
     @SerializedName(value = "ownerTenantId", alternate = {"OwnerTenantId"})
     @Expose
@@ -92,7 +92,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner Type.
-     * 
+     * Indicates the entity that ownerId belongs to, for example, 'User'.
      */
     @SerializedName(value = "ownerType", alternate = {"OwnerType"})
     @Expose
@@ -101,7 +101,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Status.
-     * 
+     * The provisioning status of each service that's included in this subscription.
      */
     @SerializedName(value = "serviceStatus", alternate = {"ServiceStatus"})
     @Expose
@@ -110,7 +110,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Id.
-     * 
+     * The object ID of the SKU associated with this subscription.
      */
     @SerializedName(value = "skuId", alternate = {"SkuId"})
     @Expose
@@ -119,7 +119,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Part Number.
-     * 
+     * The SKU associated with this subscription.
      */
     @SerializedName(value = "skuPartNumber", alternate = {"SkuPartNumber"})
     @Expose
@@ -128,7 +128,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of this subscription. Possible values are: Enabled, Expired, Suspended, Warning, LockedOut.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -137,7 +137,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Total Licenses.
-     * 
+     * The number of seats included in this subscription.
      */
     @SerializedName(value = "totalLicenses", alternate = {"TotalLicenses"})
     @Expose

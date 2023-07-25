@@ -9,14 +9,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ContentTypeInfo;
-import com.microsoft.graph.models.PageLayoutType;
 import com.microsoft.graph.models.PagePromotionType;
-import com.microsoft.graph.models.PublicationFacet;
 import com.microsoft.graph.models.ReactionsFacet;
 import com.microsoft.graph.models.TitleArea;
 import com.microsoft.graph.models.CanvasLayout;
-import com.microsoft.graph.models.BaseItem;
+import com.microsoft.graph.models.BaseSitePage;
 import com.microsoft.graph.requests.WebPartCollectionPage;
 
 
@@ -31,26 +28,8 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Site Page.
  */
-public class SitePage extends BaseItem implements IJsonBackedObject {
+public class SitePage extends BaseSitePage implements IJsonBackedObject {
 
-
-    /**
-     * The Content Type.
-     * 
-     */
-    @SerializedName(value = "contentType", alternate = {"ContentType"})
-    @Expose
-	@Nullable
-    public ContentTypeInfo contentType;
-
-    /**
-     * The Page Layout.
-     * 
-     */
-    @SerializedName(value = "pageLayout", alternate = {"PageLayout"})
-    @Expose
-	@Nullable
-    public PageLayoutType pageLayout;
 
     /**
      * The Promotion Kind.
@@ -60,15 +39,6 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
     @Expose
 	@Nullable
     public PagePromotionType promotionKind;
-
-    /**
-     * The Publishing State.
-     * 
-     */
-    @SerializedName(value = "publishingState", alternate = {"PublishingState"})
-    @Expose
-	@Nullable
-    public PublicationFacet publishingState;
 
     /**
      * The Reactions.
@@ -105,15 +75,6 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String thumbnailWebUrl;
-
-    /**
-     * The Title.
-     * 
-     */
-    @SerializedName(value = "title", alternate = {"Title"})
-    @Expose
-	@Nullable
-    public String title;
 
     /**
      * The Title Area.

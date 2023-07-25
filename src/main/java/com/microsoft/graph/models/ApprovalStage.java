@@ -86,7 +86,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Primary Approvers.
-     * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors. When creating or updating a policy, include at least one userSet in this collection.
+     * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
      */
     @SerializedName(value = "primaryApprovers", alternate = {"PrimaryApprovers"})
     @Expose

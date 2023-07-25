@@ -66,4 +66,24 @@ public class InvitationRequestBuilder extends BaseRequestBuilder<Invitation> {
     public com.microsoft.graph.requests.UserWithReferenceRequestBuilder invitedUser() {
         return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("invitedUser"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder invitedUserSponsors() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("invitedUserSponsors"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder invitedUserSponsors(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("invitedUserSponsors") + "/" + id, getClient(), null);
+    }
 }

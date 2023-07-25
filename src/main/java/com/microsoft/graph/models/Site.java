@@ -24,7 +24,7 @@ import com.microsoft.graph.requests.ContentTypeCollectionPage;
 import com.microsoft.graph.requests.BaseItemCollectionPage;
 import com.microsoft.graph.requests.ListCollectionPage;
 import com.microsoft.graph.requests.RichLongRunningOperationCollectionPage;
-import com.microsoft.graph.requests.SitePageCollectionPage;
+import com.microsoft.graph.requests.BaseSitePageCollectionPage;
 import com.microsoft.graph.requests.PermissionCollectionPage;
 import com.microsoft.graph.requests.SiteCollectionPage;
 
@@ -192,7 +192,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "pages", alternate = {"Pages"})
     @Expose
 	@Nullable
-    public com.microsoft.graph.requests.SitePageCollectionPage pages;
+    public com.microsoft.graph.requests.BaseSitePageCollectionPage pages;
 
     /**
      * The Permissions.
@@ -269,7 +269,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
         }
 
         if (json.has("pages")) {
-            pages = serializer.deserializeObject(json.get("pages"), com.microsoft.graph.requests.SitePageCollectionPage.class);
+            pages = serializer.deserializeObject(json.get("pages"), com.microsoft.graph.requests.BaseSitePageCollectionPage.class);
         }
 
         if (json.has("permissions")) {

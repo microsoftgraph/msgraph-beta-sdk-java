@@ -958,7 +958,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sponsors.
-     * 
+     * The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage sponsors;
