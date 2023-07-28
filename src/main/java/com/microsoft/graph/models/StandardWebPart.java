@@ -27,6 +27,15 @@ public class StandardWebPart extends WebPart implements IJsonBackedObject {
 
 
     /**
+     * The Container Text Web Part Id.
+     * The instance identifier of the container text webPart. It only works for inline standard webPart in rich text webParts.
+     */
+    @SerializedName(value = "containerTextWebPartId", alternate = {"ContainerTextWebPartId"})
+    @Expose
+	@Nullable
+    public String containerTextWebPartId;
+
+    /**
      * The Data.
      * Data of the webPart.
      */

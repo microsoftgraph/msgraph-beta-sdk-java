@@ -252,24 +252,24 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
         return new com.microsoft.graph.requests.RichLongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the SitePage collection
+     *  Gets a request builder for the BaseSitePage collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.SitePageCollectionRequestBuilder pages() {
-        return new com.microsoft.graph.requests.SitePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
+    public com.microsoft.graph.requests.BaseSitePageCollectionRequestBuilder pages() {
+        return new com.microsoft.graph.requests.BaseSitePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the SitePage item
+     * Gets a request builder for the BaseSitePage item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.SitePageRequestBuilder pages(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.SitePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BaseSitePageRequestBuilder pages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BaseSitePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Permission collection

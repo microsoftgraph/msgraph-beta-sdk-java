@@ -44,7 +44,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Applicability.
-     * Details which device setting is applicable on
+     * Details which device setting is applicable on. Supports: $filters.
      */
     @SerializedName(value = "applicability", alternate = {"Applicability"})
     @Expose
@@ -62,7 +62,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Category Id.
-     * Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
+     * Specify category in which the setting is under. Support $filters.
      */
     @SerializedName(value = "categoryId", alternate = {"CategoryId"})
     @Expose
@@ -71,7 +71,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Description.
-     * Description of the item
+     * Description of the setting.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -80,7 +80,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Display Name.
-     * Display name of the item
+     * Name of the setting. For example: Allow Toast.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -89,7 +89,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Help Text.
-     * Help text of the item
+     * Help text of the setting. Give more details of the setting.
      */
     @SerializedName(value = "helpText", alternate = {"HelpText"})
     @Expose
@@ -98,7 +98,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Info Urls.
-     * List of links more info for the setting can be found at
+     * List of links more info for the setting can be found at.
      */
     @SerializedName(value = "infoUrls", alternate = {"InfoUrls"})
     @Expose
@@ -152,7 +152,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Root Definition Id.
-     * Root setting definition if the setting is a child setting.
+     * Root setting definition id if the setting is a child setting.
      */
     @SerializedName(value = "rootDefinitionId", alternate = {"RootDefinitionId"})
     @Expose
@@ -161,7 +161,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Setting Usage.
-     * Setting type, for example, configuration and compliance. Possible values are: none, configuration, compliance.
+     * Indicate setting type for the setting. Possible values are: configuration, compliance, reusableSetting. Each setting usage has separate API end-point to call. Possible values are: none, configuration, compliance, unknownFutureValue.
      */
     @SerializedName(value = "settingUsage", alternate = {"SettingUsage"})
     @Expose
@@ -170,7 +170,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Ux Behavior.
-     * Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane.
+     * Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane, unknownFutureValue.
      */
     @SerializedName(value = "uxBehavior", alternate = {"UxBehavior"})
     @Expose
@@ -188,7 +188,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Visibility.
-     * Setting visibility scope to UX. Possible values are: none, settingsCatalog, template.
+     * Setting visibility scope to UX. Possible values are: none, settingsCatalog, template. Possible values are: none, settingsCatalog, template, unknownFutureValue.
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose

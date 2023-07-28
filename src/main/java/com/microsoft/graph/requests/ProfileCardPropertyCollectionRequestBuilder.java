@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.OrganizationSettings;
+import com.microsoft.graph.models.PeopleAdminSettings;
 import com.microsoft.graph.models.ProfileCardProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class ProfileCardPropertyCollectionRequestBuilder extends BaseCollectionRequestBuilder<ProfileCardProperty, ProfileCardPropertyRequestBuilder, ProfileCardPropertyCollectionResponse, ProfileCardPropertyCollectionPage, ProfileCardPropertyCollectionRequest> {
 
     /**
-     * The request builder for this collection of OrganizationSettings
+     * The request builder for this collection of PeopleAdminSettings
      *
      * @param requestUrl     the request URL
      * @param client         the service client

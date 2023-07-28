@@ -8,8 +8,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PronounsSettings;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.ProfileCardPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -25,6 +27,15 @@ import javax.annotation.Nonnull;
  */
 public class PeopleAdminSettings extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Profile Card Properties.
+     * 
+     */
+    @SerializedName(value = "profileCardProperties", alternate = {"ProfileCardProperties"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.ProfileCardPropertyCollectionPage profileCardProperties;
 
     /**
      * The Pronouns.
@@ -44,5 +55,9 @@ public class PeopleAdminSettings extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("profileCardProperties")) {
+            profileCardProperties = serializer.deserializeObject(json.get("profileCardProperties"), com.microsoft.graph.requests.ProfileCardPropertyCollectionPage.class);
+        }
     }
 }

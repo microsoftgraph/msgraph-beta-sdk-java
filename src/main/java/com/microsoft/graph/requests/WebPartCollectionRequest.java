@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.HorizontalSectionColumn;
+import com.microsoft.graph.models.SitePage;
 import com.microsoft.graph.models.WebPart;
 import com.microsoft.graph.models.WebPartPosition;
 import java.util.Arrays;

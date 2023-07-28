@@ -149,7 +149,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Subscriptions.
-     * 
+     * List of commercial subscriptions that an organization has acquired.
      */
     @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose

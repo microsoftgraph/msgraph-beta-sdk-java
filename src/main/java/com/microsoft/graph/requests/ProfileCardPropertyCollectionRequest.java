@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.OrganizationSettings;
+import com.microsoft.graph.models.PeopleAdminSettings;
 import com.microsoft.graph.models.ProfileCardProperty;
 import java.util.Arrays;
 import java.util.EnumSet;

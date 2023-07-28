@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.HorizontalSectionColumn;
+import com.microsoft.graph.models.SitePage;
 import com.microsoft.graph.models.WebPart;
 import com.microsoft.graph.models.WebPartPosition;
 import java.util.Arrays;
@@ -29,7 +29,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class WebPartCollectionRequestBuilder extends BaseCollectionRequestBuilder<WebPart, WebPartRequestBuilder, WebPartCollectionResponse, WebPartCollectionPage, WebPartCollectionRequest> {
 
     /**
-     * The request builder for this collection of HorizontalSectionColumn
+     * The request builder for this collection of SitePage
      *
      * @param requestUrl     the request URL
      * @param client         the service client

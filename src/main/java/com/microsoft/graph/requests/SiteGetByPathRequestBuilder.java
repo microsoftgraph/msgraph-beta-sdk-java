@@ -265,24 +265,24 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site
         return new RichLongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the SitePage collection
+     *  Gets a request builder for the BaseSitePage collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public SitePageCollectionRequestBuilder pages() {
-        return new SitePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
+    public BaseSitePageCollectionRequestBuilder pages() {
+        return new BaseSitePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the SitePage item
+     * Gets a request builder for the BaseSitePage item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public SitePageRequestBuilder pages(@Nonnull final String id) {
-        return new SitePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
+    public BaseSitePageRequestBuilder pages(@Nonnull final String id) {
+        return new BaseSitePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Permission collection

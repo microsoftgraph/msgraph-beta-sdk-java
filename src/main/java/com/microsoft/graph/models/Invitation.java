@@ -8,9 +8,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.InvitedUserMessageInfo;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -117,6 +119,13 @@ public class Invitation extends Entity implements IJsonBackedObject {
 	@Nullable
     public User invitedUser;
 
+    /**
+     * The Invited User Sponsors.
+     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     */
+	@Nullable
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage invitedUserSponsors;
+
 
     /**
      * Sets the raw JSON object
@@ -126,5 +135,9 @@ public class Invitation extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("invitedUserSponsors")) {
+            invitedUserSponsors = serializer.deserializeObject(json.get("invitedUserSponsors"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+        }
     }
 }

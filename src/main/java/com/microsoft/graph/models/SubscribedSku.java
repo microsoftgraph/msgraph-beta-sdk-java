@@ -30,7 +30,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Account Id.
-     * 
+     * The unique ID of the account this SKU belongs to.
      */
     @SerializedName(value = "accountId", alternate = {"AccountId"})
     @Expose
@@ -39,7 +39,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Account Name.
-     * 
+     * The name of the account this SKU belongs to.
      */
     @SerializedName(value = "accountName", alternate = {"AccountName"})
     @Expose
@@ -48,7 +48,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Applies To.
-     * For example, 'User' or 'Company'.
+     * The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: User, Company.
      */
     @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
@@ -57,7 +57,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-     * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
+     * Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer cancelled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      */
     @SerializedName(value = "capabilityStatus", alternate = {"CapabilityStatus"})
     @Expose
@@ -102,7 +102,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Part Number.
-     * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
+     * The SKU part number; for example, AAD_PREMIUM or RMSBASIC. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      */
     @SerializedName(value = "skuPartNumber", alternate = {"SkuPartNumber"})
     @Expose
