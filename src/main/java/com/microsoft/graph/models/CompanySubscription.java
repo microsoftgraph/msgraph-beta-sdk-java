@@ -66,7 +66,9 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
     /**
      * The Ocp Subscription Id.
      * 
+     * @deprecated The property ocpSubscriptionId is deprecated and will be removed on August 31, 2023. Please use commerceSubscriptionId instead.
      */
+    @Deprecated
     @SerializedName(value = "ocpSubscriptionId", alternate = {"OcpSubscriptionId"})
     @Expose
 	@Nullable

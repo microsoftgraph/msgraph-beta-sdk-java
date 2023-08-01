@@ -31,7 +31,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Principal Types.
-     * 
+     * Types of principals that can be assigned the role. Read-only. The possible values are: user, servicePrincipal, group, unknownFutureValue. This is a multi-valued enumeration that can contain up to three values as a comma-separated string. For example, user, group. Supports $filter (eq).
      */
     @SerializedName(value = "allowedPrincipalTypes", alternate = {"AllowedPrincipalTypes"})
     @Expose
@@ -49,7 +49,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
+     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,7 +58,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Built In.
-     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
+     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq).
      */
     @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
     @Expose
@@ -85,7 +85,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Scopes.
-     * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
+     * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
      */
     @SerializedName(value = "resourceScopes", alternate = {"ResourceScopes"})
     @Expose
@@ -112,7 +112,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
+     * Indicates the version of the unifiedRoleDefinition object. Read-only when isBuiltIn is true.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

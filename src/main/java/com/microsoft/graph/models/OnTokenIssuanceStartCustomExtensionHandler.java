@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CustomExtensionOverwriteConfiguration;
 import com.microsoft.graph.models.OnTokenIssuanceStartCustomExtension;
 import com.microsoft.graph.models.OnTokenIssuanceStartHandler;
 
@@ -25,6 +26,15 @@ import javax.annotation.Nonnull;
  */
 public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceStartHandler implements IJsonBackedObject {
 
+
+    /**
+     * The Configuration.
+     * 
+     */
+    @SerializedName(value = "configuration", alternate = {"Configuration"})
+    @Expose
+	@Nullable
+    public CustomExtensionOverwriteConfiguration configuration;
 
     /**
      * The Custom Extension.

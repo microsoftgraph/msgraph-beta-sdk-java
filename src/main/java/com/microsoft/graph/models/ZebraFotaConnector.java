@@ -28,7 +28,7 @@ public class ZebraFotaConnector extends Entity implements IJsonBackedObject {
 
     /**
      * The Enrollment Authorization Url.
-     * Complete account enrollment authorization URL. This corresponds to verification_uri_complete in the Zebra API documentations.
+     * Complete account enrollment authorization URL. This corresponds to verificationuricomplete in the Zebra API documentations.
      */
     @SerializedName(value = "enrollmentAuthorizationUrl", alternate = {"EnrollmentAuthorizationUrl"})
     @Expose
