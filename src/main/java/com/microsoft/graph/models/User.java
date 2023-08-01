@@ -554,7 +554,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     private java.util.List<String> skills;
     /**
-     * The sponsors property
+     * The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      */
     private java.util.List<DirectoryObject> sponsors;
     /**
@@ -1871,7 +1871,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.skills;
     }
     /**
-     * Gets the sponsors property value. The sponsors property
+     * Gets the sponsors property value. The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -3358,7 +3358,7 @@ public class User extends DirectoryObject implements Parsable {
         this.skills = value;
     }
     /**
-     * Sets the sponsors property value. The sponsors property
+     * Sets the sponsors property value. The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @param value Value to set for the sponsors property.
      * @return a void
      */

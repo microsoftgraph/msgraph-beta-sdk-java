@@ -29,6 +29,10 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      */
     private Boolean localAdminEnabled;
     /**
+     * Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
+     */
+    private Boolean resetEnabled;
+    /**
      * Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
      */
     private CloudPcRestorePointSetting restorePointSetting;
@@ -90,6 +94,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("localAdminEnabled", (n) -> { this.setLocalAdminEnabled(n.getBooleanValue()); });
+        deserializerMap.put("resetEnabled", (n) -> { this.setResetEnabled(n.getBooleanValue()); });
         deserializerMap.put("restorePointSetting", (n) -> { this.setRestorePointSetting(n.getObjectValue(CloudPcRestorePointSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("selfServiceEnabled", (n) -> { this.setSelfServiceEnabled(n.getBooleanValue()); });
         return deserializerMap;
@@ -109,6 +114,14 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Boolean getLocalAdminEnabled() {
         return this.localAdminEnabled;
+    }
+    /**
+     * Gets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getResetEnabled() {
+        return this.resetEnabled;
     }
     /**
      * Gets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
@@ -140,6 +153,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeBooleanValue("localAdminEnabled", this.getLocalAdminEnabled());
+        writer.writeBooleanValue("resetEnabled", this.getResetEnabled());
         writer.writeObjectValue("restorePointSetting", this.getRestorePointSetting());
         writer.writeBooleanValue("selfServiceEnabled", this.getSelfServiceEnabled());
     }
@@ -187,6 +201,15 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setLocalAdminEnabled(@javax.annotation.Nullable final Boolean value) {
         this.localAdminEnabled = value;
+    }
+    /**
+     * Sets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
+     * @param value Value to set for the resetEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setResetEnabled(@javax.annotation.Nullable final Boolean value) {
+        this.resetEnabled = value;
     }
     /**
      * Sets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.

@@ -65,7 +65,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of securityAction objects.
      * @return a CompletableFuture of securityActionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/securityactions-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/securityactions-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityActionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of securityAction objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of securityActionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/securityactions-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/securityactions-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityActionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * Create a new securityAction object.
      * @param body The request body
      * @return a CompletableFuture of securityAction
-     * @see <a href="https://docs.microsoft.com/graph/api/securityactions-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/securityactions-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityAction> post(@javax.annotation.Nonnull final SecurityAction body) {
@@ -126,7 +126,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of securityAction
-     * @see <a href="https://docs.microsoft.com/graph/api/securityactions-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/securityactions-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityAction> post(@javax.annotation.Nonnull final SecurityAction body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -66,6 +66,10 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     private String printerId;
     /**
+     * The printer name that the job was queued for. Read-only.
+     */
+    private String printerName;
+    /**
      * The processingState property
      */
     private PrintJobProcessingState processingState;
@@ -177,7 +181,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(16);
         deserializerMap.put("acquiredByPrinter", (n) -> { this.setAcquiredByPrinter(n.getBooleanValue()); });
         deserializerMap.put("acquiredDateTime", (n) -> { this.setAcquiredDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("blackAndWhitePageCount", (n) -> { this.setBlackAndWhitePageCount(n.getIntegerValue()); });
@@ -191,6 +195,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("pageCount", (n) -> { this.setPageCount(n.getIntegerValue()); });
         deserializerMap.put("printerId", (n) -> { this.setPrinterId(n.getStringValue()); });
+        deserializerMap.put("printerName", (n) -> { this.setPrinterName(n.getStringValue()); });
         deserializerMap.put("processingState", (n) -> { this.setProcessingState(n.getEnumValue(PrintJobProcessingState.class)); });
         deserializerMap.put("simplexPageCount", (n) -> { this.setSimplexPageCount(n.getIntegerValue()); });
         return deserializerMap;
@@ -226,6 +231,14 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getPrinterId() {
         return this.printerId;
+    }
+    /**
+     * Gets the printerName property value. The printer name that the job was queued for. Read-only.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getPrinterName() {
+        return this.printerName;
     }
     /**
      * Gets the processingState property value. The processingState property
@@ -264,6 +277,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("pageCount", this.getPageCount());
         writer.writeStringValue("printerId", this.getPrinterId());
+        writer.writeStringValue("printerName", this.getPrinterName());
         writer.writeEnumValue("processingState", this.getProcessingState());
         writer.writeIntegerValue("simplexPageCount", this.getSimplexPageCount());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -288,7 +302,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -369,7 +383,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -393,6 +407,15 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setPrinterId(@javax.annotation.Nullable final String value) {
         this.printerId = value;
+    }
+    /**
+     * Sets the printerName property value. The printer name that the job was queued for. Read-only.
+     * @param value Value to set for the printerName property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPrinterName(@javax.annotation.Nullable final String value) {
+        this.printerName = value;
     }
     /**
      * Sets the processingState property value. The processingState property

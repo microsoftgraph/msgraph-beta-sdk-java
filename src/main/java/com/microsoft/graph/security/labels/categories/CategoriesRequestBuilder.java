@@ -65,7 +65,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the categoryTemplate objects and their properties.
      * @return a CompletableFuture of categoryTemplateCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-list-categories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CategoryTemplateCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
      * Get a list of the categoryTemplate objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of categoryTemplateCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-list-categories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CategoryTemplateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
      * Create a new categoryTemplate object.
      * @param body The request body
      * @return a CompletableFuture of categoryTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-post-categories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CategoryTemplate> post(@javax.annotation.Nonnull final CategoryTemplate body) {
@@ -126,7 +126,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of categoryTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-post-categories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CategoryTemplate> post(@javax.annotation.Nonnull final CategoryTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

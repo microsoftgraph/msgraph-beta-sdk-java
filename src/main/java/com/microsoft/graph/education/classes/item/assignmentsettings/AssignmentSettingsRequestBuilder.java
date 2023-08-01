@@ -88,7 +88,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an educationAssignmentSettings object. Only teachers can perform this operation.
      * @return a CompletableFuture of educationAssignmentSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignmentsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentSettings> get() {
@@ -108,7 +108,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an educationAssignmentSettings object. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignmentSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignmentsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationAssignmentSettings object. Only Teachers can update these settings.
      * @param body The request body
      * @return a CompletableFuture of educationAssignmentSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentSettings> patch(@javax.annotation.Nonnull final EducationAssignmentSettings body) {
@@ -149,7 +149,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignmentSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentSettings> patch(@javax.annotation.Nonnull final EducationAssignmentSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class ProjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of projectParticipation objects from a user's profile.
      * @return a CompletableFuture of projectParticipationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-projects?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-projects?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProjectParticipationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ProjectsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of projectParticipation objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of projectParticipationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-projects?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-projects?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProjectParticipationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ProjectsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new projectParticipation object in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of projectParticipation
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-projects?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-projects?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProjectParticipation> post(@javax.annotation.Nonnull final ProjectParticipation body) {
@@ -126,7 +126,7 @@ public class ProjectsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of projectParticipation
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-projects?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-projects?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProjectParticipation> post(@javax.annotation.Nonnull final ProjectParticipation body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

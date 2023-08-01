@@ -80,7 +80,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
     /**
      * Read the properties and relationships of a cloudPcExternalPartnerSetting object.
      * @return a CompletableFuture of cloudPcExternalPartnerSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/cloudpcexternalpartnersetting-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcExternalPartnerSetting> get() {
@@ -100,7 +100,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
      * Read the properties and relationships of a cloudPcExternalPartnerSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcExternalPartnerSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/cloudpcexternalpartnersetting-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcExternalPartnerSetting> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
      * Update the properties of a cloudPcExternalPartnerSetting object.
      * @param body The request body
      * @return a CompletableFuture of cloudPcExternalPartnerSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/cloudpcexternalpartnersetting-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcExternalPartnerSetting> patch(@javax.annotation.Nonnull final CloudPcExternalPartnerSetting body) {
@@ -141,7 +141,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcExternalPartnerSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/cloudpcexternalpartnersetting-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcExternalPartnerSetting> patch(@javax.annotation.Nonnull final CloudPcExternalPartnerSetting body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

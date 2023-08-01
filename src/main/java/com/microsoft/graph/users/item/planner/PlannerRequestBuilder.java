@@ -128,7 +128,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a plannerUser object. The returned properties include the user's favorite plans and recently viewed plans. 
      * @return a CompletableFuture of plannerUser
-     * @see <a href="https://docs.microsoft.com/graph/api/planneruser-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planneruser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerUser> get() {
@@ -148,7 +148,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a plannerUser object. The returned properties include the user's favorite plans and recently viewed plans. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerUser
-     * @see <a href="https://docs.microsoft.com/graph/api/planneruser-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planneruser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerUser> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -168,7 +168,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property planner in users
      * @param body The request body
      * @return a CompletableFuture of plannerUser
-     * @see <a href="https://docs.microsoft.com/graph/api/planneruser-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planneruser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerUser> patch(@javax.annotation.Nonnull final PlannerUser body) {
@@ -189,7 +189,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerUser
-     * @see <a href="https://docs.microsoft.com/graph/api/planneruser-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planneruser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerUser> patch(@javax.annotation.Nonnull final PlannerUser body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

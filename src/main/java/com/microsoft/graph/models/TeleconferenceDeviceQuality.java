@@ -26,7 +26,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     private String cloudServiceDeploymentId;
     /**
-     * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * The Azure deployed cloud service instance name, such as FrontEndIN3.
      */
     private String cloudServiceInstanceName;
     /**
@@ -108,7 +108,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
         return this.cloudServiceDeploymentId;
     }
     /**
-     * Gets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * Gets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -214,7 +214,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -249,7 +249,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
         this.cloudServiceDeploymentId = value;
     }
     /**
-     * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
      * @param value Value to set for the cloudServiceInstanceName property.
      * @return a void
      */
@@ -304,7 +304,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

@@ -14,7 +14,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      */
     private java.util.List<String> aliases;
     /**
-     * The countriesOrRegionsOfOrigin property
+     * The country/region of origin for the given actor or threat associated with this intelligenceProfile.
      */
     private java.util.List<IntelligenceProfileCountryOrRegionOfOrigin> countriesOrRegionsOfOrigin;
     /**
@@ -76,7 +76,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
         return this.aliases;
     }
     /**
-     * Gets the countriesOrRegionsOfOrigin property value. The countriesOrRegionsOfOrigin property
+     * Gets the countriesOrRegionsOfOrigin property value. The country/region of origin for the given actor or threat associated with this intelligenceProfile.
      * @return a intelligenceProfileCountryOrRegionOfOrigin
      */
     @javax.annotation.Nullable
@@ -196,7 +196,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
         this.aliases = value;
     }
     /**
-     * Sets the countriesOrRegionsOfOrigin property value. The countriesOrRegionsOfOrigin property
+     * Sets the countriesOrRegionsOfOrigin property value. The country/region of origin for the given actor or threat associated with this intelligenceProfile.
      * @param value Value to set for the countriesOrRegionsOfOrigin property.
      * @return a void
      */

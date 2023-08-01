@@ -1,10 +1,10 @@
 package com.microsoft.graph.models.windowsupdates;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public class GradualRolloutSettings implements AdditionalDataHolder, Parsable {
     /**
      * The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (1 day).
      */
-    private Period durationBetweenOffers;
+    private PeriodAndDuration durationBetweenOffers;
     /**
      * The OdataType property
      */
@@ -58,10 +58,10 @@ public class GradualRolloutSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the durationBetweenOffers property value. The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (1 day).
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDurationBetweenOffers() {
+    public PeriodAndDuration getDurationBetweenOffers() {
         return this.durationBetweenOffers;
     }
     /**
@@ -71,7 +71,7 @@ public class GradualRolloutSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("durationBetweenOffers", (n) -> { this.setDurationBetweenOffers(n.getPeriodValue()); });
+        deserializerMap.put("durationBetweenOffers", (n) -> { this.setDurationBetweenOffers(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -91,13 +91,13 @@ public class GradualRolloutSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writePeriodValue("durationBetweenOffers", this.getDurationBetweenOffers());
+        writer.writePeriodAndDurationValue("durationBetweenOffers", this.getDurationBetweenOffers());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -110,12 +110,12 @@ public class GradualRolloutSettings implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDurationBetweenOffers(@javax.annotation.Nullable final Period value) {
+    public void setDurationBetweenOffers(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.durationBetweenOffers = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

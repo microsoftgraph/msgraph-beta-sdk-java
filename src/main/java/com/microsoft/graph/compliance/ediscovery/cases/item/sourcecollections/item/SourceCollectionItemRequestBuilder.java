@@ -122,7 +122,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of void
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
-     * @see <a href="https://docs.microsoft.com/graph/api/ediscovery-sourcecollection-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -145,7 +145,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of void
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
-     * @see <a href="https://docs.microsoft.com/graph/api/ediscovery-sourcecollection-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -211,7 +211,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of sourceCollection
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
-     * @see <a href="https://docs.microsoft.com/graph/api/ediscovery-sourcecollection-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -235,7 +235,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of sourceCollection
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
-     * @see <a href="https://docs.microsoft.com/graph/api/ediscovery-sourcecollection-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated

@@ -65,7 +65,7 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the cloudPcExternalPartnerSetting objects and their properties.
      * @return a CompletableFuture of cloudPcExternalPartnerSettingCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-externalpartnersettings?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-externalpartnersettings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcExternalPartnerSettingCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the cloudPcExternalPartnerSetting objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcExternalPartnerSettingCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-externalpartnersettings?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-externalpartnersettings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcExternalPartnerSettingCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * Create a new cloudPcExternalPartnerSetting object.
      * @param body The request body
      * @return a CompletableFuture of cloudPcExternalPartnerSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-post-externalpartnersettings?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-externalpartnersettings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcExternalPartnerSetting> post(@javax.annotation.Nonnull final CloudPcExternalPartnerSetting body) {
@@ -126,7 +126,7 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcExternalPartnerSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-post-externalpartnersettings?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-externalpartnersettings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcExternalPartnerSetting> post(@javax.annotation.Nonnull final CloudPcExternalPartnerSetting body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

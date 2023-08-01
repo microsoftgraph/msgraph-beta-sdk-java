@@ -43,7 +43,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Delete a sourceSystemDefinition object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-sourcesystemdefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
      * Delete a sourceSystemDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-sourcesystemdefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Read the properties and relationships of a sourceSystemDefinition object.
      * @return a CompletableFuture of sourceSystemDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-sourcesystemdefinition-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SourceSystemDefinition> get() {
@@ -102,7 +102,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
      * Read the properties and relationships of a sourceSystemDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sourceSystemDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-sourcesystemdefinition-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SourceSystemDefinition> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
      * Update the properties of a sourceSystemDefinition object.
      * @param body The request body
      * @return a CompletableFuture of sourceSystemDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-sourcesystemdefinition-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SourceSystemDefinition> patch(@javax.annotation.Nonnull final SourceSystemDefinition body) {
@@ -143,7 +143,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sourceSystemDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-sourcesystemdefinition-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SourceSystemDefinition> patch(@javax.annotation.Nonnull final SourceSystemDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

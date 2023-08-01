@@ -59,7 +59,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     /**
      * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -79,7 +79,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
      * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
      * @return a CompletableFuture of meetingRegistration
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistration> get() {
@@ -118,7 +118,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
      * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of meetingRegistration
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
      * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
      * @param body The request body
      * @return a CompletableFuture of meetingRegistration
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistration> patch(@javax.annotation.Nonnull final MeetingRegistration body) {
@@ -159,7 +159,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of meetingRegistration
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistration> patch(@javax.annotation.Nonnull final MeetingRegistration body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

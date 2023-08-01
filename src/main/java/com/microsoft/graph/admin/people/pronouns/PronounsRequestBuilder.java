@@ -80,7 +80,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties of the pronounsSettings resource for an organization.  For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @return a CompletableFuture of pronounsSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/peopleadminsettings-list-pronouns?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-list-pronouns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PronounsSettings> get() {
@@ -100,7 +100,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
      * Get the properties of the pronounsSettings resource for an organization.  For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of pronounsSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/peopleadminsettings-list-pronouns?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-list-pronouns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PronounsSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a pronounsSettings in an organization. For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
      * @param body The request body
      * @return a CompletableFuture of pronounsSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/pronounssettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/pronounssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PronounsSettings> patch(@javax.annotation.Nonnull final PronounsSettings body) {
@@ -141,7 +141,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of pronounsSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/pronounssettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/pronounssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PronounsSettings> patch(@javax.annotation.Nonnull final PronounsSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

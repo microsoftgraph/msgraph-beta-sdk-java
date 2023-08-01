@@ -45,7 +45,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of void
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -68,7 +68,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of void
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -90,7 +90,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of identityUserFlow
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -113,7 +113,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of identityUserFlow
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated

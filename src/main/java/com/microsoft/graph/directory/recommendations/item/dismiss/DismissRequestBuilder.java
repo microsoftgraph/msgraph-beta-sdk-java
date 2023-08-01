@@ -40,10 +40,10 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/dismiss", rawUrl);
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its **status** to `dismissed` .
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
      * @param body The request body
      * @return a CompletableFuture of recommendation
-     * @see <a href="https://docs.microsoft.com/graph/api/recommendation-dismiss?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-dismiss?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Recommendation> post(@javax.annotation.Nonnull final DismissPostRequestBody body) {
@@ -60,11 +60,11 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its **status** to `dismissed` .
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of recommendation
-     * @see <a href="https://docs.microsoft.com/graph/api/recommendation-dismiss?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-dismiss?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Recommendation> post(@javax.annotation.Nonnull final DismissPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its **status** to `dismissed` .
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
      * @param body The request body
      * @return a RequestInformation
      */
@@ -91,7 +91,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its **status** to `dismissed` .
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

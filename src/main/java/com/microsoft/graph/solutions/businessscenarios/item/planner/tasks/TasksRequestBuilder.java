@@ -65,7 +65,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the businessScenarioTask objects and their properties.
      * @return a CompletableFuture of businessScenarioTaskCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/businessscenarioplanner-list-tasks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenarioplanner-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessScenarioTaskCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
      * Get a list of the businessScenarioTask objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of businessScenarioTaskCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/businessscenarioplanner-list-tasks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenarioplanner-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessScenarioTaskCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
      * Create a new businessScenarioTask object.
      * @param body The request body
      * @return a CompletableFuture of businessScenarioTask
-     * @see <a href="https://docs.microsoft.com/graph/api/businessscenarioplanner-post-tasks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenarioplanner-post-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessScenarioTask> post(@javax.annotation.Nonnull final BusinessScenarioTask body) {
@@ -126,7 +126,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of businessScenarioTask
-     * @see <a href="https://docs.microsoft.com/graph/api/businessscenarioplanner-post-tasks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenarioplanner-post-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessScenarioTask> post(@javax.annotation.Nonnull final BusinessScenarioTask body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

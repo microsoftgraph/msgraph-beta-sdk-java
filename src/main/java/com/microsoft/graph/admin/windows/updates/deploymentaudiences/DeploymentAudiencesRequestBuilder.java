@@ -65,7 +65,7 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of deploymentAudience objects and their properties.
      * @return a CompletableFuture of deploymentAudienceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-list-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeploymentAudienceCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
      * Get a list of deploymentAudience objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deploymentAudienceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-list-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeploymentAudienceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
      * Create a new deploymentAudience object.
      * @param body The request body
      * @return a CompletableFuture of deploymentAudience
-     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-post-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeploymentAudience> post(@javax.annotation.Nonnull final DeploymentAudience body) {
@@ -126,7 +126,7 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deploymentAudience
-     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-post-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeploymentAudience> post(@javax.annotation.Nonnull final DeploymentAudience body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

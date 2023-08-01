@@ -80,7 +80,7 @@ public class HealthRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters.
      * @return a CompletableFuture of teamworkDeviceHealth
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworkdevicehealth-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkdevicehealth-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkDeviceHealth> get() {
@@ -100,7 +100,7 @@ public class HealthRequestBuilder extends BaseRequestBuilder {
      * Get the health details of a Microsoft Teams-enabled device. Device health is calculated based on the device configuration and other device parameters.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkDeviceHealth
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworkdevicehealth-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkdevicehealth-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkDeviceHealth> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

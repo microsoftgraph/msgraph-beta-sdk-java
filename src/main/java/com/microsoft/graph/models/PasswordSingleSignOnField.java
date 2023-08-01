@@ -21,7 +21,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      */
     private String defaultLabel;
     /**
-     * Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password.
+     * Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
      */
     private String fieldId;
     /**
@@ -89,7 +89,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the fieldId property value. Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password.
+     * Gets the fieldId property value. Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -155,7 +155,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
         this.defaultLabel = value;
     }
     /**
-     * Sets the fieldId property value. Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password.
+     * Sets the fieldId property value. Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
      * @param value Value to set for the fieldId property.
      * @return a void
      */
@@ -165,7 +165,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

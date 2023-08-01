@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +11,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     /**
      * The number of days to look back from current timestamp within which the account has not signed in.
      */
-    private Period duration;
+    private PeriodAndDuration duration;
     /**
      * Instantiates a new staleSignInAlertConfiguration and sets the default values.
      * @return a void
@@ -33,10 +33,10 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     }
     /**
      * Gets the duration property value. The number of days to look back from current timestamp within which the account has not signed in.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDuration() {
+    public PeriodAndDuration getDuration() {
         return this.duration;
     }
     /**
@@ -46,7 +46,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodValue()); });
+        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodAndDurationValue()); });
         return deserializerMap;
     }
     /**
@@ -58,7 +58,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writePeriodValue("duration", this.getDuration());
+        writer.writePeriodAndDurationValue("duration", this.getDuration());
     }
     /**
      * Sets the duration property value. The number of days to look back from current timestamp within which the account has not signed in.
@@ -66,7 +66,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDuration(@javax.annotation.Nullable final Period value) {
+    public void setDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.duration = value;
     }
 }

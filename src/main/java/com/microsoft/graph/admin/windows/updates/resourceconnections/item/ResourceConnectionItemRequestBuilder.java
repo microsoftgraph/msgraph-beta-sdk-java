@@ -41,9 +41,9 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/resourceConnections/{resourceConnection%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an operationalInsightsConnection object.
+     * Delete a resourceConnection object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-resourceconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -60,10 +60,10 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete an operationalInsightsConnection object.
+     * Delete a resourceConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-resourceconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -80,9 +80,9 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of an operationalInsightsConnection object.
+     * Read the properties and relationships of a resourceConnection object.
      * @return a CompletableFuture of resourceConnection
-     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-resourceconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceConnection> get() {
@@ -99,10 +99,10 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of an operationalInsightsConnection object.
+     * Read the properties and relationships of a resourceConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of resourceConnection
-     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-resourceconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceConnection> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,7 +159,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete an operationalInsightsConnection object.
+     * Delete a resourceConnection object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -167,7 +167,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an operationalInsightsConnection object.
+     * Delete a resourceConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -186,7 +186,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an operationalInsightsConnection object.
+     * Read the properties and relationships of a resourceConnection object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +194,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an operationalInsightsConnection object.
+     * Read the properties and relationships of a resourceConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -252,7 +252,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an operationalInsightsConnection object.
+     * Read the properties and relationships of a resourceConnection object.
      */
     public class GetQueryParameters {
         /**

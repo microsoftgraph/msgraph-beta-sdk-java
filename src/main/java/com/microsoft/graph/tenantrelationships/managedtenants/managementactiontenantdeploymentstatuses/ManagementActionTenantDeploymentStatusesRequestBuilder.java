@@ -73,7 +73,7 @@ public class ManagementActionTenantDeploymentStatusesRequestBuilder extends Base
     /**
      * Get a list of the managementActionTenantDeploymentStatus objects and their properties.
      * @return a CompletableFuture of managementActionTenantDeploymentStatusCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-managedtenant-list-managementactiontenantdeploymentstatuses?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-managementactiontenantdeploymentstatuses?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementActionTenantDeploymentStatusCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class ManagementActionTenantDeploymentStatusesRequestBuilder extends Base
      * Get a list of the managementActionTenantDeploymentStatus objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managementActionTenantDeploymentStatusCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-managedtenant-list-managementactiontenantdeploymentstatuses?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-managementactiontenantdeploymentstatuses?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementActionTenantDeploymentStatusCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -59,7 +59,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete an azureDataLakeConnector object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-azuredatalakeconnector-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -79,7 +79,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
      * Delete an azureDataLakeConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-azuredatalakeconnector-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,9 +96,9 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object.
      * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> get() {
@@ -115,10 +115,10 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
      * Update the properties of an azureDataLakeConnector object.
      * @param body The request body
      * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-azuredatalakeconnector-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> patch(@javax.annotation.Nonnull final IndustryDataConnector body) {
@@ -159,7 +159,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-azuredatalakeconnector-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> patch(@javax.annotation.Nonnull final IndustryDataConnector body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -204,7 +204,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -212,7 +212,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -270,7 +270,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object.
      */
     public class GetQueryParameters {
         /**

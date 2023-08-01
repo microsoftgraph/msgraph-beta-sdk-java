@@ -51,7 +51,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a businessScenario object. The deletion of a scenario causes all data associated with the scenario to be deleted.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/businessscenario-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
      * Delete a businessScenario object. The deletion of a scenario causes all data associated with the scenario to be deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/businessscenario-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a businessScenario object.
      * @return a CompletableFuture of businessScenario
-     * @see <a href="https://docs.microsoft.com/graph/api/businessscenario-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessScenario> get() {
@@ -110,7 +110,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a businessScenario object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of businessScenario
-     * @see <a href="https://docs.microsoft.com/graph/api/businessscenario-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessScenario> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a businessScenario object.
      * @param body The request body
      * @return a CompletableFuture of businessScenario
-     * @see <a href="https://docs.microsoft.com/graph/api/businessscenario-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessScenario> patch(@javax.annotation.Nonnull final BusinessScenario body) {
@@ -151,7 +151,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of businessScenario
-     * @see <a href="https://docs.microsoft.com/graph/api/businessscenario-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessScenario> patch(@javax.annotation.Nonnull final BusinessScenario body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

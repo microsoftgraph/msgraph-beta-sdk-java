@@ -65,7 +65,7 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of personAward objects from a user's profile.
      * @return a CompletableFuture of personAwardCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-awards?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-awards?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonAwardCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of personAward objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personAwardCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-awards?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-awards?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonAwardCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
      * Create a new personAward object in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of personAward
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-awards?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-awards?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonAward> post(@javax.annotation.Nonnull final PersonAward body) {
@@ -126,7 +126,7 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personAward
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-awards?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-awards?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonAward> post(@javax.annotation.Nonnull final PersonAward body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

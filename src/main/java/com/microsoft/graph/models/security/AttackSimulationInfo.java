@@ -1,11 +1,11 @@
 package com.microsoft.graph.models.security;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
     /**
      * The duration (in time) for the attack simulation.
      */
-    private Period attackSimDurationTime;
+    private PeriodAndDuration attackSimDurationTime;
     /**
      * The activity ID for the attack simulation.
      */
@@ -71,10 +71,10 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the attackSimDurationTime property value. The duration (in time) for the attack simulation.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getAttackSimDurationTime() {
+    public PeriodAndDuration getAttackSimDurationTime() {
         return this.attackSimDurationTime;
     }
     /**
@@ -101,7 +101,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("attackSimDateTime", (n) -> { this.setAttackSimDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("attackSimDurationTime", (n) -> { this.setAttackSimDurationTime(n.getPeriodValue()); });
+        deserializerMap.put("attackSimDurationTime", (n) -> { this.setAttackSimDurationTime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("attackSimId", (n) -> { this.setAttackSimId(n.getUUIDValue()); });
         deserializerMap.put("attackSimUserId", (n) -> { this.setAttackSimUserId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -124,7 +124,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("attackSimDateTime", this.getAttackSimDateTime());
-        writer.writePeriodValue("attackSimDurationTime", this.getAttackSimDurationTime());
+        writer.writePeriodAndDurationValue("attackSimDurationTime", this.getAttackSimDurationTime());
         writer.writeUUIDValue("attackSimId", this.getAttackSimId());
         writer.writeStringValue("attackSimUserId", this.getAttackSimUserId());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -132,7 +132,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -154,7 +154,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAttackSimDurationTime(@javax.annotation.Nullable final Period value) {
+    public void setAttackSimDurationTime(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.attackSimDurationTime = value;
     }
     /**
@@ -177,7 +177,7 @@ public class AttackSimulationInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

@@ -65,7 +65,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, retrieve the reviewers of an accessReview object.
      * @return a CompletableFuture of accessReviewReviewerCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreview-listreviewers?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listreviewers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewerCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, retrieve the reviewers of an accessReview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewReviewerCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreview-listreviewers?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listreviewers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewerCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, update an existing accessReview object to add another user as a reviewer.  This operation is only permitted for an access review that is not yet completed, and only for an access review where the reviewers are explicitly specified. This operation is not permitted for an access review in which users review their own access, and not intended for an access review in which the group owners are assigned as the reviewers. 
      * @param body The request body
      * @return a CompletableFuture of accessReviewReviewer
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreview-addreviewer?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-addreviewer?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> post(@javax.annotation.Nonnull final AccessReviewReviewer body) {
@@ -126,7 +126,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewReviewer
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreview-addreviewer?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-addreviewer?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> post(@javax.annotation.Nonnull final AccessReviewReviewer body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

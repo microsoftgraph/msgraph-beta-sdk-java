@@ -65,7 +65,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of personCertification objects from a user's profile.
      * @return a CompletableFuture of personCertificationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-certifications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonCertificationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of personCertification objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personCertificationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-certifications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonCertificationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
      * Create a new personCertification object in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of personCertification
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-certifications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonCertification> post(@javax.annotation.Nonnull final PersonCertification body) {
@@ -126,7 +126,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personCertification
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-certifications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonCertification> post(@javax.annotation.Nonnull final PersonCertification body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

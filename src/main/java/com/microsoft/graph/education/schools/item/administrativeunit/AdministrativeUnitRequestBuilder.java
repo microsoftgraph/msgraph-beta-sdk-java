@@ -41,9 +41,9 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools/{educationSchool%2Did}/administrativeUnit{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the simple directory **administrativeUnit** that corresponds to this **educationSchool**.
+     * Retrieve the simple directory administrativeUnit that corresponds to this educationSchool.
      * @return a CompletableFuture of administrativeUnit
-     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-get-administrativeUnit?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get-administrativeUnit?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get() {
@@ -60,10 +60,10 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the simple directory **administrativeUnit** that corresponds to this **educationSchool**.
+     * Retrieve the simple directory administrativeUnit that corresponds to this educationSchool.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of administrativeUnit
-     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-get-administrativeUnit?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get-administrativeUnit?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the simple directory **administrativeUnit** that corresponds to this **educationSchool**.
+     * Retrieve the simple directory administrativeUnit that corresponds to this educationSchool.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -128,7 +128,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the simple directory **administrativeUnit** that corresponds to this **educationSchool**.
+     * Retrieve the simple directory administrativeUnit that corresponds to this educationSchool.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +181,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the simple directory **administrativeUnit** that corresponds to this **educationSchool**.
+     * Retrieve the simple directory administrativeUnit that corresponds to this educationSchool.
      */
     public class GetQueryParameters {
         /**

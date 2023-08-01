@@ -10,7 +10,8 @@ public enum CloudPcReportName implements ValuedEnum {
     SharedUseLicenseUsageReport("sharedUseLicenseUsageReport"),
     SharedUseLicenseUsageRealTimeReport("sharedUseLicenseUsageRealTimeReport"),
     UnknownFutureValue("unknownFutureValue"),
-    NoLicenseAvailableConnectivityFailureReport("noLicenseAvailableConnectivityFailureReport");
+    NoLicenseAvailableConnectivityFailureReport("noLicenseAvailableConnectivityFailureReport"),
+    RemoteConnectionQualityReports("remoteConnectionQualityReports");
     public final String value;
     CloudPcReportName(final String value) {
         this.value = value;
@@ -28,6 +29,7 @@ public enum CloudPcReportName implements ValuedEnum {
             case "sharedUseLicenseUsageRealTimeReport": return SharedUseLicenseUsageRealTimeReport;
             case "unknownFutureValue": return UnknownFutureValue;
             case "noLicenseAvailableConnectivityFailureReport": return NoLicenseAvailableConnectivityFailureReport;
+            case "remoteConnectionQualityReports": return RemoteConnectionQualityReports;
             default: return null;
         }
     }

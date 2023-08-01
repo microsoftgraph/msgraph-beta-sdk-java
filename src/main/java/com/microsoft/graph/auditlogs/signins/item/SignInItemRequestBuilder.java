@@ -80,7 +80,7 @@ public class SignInItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a signIn object that contains a specific user sign-in event for your tenant. This includes sign-ins where a user is asked to enter a username or password, and session tokens.
      * @return a CompletableFuture of signIn
-     * @see <a href="https://docs.microsoft.com/graph/api/signin-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/signin-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SignIn> get() {
@@ -100,7 +100,7 @@ public class SignInItemRequestBuilder extends BaseRequestBuilder {
      * Get a signIn object that contains a specific user sign-in event for your tenant. This includes sign-ins where a user is asked to enter a username or password, and session tokens.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of signIn
-     * @see <a href="https://docs.microsoft.com/graph/api/signin-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/signin-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SignIn> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

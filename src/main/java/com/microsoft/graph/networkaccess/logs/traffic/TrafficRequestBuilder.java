@@ -65,7 +65,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of log events for traffic routed through the Global Secure Access services.
      * @return a CompletableFuture of networkAccessTrafficCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-logs-list-traffic?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-logs-list-traffic?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessTrafficCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
      * Get a list of log events for traffic routed through the Global Secure Access services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of networkAccessTrafficCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-logs-list-traffic?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-logs-list-traffic?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessTrafficCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

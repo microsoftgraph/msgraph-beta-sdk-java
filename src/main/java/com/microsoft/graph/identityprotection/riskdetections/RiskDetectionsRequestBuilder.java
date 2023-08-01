@@ -63,9 +63,9 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskDetections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties of a collection of **riskDetection** objects.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @return a CompletableFuture of riskDetectionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetectionCollectionResponse> get() {
@@ -82,10 +82,10 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties of a collection of **riskDetection** objects.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of riskDetectionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -142,7 +142,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties of a collection of **riskDetection** objects.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +150,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a collection of **riskDetection** objects.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -203,7 +203,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a collection of **riskDetection** objects.
+     * Retrieve the properties of a collection of riskDetection objects.
      */
     public class GetQueryParameters {
         /**

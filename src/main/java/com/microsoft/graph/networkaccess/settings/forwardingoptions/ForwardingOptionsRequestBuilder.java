@@ -80,7 +80,7 @@ public class ForwardingOptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the forwarding options for the tenant, with a specific focus on the 'skipDnsLookupState' flag. This flag determines whether DNS lookup will be skipped, allowing Microsoft 365 traffic to be forwarded directly to the Front Door using the client-resolved destination.
      * @return a CompletableFuture of forwardingOptions
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-forwardingoptions-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingoptions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingOptions> get() {
@@ -100,7 +100,7 @@ public class ForwardingOptionsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the forwarding options for the tenant, with a specific focus on the 'skipDnsLookupState' flag. This flag determines whether DNS lookup will be skipped, allowing Microsoft 365 traffic to be forwarded directly to the Front Door using the client-resolved destination.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of forwardingOptions
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-forwardingoptions-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingoptions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingOptions> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class ForwardingOptionsRequestBuilder extends BaseRequestBuilder {
      * the forwarding options for the tenant, with a specific focus on the skipDnsLookupState flag. This flag determines whether DNS lookup will be skipped, allowing Microsoft 365 traffic to be forwarded directly to the Front Door using the client-resolved destination.
      * @param body The request body
      * @return a CompletableFuture of forwardingOptions
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-forwardingoptions-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingoptions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingOptions> patch(@javax.annotation.Nonnull final ForwardingOptions body) {
@@ -141,7 +141,7 @@ public class ForwardingOptionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of forwardingOptions
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-forwardingoptions-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingoptions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingOptions> patch(@javax.annotation.Nonnull final ForwardingOptions body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

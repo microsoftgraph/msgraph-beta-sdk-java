@@ -40,9 +40,9 @@ public class MetadataContentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}/sessions/{virtualEventSession%2Did}/transcripts/{callTranscript%2Did}/metadataContent", rawUrl);
     }
     /**
-     * A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-list-transcripts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-list-transcripts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get() {
@@ -59,10 +59,10 @@ public class MetadataContentRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-list-transcripts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-list-transcripts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class MetadataContentRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param body Binary request body
      * @return a CompletableFuture of InputStream
      */
@@ -98,7 +98,7 @@ public class MetadataContentRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
@@ -119,7 +119,7 @@ public class MetadataContentRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -127,7 +127,7 @@ public class MetadataContentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class MetadataContentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -155,7 +155,7 @@ public class MetadataContentRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

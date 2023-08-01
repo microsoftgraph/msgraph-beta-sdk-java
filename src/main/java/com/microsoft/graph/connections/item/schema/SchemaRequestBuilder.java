@@ -80,7 +80,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of a schema for an externalConnection.
      * @return a CompletableFuture of schema
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Schema> get() {
@@ -100,7 +100,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties of a schema for an externalConnection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of schema
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Schema> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a schema for an externalConnection.
      * @param body The request body
      * @return a CompletableFuture of schema
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-schema-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Schema> patch(@javax.annotation.Nonnull final Schema body) {
@@ -141,7 +141,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of schema
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-schema-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Schema> patch(@javax.annotation.Nonnull final Schema body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -43,7 +43,7 @@ public class ProjectParticipationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a projectParticipation object from a user's profile.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/projectparticipation-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/projectparticipation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class ProjectParticipationItemRequestBuilder extends BaseRequestBuilder {
      * Delete a projectParticipation object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/projectparticipation-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/projectparticipation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ProjectParticipationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a projectParticipation object in a user's profile.
      * @return a CompletableFuture of projectParticipation
-     * @see <a href="https://docs.microsoft.com/graph/api/projectparticipation-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/projectparticipation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProjectParticipation> get() {
@@ -102,7 +102,7 @@ public class ProjectParticipationItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a projectParticipation object in a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of projectParticipation
-     * @see <a href="https://docs.microsoft.com/graph/api/projectparticipation-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/projectparticipation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProjectParticipation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class ProjectParticipationItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a projectParticipation object in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of projectParticipation
-     * @see <a href="https://docs.microsoft.com/graph/api/projectparticipation-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/projectparticipation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProjectParticipation> patch(@javax.annotation.Nonnull final ProjectParticipation body) {
@@ -143,7 +143,7 @@ public class ProjectParticipationItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of projectParticipation
-     * @see <a href="https://docs.microsoft.com/graph/api/projectparticipation-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/projectparticipation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProjectParticipation> patch(@javax.annotation.Nonnull final ProjectParticipation body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

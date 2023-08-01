@@ -13,6 +13,10 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      */
     private Map<String, Object> additionalData;
     /**
+     * The maximumRetries property
+     */
+    private Integer maximumRetries;
+    /**
      * The OdataType property
      */
     private String odataType;
@@ -52,10 +56,19 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("maximumRetries", (n) -> { this.setMaximumRetries(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("timeoutInMilliseconds", (n) -> { this.setTimeoutInMilliseconds(n.getIntegerValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the maximumRetries property value. The maximumRetries property
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getMaximumRetries() {
+        return this.maximumRetries;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -81,13 +94,14 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeIntegerValue("maximumRetries", this.getMaximumRetries());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("timeoutInMilliseconds", this.getTimeoutInMilliseconds());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -95,8 +109,17 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
         this.additionalData = value;
     }
     /**
+     * Sets the maximumRetries property value. The maximumRetries property
+     * @param value Value to set for the maximumRetries property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMaximumRetries(@javax.annotation.Nullable final Integer value) {
+        this.maximumRetries = value;
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

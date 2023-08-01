@@ -258,7 +258,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -267,7 +267,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -276,7 +276,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_0 property value. Windows version 10.0 or later.
-     * @param value Value to set for the v100 property.
+     * @param value Value to set for the v10_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -285,7 +285,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_1607 property value. Windows 10 1607 or later.
-     * @param value Value to set for the v101607 property.
+     * @param value Value to set for the v10_1607 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -294,7 +294,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_1703 property value. Windows 10 1703 or later.
-     * @param value Value to set for the v101703 property.
+     * @param value Value to set for the v10_1703 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -303,7 +303,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_1709 property value. Windows 10 1709 or later.
-     * @param value Value to set for the v101709 property.
+     * @param value Value to set for the v10_1709 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -312,7 +312,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_1803 property value. Windows 10 1803 or later.
-     * @param value Value to set for the v101803 property.
+     * @param value Value to set for the v10_1803 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -321,7 +321,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_1809 property value. Windows 10 1809 or later.
-     * @param value Value to set for the v101809 property.
+     * @param value Value to set for the v10_1809 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -330,7 +330,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_1903 property value. Windows 10 1903 or later.
-     * @param value Value to set for the v101903 property.
+     * @param value Value to set for the v10_1903 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -339,7 +339,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_1909 property value. Windows 10 1909 or later.
-     * @param value Value to set for the v101909 property.
+     * @param value Value to set for the v10_1909 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -348,7 +348,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_2004 property value. Windows 10 2004 or later.
-     * @param value Value to set for the v102004 property.
+     * @param value Value to set for the v10_2004 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -357,7 +357,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_21H1 property value. Windows 10 21H1 or later.
-     * @param value Value to set for the v1021H1 property.
+     * @param value Value to set for the v10_21H1 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -366,7 +366,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_2H20 property value. Windows 10 2H20 or later.
-     * @param value Value to set for the v102H20 property.
+     * @param value Value to set for the v10_2H20 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -375,7 +375,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v8_0 property value. Windows version 8.0 or later.
-     * @param value Value to set for the v80 property.
+     * @param value Value to set for the v8_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -384,7 +384,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v8_1 property value. Windows version 8.1 or later.
-     * @param value Value to set for the v81 property.
+     * @param value Value to set for the v8_1 property.
      * @return a void
      */
     @javax.annotation.Nonnull

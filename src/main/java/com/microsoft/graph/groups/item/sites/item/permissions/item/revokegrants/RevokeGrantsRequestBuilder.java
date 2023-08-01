@@ -43,7 +43,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
      * Revoke access to a [listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link.
      * @param body The request body
      * @return a CompletableFuture of permission
-     * @see <a href="https://docs.microsoft.com/graph/api/permission-revokegrants?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permission-revokegrants?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final RevokeGrantsPostRequestBody body) {
@@ -64,7 +64,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permission
-     * @see <a href="https://docs.microsoft.com/graph/api/permission-revokegrants?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permission-revokegrants?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final RevokeGrantsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

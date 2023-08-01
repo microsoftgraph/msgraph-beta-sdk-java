@@ -65,7 +65,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the authorityTemplate objects and their properties.
      * @return a CompletableFuture of authorityTemplateCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-list-authorities?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-authorities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorityTemplateCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
      * Get a list of the authorityTemplate objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authorityTemplateCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-list-authorities?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-authorities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorityTemplateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
      * Create a new authorityTemplate object.
      * @param body The request body
      * @return a CompletableFuture of authorityTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-post-authorities?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-authorities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorityTemplate> post(@javax.annotation.Nonnull final AuthorityTemplate body) {
@@ -126,7 +126,7 @@ public class AuthoritiesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authorityTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-post-authorities?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-authorities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorityTemplate> post(@javax.annotation.Nonnull final AuthorityTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

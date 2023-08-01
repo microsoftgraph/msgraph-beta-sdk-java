@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -78,7 +78,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
      * A grace period before blocking app access during off clock hours.
      */
-    private Period gracePeriodToBlockAppsDuringOffClockHours;
+    private PeriodAndDuration gracePeriodToBlockAppsDuringOffClockHours;
     /**
      * Type of managed browser
      */
@@ -154,19 +154,19 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
      * TimePeriod before the all-level pin must be reset if PinRequired is set to True.
      */
-    private Period periodBeforePinReset;
+    private PeriodAndDuration periodBeforePinReset;
     /**
      * The period after which access is checked when the device is not connected to the internet.
      */
-    private Period periodOfflineBeforeAccessCheck;
+    private PeriodAndDuration periodOfflineBeforeAccessCheck;
     /**
      * The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
      */
-    private Period periodOfflineBeforeWipeIsEnforced;
+    private PeriodAndDuration periodOfflineBeforeWipeIsEnforced;
     /**
      * The period after which access is checked when the device is connected to the internet.
      */
-    private Period periodOnlineBeforeAccessCheck;
+    private PeriodAndDuration periodOnlineBeforeAccessCheck;
     /**
      * Character set which is to be used for a user's app PIN
      */
@@ -178,7 +178,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
      * Timeout in minutes for an app pin instead of non biometrics passcode
      */
-    private Period pinRequiredInsteadOfBiometricTimeout;
+    private PeriodAndDuration pinRequiredInsteadOfBiometricTimeout;
     /**
      * Requires a pin to be unique from the number specified in this property.
      */
@@ -367,7 +367,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         deserializerMap.put("dialerRestrictionLevel", (n) -> { this.setDialerRestrictionLevel(n.getEnumValue(ManagedAppPhoneNumberRedirectLevel.class)); });
         deserializerMap.put("disableAppPinIfDevicePinIsSet", (n) -> { this.setDisableAppPinIfDevicePinIsSet(n.getBooleanValue()); });
         deserializerMap.put("fingerprintBlocked", (n) -> { this.setFingerprintBlocked(n.getBooleanValue()); });
-        deserializerMap.put("gracePeriodToBlockAppsDuringOffClockHours", (n) -> { this.setGracePeriodToBlockAppsDuringOffClockHours(n.getPeriodValue()); });
+        deserializerMap.put("gracePeriodToBlockAppsDuringOffClockHours", (n) -> { this.setGracePeriodToBlockAppsDuringOffClockHours(n.getPeriodAndDurationValue()); });
         deserializerMap.put("managedBrowser", (n) -> { this.setManagedBrowser(n.getEnumValue(ManagedBrowserType.class)); });
         deserializerMap.put("managedBrowserToOpenLinksRequired", (n) -> { this.setManagedBrowserToOpenLinksRequired(n.getBooleanValue()); });
         deserializerMap.put("maximumAllowedDeviceThreatLevel", (n) -> { this.setMaximumAllowedDeviceThreatLevel(n.getEnumValue(ManagedAppDeviceThreatLevel.class)); });
@@ -386,13 +386,13 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         deserializerMap.put("mobileThreatDefenseRemediationAction", (n) -> { this.setMobileThreatDefenseRemediationAction(n.getEnumValue(ManagedAppRemediationAction.class)); });
         deserializerMap.put("notificationRestriction", (n) -> { this.setNotificationRestriction(n.getEnumValue(ManagedAppNotificationRestriction.class)); });
         deserializerMap.put("organizationalCredentialsRequired", (n) -> { this.setOrganizationalCredentialsRequired(n.getBooleanValue()); });
-        deserializerMap.put("periodBeforePinReset", (n) -> { this.setPeriodBeforePinReset(n.getPeriodValue()); });
-        deserializerMap.put("periodOfflineBeforeAccessCheck", (n) -> { this.setPeriodOfflineBeforeAccessCheck(n.getPeriodValue()); });
-        deserializerMap.put("periodOfflineBeforeWipeIsEnforced", (n) -> { this.setPeriodOfflineBeforeWipeIsEnforced(n.getPeriodValue()); });
-        deserializerMap.put("periodOnlineBeforeAccessCheck", (n) -> { this.setPeriodOnlineBeforeAccessCheck(n.getPeriodValue()); });
+        deserializerMap.put("periodBeforePinReset", (n) -> { this.setPeriodBeforePinReset(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("periodOfflineBeforeAccessCheck", (n) -> { this.setPeriodOfflineBeforeAccessCheck(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("periodOfflineBeforeWipeIsEnforced", (n) -> { this.setPeriodOfflineBeforeWipeIsEnforced(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("periodOnlineBeforeAccessCheck", (n) -> { this.setPeriodOnlineBeforeAccessCheck(n.getPeriodAndDurationValue()); });
         deserializerMap.put("pinCharacterSet", (n) -> { this.setPinCharacterSet(n.getEnumValue(ManagedAppPinCharacterSet.class)); });
         deserializerMap.put("pinRequired", (n) -> { this.setPinRequired(n.getBooleanValue()); });
-        deserializerMap.put("pinRequiredInsteadOfBiometricTimeout", (n) -> { this.setPinRequiredInsteadOfBiometricTimeout(n.getPeriodValue()); });
+        deserializerMap.put("pinRequiredInsteadOfBiometricTimeout", (n) -> { this.setPinRequiredInsteadOfBiometricTimeout(n.getPeriodAndDurationValue()); });
         deserializerMap.put("previousPinBlockCount", (n) -> { this.setPreviousPinBlockCount(n.getIntegerValue()); });
         deserializerMap.put("printBlocked", (n) -> { this.setPrintBlocked(n.getBooleanValue()); });
         deserializerMap.put("saveAsBlocked", (n) -> { this.setSaveAsBlocked(n.getBooleanValue()); });
@@ -409,10 +409,10 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the gracePeriodToBlockAppsDuringOffClockHours property value. A grace period before blocking app access during off clock hours.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getGracePeriodToBlockAppsDuringOffClockHours() {
+    public PeriodAndDuration getGracePeriodToBlockAppsDuringOffClockHours() {
         return this.gracePeriodToBlockAppsDuringOffClockHours;
     }
     /**
@@ -561,34 +561,34 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the periodBeforePinReset property value. TimePeriod before the all-level pin must be reset if PinRequired is set to True.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getPeriodBeforePinReset() {
+    public PeriodAndDuration getPeriodBeforePinReset() {
         return this.periodBeforePinReset;
     }
     /**
      * Gets the periodOfflineBeforeAccessCheck property value. The period after which access is checked when the device is not connected to the internet.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getPeriodOfflineBeforeAccessCheck() {
+    public PeriodAndDuration getPeriodOfflineBeforeAccessCheck() {
         return this.periodOfflineBeforeAccessCheck;
     }
     /**
      * Gets the periodOfflineBeforeWipeIsEnforced property value. The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getPeriodOfflineBeforeWipeIsEnforced() {
+    public PeriodAndDuration getPeriodOfflineBeforeWipeIsEnforced() {
         return this.periodOfflineBeforeWipeIsEnforced;
     }
     /**
      * Gets the periodOnlineBeforeAccessCheck property value. The period after which access is checked when the device is connected to the internet.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getPeriodOnlineBeforeAccessCheck() {
+    public PeriodAndDuration getPeriodOnlineBeforeAccessCheck() {
         return this.periodOnlineBeforeAccessCheck;
     }
     /**
@@ -609,10 +609,10 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the pinRequiredInsteadOfBiometricTimeout property value. Timeout in minutes for an app pin instead of non biometrics passcode
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getPinRequiredInsteadOfBiometricTimeout() {
+    public PeriodAndDuration getPinRequiredInsteadOfBiometricTimeout() {
         return this.pinRequiredInsteadOfBiometricTimeout;
     }
     /**
@@ -672,7 +672,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         writer.writeEnumValue("dialerRestrictionLevel", this.getDialerRestrictionLevel());
         writer.writeBooleanValue("disableAppPinIfDevicePinIsSet", this.getDisableAppPinIfDevicePinIsSet());
         writer.writeBooleanValue("fingerprintBlocked", this.getFingerprintBlocked());
-        writer.writePeriodValue("gracePeriodToBlockAppsDuringOffClockHours", this.getGracePeriodToBlockAppsDuringOffClockHours());
+        writer.writePeriodAndDurationValue("gracePeriodToBlockAppsDuringOffClockHours", this.getGracePeriodToBlockAppsDuringOffClockHours());
         writer.writeEnumValue("managedBrowser", this.getManagedBrowser());
         writer.writeBooleanValue("managedBrowserToOpenLinksRequired", this.getManagedBrowserToOpenLinksRequired());
         writer.writeEnumValue("maximumAllowedDeviceThreatLevel", this.getMaximumAllowedDeviceThreatLevel());
@@ -691,13 +691,13 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         writer.writeEnumValue("mobileThreatDefenseRemediationAction", this.getMobileThreatDefenseRemediationAction());
         writer.writeEnumValue("notificationRestriction", this.getNotificationRestriction());
         writer.writeBooleanValue("organizationalCredentialsRequired", this.getOrganizationalCredentialsRequired());
-        writer.writePeriodValue("periodBeforePinReset", this.getPeriodBeforePinReset());
-        writer.writePeriodValue("periodOfflineBeforeAccessCheck", this.getPeriodOfflineBeforeAccessCheck());
-        writer.writePeriodValue("periodOfflineBeforeWipeIsEnforced", this.getPeriodOfflineBeforeWipeIsEnforced());
-        writer.writePeriodValue("periodOnlineBeforeAccessCheck", this.getPeriodOnlineBeforeAccessCheck());
+        writer.writePeriodAndDurationValue("periodBeforePinReset", this.getPeriodBeforePinReset());
+        writer.writePeriodAndDurationValue("periodOfflineBeforeAccessCheck", this.getPeriodOfflineBeforeAccessCheck());
+        writer.writePeriodAndDurationValue("periodOfflineBeforeWipeIsEnforced", this.getPeriodOfflineBeforeWipeIsEnforced());
+        writer.writePeriodAndDurationValue("periodOnlineBeforeAccessCheck", this.getPeriodOnlineBeforeAccessCheck());
         writer.writeEnumValue("pinCharacterSet", this.getPinCharacterSet());
         writer.writeBooleanValue("pinRequired", this.getPinRequired());
-        writer.writePeriodValue("pinRequiredInsteadOfBiometricTimeout", this.getPinRequiredInsteadOfBiometricTimeout());
+        writer.writePeriodAndDurationValue("pinRequiredInsteadOfBiometricTimeout", this.getPinRequiredInsteadOfBiometricTimeout());
         writer.writeIntegerValue("previousPinBlockCount", this.getPreviousPinBlockCount());
         writer.writeBooleanValue("printBlocked", this.getPrintBlocked());
         writer.writeBooleanValue("saveAsBlocked", this.getSaveAsBlocked());
@@ -853,7 +853,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setGracePeriodToBlockAppsDuringOffClockHours(@javax.annotation.Nullable final Period value) {
+    public void setGracePeriodToBlockAppsDuringOffClockHours(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.gracePeriodToBlockAppsDuringOffClockHours = value;
     }
     /**
@@ -1024,7 +1024,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPeriodBeforePinReset(@javax.annotation.Nullable final Period value) {
+    public void setPeriodBeforePinReset(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.periodBeforePinReset = value;
     }
     /**
@@ -1033,7 +1033,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPeriodOfflineBeforeAccessCheck(@javax.annotation.Nullable final Period value) {
+    public void setPeriodOfflineBeforeAccessCheck(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.periodOfflineBeforeAccessCheck = value;
     }
     /**
@@ -1042,7 +1042,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPeriodOfflineBeforeWipeIsEnforced(@javax.annotation.Nullable final Period value) {
+    public void setPeriodOfflineBeforeWipeIsEnforced(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.periodOfflineBeforeWipeIsEnforced = value;
     }
     /**
@@ -1051,7 +1051,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPeriodOnlineBeforeAccessCheck(@javax.annotation.Nullable final Period value) {
+    public void setPeriodOnlineBeforeAccessCheck(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.periodOnlineBeforeAccessCheck = value;
     }
     /**
@@ -1078,7 +1078,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPinRequiredInsteadOfBiometricTimeout(@javax.annotation.Nullable final Period value) {
+    public void setPinRequiredInsteadOfBiometricTimeout(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.pinRequiredInsteadOfBiometricTimeout = value;
     }
     /**

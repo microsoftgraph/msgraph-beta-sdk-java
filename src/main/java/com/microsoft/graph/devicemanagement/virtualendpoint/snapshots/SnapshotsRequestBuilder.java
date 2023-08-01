@@ -74,7 +74,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of cloudPcSnapshot objects and their properties.
      * @return a CompletableFuture of cloudPcSnapshotCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-snapshots?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-snapshots?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSnapshotCollectionResponse> get() {
@@ -94,7 +94,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
      * Get a list of cloudPcSnapshot objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcSnapshotCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-snapshots?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-snapshots?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSnapshotCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

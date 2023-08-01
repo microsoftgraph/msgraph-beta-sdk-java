@@ -112,7 +112,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder extends BaseR
     /**
      * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      * @return a CompletableFuture of accessPackageAssignmentResourceRole
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignmentresourcerole-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentresourcerole-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRole> get() {
@@ -132,7 +132,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder extends BaseR
      * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageAssignmentResourceRole
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignmentresourcerole-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentresourcerole-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRole> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

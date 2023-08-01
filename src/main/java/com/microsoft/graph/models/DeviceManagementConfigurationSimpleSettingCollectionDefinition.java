@@ -8,11 +8,11 @@ import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementConfigurationSimpleSettingCollectionDefinition extends DeviceManagementConfigurationSimpleSettingDefinition implements Parsable {
     /**
-     * Maximum number of simple settings in the collection
+     * Maximum number of simple settings in the collection. Valid values 1 to 100
      */
     private Integer maximumCount;
     /**
-     * Minimum number of simple settings in the collection
+     * Minimum number of simple settings in the collection. Valid values 1 to 100
      */
     private Integer minimumCount;
     /**
@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
         return deserializerMap;
     }
     /**
-     * Gets the maximumCount property value. Maximum number of simple settings in the collection
+     * Gets the maximumCount property value. Maximum number of simple settings in the collection. Valid values 1 to 100
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -53,7 +53,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
         return this.maximumCount;
     }
     /**
-     * Gets the minimumCount property value. Minimum number of simple settings in the collection
+     * Gets the minimumCount property value. Minimum number of simple settings in the collection. Valid values 1 to 100
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
         writer.writeIntegerValue("minimumCount", this.getMinimumCount());
     }
     /**
-     * Sets the maximumCount property value. Maximum number of simple settings in the collection
+     * Sets the maximumCount property value. Maximum number of simple settings in the collection. Valid values 1 to 100
      * @param value Value to set for the maximumCount property.
      * @return a void
      */
@@ -82,7 +82,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
         this.maximumCount = value;
     }
     /**
-     * Sets the minimumCount property value. Minimum number of simple settings in the collection
+     * Sets the minimumCount property value. Minimum number of simple settings in the collection. Valid values 1 to 100
      * @param value Value to set for the minimumCount property.
      * @return a void
      */

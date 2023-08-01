@@ -41,9 +41,9 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/group{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the Microsoft 365 **group** that corresponds to this **educationClass**.
+     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
      * @return a CompletableFuture of group
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-get-group?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get-group?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> get() {
@@ -60,10 +60,10 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the Microsoft 365 **group** that corresponds to this **educationClass**.
+     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of group
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-get-group?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get-group?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +80,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the Microsoft 365 **group** that corresponds to this **educationClass**.
+     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the Microsoft 365 **group** that corresponds to this **educationClass**.
+     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -109,7 +109,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the Microsoft 365 **group** that corresponds to this **educationClass**.
+     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
      */
     public class GetQueryParameters {
         /**

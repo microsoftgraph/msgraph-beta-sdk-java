@@ -72,7 +72,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieves the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class.
      * @return a CompletableFuture of educationUserCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-members?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUserCollectionResponse> get() {
@@ -92,7 +92,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
      * Retrieves the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationUserCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-members?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUserCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

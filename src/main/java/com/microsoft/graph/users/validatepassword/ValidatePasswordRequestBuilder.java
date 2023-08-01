@@ -43,7 +43,7 @@ public class ValidatePasswordRequestBuilder extends BaseRequestBuilder {
      * Check a user's password against the organization's password validation policy and report whether the password is valid. Use this action to provide real-time feedback on password strength while the user types their password.
      * @param body The request body
      * @return a CompletableFuture of passwordValidationInformation
-     * @see <a href="https://docs.microsoft.com/graph/api/user-validatepassword?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-validatepassword?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PasswordValidationInformation> post(@javax.annotation.Nonnull final ValidatePasswordPostRequestBody body) {
@@ -64,7 +64,7 @@ public class ValidatePasswordRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of passwordValidationInformation
-     * @see <a href="https://docs.microsoft.com/graph/api/user-validatepassword?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-validatepassword?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PasswordValidationInformation> post(@javax.annotation.Nonnull final ValidatePasswordPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

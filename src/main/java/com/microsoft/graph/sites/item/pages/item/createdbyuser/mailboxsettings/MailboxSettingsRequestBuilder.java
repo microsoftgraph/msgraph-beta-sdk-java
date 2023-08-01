@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Builds and executes requests for operations under /sites/{site-id}/pages/{sitePage-id}/createdByUser/mailboxSettings
+ * Builds and executes requests for operations under /sites/{site-id}/pages/{baseSitePage-id}/createdByUser/mailboxSettings
  */
 public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     /**
@@ -28,7 +28,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public MailboxSettingsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{sitePage%2Did}/createdByUser/mailboxSettings{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}/createdByUser/mailboxSettings{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new MailboxSettingsRequestBuilder and sets the default values.
@@ -38,7 +38,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public MailboxSettingsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{sitePage%2Did}/createdByUser/mailboxSettings{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}/createdByUser/mailboxSettings{?%24select,%24expand}", rawUrl);
     }
     /**
      * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Returned only on $select.

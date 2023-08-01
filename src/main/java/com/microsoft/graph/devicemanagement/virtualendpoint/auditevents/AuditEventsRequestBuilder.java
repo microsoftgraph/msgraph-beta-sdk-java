@@ -73,7 +73,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * List all the cloudPcAuditEvent objects for the tenant.
      * @return a CompletableFuture of cloudPcAuditEventCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-auditevents?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-auditevents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcAuditEventCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
      * List all the cloudPcAuditEvent objects for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcAuditEventCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-auditevents?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-auditevents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcAuditEventCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

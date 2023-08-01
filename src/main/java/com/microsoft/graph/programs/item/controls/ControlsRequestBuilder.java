@@ -65,7 +65,7 @@ public class ControlsRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, list all the programControl objects, linked to a particular program.
      * @return a CompletableFuture of programControlCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/program-listcontrols?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/program-listcontrols?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControlCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ControlsRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, list all the programControl objects, linked to a particular program.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of programControlCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/program-listcontrols?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/program-listcontrols?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControlCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

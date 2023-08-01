@@ -64,7 +64,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the service principals to which the user has an app role assignment either directly or through group membership.
      * @return a CompletableFuture of servicePrincipalCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-approleassignedresources?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignedresources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCollectionResponse> get() {
@@ -84,7 +84,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
      * Get the service principals to which the user has an app role assignment either directly or through group membership.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of servicePrincipalCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-approleassignedresources?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignedresources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

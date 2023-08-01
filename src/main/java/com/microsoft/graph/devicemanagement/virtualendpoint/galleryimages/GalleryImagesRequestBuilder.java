@@ -65,7 +65,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
     /**
      * List the properties and relationships of the cloudPcGalleryImage objects.
      * @return a CompletableFuture of cloudPcGalleryImageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-galleryimages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-galleryimages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcGalleryImageCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
      * List the properties and relationships of the cloudPcGalleryImage objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcGalleryImageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-galleryimages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-galleryimages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcGalleryImageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

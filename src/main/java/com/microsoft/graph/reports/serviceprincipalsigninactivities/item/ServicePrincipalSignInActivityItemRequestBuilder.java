@@ -80,7 +80,7 @@ public class ServicePrincipalSignInActivityItemRequestBuilder extends BaseReques
     /**
      * Get a servicePrincipalSignInActivity object that contains sign-in activity information for a service principal in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
      * @return a CompletableFuture of servicePrincipalSignInActivity
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipalsigninactivity-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipalsigninactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalSignInActivity> get() {
@@ -100,7 +100,7 @@ public class ServicePrincipalSignInActivityItemRequestBuilder extends BaseReques
      * Get a servicePrincipalSignInActivity object that contains sign-in activity information for a service principal in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of servicePrincipalSignInActivity
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipalsigninactivity-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipalsigninactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalSignInActivity> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

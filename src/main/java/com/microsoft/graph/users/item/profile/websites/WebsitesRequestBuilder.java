@@ -65,7 +65,7 @@ public class WebsitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of personWebsite objects from a user's profile.
      * @return a CompletableFuture of personWebsiteCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-websites?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-websites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonWebsiteCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class WebsitesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of personWebsite objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personWebsiteCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-websites?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-websites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonWebsiteCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class WebsitesRequestBuilder extends BaseRequestBuilder {
      * Create a new personWebsite object in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of personWebsite
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-websites?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-websites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonWebsite> post(@javax.annotation.Nonnull final PersonWebsite body) {
@@ -126,7 +126,7 @@ public class WebsitesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personWebsite
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-websites?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-websites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonWebsite> post(@javax.annotation.Nonnull final PersonWebsite body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

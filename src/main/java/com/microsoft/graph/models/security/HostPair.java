@@ -1,0 +1,164 @@
+package com.microsoft.graph.models.security;
+
+import com.microsoft.graph.models.Entity;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class HostPair extends Entity implements Parsable {
+    /**
+     * The childHost property
+     */
+    private Host childHost;
+    /**
+     * The firstSeenDateTime property
+     */
+    private OffsetDateTime firstSeenDateTime;
+    /**
+     * The lastSeenDateTime property
+     */
+    private OffsetDateTime lastSeenDateTime;
+    /**
+     * The linkKind property
+     */
+    private String linkKind;
+    /**
+     * The parentHost property
+     */
+    private Host parentHost;
+    /**
+     * Instantiates a new hostPair and sets the default values.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public HostPair() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a hostPair
+     */
+    @javax.annotation.Nonnull
+    public static HostPair createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new HostPair();
+    }
+    /**
+     * Gets the childHost property value. The childHost property
+     * @return a host
+     */
+    @javax.annotation.Nullable
+    public Host getChildHost() {
+        return this.childHost;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("childHost", (n) -> { this.setChildHost(n.getObjectValue(Host::createFromDiscriminatorValue)); });
+        deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("linkKind", (n) -> { this.setLinkKind(n.getStringValue()); });
+        deserializerMap.put("parentHost", (n) -> { this.setParentHost(n.getObjectValue(Host::createFromDiscriminatorValue)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the firstSeenDateTime property value. The firstSeenDateTime property
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getFirstSeenDateTime() {
+        return this.firstSeenDateTime;
+    }
+    /**
+     * Gets the lastSeenDateTime property value. The lastSeenDateTime property
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getLastSeenDateTime() {
+        return this.lastSeenDateTime;
+    }
+    /**
+     * Gets the linkKind property value. The linkKind property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getLinkKind() {
+        return this.linkKind;
+    }
+    /**
+     * Gets the parentHost property value. The parentHost property
+     * @return a host
+     */
+    @javax.annotation.Nullable
+    public Host getParentHost() {
+        return this.parentHost;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeObjectValue("childHost", this.getChildHost());
+        writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
+        writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
+        writer.writeStringValue("linkKind", this.getLinkKind());
+        writer.writeObjectValue("parentHost", this.getParentHost());
+    }
+    /**
+     * Sets the childHost property value. The childHost property
+     * @param value Value to set for the childHost property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setChildHost(@javax.annotation.Nullable final Host value) {
+        this.childHost = value;
+    }
+    /**
+     * Sets the firstSeenDateTime property value. The firstSeenDateTime property
+     * @param value Value to set for the firstSeenDateTime property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this.firstSeenDateTime = value;
+    }
+    /**
+     * Sets the lastSeenDateTime property value. The lastSeenDateTime property
+     * @param value Value to set for the lastSeenDateTime property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this.lastSeenDateTime = value;
+    }
+    /**
+     * Sets the linkKind property value. The linkKind property
+     * @param value Value to set for the linkKind property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLinkKind(@javax.annotation.Nullable final String value) {
+        this.linkKind = value;
+    }
+    /**
+     * Sets the parentHost property value. The parentHost property
+     * @param value Value to set for the parentHost property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setParentHost(@javax.annotation.Nullable final Host value) {
+        this.parentHost = value;
+    }
+}

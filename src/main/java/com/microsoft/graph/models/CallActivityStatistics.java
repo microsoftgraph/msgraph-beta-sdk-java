@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +11,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
     /**
      * Time spent on calls outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
      */
-    private Period afterHours;
+    private PeriodAndDuration afterHours;
     /**
      * Instantiates a new callActivityStatistics and sets the default values.
      * @return a void
@@ -33,10 +33,10 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
     }
     /**
      * Gets the afterHours property value. Time spent on calls outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getAfterHours() {
+    public PeriodAndDuration getAfterHours() {
         return this.afterHours;
     }
     /**
@@ -46,7 +46,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("afterHours", (n) -> { this.setAfterHours(n.getPeriodValue()); });
+        deserializerMap.put("afterHours", (n) -> { this.setAfterHours(n.getPeriodAndDurationValue()); });
         return deserializerMap;
     }
     /**
@@ -58,7 +58,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writePeriodValue("afterHours", this.getAfterHours());
+        writer.writePeriodAndDurationValue("afterHours", this.getAfterHours());
     }
     /**
      * Sets the afterHours property value. Time spent on calls outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
@@ -66,7 +66,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAfterHours(@javax.annotation.Nullable final Period value) {
+    public void setAfterHours(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.afterHours = value;
     }
 }

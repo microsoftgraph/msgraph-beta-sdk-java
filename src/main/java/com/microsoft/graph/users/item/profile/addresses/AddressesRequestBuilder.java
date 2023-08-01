@@ -63,9 +63,9 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/addresses{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the itemAddress resources from the **addresses** navigation property.
+     * Get the itemAddress resources from the addresses navigation property.
      * @return a CompletableFuture of itemAddressCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-addresses?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-addresses?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemAddressCollectionResponse> get() {
@@ -82,10 +82,10 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the itemAddress resources from the **addresses** navigation property.
+     * Get the itemAddress resources from the addresses navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemAddressCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-addresses?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-addresses?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemAddressCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
      * Create a new itemAddress object in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of itemAddress
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-addresses?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-addresses?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemAddress> post(@javax.annotation.Nonnull final ItemAddress body) {
@@ -126,7 +126,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemAddress
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-addresses?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-addresses?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemAddress> post(@javax.annotation.Nonnull final ItemAddress body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +144,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the itemAddress resources from the **addresses** navigation property.
+     * Get the itemAddress resources from the addresses navigation property.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +152,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the itemAddress resources from the **addresses** navigation property.
+     * Get the itemAddress resources from the addresses navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the itemAddress resources from the **addresses** navigation property.
+     * Get the itemAddress resources from the addresses navigation property.
      */
     public class GetQueryParameters {
         /**

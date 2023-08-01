@@ -68,7 +68,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public MailFolderItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders/{mailFolder%2Did1}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders/{mailFolder%2Did1}{?includeHiddenFolders*,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new MailFolderItemRequestBuilder and sets the default values.
@@ -78,7 +78,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public MailFolderItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders/{mailFolder%2Did1}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders/{mailFolder%2Did1}{?includeHiddenFolders*,%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property childFolders for users
@@ -297,6 +297,11 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
+        /**
+         * Include Hidden Folders
+         */
+        @javax.annotation.Nullable
+        public String includeHiddenFolders;
         /**
          * Select properties to be returned
          */
