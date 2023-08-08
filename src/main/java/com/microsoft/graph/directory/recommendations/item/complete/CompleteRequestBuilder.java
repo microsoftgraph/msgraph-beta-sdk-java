@@ -40,9 +40,9 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/complete", rawUrl);
     }
     /**
-     * Complete a recommendation object and update its **status** to `completedByUser`.
+     * Complete a recommendation object and update its status to completedByUser.
      * @return a CompletableFuture of recommendation
-     * @see <a href="https://docs.microsoft.com/graph/api/recommendation-complete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-complete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Recommendation> post() {
@@ -59,10 +59,10 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Complete a recommendation object and update its **status** to `completedByUser`.
+     * Complete a recommendation object and update its status to completedByUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of recommendation
-     * @see <a href="https://docs.microsoft.com/graph/api/recommendation-complete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-complete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Recommendation> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Complete a recommendation object and update its **status** to `completedByUser`.
+     * Complete a recommendation object and update its status to completedByUser.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -87,7 +87,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Complete a recommendation object and update its **status** to `completedByUser`.
+     * Complete a recommendation object and update its status to completedByUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

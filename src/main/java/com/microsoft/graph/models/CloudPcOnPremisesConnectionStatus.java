@@ -9,6 +9,7 @@ public enum CloudPcOnPremisesConnectionStatus implements ValuedEnum {
     Passed("passed"),
     Failed("failed"),
     Warning("warning"),
+    Informational("informational"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     CloudPcOnPremisesConnectionStatus(final String value) {
@@ -25,6 +26,7 @@ public enum CloudPcOnPremisesConnectionStatus implements ValuedEnum {
             case "passed": return Passed;
             case "failed": return Failed;
             case "warning": return Warning;
+            case "informational": return Informational;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

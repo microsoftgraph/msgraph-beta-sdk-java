@@ -80,7 +80,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
     /**
      * Read the properties of a b2cAuthenticationMethodsPolicy object.
      * @return a CompletableFuture of b2cAuthenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/b2cauthenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cauthenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cAuthenticationMethodsPolicy> get() {
@@ -100,7 +100,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
      * Read the properties of a b2cAuthenticationMethodsPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of b2cAuthenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/b2cauthenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cauthenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cAuthenticationMethodsPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
      * Update the properties of a b2cAuthenticationMethodsPolicy object.
      * @param body The request body
      * @return a CompletableFuture of b2cAuthenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/b2cauthenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cauthenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cAuthenticationMethodsPolicy> patch(@javax.annotation.Nonnull final B2cAuthenticationMethodsPolicy body) {
@@ -141,7 +141,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of b2cAuthenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/b2cauthenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cauthenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cAuthenticationMethodsPolicy> patch(@javax.annotation.Nonnull final B2cAuthenticationMethodsPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -80,7 +80,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the user-customizable privacy settings for itemInsights and meeting hours insights.
      * @return a CompletableFuture of userInsightsSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/userinsightssettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/userinsightssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInsightsSettings> get() {
@@ -100,7 +100,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * Get the user-customizable privacy settings for itemInsights and meeting hours insights.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userInsightsSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/userinsightssettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/userinsightssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInsightsSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * Update the privacy settings for itemInsights and meeting hours insights of a user.
      * @param body The request body
      * @return a CompletableFuture of userInsightsSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/userinsightssettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/userinsightssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInsightsSettings> patch(@javax.annotation.Nonnull final UserInsightsSettings body) {
@@ -141,7 +141,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userInsightsSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/userinsightssettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/userinsightssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInsightsSettings> patch(@javax.annotation.Nonnull final UserInsightsSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

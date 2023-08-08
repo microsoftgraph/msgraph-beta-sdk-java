@@ -57,9 +57,11 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.educationChannelResource": return new EducationChannelResource();
                 case "#microsoft.graph.educationExcelResource": return new EducationExcelResource();
                 case "#microsoft.graph.educationExternalResource": return new EducationExternalResource();
                 case "#microsoft.graph.educationFileResource": return new EducationFileResource();
+                case "#microsoft.graph.educationLinkedAssignmentResource": return new EducationLinkedAssignmentResource();
                 case "#microsoft.graph.educationLinkResource": return new EducationLinkResource();
                 case "#microsoft.graph.educationMediaResource": return new EducationMediaResource();
                 case "#microsoft.graph.educationPowerPointResource": return new EducationPowerPointResource();
@@ -154,7 +156,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -208,7 +210,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

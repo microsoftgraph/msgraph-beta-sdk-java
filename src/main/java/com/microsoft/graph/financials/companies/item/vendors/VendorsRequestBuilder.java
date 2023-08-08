@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the vendors property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class VendorsRequestBuilder extends BaseRequestBuilder {
      * @return a VendorItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public VendorItemRequestBuilder byVendorId(@javax.annotation.Nonnull final String vendorId) {
+    public VendorItemRequestBuilder byVendorId(@javax.annotation.Nonnull final UUID vendorId) {
         Objects.requireNonNull(vendorId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("vendor%2Did", vendorId);

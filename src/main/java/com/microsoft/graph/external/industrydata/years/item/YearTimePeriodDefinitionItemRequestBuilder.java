@@ -43,7 +43,7 @@ public class YearTimePeriodDefinitionItemRequestBuilder extends BaseRequestBuild
     /**
      * Delete a yearTimePeriodDefinition object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class YearTimePeriodDefinitionItemRequestBuilder extends BaseRequestBuild
      * Delete a yearTimePeriodDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class YearTimePeriodDefinitionItemRequestBuilder extends BaseRequestBuild
     /**
      * Read the properties and relationships of a yearTimePeriodDefinition object.
      * @return a CompletableFuture of yearTimePeriodDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<YearTimePeriodDefinition> get() {
@@ -102,7 +102,7 @@ public class YearTimePeriodDefinitionItemRequestBuilder extends BaseRequestBuild
      * Read the properties and relationships of a yearTimePeriodDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of yearTimePeriodDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<YearTimePeriodDefinition> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class YearTimePeriodDefinitionItemRequestBuilder extends BaseRequestBuild
      * Update the properties of a yearTimePeriodDefinition object.
      * @param body The request body
      * @return a CompletableFuture of yearTimePeriodDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<YearTimePeriodDefinition> patch(@javax.annotation.Nonnull final YearTimePeriodDefinition body) {
@@ -143,7 +143,7 @@ public class YearTimePeriodDefinitionItemRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of yearTimePeriodDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<YearTimePeriodDefinition> patch(@javax.annotation.Nonnull final YearTimePeriodDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

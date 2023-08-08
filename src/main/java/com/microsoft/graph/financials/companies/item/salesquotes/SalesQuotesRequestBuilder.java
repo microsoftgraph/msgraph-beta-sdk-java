@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the salesQuotes property of the microsoft.graph.company entity.
  */
@@ -35,7 +36,7 @@ public class SalesQuotesRequestBuilder extends BaseRequestBuilder {
      * @return a SalesQuoteItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public SalesQuoteItemRequestBuilder bySalesQuoteId(@javax.annotation.Nonnull final String salesQuoteId) {
+    public SalesQuoteItemRequestBuilder bySalesQuoteId(@javax.annotation.Nonnull final UUID salesQuoteId) {
         Objects.requireNonNull(salesQuoteId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesQuote%2Did", salesQuoteId);

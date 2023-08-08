@@ -17,7 +17,7 @@ public class StatusBase implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Possible values are: success, warning, failure, skipped, unknownFutureValue.
+     * Possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
      */
     private ProvisioningResult status;
     /**
@@ -73,7 +73,7 @@ public class StatusBase implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue.
+     * Gets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
      * @return a provisioningResult
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class StatusBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -103,7 +103,7 @@ public class StatusBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -111,7 +111,7 @@ public class StatusBase implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue.
+     * Sets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
      * @param value Value to set for the status property.
      * @return a void
      */

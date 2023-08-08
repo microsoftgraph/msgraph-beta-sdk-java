@@ -316,6 +316,10 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     private java.util.List<SecurityBaselineState> securityBaselineStates;
     /**
+     * This indicates the security patch level of the operating system. These special updates contain important security fixes. For iOS/MacOS they are in (a) format. For android its in 2017-08-07 format. This property is read-only.
+     */
+    private String securityPatchLevel;
+    /**
      * SerialNumber. This property is read-only.
      */
     private String serialNumber;
@@ -807,6 +811,7 @@ public class ManagedDevice extends Entity implements Parsable {
         deserializerMap.put("retireAfterDateTime", (n) -> { this.setRetireAfterDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("securityBaselineStates", (n) -> { this.setSecurityBaselineStates(n.getCollectionOfObjectValues(SecurityBaselineState::createFromDiscriminatorValue)); });
+        deserializerMap.put("securityPatchLevel", (n) -> { this.setSecurityPatchLevel(n.getStringValue()); });
         deserializerMap.put("serialNumber", (n) -> { this.setSerialNumber(n.getStringValue()); });
         deserializerMap.put("skuFamily", (n) -> { this.setSkuFamily(n.getStringValue()); });
         deserializerMap.put("skuNumber", (n) -> { this.setSkuNumber(n.getIntegerValue()); });
@@ -1112,6 +1117,14 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<SecurityBaselineState> getSecurityBaselineStates() {
         return this.securityBaselineStates;
+    }
+    /**
+     * Gets the securityPatchLevel property value. This indicates the security patch level of the operating system. These special updates contain important security fixes. For iOS/MacOS they are in (a) format. For android its in 2017-08-07 format. This property is read-only.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getSecurityPatchLevel() {
+        return this.securityPatchLevel;
     }
     /**
      * Gets the serialNumber property value. SerialNumber. This property is read-only.
@@ -1970,6 +1983,15 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setSecurityBaselineStates(@javax.annotation.Nullable final java.util.List<SecurityBaselineState> value) {
         this.securityBaselineStates = value;
+    }
+    /**
+     * Sets the securityPatchLevel property value. This indicates the security patch level of the operating system. These special updates contain important security fixes. For iOS/MacOS they are in (a) format. For android its in 2017-08-07 format. This property is read-only.
+     * @param value Value to set for the securityPatchLevel property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSecurityPatchLevel(@javax.annotation.Nullable final String value) {
+        this.securityPatchLevel = value;
     }
     /**
      * Sets the serialNumber property value. SerialNumber. This property is read-only.

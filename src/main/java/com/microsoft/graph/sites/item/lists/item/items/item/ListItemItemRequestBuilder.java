@@ -116,7 +116,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Removes an item from a [list][].
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -136,7 +136,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
      * Removes an item from a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -155,7 +155,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns the metadata for an [item][] in a [list][].
      * @return a CompletableFuture of listItem
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItem> get() {
@@ -175,7 +175,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
      * Returns the metadata for an [item][] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of listItem
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItem> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

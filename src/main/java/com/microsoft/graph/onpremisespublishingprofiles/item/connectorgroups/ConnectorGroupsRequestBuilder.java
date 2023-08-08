@@ -65,7 +65,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of connectorGroup objects.
      * @return a CompletableFuture of connectorGroupCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/connectorgroup-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectorGroupCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of connectorGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of connectorGroupCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/connectorgroup-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectorGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +102,10 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new connectorGroup.
+     * Create a connectorGroup object.
      * @param body The request body
      * @return a CompletableFuture of connectorGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/connectorgroup-post-connectorgroups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectorGroup> post(@javax.annotation.Nonnull final ConnectorGroup body) {
@@ -122,11 +122,11 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new connectorGroup.
+     * Create a connectorGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of connectorGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/connectorgroup-post-connectorgroups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectorGroup> post(@javax.annotation.Nonnull final ConnectorGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -173,7 +173,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new connectorGroup.
+     * Create a connectorGroup object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +182,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new connectorGroup.
+     * Create a connectorGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

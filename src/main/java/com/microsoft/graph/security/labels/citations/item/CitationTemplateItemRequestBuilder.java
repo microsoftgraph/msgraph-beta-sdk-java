@@ -43,7 +43,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a citationTemplate object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-delete-citations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-citations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Delete a citationTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-delete-citations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-citations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a citationTemplate object.
      * @return a CompletableFuture of citationTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CitationTemplate> get() {
@@ -102,7 +102,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a citationTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of citationTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CitationTemplate> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

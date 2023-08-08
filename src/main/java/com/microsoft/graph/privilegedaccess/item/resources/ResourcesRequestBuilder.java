@@ -73,7 +73,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a collection of governanceResource that the requestor has access to.
      * @return a CompletableFuture of governanceResourceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/governanceresource-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/governanceresource-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceResourceCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a collection of governanceResource that the requestor has access to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of governanceResourceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/governanceresource-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/governanceresource-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceResourceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

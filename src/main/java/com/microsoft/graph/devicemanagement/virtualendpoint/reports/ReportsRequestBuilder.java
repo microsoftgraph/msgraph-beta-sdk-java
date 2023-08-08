@@ -1,7 +1,9 @@
 package com.microsoft.graph.devicemanagement.virtualendpoint.reports;
 
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.exportjobs.ExportJobsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getconnectionqualityreports.GetConnectionQualityReportsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getdailyaggregatedremoteconnectionreports.GetDailyAggregatedRemoteConnectionReportsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getinaccessiblecloudpcreports.GetInaccessibleCloudPcReportsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getrealtimeremoteconnectionlatencywithcloudpcid.GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getrealtimeremoteconnectionstatuswithcloudpcid.GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getremoteconnectionhistoricalreports.GetRemoteConnectionHistoricalReportsRequestBuilder;
@@ -35,11 +37,25 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new ExportJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the getConnectionQualityReports method.
+     */
+    @javax.annotation.Nonnull
+    public GetConnectionQualityReportsRequestBuilder getConnectionQualityReports() {
+        return new GetConnectionQualityReportsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the getDailyAggregatedRemoteConnectionReports method.
      */
     @javax.annotation.Nonnull
     public GetDailyAggregatedRemoteConnectionReportsRequestBuilder getDailyAggregatedRemoteConnectionReports() {
         return new GetDailyAggregatedRemoteConnectionReportsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getInaccessibleCloudPcReports method.
+     */
+    @javax.annotation.Nonnull
+    public GetInaccessibleCloudPcReportsRequestBuilder getInaccessibleCloudPcReports() {
+        return new GetInaccessibleCloudPcReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getRemoteConnectionHistoricalReports method.

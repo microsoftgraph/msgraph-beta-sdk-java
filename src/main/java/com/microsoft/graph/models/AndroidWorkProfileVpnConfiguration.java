@@ -51,6 +51,10 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      */
     private String microsoftTunnelSiteId;
     /**
+     * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     */
+    private java.util.List<String> proxyExclusionList;
+    /**
      * Proxy server.
      */
     private VpnProxyServer proxyServer;
@@ -166,6 +170,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
         deserializerMap.put("fingerprint", (n) -> { this.setFingerprint(n.getStringValue()); });
         deserializerMap.put("identityCertificate", (n) -> { this.setIdentityCertificate(n.getObjectValue(AndroidWorkProfileCertificateProfileBase::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoftTunnelSiteId", (n) -> { this.setMicrosoftTunnelSiteId(n.getStringValue()); });
+        deserializerMap.put("proxyExclusionList", (n) -> { this.setProxyExclusionList(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("proxyServer", (n) -> { this.setProxyServer(n.getObjectValue(VpnProxyServer::createFromDiscriminatorValue)); });
         deserializerMap.put("realm", (n) -> { this.setRealm(n.getStringValue()); });
         deserializerMap.put("role", (n) -> { this.setRole(n.getStringValue()); });
@@ -197,6 +202,14 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     @javax.annotation.Nullable
     public String getMicrosoftTunnelSiteId() {
         return this.microsoftTunnelSiteId;
+    }
+    /**
+     * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getProxyExclusionList() {
+        return this.proxyExclusionList;
     }
     /**
      * Gets the proxyServer property value. Proxy server.
@@ -265,6 +278,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
         writer.writeStringValue("fingerprint", this.getFingerprint());
         writer.writeObjectValue("identityCertificate", this.getIdentityCertificate());
         writer.writeStringValue("microsoftTunnelSiteId", this.getMicrosoftTunnelSiteId());
+        writer.writeCollectionOfPrimitiveValues("proxyExclusionList", this.getProxyExclusionList());
         writer.writeObjectValue("proxyServer", this.getProxyServer());
         writer.writeStringValue("realm", this.getRealm());
         writer.writeStringValue("role", this.getRole());
@@ -361,6 +375,15 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     @javax.annotation.Nonnull
     public void setMicrosoftTunnelSiteId(@javax.annotation.Nullable final String value) {
         this.microsoftTunnelSiteId = value;
+    }
+    /**
+     * Sets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     * @param value Value to set for the proxyExclusionList property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setProxyExclusionList(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.proxyExclusionList = value;
     }
     /**
      * Sets the proxyServer property value. Proxy server.

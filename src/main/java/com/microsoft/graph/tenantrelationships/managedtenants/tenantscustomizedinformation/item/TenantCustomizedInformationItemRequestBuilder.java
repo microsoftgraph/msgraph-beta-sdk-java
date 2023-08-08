@@ -80,7 +80,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
     /**
      * Read the properties and relationships of a tenantCustomizedInformation object.
      * @return a CompletableFuture of tenantCustomizedInformation
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantCustomizedInformation> get() {
@@ -100,7 +100,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
      * Read the properties and relationships of a tenantCustomizedInformation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tenantCustomizedInformation
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantCustomizedInformation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
      * Update the properties of a tenantCustomizedInformation object.
      * @param body The request body
      * @return a CompletableFuture of tenantCustomizedInformation
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantCustomizedInformation> patch(@javax.annotation.Nonnull final TenantCustomizedInformation body) {
@@ -141,7 +141,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tenantCustomizedInformation
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantCustomizedInformation> patch(@javax.annotation.Nonnull final TenantCustomizedInformation body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

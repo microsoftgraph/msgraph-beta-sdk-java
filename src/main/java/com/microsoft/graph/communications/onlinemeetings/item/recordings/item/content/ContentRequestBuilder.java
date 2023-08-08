@@ -41,7 +41,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/recordings/{callRecording%2Did}/content", rawUrl);
     }
     /**
-     * Get content for the navigation property recordings from communications
+     * The content of the recording. Read-only.
      * @return a CompletableFuture of InputStream
      */
     @javax.annotation.Nonnull
@@ -59,7 +59,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get content for the navigation property recordings from communications
+     * The content of the recording. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
      */
@@ -78,7 +78,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update content for the navigation property recordings in communications
+     * The content of the recording. Read-only.
      * @param body Binary request body
      * @return a CompletableFuture of callRecording
      */
@@ -97,7 +97,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update content for the navigation property recordings in communications
+     * The content of the recording. Read-only.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of callRecording
@@ -118,7 +118,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get content for the navigation property recordings from communications
+     * The content of the recording. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -126,7 +126,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get content for the navigation property recordings from communications
+     * The content of the recording. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update content for the navigation property recordings in communications
+     * The content of the recording. Read-only.
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Update content for the navigation property recordings in communications
+     * The content of the recording. Read-only.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -86,9 +86,9 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a **riskyUser** object.
+     * Retrieve the properties and relationships of a riskyUser object.
      * @return a CompletableFuture of riskyUser
-     * @see <a href="https://docs.microsoft.com/graph/api/riskyusers-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskyusers-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUser> get() {
@@ -105,10 +105,10 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a **riskyUser** object.
+     * Retrieve the properties and relationships of a riskyUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of riskyUser
-     * @see <a href="https://docs.microsoft.com/graph/api/riskyusers-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskyusers-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUser> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -192,7 +192,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a **riskyUser** object.
+     * Retrieve the properties and relationships of a riskyUser object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -200,7 +200,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a **riskyUser** object.
+     * Retrieve the properties and relationships of a riskyUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -258,7 +258,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a **riskyUser** object.
+     * Retrieve the properties and relationships of a riskyUser object.
      */
     public class GetQueryParameters {
         /**

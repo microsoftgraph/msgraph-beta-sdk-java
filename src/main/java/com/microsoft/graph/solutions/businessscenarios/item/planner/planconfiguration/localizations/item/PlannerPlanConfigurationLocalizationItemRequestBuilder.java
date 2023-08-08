@@ -43,7 +43,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
     /**
      * Delete a plannerPlanConfigurationLocalization object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerplanconfiguration-delete-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-delete-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
      * Delete a plannerPlanConfigurationLocalization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerplanconfiguration-delete-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-delete-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
     /**
      * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
      * @return a CompletableFuture of plannerPlanConfigurationLocalization
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerplanconfigurationlocalization-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanConfigurationLocalization> get() {
@@ -102,7 +102,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
      * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerPlanConfigurationLocalization
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerplanconfigurationlocalization-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanConfigurationLocalization> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
      * Update the properties of a plannerPlanConfigurationLocalization object.
      * @param body The request body
      * @return a CompletableFuture of plannerPlanConfigurationLocalization
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerplanconfigurationlocalization-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanConfigurationLocalization> patch(@javax.annotation.Nonnull final PlannerPlanConfigurationLocalization body) {
@@ -143,7 +143,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerPlanConfigurationLocalization
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerplanconfigurationlocalization-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanConfigurationLocalization> patch(@javax.annotation.Nonnull final PlannerPlanConfigurationLocalization body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

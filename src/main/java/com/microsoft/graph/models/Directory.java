@@ -60,7 +60,7 @@ public class Directory extends Entity implements Parsable {
      */
     private java.util.List<SharedEmailDomain> sharedEmailDomains;
     /**
-     * The subscriptions property
+     * List of commercial subscriptions that an organization has acquired.
      */
     private java.util.List<CompanySubscription> subscriptions;
     /**
@@ -209,7 +209,7 @@ public class Directory extends Entity implements Parsable {
         return this.sharedEmailDomains;
     }
     /**
-     * Gets the subscriptions property value. The subscriptions property
+     * Gets the subscriptions property value. List of commercial subscriptions that an organization has acquired.
      * @return a companySubscription
      */
     @javax.annotation.Nullable
@@ -358,7 +358,7 @@ public class Directory extends Entity implements Parsable {
         this.sharedEmailDomains = value;
     }
     /**
-     * Sets the subscriptions property value. The subscriptions property
+     * Sets the subscriptions property value. List of commercial subscriptions that an organization has acquired.
      * @param value Value to set for the subscriptions property.
      * @return a void
      */

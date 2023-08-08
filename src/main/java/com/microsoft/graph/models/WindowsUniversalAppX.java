@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Contains properties and inherited properties for Windows Universal AppX Line Of Business apps.
+ * Contains properties and inherited properties for Windows Universal AppX Line Of Business apps. Inherits from `mobileLobApp`.
  */
 public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     /**
@@ -15,7 +15,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      */
     private WindowsArchitecture applicableArchitectures;
     /**
-     * Contains properties for Windows device type.
+     * Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
      */
     private WindowsDeviceType applicableDeviceTypes;
     /**
@@ -74,7 +74,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         return this.applicableArchitectures;
     }
     /**
-     * Gets the applicableDeviceTypes property value. Contains properties for Windows device type.
+     * Gets the applicableDeviceTypes property value. Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
      * @return a windowsDeviceType
      */
     @javax.annotation.Nullable
@@ -184,7 +184,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         this.applicableArchitectures = value;
     }
     /**
-     * Sets the applicableDeviceTypes property value. Contains properties for Windows device type.
+     * Sets the applicableDeviceTypes property value. Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
      * @param value Value to set for the applicableDeviceTypes property.
      * @return a void
      */

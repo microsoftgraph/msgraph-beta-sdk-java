@@ -80,7 +80,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a contactMergeSuggestions object.
      * @return a CompletableFuture of contactMergeSuggestions
-     * @see <a href="https://docs.microsoft.com/graph/api/contactmergesuggestions-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactmergesuggestions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactMergeSuggestions> get() {
@@ -100,7 +100,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a contactMergeSuggestions object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contactMergeSuggestions
-     * @see <a href="https://docs.microsoft.com/graph/api/contactmergesuggestions-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactmergesuggestions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactMergeSuggestions> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a contactMergeSuggestions object.
      * @param body The request body
      * @return a CompletableFuture of contactMergeSuggestions
-     * @see <a href="https://docs.microsoft.com/graph/api/contactmergesuggestions-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactmergesuggestions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactMergeSuggestions> patch(@javax.annotation.Nonnull final ContactMergeSuggestions body) {
@@ -141,7 +141,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contactMergeSuggestions
-     * @see <a href="https://docs.microsoft.com/graph/api/contactmergesuggestions-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactmergesuggestions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactMergeSuggestions> patch(@javax.annotation.Nonnull final ContactMergeSuggestions body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

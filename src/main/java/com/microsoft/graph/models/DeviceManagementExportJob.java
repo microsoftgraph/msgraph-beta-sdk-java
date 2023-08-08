@@ -177,16 +177,13 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeStringValue("filter", this.getFilter());
         writer.writeEnumValue("format", this.getFormat());
         writer.writeEnumValue("localizationType", this.getLocalizationType());
         writer.writeStringValue("reportName", this.getReportName());
-        writer.writeOffsetDateTimeValue("requestDateTime", this.getRequestDateTime());
         writer.writeCollectionOfPrimitiveValues("select", this.getSelect());
         writer.writeStringValue("snapshotId", this.getSnapshotId());
         writer.writeEnumValue("status", this.getStatus());
-        writer.writeStringValue("url", this.getUrl());
     }
     /**
      * Sets the expirationDateTime property value. Time that the exported report expires

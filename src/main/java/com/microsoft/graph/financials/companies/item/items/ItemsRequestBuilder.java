@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the items property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      * @return a ItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public ItemItemRequestBuilder byItemId(@javax.annotation.Nonnull final String itemId) {
+    public ItemItemRequestBuilder byItemId(@javax.annotation.Nonnull final UUID itemId) {
         Objects.requireNonNull(itemId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("item%2Did", itemId);

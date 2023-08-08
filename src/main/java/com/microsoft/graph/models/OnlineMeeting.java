@@ -133,7 +133,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     private byte[] recording;
     /**
-     * The recordings property
+     * The recordings of an online meeting. Read-only.
      */
     private java.util.List<CallRecording> recordings;
     /**
@@ -491,7 +491,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this.recording;
     }
     /**
-     * Gets the recordings property value. The recordings property
+     * Gets the recordings property value. The recordings of an online meeting. Read-only.
      * @return a callRecording
      */
     @javax.annotation.Nullable
@@ -892,7 +892,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this.recording = value;
     }
     /**
-     * Sets the recordings property value. The recordings property
+     * Sets the recordings property value. The recordings of an online meeting. Read-only.
      * @param value Value to set for the recordings property.
      * @return a void
      */

@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the agedAccountsReceivable property of the microsoft.graph.company entity.
  */
@@ -35,7 +36,7 @@ public class AgedAccountsReceivableRequestBuilder extends BaseRequestBuilder {
      * @return a AgedAccountsReceivableItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public AgedAccountsReceivableItemRequestBuilder byAgedAccountsReceivableId(@javax.annotation.Nonnull final String agedAccountsReceivableId) {
+    public AgedAccountsReceivableItemRequestBuilder byAgedAccountsReceivableId(@javax.annotation.Nonnull final UUID agedAccountsReceivableId) {
         Objects.requireNonNull(agedAccountsReceivableId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("agedAccountsReceivable%2Did", agedAccountsReceivableId);

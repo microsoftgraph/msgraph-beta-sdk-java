@@ -65,7 +65,7 @@ public class AlertConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object:
      * @return a CompletableFuture of unifiedRoleManagementAlertConfigurationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rolemanagementalert-list-alertconfigurations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alertconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertConfigurationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AlertConfigurationsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleManagementAlertConfigurationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rolemanagementalert-list-alertconfigurations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alertconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertConfigurationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

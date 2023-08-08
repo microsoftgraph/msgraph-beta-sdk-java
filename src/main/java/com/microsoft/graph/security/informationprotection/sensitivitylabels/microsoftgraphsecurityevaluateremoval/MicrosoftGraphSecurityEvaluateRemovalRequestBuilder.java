@@ -42,7 +42,7 @@ public class MicrosoftGraphSecurityEvaluateRemovalRequestBuilder extends BaseReq
      * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key-value pairs, the API returns an informationProtectionAction that contains some combination of one or more of the following: 
      * @param body The request body
      * @return a CompletableFuture of evaluateRemovalResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-sensitivitylabel-evaluateremoval?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-evaluateremoval?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EvaluateRemovalResponse> post(@javax.annotation.Nonnull final EvaluateRemovalPostRequestBody body) {
@@ -63,7 +63,7 @@ public class MicrosoftGraphSecurityEvaluateRemovalRequestBuilder extends BaseReq
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of evaluateRemovalResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-sensitivitylabel-evaluateremoval?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-evaluateremoval?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EvaluateRemovalResponse> post(@javax.annotation.Nonnull final EvaluateRemovalPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

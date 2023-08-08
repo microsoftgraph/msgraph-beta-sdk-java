@@ -13,6 +13,10 @@ public class CloudPC extends Entity implements Parsable {
      */
     private String aadDeviceId;
     /**
+     * The connectionSettings property
+     */
+    private CloudPcConnectionSettings connectionSettings;
+    /**
      * The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC can be connected.
      */
     private CloudPcConnectivityResult connectivityResult;
@@ -135,6 +139,14 @@ public class CloudPC extends Entity implements Parsable {
         return this.aadDeviceId;
     }
     /**
+     * Gets the connectionSettings property value. The connectionSettings property
+     * @return a cloudPcConnectionSettings
+     */
+    @javax.annotation.Nullable
+    public CloudPcConnectionSettings getConnectionSettings() {
+        return this.connectionSettings;
+    }
+    /**
      * Gets the connectivityResult property value. The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC can be connected.
      * @return a cloudPcConnectivityResult
      */
@@ -166,6 +178,7 @@ public class CloudPC extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("aadDeviceId", (n) -> { this.setAadDeviceId(n.getStringValue()); });
+        deserializerMap.put("connectionSettings", (n) -> { this.setConnectionSettings(n.getObjectValue(CloudPcConnectionSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("connectivityResult", (n) -> { this.setConnectivityResult(n.getObjectValue(CloudPcConnectivityResult::createFromDiscriminatorValue)); });
         deserializerMap.put("diskEncryptionState", (n) -> { this.setDiskEncryptionState(n.getEnumValue(CloudPcDiskEncryptionState.class)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -370,6 +383,7 @@ public class CloudPC extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("aadDeviceId", this.getAadDeviceId());
+        writer.writeObjectValue("connectionSettings", this.getConnectionSettings());
         writer.writeObjectValue("connectivityResult", this.getConnectivityResult());
         writer.writeEnumValue("diskEncryptionState", this.getDiskEncryptionState());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -403,6 +417,15 @@ public class CloudPC extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setAadDeviceId(@javax.annotation.Nullable final String value) {
         this.aadDeviceId = value;
+    }
+    /**
+     * Sets the connectionSettings property value. The connectionSettings property
+     * @param value Value to set for the connectionSettings property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setConnectionSettings(@javax.annotation.Nullable final CloudPcConnectionSettings value) {
+        this.connectionSettings = value;
     }
     /**
      * Sets the connectivityResult property value. The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC can be connected.

@@ -43,7 +43,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @return a CompletableFuture of deviceRegistrationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/deviceregistrationpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/deviceregistrationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceRegistrationPolicy> get() {
@@ -63,7 +63,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceRegistrationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/deviceregistrationpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/deviceregistrationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceRegistrationPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @param body The request body
      * @return a CompletableFuture of deviceRegistrationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/deviceregistrationpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/deviceregistrationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceRegistrationPolicy> patch(@javax.annotation.Nonnull final DeviceRegistrationPolicy body) {
@@ -104,7 +104,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceRegistrationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/deviceregistrationpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/deviceregistrationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceRegistrationPolicy> patch(@javax.annotation.Nonnull final DeviceRegistrationPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -36,7 +36,7 @@ public class LastModifiedByUserRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public LastModifiedByUserRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{sitePage%2Did}/lastModifiedByUser{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/lastModifiedByUser{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new LastModifiedByUserRequestBuilder and sets the default values.
@@ -46,7 +46,7 @@ public class LastModifiedByUserRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public LastModifiedByUserRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{sitePage%2Did}/lastModifiedByUser{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/lastModifiedByUser{?%24select,%24expand}", rawUrl);
     }
     /**
      * Get lastModifiedByUser from groups

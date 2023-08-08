@@ -65,7 +65,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @return a CompletableFuture of accessReviewDecisionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreview-listmydecisions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listmydecisions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewDecisionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewDecisionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreview-listmydecisions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listmydecisions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewDecisionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

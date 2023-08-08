@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     /**
      * Timeout for backlight (30-3600 secs). Not applicable for Teams Rooms devices.
      */
-    private Period backlightTimeout;
+    private PeriodAndDuration backlightTimeout;
     /**
      * True if high contrast mode is enabled. Not applicable for Teams Rooms devices.
      */
@@ -36,7 +36,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     /**
      * Screensaver timeout from 30 to 3600 secs. Not applicable for Teams Rooms devices.
      */
-    private Period screensaverTimeout;
+    private PeriodAndDuration screensaverTimeout;
     /**
      * Instantiates a new teamworkDisplayScreenConfiguration and sets the default values.
      * @return a void
@@ -73,10 +73,10 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     }
     /**
      * Gets the backlightTimeout property value. Timeout for backlight (30-3600 secs). Not applicable for Teams Rooms devices.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getBacklightTimeout() {
+    public PeriodAndDuration getBacklightTimeout() {
         return this.backlightTimeout;
     }
     /**
@@ -87,11 +87,11 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("backlightBrightness", (n) -> { this.setBacklightBrightness(n.getIntegerValue()); });
-        deserializerMap.put("backlightTimeout", (n) -> { this.setBacklightTimeout(n.getPeriodValue()); });
+        deserializerMap.put("backlightTimeout", (n) -> { this.setBacklightTimeout(n.getPeriodAndDurationValue()); });
         deserializerMap.put("isHighContrastEnabled", (n) -> { this.setIsHighContrastEnabled(n.getBooleanValue()); });
         deserializerMap.put("isScreensaverEnabled", (n) -> { this.setIsScreensaverEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("screensaverTimeout", (n) -> { this.setScreensaverTimeout(n.getPeriodValue()); });
+        deserializerMap.put("screensaverTimeout", (n) -> { this.setScreensaverTimeout(n.getPeriodAndDurationValue()); });
         return deserializerMap;
     }
     /**
@@ -120,10 +120,10 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     }
     /**
      * Gets the screensaverTimeout property value. Screensaver timeout from 30 to 3600 secs. Not applicable for Teams Rooms devices.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getScreensaverTimeout() {
+    public PeriodAndDuration getScreensaverTimeout() {
         return this.screensaverTimeout;
     }
     /**
@@ -135,16 +135,16 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("backlightBrightness", this.getBacklightBrightness());
-        writer.writePeriodValue("backlightTimeout", this.getBacklightTimeout());
+        writer.writePeriodAndDurationValue("backlightTimeout", this.getBacklightTimeout());
         writer.writeBooleanValue("isHighContrastEnabled", this.getIsHighContrastEnabled());
         writer.writeBooleanValue("isScreensaverEnabled", this.getIsScreensaverEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writePeriodValue("screensaverTimeout", this.getScreensaverTimeout());
+        writer.writePeriodAndDurationValue("screensaverTimeout", this.getScreensaverTimeout());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -166,7 +166,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setBacklightTimeout(@javax.annotation.Nullable final Period value) {
+    public void setBacklightTimeout(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.backlightTimeout = value;
     }
     /**
@@ -189,7 +189,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -202,7 +202,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setScreensaverTimeout(@javax.annotation.Nullable final Period value) {
+    public void setScreensaverTimeout(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.screensaverTimeout = value;
     }
 }

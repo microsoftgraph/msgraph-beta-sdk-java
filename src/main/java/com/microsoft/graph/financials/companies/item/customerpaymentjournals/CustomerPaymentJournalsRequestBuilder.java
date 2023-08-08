@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the customerPaymentJournals property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class CustomerPaymentJournalsRequestBuilder extends BaseRequestBuilder {
      * @return a CustomerPaymentJournalItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public CustomerPaymentJournalItemRequestBuilder byCustomerPaymentJournalId(@javax.annotation.Nonnull final String customerPaymentJournalId) {
+    public CustomerPaymentJournalItemRequestBuilder byCustomerPaymentJournalId(@javax.annotation.Nonnull final UUID customerPaymentJournalId) {
         Objects.requireNonNull(customerPaymentJournalId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("customerPaymentJournal%2Did", customerPaymentJournalId);

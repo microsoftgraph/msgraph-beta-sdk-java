@@ -21,7 +21,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
      */
     private String ruleIdentifier;
     /**
-     * The settings of the rule. The value is a JSON string with a list of pairs in the format of Parameter_Name:Parameter_Value. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
+     * The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
      */
     private String setting;
     /**
@@ -79,7 +79,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
         return this.ruleIdentifier;
     }
     /**
-     * Gets the setting property value. The settings of the rule. The value is a JSON string with a list of pairs in the format of Parameter_Name:Parameter_Value. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
+     * Gets the setting property value. The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -110,7 +110,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -127,7 +127,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
         this.ruleIdentifier = value;
     }
     /**
-     * Sets the setting property value. The settings of the rule. The value is a JSON string with a list of pairs in the format of Parameter_Name:Parameter_Value. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
+     * Sets the setting property value. The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
      * @param value Value to set for the setting property.
      * @return a void
      */

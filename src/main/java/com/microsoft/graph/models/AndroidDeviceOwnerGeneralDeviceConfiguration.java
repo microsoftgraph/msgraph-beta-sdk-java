@@ -15,6 +15,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      */
     private Boolean accountsBlockModification;
     /**
+     * Specifies the list of managed apps with app details and its associated delegated scope(s). This collection can contain a maximum of 500 elements.
+     */
+    private java.util.List<AndroidDeviceOwnerDelegatedScopeAppSetting> androidDeviceOwnerDelegatedScopeAppSettings;
+    /**
      * Indicates whether or not the user is allowed to enable to unknown sources setting.
      */
     private Boolean appsAllowInstallFromUnknownSources;
@@ -582,6 +586,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.accountsBlockModification;
     }
     /**
+     * Gets the androidDeviceOwnerDelegatedScopeAppSettings property value. Specifies the list of managed apps with app details and its associated delegated scope(s). This collection can contain a maximum of 500 elements.
+     * @return a androidDeviceOwnerDelegatedScopeAppSetting
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AndroidDeviceOwnerDelegatedScopeAppSetting> getAndroidDeviceOwnerDelegatedScopeAppSettings() {
+        return this.androidDeviceOwnerDelegatedScopeAppSettings;
+    }
+    /**
      * Gets the appsAllowInstallFromUnknownSources property value. Indicates whether or not the user is allowed to enable to unknown sources setting.
      * @return a boolean
      */
@@ -749,6 +761,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountsBlockModification", (n) -> { this.setAccountsBlockModification(n.getBooleanValue()); });
+        deserializerMap.put("androidDeviceOwnerDelegatedScopeAppSettings", (n) -> { this.setAndroidDeviceOwnerDelegatedScopeAppSettings(n.getCollectionOfObjectValues(AndroidDeviceOwnerDelegatedScopeAppSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("appsAllowInstallFromUnknownSources", (n) -> { this.setAppsAllowInstallFromUnknownSources(n.getBooleanValue()); });
         deserializerMap.put("appsAutoUpdatePolicy", (n) -> { this.setAppsAutoUpdatePolicy(n.getEnumValue(AndroidDeviceOwnerAppAutoUpdatePolicyType.class)); });
         deserializerMap.put("appsDefaultPermissionPolicy", (n) -> { this.setAppsDefaultPermissionPolicy(n.getEnumValue(AndroidDeviceOwnerDefaultAppPermissionPolicyType.class)); });
@@ -1816,6 +1829,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("accountsBlockModification", this.getAccountsBlockModification());
+        writer.writeCollectionOfObjectValues("androidDeviceOwnerDelegatedScopeAppSettings", this.getAndroidDeviceOwnerDelegatedScopeAppSettings());
         writer.writeBooleanValue("appsAllowInstallFromUnknownSources", this.getAppsAllowInstallFromUnknownSources());
         writer.writeEnumValue("appsAutoUpdatePolicy", this.getAppsAutoUpdatePolicy());
         writer.writeEnumValue("appsDefaultPermissionPolicy", this.getAppsDefaultPermissionPolicy());
@@ -1960,6 +1974,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @javax.annotation.Nonnull
     public void setAccountsBlockModification(@javax.annotation.Nullable final Boolean value) {
         this.accountsBlockModification = value;
+    }
+    /**
+     * Sets the androidDeviceOwnerDelegatedScopeAppSettings property value. Specifies the list of managed apps with app details and its associated delegated scope(s). This collection can contain a maximum of 500 elements.
+     * @param value Value to set for the androidDeviceOwnerDelegatedScopeAppSettings property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAndroidDeviceOwnerDelegatedScopeAppSettings(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerDelegatedScopeAppSetting> value) {
+        this.androidDeviceOwnerDelegatedScopeAppSettings = value;
     }
     /**
      * Sets the appsAllowInstallFromUnknownSources property value. Indicates whether or not the user is allowed to enable to unknown sources setting.

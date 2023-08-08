@@ -75,7 +75,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a b2cIdentityUserFlow object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/b2cidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -95,7 +95,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * Delete a b2cIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/b2cidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a b2cUserFlow object.
      * @return a CompletableFuture of b2cIdentityUserFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/b2cidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> get() {
@@ -134,7 +134,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a b2cUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of b2cIdentityUserFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/b2cidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -154,7 +154,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a b2cIdentityUserFlow object.
      * @param body The request body
      * @return a CompletableFuture of b2cIdentityUserFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/b2cidentityuserflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> patch(@javax.annotation.Nonnull final B2cIdentityUserFlow body) {
@@ -175,7 +175,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of b2cIdentityUserFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/b2cidentityuserflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> patch(@javax.annotation.Nonnull final B2cIdentityUserFlow body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the urlThreatSubmission objects and their properties.
      * @return a CompletableFuture of urlThreatSubmissionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-urlthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UrlThreatSubmissionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the urlThreatSubmission objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of urlThreatSubmissionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-urlthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UrlThreatSubmissionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
      * Create a new urlThreatSubmission object.
      * @param body The request body
      * @return a CompletableFuture of urlThreatSubmission
-     * @see <a href="https://docs.microsoft.com/graph/api/security-urlthreatsubmission-post-urlthreats?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-post-urlthreats?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UrlThreatSubmission> post(@javax.annotation.Nonnull final UrlThreatSubmission body) {
@@ -126,7 +126,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of urlThreatSubmission
-     * @see <a href="https://docs.microsoft.com/graph/api/security-urlthreatsubmission-post-urlthreats?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-post-urlthreats?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UrlThreatSubmission> post(@javax.annotation.Nonnull final UrlThreatSubmission body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

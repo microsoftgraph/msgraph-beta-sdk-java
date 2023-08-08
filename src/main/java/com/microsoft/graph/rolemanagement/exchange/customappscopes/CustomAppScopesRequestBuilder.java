@@ -65,7 +65,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @return a CompletableFuture of customAppScopeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedrbacapplication-list-customappscopes?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-list-customappscopes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAppScopeCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
      * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customAppScopeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedrbacapplication-list-customappscopes?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-list-customappscopes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAppScopeCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
      * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @return a CompletableFuture of customAppScope
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedrbacapplication-post-customappscope?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-post-customappscope?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAppScope> post(@javax.annotation.Nonnull final CustomAppScope body) {
@@ -126,7 +126,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customAppScope
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedrbacapplication-post-customappscope?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-post-customappscope?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAppScope> post(@javax.annotation.Nonnull final CustomAppScope body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

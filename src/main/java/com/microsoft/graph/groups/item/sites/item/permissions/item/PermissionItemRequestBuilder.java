@@ -96,7 +96,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a permission object on a site.
      * @return a CompletableFuture of permission
-     * @see <a href="https://docs.microsoft.com/graph/api/site-get-permission?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-get-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> get() {
@@ -116,7 +116,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a permission object on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permission
-     * @see <a href="https://docs.microsoft.com/graph/api/site-get-permission?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-get-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,7 +136,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
      * Update the permission object on a site.
      * @param body The request body
      * @return a CompletableFuture of permission
-     * @see <a href="https://docs.microsoft.com/graph/api/site-update-permission?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-update-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> patch(@javax.annotation.Nonnull final Permission body) {
@@ -157,7 +157,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permission
-     * @see <a href="https://docs.microsoft.com/graph/api/site-update-permission?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-update-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> patch(@javax.annotation.Nonnull final Permission body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

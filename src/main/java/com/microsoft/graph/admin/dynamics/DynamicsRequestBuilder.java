@@ -80,7 +80,7 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a adminDynamics object.
      * @return a CompletableFuture of adminDynamics
-     * @see <a href="https://docs.microsoft.com/graph/api/admindynamics-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/admindynamics-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminDynamics> get() {
@@ -100,7 +100,7 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a adminDynamics object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminDynamics
-     * @see <a href="https://docs.microsoft.com/graph/api/admindynamics-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/admindynamics-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminDynamics> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a adminDynamics object.
      * @param body The request body
      * @return a CompletableFuture of adminDynamics
-     * @see <a href="https://docs.microsoft.com/graph/api/admindynamics-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/admindynamics-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminDynamics> patch(@javax.annotation.Nonnull final AdminDynamics body) {
@@ -141,7 +141,7 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminDynamics
-     * @see <a href="https://docs.microsoft.com/graph/api/admindynamics-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/admindynamics-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminDynamics> patch(@javax.annotation.Nonnull final AdminDynamics body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

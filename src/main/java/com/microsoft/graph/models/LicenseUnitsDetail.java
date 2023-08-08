@@ -17,7 +17,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     private Integer enabled;
     /**
-     * The lockedOut property
+     * The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      */
     private Integer lockedOut;
     /**
@@ -81,7 +81,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lockedOut property value. The lockedOut property
+     * Gets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         this.enabled = value;
     }
     /**
-     * Sets the lockedOut property value. The lockedOut property
+     * Sets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      * @param value Value to set for the lockedOut property.
      * @return a void
      */
@@ -156,7 +156,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

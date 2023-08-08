@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the itemCategories property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class ItemCategoriesRequestBuilder extends BaseRequestBuilder {
      * @return a ItemCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public ItemCategoryItemRequestBuilder byItemCategoryId(@javax.annotation.Nonnull final String itemCategoryId) {
+    public ItemCategoryItemRequestBuilder byItemCategoryId(@javax.annotation.Nonnull final UUID itemCategoryId) {
         Objects.requireNonNull(itemCategoryId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("itemCategory%2Did", itemCategoryId);

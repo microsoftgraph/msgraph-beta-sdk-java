@@ -80,7 +80,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
     /**
      * Retrieve the properties of a user's regionalAndLanguageSettings.
      * @return a CompletableFuture of regionalAndLanguageSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RegionalAndLanguageSettings> get() {
@@ -100,7 +100,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
      * Retrieve the properties of a user's regionalAndLanguageSettings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of regionalAndLanguageSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RegionalAndLanguageSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
      * Update some or all of the properties of a regionalAndLanguageSettings object.
      * @param body The request body
      * @return a CompletableFuture of regionalAndLanguageSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/regionalandlanguagesettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RegionalAndLanguageSettings> patch(@javax.annotation.Nonnull final RegionalAndLanguageSettings body) {
@@ -141,7 +141,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of regionalAndLanguageSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/regionalandlanguagesettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RegionalAndLanguageSettings> patch(@javax.annotation.Nonnull final RegionalAndLanguageSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

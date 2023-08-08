@@ -13,11 +13,11 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Optional. The application associated with this action.
+     * The Identity of the Application. This property is read-only.
      */
     private Identity application;
     /**
-     * Optional. The device associated with this action.
+     * The Identity of the Device. This property is read-only.
      */
     private Identity device;
     /**
@@ -25,7 +25,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Optional. The user associated with this action.
+     * The Identity of the User. This property is read-only.
      */
     private Identity user;
     /**
@@ -66,7 +66,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the application property value. Optional. The application associated with this action.
+     * Gets the application property value. The Identity of the Application. This property is read-only.
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         return this.application;
     }
     /**
-     * Gets the device property value. Optional. The device associated with this action.
+     * Gets the device property value. The Identity of the Device. This property is read-only.
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the user property value. Optional. The user associated with this action.
+     * Gets the user property value. The Identity of the User. This property is read-only.
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -134,7 +134,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the application property value. Optional. The application associated with this action.
+     * Sets the application property value. The Identity of the Application. This property is read-only.
      * @param value Value to set for the application property.
      * @return a void
      */
@@ -143,7 +143,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         this.application = value;
     }
     /**
-     * Sets the device property value. Optional. The device associated with this action.
+     * Sets the device property value. The Identity of the Device. This property is read-only.
      * @param value Value to set for the device property.
      * @return a void
      */
@@ -153,7 +153,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -161,7 +161,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the user property value. Optional. The user associated with this action.
+     * Sets the user property value. The Identity of the User. This property is read-only.
      * @param value Value to set for the user property.
      * @return a void
      */

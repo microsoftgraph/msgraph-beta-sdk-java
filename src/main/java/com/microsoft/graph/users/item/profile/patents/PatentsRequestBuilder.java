@@ -65,7 +65,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of itemPatent objects from a user's profile.
      * @return a CompletableFuture of itemPatentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-patents?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPatentCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of itemPatent objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemPatentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-patents?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPatentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
      * Create a new itemPatent object within a user's profile.
      * @param body The request body
      * @return a CompletableFuture of itemPatent
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-patents?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPatent> post(@javax.annotation.Nonnull final ItemPatent body) {
@@ -126,7 +126,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemPatent
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-patents?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPatent> post(@javax.annotation.Nonnull final ItemPatent body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

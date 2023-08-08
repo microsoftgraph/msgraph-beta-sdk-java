@@ -34,7 +34,9 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
     /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue"),
     /** Template Family for device configuration scripts */
-    DeviceConfigurationScripts("deviceConfigurationScripts");
+    DeviceConfigurationScripts("deviceConfigurationScripts"),
+    /** Template Family for device configuration policies */
+    DeviceConfigurationPolicies("deviceConfigurationPolicies");
     public final String value;
     DeviceManagementConfigurationTemplateFamily(final String value) {
         this.value = value;
@@ -59,6 +61,7 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
             case "baseline": return Baseline;
             case "unknownFutureValue": return UnknownFutureValue;
             case "deviceConfigurationScripts": return DeviceConfigurationScripts;
+            case "deviceConfigurationPolicies": return DeviceConfigurationPolicies;
             default: return null;
         }
     }

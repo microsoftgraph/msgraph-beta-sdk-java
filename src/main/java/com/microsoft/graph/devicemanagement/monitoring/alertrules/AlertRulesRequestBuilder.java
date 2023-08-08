@@ -65,7 +65,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the alertRule objects and their properties.
      * @return a CompletableFuture of alertRuleCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/devicemanagement-alertrule-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertRuleCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
      * Get a list of the alertRule objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of alertRuleCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/devicemanagement-alertrule-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertRuleCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
      * Create an alertRule object.
      * @param body The request body
      * @return a CompletableFuture of alertRule
-     * @see <a href="https://docs.microsoft.com/graph/api/devicemanagement-alertrule-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertRule> post(@javax.annotation.Nonnull final AlertRule body) {
@@ -126,7 +126,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of alertRule
-     * @see <a href="https://docs.microsoft.com/graph/api/devicemanagement-alertrule-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertRule> post(@javax.annotation.Nonnull final AlertRule body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

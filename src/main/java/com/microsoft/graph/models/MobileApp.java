@@ -130,12 +130,12 @@ public class MobileApp extends Entity implements Parsable {
                 case "#microsoft.graph.iosVppApp": return new IosVppApp();
                 case "#microsoft.graph.macOSDmgApp": return new MacOSDmgApp();
                 case "#microsoft.graph.macOSLobApp": return new MacOSLobApp();
-                case "#microsoft.graph.macOSMdatpApp": return new MacOSMdatpApp();
                 case "#microsoft.graph.macOSMicrosoftDefenderApp": return new MacOSMicrosoftDefenderApp();
                 case "#microsoft.graph.macOSMicrosoftEdgeApp": return new MacOSMicrosoftEdgeApp();
                 case "#microsoft.graph.macOSOfficeSuiteApp": return new MacOSOfficeSuiteApp();
                 case "#microsoft.graph.macOSPkgApp": return new MacOSPkgApp();
                 case "#microsoft.graph.macOsVppApp": return new MacOsVppApp();
+                case "#microsoft.graph.macOSWebClip": return new MacOSWebClip();
                 case "#microsoft.graph.managedAndroidLobApp": return new ManagedAndroidLobApp();
                 case "#microsoft.graph.managedAndroidStoreApp": return new ManagedAndroidStoreApp();
                 case "#microsoft.graph.managedApp": return new ManagedApp();

@@ -43,7 +43,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes an itemPatent object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/itempatent-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itempatent-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
      * Deletes an itemPatent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/itempatent-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itempatent-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an itemPatent object.
      * @return a CompletableFuture of itemPatent
-     * @see <a href="https://docs.microsoft.com/graph/api/itempatent-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itempatent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPatent> get() {
@@ -102,7 +102,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an itemPatent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemPatent
-     * @see <a href="https://docs.microsoft.com/graph/api/itempatent-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itempatent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPatent> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an itemPatent object.
      * @param body The request body
      * @return a CompletableFuture of itemPatent
-     * @see <a href="https://docs.microsoft.com/graph/api/itempatent-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itempatent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPatent> patch(@javax.annotation.Nonnull final ItemPatent body) {
@@ -143,7 +143,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemPatent
-     * @see <a href="https://docs.microsoft.com/graph/api/itempatent-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itempatent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPatent> patch(@javax.annotation.Nonnull final ItemPatent body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the plannerPlanConfigurationLocalization objects and their properties.
      * @return a CompletableFuture of plannerPlanConfigurationLocalizationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerplanconfiguration-list-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanConfigurationLocalizationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the plannerPlanConfigurationLocalization objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerPlanConfigurationLocalizationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerplanconfiguration-list-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanConfigurationLocalizationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * Create a new plannerPlanConfigurationLocalization object.
      * @param body The request body
      * @return a CompletableFuture of plannerPlanConfigurationLocalization
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerplanconfiguration-post-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-post-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanConfigurationLocalization> post(@javax.annotation.Nonnull final PlannerPlanConfigurationLocalization body) {
@@ -126,7 +126,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerPlanConfigurationLocalization
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerplanconfiguration-post-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-post-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanConfigurationLocalization> post(@javax.annotation.Nonnull final PlannerPlanConfigurationLocalization body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -43,7 +43,7 @@ public class PersonInterestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes a personInterest object from a user's profile.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/personinterest-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personinterest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class PersonInterestItemRequestBuilder extends BaseRequestBuilder {
      * Deletes a personInterest object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/personinterest-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personinterest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PersonInterestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a personInterest object in a user's profile.
      * @return a CompletableFuture of personInterest
-     * @see <a href="https://docs.microsoft.com/graph/api/personinterest-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personinterest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonInterest> get() {
@@ -102,7 +102,7 @@ public class PersonInterestItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a personInterest object in a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personInterest
-     * @see <a href="https://docs.microsoft.com/graph/api/personinterest-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personinterest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonInterest> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class PersonInterestItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a personInterest object in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of personInterest
-     * @see <a href="https://docs.microsoft.com/graph/api/personinterest-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personinterest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonInterest> patch(@javax.annotation.Nonnull final PersonInterest body) {
@@ -143,7 +143,7 @@ public class PersonInterestItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personInterest
-     * @see <a href="https://docs.microsoft.com/graph/api/personinterest-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personinterest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonInterest> patch(@javax.annotation.Nonnull final PersonInterest body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -8,6 +8,7 @@ import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.prote
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.range.RangeRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.rangewithaddress.RangeWithAddressRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tables.TablesRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.tasks.TasksRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrange.UsedRangeRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.worksheets.item.usedrangewithvaluesonly.UsedRangeWithValuesOnlyRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -73,6 +74,13 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
         return new TablesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the tasks property of the microsoft.graph.workbookWorksheet entity.
+     */
+    @javax.annotation.Nonnull
+    public TasksRequestBuilder tasks() {
+        return new TasksRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the usedRange method.
      */
     @javax.annotation.Nonnull
@@ -114,7 +122,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes the worksheet from the workbook.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -134,7 +142,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
      * Deletes the worksheet from the workbook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -153,7 +161,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of worksheet object.
      * @return a CompletableFuture of workbookWorksheet
-     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheet> get() {
@@ -173,7 +181,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of worksheet object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookWorksheet
-     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheet> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -193,7 +201,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of worksheet object.
      * @param body The request body
      * @return a CompletableFuture of workbookWorksheet
-     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheet> patch(@javax.annotation.Nonnull final WorkbookWorksheet body) {
@@ -214,7 +222,7 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookWorksheet
-     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheet> patch(@javax.annotation.Nonnull final WorkbookWorksheet body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

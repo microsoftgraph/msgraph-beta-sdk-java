@@ -21,7 +21,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      */
     private String identifier;
     /**
-     * Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
+     * Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIPLabelGUID_PropName.
      */
     private java.util.List<KeyValuePair> metadata;
     /**
@@ -89,7 +89,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         return this.identifier;
     }
     /**
-     * Gets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
+     * Gets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIPLabelGUID_PropName.
      * @return a keyValuePair
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -155,7 +155,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
         this.identifier = value;
     }
     /**
-     * Sets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
+     * Sets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIPLabelGUID_PropName.
      * @param value Value to set for the metadata property.
      * @return a void
      */
@@ -165,7 +165,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

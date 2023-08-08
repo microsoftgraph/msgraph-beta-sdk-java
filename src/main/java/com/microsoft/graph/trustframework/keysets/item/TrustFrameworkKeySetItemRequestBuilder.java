@@ -83,7 +83,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a trustFrameworkKeySet.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframeworkkeyset-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -103,7 +103,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
      * Delete a trustFrameworkKeySet.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframeworkkeyset-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and associations for a Trustframeworkkeyset.
      * @return a CompletableFuture of trustFrameworkKeySet
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframeworkkeyset-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkKeySet> get() {
@@ -142,7 +142,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and associations for a Trustframeworkkeyset.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of trustFrameworkKeySet
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframeworkkeyset-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkKeySet> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -162,7 +162,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a trustFrameworkKeyset. This operation will replace the content of an existing keyset. Specifying the ID in the request payload is optional.
      * @param body The request body
      * @return a CompletableFuture of trustFrameworkKeySet
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframeworkkeyset-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkKeySet> patch(@javax.annotation.Nonnull final TrustFrameworkKeySet body) {
@@ -183,7 +183,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of trustFrameworkKeySet
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframeworkkeyset-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkKeySet> patch(@javax.annotation.Nonnull final TrustFrameworkKeySet body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

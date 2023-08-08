@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the unitsOfMeasure property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
      * @return a UnitOfMeasureItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public UnitOfMeasureItemRequestBuilder byUnitOfMeasureId(@javax.annotation.Nonnull final String unitOfMeasureId) {
+    public UnitOfMeasureItemRequestBuilder byUnitOfMeasureId(@javax.annotation.Nonnull final UUID unitOfMeasureId) {
         Objects.requireNonNull(unitOfMeasureId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unitOfMeasure%2Did", unitOfMeasureId);

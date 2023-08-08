@@ -65,7 +65,7 @@ public class QnasRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the qna objects and their properties.
      * @return a CompletableFuture of qnaCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/search-searchentity-list-qnas?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-list-qnas?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<QnaCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class QnasRequestBuilder extends BaseRequestBuilder {
      * Get a list of the qna objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of qnaCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/search-searchentity-list-qnas?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-list-qnas?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<QnaCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class QnasRequestBuilder extends BaseRequestBuilder {
      * Create a new qna object.
      * @param body The request body
      * @return a CompletableFuture of qna
-     * @see <a href="https://docs.microsoft.com/graph/api/search-searchentity-post-qnas?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-post-qnas?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Qna> post(@javax.annotation.Nonnull final Qna body) {
@@ -126,7 +126,7 @@ public class QnasRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of qna
-     * @see <a href="https://docs.microsoft.com/graph/api/search-searchentity-post-qnas?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-post-qnas?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Qna> post(@javax.annotation.Nonnull final Qna body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

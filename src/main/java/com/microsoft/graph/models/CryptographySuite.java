@@ -16,7 +16,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Authentication Transform Constants. Possible values are: md5_96, sha1_96, sha_256_128, aes128Gcm, aes192Gcm, aes256Gcm.
+     * Authentication Transform Constants. Possible values are: md596, sha196, sha256128, aes128Gcm, aes192Gcm, aes256Gcm.
      */
     private AuthenticationTransformConstant authenticationTransformConstants;
     /**
@@ -32,7 +32,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     private VpnEncryptionAlgorithmType encryptionMethod;
     /**
-     * Integrity Check Method. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
+     * Integrity Check Method. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      */
     private VpnIntegrityAlgorithmType integrityCheckMethod;
     /**
@@ -70,7 +70,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the authenticationTransformConstants property value. Authentication Transform Constants. Possible values are: md5_96, sha1_96, sha_256_128, aes128Gcm, aes192Gcm, aes256Gcm.
+     * Gets the authenticationTransformConstants property value. Authentication Transform Constants. Possible values are: md596, sha196, sha256128, aes128Gcm, aes192Gcm, aes256Gcm.
      * @return a authenticationTransformConstant
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the integrityCheckMethod property value. Integrity Check Method. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
+     * Gets the integrityCheckMethod property value. Integrity Check Method. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      * @return a vpnIntegrityAlgorithmType
      */
     @javax.annotation.Nullable
@@ -160,7 +160,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -168,7 +168,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the authenticationTransformConstants property value. Authentication Transform Constants. Possible values are: md5_96, sha1_96, sha_256_128, aes128Gcm, aes192Gcm, aes256Gcm.
+     * Sets the authenticationTransformConstants property value. Authentication Transform Constants. Possible values are: md596, sha196, sha256128, aes128Gcm, aes192Gcm, aes256Gcm.
      * @param value Value to set for the authenticationTransformConstants property.
      * @return a void
      */
@@ -204,7 +204,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
         this.encryptionMethod = value;
     }
     /**
-     * Sets the integrityCheckMethod property value. Integrity Check Method. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
+     * Sets the integrityCheckMethod property value. Integrity Check Method. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      * @param value Value to set for the integrityCheckMethod property.
      * @return a void
      */
@@ -214,7 +214,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

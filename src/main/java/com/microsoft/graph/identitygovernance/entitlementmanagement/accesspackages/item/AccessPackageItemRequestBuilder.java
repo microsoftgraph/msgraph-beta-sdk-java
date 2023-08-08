@@ -105,9 +105,9 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an accessPackage object. You cannot delete an access package if it has any **accessPackageAssignment**. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: `$filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'`. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
+     * Delete an accessPackage object. You cannot delete an access package if it has any accessPackageAssignment. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: $filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -124,10 +124,10 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete an accessPackage object. You cannot delete an access package if it has any **accessPackageAssignment**. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: `$filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'`. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
+     * Delete an accessPackage object. You cannot delete an access package if it has any accessPackageAssignment. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: $filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an accessPackage object.
      * @return a CompletableFuture of accessPackage
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> get() {
@@ -166,7 +166,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an accessPackage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackage
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -186,7 +186,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * Update an existing accessPackage object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @return a CompletableFuture of accessPackage
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> patch(@javax.annotation.Nonnull final AccessPackage body) {
@@ -207,7 +207,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackage
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> patch(@javax.annotation.Nonnull final AccessPackage body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -225,7 +225,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete an accessPackage object. You cannot delete an access package if it has any **accessPackageAssignment**. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: `$filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'`. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
+     * Delete an accessPackage object. You cannot delete an access package if it has any accessPackageAssignment. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: $filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -233,7 +233,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an accessPackage object. You cannot delete an access package if it has any **accessPackageAssignment**. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: `$filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'`. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
+     * Delete an accessPackage object. You cannot delete an access package if it has any accessPackageAssignment. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: $filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

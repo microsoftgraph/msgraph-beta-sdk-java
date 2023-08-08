@@ -80,7 +80,7 @@ public class CloudPcAuditEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a cloudPcAuditEvent object.
      * @return a CompletableFuture of cloudPcAuditEvent
-     * @see <a href="https://docs.microsoft.com/graph/api/cloudpcauditevent-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcauditevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcAuditEvent> get() {
@@ -100,7 +100,7 @@ public class CloudPcAuditEventItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a cloudPcAuditEvent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcAuditEvent
-     * @see <a href="https://docs.microsoft.com/graph/api/cloudpcauditevent-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcauditevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcAuditEvent> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

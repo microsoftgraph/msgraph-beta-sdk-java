@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the paymentTerms property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class PaymentTermsRequestBuilder extends BaseRequestBuilder {
      * @return a PaymentTermItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public PaymentTermItemRequestBuilder byPaymentTermId(@javax.annotation.Nonnull final String paymentTermId) {
+    public PaymentTermItemRequestBuilder byPaymentTermId(@javax.annotation.Nonnull final UUID paymentTermId) {
         Objects.requireNonNull(paymentTermId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("paymentTerm%2Did", paymentTermId);

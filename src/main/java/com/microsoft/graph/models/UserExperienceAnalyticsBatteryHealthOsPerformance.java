@@ -27,9 +27,33 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
      */
     private Integer averageMaxCapacityPercentage;
     /**
+     * The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
+     */
+    private Integer meanFullBatteryDrainCount;
+    /**
+     * The median of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
+     */
+    private Integer medianEstimatedRuntimeInMinutes;
+    /**
+     * The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
+     */
+    private Integer medianFullBatteryDrainCount;
+    /**
+     * The median of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
+     */
+    private Integer medianMaxCapacityPercentage;
+    /**
+     * A weighted average of battery health score across all devices running a particular operating system version. Values range from 0-100. Valid values 0 to 2147483647
+     */
+    private Integer osBatteryHealthScore;
+    /**
      * Build number of the operating system.
      */
     private String osBuildNumber;
+    /**
+     * The osHealthStatus property
+     */
+    private UserExperienceAnalyticsHealthState osHealthStatus;
     /**
      * Version of the operating system.
      */
@@ -95,9 +119,55 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
         deserializerMap.put("averageBatteryAgeInDays", (n) -> { this.setAverageBatteryAgeInDays(n.getIntegerValue()); });
         deserializerMap.put("averageEstimatedRuntimeInMinutes", (n) -> { this.setAverageEstimatedRuntimeInMinutes(n.getIntegerValue()); });
         deserializerMap.put("averageMaxCapacityPercentage", (n) -> { this.setAverageMaxCapacityPercentage(n.getIntegerValue()); });
+        deserializerMap.put("meanFullBatteryDrainCount", (n) -> { this.setMeanFullBatteryDrainCount(n.getIntegerValue()); });
+        deserializerMap.put("medianEstimatedRuntimeInMinutes", (n) -> { this.setMedianEstimatedRuntimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("medianFullBatteryDrainCount", (n) -> { this.setMedianFullBatteryDrainCount(n.getIntegerValue()); });
+        deserializerMap.put("medianMaxCapacityPercentage", (n) -> { this.setMedianMaxCapacityPercentage(n.getIntegerValue()); });
+        deserializerMap.put("osBatteryHealthScore", (n) -> { this.setOsBatteryHealthScore(n.getIntegerValue()); });
         deserializerMap.put("osBuildNumber", (n) -> { this.setOsBuildNumber(n.getStringValue()); });
+        deserializerMap.put("osHealthStatus", (n) -> { this.setOsHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
         deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the meanFullBatteryDrainCount property value. The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getMeanFullBatteryDrainCount() {
+        return this.meanFullBatteryDrainCount;
+    }
+    /**
+     * Gets the medianEstimatedRuntimeInMinutes property value. The median of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getMedianEstimatedRuntimeInMinutes() {
+        return this.medianEstimatedRuntimeInMinutes;
+    }
+    /**
+     * Gets the medianFullBatteryDrainCount property value. The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getMedianFullBatteryDrainCount() {
+        return this.medianFullBatteryDrainCount;
+    }
+    /**
+     * Gets the medianMaxCapacityPercentage property value. The median of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getMedianMaxCapacityPercentage() {
+        return this.medianMaxCapacityPercentage;
+    }
+    /**
+     * Gets the osBatteryHealthScore property value. A weighted average of battery health score across all devices running a particular operating system version. Values range from 0-100. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getOsBatteryHealthScore() {
+        return this.osBatteryHealthScore;
     }
     /**
      * Gets the osBuildNumber property value. Build number of the operating system.
@@ -106,6 +176,14 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     @javax.annotation.Nullable
     public String getOsBuildNumber() {
         return this.osBuildNumber;
+    }
+    /**
+     * Gets the osHealthStatus property value. The osHealthStatus property
+     * @return a userExperienceAnalyticsHealthState
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsHealthState getOsHealthStatus() {
+        return this.osHealthStatus;
     }
     /**
      * Gets the osVersion property value. Version of the operating system.
@@ -128,7 +206,13 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
         writer.writeIntegerValue("averageBatteryAgeInDays", this.getAverageBatteryAgeInDays());
         writer.writeIntegerValue("averageEstimatedRuntimeInMinutes", this.getAverageEstimatedRuntimeInMinutes());
         writer.writeIntegerValue("averageMaxCapacityPercentage", this.getAverageMaxCapacityPercentage());
+        writer.writeIntegerValue("meanFullBatteryDrainCount", this.getMeanFullBatteryDrainCount());
+        writer.writeIntegerValue("medianEstimatedRuntimeInMinutes", this.getMedianEstimatedRuntimeInMinutes());
+        writer.writeIntegerValue("medianFullBatteryDrainCount", this.getMedianFullBatteryDrainCount());
+        writer.writeIntegerValue("medianMaxCapacityPercentage", this.getMedianMaxCapacityPercentage());
+        writer.writeIntegerValue("osBatteryHealthScore", this.getOsBatteryHealthScore());
         writer.writeStringValue("osBuildNumber", this.getOsBuildNumber());
+        writer.writeEnumValue("osHealthStatus", this.getOsHealthStatus());
         writer.writeStringValue("osVersion", this.getOsVersion());
     }
     /**
@@ -168,6 +252,51 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
         this.averageMaxCapacityPercentage = value;
     }
     /**
+     * Sets the meanFullBatteryDrainCount property value. The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
+     * @param value Value to set for the meanFullBatteryDrainCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMeanFullBatteryDrainCount(@javax.annotation.Nullable final Integer value) {
+        this.meanFullBatteryDrainCount = value;
+    }
+    /**
+     * Sets the medianEstimatedRuntimeInMinutes property value. The median of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
+     * @param value Value to set for the medianEstimatedRuntimeInMinutes property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMedianEstimatedRuntimeInMinutes(@javax.annotation.Nullable final Integer value) {
+        this.medianEstimatedRuntimeInMinutes = value;
+    }
+    /**
+     * Sets the medianFullBatteryDrainCount property value. The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
+     * @param value Value to set for the medianFullBatteryDrainCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMedianFullBatteryDrainCount(@javax.annotation.Nullable final Integer value) {
+        this.medianFullBatteryDrainCount = value;
+    }
+    /**
+     * Sets the medianMaxCapacityPercentage property value. The median of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
+     * @param value Value to set for the medianMaxCapacityPercentage property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMedianMaxCapacityPercentage(@javax.annotation.Nullable final Integer value) {
+        this.medianMaxCapacityPercentage = value;
+    }
+    /**
+     * Sets the osBatteryHealthScore property value. A weighted average of battery health score across all devices running a particular operating system version. Values range from 0-100. Valid values 0 to 2147483647
+     * @param value Value to set for the osBatteryHealthScore property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOsBatteryHealthScore(@javax.annotation.Nullable final Integer value) {
+        this.osBatteryHealthScore = value;
+    }
+    /**
      * Sets the osBuildNumber property value. Build number of the operating system.
      * @param value Value to set for the osBuildNumber property.
      * @return a void
@@ -175,6 +304,15 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     @javax.annotation.Nonnull
     public void setOsBuildNumber(@javax.annotation.Nullable final String value) {
         this.osBuildNumber = value;
+    }
+    /**
+     * Sets the osHealthStatus property value. The osHealthStatus property
+     * @param value Value to set for the osHealthStatus property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOsHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
+        this.osHealthStatus = value;
     }
     /**
      * Sets the osVersion property value. Version of the operating system.

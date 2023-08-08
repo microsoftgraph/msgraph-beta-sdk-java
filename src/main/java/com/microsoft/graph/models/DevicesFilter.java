@@ -13,7 +13,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.Not implemented yet
+     * Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.
      */
     private CrossTenantAccessPolicyTargetConfigurationAccessType mode;
     /**
@@ -21,7 +21,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Defines the rule to filter the devices. An example would be device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation' Not implemented yet
+     * Defines the rule to filter the devices. For example, device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation'.
      */
     private String rule;
     /**
@@ -63,7 +63,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the mode property value. Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.Not implemented yet
+     * Gets the mode property value. Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.
      * @return a crossTenantAccessPolicyTargetConfigurationAccessType
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the rule property value. Defines the rule to filter the devices. An example would be device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation' Not implemented yet
+     * Gets the rule property value. Defines the rule to filter the devices. For example, device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation'.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -109,7 +109,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the mode property value. Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.Not implemented yet
+     * Sets the mode property value. Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.
      * @param value Value to set for the mode property.
      * @return a void
      */
@@ -119,7 +119,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -127,7 +127,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the rule property value. Defines the rule to filter the devices. An example would be device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation' Not implemented yet
+     * Sets the rule property value. Defines the rule to filter the devices. For example, device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation'.
      * @param value Value to set for the rule property.
      * @return a void
      */

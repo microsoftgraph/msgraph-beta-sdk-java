@@ -40,9 +40,9 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/reactivate", rawUrl);
     }
     /**
-     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the **status** of the recommendation to `active`. This method only works when the **status** of the recommendation is `completedByUser`, `dismissed`, or `postponed`.
+     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.
      * @return a CompletableFuture of recommendation
-     * @see <a href="https://docs.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Recommendation> post() {
@@ -59,10 +59,10 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the **status** of the recommendation to `active`. This method only works when the **status** of the recommendation is `completedByUser`, `dismissed`, or `postponed`.
+     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of recommendation
-     * @see <a href="https://docs.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Recommendation> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the **status** of the recommendation to `active`. This method only works when the **status** of the recommendation is `completedByUser`, `dismissed`, or `postponed`.
+     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -87,7 +87,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the **status** of the recommendation to `active`. This method only works when the **status** of the recommendation is `completedByUser`, `dismissed`, or `postponed`.
+     * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

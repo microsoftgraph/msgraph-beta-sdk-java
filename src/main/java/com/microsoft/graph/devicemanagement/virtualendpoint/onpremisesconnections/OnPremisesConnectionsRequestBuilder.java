@@ -65,7 +65,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the cloudPcOnPremisesConnection objects.
      * @return a CompletableFuture of cloudPcOnPremisesConnectionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcOnPremisesConnectionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
      * List properties and relationships of the cloudPcOnPremisesConnection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcOnPremisesConnectionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcOnPremisesConnectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
      * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs.
      * @param body The request body
      * @return a CompletableFuture of cloudPcOnPremisesConnection
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-post-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcOnPremisesConnection> post(@javax.annotation.Nonnull final CloudPcOnPremisesConnection body) {
@@ -126,7 +126,7 @@ public class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcOnPremisesConnection
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-post-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-onpremisesconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcOnPremisesConnection> post(@javax.annotation.Nonnull final CloudPcOnPremisesConnection body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

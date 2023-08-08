@@ -8,11 +8,11 @@ import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementConfigurationSettingGroupCollectionDefinition extends DeviceManagementConfigurationSettingGroupDefinition implements Parsable {
     /**
-     * Maximum number of setting group count in the collection. Valid values 1 to 100
+     * Maximum number of setting group count in the collection
      */
     private Integer maximumCount;
     /**
-     * Minimum number of setting group count in the collection. Valid values 1 to 100
+     * Minimum number of setting group count in the collection
      */
     private Integer minimumCount;
     /**
@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
         return deserializerMap;
     }
     /**
-     * Gets the maximumCount property value. Maximum number of setting group count in the collection. Valid values 1 to 100
+     * Gets the maximumCount property value. Maximum number of setting group count in the collection
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -53,7 +53,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
         return this.maximumCount;
     }
     /**
-     * Gets the minimumCount property value. Minimum number of setting group count in the collection. Valid values 1 to 100
+     * Gets the minimumCount property value. Minimum number of setting group count in the collection
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
         writer.writeIntegerValue("minimumCount", this.getMinimumCount());
     }
     /**
-     * Sets the maximumCount property value. Maximum number of setting group count in the collection. Valid values 1 to 100
+     * Sets the maximumCount property value. Maximum number of setting group count in the collection
      * @param value Value to set for the maximumCount property.
      * @return a void
      */
@@ -82,7 +82,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
         this.maximumCount = value;
     }
     /**
-     * Sets the minimumCount property value. Minimum number of setting group count in the collection. Valid values 1 to 100
+     * Sets the minimumCount property value. Minimum number of setting group count in the collection
      * @param value Value to set for the minimumCount property.
      * @return a void
      */

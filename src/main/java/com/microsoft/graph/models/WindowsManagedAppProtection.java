@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -98,11 +98,11 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     /**
      * The period after which access is checked when the device is not connected to the internet. For example, PT5M indicates that the interval is 5 minutes in duration. A timespan value of PT0S indicates that access will be blocked immediately when the device is not connected to the internet.
      */
-    private Period periodOfflineBeforeAccessCheck;
+    private PeriodAndDuration periodOfflineBeforeAccessCheck;
     /**
      * The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped. For example, P5D indicates that the interval is 5 days in duration. A timespan value of PT0S indicates that managed data will never be wiped when the device is not connected to the internet.
      */
-    private Period periodOfflineBeforeWipeIsEnforced;
+    private PeriodAndDuration periodOfflineBeforeWipeIsEnforced;
     /**
      * When TRUE, indicates that printing is blocked from managed apps. When FALSE, indicates that printing is allowed from managed apps. Default value is FALSE.
      */
@@ -210,8 +210,8 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         deserializerMap.put("minimumWipeOsVersion", (n) -> { this.setMinimumWipeOsVersion(n.getStringValue()); });
         deserializerMap.put("minimumWipeSdkVersion", (n) -> { this.setMinimumWipeSdkVersion(n.getStringValue()); });
         deserializerMap.put("mobileThreatDefenseRemediationAction", (n) -> { this.setMobileThreatDefenseRemediationAction(n.getEnumValue(ManagedAppRemediationAction.class)); });
-        deserializerMap.put("periodOfflineBeforeAccessCheck", (n) -> { this.setPeriodOfflineBeforeAccessCheck(n.getPeriodValue()); });
-        deserializerMap.put("periodOfflineBeforeWipeIsEnforced", (n) -> { this.setPeriodOfflineBeforeWipeIsEnforced(n.getPeriodValue()); });
+        deserializerMap.put("periodOfflineBeforeAccessCheck", (n) -> { this.setPeriodOfflineBeforeAccessCheck(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("periodOfflineBeforeWipeIsEnforced", (n) -> { this.setPeriodOfflineBeforeWipeIsEnforced(n.getPeriodAndDurationValue()); });
         deserializerMap.put("printBlocked", (n) -> { this.setPrintBlocked(n.getBooleanValue()); });
         return deserializerMap;
     }
@@ -329,18 +329,18 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the periodOfflineBeforeAccessCheck property value. The period after which access is checked when the device is not connected to the internet. For example, PT5M indicates that the interval is 5 minutes in duration. A timespan value of PT0S indicates that access will be blocked immediately when the device is not connected to the internet.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getPeriodOfflineBeforeAccessCheck() {
+    public PeriodAndDuration getPeriodOfflineBeforeAccessCheck() {
         return this.periodOfflineBeforeAccessCheck;
     }
     /**
      * Gets the periodOfflineBeforeWipeIsEnforced property value. The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped. For example, P5D indicates that the interval is 5 days in duration. A timespan value of PT0S indicates that managed data will never be wiped when the device is not connected to the internet.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getPeriodOfflineBeforeWipeIsEnforced() {
+    public PeriodAndDuration getPeriodOfflineBeforeWipeIsEnforced() {
         return this.periodOfflineBeforeWipeIsEnforced;
     }
     /**
@@ -381,8 +381,8 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         writer.writeStringValue("minimumWipeOsVersion", this.getMinimumWipeOsVersion());
         writer.writeStringValue("minimumWipeSdkVersion", this.getMinimumWipeSdkVersion());
         writer.writeEnumValue("mobileThreatDefenseRemediationAction", this.getMobileThreatDefenseRemediationAction());
-        writer.writePeriodValue("periodOfflineBeforeAccessCheck", this.getPeriodOfflineBeforeAccessCheck());
-        writer.writePeriodValue("periodOfflineBeforeWipeIsEnforced", this.getPeriodOfflineBeforeWipeIsEnforced());
+        writer.writePeriodAndDurationValue("periodOfflineBeforeAccessCheck", this.getPeriodOfflineBeforeAccessCheck());
+        writer.writePeriodAndDurationValue("periodOfflineBeforeWipeIsEnforced", this.getPeriodOfflineBeforeWipeIsEnforced());
         writer.writeBooleanValue("printBlocked", this.getPrintBlocked());
     }
     /**
@@ -580,7 +580,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPeriodOfflineBeforeAccessCheck(@javax.annotation.Nullable final Period value) {
+    public void setPeriodOfflineBeforeAccessCheck(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.periodOfflineBeforeAccessCheck = value;
     }
     /**
@@ -589,7 +589,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPeriodOfflineBeforeWipeIsEnforced(@javax.annotation.Nullable final Period value) {
+    public void setPeriodOfflineBeforeWipeIsEnforced(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.periodOfflineBeforeWipeIsEnforced = value;
     }
     /**

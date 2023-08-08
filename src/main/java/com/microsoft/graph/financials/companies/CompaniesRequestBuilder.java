@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the companies property of the microsoft.graph.financials entity.
  */
@@ -35,7 +36,7 @@ public class CompaniesRequestBuilder extends BaseRequestBuilder {
      * @return a CompanyItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public CompanyItemRequestBuilder byCompanyId(@javax.annotation.Nonnull final String companyId) {
+    public CompanyItemRequestBuilder byCompanyId(@javax.annotation.Nonnull final UUID companyId) {
         Objects.requireNonNull(companyId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("company%2Did", companyId);

@@ -13,7 +13,7 @@ public class BaseItemVersion extends Entity implements Parsable {
      */
     private IdentitySet lastModifiedBy;
     /**
-     * Date and time the version was last modified. Read-only.
+     * Date and time when the version was last modified. Read-only.
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
@@ -68,7 +68,7 @@ public class BaseItemVersion extends Entity implements Parsable {
         return this.lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. Date and time the version was last modified. Read-only.
+     * Gets the lastModifiedDateTime property value. Date and time when the version was last modified. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class BaseItemVersion extends Entity implements Parsable {
         this.lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. Date and time the version was last modified. Read-only.
+     * Sets the lastModifiedDateTime property value. Date and time when the version was last modified. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */

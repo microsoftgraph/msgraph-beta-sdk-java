@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleDefinition extends Entity implements Parsable {
     /**
-     * The allowedPrincipalTypes property
+     * Types of principals that can be assigned the role. Read-only. The possible values are: user, servicePrincipal, group, unknownFutureValue. This is a multi-valued enumeration that can contain up to three values as a comma-separated string. For example, user, group. Supports $filter (eq).
      */
     private AllowedRolePrincipalTypes allowedPrincipalTypes;
     /**
@@ -16,7 +16,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     private String description;
     /**
-     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
+     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith).
      */
     private String displayName;
     /**
@@ -24,7 +24,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     private java.util.List<UnifiedRoleDefinition> inheritsPermissionsFrom;
     /**
-     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
+     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq).
      */
     private Boolean isBuiltIn;
     /**
@@ -36,7 +36,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     private Boolean isPrivileged;
     /**
-     * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
+     * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
      */
     private java.util.List<String> resourceScopes;
     /**
@@ -48,7 +48,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     private String templateId;
     /**
-     * Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
+     * Indicates the version of the unifiedRoleDefinition object. Read-only when isBuiltIn is true.
      */
     private String version;
     /**
@@ -70,7 +70,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         return new UnifiedRoleDefinition();
     }
     /**
-     * Gets the allowedPrincipalTypes property value. The allowedPrincipalTypes property
+     * Gets the allowedPrincipalTypes property value. Types of principals that can be assigned the role. Read-only. The possible values are: user, servicePrincipal, group, unknownFutureValue. This is a multi-valued enumeration that can contain up to three values as a comma-separated string. For example, user, group. Supports $filter (eq).
      * @return a allowedRolePrincipalTypes
      */
     @javax.annotation.Nullable
@@ -86,7 +86,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
+     * Gets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -122,7 +122,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         return this.inheritsPermissionsFrom;
     }
     /**
-     * Gets the isBuiltIn property value. Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
+     * Gets the isBuiltIn property value. Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq).
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -146,7 +146,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         return this.isPrivileged;
     }
     /**
-     * Gets the resourceScopes property value. List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
+     * Gets the resourceScopes property value. List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -170,7 +170,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         return this.templateId;
     }
     /**
-     * Gets the version property value. Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
+     * Gets the version property value. Indicates the version of the unifiedRoleDefinition object. Read-only when isBuiltIn is true.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -199,7 +199,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the allowedPrincipalTypes property value. The allowedPrincipalTypes property
+     * Sets the allowedPrincipalTypes property value. Types of principals that can be assigned the role. Read-only. The possible values are: user, servicePrincipal, group, unknownFutureValue. This is a multi-valued enumeration that can contain up to three values as a comma-separated string. For example, user, group. Supports $filter (eq).
      * @param value Value to set for the allowedPrincipalTypes property.
      * @return a void
      */
@@ -217,7 +217,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
+     * Sets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith).
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -235,7 +235,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         this.inheritsPermissionsFrom = value;
     }
     /**
-     * Sets the isBuiltIn property value. Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
+     * Sets the isBuiltIn property value. Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq).
      * @param value Value to set for the isBuiltIn property.
      * @return a void
      */
@@ -262,7 +262,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         this.isPrivileged = value;
     }
     /**
-     * Sets the resourceScopes property value. List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
+     * Sets the resourceScopes property value. List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
      * @param value Value to set for the resourceScopes property.
      * @return a void
      */
@@ -289,7 +289,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         this.templateId = value;
     }
     /**
-     * Sets the version property value. Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
+     * Sets the version property value. Indicates the version of the unifiedRoleDefinition object. Read-only when isBuiltIn is true.
      * @param value Value to set for the version property.
      * @return a void
      */

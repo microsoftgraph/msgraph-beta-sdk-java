@@ -36,7 +36,7 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public CreatedByUserRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{sitePage%2Did}/createdByUser{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}/createdByUser{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new CreatedByUserRequestBuilder and sets the default values.
@@ -46,7 +46,7 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public CreatedByUserRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{sitePage%2Did}/createdByUser{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}/createdByUser{?%24select,%24expand}", rawUrl);
     }
     /**
      * Get createdByUser from sites

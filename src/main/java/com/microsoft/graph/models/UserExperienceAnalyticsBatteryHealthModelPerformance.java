@@ -31,6 +31,22 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      */
     private String manufacturer;
     /**
+     * The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices of a given model in a tenant. Valid values 0 to 2147483647
+     */
+    private Integer meanFullBatteryDrainCount;
+    /**
+     * The median of the estimated runtimes on full charge for all devices of a given model. Unit in minutes. Valid values 0 to 2147483647
+     */
+    private Integer medianEstimatedRuntimeInMinutes;
+    /**
+     * The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices of a given model in a tenant. Valid values 0 to 2147483647
+     */
+    private Integer medianFullBatteryDrainCount;
+    /**
+     * The median of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
+     */
+    private Integer medianMaxCapacityPercentage;
+    /**
      * The model name of the device.
      */
     private String model;
@@ -38,6 +54,10 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      * A weighted average of a models maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
      */
     private Integer modelBatteryHealthScore;
+    /**
+     * The modelHealthStatus property
+     */
+    private UserExperienceAnalyticsHealthState modelHealthStatus;
     /**
      * Instantiates a new userExperienceAnalyticsBatteryHealthModelPerformance and sets the default values.
      * @return a void
@@ -100,8 +120,13 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         deserializerMap.put("averageEstimatedRuntimeInMinutes", (n) -> { this.setAverageEstimatedRuntimeInMinutes(n.getIntegerValue()); });
         deserializerMap.put("averageMaxCapacityPercentage", (n) -> { this.setAverageMaxCapacityPercentage(n.getIntegerValue()); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("meanFullBatteryDrainCount", (n) -> { this.setMeanFullBatteryDrainCount(n.getIntegerValue()); });
+        deserializerMap.put("medianEstimatedRuntimeInMinutes", (n) -> { this.setMedianEstimatedRuntimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("medianFullBatteryDrainCount", (n) -> { this.setMedianFullBatteryDrainCount(n.getIntegerValue()); });
+        deserializerMap.put("medianMaxCapacityPercentage", (n) -> { this.setMedianMaxCapacityPercentage(n.getIntegerValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
         deserializerMap.put("modelBatteryHealthScore", (n) -> { this.setModelBatteryHealthScore(n.getIntegerValue()); });
+        deserializerMap.put("modelHealthStatus", (n) -> { this.setModelHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
         return deserializerMap;
     }
     /**
@@ -111,6 +136,38 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     @javax.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
+    }
+    /**
+     * Gets the meanFullBatteryDrainCount property value. The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices of a given model in a tenant. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getMeanFullBatteryDrainCount() {
+        return this.meanFullBatteryDrainCount;
+    }
+    /**
+     * Gets the medianEstimatedRuntimeInMinutes property value. The median of the estimated runtimes on full charge for all devices of a given model. Unit in minutes. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getMedianEstimatedRuntimeInMinutes() {
+        return this.medianEstimatedRuntimeInMinutes;
+    }
+    /**
+     * Gets the medianFullBatteryDrainCount property value. The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices of a given model in a tenant. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getMedianFullBatteryDrainCount() {
+        return this.medianFullBatteryDrainCount;
+    }
+    /**
+     * Gets the medianMaxCapacityPercentage property value. The median of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getMedianMaxCapacityPercentage() {
+        return this.medianMaxCapacityPercentage;
     }
     /**
      * Gets the model property value. The model name of the device.
@@ -129,6 +186,14 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         return this.modelBatteryHealthScore;
     }
     /**
+     * Gets the modelHealthStatus property value. The modelHealthStatus property
+     * @return a userExperienceAnalyticsHealthState
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsHealthState getModelHealthStatus() {
+        return this.modelHealthStatus;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -142,8 +207,13 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         writer.writeIntegerValue("averageEstimatedRuntimeInMinutes", this.getAverageEstimatedRuntimeInMinutes());
         writer.writeIntegerValue("averageMaxCapacityPercentage", this.getAverageMaxCapacityPercentage());
         writer.writeStringValue("manufacturer", this.getManufacturer());
+        writer.writeIntegerValue("meanFullBatteryDrainCount", this.getMeanFullBatteryDrainCount());
+        writer.writeIntegerValue("medianEstimatedRuntimeInMinutes", this.getMedianEstimatedRuntimeInMinutes());
+        writer.writeIntegerValue("medianFullBatteryDrainCount", this.getMedianFullBatteryDrainCount());
+        writer.writeIntegerValue("medianMaxCapacityPercentage", this.getMedianMaxCapacityPercentage());
         writer.writeStringValue("model", this.getModel());
         writer.writeIntegerValue("modelBatteryHealthScore", this.getModelBatteryHealthScore());
+        writer.writeEnumValue("modelHealthStatus", this.getModelHealthStatus());
     }
     /**
      * Sets the activeDevices property value. Number of active devices for that model. Valid values -2147483648 to 2147483647
@@ -191,6 +261,42 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         this.manufacturer = value;
     }
     /**
+     * Sets the meanFullBatteryDrainCount property value. The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices of a given model in a tenant. Valid values 0 to 2147483647
+     * @param value Value to set for the meanFullBatteryDrainCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMeanFullBatteryDrainCount(@javax.annotation.Nullable final Integer value) {
+        this.meanFullBatteryDrainCount = value;
+    }
+    /**
+     * Sets the medianEstimatedRuntimeInMinutes property value. The median of the estimated runtimes on full charge for all devices of a given model. Unit in minutes. Valid values 0 to 2147483647
+     * @param value Value to set for the medianEstimatedRuntimeInMinutes property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMedianEstimatedRuntimeInMinutes(@javax.annotation.Nullable final Integer value) {
+        this.medianEstimatedRuntimeInMinutes = value;
+    }
+    /**
+     * Sets the medianFullBatteryDrainCount property value. The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices of a given model in a tenant. Valid values 0 to 2147483647
+     * @param value Value to set for the medianFullBatteryDrainCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMedianFullBatteryDrainCount(@javax.annotation.Nullable final Integer value) {
+        this.medianFullBatteryDrainCount = value;
+    }
+    /**
+     * Sets the medianMaxCapacityPercentage property value. The median of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
+     * @param value Value to set for the medianMaxCapacityPercentage property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMedianMaxCapacityPercentage(@javax.annotation.Nullable final Integer value) {
+        this.medianMaxCapacityPercentage = value;
+    }
+    /**
      * Sets the model property value. The model name of the device.
      * @param value Value to set for the model property.
      * @return a void
@@ -207,5 +313,14 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     @javax.annotation.Nonnull
     public void setModelBatteryHealthScore(@javax.annotation.Nullable final Integer value) {
         this.modelBatteryHealthScore = value;
+    }
+    /**
+     * Sets the modelHealthStatus property value. The modelHealthStatus property
+     * @param value Value to set for the modelHealthStatus property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setModelHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
+        this.modelHealthStatus = value;
     }
 }
