@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.AndroidMinimumOperatingSystem;
+import com.microsoft.graph.models.AndroidTargetedPlatforms;
 import com.microsoft.graph.models.MobileLobApp;
 
 
@@ -61,6 +62,15 @@ public class AndroidLobApp extends MobileLobApp implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String packageId;
+
+    /**
+     * The Targeted Platforms.
+     * The platforms to which the application can be targeted. If not specified, will defauilt to Android Device Administrator.
+     */
+    @SerializedName(value = "targetedPlatforms", alternate = {"TargetedPlatforms"})
+    @Expose
+	@Nullable
+    public EnumSet<AndroidTargetedPlatforms> targetedPlatforms;
 
     /**
      * The Version Code.

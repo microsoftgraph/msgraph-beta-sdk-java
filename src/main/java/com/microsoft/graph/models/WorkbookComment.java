@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.WorkbookDocumentTask;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkbookCommentReplyCollectionPage;
 
@@ -53,6 +54,15 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.WorkbookCommentReplyCollectionPage replies;
+
+    /**
+     * The Task.
+     * 
+     */
+    @SerializedName(value = "task", alternate = {"Task"})
+    @Expose
+	@Nullable
+    public WorkbookDocumentTask task;
 
 
     /**

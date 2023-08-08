@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AndroidDeviceOwnerDelegatedScopeAppSetting;
 import com.microsoft.graph.models.AndroidDeviceOwnerAppAutoUpdatePolicyType;
 import com.microsoft.graph.models.AndroidDeviceOwnerDefaultAppPermissionPolicyType;
 import com.microsoft.graph.models.AppListItem;
@@ -61,6 +62,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public Boolean accountsBlockModification;
+
+    /**
+     * The Android Device Owner Delegated Scope App Settings.
+     * Specifies the list of managed apps with app details and its associated delegated scope(s). This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName(value = "androidDeviceOwnerDelegatedScopeAppSettings", alternate = {"AndroidDeviceOwnerDelegatedScopeAppSettings"})
+    @Expose
+	@Nullable
+    public java.util.List<AndroidDeviceOwnerDelegatedScopeAppSetting> androidDeviceOwnerDelegatedScopeAppSettings;
 
     /**
      * The Apps Allow Install From Unknown Sources.

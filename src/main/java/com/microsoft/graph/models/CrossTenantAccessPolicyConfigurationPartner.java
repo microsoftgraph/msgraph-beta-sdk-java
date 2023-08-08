@@ -97,6 +97,15 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
     public CrossTenantAccessPolicyInboundTrust inboundTrust;
 
     /**
+     * The Is In Multi Tenant Organization.
+     * 
+     */
+    @SerializedName(value = "isInMultiTenantOrganization", alternate = {"IsInMultiTenantOrganization"})
+    @Expose
+	@Nullable
+    public Boolean isInMultiTenantOrganization;
+
+    /**
      * The Is Service Provider.
      * Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
      */

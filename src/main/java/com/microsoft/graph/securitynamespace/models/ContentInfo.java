@@ -60,7 +60,7 @@ public class ContentInfo implements IJsonBackedObject {
 
     /**
      * The Metadata.
-     * Existing Microsoft Purview Information Protection metadata is passed as key-value pairs, where the key is the MSIP_Label_GUID_PropName.
+     * Existing Microsoft Purview Information Protection metadata is passed as key-value pairs, where the key is the MSIPLabelGUID_PropName.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose

@@ -41,6 +41,15 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
     public java.util.List<String> allowedGoogleAccountDomains;
 
     /**
+     * The Block Unified Password For Work Profile.
+     * Prevent using unified password for unlocking device and work profile.
+     */
+    @SerializedName(value = "blockUnifiedPasswordForWorkProfile", alternate = {"BlockUnifiedPasswordForWorkProfile"})
+    @Expose
+	@Nullable
+    public Boolean blockUnifiedPasswordForWorkProfile;
+
+    /**
      * The Password Block Face Unlock.
      * Indicates whether or not to block face unlock.
      */

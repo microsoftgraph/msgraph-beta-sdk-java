@@ -137,6 +137,26 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder<ThreatI
         return new com.microsoft.graph.security.requests.HostCookieRequestBuilder(getRequestUrlWithAdditionalSegment("hostCookies") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the HostPair collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostPairCollectionRequestBuilder hostPairs() {
+        return new com.microsoft.graph.security.requests.HostPairCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("hostPairs"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the HostPair item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostPairRequestBuilder hostPairs(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.HostPairRequestBuilder(getRequestUrlWithAdditionalSegment("hostPairs") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the Host collection
      *
      * @return the collection request builder
@@ -155,6 +175,26 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder<ThreatI
     @Nonnull
     public com.microsoft.graph.security.requests.HostRequestBuilder hosts(@Nonnull final String id) {
         return new com.microsoft.graph.security.requests.HostRequestBuilder(getRequestUrlWithAdditionalSegment("hosts") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the HostSslCertificate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostSslCertificateCollectionRequestBuilder hostSslCertificates() {
+        return new com.microsoft.graph.security.requests.HostSslCertificateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("hostSslCertificates"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the HostSslCertificate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.HostSslCertificateRequestBuilder hostSslCertificates(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.HostSslCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("hostSslCertificates") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the HostTracker collection
@@ -237,6 +277,26 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder<ThreatI
         return new com.microsoft.graph.security.requests.PassiveDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("passiveDnsRecords") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the SslCertificate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.SslCertificateCollectionRequestBuilder sslCertificates() {
+        return new com.microsoft.graph.security.requests.SslCertificateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sslCertificates"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the SslCertificate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.SslCertificateRequestBuilder sslCertificates(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.SslCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("sslCertificates") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the Subdomain collection
      *
      * @return the collection request builder
@@ -275,5 +335,25 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder<ThreatI
     @Nonnull
     public com.microsoft.graph.security.requests.VulnerabilityRequestBuilder vulnerabilities(@Nonnull final String id) {
         return new com.microsoft.graph.security.requests.VulnerabilityRequestBuilder(getRequestUrlWithAdditionalSegment("vulnerabilities") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the WhoisRecord collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.WhoisRecordCollectionRequestBuilder whoisRecords() {
+        return new com.microsoft.graph.security.requests.WhoisRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("whoisRecords"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WhoisRecord item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.WhoisRecordRequestBuilder whoisRecords(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.WhoisRecordRequestBuilder(getRequestUrlWithAdditionalSegment("whoisRecords") + "/" + id, getClient(), null);
     }
 }

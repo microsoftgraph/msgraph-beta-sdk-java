@@ -41,7 +41,7 @@ public class ComplianceSettings implements IJsonBackedObject {
 
     /**
      * The EDiscovery Result Templates.
-     * Enables the developer to define the appearance of the content and configure conditions that dictate when the template should be displayed. Maximum of two eDiscovery result templates per connection.
+     * 
      */
     @SerializedName(value = "eDiscoveryResultTemplates", alternate = {"EDiscoveryResultTemplates"})
     @Expose

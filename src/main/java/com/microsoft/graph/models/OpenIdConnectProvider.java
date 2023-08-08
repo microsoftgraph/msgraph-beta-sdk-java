@@ -59,7 +59,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements IJsonBack
 
     /**
      * The Response Mode.
-     * The response mode defines the method that should be used to send the data back from the custom identity provider to Azure AD B2C. The following response modes can be used: form_post, query. query response mode means the code or token is returned as a query parameter. form_post response mode is recommended for the best security. The response is transmitted via the HTTP POST method, with the code or token being encoded in the body using the application/x-www-form-urlencoded format. It is a required property.
+     * The response mode defines the method that should be used to send the data back from the custom identity provider to Azure AD B2C. The following response modes can be used: formpost, query. query response mode means the code or token is returned as a query parameter. formpost response mode is recommended for the best security. The response is transmitted via the HTTP POST method, with the code or token being encoded in the body using the application/x-www-form-urlencoded format. It is a required property.
      */
     @SerializedName(value = "responseMode", alternate = {"ResponseMode"})
     @Expose
@@ -68,7 +68,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements IJsonBack
 
     /**
      * The Response Type.
-     * response type describes what kind of information is sent back in the initial call to the authorization_endpoint of the custom identity provider. The following response types can be used: code , id_token , token. It is a required property.
+     * response type describes what kind of information is sent back in the initial call to the authorizationendpoint of the custom identity provider. The following response types can be used: code , idtoken , token. It is a required property.
      */
     @SerializedName(value = "responseType", alternate = {"ResponseType"})
     @Expose

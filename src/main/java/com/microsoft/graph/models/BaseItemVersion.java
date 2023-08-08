@@ -38,7 +38,7 @@ public class BaseItemVersion extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * Date and time the version was last modified. Read-only.
+     * Date and time when the version was last modified. Read-only.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose

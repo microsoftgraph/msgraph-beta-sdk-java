@@ -41,7 +41,7 @@ public class IntelligenceProfile extends Entity implements IJsonBackedObject {
 
     /**
      * The Countries Or Regions Of Origin.
-     * 
+     * The country/region of origin for the given actor or threat associated with this intelligenceProfile.
      */
     @SerializedName(value = "countriesOrRegionsOfOrigin", alternate = {"CountriesOrRegionsOfOrigin"})
     @Expose

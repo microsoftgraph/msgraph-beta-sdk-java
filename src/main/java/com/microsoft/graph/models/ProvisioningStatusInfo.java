@@ -50,7 +50,7 @@ public class ProvisioningStatusInfo implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Possible values are: success, failure, skipped, warning, unknownFutureValue.
+     * Possible values are: success, failure, skipped, warning, unknownFutureValue. Supports $filter (eq, contains).
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -74,15 +74,6 @@ public class DeviceGeoLocation implements IJsonBackedObject {
     public java.time.OffsetDateTime lastCollectedDateTime;
 
     /**
-     * The Last Collected Date Time Utc.
-     * Time at which location was recorded, relative to UTC
-     */
-    @SerializedName(value = "lastCollectedDateTimeUtc", alternate = {"LastCollectedDateTimeUtc"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime lastCollectedDateTimeUtc;
-
-    /**
      * The Latitude.
      * Latitude coordinate of the device's location
      */

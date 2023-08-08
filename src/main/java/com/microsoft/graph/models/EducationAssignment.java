@@ -201,6 +201,15 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
+     * The Module Url.
+     * 
+     */
+    @SerializedName(value = "moduleUrl", alternate = {"ModuleUrl"})
+    @Expose
+	@Nullable
+    public String moduleUrl;
+
+    /**
      * The Notification Channel Url.
      * Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
      */

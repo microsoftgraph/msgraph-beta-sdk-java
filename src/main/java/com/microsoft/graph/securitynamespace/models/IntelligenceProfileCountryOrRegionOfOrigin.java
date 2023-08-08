@@ -39,7 +39,7 @@ public class IntelligenceProfileCountryOrRegionOfOrigin implements IJsonBackedOb
 
     /**
      * The Code.
-     * 
+     * A codified representation for this country/region of origin.
      */
     @SerializedName(value = "code", alternate = {"Code"})
     @Expose
@@ -48,7 +48,7 @@ public class IntelligenceProfileCountryOrRegionOfOrigin implements IJsonBackedOb
 
     /**
      * The Label.
-     * 
+     * A display label for this ountry/region of origin.
      */
     @SerializedName(value = "label", alternate = {"Label"})
     @Expose

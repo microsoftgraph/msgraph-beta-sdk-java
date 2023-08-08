@@ -354,7 +354,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Recordings.
-     * 
+     * The recordings of an online meeting. Read-only.
      */
     @SerializedName(value = "recordings", alternate = {"Recordings"})
     @Expose

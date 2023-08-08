@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.UserExperienceAnalyticsHealthState;
 import com.microsoft.graph.models.Entity;
 
 
@@ -71,6 +72,42 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     public String manufacturer;
 
     /**
+     * The Mean Full Battery Drain Count.
+     * The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices of a given model in a tenant. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "meanFullBatteryDrainCount", alternate = {"MeanFullBatteryDrainCount"})
+    @Expose
+	@Nullable
+    public Integer meanFullBatteryDrainCount;
+
+    /**
+     * The Median Estimated Runtime In Minutes.
+     * The median of the estimated runtimes on full charge for all devices of a given model. Unit in minutes. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "medianEstimatedRuntimeInMinutes", alternate = {"MedianEstimatedRuntimeInMinutes"})
+    @Expose
+	@Nullable
+    public Integer medianEstimatedRuntimeInMinutes;
+
+    /**
+     * The Median Full Battery Drain Count.
+     * The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices of a given model in a tenant. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "medianFullBatteryDrainCount", alternate = {"MedianFullBatteryDrainCount"})
+    @Expose
+	@Nullable
+    public Integer medianFullBatteryDrainCount;
+
+    /**
+     * The Median Max Capacity Percentage.
+     * The median of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "medianMaxCapacityPercentage", alternate = {"MedianMaxCapacityPercentage"})
+    @Expose
+	@Nullable
+    public Integer medianMaxCapacityPercentage;
+
+    /**
      * The Model.
      * The model name of the device.
      */
@@ -87,6 +124,15 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     @Expose
 	@Nullable
     public Integer modelBatteryHealthScore;
+
+    /**
+     * The Model Health Status.
+     * The overall battery health status of a given model in a tenant.
+     */
+    @SerializedName(value = "modelHealthStatus", alternate = {"ModelHealthStatus"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsHealthState modelHealthStatus;
 
 
     /**

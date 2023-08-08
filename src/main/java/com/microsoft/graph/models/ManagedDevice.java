@@ -666,6 +666,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public java.util.List<String> roleScopeTagIds;
 
     /**
+     * The Security Patch Level.
+     * This indicates the security patch level of the operating system. These special updates contain important security fixes. For iOS/MacOS they are in (a) format. For android its in 2017-08-07 format. This property is read-only.
+     */
+    @SerializedName(value = "securityPatchLevel", alternate = {"SecurityPatchLevel"})
+    @Expose
+	@Nullable
+    public String securityPatchLevel;
+
+    /**
      * The Serial Number.
      * SerialNumber. This property is read-only.
      */

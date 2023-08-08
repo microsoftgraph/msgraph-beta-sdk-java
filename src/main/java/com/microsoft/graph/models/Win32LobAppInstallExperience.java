@@ -49,6 +49,15 @@ public class Win32LobAppInstallExperience implements IJsonBackedObject {
     public Win32LobAppRestartBehavior deviceRestartBehavior;
 
     /**
+     * The Max Run Time In Minutes.
+     * The number of minutes the system will wait for install program to finish. Default value is 60 minutes.
+     */
+    @SerializedName(value = "maxRunTimeInMinutes", alternate = {"MaxRunTimeInMinutes"})
+    @Expose
+	@Nullable
+    public Integer maxRunTimeInMinutes;
+
+    /**
      * The Run As Account.
      * Indicates the type of execution context the app runs in. Possible values are: system, user.
      */

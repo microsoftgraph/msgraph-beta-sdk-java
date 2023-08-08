@@ -61,6 +61,16 @@ public class TenantRelationshipRequestBuilder extends BaseRequestBuilder<TenantR
 
 
     /**
+     * Gets the request builder for MultiTenantOrganization
+     *
+     * @return the MultiTenantOrganizationRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MultiTenantOrganizationRequestBuilder multiTenantOrganization() {
+        return new com.microsoft.graph.requests.MultiTenantOrganizationRequestBuilder(getRequestUrlWithAdditionalSegment("multiTenantOrganization"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for ManagedTenant
      *
      * @return the ManagedTenantRequestBuilder instance

@@ -150,6 +150,26 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
     public com.microsoft.graph.requests.WorkbookTableRequestBuilder tables(@Nonnull final String id) {
         return new com.microsoft.graph.requests.WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment("tables") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WorkbookDocumentTask collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WorkbookDocumentTaskCollectionRequestBuilder tasks() {
+        return new com.microsoft.graph.requests.WorkbookDocumentTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WorkbookDocumentTask item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WorkbookDocumentTaskRequestBuilder tasks(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkbookDocumentTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets a builder to execute the method

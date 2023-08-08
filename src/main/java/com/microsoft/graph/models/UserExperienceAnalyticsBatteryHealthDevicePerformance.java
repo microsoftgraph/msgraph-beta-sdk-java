@@ -36,6 +36,15 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     public Integer batteryAgeInDays;
 
     /**
+     * The Device Battery Count.
+     * Number of batteries in a user device. Valid values 1 to 2147483647
+     */
+    @SerializedName(value = "deviceBatteryCount", alternate = {"DeviceBatteryCount"})
+    @Expose
+	@Nullable
+    public Integer deviceBatteryCount;
+
+    /**
      * The Device Battery Health Score.
      * A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
      */
@@ -70,6 +79,15 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     @Expose
 	@Nullable
     public Integer estimatedRuntimeInMinutes;
+
+    /**
+     * The Full Battery Drain Count.
+     * Number of times the battery has been discharged an amount that equals 100% of its capacity, but not necessarily by discharging it from 100% to 0%. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "fullBatteryDrainCount", alternate = {"FullBatteryDrainCount"})
+    @Expose
+	@Nullable
+    public Integer fullBatteryDrainCount;
 
     /**
      * The Health Status.
