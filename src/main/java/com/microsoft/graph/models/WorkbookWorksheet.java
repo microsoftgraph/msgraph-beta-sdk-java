@@ -15,6 +15,7 @@ import com.microsoft.graph.requests.WorkbookChartCollectionPage;
 import com.microsoft.graph.requests.WorkbookNamedItemCollectionPage;
 import com.microsoft.graph.requests.WorkbookPivotTableCollectionPage;
 import com.microsoft.graph.requests.WorkbookTableCollectionPage;
+import com.microsoft.graph.requests.WorkbookDocumentTaskCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -103,6 +104,15 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 	@Nullable
     public com.microsoft.graph.requests.WorkbookTableCollectionPage tables;
 
+    /**
+     * The Tasks.
+     * 
+     */
+    @SerializedName(value = "tasks", alternate = {"Tasks"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.WorkbookDocumentTaskCollectionPage tasks;
+
 
     /**
      * Sets the raw JSON object
@@ -127,6 +137,10 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
         if (json.has("tables")) {
             tables = serializer.deserializeObject(json.get("tables"), com.microsoft.graph.requests.WorkbookTableCollectionPage.class);
+        }
+
+        if (json.has("tasks")) {
+            tasks = serializer.deserializeObject(json.get("tasks"), com.microsoft.graph.requests.WorkbookDocumentTaskCollectionPage.class);
         }
     }
 }

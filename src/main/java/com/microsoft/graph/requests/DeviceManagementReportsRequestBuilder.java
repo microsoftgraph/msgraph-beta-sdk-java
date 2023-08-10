@@ -52,7 +52,7 @@ import com.microsoft.graph.models.DeviceManagementReportsGetMobileApplicationMan
 import com.microsoft.graph.models.DeviceManagementReportsGetMobileApplicationManagementAppRegistrationSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetRemoteAssistanceSessionsReportParameterSet;
-import com.microsoft.graph.models.DeviceManagementReportsGetAutopilotDeploymentStatusParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetAutopilotDeploymentDeviceInformationParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCachedReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCompliancePolicyNonComplianceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCompliancePolicyNonComplianceSummaryReportParameterSet;
@@ -554,8 +554,8 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public DeviceManagementReportsGetAutopilotDeploymentStatusRequestBuilder getAutopilotDeploymentStatus(@Nonnull final DeviceManagementReportsGetAutopilotDeploymentStatusParameterSet parameters) {
-        return new DeviceManagementReportsGetAutopilotDeploymentStatusRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAutopilotDeploymentStatus"), getClient(), null, parameters);
+    public DeviceManagementReportsGetAutopilotDeploymentDeviceInformationRequestBuilder getAutopilotDeploymentDeviceInformation(@Nonnull final DeviceManagementReportsGetAutopilotDeploymentDeviceInformationParameterSet parameters) {
+        return new DeviceManagementReportsGetAutopilotDeploymentDeviceInformationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAutopilotDeploymentDeviceInformation"), getClient(), null, parameters);
     }
 
     /**

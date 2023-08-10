@@ -116,6 +116,15 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     public String microsoftTunnelSiteId;
 
     /**
+     * The Proxy Exclusion List.
+     * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     */
+    @SerializedName(value = "proxyExclusionList", alternate = {"ProxyExclusionList"})
+    @Expose
+	@Nullable
+    public java.util.List<String> proxyExclusionList;
+
+    /**
      * The Proxy Server.
      * Proxy server.
      */

@@ -116,6 +116,26 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder<EducationCl
     public com.microsoft.graph.requests.EducationAssignmentSettingsRequestBuilder assignmentSettings() {
         return new com.microsoft.graph.requests.EducationAssignmentSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentSettings"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the EducationModule collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EducationModuleCollectionRequestBuilder modules() {
+        return new com.microsoft.graph.requests.EducationModuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("modules"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the EducationModule item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EducationModuleRequestBuilder modules(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationModuleRequestBuilder(getRequestUrlWithAdditionalSegment("modules") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for Group

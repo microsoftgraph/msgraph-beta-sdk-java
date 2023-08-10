@@ -68,6 +68,10 @@ public enum DeviceManagementConfigurationTemplateFamily
     */
     DEVICE_CONFIGURATION_SCRIPTS,
     /**
+    * device Configuration Policies
+    */
+    DEVICE_CONFIGURATION_POLICIES,
+    /**
     * For DeviceManagementConfigurationTemplateFamily values that were not expected from the service
     */
     UNEXPECTED_VALUE

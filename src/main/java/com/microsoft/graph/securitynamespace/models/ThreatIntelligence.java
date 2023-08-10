@@ -14,13 +14,17 @@ import com.microsoft.graph.security.requests.ArticleIndicatorCollectionPage;
 import com.microsoft.graph.security.requests.ArticleCollectionPage;
 import com.microsoft.graph.security.requests.HostComponentCollectionPage;
 import com.microsoft.graph.security.requests.HostCookieCollectionPage;
+import com.microsoft.graph.security.requests.HostPairCollectionPage;
 import com.microsoft.graph.security.requests.HostCollectionPage;
+import com.microsoft.graph.security.requests.HostSslCertificateCollectionPage;
 import com.microsoft.graph.security.requests.HostTrackerCollectionPage;
 import com.microsoft.graph.security.requests.IntelligenceProfileIndicatorCollectionPage;
 import com.microsoft.graph.security.requests.IntelligenceProfileCollectionPage;
 import com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage;
+import com.microsoft.graph.security.requests.SslCertificateCollectionPage;
 import com.microsoft.graph.security.requests.SubdomainCollectionPage;
 import com.microsoft.graph.security.requests.VulnerabilityCollectionPage;
+import com.microsoft.graph.security.requests.WhoisRecordCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -74,6 +78,15 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.security.requests.HostCookieCollectionPage hostCookies;
 
     /**
+     * The Host Pairs.
+     * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     */
+    @SerializedName(value = "hostPairs", alternate = {"HostPairs"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.HostPairCollectionPage hostPairs;
+
+    /**
      * The Hosts.
      * Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      */
@@ -81,6 +94,15 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.security.requests.HostCollectionPage hosts;
+
+    /**
+     * The Host Ssl Certificates.
+     * 
+     */
+    @SerializedName(value = "hostSslCertificates", alternate = {"HostSslCertificates"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.HostSslCertificateCollectionPage hostSslCertificates;
 
     /**
      * The Host Trackers.
@@ -119,6 +141,15 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage passiveDnsRecords;
 
     /**
+     * The Ssl Certificates.
+     * 
+     */
+    @SerializedName(value = "sslCertificates", alternate = {"SslCertificates"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.SslCertificateCollectionPage sslCertificates;
+
+    /**
      * The Subdomains.
      * Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
      */
@@ -135,6 +166,15 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.security.requests.VulnerabilityCollectionPage vulnerabilities;
+
+    /**
+     * The Whois Records.
+     * 
+     */
+    @SerializedName(value = "whoisRecords", alternate = {"WhoisRecords"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.WhoisRecordCollectionPage whoisRecords;
 
 
     /**
@@ -162,8 +202,16 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
             hostCookies = serializer.deserializeObject(json.get("hostCookies"), com.microsoft.graph.security.requests.HostCookieCollectionPage.class);
         }
 
+        if (json.has("hostPairs")) {
+            hostPairs = serializer.deserializeObject(json.get("hostPairs"), com.microsoft.graph.security.requests.HostPairCollectionPage.class);
+        }
+
         if (json.has("hosts")) {
             hosts = serializer.deserializeObject(json.get("hosts"), com.microsoft.graph.security.requests.HostCollectionPage.class);
+        }
+
+        if (json.has("hostSslCertificates")) {
+            hostSslCertificates = serializer.deserializeObject(json.get("hostSslCertificates"), com.microsoft.graph.security.requests.HostSslCertificateCollectionPage.class);
         }
 
         if (json.has("hostTrackers")) {
@@ -182,12 +230,20 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
             passiveDnsRecords = serializer.deserializeObject(json.get("passiveDnsRecords"), com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage.class);
         }
 
+        if (json.has("sslCertificates")) {
+            sslCertificates = serializer.deserializeObject(json.get("sslCertificates"), com.microsoft.graph.security.requests.SslCertificateCollectionPage.class);
+        }
+
         if (json.has("subdomains")) {
             subdomains = serializer.deserializeObject(json.get("subdomains"), com.microsoft.graph.security.requests.SubdomainCollectionPage.class);
         }
 
         if (json.has("vulnerabilities")) {
             vulnerabilities = serializer.deserializeObject(json.get("vulnerabilities"), com.microsoft.graph.security.requests.VulnerabilityCollectionPage.class);
+        }
+
+        if (json.has("whoisRecords")) {
+            whoisRecords = serializer.deserializeObject(json.get("whoisRecords"), com.microsoft.graph.security.requests.WhoisRecordCollectionPage.class);
         }
     }
 }

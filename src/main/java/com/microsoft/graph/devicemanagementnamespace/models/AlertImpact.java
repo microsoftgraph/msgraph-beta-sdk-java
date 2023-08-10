@@ -8,7 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.devicemanagement.models.AggregationType;
+import com.microsoft.graph.models.KeyValuePair;
 
 
 import com.google.gson.JsonObject;
@@ -46,6 +48,15 @@ public class AlertImpact implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AggregationType aggregationType;
+
+    /**
+     * The Alert Impact Details.
+     * The detail information of the impact. For example, if the Frontline Cloud PCs near concurrency limit alert is triggered, the details contain the impacted Frontline license SKU name, such as Windows 365 Frontline 2 vCPU/8GB/128GB, and the corresponding impacted value.
+     */
+    @SerializedName(value = "alertImpactDetails", alternate = {"AlertImpactDetails"})
+    @Expose
+	@Nullable
+    public java.util.List<KeyValuePair> alertImpactDetails;
 
     /**
      * The Value.

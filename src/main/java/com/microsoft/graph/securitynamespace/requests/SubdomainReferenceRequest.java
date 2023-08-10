@@ -70,7 +70,7 @@ public class SubdomainReferenceRequest extends BaseReferenceRequest<Subdomain> {
     @Nonnull
     public java.util.concurrent.CompletableFuture<Subdomain> putAsync(@Nonnull final Subdomain srcSubdomain) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/subdomains/" + srcSubdomain.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/host/{id}/subdomains/" + srcSubdomain.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -84,7 +84,7 @@ public class SubdomainReferenceRequest extends BaseReferenceRequest<Subdomain> {
     @Nullable
     public Subdomain put(@Nonnull final Subdomain srcSubdomain) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/security/threatIntelligence/{id}/subdomains/" + srcSubdomain.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/host/{id}/subdomains/" + srcSubdomain.id));
         return send(HttpMethod.PUT, payload);
     }
 }

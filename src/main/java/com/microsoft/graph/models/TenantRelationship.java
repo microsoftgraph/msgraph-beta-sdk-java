@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.MultiTenantOrganization;
 import com.microsoft.graph.managedtenants.models.ManagedTenant;
 import com.microsoft.graph.requests.DelegatedAdminCustomerCollectionPage;
 import com.microsoft.graph.requests.DelegatedAdminRelationshipCollectionPage;
@@ -40,6 +41,15 @@ public class TenantRelationship implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Multi Tenant Organization.
+     * 
+     */
+    @SerializedName(value = "multiTenantOrganization", alternate = {"MultiTenantOrganization"})
+    @Expose
+	@Nullable
+    public MultiTenantOrganization multiTenantOrganization;
 
     /**
      * The Managed Tenants.

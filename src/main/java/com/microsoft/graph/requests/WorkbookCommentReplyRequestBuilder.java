@@ -56,4 +56,14 @@ public class WorkbookCommentReplyRequestBuilder extends BaseRequestBuilder<Workb
     }
 
 
+
+    /**
+     * Gets the request builder for WorkbookDocumentTask
+     *
+     * @return the WorkbookDocumentTaskRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WorkbookDocumentTaskRequestBuilder task() {
+        return new com.microsoft.graph.requests.WorkbookDocumentTaskRequestBuilder(getRequestUrlWithAdditionalSegment("task"), getClient(), null);
+    }
 }

@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.UserExperienceAnalyticsHealthState;
 import com.microsoft.graph.models.Entity;
 
 
@@ -62,6 +63,51 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     public Integer averageMaxCapacityPercentage;
 
     /**
+     * The Mean Full Battery Drain Count.
+     * The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "meanFullBatteryDrainCount", alternate = {"MeanFullBatteryDrainCount"})
+    @Expose
+	@Nullable
+    public Integer meanFullBatteryDrainCount;
+
+    /**
+     * The Median Estimated Runtime In Minutes.
+     * The median of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "medianEstimatedRuntimeInMinutes", alternate = {"MedianEstimatedRuntimeInMinutes"})
+    @Expose
+	@Nullable
+    public Integer medianEstimatedRuntimeInMinutes;
+
+    /**
+     * The Median Full Battery Drain Count.
+     * The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "medianFullBatteryDrainCount", alternate = {"MedianFullBatteryDrainCount"})
+    @Expose
+	@Nullable
+    public Integer medianFullBatteryDrainCount;
+
+    /**
+     * The Median Max Capacity Percentage.
+     * The median of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "medianMaxCapacityPercentage", alternate = {"MedianMaxCapacityPercentage"})
+    @Expose
+	@Nullable
+    public Integer medianMaxCapacityPercentage;
+
+    /**
+     * The Os Battery Health Score.
+     * A weighted average of battery health score across all devices running a particular operating system version. Values range from 0-100. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "osBatteryHealthScore", alternate = {"OsBatteryHealthScore"})
+    @Expose
+	@Nullable
+    public Integer osBatteryHealthScore;
+
+    /**
      * The Os Build Number.
      * Build number of the operating system.
      */
@@ -69,6 +115,15 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     @Expose
 	@Nullable
     public String osBuildNumber;
+
+    /**
+     * The Os Health Status.
+     * The overall battery health status of a given os version in a tenant.
+     */
+    @SerializedName(value = "osHealthStatus", alternate = {"OsHealthStatus"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsHealthState osHealthStatus;
 
     /**
      * The Os Version.

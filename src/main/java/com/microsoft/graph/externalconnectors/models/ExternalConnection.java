@@ -48,7 +48,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Compliance Settings.
-     * The settings required for the connection to participate in eDiscovery, such as the display templates for eDiscovery results.
+     * 
      */
     @SerializedName(value = "complianceSettings", alternate = {"ComplianceSettings"})
     @Expose
@@ -84,7 +84,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Enabled Content Experiences.
-     * The list of content experiences the connection will participate in. Possible values are search and compliance.
+     * The list of content experiences the connection will participate in. Possible values are search.
      */
     @SerializedName(value = "enabledContentExperiences", alternate = {"EnabledContentExperiences"})
     @Expose

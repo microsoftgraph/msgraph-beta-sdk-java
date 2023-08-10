@@ -44,15 +44,6 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     public Long medianImpactInMs;
 
     /**
-     * The Median Impact In Ms2.
-     * The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-     */
-    @SerializedName(value = "medianImpactInMs2", alternate = {"MedianImpactInMs2"})
-    @Expose
-	@Nullable
-    public Long medianImpactInMs2;
-
-    /**
      * The Process Name.
      * The name of the startup process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
      */
@@ -87,15 +78,6 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     @Expose
 	@Nullable
     public Long totalImpactInMs;
-
-    /**
-     * The Total Impact In Ms2.
-     * The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-     */
-    @SerializedName(value = "totalImpactInMs2", alternate = {"TotalImpactInMs2"})
-    @Expose
-	@Nullable
-    public Long totalImpactInMs2;
 
 
     /**

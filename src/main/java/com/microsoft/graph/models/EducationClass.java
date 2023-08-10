@@ -19,6 +19,7 @@ import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationCategoryCollectionPage;
 import com.microsoft.graph.requests.EducationAssignmentCollectionPage;
+import com.microsoft.graph.requests.EducationModuleCollectionPage;
 import com.microsoft.graph.requests.EducationSchoolCollectionPage;
 
 
@@ -181,6 +182,15 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     public EducationAssignmentSettings assignmentSettings;
 
     /**
+     * The Modules.
+     * 
+     */
+    @SerializedName(value = "modules", alternate = {"Modules"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.EducationModuleCollectionPage modules;
+
+    /**
      * The Group.
      * 
      */
@@ -226,6 +236,10 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
         if (json.has("assignments")) {
             assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.EducationAssignmentCollectionPage.class);
+        }
+
+        if (json.has("modules")) {
+            modules = serializer.deserializeObject(json.get("modules"), com.microsoft.graph.requests.EducationModuleCollectionPage.class);
         }
 
         if (json.has("members")) {

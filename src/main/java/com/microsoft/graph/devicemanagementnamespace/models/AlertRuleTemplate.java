@@ -32,6 +32,10 @@ public enum AlertRuleTemplate
     */
     CLOUD_PC_IN_GRACE_PERIOD_SCENARIO,
     /**
+    * cloud Pc Frontline Insufficient Licenses Scenario
+    */
+    CLOUD_PC_FRONTLINE_INSUFFICIENT_LICENSES_SCENARIO,
+    /**
     * For AlertRuleTemplate values that were not expected from the service
     */
     UNEXPECTED_VALUE

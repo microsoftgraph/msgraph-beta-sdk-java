@@ -28,6 +28,18 @@ public enum MobileThreatPartnerTenantState
     */
     UNRESPONSIVE,
     /**
+    * not Set Up
+    */
+    NOT_SET_UP,
+    /**
+    * error
+    */
+    ERROR,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For MobileThreatPartnerTenantState values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -31,7 +31,7 @@ public class AlertRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Alert Impact.
-     * The impact of the alert event. Consists of a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected.
+     * The impact of the alert event. Consists of a list of key-value pair and a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected. The list of key-value pair indicates the details of the alert impact.
      */
     @SerializedName(value = "alertImpact", alternate = {"AlertImpact"})
     @Expose
@@ -49,7 +49,7 @@ public class AlertRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Alert Rule Template.
-     * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
+     * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      */
     @SerializedName(value = "alertRuleTemplate", alternate = {"AlertRuleTemplate"})
     @Expose

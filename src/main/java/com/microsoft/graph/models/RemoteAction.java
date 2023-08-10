@@ -140,6 +140,18 @@ public enum RemoteAction
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * launch Remote Help
+    */
+    LAUNCH_REMOTE_HELP,
+    /**
+    * revoke Apple Vpp Licenses
+    */
+    REVOKE_APPLE_VPP_LICENSES,
+    /**
+    * remove Device Firmware Configuration Interface Management
+    */
+    REMOVE_DEVICE_FIRMWARE_CONFIGURATION_INTERFACE_MANAGEMENT,
+    /**
     * For RemoteAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

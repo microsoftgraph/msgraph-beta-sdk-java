@@ -13,6 +13,7 @@ import com.microsoft.graph.models.SignInActivity;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AssignedPlan;
 import com.microsoft.graph.models.AuthorizationInfo;
+import com.microsoft.graph.models.CloudRealtimeCommunicationInfo;
 import com.microsoft.graph.models.CustomSecurityAttributeValue;
 import com.microsoft.graph.models.DeviceKey;
 import com.microsoft.graph.models.EmployeeOrgData;
@@ -20,6 +21,7 @@ import com.microsoft.graph.models.ObjectIdentity;
 import com.microsoft.graph.models.LicenseAssignmentState;
 import com.microsoft.graph.models.OnPremisesExtensionAttributes;
 import com.microsoft.graph.models.OnPremisesProvisioningError;
+import com.microsoft.graph.models.OnPremisesSipInfo;
 import com.microsoft.graph.models.PasswordProfile;
 import com.microsoft.graph.models.ProvisionedPlan;
 import com.microsoft.graph.models.ServiceProvisioningError;
@@ -161,6 +163,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String city;
+
+    /**
+     * The Cloud Realtime Communication Info.
+     * 
+     */
+    @SerializedName(value = "cloudRealtimeCommunicationInfo", alternate = {"CloudRealtimeCommunicationInfo"})
+    @Expose
+	@Nullable
+    public CloudRealtimeCommunicationInfo cloudRealtimeCommunicationInfo;
 
     /**
      * The Company Name.
@@ -521,6 +532,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String onPremisesSecurityIdentifier;
+
+    /**
+     * The On Premises Sip Info.
+     * 
+     */
+    @SerializedName(value = "onPremisesSipInfo", alternate = {"OnPremisesSipInfo"})
+    @Expose
+	@Nullable
+    public OnPremisesSipInfo onPremisesSipInfo;
 
     /**
      * The On Premises Sync Enabled.

@@ -66,7 +66,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Reset Enabled.
-     * 
+     * Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
      */
     @SerializedName(value = "resetEnabled", alternate = {"ResetEnabled"})
     @Expose

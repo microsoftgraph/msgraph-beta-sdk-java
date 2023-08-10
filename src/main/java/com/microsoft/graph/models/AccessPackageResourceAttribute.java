@@ -50,7 +50,7 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 
     /**
      * The Attribute Name.
-     * The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension_2b676109c7c74ae2b41549205f1947ed_personalTitle.
+     * The name of the attribute in the end system. If the destination is accessPackageUserDirectoryAttributeStore, then a user property such as jobTitle or a directory schema extension for the user object type, such as extension2b676109c7c74ae2b41549205f1947edpersonalTitle.
      */
     @SerializedName(value = "attributeName", alternate = {"AttributeName"})
     @Expose

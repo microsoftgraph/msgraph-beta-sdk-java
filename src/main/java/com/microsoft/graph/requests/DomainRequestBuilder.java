@@ -182,6 +182,15 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @return the request builder
      */
     @Nonnull
+    public DomainPromoteToInitialRequestBuilder promoteToInitial() {
+        return new DomainPromoteToInitialRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.promoteToInitial"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public DomainVerifyRequestBuilder verify() {
         return new DomainVerifyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.verify"), getClient(), null);
     }

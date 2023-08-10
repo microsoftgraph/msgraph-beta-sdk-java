@@ -42,7 +42,7 @@ public class StatusBase implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Possible values are: success, warning, failure, skipped, unknownFutureValue.
+     * Possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

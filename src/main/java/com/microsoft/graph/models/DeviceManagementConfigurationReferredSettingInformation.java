@@ -39,7 +39,7 @@ public class DeviceManagementConfigurationReferredSettingInformation implements 
 
     /**
      * The Setting Definition Id.
-     * Setting definition id that is being referred to a setting. Applicable for reusable setting
+     * Setting definition id that is being referred to a setting. Applicable for reusable setting.
      */
     @SerializedName(value = "settingDefinitionId", alternate = {"SettingDefinitionId"})
     @Expose

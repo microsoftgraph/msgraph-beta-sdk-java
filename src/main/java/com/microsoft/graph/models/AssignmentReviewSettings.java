@@ -105,7 +105,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Reviewer Type.
-     * Who should be asked to do the review, either Self or Reviewers.
+     * Who should be asked to do the review, either Self, Reviewers or Manager.
      */
     @SerializedName(value = "reviewerType", alternate = {"ReviewerType"})
     @Expose

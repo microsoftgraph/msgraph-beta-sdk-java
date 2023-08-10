@@ -24,13 +24,13 @@ public enum SensitivityLabelTarget
     */
     UNIFIED_GROUP,
     /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
     * teamwork
     */
     TEAMWORK,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
     /**
     * For SensitivityLabelTarget values that were not expected from the service
     */
