@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the journalLines property of the microsoft.graph.journal entity.
  */
@@ -36,7 +37,7 @@ public class JournalLinesRequestBuilder extends BaseRequestBuilder {
      * @return a JournalLineItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public JournalLineItemRequestBuilder byJournalLineId(@javax.annotation.Nonnull final String journalLineId) {
+    public JournalLineItemRequestBuilder byJournalLineId(@javax.annotation.Nonnull final UUID journalLineId) {
         Objects.requireNonNull(journalLineId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("journalLine%2Did", journalLineId);

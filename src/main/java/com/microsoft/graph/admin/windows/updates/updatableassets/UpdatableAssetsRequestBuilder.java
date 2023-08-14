@@ -95,9 +95,9 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      * @return a CompletableFuture of updatableAssetCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-list-updatableassets?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-updatableassets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> get() {
@@ -114,10 +114,10 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of updatableAssetCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-list-updatableassets?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-updatableassets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -134,10 +134,10 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
+     * Create a new updatableAssetGroup object. The updatableAssetGroup resource inherits from updatableAsset.
      * @param body The request body
      * @return a CompletableFuture of updatableAsset
-     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-post-updatableassets-updatableassetgroup?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-updatableassets-updatableassetgroup?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@javax.annotation.Nonnull final UpdatableAsset body) {
@@ -154,11 +154,11 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
+     * Create a new updatableAssetGroup object. The updatableAssetGroup resource inherits from updatableAsset.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of updatableAsset
-     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-post-updatableassets-updatableassetgroup?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-updatableassets-updatableassetgroup?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@javax.annotation.Nonnull final UpdatableAsset body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -176,7 +176,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -184,7 +184,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
+     * Create a new updatableAssetGroup object. The updatableAssetGroup resource inherits from updatableAsset.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -214,7 +214,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
+     * Create a new updatableAssetGroup object. The updatableAssetGroup resource inherits from updatableAsset.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -237,7 +237,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      */
     public class GetQueryParameters {
         /**

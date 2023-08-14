@@ -1,6 +1,7 @@
 package com.microsoft.graph.security.attacksimulation.trainings.item.languagedetails;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TrainingLanguageDetail;
 import com.microsoft.graph.models.TrainingLanguageDetailCollectionResponse;
 import com.microsoft.graph.security.attacksimulation.trainings.item.languagedetails.count.CountRequestBuilder;
 import com.microsoft.graph.security.attacksimulation.trainings.item.languagedetails.item.TrainingLanguageDetailItemRequestBuilder;
@@ -99,6 +100,46 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
+     * Create new navigation property to languageDetails for security
+     * @param body The request body
+     * @return a CompletableFuture of trainingLanguageDetail
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> post(@javax.annotation.Nonnull final TrainingLanguageDetail body) {
+        try {
+            final RequestInformation requestInfo = toPostRequestInformation(body, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, TrainingLanguageDetail::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<TrainingLanguageDetail> executionException = new java.util.concurrent.CompletableFuture<TrainingLanguageDetail>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Create new navigation property to languageDetails for security
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of trainingLanguageDetail
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> post(@javax.annotation.Nonnull final TrainingLanguageDetail body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        try {
+            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, TrainingLanguageDetail::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<TrainingLanguageDetail> executionException = new java.util.concurrent.CompletableFuture<TrainingLanguageDetail>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
      * Get languageDetails from security
      * @return a RequestInformation
      */
@@ -122,6 +163,38 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Create new navigation property to languageDetails for security
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final TrainingLanguageDetail body) throws URISyntaxException {
+        return toPostRequestInformation(body, null);
+    }
+    /**
+     * Create new navigation property to languageDetails for security
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final TrainingLanguageDetail body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
@@ -189,5 +262,10 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
          */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

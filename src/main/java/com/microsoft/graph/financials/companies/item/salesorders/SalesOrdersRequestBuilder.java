@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the salesOrders property of the microsoft.graph.company entity.
  */
@@ -35,7 +36,7 @@ public class SalesOrdersRequestBuilder extends BaseRequestBuilder {
      * @return a SalesOrderItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public SalesOrderItemRequestBuilder bySalesOrderId(@javax.annotation.Nonnull final String salesOrderId) {
+    public SalesOrderItemRequestBuilder bySalesOrderId(@javax.annotation.Nonnull final UUID salesOrderId) {
         Objects.requireNonNull(salesOrderId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesOrder%2Did", salesOrderId);

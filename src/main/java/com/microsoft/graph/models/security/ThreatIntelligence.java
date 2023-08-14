@@ -25,9 +25,17 @@ public class ThreatIntelligence extends Entity implements Parsable {
      */
     private java.util.List<HostCookie> hostCookies;
     /**
+     * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     */
+    private java.util.List<HostPair> hostPairs;
+    /**
      * Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      */
     private java.util.List<Host> hosts;
+    /**
+     * The hostSslCertificates property
+     */
+    private java.util.List<HostSslCertificate> hostSslCertificates;
     /**
      * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
      */
@@ -45,6 +53,10 @@ public class ThreatIntelligence extends Entity implements Parsable {
      */
     private java.util.List<PassiveDnsRecord> passiveDnsRecords;
     /**
+     * The sslCertificates property
+     */
+    private java.util.List<SslCertificate> sslCertificates;
+    /**
      * Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
      */
     private java.util.List<Subdomain> subdomains;
@@ -52,6 +64,10 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
      */
     private java.util.List<Vulnerability> vulnerabilities;
+    /**
+     * The whoisRecords property
+     */
+    private java.util.List<WhoisRecord> whoisRecords;
     /**
      * Instantiates a new threatIntelligence and sets the default values.
      * @return a void
@@ -97,13 +113,17 @@ public class ThreatIntelligence extends Entity implements Parsable {
         deserializerMap.put("articles", (n) -> { this.setArticles(n.getCollectionOfObjectValues(Article::createFromDiscriminatorValue)); });
         deserializerMap.put("hostComponents", (n) -> { this.setHostComponents(n.getCollectionOfObjectValues(HostComponent::createFromDiscriminatorValue)); });
         deserializerMap.put("hostCookies", (n) -> { this.setHostCookies(n.getCollectionOfObjectValues(HostCookie::createFromDiscriminatorValue)); });
+        deserializerMap.put("hostPairs", (n) -> { this.setHostPairs(n.getCollectionOfObjectValues(HostPair::createFromDiscriminatorValue)); });
         deserializerMap.put("hosts", (n) -> { this.setHosts(n.getCollectionOfObjectValues(Host::createFromDiscriminatorValue)); });
+        deserializerMap.put("hostSslCertificates", (n) -> { this.setHostSslCertificates(n.getCollectionOfObjectValues(HostSslCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("hostTrackers", (n) -> { this.setHostTrackers(n.getCollectionOfObjectValues(HostTracker::createFromDiscriminatorValue)); });
         deserializerMap.put("intelligenceProfileIndicators", (n) -> { this.setIntelligenceProfileIndicators(n.getCollectionOfObjectValues(IntelligenceProfileIndicator::createFromDiscriminatorValue)); });
         deserializerMap.put("intelProfiles", (n) -> { this.setIntelProfiles(n.getCollectionOfObjectValues(IntelligenceProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("passiveDnsRecords", (n) -> { this.setPassiveDnsRecords(n.getCollectionOfObjectValues(PassiveDnsRecord::createFromDiscriminatorValue)); });
+        deserializerMap.put("sslCertificates", (n) -> { this.setSslCertificates(n.getCollectionOfObjectValues(SslCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("subdomains", (n) -> { this.setSubdomains(n.getCollectionOfObjectValues(Subdomain::createFromDiscriminatorValue)); });
         deserializerMap.put("vulnerabilities", (n) -> { this.setVulnerabilities(n.getCollectionOfObjectValues(Vulnerability::createFromDiscriminatorValue)); });
+        deserializerMap.put("whoisRecords", (n) -> { this.setWhoisRecords(n.getCollectionOfObjectValues(WhoisRecord::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -123,12 +143,28 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.hostCookies;
     }
     /**
+     * Gets the hostPairs property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * @return a hostPair
+     */
+    @javax.annotation.Nullable
+    public java.util.List<HostPair> getHostPairs() {
+        return this.hostPairs;
+    }
+    /**
      * Gets the hosts property value. Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      * @return a host
      */
     @javax.annotation.Nullable
     public java.util.List<Host> getHosts() {
         return this.hosts;
+    }
+    /**
+     * Gets the hostSslCertificates property value. The hostSslCertificates property
+     * @return a hostSslCertificate
+     */
+    @javax.annotation.Nullable
+    public java.util.List<HostSslCertificate> getHostSslCertificates() {
+        return this.hostSslCertificates;
     }
     /**
      * Gets the hostTrackers property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
@@ -163,6 +199,14 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.passiveDnsRecords;
     }
     /**
+     * Gets the sslCertificates property value. The sslCertificates property
+     * @return a sslCertificate
+     */
+    @javax.annotation.Nullable
+    public java.util.List<SslCertificate> getSslCertificates() {
+        return this.sslCertificates;
+    }
+    /**
      * Gets the subdomains property value. Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
      * @return a subdomain
      */
@@ -179,6 +223,14 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.vulnerabilities;
     }
     /**
+     * Gets the whoisRecords property value. The whoisRecords property
+     * @return a whoisRecord
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WhoisRecord> getWhoisRecords() {
+        return this.whoisRecords;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -191,13 +243,17 @@ public class ThreatIntelligence extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("articles", this.getArticles());
         writer.writeCollectionOfObjectValues("hostComponents", this.getHostComponents());
         writer.writeCollectionOfObjectValues("hostCookies", this.getHostCookies());
+        writer.writeCollectionOfObjectValues("hostPairs", this.getHostPairs());
         writer.writeCollectionOfObjectValues("hosts", this.getHosts());
+        writer.writeCollectionOfObjectValues("hostSslCertificates", this.getHostSslCertificates());
         writer.writeCollectionOfObjectValues("hostTrackers", this.getHostTrackers());
         writer.writeCollectionOfObjectValues("intelligenceProfileIndicators", this.getIntelligenceProfileIndicators());
         writer.writeCollectionOfObjectValues("intelProfiles", this.getIntelProfiles());
         writer.writeCollectionOfObjectValues("passiveDnsRecords", this.getPassiveDnsRecords());
+        writer.writeCollectionOfObjectValues("sslCertificates", this.getSslCertificates());
         writer.writeCollectionOfObjectValues("subdomains", this.getSubdomains());
         writer.writeCollectionOfObjectValues("vulnerabilities", this.getVulnerabilities());
+        writer.writeCollectionOfObjectValues("whoisRecords", this.getWhoisRecords());
     }
     /**
      * Sets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
@@ -236,6 +292,15 @@ public class ThreatIntelligence extends Entity implements Parsable {
         this.hostCookies = value;
     }
     /**
+     * Sets the hostPairs property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * @param value Value to set for the hostPairs property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setHostPairs(@javax.annotation.Nullable final java.util.List<HostPair> value) {
+        this.hostPairs = value;
+    }
+    /**
      * Sets the hosts property value. Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      * @param value Value to set for the hosts property.
      * @return a void
@@ -243,6 +308,15 @@ public class ThreatIntelligence extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setHosts(@javax.annotation.Nullable final java.util.List<Host> value) {
         this.hosts = value;
+    }
+    /**
+     * Sets the hostSslCertificates property value. The hostSslCertificates property
+     * @param value Value to set for the hostSslCertificates property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setHostSslCertificates(@javax.annotation.Nullable final java.util.List<HostSslCertificate> value) {
+        this.hostSslCertificates = value;
     }
     /**
      * Sets the hostTrackers property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
@@ -281,6 +355,15 @@ public class ThreatIntelligence extends Entity implements Parsable {
         this.passiveDnsRecords = value;
     }
     /**
+     * Sets the sslCertificates property value. The sslCertificates property
+     * @param value Value to set for the sslCertificates property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSslCertificates(@javax.annotation.Nullable final java.util.List<SslCertificate> value) {
+        this.sslCertificates = value;
+    }
+    /**
      * Sets the subdomains property value. Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
      * @param value Value to set for the subdomains property.
      * @return a void
@@ -297,5 +380,14 @@ public class ThreatIntelligence extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setVulnerabilities(@javax.annotation.Nullable final java.util.List<Vulnerability> value) {
         this.vulnerabilities = value;
+    }
+    /**
+     * Sets the whoisRecords property value. The whoisRecords property
+     * @param value Value to set for the whoisRecords property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setWhoisRecords(@javax.annotation.Nullable final java.util.List<WhoisRecord> value) {
+        this.whoisRecords = value;
     }
 }

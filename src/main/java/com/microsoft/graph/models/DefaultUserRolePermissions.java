@@ -29,7 +29,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     private Boolean allowedToReadBitlockerKeysForOwnedDevice;
     /**
-     * Indicates whether the default user role can read other users.
+     * Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
      */
     private Boolean allowedToReadOtherUsers;
     /**
@@ -95,7 +95,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         return this.allowedToReadBitlockerKeysForOwnedDevice;
     }
     /**
-     * Gets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users.
+     * Gets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -187,7 +187,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         this.allowedToReadBitlockerKeysForOwnedDevice = value;
     }
     /**
-     * Sets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users.
+     * Sets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
      * @param value Value to set for the allowedToReadOtherUsers property.
      * @return a void
      */
@@ -197,7 +197,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

@@ -75,7 +75,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a timeCard instance in a schedule.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/timecard-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -95,7 +95,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
      * Delete a timeCard instance in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/timecard-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a timeCard object by ID.
      * @return a CompletableFuture of timeCard
-     * @see <a href="https://docs.microsoft.com/graph/api/timecard-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeCard> get() {
@@ -134,7 +134,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of a timeCard object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeCard
-     * @see <a href="https://docs.microsoft.com/graph/api/timecard-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeCard> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -154,7 +154,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
      * Replace an existing timeCard with updated values.
      * @param body The request body
      * @return a CompletableFuture of timeCard
-     * @see <a href="https://docs.microsoft.com/graph/api/timecard-replace?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-replace?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeCard> patch(@javax.annotation.Nonnull final TimeCard body) {
@@ -175,7 +175,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeCard
-     * @see <a href="https://docs.microsoft.com/graph/api/timecard-replace?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-replace?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeCard> patch(@javax.annotation.Nonnull final TimeCard body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -40,9 +40,9 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/activate", rawUrl);
     }
     /**
-     * Activate an `inactive` educationAssignment to signal that the assignment has further action items for teachers and students. This action can only be performed by a teacher on currently inactive assignments.
+     * Activate an inactive educationAssignment to signal that the assignment has further action items for teachers and students. This action can only be performed by a teacher on currently inactive assignments.
      * @return a CompletableFuture of educationAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-activate?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-activate?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> post() {
@@ -59,10 +59,10 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Activate an `inactive` educationAssignment to signal that the assignment has further action items for teachers and students. This action can only be performed by a teacher on currently inactive assignments.
+     * Activate an inactive educationAssignment to signal that the assignment has further action items for teachers and students. This action can only be performed by a teacher on currently inactive assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-activate?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-activate?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Activate an `inactive` educationAssignment to signal that the assignment has further action items for teachers and students. This action can only be performed by a teacher on currently inactive assignments.
+     * Activate an inactive educationAssignment to signal that the assignment has further action items for teachers and students. This action can only be performed by a teacher on currently inactive assignments.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -87,7 +87,7 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Activate an `inactive` educationAssignment to signal that the assignment has further action items for teachers and students. This action can only be performed by a teacher on currently inactive assignments.
+     * Activate an inactive educationAssignment to signal that the assignment has further action items for teachers and students. This action can only be performed by a teacher on currently inactive assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

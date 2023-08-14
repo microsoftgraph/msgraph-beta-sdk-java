@@ -7,7 +7,7 @@ import com.microsoft.graph.devicemanagement.reports.getactivemalwaresummaryrepor
 import com.microsoft.graph.devicemanagement.reports.getallcertificatesreport.GetAllCertificatesReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getappsinstallsummaryreport.GetAppsInstallSummaryReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getappstatusoverviewreport.GetAppStatusOverviewReportRequestBuilder;
-import com.microsoft.graph.devicemanagement.reports.getautopilotdeploymentstatus.GetAutopilotDeploymentStatusRequestBuilder;
+import com.microsoft.graph.devicemanagement.reports.getautopilotdeploymentdeviceinformation.GetAutopilotDeploymentDeviceInformationRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getcachedreport.GetCachedReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getcertificatesreport.GetCertificatesReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.reports.getcompliancepoliciesreportfordevice.GetCompliancePoliciesReportForDeviceRequestBuilder;
@@ -143,11 +143,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new GetAppStatusOverviewReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the getAutopilotDeploymentStatus method.
+     * Provides operations to call the getAutopilotDeploymentDeviceInformation method.
      */
     @javax.annotation.Nonnull
-    public GetAutopilotDeploymentStatusRequestBuilder getAutopilotDeploymentStatus() {
-        return new GetAutopilotDeploymentStatusRequestBuilder(pathParameters, requestAdapter);
+    public GetAutopilotDeploymentDeviceInformationRequestBuilder getAutopilotDeploymentDeviceInformation() {
+        return new GetAutopilotDeploymentDeviceInformationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getCachedReport method.

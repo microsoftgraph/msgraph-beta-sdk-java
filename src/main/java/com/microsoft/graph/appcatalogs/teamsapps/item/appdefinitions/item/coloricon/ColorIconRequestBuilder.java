@@ -88,7 +88,7 @@ public class ColorIconRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a Teams app icon associated with a specific definition of an app.
      * @return a CompletableFuture of teamsAppIcon
-     * @see <a href="https://docs.microsoft.com/graph/api/teamsappicon-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappicon-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppIcon> get() {
@@ -108,7 +108,7 @@ public class ColorIconRequestBuilder extends BaseRequestBuilder {
      * Retrieve a Teams app icon associated with a specific definition of an app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsAppIcon
-     * @see <a href="https://docs.microsoft.com/graph/api/teamsappicon-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappicon-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppIcon> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

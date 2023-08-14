@@ -107,7 +107,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete (unregister) a printer.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -127,7 +127,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
      * Delete (unregister) a printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a printer object.
      * @return a CompletableFuture of printer
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> get() {
@@ -166,7 +166,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a printer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printer
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -186,7 +186,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a printer object.
      * @param body The request body
      * @return a CompletableFuture of printer
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> patch(@javax.annotation.Nonnull final Printer body) {
@@ -207,7 +207,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printer
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> patch(@javax.annotation.Nonnull final Printer body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

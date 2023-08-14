@@ -65,7 +65,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of personName objects from a user's profile.
      * @return a CompletableFuture of personNameCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-names?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-names?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonNameCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of personName objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personNameCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-names?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-names?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonNameCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new personName object in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of personName
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-names?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-names?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonName> post(@javax.annotation.Nonnull final PersonName body) {
@@ -126,7 +126,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personName
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-names?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-names?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonName> post(@javax.annotation.Nonnull final PersonName body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

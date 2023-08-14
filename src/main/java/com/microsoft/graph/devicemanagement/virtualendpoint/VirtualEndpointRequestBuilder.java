@@ -6,6 +6,7 @@ import com.microsoft.graph.devicemanagement.virtualendpoint.cloudpcs.CloudPCsReq
 import com.microsoft.graph.devicemanagement.virtualendpoint.crosscloudgovernmentorganizationmapping.CrossCloudGovernmentOrganizationMappingRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.deviceimages.DeviceImagesRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.externalpartnersettings.ExternalPartnerSettingsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.frontlineserviceplans.FrontLineServicePlansRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.galleryimages.GalleryImagesRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.geteffectivepermissions.GetEffectivePermissionsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.onpremisesconnections.OnPremisesConnectionsRequestBuilder;
@@ -78,6 +79,13 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ExternalPartnerSettingsRequestBuilder externalPartnerSettings() {
         return new ExternalPartnerSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the frontLineServicePlans property of the microsoft.graph.virtualEndpoint entity.
+     */
+    @javax.annotation.Nonnull
+    public FrontLineServicePlansRequestBuilder frontLineServicePlans() {
+        return new FrontLineServicePlansRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the galleryImages property of the microsoft.graph.virtualEndpoint entity.

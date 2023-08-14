@@ -43,7 +43,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/customappscope-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
      * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/customappscope-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @return a CompletableFuture of customAppScope
-     * @see <a href="https://docs.microsoft.com/graph/api/customappscope-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAppScope> get() {
@@ -102,7 +102,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customAppScope
-     * @see <a href="https://docs.microsoft.com/graph/api/customappscope-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAppScope> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
      * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @return a CompletableFuture of customAppScope
-     * @see <a href="https://docs.microsoft.com/graph/api/customappscope-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAppScope> patch(@javax.annotation.Nonnull final CustomAppScope body) {
@@ -143,7 +143,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customAppScope
-     * @see <a href="https://docs.microsoft.com/graph/api/customappscope-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAppScope> patch(@javax.annotation.Nonnull final CustomAppScope body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

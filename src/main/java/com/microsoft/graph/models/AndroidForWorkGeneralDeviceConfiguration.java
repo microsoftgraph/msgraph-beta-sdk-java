@@ -15,6 +15,10 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      */
     private java.util.List<String> allowedGoogleAccountDomains;
     /**
+     * Prevent using unified password for unlocking device and work profile.
+     */
+    private Boolean blockUnifiedPasswordForWorkProfile;
+    /**
      * Indicates whether or not to block face unlock.
      */
     private Boolean passwordBlockFaceUnlock;
@@ -222,6 +226,14 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
         return this.allowedGoogleAccountDomains;
     }
     /**
+     * Gets the blockUnifiedPasswordForWorkProfile property value. Prevent using unified password for unlocking device and work profile.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getBlockUnifiedPasswordForWorkProfile() {
+        return this.blockUnifiedPasswordForWorkProfile;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
@@ -229,6 +241,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedGoogleAccountDomains", (n) -> { this.setAllowedGoogleAccountDomains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("blockUnifiedPasswordForWorkProfile", (n) -> { this.setBlockUnifiedPasswordForWorkProfile(n.getBooleanValue()); });
         deserializerMap.put("passwordBlockFaceUnlock", (n) -> { this.setPasswordBlockFaceUnlock(n.getBooleanValue()); });
         deserializerMap.put("passwordBlockFingerprintUnlock", (n) -> { this.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
         deserializerMap.put("passwordBlockIrisUnlock", (n) -> { this.setPasswordBlockIrisUnlock(n.getBooleanValue()); });
@@ -646,6 +659,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("allowedGoogleAccountDomains", this.getAllowedGoogleAccountDomains());
+        writer.writeBooleanValue("blockUnifiedPasswordForWorkProfile", this.getBlockUnifiedPasswordForWorkProfile());
         writer.writeBooleanValue("passwordBlockFaceUnlock", this.getPasswordBlockFaceUnlock());
         writer.writeBooleanValue("passwordBlockFingerprintUnlock", this.getPasswordBlockFingerprintUnlock());
         writer.writeBooleanValue("passwordBlockIrisUnlock", this.getPasswordBlockIrisUnlock());
@@ -700,6 +714,15 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
     @javax.annotation.Nonnull
     public void setAllowedGoogleAccountDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this.allowedGoogleAccountDomains = value;
+    }
+    /**
+     * Sets the blockUnifiedPasswordForWorkProfile property value. Prevent using unified password for unlocking device and work profile.
+     * @param value Value to set for the blockUnifiedPasswordForWorkProfile property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setBlockUnifiedPasswordForWorkProfile(@javax.annotation.Nullable final Boolean value) {
+        this.blockUnifiedPasswordForWorkProfile = value;
     }
     /**
      * Sets the passwordBlockFaceUnlock property value. Indicates whether or not to block face unlock.

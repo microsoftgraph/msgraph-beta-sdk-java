@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the companyInformation property of the microsoft.graph.company entity.
  */
@@ -35,7 +36,7 @@ public class CompanyInformationRequestBuilder extends BaseRequestBuilder {
      * @return a CompanyInformationItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public CompanyInformationItemRequestBuilder byCompanyInformationId(@javax.annotation.Nonnull final String companyInformationId) {
+    public CompanyInformationItemRequestBuilder byCompanyInformationId(@javax.annotation.Nonnull final UUID companyInformationId) {
         Objects.requireNonNull(companyInformationId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("companyInformation%2Did", companyInformationId);

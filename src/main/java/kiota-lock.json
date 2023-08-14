@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "322760B526E89EC58B24E9DD3C90961247B828AB5431F8B57F76485C4FEED856FF72B87EC0D25EA8F32FE04B1F9CD3F2C5B0B26607DC1F245868EEEE7E37F40B",
+  "descriptionHash": "F2CD2CE87078FB89F1FAFBA2A3992943E42FAD14EAAE407BF686978FC46459DA5CB5A5A0239E276EF71A7B069937472B3327453B0AA7B15EF3FF3E9921346F33",
   "descriptionLocation": "/mnt/vss/_work/1/s/msgraph-metadata/clean_beta_openapi/openapi.yaml",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.4.0",
+  "kiotaVersion": "1.6.0",
   "clientClassName": "BaseGraphServiceClient",
   "clientNamespaceName": "com.Microsoft.Graph",
   "language": "Java",
@@ -11,7 +11,8 @@
   "serializers": [
     "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
     "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
-    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory"
+    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Multipart.MultipartSerializationWriterFactory"
   ],
   "deserializers": [
     "Microsoft.Kiota.Serialization.Json.JsonParseNodeFactory",
@@ -21,9 +22,13 @@
   "structuredMimeTypes": [
     "application/json",
     "text/plain",
-    "application/x-www-form-urlencoded"
+    "application/x-www-form-urlencoded",
+    "multipart/form-data"
   ],
   "includePatterns": [],
-  "excludePatterns": [],
+  "excludePatterns": [
+    "/me",
+    "/me/**"
+  ],
   "disabledValidationRules": []
 }

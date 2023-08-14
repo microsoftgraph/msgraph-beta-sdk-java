@@ -20,6 +20,10 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     private java.util.List<WorkbookCommentReply> replies;
     /**
+     * The task property
+     */
+    private WorkbookDocumentTask task;
+    /**
      * Instantiates a new workbookComment and sets the default values.
      * @return a void
      */
@@ -63,6 +67,7 @@ public class WorkbookComment extends Entity implements Parsable {
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
         deserializerMap.put("replies", (n) -> { this.setReplies(n.getCollectionOfObjectValues(WorkbookCommentReply::createFromDiscriminatorValue)); });
+        deserializerMap.put("task", (n) -> { this.setTask(n.getObjectValue(WorkbookDocumentTask::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -72,6 +77,14 @@ public class WorkbookComment extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<WorkbookCommentReply> getReplies() {
         return this.replies;
+    }
+    /**
+     * Gets the task property value. The task property
+     * @return a workbookDocumentTask
+     */
+    @javax.annotation.Nullable
+    public WorkbookDocumentTask getTask() {
+        return this.task;
     }
     /**
      * Serializes information the current object
@@ -85,6 +98,7 @@ public class WorkbookComment extends Entity implements Parsable {
         writer.writeStringValue("content", this.getContent());
         writer.writeStringValue("contentType", this.getContentType());
         writer.writeCollectionOfObjectValues("replies", this.getReplies());
+        writer.writeObjectValue("task", this.getTask());
     }
     /**
      * Sets the content property value. The content of the comment.
@@ -112,5 +126,14 @@ public class WorkbookComment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setReplies(@javax.annotation.Nullable final java.util.List<WorkbookCommentReply> value) {
         this.replies = value;
+    }
+    /**
+     * Sets the task property value. The task property
+     * @param value Value to set for the task property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTask(@javax.annotation.Nullable final WorkbookDocumentTask value) {
+        this.task = value;
     }
 }

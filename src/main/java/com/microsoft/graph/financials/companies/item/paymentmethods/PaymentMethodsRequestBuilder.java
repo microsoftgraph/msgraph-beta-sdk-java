@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the paymentMethods property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class PaymentMethodsRequestBuilder extends BaseRequestBuilder {
      * @return a PaymentMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public PaymentMethodItemRequestBuilder byPaymentMethodId(@javax.annotation.Nonnull final String paymentMethodId) {
+    public PaymentMethodItemRequestBuilder byPaymentMethodId(@javax.annotation.Nonnull final UUID paymentMethodId) {
         Objects.requireNonNull(paymentMethodId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("paymentMethod%2Did", paymentMethodId);

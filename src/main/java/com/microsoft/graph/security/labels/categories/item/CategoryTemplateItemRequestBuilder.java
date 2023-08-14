@@ -51,7 +51,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a categoryTemplate object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Delete a categoryTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a categoryTemplate object.
      * @return a CompletableFuture of categoryTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/security-categorytemplate-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CategoryTemplate> get() {
@@ -110,7 +110,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a categoryTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of categoryTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/security-categorytemplate-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CategoryTemplate> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

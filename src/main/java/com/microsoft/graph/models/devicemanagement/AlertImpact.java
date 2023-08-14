@@ -1,5 +1,6 @@
 package com.microsoft.graph.models.devicemanagement;
 
+import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -16,6 +17,10 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
      * The aggregation type of the impact. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
      */
     private AggregationType aggregationType;
+    /**
+     * The detail information of the impact. For example, if the Frontline Cloud PCs near concurrency limit alert is triggered, the details contain the impacted Frontline license SKU name, such as Windows 365 Frontline 2 vCPU/8GB/128GB, and the corresponding impacted value.
+     */
+    private java.util.List<KeyValuePair> alertImpactDetails;
     /**
      * The OdataType property
      */
@@ -59,13 +64,22 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
         return this.aggregationType;
     }
     /**
+     * Gets the alertImpactDetails property value. The detail information of the impact. For example, if the Frontline Cloud PCs near concurrency limit alert is triggered, the details contain the impacted Frontline license SKU name, such as Windows 365 Frontline 2 vCPU/8GB/128GB, and the corresponding impacted value.
+     * @return a keyValuePair
+     */
+    @javax.annotation.Nullable
+    public java.util.List<KeyValuePair> getAlertImpactDetails() {
+        return this.alertImpactDetails;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("aggregationType", (n) -> { this.setAggregationType(n.getEnumValue(AggregationType.class)); });
+        deserializerMap.put("alertImpactDetails", (n) -> { this.setAlertImpactDetails(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getIntegerValue()); });
         return deserializerMap;
@@ -95,13 +109,14 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("aggregationType", this.getAggregationType());
+        writer.writeCollectionOfObjectValues("alertImpactDetails", this.getAlertImpactDetails());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -118,8 +133,17 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
         this.aggregationType = value;
     }
     /**
+     * Sets the alertImpactDetails property value. The detail information of the impact. For example, if the Frontline Cloud PCs near concurrency limit alert is triggered, the details contain the impacted Frontline license SKU name, such as Windows 365 Frontline 2 vCPU/8GB/128GB, and the corresponding impacted value.
+     * @param value Value to set for the alertImpactDetails property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAlertImpactDetails(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+        this.alertImpactDetails = value;
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

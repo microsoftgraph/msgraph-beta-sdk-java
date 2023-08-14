@@ -65,7 +65,7 @@ public class DepartmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the departmentTemplate objects and their properties.
      * @return a CompletableFuture of departmentTemplateCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-list-departments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-departments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepartmentTemplateCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class DepartmentsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the departmentTemplate objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of departmentTemplateCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-list-departments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-departments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepartmentTemplateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class DepartmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new departmentTemplate object.
      * @param body The request body
      * @return a CompletableFuture of departmentTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-post-departments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-departments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepartmentTemplate> post(@javax.annotation.Nonnull final DepartmentTemplate body) {
@@ -126,7 +126,7 @@ public class DepartmentsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of departmentTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-post-departments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-departments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepartmentTemplate> post(@javax.annotation.Nonnull final DepartmentTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -11,6 +11,7 @@ import com.microsoft.graph.alloweddatalocations.AllowedDataLocationsRequestBuild
 import com.microsoft.graph.app.AppRequestBuilder;
 import com.microsoft.graph.appcatalogs.AppCatalogsRequestBuilder;
 import com.microsoft.graph.applications.ApplicationsRequestBuilder;
+import com.microsoft.graph.applicationswithappid.ApplicationsWithAppIdRequestBuilder;
 import com.microsoft.graph.applicationtemplates.ApplicationTemplatesRequestBuilder;
 import com.microsoft.graph.approleassignments.AppRoleAssignmentsRequestBuilder;
 import com.microsoft.graph.approvalworkflowproviders.ApprovalWorkflowProvidersRequestBuilder;
@@ -34,9 +35,11 @@ import com.microsoft.graph.deviceappmanagement.DeviceAppManagementRequestBuilder
 import com.microsoft.graph.devicelocalcredentials.DeviceLocalCredentialsRequestBuilder;
 import com.microsoft.graph.devicemanagement.DeviceManagementRequestBuilder;
 import com.microsoft.graph.devices.DevicesRequestBuilder;
+import com.microsoft.graph.deviceswithdeviceid.DevicesWithDeviceIdRequestBuilder;
 import com.microsoft.graph.directory.DirectoryRequestBuilder;
 import com.microsoft.graph.directoryobjects.DirectoryObjectsRequestBuilder;
 import com.microsoft.graph.directoryroles.DirectoryRolesRequestBuilder;
+import com.microsoft.graph.directoryroleswithroletemplateid.DirectoryRolesWithRoleTemplateIdRequestBuilder;
 import com.microsoft.graph.directoryroletemplates.DirectoryRoleTemplatesRequestBuilder;
 import com.microsoft.graph.directorysettingtemplates.DirectorySettingTemplatesRequestBuilder;
 import com.microsoft.graph.domaindnsrecords.DomainDnsRecordsRequestBuilder;
@@ -62,7 +65,6 @@ import com.microsoft.graph.identityprotection.IdentityProtectionRequestBuilder;
 import com.microsoft.graph.identityproviders.IdentityProvidersRequestBuilder;
 import com.microsoft.graph.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.invitations.InvitationsRequestBuilder;
-import com.microsoft.graph.me.MeRequestBuilder;
 import com.microsoft.graph.messageevents.MessageEventsRequestBuilder;
 import com.microsoft.graph.messagerecipients.MessageRecipientsRequestBuilder;
 import com.microsoft.graph.messagetraces.MessageTracesRequestBuilder;
@@ -98,6 +100,7 @@ import com.microsoft.graph.scopedrolememberships.ScopedRoleMembershipsRequestBui
 import com.microsoft.graph.search.SearchRequestBuilder;
 import com.microsoft.graph.security.SecurityRequestBuilder;
 import com.microsoft.graph.serviceprincipals.ServicePrincipalsRequestBuilder;
+import com.microsoft.graph.serviceprincipalswithappid.ServicePrincipalsWithAppIdRequestBuilder;
 import com.microsoft.graph.settings.SettingsRequestBuilder;
 import com.microsoft.graph.shares.SharesRequestBuilder;
 import com.microsoft.graph.sites.SitesRequestBuilder;
@@ -120,6 +123,7 @@ import com.microsoft.kiota.serialization.FormParseNodeFactory;
 import com.microsoft.kiota.serialization.FormSerializationWriterFactory;
 import com.microsoft.kiota.serialization.JsonParseNodeFactory;
 import com.microsoft.kiota.serialization.JsonSerializationWriterFactory;
+import com.microsoft.kiota.serialization.MultipartSerializationWriterFactory;
 import com.microsoft.kiota.serialization.ParseNodeFactoryRegistry;
 import com.microsoft.kiota.serialization.SerializationWriterFactoryRegistry;
 import com.microsoft.kiota.serialization.TextParseNodeFactory;
@@ -565,13 +569,6 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
         return new InvitationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the user singleton.
-     */
-    @javax.annotation.Nonnull
-    public MeRequestBuilder me() {
-        return new MeRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the collection of messageEvent entities.
      */
     @javax.annotation.Nonnull
@@ -922,6 +919,16 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the collection of application entities.
+     * @param appId Alternate key of application
+     * @return a applicationsWithAppIdRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ApplicationsWithAppIdRequestBuilder applicationsWithAppId(@javax.annotation.Nonnull final String appId) {
+        Objects.requireNonNull(appId);
+        return new ApplicationsWithAppIdRequestBuilder(pathParameters, requestAdapter, appId);
+    }
+    /**
      * Instantiates a new BaseGraphServiceClient and sets the default values.
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
@@ -933,6 +940,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
         ApiClientBuilder.registerDefaultSerializer(JsonSerializationWriterFactory.class);
         ApiClientBuilder.registerDefaultSerializer(TextSerializationWriterFactory.class);
         ApiClientBuilder.registerDefaultSerializer(FormSerializationWriterFactory.class);
+        ApiClientBuilder.registerDefaultSerializer(MultipartSerializationWriterFactory.class);
         ApiClientBuilder.registerDefaultDeserializer(JsonParseNodeFactory.class);
         ApiClientBuilder.registerDefaultDeserializer(FormParseNodeFactory.class);
         ApiClientBuilder.registerDefaultDeserializer(TextParseNodeFactory.class);
@@ -940,5 +948,35 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
             requestAdapter.setBaseUrl("https://graph.microsoft.com/beta");
         }
         pathParameters.put("baseurl", requestAdapter.getBaseUrl());
+    }
+    /**
+     * Provides operations to manage the collection of device entities.
+     * @param deviceId Alternate key of device
+     * @return a devicesWithDeviceIdRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DevicesWithDeviceIdRequestBuilder devicesWithDeviceId(@javax.annotation.Nonnull final String deviceId) {
+        Objects.requireNonNull(deviceId);
+        return new DevicesWithDeviceIdRequestBuilder(pathParameters, requestAdapter, deviceId);
+    }
+    /**
+     * Provides operations to manage the collection of directoryRole entities.
+     * @param roleTemplateId Alternate key of directoryRole
+     * @return a directoryRolesWithRoleTemplateIdRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DirectoryRolesWithRoleTemplateIdRequestBuilder directoryRolesWithRoleTemplateId(@javax.annotation.Nonnull final String roleTemplateId) {
+        Objects.requireNonNull(roleTemplateId);
+        return new DirectoryRolesWithRoleTemplateIdRequestBuilder(pathParameters, requestAdapter, roleTemplateId);
+    }
+    /**
+     * Provides operations to manage the collection of servicePrincipal entities.
+     * @param appId Alternate key of servicePrincipal
+     * @return a servicePrincipalsWithAppIdRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ServicePrincipalsWithAppIdRequestBuilder servicePrincipalsWithAppId(@javax.annotation.Nonnull final String appId) {
+        Objects.requireNonNull(appId);
+        return new ServicePrincipalsWithAppIdRequestBuilder(pathParameters, requestAdapter, appId);
     }
 }

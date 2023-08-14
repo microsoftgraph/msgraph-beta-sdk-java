@@ -9,11 +9,11 @@ import java.util.Map;
 import java.util.Objects;
 public class CallRecording extends Entity implements Parsable {
     /**
-     * The content property
+     * The content of the recording. Read-only.
      */
     private byte[] content;
     /**
-     * The createdDateTime property
+     * Date and time at which the recording was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     private OffsetDateTime createdDateTime;
     /**
@@ -35,7 +35,7 @@ public class CallRecording extends Entity implements Parsable {
         return new CallRecording();
     }
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. The content of the recording. Read-only.
      * @return a base64url
      */
     @javax.annotation.Nullable
@@ -43,7 +43,7 @@ public class CallRecording extends Entity implements Parsable {
         return this.content;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time at which the recording was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class CallRecording extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. The content of the recording. Read-only.
      * @param value Value to set for the content property.
      * @return a void
      */
@@ -83,7 +83,7 @@ public class CallRecording extends Entity implements Parsable {
         this.content = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time at which the recording was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */

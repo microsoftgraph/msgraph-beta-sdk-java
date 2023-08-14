@@ -37,7 +37,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors. When creating or updating a policy, include at least one userSet in this collection.
+     * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
      */
     private java.util.List<UserSet> primaryApprovers;
     /**
@@ -131,7 +131,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the primaryApprovers property value. The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors. When creating or updating a policy, include at least one userSet in this collection.
+     * Gets the primaryApprovers property value. The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
      * @return a userSet
      */
     @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -211,7 +211,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -219,7 +219,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the primaryApprovers property value. The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors. When creating or updating a policy, include at least one userSet in this collection.
+     * Sets the primaryApprovers property value. The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
      * @param value Value to set for the primaryApprovers property.
      * @return a void
      */

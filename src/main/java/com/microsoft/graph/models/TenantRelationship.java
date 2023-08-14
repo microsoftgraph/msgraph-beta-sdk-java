@@ -26,6 +26,10 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      */
     private ManagedTenant managedTenants;
     /**
+     * The multiTenantOrganization property
+     */
+    private MultiTenantOrganization multiTenantOrganization;
+    /**
      * The OdataType property
      */
     private String odataType;
@@ -77,10 +81,11 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("delegatedAdminCustomers", (n) -> { this.setDelegatedAdminCustomers(n.getCollectionOfObjectValues(DelegatedAdminCustomer::createFromDiscriminatorValue)); });
         deserializerMap.put("delegatedAdminRelationships", (n) -> { this.setDelegatedAdminRelationships(n.getCollectionOfObjectValues(DelegatedAdminRelationship::createFromDiscriminatorValue)); });
         deserializerMap.put("managedTenants", (n) -> { this.setManagedTenants(n.getObjectValue(ManagedTenant::createFromDiscriminatorValue)); });
+        deserializerMap.put("multiTenantOrganization", (n) -> { this.setMultiTenantOrganization(n.getObjectValue(MultiTenantOrganization::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -91,6 +96,14 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ManagedTenant getManagedTenants() {
         return this.managedTenants;
+    }
+    /**
+     * Gets the multiTenantOrganization property value. The multiTenantOrganization property
+     * @return a multiTenantOrganization
+     */
+    @javax.annotation.Nullable
+    public MultiTenantOrganization getMultiTenantOrganization() {
+        return this.multiTenantOrganization;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -111,12 +124,13 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("delegatedAdminCustomers", this.getDelegatedAdminCustomers());
         writer.writeCollectionOfObjectValues("delegatedAdminRelationships", this.getDelegatedAdminRelationships());
         writer.writeObjectValue("managedTenants", this.getManagedTenants());
+        writer.writeObjectValue("multiTenantOrganization", this.getMultiTenantOrganization());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -151,8 +165,17 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
         this.managedTenants = value;
     }
     /**
+     * Sets the multiTenantOrganization property value. The multiTenantOrganization property
+     * @param value Value to set for the multiTenantOrganization property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMultiTenantOrganization(@javax.annotation.Nullable final MultiTenantOrganization value) {
+        this.multiTenantOrganization = value;
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

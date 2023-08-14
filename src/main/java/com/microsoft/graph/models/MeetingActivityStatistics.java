@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,27 +11,27 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     /**
      * Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
      */
-    private Period afterHours;
+    private PeriodAndDuration afterHours;
     /**
      * Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the persons status is set to Busy). The value is represented in ISO 8601 format for durations.
      */
-    private Period conflicting;
+    private PeriodAndDuration conflicting;
     /**
      * Time spent in long meetings (more than an hour in duration). The value is represented in ISO 8601 format for durations.
      */
-    private Period longEscaped;
+    private PeriodAndDuration longEscaped;
     /**
      * Time spent in meetings where the person was multitasking (read/sent more than a minimum number of emails and/or sent more than a minimum number of messages in Teams or in Skype for Business). The value is represented in ISO 8601 format for durations.
      */
-    private Period multitasking;
+    private PeriodAndDuration multitasking;
     /**
      * Time spent in meetings organized by the user. The value is represented in ISO 8601 format for durations.
      */
-    private Period organized;
+    private PeriodAndDuration organized;
     /**
      * Time spent on recurring meetings. The value is represented in ISO 8601 format for durations.
      */
-    private Period recurring;
+    private PeriodAndDuration recurring;
     /**
      * Instantiates a new meetingActivityStatistics and sets the default values.
      * @return a void
@@ -53,18 +53,18 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     }
     /**
      * Gets the afterHours property value. Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getAfterHours() {
+    public PeriodAndDuration getAfterHours() {
         return this.afterHours;
     }
     /**
      * Gets the conflicting property value. Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the persons status is set to Busy). The value is represented in ISO 8601 format for durations.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getConflicting() {
+    public PeriodAndDuration getConflicting() {
         return this.conflicting;
     }
     /**
@@ -74,44 +74,44 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("afterHours", (n) -> { this.setAfterHours(n.getPeriodValue()); });
-        deserializerMap.put("conflicting", (n) -> { this.setConflicting(n.getPeriodValue()); });
-        deserializerMap.put("long", (n) -> { this.setLong(n.getPeriodValue()); });
-        deserializerMap.put("multitasking", (n) -> { this.setMultitasking(n.getPeriodValue()); });
-        deserializerMap.put("organized", (n) -> { this.setOrganized(n.getPeriodValue()); });
-        deserializerMap.put("recurring", (n) -> { this.setRecurring(n.getPeriodValue()); });
+        deserializerMap.put("afterHours", (n) -> { this.setAfterHours(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("conflicting", (n) -> { this.setConflicting(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("long", (n) -> { this.setLong(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("multitasking", (n) -> { this.setMultitasking(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("organized", (n) -> { this.setOrganized(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("recurring", (n) -> { this.setRecurring(n.getPeriodAndDurationValue()); });
         return deserializerMap;
     }
     /**
      * Gets the long property value. Time spent in long meetings (more than an hour in duration). The value is represented in ISO 8601 format for durations.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getLong() {
+    public PeriodAndDuration getLong() {
         return this.longEscaped;
     }
     /**
      * Gets the multitasking property value. Time spent in meetings where the person was multitasking (read/sent more than a minimum number of emails and/or sent more than a minimum number of messages in Teams or in Skype for Business). The value is represented in ISO 8601 format for durations.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMultitasking() {
+    public PeriodAndDuration getMultitasking() {
         return this.multitasking;
     }
     /**
      * Gets the organized property value. Time spent in meetings organized by the user. The value is represented in ISO 8601 format for durations.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getOrganized() {
+    public PeriodAndDuration getOrganized() {
         return this.organized;
     }
     /**
      * Gets the recurring property value. Time spent on recurring meetings. The value is represented in ISO 8601 format for durations.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getRecurring() {
+    public PeriodAndDuration getRecurring() {
         return this.recurring;
     }
     /**
@@ -123,12 +123,12 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writePeriodValue("afterHours", this.getAfterHours());
-        writer.writePeriodValue("conflicting", this.getConflicting());
-        writer.writePeriodValue("long", this.getLong());
-        writer.writePeriodValue("multitasking", this.getMultitasking());
-        writer.writePeriodValue("organized", this.getOrganized());
-        writer.writePeriodValue("recurring", this.getRecurring());
+        writer.writePeriodAndDurationValue("afterHours", this.getAfterHours());
+        writer.writePeriodAndDurationValue("conflicting", this.getConflicting());
+        writer.writePeriodAndDurationValue("long", this.getLong());
+        writer.writePeriodAndDurationValue("multitasking", this.getMultitasking());
+        writer.writePeriodAndDurationValue("organized", this.getOrganized());
+        writer.writePeriodAndDurationValue("recurring", this.getRecurring());
     }
     /**
      * Sets the afterHours property value. Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
@@ -136,7 +136,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAfterHours(@javax.annotation.Nullable final Period value) {
+    public void setAfterHours(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.afterHours = value;
     }
     /**
@@ -145,7 +145,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setConflicting(@javax.annotation.Nullable final Period value) {
+    public void setConflicting(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.conflicting = value;
     }
     /**
@@ -154,7 +154,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setLong(@javax.annotation.Nullable final Period value) {
+    public void setLong(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.longEscaped = value;
     }
     /**
@@ -163,7 +163,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMultitasking(@javax.annotation.Nullable final Period value) {
+    public void setMultitasking(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.multitasking = value;
     }
     /**
@@ -172,7 +172,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setOrganized(@javax.annotation.Nullable final Period value) {
+    public void setOrganized(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.organized = value;
     }
     /**
@@ -181,7 +181,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setRecurring(@javax.annotation.Nullable final Period value) {
+    public void setRecurring(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.recurring = value;
     }
 }

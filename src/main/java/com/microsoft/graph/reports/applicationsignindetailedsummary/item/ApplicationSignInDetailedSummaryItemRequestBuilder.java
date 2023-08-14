@@ -80,7 +80,7 @@ public class ApplicationSignInDetailedSummaryItemRequestBuilder extends BaseRequ
     /**
      * Retrieve the properties and relationships of an applicationSignInDetailedSummary object.
      * @return a CompletableFuture of applicationSignInDetailedSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/applicationsignindetailedsummary-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/applicationsignindetailedsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplicationSignInDetailedSummary> get() {
@@ -100,7 +100,7 @@ public class ApplicationSignInDetailedSummaryItemRequestBuilder extends BaseRequ
      * Retrieve the properties and relationships of an applicationSignInDetailedSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of applicationSignInDetailedSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/applicationsignindetailedsummary-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/applicationsignindetailedsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplicationSignInDetailedSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

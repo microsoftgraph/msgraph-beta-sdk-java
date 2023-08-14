@@ -27,11 +27,11 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      */
     private Boolean isSecret;
     /**
-     * Maximum length of string. Valid values 0 to 87516
+     * Maximum length of string
      */
     private Long maximumLength;
     /**
-     * Minimum length of string. Valid values 0 to 87516
+     * Minimum length of string
      */
     private Long minimumLength;
     /**
@@ -101,7 +101,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         return this.isSecret;
     }
     /**
-     * Gets the maximumLength property value. Maximum length of string. Valid values 0 to 87516
+     * Gets the maximumLength property value. Maximum length of string
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         return this.maximumLength;
     }
     /**
-     * Gets the minimumLength property value. Minimum length of string. Valid values 0 to 87516
+     * Gets the minimumLength property value. Minimum length of string
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -169,7 +169,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         this.isSecret = value;
     }
     /**
-     * Sets the maximumLength property value. Maximum length of string. Valid values 0 to 87516
+     * Sets the maximumLength property value. Maximum length of string
      * @param value Value to set for the maximumLength property.
      * @return a void
      */
@@ -178,7 +178,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         this.maximumLength = value;
     }
     /**
-     * Sets the minimumLength property value. Minimum length of string. Valid values 0 to 87516
+     * Sets the minimumLength property value. Minimum length of string
      * @param value Value to set for the minimumLength property.
      * @return a void
      */

@@ -65,7 +65,7 @@ public class EducationalActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of educationalActivity objects from a user's profile.
      * @return a CompletableFuture of educationalActivityCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-educationalactivities?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-educationalactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationalActivityCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class EducationalActivitiesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of educationalActivity objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationalActivityCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-educationalactivities?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-educationalactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationalActivityCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class EducationalActivitiesRequestBuilder extends BaseRequestBuilder {
      * Create a new educationalActivity in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of educationalActivity
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-educationalactivities?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-educationalactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationalActivity> post(@javax.annotation.Nonnull final EducationalActivity body) {
@@ -126,7 +126,7 @@ public class EducationalActivitiesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationalActivity
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-educationalactivities?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-educationalactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationalActivity> post(@javax.annotation.Nonnull final EducationalActivity body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

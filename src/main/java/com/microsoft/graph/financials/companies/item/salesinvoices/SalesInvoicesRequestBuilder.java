@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the salesInvoices property of the microsoft.graph.company entity.
  */
@@ -35,7 +36,7 @@ public class SalesInvoicesRequestBuilder extends BaseRequestBuilder {
      * @return a SalesInvoiceItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public SalesInvoiceItemRequestBuilder bySalesInvoiceId(@javax.annotation.Nonnull final String salesInvoiceId) {
+    public SalesInvoiceItemRequestBuilder bySalesInvoiceId(@javax.annotation.Nonnull final UUID salesInvoiceId) {
         Objects.requireNonNull(salesInvoiceId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesInvoice%2Did", salesInvoiceId);

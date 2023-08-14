@@ -123,7 +123,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     private String userDisplayName;
     /**
-     * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
+     * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      */
     private String userId;
     /**
@@ -411,7 +411,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return this.userDisplayName;
     }
     /**
-     * Gets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
+     * Gets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -467,7 +467,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -656,7 +656,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -718,7 +718,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         this.userDisplayName = value;
     }
     /**
-     * Sets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
+     * Sets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      * @param value Value to set for the userId property.
      * @return a void
      */

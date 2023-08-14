@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     /**
      * The device lock timeout in seconds.
      */
-    private Period deviceLockTimeout;
+    private PeriodAndDuration deviceLockTimeout;
     /**
      * True if the device lock is enabled.
      */
@@ -109,10 +109,10 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the deviceLockTimeout property value. The device lock timeout in seconds.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDeviceLockTimeout() {
+    public PeriodAndDuration getDeviceLockTimeout() {
         return this.deviceLockTimeout;
     }
     /**
@@ -124,7 +124,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("dateTimeConfiguration", (n) -> { this.setDateTimeConfiguration(n.getObjectValue(TeamworkDateTimeConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultPassword", (n) -> { this.setDefaultPassword(n.getStringValue()); });
-        deserializerMap.put("deviceLockTimeout", (n) -> { this.setDeviceLockTimeout(n.getPeriodValue()); });
+        deserializerMap.put("deviceLockTimeout", (n) -> { this.setDeviceLockTimeout(n.getPeriodAndDurationValue()); });
         deserializerMap.put("isDeviceLockEnabled", (n) -> { this.setIsDeviceLockEnabled(n.getBooleanValue()); });
         deserializerMap.put("isLoggingEnabled", (n) -> { this.setIsLoggingEnabled(n.getBooleanValue()); });
         deserializerMap.put("isPowerSavingEnabled", (n) -> { this.setIsPowerSavingEnabled(n.getBooleanValue()); });
@@ -227,7 +227,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
         Objects.requireNonNull(writer);
         writer.writeObjectValue("dateTimeConfiguration", this.getDateTimeConfiguration());
         writer.writeStringValue("defaultPassword", this.getDefaultPassword());
-        writer.writePeriodValue("deviceLockTimeout", this.getDeviceLockTimeout());
+        writer.writePeriodAndDurationValue("deviceLockTimeout", this.getDeviceLockTimeout());
         writer.writeBooleanValue("isDeviceLockEnabled", this.getIsDeviceLockEnabled());
         writer.writeBooleanValue("isLoggingEnabled", this.getIsLoggingEnabled());
         writer.writeBooleanValue("isPowerSavingEnabled", this.getIsPowerSavingEnabled());
@@ -242,7 +242,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -273,7 +273,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDeviceLockTimeout(@javax.annotation.Nullable final Period value) {
+    public void setDeviceLockTimeout(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.deviceLockTimeout = value;
     }
     /**
@@ -359,7 +359,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

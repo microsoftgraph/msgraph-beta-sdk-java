@@ -80,7 +80,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
     /**
      * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      * @return a CompletableFuture of continuousAccessEvaluationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContinuousAccessEvaluationPolicy> get() {
@@ -100,7 +100,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
      * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of continuousAccessEvaluationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContinuousAccessEvaluationPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
      * Update the properties of a continuousAccessEvaluationPolicy object.
      * @param body The request body
      * @return a CompletableFuture of continuousAccessEvaluationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContinuousAccessEvaluationPolicy> patch(@javax.annotation.Nonnull final ContinuousAccessEvaluationPolicy body) {
@@ -141,7 +141,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of continuousAccessEvaluationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContinuousAccessEvaluationPolicy> patch(@javax.annotation.Nonnull final ContinuousAccessEvaluationPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

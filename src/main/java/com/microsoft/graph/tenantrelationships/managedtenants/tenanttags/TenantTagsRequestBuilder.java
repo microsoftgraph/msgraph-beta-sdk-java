@@ -65,7 +65,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the tenantTag objects and their properties.
      * @return a CompletableFuture of tenantTagCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-managedtenant-list-tenanttags?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenanttags?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantTagCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the tenantTag objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tenantTagCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-managedtenant-list-tenanttags?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenanttags?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantTagCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
      * Create a new tenantTag object.
      * @param body The request body
      * @return a CompletableFuture of tenantTag
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-managedtenant-post-tenanttags?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-post-tenanttags?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantTag> post(@javax.annotation.Nonnull final TenantTag body) {
@@ -126,7 +126,7 @@ public class TenantTagsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tenantTag
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-managedtenant-post-tenanttags?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-post-tenanttags?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantTag> post(@javax.annotation.Nonnull final TenantTag body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

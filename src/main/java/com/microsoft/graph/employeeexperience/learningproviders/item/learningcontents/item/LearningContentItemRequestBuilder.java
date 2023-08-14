@@ -43,7 +43,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
      * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
      * @return a CompletableFuture of learningContent
-     * @see <a href="https://docs.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContent> get() {
@@ -102,7 +102,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
      * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of learningContent
-     * @see <a href="https://docs.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContent> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
      * Update the specified learningContent resource. Used by a learning provider to ingest or update the metadata for their content in Viva Learning. If the specified learning content doesn't yet exist for the specified provider, this operation creates the metadata for the new content. Otherwise, this operation replaces the metadata of the existing content.
      * @param body The request body
      * @return a CompletableFuture of learningContent
-     * @see <a href="https://docs.microsoft.com/graph/api/learningcontent-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContent> patch(@javax.annotation.Nonnull final LearningContent body) {
@@ -143,7 +143,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of learningContent
-     * @see <a href="https://docs.microsoft.com/graph/api/learningcontent-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContent> patch(@javax.annotation.Nonnull final LearningContent body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

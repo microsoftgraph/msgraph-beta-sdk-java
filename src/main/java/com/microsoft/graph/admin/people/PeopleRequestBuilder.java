@@ -1,5 +1,6 @@
 package com.microsoft.graph.admin.people;
 
+import com.microsoft.graph.admin.people.profilecardproperties.ProfileCardPropertiesRequestBuilder;
 import com.microsoft.graph.admin.people.pronouns.PronounsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PeopleAdminSettings;
@@ -21,6 +22,13 @@ import java.util.Objects;
  * Provides operations to manage the people property of the microsoft.graph.admin entity.
  */
 public class PeopleRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the profileCardProperties property of the microsoft.graph.peopleAdminSettings entity.
+     */
+    @javax.annotation.Nonnull
+    public ProfileCardPropertiesRequestBuilder profileCardProperties() {
+        return new ProfileCardPropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the pronouns property of the microsoft.graph.peopleAdminSettings entity.
      */

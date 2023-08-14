@@ -1,9 +1,9 @@
 package com.microsoft.graph.models.windowsupdates;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
     /**
      * The time before the deployment starts represented in ISO 8601 format for durations.
      */
-    private Period durationBeforeDeploymentStart;
+    private PeriodAndDuration durationBeforeDeploymentStart;
     /**
      * Instantiates a new contentApprovalRule and sets the default values.
      * @return a void
@@ -45,10 +45,10 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
     }
     /**
      * Gets the durationBeforeDeploymentStart property value. The time before the deployment starts represented in ISO 8601 format for durations.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDurationBeforeDeploymentStart() {
+    public PeriodAndDuration getDurationBeforeDeploymentStart() {
         return this.durationBeforeDeploymentStart;
     }
     /**
@@ -59,7 +59,7 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentFilter", (n) -> { this.setContentFilter(n.getObjectValue(ContentFilter::createFromDiscriminatorValue)); });
-        deserializerMap.put("durationBeforeDeploymentStart", (n) -> { this.setDurationBeforeDeploymentStart(n.getPeriodValue()); });
+        deserializerMap.put("durationBeforeDeploymentStart", (n) -> { this.setDurationBeforeDeploymentStart(n.getPeriodAndDurationValue()); });
         return deserializerMap;
     }
     /**
@@ -72,7 +72,7 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("contentFilter", this.getContentFilter());
-        writer.writePeriodValue("durationBeforeDeploymentStart", this.getDurationBeforeDeploymentStart());
+        writer.writePeriodAndDurationValue("durationBeforeDeploymentStart", this.getDurationBeforeDeploymentStart());
     }
     /**
      * Sets the contentFilter property value. A filter to determine which content matches the rule on an ongoing basis.
@@ -89,7 +89,7 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDurationBeforeDeploymentStart(@javax.annotation.Nullable final Period value) {
+    public void setDurationBeforeDeploymentStart(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.durationBeforeDeploymentStart = value;
     }
 }

@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the shipmentMethods property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class ShipmentMethodsRequestBuilder extends BaseRequestBuilder {
      * @return a ShipmentMethodItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public ShipmentMethodItemRequestBuilder byShipmentMethodId(@javax.annotation.Nonnull final String shipmentMethodId) {
+    public ShipmentMethodItemRequestBuilder byShipmentMethodId(@javax.annotation.Nonnull final UUID shipmentMethodId) {
         Objects.requireNonNull(shipmentMethodId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("shipmentMethod%2Did", shipmentMethodId);

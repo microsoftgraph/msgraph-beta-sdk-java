@@ -36,6 +36,10 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     private java.util.List<WorkbookTable> tables;
     /**
+     * The tasks property
+     */
+    private java.util.List<WorkbookDocumentTask> tasks;
+    /**
      * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      */
     private String visibility;
@@ -79,6 +83,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
         deserializerMap.put("position", (n) -> { this.setPosition(n.getIntegerValue()); });
         deserializerMap.put("protection", (n) -> { this.setProtection(n.getObjectValue(WorkbookWorksheetProtection::createFromDiscriminatorValue)); });
         deserializerMap.put("tables", (n) -> { this.setTables(n.getCollectionOfObjectValues(WorkbookTable::createFromDiscriminatorValue)); });
+        deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(WorkbookDocumentTask::createFromDiscriminatorValue)); });
         deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getStringValue()); });
         return deserializerMap;
     }
@@ -131,6 +136,14 @@ public class WorkbookWorksheet extends Entity implements Parsable {
         return this.tables;
     }
     /**
+     * Gets the tasks property value. The tasks property
+     * @return a workbookDocumentTask
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WorkbookDocumentTask> getTasks() {
+        return this.tasks;
+    }
+    /**
      * Gets the visibility property value. The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      * @return a string
      */
@@ -154,6 +167,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
         writer.writeIntegerValue("position", this.getPosition());
         writer.writeObjectValue("protection", this.getProtection());
         writer.writeCollectionOfObjectValues("tables", this.getTables());
+        writer.writeCollectionOfObjectValues("tasks", this.getTasks());
         writer.writeStringValue("visibility", this.getVisibility());
     }
     /**
@@ -218,6 +232,15 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setTables(@javax.annotation.Nullable final java.util.List<WorkbookTable> value) {
         this.tables = value;
+    }
+    /**
+     * Sets the tasks property value. The tasks property
+     * @param value Value to set for the tasks property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTasks(@javax.annotation.Nullable final java.util.List<WorkbookDocumentTask> value) {
+        this.tasks = value;
     }
     /**
      * Sets the visibility property value. The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.

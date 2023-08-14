@@ -6,13 +6,17 @@ import com.microsoft.graph.security.threatintelligence.articleindicators.Article
 import com.microsoft.graph.security.threatintelligence.articles.ArticlesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostcomponents.HostComponentsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostcookies.HostCookiesRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hostpairs.HostPairsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.HostsRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hostsslcertificates.HostSslCertificatesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosttrackers.HostTrackersRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.intelligenceprofileindicators.IntelligenceProfileIndicatorsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.intelprofiles.IntelProfilesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.passivednsrecords.PassiveDnsRecordsRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.sslcertificates.SslCertificatesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.subdomains.SubdomainsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.vulnerabilities.VulnerabilitiesRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.whoisrecords.WhoisRecordsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -60,11 +64,25 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
         return new HostCookiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the hostPairs property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @javax.annotation.Nonnull
+    public HostPairsRequestBuilder hostPairs() {
+        return new HostPairsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the hosts property of the microsoft.graph.security.threatIntelligence entity.
      */
     @javax.annotation.Nonnull
     public HostsRequestBuilder hosts() {
         return new HostsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the hostSslCertificates property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @javax.annotation.Nonnull
+    public HostSslCertificatesRequestBuilder hostSslCertificates() {
+        return new HostSslCertificatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the hostTrackers property of the microsoft.graph.security.threatIntelligence entity.
@@ -95,6 +113,13 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
         return new PassiveDnsRecordsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the sslCertificates property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @javax.annotation.Nonnull
+    public SslCertificatesRequestBuilder sslCertificates() {
+        return new SslCertificatesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the subdomains property of the microsoft.graph.security.threatIntelligence entity.
      */
     @javax.annotation.Nonnull
@@ -107,6 +132,13 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public VulnerabilitiesRequestBuilder vulnerabilities() {
         return new VulnerabilitiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the whoisRecords property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @javax.annotation.Nonnull
+    public WhoisRecordsRequestBuilder whoisRecords() {
+        return new WhoisRecordsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new ThreatIntelligenceRequestBuilder and sets the default values.

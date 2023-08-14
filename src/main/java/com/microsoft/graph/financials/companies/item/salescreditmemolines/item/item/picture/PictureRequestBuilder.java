@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the picture property of the microsoft.graph.item entity.
  */
@@ -36,7 +37,7 @@ public class PictureRequestBuilder extends BaseRequestBuilder {
      * @return a PictureItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public PictureItemRequestBuilder byPictureId(@javax.annotation.Nonnull final String pictureId) {
+    public PictureItemRequestBuilder byPictureId(@javax.annotation.Nonnull final UUID pictureId) {
         Objects.requireNonNull(pictureId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("picture%2Did", pictureId);

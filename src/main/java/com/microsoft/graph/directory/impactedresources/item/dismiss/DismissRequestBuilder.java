@@ -40,10 +40,10 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/impactedResources/{impactedResource%2Did}/dismiss", rawUrl);
     }
     /**
-     * Dismiss an impactedResources object and update its status to `dismissed`.
+     * Dismiss an impactedResources object and update its status to dismissed.
      * @param body The request body
      * @return a CompletableFuture of impactedResource
-     * @see <a href="https://docs.microsoft.com/graph/api/impactedresource-dismiss?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-dismiss?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImpactedResource> post(@javax.annotation.Nonnull final DismissPostRequestBody body) {
@@ -60,11 +60,11 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Dismiss an impactedResources object and update its status to `dismissed`.
+     * Dismiss an impactedResources object and update its status to dismissed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of impactedResource
-     * @see <a href="https://docs.microsoft.com/graph/api/impactedresource-dismiss?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-dismiss?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImpactedResource> post(@javax.annotation.Nonnull final DismissPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Dismiss an impactedResources object and update its status to `dismissed`.
+     * Dismiss an impactedResources object and update its status to dismissed.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -91,7 +91,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Dismiss an impactedResources object and update its status to `dismissed`.
+     * Dismiss an impactedResources object and update its status to dismissed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

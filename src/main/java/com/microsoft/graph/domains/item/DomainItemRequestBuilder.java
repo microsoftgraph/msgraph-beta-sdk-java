@@ -4,6 +4,7 @@ import com.microsoft.graph.domains.item.domainnamereferences.DomainNameReference
 import com.microsoft.graph.domains.item.federationconfiguration.FederationConfigurationRequestBuilder;
 import com.microsoft.graph.domains.item.forcedelete.ForceDeleteRequestBuilder;
 import com.microsoft.graph.domains.item.promote.PromoteRequestBuilder;
+import com.microsoft.graph.domains.item.promotetoinitial.PromoteToInitialRequestBuilder;
 import com.microsoft.graph.domains.item.serviceconfigurationrecords.ServiceConfigurationRecordsRequestBuilder;
 import com.microsoft.graph.domains.item.sharedemaildomaininvitations.SharedEmailDomainInvitationsRequestBuilder;
 import com.microsoft.graph.domains.item.verificationdnsrecords.VerificationDnsRecordsRequestBuilder;
@@ -57,6 +58,13 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         return new PromoteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the promoteToInitial method.
+     */
+    @javax.annotation.Nonnull
+    public PromoteToInitialRequestBuilder promoteToInitial() {
+        return new PromoteToInitialRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
      */
     @javax.annotation.Nonnull
@@ -107,7 +115,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes a domain from a tenant.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/domain-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -127,7 +135,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
      * Deletes a domain from a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/domain-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -146,7 +154,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of domain object.
      * @return a CompletableFuture of domain
-     * @see <a href="https://docs.microsoft.com/graph/api/domain-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Domain> get() {
@@ -166,7 +174,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of domain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of domain
-     * @see <a href="https://docs.microsoft.com/graph/api/domain-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Domain> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -186,7 +194,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of domain object.
      * @param body The request body
      * @return a CompletableFuture of domain
-     * @see <a href="https://docs.microsoft.com/graph/api/domain-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Domain> patch(@javax.annotation.Nonnull final Domain body) {
@@ -207,7 +215,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of domain
-     * @see <a href="https://docs.microsoft.com/graph/api/domain-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Domain> patch(@javax.annotation.Nonnull final Domain body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

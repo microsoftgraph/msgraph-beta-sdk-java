@@ -64,7 +64,7 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation.
      * @return a CompletableFuture of postCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/conversationthread-list-posts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationthread-list-posts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PostCollectionResponse> get() {
@@ -84,7 +84,7 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
      * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of postCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/conversationthread-list-posts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationthread-list-posts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PostCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -40,9 +40,9 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/impactedResources/{impactedResource%2Did}/complete", rawUrl);
     }
     /**
-     * Complete an impactedResource object and update its **status** to `completedByUser`.
+     * Complete an impactedResource object and update its status to completedByUser.
      * @return a CompletableFuture of impactedResource
-     * @see <a href="https://docs.microsoft.com/graph/api/impactedresource-complete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-complete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImpactedResource> post() {
@@ -59,10 +59,10 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Complete an impactedResource object and update its **status** to `completedByUser`.
+     * Complete an impactedResource object and update its status to completedByUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of impactedResource
-     * @see <a href="https://docs.microsoft.com/graph/api/impactedresource-complete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-complete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImpactedResource> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Complete an impactedResource object and update its **status** to `completedByUser`.
+     * Complete an impactedResource object and update its status to completedByUser.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -87,7 +87,7 @@ public class CompleteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Complete an impactedResource object and update its **status** to `completedByUser`.
+     * Complete an impactedResource object and update its status to completedByUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -80,7 +80,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a teamsAppSettings object.
      * @return a CompletableFuture of teamsAppSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/teamsappsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> get() {
@@ -100,7 +100,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a teamsAppSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsAppSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/teamsappsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a teamsAppSettings object.
      * @param body The request body
      * @return a CompletableFuture of teamsAppSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/teamsappsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> patch(@javax.annotation.Nonnull final TeamsAppSettings body) {
@@ -141,7 +141,7 @@ public class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsAppSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/teamsappsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppSettings> patch(@javax.annotation.Nonnull final TeamsAppSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

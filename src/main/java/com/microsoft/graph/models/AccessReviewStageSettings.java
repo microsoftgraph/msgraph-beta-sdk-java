@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -40,7 +40,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     /**
      * Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object.
      */
-    private Period recommendationLookBackDuration;
+    private PeriodAndDuration recommendationLookBackDuration;
     /**
      * Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property will override override the corresponding setting on the accessReviewScheduleDefinition object.
      */
@@ -124,7 +124,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
         deserializerMap.put("fallbackReviewers", (n) -> { this.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("recommendationInsightSettings", (n) -> { this.setRecommendationInsightSettings(n.getCollectionOfObjectValues(AccessReviewRecommendationInsightSetting::createFromDiscriminatorValue)); });
-        deserializerMap.put("recommendationLookBackDuration", (n) -> { this.setRecommendationLookBackDuration(n.getPeriodValue()); });
+        deserializerMap.put("recommendationLookBackDuration", (n) -> { this.setRecommendationLookBackDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("recommendationsEnabled", (n) -> { this.setRecommendationsEnabled(n.getBooleanValue()); });
         deserializerMap.put("reviewers", (n) -> { this.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
         deserializerMap.put("stageId", (n) -> { this.setStageId(n.getStringValue()); });
@@ -148,10 +148,10 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the recommendationLookBackDuration property value. Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getRecommendationLookBackDuration() {
+    public PeriodAndDuration getRecommendationLookBackDuration() {
         return this.recommendationLookBackDuration;
     }
     /**
@@ -192,7 +192,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
         writer.writeCollectionOfObjectValues("fallbackReviewers", this.getFallbackReviewers());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("recommendationInsightSettings", this.getRecommendationInsightSettings());
-        writer.writePeriodValue("recommendationLookBackDuration", this.getRecommendationLookBackDuration());
+        writer.writePeriodAndDurationValue("recommendationLookBackDuration", this.getRecommendationLookBackDuration());
         writer.writeBooleanValue("recommendationsEnabled", this.getRecommendationsEnabled());
         writer.writeCollectionOfObjectValues("reviewers", this.getReviewers());
         writer.writeStringValue("stageId", this.getStageId());
@@ -200,7 +200,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -245,7 +245,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -267,7 +267,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setRecommendationLookBackDuration(@javax.annotation.Nullable final Period value) {
+    public void setRecommendationLookBackDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.recommendationLookBackDuration = value;
     }
     /**

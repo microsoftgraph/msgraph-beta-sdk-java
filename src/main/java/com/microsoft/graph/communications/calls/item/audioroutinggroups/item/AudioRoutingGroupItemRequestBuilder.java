@@ -43,7 +43,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete the specified audioRoutingGroup.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/audioroutinggroup-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
      * Delete the specified audioRoutingGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/audioroutinggroup-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an audioRoutingGroup object.
      * @return a CompletableFuture of audioRoutingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroup> get() {
@@ -102,7 +102,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an audioRoutingGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of audioRoutingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroup> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
      * Modify sources and receivers of an audioRoutingGroup.
      * @param body The request body
      * @return a CompletableFuture of audioRoutingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/audioroutinggroup-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroup> patch(@javax.annotation.Nonnull final AudioRoutingGroup body) {
@@ -143,7 +143,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of audioRoutingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/audioroutinggroup-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroup> patch(@javax.annotation.Nonnull final AudioRoutingGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

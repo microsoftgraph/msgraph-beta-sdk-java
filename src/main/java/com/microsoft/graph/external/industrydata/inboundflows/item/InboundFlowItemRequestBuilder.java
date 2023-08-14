@@ -57,9 +57,9 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an inboundFlow object.
+     * Delete an inboundFileFlow object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-inboundflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -76,10 +76,10 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete an inboundFlow object.
+     * Delete an inboundFileFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-inboundflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,9 +96,9 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of an inboundFlow object.
+     * Read the properties and relationships of an inboundFileFlow object.
      * @return a CompletableFuture of inboundFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-inboundflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundFlow> get() {
@@ -115,10 +115,10 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of an inboundFlow object.
+     * Read the properties and relationships of an inboundFileFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of inboundFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-inboundflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundFlow> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an inboundFlow object.
      * @param body The request body
      * @return a CompletableFuture of inboundFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundFlow> patch(@javax.annotation.Nonnull final InboundFlow body) {
@@ -159,7 +159,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of inboundFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundFlow> patch(@javax.annotation.Nonnull final InboundFlow body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -177,7 +177,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete an inboundFlow object.
+     * Delete an inboundFileFlow object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -185,7 +185,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an inboundFlow object.
+     * Delete an inboundFileFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -204,7 +204,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an inboundFlow object.
+     * Read the properties and relationships of an inboundFileFlow object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -212,7 +212,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an inboundFlow object.
+     * Read the properties and relationships of an inboundFileFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -270,7 +270,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an inboundFlow object.
+     * Read the properties and relationships of an inboundFileFlow object.
      */
     public class GetQueryParameters {
         /**

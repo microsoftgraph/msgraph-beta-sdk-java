@@ -80,7 +80,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a adminAppsAndServices object.
      * @return a CompletableFuture of adminAppsAndServices
-     * @see <a href="https://docs.microsoft.com/graph/api/adminappsandservices-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminAppsAndServices> get() {
@@ -100,7 +100,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a adminAppsAndServices object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminAppsAndServices
-     * @see <a href="https://docs.microsoft.com/graph/api/adminappsandservices-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminAppsAndServices> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a adminAppsAndServices object.
      * @param body The request body
      * @return a CompletableFuture of adminAppsAndServices
-     * @see <a href="https://docs.microsoft.com/graph/api/adminappsandservices-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminAppsAndServices> patch(@javax.annotation.Nonnull final AdminAppsAndServices body) {
@@ -141,7 +141,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminAppsAndServices
-     * @see <a href="https://docs.microsoft.com/graph/api/adminappsandservices-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminAppsAndServices> patch(@javax.annotation.Nonnull final AdminAppsAndServices body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

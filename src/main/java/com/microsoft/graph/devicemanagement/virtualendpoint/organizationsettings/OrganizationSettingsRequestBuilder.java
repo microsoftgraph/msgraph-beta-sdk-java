@@ -78,9 +78,9 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one **cloudPcOrganizationSettings** object.
+     * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one cloudPcOrganizationSettings object.
      * @return a CompletableFuture of cloudPcOrganizationSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/cloudpcorganizationsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcorganizationsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcOrganizationSettings> get() {
@@ -97,10 +97,10 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one **cloudPcOrganizationSettings** object.
+     * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one cloudPcOrganizationSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcOrganizationSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/cloudpcorganizationsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcorganizationsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcOrganizationSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the cloudPcOrganizationSettings object in a tenant.
      * @param body The request body
      * @return a CompletableFuture of cloudPcOrganizationSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/cloudpcorganizationsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcorganizationsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcOrganizationSettings> patch(@javax.annotation.Nonnull final CloudPcOrganizationSettings body) {
@@ -141,7 +141,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcOrganizationSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/cloudpcorganizationsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcorganizationsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcOrganizationSettings> patch(@javax.annotation.Nonnull final CloudPcOrganizationSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +186,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one **cloudPcOrganizationSettings** object.
+     * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one cloudPcOrganizationSettings object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +194,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one **cloudPcOrganizationSettings** object.
+     * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one cloudPcOrganizationSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -252,7 +252,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one **cloudPcOrganizationSettings** object.
+     * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one cloudPcOrganizationSettings object.
      */
     public class GetQueryParameters {
         /**

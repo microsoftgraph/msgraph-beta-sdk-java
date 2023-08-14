@@ -43,7 +43,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
      * @param body The request body
      * @return a CompletableFuture of cloudPcBulkRemoteActionResult
-     * @see <a href="https://docs.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body) {
@@ -64,7 +64,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcBulkRemoteActionResult
-     * @see <a href="https://docs.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@javax.annotation.Nonnull final BulkRestoreCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

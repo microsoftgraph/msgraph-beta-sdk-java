@@ -184,7 +184,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @return a CompletableFuture of chat
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Chat> get() {
@@ -204,7 +204,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chat
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Chat> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -224,7 +224,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a chat object.
      * @param body The request body
      * @return a CompletableFuture of chat
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Chat> patch(@javax.annotation.Nonnull final Chat body) {
@@ -245,7 +245,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chat
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Chat> patch(@javax.annotation.Nonnull final Chat body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

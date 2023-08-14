@@ -43,7 +43,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a qna object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/search-qna-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-qna-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
      * Delete a qna object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/search-qna-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-qna-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a qna object.
      * @return a CompletableFuture of qna
-     * @see <a href="https://docs.microsoft.com/graph/api/search-qna-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-qna-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Qna> get() {
@@ -102,7 +102,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a qna object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of qna
-     * @see <a href="https://docs.microsoft.com/graph/api/search-qna-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-qna-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Qna> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a qna object.
      * @param body The request body
      * @return a CompletableFuture of qna
-     * @see <a href="https://docs.microsoft.com/graph/api/search-qna-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-qna-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Qna> patch(@javax.annotation.Nonnull final Qna body) {
@@ -143,7 +143,7 @@ public class QnaItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of qna
-     * @see <a href="https://docs.microsoft.com/graph/api/search-qna-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-qna-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Qna> patch(@javax.annotation.Nonnull final Qna body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

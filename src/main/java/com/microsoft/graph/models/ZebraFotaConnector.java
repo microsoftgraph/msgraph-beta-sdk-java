@@ -12,7 +12,7 @@ import java.util.Objects;
  */
 public class ZebraFotaConnector extends Entity implements Parsable {
     /**
-     * Complete account enrollment authorization URL. This corresponds to verification_uri_complete in the Zebra API documentations.
+     * Complete account enrollment authorization URL. This corresponds to verificationuricomplete in the Zebra API documentations.
      */
     private String enrollmentAuthorizationUrl;
     /**
@@ -50,7 +50,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
         return new ZebraFotaConnector();
     }
     /**
-     * Gets the enrollmentAuthorizationUrl property value. Complete account enrollment authorization URL. This corresponds to verification_uri_complete in the Zebra API documentations.
+     * Gets the enrollmentAuthorizationUrl property value. Complete account enrollment authorization URL. This corresponds to verificationuricomplete in the Zebra API documentations.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
         writer.writeEnumValue("state", this.getState());
     }
     /**
-     * Sets the enrollmentAuthorizationUrl property value. Complete account enrollment authorization URL. This corresponds to verification_uri_complete in the Zebra API documentations.
+     * Sets the enrollmentAuthorizationUrl property value. Complete account enrollment authorization URL. This corresponds to verificationuricomplete in the Zebra API documentations.
      * @param value Value to set for the enrollmentAuthorizationUrl property.
      * @return a void
      */

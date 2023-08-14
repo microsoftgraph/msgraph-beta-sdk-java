@@ -12,7 +12,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     private DeviceManagementConfigurationSettingAccessTypes accessTypes;
     /**
-     * Details which device setting is applicable on
+     * Details which device setting is applicable on. Supports: $filters.
      */
     private DeviceManagementConfigurationSettingApplicability applicability;
     /**
@@ -20,23 +20,23 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     private String baseUri;
     /**
-     * Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
+     * Specify category in which the setting is under. Support $filters.
      */
     private String categoryId;
     /**
-     * Description of the item
+     * Description of the setting.
      */
     private String description;
     /**
-     * Display name of the item
+     * Name of the setting. For example: Allow Toast.
      */
     private String displayName;
     /**
-     * Help text of the item
+     * Help text of the setting. Give more details of the setting.
      */
     private String helpText;
     /**
-     * List of links more info for the setting can be found at
+     * List of links more info for the setting can be found at.
      */
     private java.util.List<String> infoUrls;
     /**
@@ -60,7 +60,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     private java.util.List<DeviceManagementConfigurationReferredSettingInformation> referredSettingInformationList;
     /**
-     * Root setting definition if the setting is a child setting.
+     * Root setting definition id if the setting is a child setting.
      */
     private String rootDefinitionId;
     /**
@@ -119,7 +119,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.accessTypes;
     }
     /**
-     * Gets the applicability property value. Details which device setting is applicable on
+     * Gets the applicability property value. Details which device setting is applicable on. Supports: $filters.
      * @return a deviceManagementConfigurationSettingApplicability
      */
     @javax.annotation.Nullable
@@ -135,7 +135,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.baseUri;
     }
     /**
-     * Gets the categoryId property value. Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
+     * Gets the categoryId property value. Specify category in which the setting is under. Support $filters.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.categoryId;
     }
     /**
-     * Gets the description property value. Description of the item
+     * Gets the description property value. Description of the setting.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -151,7 +151,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.description;
     }
     /**
-     * Gets the displayName property value. Display name of the item
+     * Gets the displayName property value. Name of the setting. For example: Allow Toast.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return deserializerMap;
     }
     /**
-     * Gets the helpText property value. Help text of the item
+     * Gets the helpText property value. Help text of the setting. Give more details of the setting.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -194,7 +194,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.helpText;
     }
     /**
-     * Gets the infoUrls property value. List of links more info for the setting can be found at
+     * Gets the infoUrls property value. List of links more info for the setting can be found at.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -242,7 +242,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.referredSettingInformationList;
     }
     /**
-     * Gets the rootDefinitionId property value. Root setting definition if the setting is a child setting.
+     * Gets the rootDefinitionId property value. Root setting definition id if the setting is a child setting.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -319,7 +319,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.accessTypes = value;
     }
     /**
-     * Sets the applicability property value. Details which device setting is applicable on
+     * Sets the applicability property value. Details which device setting is applicable on. Supports: $filters.
      * @param value Value to set for the applicability property.
      * @return a void
      */
@@ -337,7 +337,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.baseUri = value;
     }
     /**
-     * Sets the categoryId property value. Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
+     * Sets the categoryId property value. Specify category in which the setting is under. Support $filters.
      * @param value Value to set for the categoryId property.
      * @return a void
      */
@@ -346,7 +346,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.categoryId = value;
     }
     /**
-     * Sets the description property value. Description of the item
+     * Sets the description property value. Description of the setting.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -355,7 +355,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.description = value;
     }
     /**
-     * Sets the displayName property value. Display name of the item
+     * Sets the displayName property value. Name of the setting. For example: Allow Toast.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -364,7 +364,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.displayName = value;
     }
     /**
-     * Sets the helpText property value. Help text of the item
+     * Sets the helpText property value. Help text of the setting. Give more details of the setting.
      * @param value Value to set for the helpText property.
      * @return a void
      */
@@ -373,7 +373,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.helpText = value;
     }
     /**
-     * Sets the infoUrls property value. List of links more info for the setting can be found at
+     * Sets the infoUrls property value. List of links more info for the setting can be found at.
      * @param value Value to set for the infoUrls property.
      * @return a void
      */
@@ -427,7 +427,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.referredSettingInformationList = value;
     }
     /**
-     * Sets the rootDefinitionId property value. Root setting definition if the setting is a child setting.
+     * Sets the rootDefinitionId property value. Root setting definition id if the setting is a child setting.
      * @param value Value to set for the rootDefinitionId property.
      * @return a void
      */

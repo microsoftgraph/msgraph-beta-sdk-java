@@ -65,7 +65,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of onPremisesAgentGroup objects.
      * @return a CompletableFuture of onPremisesAgentGroupCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/onpremisesagentgroup-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroupCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of onPremisesAgentGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onPremisesAgentGroupCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/onpremisesagentgroup-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
      * Create a new onPremisesAgentGroup object.
      * @param body The request body
      * @return a CompletableFuture of onPremisesAgentGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/onpremisesagentgroup-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroup> post(@javax.annotation.Nonnull final OnPremisesAgentGroup body) {
@@ -126,7 +126,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onPremisesAgentGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/onpremisesagentgroup-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroup> post(@javax.annotation.Nonnull final OnPremisesAgentGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -75,7 +75,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
     /**
      * Delete a unifiedRoleAssignmentMultiple object of an RBAC provider.  This is applicable for a RBAC application that supports multiple principals and scopes. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleassignmentmultiple-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -95,7 +95,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
      * Delete a unifiedRoleAssignmentMultiple object of an RBAC provider.  This is applicable for a RBAC application that supports multiple principals and scopes. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleassignmentmultiple-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
     /**
      * Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Azure AD), use unifiedRoleAssignment.
      * @return a CompletableFuture of unifiedRoleAssignmentMultiple
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleassignmentmultiple-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentMultiple> get() {
@@ -134,7 +134,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
      * Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Azure AD), use unifiedRoleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleAssignmentMultiple
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleassignmentmultiple-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentMultiple> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -154,7 +154,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
      * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment does not support update.
      * @param body The request body
      * @return a CompletableFuture of unifiedRoleAssignmentMultiple
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleassignmentmultiple-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentMultiple> patch(@javax.annotation.Nonnull final UnifiedRoleAssignmentMultiple body) {
@@ -175,7 +175,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleAssignmentMultiple
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleassignmentmultiple-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentMultiple> patch(@javax.annotation.Nonnull final UnifiedRoleAssignmentMultiple body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

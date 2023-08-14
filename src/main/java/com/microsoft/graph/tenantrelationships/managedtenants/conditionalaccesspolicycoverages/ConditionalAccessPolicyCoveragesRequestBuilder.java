@@ -65,7 +65,7 @@ public class ConditionalAccessPolicyCoveragesRequestBuilder extends BaseRequestB
     /**
      * Get a list of the conditionalAccessPolicyCoverage objects and their properties. Use this operation to list of Azure Active Directory conditional access policy coverage across all tenants that are being managed by the multi-tenant management platform.
      * @return a CompletableFuture of conditionalAccessPolicyCoverageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-managedtenant-list-conditionalaccesspolicycoverages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-conditionalaccesspolicycoverages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCoverageCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ConditionalAccessPolicyCoveragesRequestBuilder extends BaseRequestB
      * Get a list of the conditionalAccessPolicyCoverage objects and their properties. Use this operation to list of Azure Active Directory conditional access policy coverage across all tenants that are being managed by the multi-tenant management platform.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conditionalAccessPolicyCoverageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/managedtenants-managedtenant-list-conditionalaccesspolicycoverages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-conditionalaccesspolicycoverages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCoverageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

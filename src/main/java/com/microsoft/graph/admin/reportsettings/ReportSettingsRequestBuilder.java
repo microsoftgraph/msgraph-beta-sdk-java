@@ -80,7 +80,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the tenant-level settings for Microsoft 365 reports.
      * @return a CompletableFuture of adminReportSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/adminreportsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminReportSettings> get() {
@@ -100,7 +100,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
      * Get the tenant-level settings for Microsoft 365 reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminReportSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/adminreportsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminReportSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
      * Update tenant-level settings for Microsoft 365 reports.
      * @param body The request body
      * @return a CompletableFuture of adminReportSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/adminreportsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminReportSettings> patch(@javax.annotation.Nonnull final AdminReportSettings body) {
@@ -141,7 +141,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminReportSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/adminreportsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminReportSettings> patch(@javax.annotation.Nonnull final AdminReportSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

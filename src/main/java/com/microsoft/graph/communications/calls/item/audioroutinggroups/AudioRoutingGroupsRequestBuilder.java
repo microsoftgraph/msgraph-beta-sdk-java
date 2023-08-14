@@ -63,9 +63,9 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/audioRoutingGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of **audioRoutingGroup** objects.
+     * Retrieve a list of audioRoutingGroup objects.
      * @return a CompletableFuture of audioRoutingGroupCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroupCollectionResponse> get() {
@@ -82,10 +82,10 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of **audioRoutingGroup** objects.
+     * Retrieve a list of audioRoutingGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of audioRoutingGroupCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/call-list-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +102,10 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new **audioRoutingGroup**.
+     * Create a new audioRoutingGroup.
      * @param body The request body
      * @return a CompletableFuture of audioRoutingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroup> post(@javax.annotation.Nonnull final AudioRoutingGroup body) {
@@ -122,11 +122,11 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new **audioRoutingGroup**.
+     * Create a new audioRoutingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of audioRoutingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/call-post-audioroutinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroup> post(@javax.annotation.Nonnull final AudioRoutingGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +144,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of **audioRoutingGroup** objects.
+     * Retrieve a list of audioRoutingGroup objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +152,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of **audioRoutingGroup** objects.
+     * Retrieve a list of audioRoutingGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +173,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new **audioRoutingGroup**.
+     * Create a new audioRoutingGroup.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +182,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new **audioRoutingGroup**.
+     * Create a new audioRoutingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +205,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of **audioRoutingGroup** objects.
+     * Retrieve a list of audioRoutingGroup objects.
      */
     public class GetQueryParameters {
         /**

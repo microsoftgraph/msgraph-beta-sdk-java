@@ -80,7 +80,7 @@ public class ExternalIdentitiesPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of the tenant-wide externalIdentitiesPolicy object that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @return a CompletableFuture of externalIdentitiesPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/externalidentitiespolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalidentitiespolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalIdentitiesPolicy> get() {
@@ -100,7 +100,7 @@ public class ExternalIdentitiesPolicyRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of the tenant-wide externalIdentitiesPolicy object that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalIdentitiesPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/externalidentitiespolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalidentitiespolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalIdentitiesPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class ExternalIdentitiesPolicyRequestBuilder extends BaseRequestBuilder {
      * Update the settings of the tenant-wide externalIdentitiesPolicy object that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @param body The request body
      * @return a CompletableFuture of externalIdentitiesPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/externalidentitiespolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalidentitiespolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalIdentitiesPolicy> patch(@javax.annotation.Nonnull final ExternalIdentitiesPolicy body) {
@@ -141,7 +141,7 @@ public class ExternalIdentitiesPolicyRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalIdentitiesPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/externalidentitiespolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalidentitiespolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalIdentitiesPolicy> patch(@javax.annotation.Nonnull final ExternalIdentitiesPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

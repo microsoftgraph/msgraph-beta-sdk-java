@@ -80,7 +80,7 @@ public class FormsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a adminForms object.
      * @return a CompletableFuture of adminForms
-     * @see <a href="https://docs.microsoft.com/graph/api/adminforms-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminforms-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminForms> get() {
@@ -100,7 +100,7 @@ public class FormsRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a adminForms object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminForms
-     * @see <a href="https://docs.microsoft.com/graph/api/adminforms-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminforms-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminForms> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class FormsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a adminForms object.
      * @param body The request body
      * @return a CompletableFuture of adminForms
-     * @see <a href="https://docs.microsoft.com/graph/api/adminforms-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminforms-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminForms> patch(@javax.annotation.Nonnull final AdminForms body) {
@@ -141,7 +141,7 @@ public class FormsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminForms
-     * @see <a href="https://docs.microsoft.com/graph/api/adminforms-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminforms-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminForms> patch(@javax.annotation.Nonnull final AdminForms body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

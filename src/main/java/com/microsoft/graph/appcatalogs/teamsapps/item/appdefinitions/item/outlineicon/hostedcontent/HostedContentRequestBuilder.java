@@ -88,7 +88,7 @@ public class HostedContentRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the hosted content in an app's icon.
      * @return a CompletableFuture of teamworkHostedContent
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworkhostedcontent-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkhostedcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkHostedContent> get() {
@@ -108,7 +108,7 @@ public class HostedContentRequestBuilder extends BaseRequestBuilder {
      * Retrieve the hosted content in an app's icon.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkHostedContent
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworkhostedcontent-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkhostedcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkHostedContent> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

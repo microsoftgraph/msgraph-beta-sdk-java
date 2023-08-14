@@ -65,7 +65,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @return a CompletableFuture of programControlCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/programcontrol-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControlCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of programControlCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/programcontrol-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControlCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body The request body
      * @return a CompletableFuture of programControl
-     * @see <a href="https://docs.microsoft.com/graph/api/programcontrol-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> post(@javax.annotation.Nonnull final ProgramControl body) {
@@ -126,7 +126,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of programControl
-     * @see <a href="https://docs.microsoft.com/graph/api/programcontrol-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> post(@javax.annotation.Nonnull final ProgramControl body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

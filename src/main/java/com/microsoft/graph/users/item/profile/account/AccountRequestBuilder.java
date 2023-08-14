@@ -65,7 +65,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieves properties related to the user's accounts from the profile.
      * @return a CompletableFuture of userAccountInformationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-accounts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserAccountInformationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
      * Retrieves properties related to the user's accounts from the profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userAccountInformationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-accounts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserAccountInformationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
      * Create a new userAccountInformation object in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of userAccountInformation
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-accounts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserAccountInformation> post(@javax.annotation.Nonnull final UserAccountInformation body) {
@@ -126,7 +126,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userAccountInformation
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-accounts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserAccountInformation> post(@javax.annotation.Nonnull final UserAccountInformation body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -32,7 +32,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      */
     private VpnEncryptionAlgorithmType securityEncryptionAlgorithm;
     /**
-     * Integrity algorithm. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
+     * Integrity algorithm. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      */
     private VpnIntegrityAlgorithmType securityIntegrityAlgorithm;
     /**
@@ -108,7 +108,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
         return this.securityEncryptionAlgorithm;
     }
     /**
-     * Gets the securityIntegrityAlgorithm property value. Integrity algorithm. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
+     * Gets the securityIntegrityAlgorithm property value. Integrity algorithm. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      * @return a vpnIntegrityAlgorithmType
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -150,7 +150,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -176,7 +176,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
         this.securityEncryptionAlgorithm = value;
     }
     /**
-     * Sets the securityIntegrityAlgorithm property value. Integrity algorithm. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
+     * Sets the securityIntegrityAlgorithm property value. Integrity algorithm. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      * @param value Value to set for the securityIntegrityAlgorithm property.
      * @return a void
      */

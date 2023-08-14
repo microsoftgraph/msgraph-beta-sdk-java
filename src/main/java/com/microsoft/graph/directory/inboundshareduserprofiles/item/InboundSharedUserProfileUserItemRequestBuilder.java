@@ -96,7 +96,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
     /**
      * Read the properties of an inboundSharedUserProfile.
      * @return a CompletableFuture of inboundSharedUserProfile
-     * @see <a href="https://docs.microsoft.com/graph/api/inboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/inboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundSharedUserProfile> get() {
@@ -116,7 +116,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
      * Read the properties of an inboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of inboundSharedUserProfile
-     * @see <a href="https://docs.microsoft.com/graph/api/inboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/inboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundSharedUserProfile> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

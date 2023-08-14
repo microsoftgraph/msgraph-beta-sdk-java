@@ -78,9 +78,9 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Get the _settings_ in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Get the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
      * @return a CompletableFuture of microsoftApplicationDataAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationsettings-list-microsoftapplicationdataaccess?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationsettings-list-microsoftapplicationdataaccess?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftApplicationDataAccessSettings> get() {
@@ -97,10 +97,10 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Get the _settings_ in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Get the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of microsoftApplicationDataAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationsettings-list-microsoftapplicationdataaccess?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationsettings-list-microsoftapplicationdataaccess?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftApplicationDataAccessSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
      * Update the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
      * @param body The request body
      * @return a CompletableFuture of microsoftApplicationDataAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/microsoftapplicationdataaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/microsoftapplicationdataaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftApplicationDataAccessSettings> patch(@javax.annotation.Nonnull final MicrosoftApplicationDataAccessSettings body) {
@@ -141,7 +141,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of microsoftApplicationDataAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/microsoftapplicationdataaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/microsoftapplicationdataaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftApplicationDataAccessSettings> patch(@javax.annotation.Nonnull final MicrosoftApplicationDataAccessSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +186,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Get the _settings_ in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Get the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +194,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get the _settings_ in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Get the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -252,7 +252,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the _settings_ in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Get the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
      */
     public class GetQueryParameters {
         /**

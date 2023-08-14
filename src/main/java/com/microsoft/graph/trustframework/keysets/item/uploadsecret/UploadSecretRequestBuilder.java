@@ -43,7 +43,7 @@ public class UploadSecretRequestBuilder extends BaseRequestBuilder {
      * Upload a plain text secret to a trustFrameworkKeyset. Examples of secrets are application secrets in Azure Active Directory, Google, Facebook, or any other identity provider. his method returns trustFrameworkKey.
      * @param body The request body
      * @return a CompletableFuture of trustFrameworkKey
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframeworkkeyset-uploadsecret?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-uploadsecret?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadSecretPostRequestBody body) {
@@ -64,7 +64,7 @@ public class UploadSecretRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of trustFrameworkKey
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframeworkkeyset-uploadsecret?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-uploadsecret?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkKey> post(@javax.annotation.Nonnull final UploadSecretPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

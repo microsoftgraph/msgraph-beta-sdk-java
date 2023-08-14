@@ -13,7 +13,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     private ActivitySettings activitySettings;
     /**
-     * The settings required for the connection to participate in eDiscovery, such as the display templates for eDiscovery results.
+     * The complianceSettings property
      */
     private ComplianceSettings complianceSettings;
     /**
@@ -29,7 +29,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     private String description;
     /**
-     * The list of content experiences the connection will participate in. Possible values are search and compliance.
+     * The list of content experiences the connection will participate in. Possible values are search.
      */
     private ContentExperienceType enabledContentExperiences;
     /**
@@ -95,7 +95,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this.activitySettings;
     }
     /**
-     * Gets the complianceSettings property value. The settings required for the connection to participate in eDiscovery, such as the display templates for eDiscovery results.
+     * Gets the complianceSettings property value. The complianceSettings property
      * @return a complianceSettings
      */
     @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the enabledContentExperiences property value. The list of content experiences the connection will participate in. Possible values are search and compliance.
+     * Gets the enabledContentExperiences property value. The list of content experiences the connection will participate in. Possible values are search.
      * @return a contentExperienceType
      */
     @javax.annotation.Nullable
@@ -264,7 +264,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this.activitySettings = value;
     }
     /**
-     * Sets the complianceSettings property value. The settings required for the connection to participate in eDiscovery, such as the display templates for eDiscovery results.
+     * Sets the complianceSettings property value. The complianceSettings property
      * @param value Value to set for the complianceSettings property.
      * @return a void
      */
@@ -300,7 +300,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the enabledContentExperiences property value. The list of content experiences the connection will participate in. Possible values are search and compliance.
+     * Sets the enabledContentExperiences property value. The list of content experiences the connection will participate in. Possible values are search.
      * @param value Value to set for the enabledContentExperiences property.
      * @return a void
      */

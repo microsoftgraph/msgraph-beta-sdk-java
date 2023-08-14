@@ -43,7 +43,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes an itemAddress object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/itemaddress-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itemaddress-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
      * Deletes an itemAddress object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/itemaddress-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itemaddress-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an itemAddress object.
      * @return a CompletableFuture of itemAddress
-     * @see <a href="https://docs.microsoft.com/graph/api/itemaddress-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itemaddress-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemAddress> get() {
@@ -102,7 +102,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an itemAddress object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemAddress
-     * @see <a href="https://docs.microsoft.com/graph/api/itemaddress-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itemaddress-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemAddress> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an itemAddress object.
      * @param body The request body
      * @return a CompletableFuture of itemAddress
-     * @see <a href="https://docs.microsoft.com/graph/api/itemaddress-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itemaddress-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemAddress> patch(@javax.annotation.Nonnull final ItemAddress body) {
@@ -143,7 +143,7 @@ public class ItemAddressItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemAddress
-     * @see <a href="https://docs.microsoft.com/graph/api/itemaddress-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/itemaddress-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemAddress> patch(@javax.annotation.Nonnull final ItemAddress body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

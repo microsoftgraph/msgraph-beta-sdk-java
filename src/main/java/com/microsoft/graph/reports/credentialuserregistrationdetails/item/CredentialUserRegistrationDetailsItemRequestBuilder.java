@@ -43,8 +43,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Delete navigation property credentialUserRegistrationDetails for reports
      * @return a CompletableFuture of void
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -62,8 +65,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Delete navigation property credentialUserRegistrationDetails for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -80,8 +86,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
      * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationDetails> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -99,8 +108,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationDetails> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
@@ -118,8 +130,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Update the navigation property credentialUserRegistrationDetails in reports
      * @param body The request body
      * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationDetails> patch(@javax.annotation.Nonnull final CredentialUserRegistrationDetails body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
@@ -138,8 +153,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationDetails> patch(@javax.annotation.Nonnull final CredentialUserRegistrationDetails body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
@@ -157,8 +175,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Delete navigation property credentialUserRegistrationDetails for reports
      * @return a RequestInformation
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -166,8 +187,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Delete navigation property credentialUserRegistrationDetails for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
@@ -184,8 +208,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
      * @return a RequestInformation
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -193,8 +220,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
@@ -214,8 +244,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Update the navigation property credentialUserRegistrationDetails in reports
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final CredentialUserRegistrationDetails body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
@@ -224,8 +257,11 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final CredentialUserRegistrationDetails body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();

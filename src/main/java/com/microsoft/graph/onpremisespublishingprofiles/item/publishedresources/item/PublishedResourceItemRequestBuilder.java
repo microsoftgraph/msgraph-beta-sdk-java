@@ -88,7 +88,7 @@ public class PublishedResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of publishedResource object.
      * @return a CompletableFuture of publishedResource
-     * @see <a href="https://docs.microsoft.com/graph/api/publishedresource-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/publishedresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResource> get() {
@@ -108,7 +108,7 @@ public class PublishedResourceItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of publishedResource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of publishedResource
-     * @see <a href="https://docs.microsoft.com/graph/api/publishedresource-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/publishedresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResource> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class PublishedResourceItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of publishedresource  publishedResource object.
      * @param body The request body
      * @return a CompletableFuture of publishedResource
-     * @see <a href="https://docs.microsoft.com/graph/api/publishedresource-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/publishedresource-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResource> patch(@javax.annotation.Nonnull final PublishedResource body) {
@@ -149,7 +149,7 @@ public class PublishedResourceItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of publishedResource
-     * @see <a href="https://docs.microsoft.com/graph/api/publishedresource-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/publishedresource-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResource> patch(@javax.annotation.Nonnull final PublishedResource body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

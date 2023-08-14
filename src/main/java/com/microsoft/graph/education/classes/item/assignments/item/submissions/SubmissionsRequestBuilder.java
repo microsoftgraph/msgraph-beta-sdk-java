@@ -63,9 +63,9 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}/submissions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the **submissions**, a student can only get **submissions** that they are associated with. Provide the header `Prefer: include-unknown-enum-members` to properly list **submissions** with the `reassigned` status. For details, see the examples section.
+     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions, a student can only get submissions that they are associated with. Provide the header Prefer: include-unknown-enum-members to properly list submissions with the reassigned status. For details, see the examples section.
      * @return a CompletableFuture of educationSubmissionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-list-submissions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-submissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSubmissionCollectionResponse> get() {
@@ -82,10 +82,10 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the **submissions**, a student can only get **submissions** that they are associated with. Provide the header `Prefer: include-unknown-enum-members` to properly list **submissions** with the `reassigned` status. For details, see the examples section.
+     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions, a student can only get submissions that they are associated with. Provide the header Prefer: include-unknown-enum-members to properly list submissions with the reassigned status. For details, see the examples section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationSubmissionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-list-submissions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-submissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSubmissionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -142,7 +142,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the **submissions**, a student can only get **submissions** that they are associated with. Provide the header `Prefer: include-unknown-enum-members` to properly list **submissions** with the `reassigned` status. For details, see the examples section.
+     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions, a student can only get submissions that they are associated with. Provide the header Prefer: include-unknown-enum-members to properly list submissions with the reassigned status. For details, see the examples section.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +150,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the **submissions**, a student can only get **submissions** that they are associated with. Provide the header `Prefer: include-unknown-enum-members` to properly list **submissions** with the `reassigned` status. For details, see the examples section.
+     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions, a student can only get submissions that they are associated with. Provide the header Prefer: include-unknown-enum-members to properly list submissions with the reassigned status. For details, see the examples section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -203,7 +203,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the **submissions**, a student can only get **submissions** that they are associated with. Provide the header `Prefer: include-unknown-enum-members` to properly list **submissions** with the `reassigned` status. For details, see the examples section.
+     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions, a student can only get submissions that they are associated with. Provide the header Prefer: include-unknown-enum-members to properly list submissions with the reassigned status. For details, see the examples section.
      */
     public class GetQueryParameters {
         /**

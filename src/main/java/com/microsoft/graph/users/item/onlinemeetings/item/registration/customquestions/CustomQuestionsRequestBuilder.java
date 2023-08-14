@@ -65,7 +65,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @return a CompletableFuture of meetingRegistrationQuestionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-list-customquestions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrationQuestionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of meetingRegistrationQuestionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-list-customquestions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrationQuestionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param body The request body
      * @return a CompletableFuture of meetingRegistrationQuestion
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-post-customquestions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-post-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrationQuestion> post(@javax.annotation.Nonnull final MeetingRegistrationQuestion body) {
@@ -126,7 +126,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of meetingRegistrationQuestion
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistration-post-customquestions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-post-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrationQuestion> post(@javax.annotation.Nonnull final MeetingRegistrationQuestion body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

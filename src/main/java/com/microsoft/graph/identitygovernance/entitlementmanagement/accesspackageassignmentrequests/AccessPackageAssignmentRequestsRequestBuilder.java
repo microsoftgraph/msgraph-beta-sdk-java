@@ -87,7 +87,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
      * @return a CompletableFuture of accessPackageAssignmentRequestCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -110,7 +110,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
      * @return a CompletableFuture of accessPackageAssignmentRequestCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -133,7 +133,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
      * @return a CompletableFuture of accessPackageAssignmentRequest
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-post-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -157,7 +157,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
      * @return a CompletableFuture of accessPackageAssignmentRequest
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-post-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated

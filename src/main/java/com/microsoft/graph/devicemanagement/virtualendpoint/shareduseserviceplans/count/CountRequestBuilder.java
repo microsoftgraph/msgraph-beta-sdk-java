@@ -42,8 +42,11 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the number of the resource
      * @return a CompletableFuture of integer
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<Integer> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -61,8 +64,11 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * Get the number of the resource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of integer
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<Integer> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
@@ -79,8 +85,11 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the number of the resource
      * @return a RequestInformation
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -88,8 +97,11 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * Get the number of the resource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;

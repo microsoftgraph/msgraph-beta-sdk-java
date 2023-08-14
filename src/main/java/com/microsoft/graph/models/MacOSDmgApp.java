@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Contains properties and inherited properties for the MacOS DMG App.
+ * Contains properties and inherited properties for the MacOS DMG (Apple Disk Image) App.
  */
 public class MacOSDmgApp extends MobileLobApp implements Parsable {
     /**

@@ -82,7 +82,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * List the cloudPC devices in a tenant.
      * @return a CompletableFuture of cloudPCCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPCCollectionResponse> get() {
@@ -102,7 +102,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * List the cloudPC devices in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPCCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPCCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

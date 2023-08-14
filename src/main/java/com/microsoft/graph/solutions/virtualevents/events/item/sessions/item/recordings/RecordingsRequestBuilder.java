@@ -63,7 +63,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}/sessions/{virtualEventSession%2Did}/recordings{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get recordings from solutions
+     * Get a callRecording object associated with an onlineMeeting. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of text associated with the recording.
      * @return a CompletableFuture of callRecordingCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -81,7 +81,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get recordings from solutions
+     * Get a callRecording object associated with an onlineMeeting. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of text associated with the recording.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of callRecordingCollectionResponse
      */
@@ -140,7 +140,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get recordings from solutions
+     * Get a callRecording object associated with an onlineMeeting. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of text associated with the recording.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +148,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get recordings from solutions
+     * Get a callRecording object associated with an onlineMeeting. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of text associated with the recording.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get recordings from solutions
+     * Get a callRecording object associated with an onlineMeeting. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of text associated with the recording.
      */
     public class GetQueryParameters {
         /**

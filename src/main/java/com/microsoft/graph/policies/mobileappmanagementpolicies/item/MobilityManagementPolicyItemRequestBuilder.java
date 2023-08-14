@@ -51,7 +51,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Delete a mobilityManagementPolicy object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/mobileappmanagementpolicies-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
      * Delete a mobilityManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/mobileappmanagementpolicies-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Read the properties and relationships of a mobilityManagementPolicy object.
      * @return a CompletableFuture of mobilityManagementPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/mobileappmanagementpolicies-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> get() {
@@ -110,7 +110,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
      * Read the properties and relationships of a mobilityManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobilityManagementPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/mobileappmanagementpolicies-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
      * Update the properties of a mobilityManagementPolicy object.
      * @param body The request body
      * @return a CompletableFuture of mobilityManagementPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/mobileappmanagementpolicies-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> patch(@javax.annotation.Nonnull final MobilityManagementPolicy body) {
@@ -151,7 +151,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobilityManagementPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/mobileappmanagementpolicies-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> patch(@javax.annotation.Nonnull final MobilityManagementPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

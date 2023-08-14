@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the agedAccountsPayable property of the microsoft.graph.company entity.
  */
@@ -35,7 +36,7 @@ public class AgedAccountsPayableRequestBuilder extends BaseRequestBuilder {
      * @return a AgedAccountsPayableItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public AgedAccountsPayableItemRequestBuilder byAgedAccountsPayableId(@javax.annotation.Nonnull final String agedAccountsPayableId) {
+    public AgedAccountsPayableItemRequestBuilder byAgedAccountsPayableId(@javax.annotation.Nonnull final UUID agedAccountsPayableId) {
         Objects.requireNonNull(agedAccountsPayableId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("agedAccountsPayable%2Did", agedAccountsPayableId);

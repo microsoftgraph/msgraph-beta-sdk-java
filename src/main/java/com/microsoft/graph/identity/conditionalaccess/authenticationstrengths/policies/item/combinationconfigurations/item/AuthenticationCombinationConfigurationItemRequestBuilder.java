@@ -45,7 +45,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * @return a CompletableFuture of void
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -68,7 +68,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * @return a CompletableFuture of void
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -90,7 +90,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * @return a CompletableFuture of authenticationCombinationConfiguration
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -113,7 +113,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * @return a CompletableFuture of authenticationCombinationConfiguration
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -136,7 +136,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * @return a CompletableFuture of authenticationCombinationConfiguration
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -160,7 +160,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * @return a CompletableFuture of authenticationCombinationConfiguration
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated

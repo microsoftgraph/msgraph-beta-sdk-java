@@ -15,6 +15,10 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      */
     private Integer batteryAgeInDays;
     /**
+     * Number of batteries in a user device. Valid values 1 to 2147483647
+     */
+    private Integer deviceBatteryCount;
+    /**
      * A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
      */
     private Integer deviceBatteryHealthScore;
@@ -30,6 +34,10 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
      */
     private Integer estimatedRuntimeInMinutes;
+    /**
+     * Number of times the battery has been discharged an amount that equals 100% of its capacity, but not necessarily by discharging it from 100% to 0%. Valid values 0 to 2147483647
+     */
+    private Integer fullBatteryDrainCount;
     /**
      * The healthStatus property
      */
@@ -73,6 +81,14 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         return this.batteryAgeInDays;
     }
     /**
+     * Gets the deviceBatteryCount property value. Number of batteries in a user device. Valid values 1 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getDeviceBatteryCount() {
+        return this.deviceBatteryCount;
+    }
+    /**
      * Gets the deviceBatteryHealthScore property value. A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
      * @return a integer
      */
@@ -112,15 +128,25 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("batteryAgeInDays", (n) -> { this.setBatteryAgeInDays(n.getIntegerValue()); });
+        deserializerMap.put("deviceBatteryCount", (n) -> { this.setDeviceBatteryCount(n.getIntegerValue()); });
         deserializerMap.put("deviceBatteryHealthScore", (n) -> { this.setDeviceBatteryHealthScore(n.getIntegerValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
         deserializerMap.put("estimatedRuntimeInMinutes", (n) -> { this.setEstimatedRuntimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("fullBatteryDrainCount", (n) -> { this.setFullBatteryDrainCount(n.getIntegerValue()); });
         deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
         deserializerMap.put("maxCapacityPercentage", (n) -> { this.setMaxCapacityPercentage(n.getIntegerValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the fullBatteryDrainCount property value. Number of times the battery has been discharged an amount that equals 100% of its capacity, but not necessarily by discharging it from 100% to 0%. Valid values 0 to 2147483647
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getFullBatteryDrainCount() {
+        return this.fullBatteryDrainCount;
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
@@ -164,10 +190,12 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("batteryAgeInDays", this.getBatteryAgeInDays());
+        writer.writeIntegerValue("deviceBatteryCount", this.getDeviceBatteryCount());
         writer.writeIntegerValue("deviceBatteryHealthScore", this.getDeviceBatteryHealthScore());
         writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeIntegerValue("estimatedRuntimeInMinutes", this.getEstimatedRuntimeInMinutes());
+        writer.writeIntegerValue("fullBatteryDrainCount", this.getFullBatteryDrainCount());
         writer.writeEnumValue("healthStatus", this.getHealthStatus());
         writer.writeStringValue("manufacturer", this.getManufacturer());
         writer.writeIntegerValue("maxCapacityPercentage", this.getMaxCapacityPercentage());
@@ -181,6 +209,15 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     @javax.annotation.Nonnull
     public void setBatteryAgeInDays(@javax.annotation.Nullable final Integer value) {
         this.batteryAgeInDays = value;
+    }
+    /**
+     * Sets the deviceBatteryCount property value. Number of batteries in a user device. Valid values 1 to 2147483647
+     * @param value Value to set for the deviceBatteryCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDeviceBatteryCount(@javax.annotation.Nullable final Integer value) {
+        this.deviceBatteryCount = value;
     }
     /**
      * Sets the deviceBatteryHealthScore property value. A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
@@ -217,6 +254,15 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     @javax.annotation.Nonnull
     public void setEstimatedRuntimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this.estimatedRuntimeInMinutes = value;
+    }
+    /**
+     * Sets the fullBatteryDrainCount property value. Number of times the battery has been discharged an amount that equals 100% of its capacity, but not necessarily by discharging it from 100% to 0%. Valid values 0 to 2147483647
+     * @param value Value to set for the fullBatteryDrainCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setFullBatteryDrainCount(@javax.annotation.Nullable final Integer value) {
+        this.fullBatteryDrainCount = value;
     }
     /**
      * Sets the healthStatus property value. The healthStatus property

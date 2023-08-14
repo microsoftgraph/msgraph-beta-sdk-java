@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the taxAreas property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class TaxAreasRequestBuilder extends BaseRequestBuilder {
      * @return a TaxAreaItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public TaxAreaItemRequestBuilder byTaxAreaId(@javax.annotation.Nonnull final String taxAreaId) {
+    public TaxAreaItemRequestBuilder byTaxAreaId(@javax.annotation.Nonnull final UUID taxAreaId) {
         Objects.requireNonNull(taxAreaId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("taxArea%2Did", taxAreaId);

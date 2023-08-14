@@ -80,7 +80,7 @@ public class CrossTenantAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the cross-tenant access settings, which include network packet tagging to enforce Tenant Restrictions Policies (TRv2 Policies) aimed at preventing data exfiltration to external tenants.
      * @return a CompletableFuture of crossTenantAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-crosstenantaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-crosstenantaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessSettings> get() {
@@ -100,7 +100,7 @@ public class CrossTenantAccessRequestBuilder extends BaseRequestBuilder {
      * Retrieve the cross-tenant access settings, which include network packet tagging to enforce Tenant Restrictions Policies (TRv2 Policies) aimed at preventing data exfiltration to external tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-crosstenantaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-crosstenantaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class CrossTenantAccessRequestBuilder extends BaseRequestBuilder {
      * Update the cross-tenant access settings to include network packet tagging for enforcing Tenant Restrictions Policies (TRv2 Policies) that prevent data exfiltration to external tenants.
      * @param body The request body
      * @return a CompletableFuture of crossTenantAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-crosstenantaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-crosstenantaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessSettings> patch(@javax.annotation.Nonnull final CrossTenantAccessSettings body) {
@@ -141,7 +141,7 @@ public class CrossTenantAccessRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-crosstenantaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-crosstenantaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessSettings> patch(@javax.annotation.Nonnull final CrossTenantAccessSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
