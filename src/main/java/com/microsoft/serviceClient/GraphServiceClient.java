@@ -1,10 +1,13 @@
 package com.microsoft.serviceClient;
 
 import com.azure.core.credential.TokenCredential;
+import com.microsoft.graph.CoreConstants;
 import com.microsoft.graph.requests.BaseGraphRequestAdapter;
 import com.microsoft.graph.requests.BatchRequestBuilder;
-import com.microsoft.graph.requests.GraphClientOption;
+import com.microsoft.graph.requests.options.GraphClientOption;
 import com.microsoft.graph.requests.IBaseClient;
+import com.microsoft.graph.users.UsersRequestBuilder;
+import com.microsoft.graph.users.item.UserItemRequestBuilder;
 import com.microsoft.info.Constants;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.authentication.AnonymousAuthenticationProvider;
@@ -13,8 +16,8 @@ import com.microsoft.kiota.authentication.AzureIdentityAuthenticationProvider;
 
 import okhttp3.OkHttpClient;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 
 public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClient implements IBaseClient {
     private RequestAdapter requestAdapter;
@@ -94,5 +97,13 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
     @Override
     public BatchRequestBuilder getBatchRequestBuilder() {
         return new CustomBatchRequestBuilder(this.requestAdapter);
+    }
+    /**
+     * Provides operations to manage the user singleton.
+     * @return the request builder for the user singleton.
+     */
+    @Nonnull
+    public UserItemRequestBuilder me() {
+        return new UsersRequestBuilder(pathParameters, requestAdapter).byUserId(CoreConstants.ReplacementConstants.USER_ID_TOKEN_TO_REPLACE);
     }
 }
